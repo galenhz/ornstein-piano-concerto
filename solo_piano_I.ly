@@ -56,6 +56,7 @@ solo_upper_I = \relative c' {
 			\voiceOne c b~ b16 bes a c a8 aes4 g8
 			fis g4 aes8~ aes a bes b
 			c b~ b16 bes a c a8 aes4 g8
+			\tempo "più agitato"
 			cis cis~ cis16 b bes cis
 		}
 		\new Voice {
@@ -84,8 +85,8 @@ solo_dynamics_I = {
 	% m. 20
 	s2 s2.\>
 	% mm. 21-24
-	s1\!\p s1 s1 s2-\markup { \tiny { più agitato } } s8-\markup { \tiny { rit. } }
-	s8-\markup { \tiny { molto cresc. } }
+	s1\!\p s1 s1 s2 s4-\markup { \tiny { rit. } }
+	s4-\markup { \tiny { molto cresc. } }
 }
 
 solo_lower_I = \relative c, {

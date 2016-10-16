@@ -112,8 +112,17 @@ redux_upper_I = \relative c' {
 }
 
 redux_dynamics_I = {
-	% m. 1
-	s2.\f
+	% mm. 1-4
+	s2.\f s2. s2. s2.
+	% mm. 5-12
+	s2. s2. s2. s2. s2. s1 s2. s4\< s2 s4\!
+	% mm. 13-15
+	s2. s2. s2.
+	% mm. 16-20
+	s1\mf s4 s1 s4 s8 s1 s4 s1-\markup { \tiny { "poco più" \dynamic p "e rit." } } s4 s2 s2.\>
+	% mm. 21-24
+	s1\!\p s1 s1 s2 s4-\markup { \tiny { rit. } }
+        s4-\markup { \tiny { molto cresc. } }
 }
 
 redux_lower_I = \relative c, {
