@@ -19,7 +19,7 @@ redux_upper_I = \relative c' {
 			\voiceTwo \once \override NoteColumn.force-hshift = #1.1 d8 cis c4~ \tuplet 3/2 { c8 cis d }
 		}
 		\new Voice {
-			\voiceThree s4 e'4.^\markup { \italic \tiny {L.H.} } s8
+			\voiceThree s4 e'4.^\markup { \italic \fontsize #-4 {L.H.} } s8
 		}
 	>>
 	% m. 6
@@ -99,16 +99,42 @@ redux_upper_I = \relative c' {
 	<a d g> <fis b e> <b e a> <e a d> <b e a>
 	% m. 20
 	<a d g> <fis b e> <b e a> <e a d> <fis b e>
-	% m. 21
+	% mm. 21-24
 	\mark #2
 	\time 4/4
 	<fis cis' fis>8 r8 r4 e'8 ees~ ees16 d cis e
-	% m. 22
 	cis2 a8 gis~ gis16 g fis a
-	% m. 23
 	fis2 e'8 ees~ ees16 d cis e
-	% m. 24
 	<g, cis g'>8 r8 r4 r2
+	% m. 25-26
+	\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis, d'>32 <g c> } \stemNeutral
+		\change Staff = "redux_upper" \repeat tremolo 4 { <fis' d'> <g c> }
+		\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis, d'> <g c> } \stemNeutral
+	\change Staff = "redux_upper" \repeat tremolo 2 { <a f'> <b ees> }
+		\repeat tremolo 4 { <a' f'> <b ees> }
+		\repeat tremolo 2 { <a, f'> <b ees> }
+	\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis d'>32 <g c> } \stemNeutral
+		\change Staff = "redux_upper" \repeat tremolo 4 { <fis' d'> <g c> }
+		\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis, d'> <g c> } \stemNeutral
+	\change Staff = "redux_upper" \repeat tremolo 2 { <a f'> <b ees> }
+		\repeat tremolo 4 { <a' f'> <b ees> }
+		\repeat tremolo 2 { <a, f'> <b ees> }
+	% m. 27
+	\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis des'>32 <g c> } \stemNeutral
+	\change Staff = "redux_upper" \repeat tremolo 2 { <fis' des> <g c> }
+	\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis, des'>32 <g c> } \stemNeutral
+	\change Staff = "redux_upper" \repeat tremolo 2 { <fis' des> <g c> }
+	% m. 28
+	%% FIXME: Initial rest placement completely wrong
+	<< \new Voice {
+		\voiceOne r8 <g, cis fis g> r <g' cis fis g> r <g' cis fis g>
+	}
+	\new Voice {
+		\voiceTwo \change Staff = "redux_lower" r8 <cis,,, fis>
+			\change Staff = "redux_upper" r <cis' fis> r <cis' fis>
+	} >>
+	% m. 29 - Rehersal 3
+	\mark #3
 }
 
 redux_dynamics_I = {
@@ -123,6 +149,8 @@ redux_dynamics_I = {
 	% mm. 21-24
 	s1\!\p s1 s1 s2 s4-\markup { \tiny { rit. } }
         s4-\markup { \tiny { molto cresc. } }
+	% mm. 25-28
+	s1 s1 s1-\markup { \tiny { molto cresc. } } s2.
 }
 
 redux_lower_I = \relative c, {
@@ -231,16 +259,23 @@ redux_lower_I = \relative c, {
 	e'4 d fis g fis
 	% m. 20
 	e d fis a g
-	% m. 21
+	% mm. 21-23
 	\time 4/4
 	<fis, cis' cis'>8 r8 r4 fis8 cis' a' cis
-	% m. 22
 	a' cis, a cis, fis, cis' a' cis
-	% m. 23
 	a' cis, a cis, fis, cis' a' cis
 	% m. 24
 	\repeat tremolo 8 { ees,,,32 ees' }
 	\repeat tremolo 8 { d, d' }
+	% mm. 25-28
+	\stemDown <c g'>2 <ees a>
+	<c g'> <ees a>
+	\time 2/4
+	<a, a'>4 <fis fis'>
+	\time 3/4
+	<ees ees'>2.
+	\stemNeutral % ?
+	% mm. 29- Rehersal 3
 }
 
 

@@ -67,6 +67,30 @@ solo_upper_I = \relative c' {
 		}
 	>>
 	<a, d g bis>8 <c e a c> <d fis bes d>-^ <e gis c e>-^
+	% mm. 25-26
+	\tempo "Appasionato, ma molto sostenuto"
+	<fis d' fis>8 <f des' f>4 \slashedGrace <e c' e>8 \tuplet 3/2 { <e c' e>16 <ees ces' ees> <fis d' fis> }
+	<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
+	%% FIXME: Try to get note barring more like the score
+	\ottava #1
+	<b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
+		<d bes' d> <des beses' des>  <c aes' c>
+		\tuplet 3/2 { <e c' e> <f bis' f> <gis c' gis> } <f des' f> <e c' e>~
+		<e c' e> <ees ces' ees> \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
+	% m. 27
+	\time 2/4
+	\tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>
+		\tuplet 3/2 { <g ees' g> <gis e' gis> <b g' b> } \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
+	% m. 28
+	%% FIXME: position of hand markup needs to be adjusted
+	\tempo "Allegro"
+	\tuplet 3/2 { <cis, gis' b cis>8
+		\tuplet 5/4 { \change Staff = "solo_lower" cis32[ \change Staff = "solo_upper" d g cis d] }
+		g16.-\markup { \fontsize #-4 { "L.H." } } \ottava #0 g,32-\markup { \fontsize #-4 { "R.H." } } }
+	\ottava #1 g'8.-\markup { \fontsize #-4 { "L.H." } } \ottava #0 g,16-\markup { \fontsize #-4 { "R.H." } }
+	\ottava #1 g'8.-\markup { \fontsize #-4 { "L.H." } } \ottava #0 g,16-\markup { \fontsize #-4 { "R.H." } }
+	% m. 29 - Rehersal 3
+	\mark #3
 }
 
 solo_dynamics_I = {
@@ -87,6 +111,8 @@ solo_dynamics_I = {
 	% mm. 21-24
 	s1\!\p s1 s1 s2 s4-\markup { \tiny { rit. } }
 	s4-\markup { \tiny { molto cresc. } }
+	% mm. 25-27
+	s1\ff s1 s2-\markup { \tiny { molto cresc. } }
 }
 
 solo_lower_I = \relative c, {
@@ -197,5 +223,19 @@ solo_lower_I = \relative c, {
 	% m. 24
 	\tuplet 15/8 { <ees,, ees'> a'[ ees' bes' a, ees' bes' a ees' \clef treble bes' ees, \clef bass a, bes ees, a,] }
 	\tuplet 3/2 { r8 <fis' bes fis'> <bes, bes'> } \clef treble <cis' e g cis> <d fis bes d>
+	% mm. 25-26
+	\clef bass <fis, d' fis>8 <f des' f>4 \slashedGrace <e c' e>8 \tuplet 3/2 { <e c' e>16 <ees ces' ees> <fis d' fis> }
+		<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
+	\clef treble <b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
+		<d bes' d> <des beses' des>  <c aes' c>
+		\tuplet 3/2 { <e c' e> <f bis' f> <gis c' gis> } <f des' f> <e c' e>~
+		<e c' e> <ees ces' ees> \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
+	% m. 27
+	\time 2/4
+        \tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>
+		\tuplet 3/2 { <g ees' g> <gis e' gis> <b g' b> } \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
+	% m. 28
+	\time 3/4
+	s2.
 }
 
