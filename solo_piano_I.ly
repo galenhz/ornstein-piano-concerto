@@ -60,9 +60,9 @@ solo_upper_I = \relative c' {
 			cis cis~ cis16 b bes cis
 		}
 		\new Voice {
-			\voiceTwo g8 fis4 f8 \tuplet 3/2 { f e ees d des c }
+			\voiceTwo g8 fis4 f8 \tuplet 3/2 { f e ees } \tuplet 3/2 { d des c }
 			cis cis~ cis16 b bes cis a8 aes4 g8
-			g'8 fis4 f8 \tuplet 3/2 { f e ees d des c }
+			g'8 fis4 f8 \tuplet 3/2 { f e ees } \tuplet 3/2 { d des c }
 			\tuplet 3/2 { g' fis f } a16 gis g f
 		}
 	>>
