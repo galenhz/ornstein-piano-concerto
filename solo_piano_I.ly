@@ -75,7 +75,7 @@ solo_upper_I = \relative c' {
 	\ottava #1
 	<b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
 		<d bes' d> <des beses' des>  <c aes' c>
-		\tuplet 3/2 { <e c' e> <f bis' f> <gis c' gis> } <f des' f> <e c' e>~
+		\tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>~
 		<e c' e> <ees ces' ees> \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
 	% m. 27
 	\time 2/4
@@ -228,7 +228,7 @@ solo_lower_I = \relative c, {
 		<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
 	\clef treble <b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
 		<d bes' d> <des beses' des>  <c aes' c>
-		\tuplet 3/2 { <e c' e> <f bis' f> <gis c' gis> } <f des' f> <e c' e>~
+		\tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>~
 		<e c' e> <ees ces' ees> \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
 	% m. 27
 	\time 2/4
