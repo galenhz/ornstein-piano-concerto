@@ -125,12 +125,12 @@ redux_upper_I = \relative c' {
 	\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis, des'>32 <g c> } \stemNeutral
 	\change Staff = "redux_upper" \repeat tremolo 2 { <fis' des> <g c> }
 	% m. 28
-	%% FIXME: Initial rest placement completely wrong
+	%% FIXME: Initial rest placement completely wrong. Changed but still needs work.
 	<< \new Voice {
 		\voiceOne r8 <g, cis fis g> r <g' cis fis g> r <g' cis fis g>
 	}
 	\new Voice {
-		\voiceTwo \change Staff = "redux_lower" r8 <cis,,, fis>
+		\voiceTwo r8 \change Staff = "redux_lower" <cis,,, fis>
 			\change Staff = "redux_upper" r <cis' fis> r <cis' fis>
 	} >>
 	% m. 29 - Rehersal 3
