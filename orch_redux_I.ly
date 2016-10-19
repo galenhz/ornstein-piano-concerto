@@ -19,7 +19,7 @@ redux_upper_I = \relative c' {
 			\voiceTwo \once \override NoteColumn.force-hshift = #1.1 d8 cis c4~ \tuplet 3/2 { c8 cis d }
 		}
 		\new Voice {
-			\voiceThree s4 e'4.^\markup { \italic \fontsize #-4 {L.H.} } s8
+			\voiceThree s4 e'4.^\LH_mark s8
 		}
 	>>
 	% m. 6

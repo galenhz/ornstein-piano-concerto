@@ -1,4 +1,7 @@
 
+LH_mark = \markup { \fontsize #-4 { "L.H." } }
+RH_mark = \markup { \fontsize #-4 { "R.H." } }
+
 solo_upper_I = \relative c' {
 	\clef treble
 	\time 3/4
@@ -82,15 +85,23 @@ solo_upper_I = \relative c' {
 	\tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>
 		\tuplet 3/2 { <g ees' g> <gis e' gis> <b g' b> } \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
 	% m. 28
-	%% FIXME: position of hand markup needs to be adjusted
+	%% Fixed: position of hand markup needs to be adjusted
 	\tempo "Allegro"
 	\tuplet 3/2 { <cis, gis' b cis>8
 		\tuplet 5/4 { \change Staff = "solo_lower" cis32[ \change Staff = "solo_upper" d g cis d] }
-		g16.-\markup { \fontsize #-4 { "L.H." } } \ottava #0 g,32-\markup { \fontsize #-4 { "R.H." } } }
-	\ottava #1 g'8.-\markup { \fontsize #-4 { "L.H." } } \ottava #0 g,16-\markup { \fontsize #-4 { "R.H." } }
-	\ottava #1 g'8.-\markup { \fontsize #-4 { "L.H." } } \ottava #0 g,16-\markup { \fontsize #-4 { "R.H." } }
+		\once \override TextScript.X-offset = #-1.0
+		g16.-\LH_mark
+		\once \override TextScript.X-offset = #-0.9 \ottava #0 g,32-\RH_mark
+	}
+	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
+	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
 	% m. 29 - Rehersal 3
 	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	\ottava #1
+	\tuplet 3/2 { <des c' des>16 g <des c' des> } \tuplet 3/2 { <des d'>8 g16 }
+	\tuplet 3/2 { <des c' des>16 g <des c' des> } \tuplet 3/2 { <des d'>8 g16 }
 }
 
 solo_dynamics_I = {
@@ -99,20 +110,22 @@ solo_dynamics_I = {
 	% mm. 10-12
 	s1 s2. s1
 	% m. 13
-	s2.-\markup { \dynamic fff \tiny \italic Sostenuto }
+	s2.-\markup { \dynamic fff \italic Sostenuto }
 	% mm. 14-15
 	s2.*2
 	% mm. 16-18
 	s1 s4 s1 s4 s8 s1 s4
 	% m. 19
-	s1-\markup { \tiny { "poco più" \dynamic p "e rit." } } s4
+	s1-\markup { \tiny { \italic "poco più" \dynamic p \italic "e rit." } } s4
 	% m. 20
 	s2 s2.\>
 	% mm. 21-24
 	s1\!\p s1 s1 s2 s4-\markup { \tiny { rit. } }
 	s4-\markup { \tiny { molto cresc. } }
-	% mm. 25-27
-	s1\ff s1 s2-\markup { \tiny { molto cresc. } }
+	% mm. 25-28
+	s1\ff s1 s2-\markup { \tiny { molto cresc. } } s2.
+	% m. 29 - Rehersal 3
+	s2-\markup { \dynamic ff \italic "sempre" }
 }
 
 solo_lower_I = \relative c, {
@@ -237,5 +250,8 @@ solo_lower_I = \relative c, {
 	% m. 28
 	\time 3/4
 	s2.
+	% m. 29 - Rehersal 3
+	\time 2/4
+	r8 <cis, cis'> <cis g' bes cis> <d d'>
 }
 
