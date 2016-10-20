@@ -77,7 +77,7 @@ redux_upper_I = \relative c' {
 			\voiceTwo r8 bes, c bes s8 bes c bes
 		}
 	>>
-	% mm. 13-14
+	% mm. 13-14 - Rehersal 1
 	\mark #1
 	\time 6/8
 	\tempo "Allegro, ma non troppo"
@@ -99,7 +99,7 @@ redux_upper_I = \relative c' {
 	<a d g> <fis b e> <b e a> <e a d> <b e a>
 	% m. 20
 	<a d g> <fis b e> <b e a> <e a d> <fis b e>
-	% mm. 21-24
+	% mm. 21-24 - Rehersal 2
 	\mark #2
 	\time 4/4
 	<fis cis' fis>8 r8 r4 e'8 ees~ ees16 d cis e
@@ -258,6 +258,8 @@ redux_dynamics_I = {
         s4-\markup { \tiny { molto cresc. } }
 	% mm. 25-28
 	s1 s1 s1-\markup { \tiny { molto cresc. } } s2.
+	% mm. 29-38
+	s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
 }
 
 redux_lower_I = \relative c, {
