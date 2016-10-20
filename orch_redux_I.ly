@@ -220,7 +220,7 @@ redux_upper_I = \relative c' {
 	\change Staff = "redux_lower" <aes,, aes'>
 	\change Staff = "redux_upper" <aes'' aes'>
 	% m. 37 (clone 31)
-	\change Staff = "redux_lower" <ees,,,, ees'>16
+	\change Staff = "redux_lower" <ees,,, ees'>16
 	\change Staff = "redux_upper" <ees''' ees'>
 	\change Staff = "redux_lower" <a,, a'>
 	\change Staff = "redux_upper" <a'' a'>
