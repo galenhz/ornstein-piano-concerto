@@ -135,6 +135,113 @@ redux_upper_I = \relative c' {
 	} >>
 	% m. 29 - Rehersal 3
 	\mark #3
+	\time 2/4
+	\change Staff = "redux_lower" <d,,,, d'>16
+	\change Staff = "redux_upper" <d''' d'>
+	\change Staff = "redux_lower" <g,, g'>
+	\change Staff = "redux_upper" <g'' g'>
+	\change Staff = "redux_lower" <d, d'>
+	\change Staff = "redux_upper" <d'' d'>
+	\change Staff = "redux_lower" <g,, g'>
+	\change Staff = "redux_upper" <g'' g'>
+	% m. 30
+	\change Staff = "redux_lower" <fis,, fis'>32
+	\change Staff = "redux_upper" <fis'' fis'>
+	\change Staff = "redux_lower" <g,, g'>
+	\change Staff = "redux_upper" <g'' g'>
+	\change Staff = "redux_lower" <fis,, fis'>16
+	\change Staff = "redux_upper" <fis'' fis'>
+	\change Staff = "redux_lower" <ees,, ees'>
+	\change Staff = "redux_upper" <ees'' ees'>
+	\change Staff = "redux_lower" <d,, d'>
+	\change Staff = "redux_upper" <d'' d'>
+	% m. 31
+        \change Staff = "redux_lower" <ees,,,, ees'>16
+        \change Staff = "redux_upper" <ees''' ees'>
+        \change Staff = "redux_lower" <a,, a'>
+        \change Staff = "redux_upper" <a'' a'>
+        \change Staff = "redux_lower" <cis,, cis'>
+        \change Staff = "redux_upper" <cis'' cis'>
+        \change Staff = "redux_lower" <f,, f'>
+        \change Staff = "redux_upper" <f'' f'>
+	% m. 32
+	\change Staff = "redux_lower" <e,, e'>32
+	\change Staff = "redux_upper" <e'' e'>
+	\change Staff = "redux_lower" <f,, f'>
+	\change Staff = "redux_upper" <f'' f'>
+	\change Staff = "redux_lower" <e,, e'>16
+	\change Staff = "redux_upper" <e'' e'>
+	\change Staff = "redux_lower" <cis,, cis'>
+	\change Staff = "redux_upper" <cis'' cis'>
+	\change Staff = "redux_lower" <bes,, bes'>32
+	\change Staff = "redux_upper" <bes'' bes'>
+	\change Staff = "redux_lower" <aes,, aes'>
+	\change Staff = "redux_upper" <aes'' aes'>
+	% m. 33 (clone 29)
+	\change Staff = "redux_lower" <d,,,, d'>16
+	\change Staff = "redux_upper" <d''' d'>
+	\change Staff = "redux_lower" <g,, g'>
+	\change Staff = "redux_upper" <g'' g'>
+	\change Staff = "redux_lower" <d, d'>
+	\change Staff = "redux_upper" <d'' d'>
+	\change Staff = "redux_lower" <g,, g'>
+	\change Staff = "redux_upper" <g'' g'>
+	% m. 34 (clone 30)
+	\change Staff = "redux_lower" <fis,, fis'>32
+	\change Staff = "redux_upper" <fis'' fis'>
+	\change Staff = "redux_lower" <g,, g'>
+	\change Staff = "redux_upper" <g'' g'>
+	\change Staff = "redux_lower" <fis,, fis'>16
+	\change Staff = "redux_upper" <fis'' fis'>
+	\change Staff = "redux_lower" <ees,, ees'>
+	\change Staff = "redux_upper" <ees'' ees'>
+	\change Staff = "redux_lower" <d,, d'>
+	\change Staff = "redux_upper" <d'' d'>
+	% m. 35 (clone 31)
+	\change Staff = "redux_lower" <ees,,,, ees'>16
+	\change Staff = "redux_upper" <ees''' ees'>
+	\change Staff = "redux_lower" <a,, a'>
+	\change Staff = "redux_upper" <a'' a'>
+	\change Staff = "redux_lower" <cis,, cis'>
+	\change Staff = "redux_upper" <cis'' cis'>
+	\change Staff = "redux_lower" <f,, f'>
+	\change Staff = "redux_upper" <f'' f'>
+	% m. 36 (clone 32)
+	\change Staff = "redux_lower" <e,, e'>32
+	\change Staff = "redux_upper" <e'' e'>
+	\change Staff = "redux_lower" <f,, f'>
+	\change Staff = "redux_upper" <f'' f'>
+	\change Staff = "redux_lower" <e,, e'>16
+	\change Staff = "redux_upper" <e'' e'>
+	\change Staff = "redux_lower" <cis,, cis'>
+	\change Staff = "redux_upper" <cis'' cis'>
+	\change Staff = "redux_lower" <bes,, bes'>32
+	\change Staff = "redux_upper" <bes'' bes'>
+	\change Staff = "redux_lower" <aes,, aes'>
+	\change Staff = "redux_upper" <aes'' aes'>
+	% m. 37 (clone 31)
+	\change Staff = "redux_lower" <ees,,,, ees'>16
+	\change Staff = "redux_upper" <ees''' ees'>
+	\change Staff = "redux_lower" <a,, a'>
+	\change Staff = "redux_upper" <a'' a'>
+	\change Staff = "redux_lower" <cis,, cis'>
+	\change Staff = "redux_upper" <cis'' cis'>
+	\change Staff = "redux_lower" <f,, f'>
+	\change Staff = "redux_upper" <f'' f'>
+	% m. 38 (clone 32)
+	\change Staff = "redux_lower" <e,, e'>32
+	\change Staff = "redux_upper" <e'' e'>
+	\change Staff = "redux_lower" <f,, f'>
+	\change Staff = "redux_upper" <f'' f'>
+	\change Staff = "redux_lower" <e,, e'>16
+	\change Staff = "redux_upper" <e'' e'>
+	\change Staff = "redux_lower" <cis,, cis'>
+	\change Staff = "redux_upper" <cis'' cis'>
+	\change Staff = "redux_lower" <bes,, bes'>32
+	\change Staff = "redux_upper" <bes'' bes'>
+	\change Staff = "redux_lower" <aes,, aes'>
+	\change Staff = "redux_upper" <aes'' aes'>
+
 }
 
 redux_dynamics_I = {
@@ -274,8 +381,14 @@ redux_lower_I = \relative c, {
 	<a, a'>4 <fis fis'>
 	\time 3/4
 	<ees ees'>2.
-	\stemNeutral % ?
-	% mm. 29- Rehersal 3
+	% mm. 29-38 Rehersal 3
+	\time 2/4
+	% FIXME: mergeDifferentlyHeadedOn only half-working!
+	\mergeDifferentlyHeadedOn
+	\override Tie.direction = #-1
+	<d d'>2~ <d d'> <ees ees'>~ <ees ees'>
+	<d d'>2~ <d d'> <ees ees'>~ <ees ees'> <ees ees'>~ <ees ees'>
+	\revert Tie.direction
 }
 
 

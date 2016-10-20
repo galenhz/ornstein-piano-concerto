@@ -95,13 +95,18 @@ solo_upper_I = \relative c' {
 	}
 	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
 	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
-	% m. 29 - Rehersal 3
+	% mm. 29-32 - Rehersal 3
 	\mark #3
 	\time 2/4
 	\tempo "molto marcato"
 	\ottava #1
-	\tuplet 3/2 { <des c' des>16 g <des c' des> } \tuplet 3/2 { <des d'>8 g16 }
-	\tuplet 3/2 { <des c' des>16 g <des c' des> } \tuplet 3/2 { <des d'>8 g16 }
+	\repeat unfold 4 { \tuplet 3/2 { <des c' des>16 g <des c' des> } \tuplet 3/2 { <d d'>8 g16 } }
+	\repeat unfold 4 { \tuplet 3/2 { <a, g' a>16 ees' <a, g' a> } \tuplet 3/2 { <cis cis'>8 ees16 } }
+	% mm. 33-36
+	\repeat unfold 4 { \tuplet 3/2 { <des c' des>16 g <des c' des> } \tuplet 3/2 { <d d'>8 g16 } }
+	\repeat unfold 4 { \tuplet 3/2 { <a, g' a>16 ees' <a, g' a> } \tuplet 3/2 { <cis cis'>8 ees16 } }
+	% mm. 37-38
+	\repeat unfold 4 { \tuplet 3/2 { <a, g' a>16 ees' <a, g' a> } \tuplet 3/2 { <cis cis'>8 ees16 } }
 }
 
 solo_dynamics_I = {
@@ -250,8 +255,22 @@ solo_lower_I = \relative c, {
 	% m. 28
 	\time 3/4
 	s2.
-	% m. 29 - Rehersal 3
+	% mm. 29-32 - Rehersal 3
 	\time 2/4
 	r8 <cis, cis'> <cis g' bes cis> <d d'>
+	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
+	r8 <a cis ees a> <c c'> <cis cis'>
+	<d fis a d>16 <cis cis'> <bes bes'>8 <bes bes'>4
+	% mm. 33-36
+	r8 <cis cis'> <cis g' bes cis> <d d'>
+	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
+	% QUESTION: unconvinced the bottom a-sharp on the second beat of m. 35 is
+	%           correct. Full score is smudgy here but doesn't seem to show it. Also
+	%           doesn't match m. 37 which otherwise repeats the pattern.
+	r8 <fis fis'> <ais cis ees a> <bes bes'>
+	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
+	% mm. 37-38
+	r8 <fis fis'> <a cis ees a> <bes bes'>
+	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
 }
 

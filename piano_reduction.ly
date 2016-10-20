@@ -6,6 +6,8 @@
 \include "orch_redux_I.ly"
 
 
+#(set-default-paper-size "letter")
+
 \score {
   << \new PianoStaff <<
     \set Score.markFormatter = #format-mark-circle-numbers
