@@ -91,7 +91,7 @@ solo_upper_I = \relative c' {
 		\tuplet 5/4 { \change Staff = "solo_lower" cis32[ \change Staff = "solo_upper" d g cis d] }
 		\once \override TextScript.X-offset = #-1.0
 		g16.-\LH_mark
-		\once \override TextScript.X-offset = #-0.9 \ottava #0 g,32-\RH_mark
+		\once \override TextScript.X-offset = #-1.0 \ottava #0 g,32-\RH_mark
 	}
 	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
 	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
