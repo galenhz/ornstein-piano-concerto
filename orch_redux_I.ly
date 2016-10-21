@@ -252,12 +252,12 @@ redux_dynamics_I = {
 	% mm. 13-15
 	s2. s2. s2.
 	% mm. 16-20
-	s1\mf s4 s1 s4 s8 s1 s4 s1-\markup { \tiny { "poco più" \dynamic p "e rit." } } s4 s2 s2.\>
+	s1\mf s4 s1 s4 s8 s1 s4 s1-\markup { "poco più" \dynamic p "e rit." } s4 s2 s2.\>
 	% mm. 21-24
-	s1\!\p s1 s1 s2 s4-\markup { \tiny { rit. } }
-        s4-\markup { \tiny { molto cresc. } }
+	s1\!\p s1 s1 s2 s4-\markup { rit. }
+        \once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
 	% mm. 25-28
-	s1 s1 s1-\markup { \tiny { molto cresc. } } s2.
+	s1 s1 s1-\markup { molto cresc.} s2.
 	% mm. 29-38
 	s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
 }

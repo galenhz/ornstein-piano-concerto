@@ -35,7 +35,7 @@ solo_upper_I = \relative c' {
 	\time 3/4
 	<fis b dis fis>8 <f b d f>4
 	\ottava #0
-	\stemUp <c fis a c>8-\markup { \italic \tiny {poco rit.} }
+	\stemUp <c fis a c>8-\markup { \italic {poco rit.} }
 	<d gis b d> <ees a c ees> \stemNeutral
 	% m. 16
 	\time 10/8
@@ -107,6 +107,25 @@ solo_upper_I = \relative c' {
 	\repeat unfold 4 { \tuplet 3/2 { <a, g' a>16 ees' <a, g' a> } \tuplet 3/2 { <cis cis'>8 ees16 } }
 	% mm. 37-38
 	\repeat unfold 4 { \tuplet 3/2 { <a, g' a>16 ees' <a, g' a> } \tuplet 3/2 { <cis cis'>8 ees16 } }
+	% m. 39 - Rehersal 4
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	\ottava #0
+	r8 <d, a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
+	% m. 40
+	\ottava #1
+	<f c' f> <gis dis' gis>] <a e' a>8[ <bes f' bes> <cis gis' cis> <d a' d>
+	% m. 41
+	<ees bes' ees>16 <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>] r <bes f' bes>[
+	% m. 42
+	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
+	% m. 43
+	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
+		<cis gis' cis> <bes f' bes>
+	% m .44
+	% FIXME: Another odd partially-interrupted barring in PR. Mimic? How?
+	<a e' a> <fis cis' fis> <a e' a> <fis cis' fis>]
 }
 
 solo_dynamics_I = {
@@ -121,16 +140,20 @@ solo_dynamics_I = {
 	% mm. 16-18
 	s1 s4 s1 s4 s8 s1 s4
 	% m. 19
-	s1-\markup { \tiny { \italic "poco più" \dynamic p \italic "e rit." } } s4
+	s1-\markup { \italic "poco più" \dynamic p \italic "e rit." } s4
 	% m. 20
 	s2 s2.\>
 	% mm. 21-24
-	s1\!\p s1 s1 s2 s4-\markup { \tiny { rit. } }
-	s4-\markup { \tiny { molto cresc. } }
+	s1\!\p s1 s1 s2 s4-\markup { rit. }
+	\once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
 	% mm. 25-28
-	s1\ff s1 s2-\markup { \tiny { molto cresc. } } s2.
+	s1\ff s1 s2-\markup { molto cresc. } s2.
 	% m. 29 - Rehersal 3
 	s2-\markup { \dynamic ff \italic "sempre" }
+	% mm. 30-38
+	s2 s2 s2 s2 s2 s2 s2 s2 s2
+	% m. 39 - Rehersal 4
+	s2.-\markup { \dynamic p \italic Subito }
 }
 
 solo_lower_I = \relative c, {
@@ -233,7 +256,7 @@ solo_lower_I = \relative c, {
 	% m. 20
 	<e' a d>2~ <e a d>8 <b e a>4 <a d g>~ <a d g>8
 	% mm. 21-23
-	% QUESTION: same notes, but clef changes at different spots in 2PR. I've imitated this
+	% QUESTION: same notes, but clef changes at different spots in PR. I've imitated this
 	%           here. FC is consistantly handled like mm21. Regularize?
 	<fis fis'>16 cis''[ fis bes c \clef treble cis fis bes] c[ bes fis cis \clef bass c bes fis cis]
 	<fis,, fis'> cis''[ fis bes c cis \clef treble fis bes] c[ bes fis \clef bass cis c bes fis cis]
@@ -272,5 +295,10 @@ solo_lower_I = \relative c, {
 	% mm. 37-38
 	r8 <fis fis'> <a cis ees a> <bes bes'>
 	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
+	% m. 39 - Rehersal 4
+	% QUESTION: obvious error in PR, missing bass clef transition
+	\time 3/4
+	\clef bass
+
 }
 
