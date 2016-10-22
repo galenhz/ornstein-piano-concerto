@@ -241,7 +241,23 @@ redux_upper_I = \relative c' {
 	\change Staff = "redux_upper" <bes'' bes'>
 	\change Staff = "redux_lower" <aes,, aes'>
 	\change Staff = "redux_upper" <aes'' aes'>
-
+	% mm. 39-43 - Rehersal 4
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	\repeat unfold 5 { <d, a' d>4 <ees bes' ees>8 <d a' d> <fis cis' fis> <ees bes' ees> }
+	% m. 44
+	<d a' d>8 r <c fis c'>4 <fis, c' fis>8 <c' fis c'>
+	% mm. 45-49
+	\repeat unfold 5 { <des g des'> <c fis c'> <c fis c'>4 <fis, c' fis>8 <c' fis c'> }
+	% m. 50
+	<des g des'> <c fis c'> <a ees' a>4 <ees' a ees'>8 <a, a'>
+	% mm. 51-52
+	\repeat unfold 2 { <f' f'>8 <ees ees'> <a, ees' a>4 <ees' a ees'>8 <a, a'> }
+	% mm. 53-54
+	% FIXME: Note clusters, how do they work?
+	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' cis fis g>
+	r4 <a, ees' a>8 <c' c' cis> r4
 }
 
 redux_dynamics_I = {
@@ -391,6 +407,23 @@ redux_lower_I = \relative c, {
 	<d d'>2~ <d d'> <ees ees'>~ <ees ees'>
 	<d d'>2~ <d d'> <ees ees'>~ <ees ees'> <ees ees'>~ <ees ees'>
 	\revert Tie.direction
+	\stemNeutral
+	% mm. 39-43 - Rehersal 4
+	\time 3/4
+	\repeat unfold 5 { <d' a' d>4 <ees bes' ees>8 <d a' d> <fis cis' fis> <ees bes' ees> }
+	% m. 44
+	<d a' d>8 r <c fis c'>4 <fis, c' fis>8 <c' fis c'>
+	% mm. 45-49
+	\repeat unfold 5 { <des g des'> <c fis c'> <c fis c'>4 <fis, c' fis>8 <c' fis c'> }
+	% m. 50
+	<des g des'> <c fis c'> <a ees' a>4 <ees' a ees'>8 <a, a'>
+	% mm. 51-52
+	\repeat unfold 2 { <f' f'>8 <ees ees'> <a, ees' a>4 <ees' a ees'>8 <a, a'> }
+	% mm. 53-54
+	% FIXME: Note clusters, how do they work?
+	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' g'>
+	r4 <a, ees' a>8 <c' cis c'> r4
+
 }
 
 
