@@ -125,7 +125,36 @@ solo_upper_I = \relative c' {
 		<cis gis' cis> <bes f' bes>
 	% m .44
 	% FIXME: Another odd partially-interrupted barring in PR. Mimic? How?
-	<a e' a> <fis cis' fis> <a e' a> <fis cis' fis>]
+	<a e' a> <fis cis' fis> <a e' a> <fis cis' fis>] r8 <d a' d>[ <ees bes' ees> <d a' d>
+	% m. 45
+	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] <a e' a>[ <bes f' bes>
+	% m. 46
+	<cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8 <d a' d> <cis gis' cis>]
+	% m. 47
+	r8 <bes f' bes>[ <cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8
+	% m. 48
+	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
+	% m. 49
+	% FIXME: Yet *another* odd partially-interrupted barring in PR. Mimic? How?
+	r16 <bes f' bes>[ <cis gis' cis> <bes f' bes> <a e' a> <fis cis' fis> <a e'a> <fis cis' fis>]
+		<a e' a>8[ <e' b' e>
+	% m. 50
+	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
+	% m. 51
+	<gis dis' gis> <f c' f> <ees bes' ees>16 <f f'> <ees bes' ees> <c c'>] <a e' a>8[ <e' b' e>
+	% m. 52
+	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c c'> <bes f' bes>8 <g d' g>] <a e' a>[ <ees' bes' ees>16 r32 <f c' f>]
+	% m. 53
+	<d a' d>8[ <b fis' b>]
+		<a des f a>32 \change Staff = "solo_lower" <a,, des f a>16.
+		\change Staff = "solo_upper" <bes'' d fis bes>32
+		\change Staff = "solo_lower" <bes,, d fis bes>16.
+		\change Staff = "solo_upper" r4
+	% m. 54
+	<d'' fis bes d>32 \change Staff = "solo_lower" <d,, fis bes d>16.
+		\change Staff = "solo_upper" <e'' gis c e>32
+		\change Staff = "solo_lower" <e,, gis c e>16.
+		\change Staff = "solo_upper" r4 \ottava #0 r4
 }
 
 solo_dynamics_I = {
@@ -299,6 +328,40 @@ solo_lower_I = \relative c, {
 	% QUESTION: obvious error in PR, missing bass clef transition
 	\time 3/4
 	\clef bass
-
+	r8 <d, a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
+	% m. 40
+	<f c' f> <gis dis' gis>] \clef treble <a e' a>8[ <bes f' bes> <cis gis' cis> <d a' d>
+	% m. 41
+	<ees bes' ees>16 <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>] r <bes f' bes>[
+	% m. 42
+	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
+	% m. 43
+	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
+		<cis gis' cis> <bes f' bes>
+	% m .44
+	% FIXME: Another odd partially-interrupted barring in PR. Mimic? How?
+	<a e' a> <fis cis' fis> <a e' a> <fis cis' fis>] r8 \clef bass <d a' d>[ <ees bes' ees> <d a' d>
+	% m. 45
+	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] \clef treble <a e' a>[ <bes f' bes>
+	% m. 46
+	<cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8 <d a' d> <cis gis' cis>]
+	% m. 47
+	r8 <bes f' bes>[ <cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8
+	% m. 48
+	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
+	% m. 49
+	% FIXME: Yet *another* odd partially-interrupted barring in PR. Mimic? How?
+	r16 <bes f' bes>[ <cis gis' cis> <bes f' bes> <a e' a> <fis cis' fis> <a e'a> <fis cis' fis>]
+		<a e' a>8[ <e' b' e>
+	% m. 50
+	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
+	% m. 51
+	<gis dis' gis> <f c' f> <ees bes' ees>16 <f f'> <ees bes' ees> <c c'>] <a e' a>8[ <e' b' e>
+	% m. 52
+	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c c'> <bes f' bes>8 <g d' g>] <a e' a>[ <ees' bes' ees>16 r32 <f c' f>]
+	% m. 53
+	<d a' d>8[ <b fis' b>] s4 r4
+	% m. 54
+	s4 r4 r4
 }
 
