@@ -253,11 +253,21 @@ redux_upper_I = \relative c' {
 	% m. 50
 	<des g des'> <c fis c'> <a ees' a>4 <ees' a ees'>8 <a, a'>
 	% mm. 51-52
+	\tempo "broaden"
 	\repeat unfold 2 { <f' f'>8 <ees ees'> <a, ees' a>4 <ees' a ees'>8 <a, a'> }
 	% mm. 53-54
 	% FIXME: Note clusters, how do they work?
 	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' cis fis g>
 	r4 <a, ees' a>8 <c' c' cis> r4
+	% mm. 55 - Rehersal 5
+	\mark #5
+	\tempo "meno mosso"
+	\time 4/4
+	\clef bass
+	\set Staff.timeSignatureFraction = 12/8
+	\scaleDurations 2/3 {
+		g,,2.~ g4 fis8 ees c r16 d
+	}
 }
 
 redux_dynamics_I = {
@@ -273,9 +283,17 @@ redux_dynamics_I = {
 	s1\!\p s1 s1 s2 s4-\markup { rit. }
         \once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
 	% mm. 25-28
-	s1 s1 s1-\markup { molto cresc.} s2.
+	s1 s1 s2-\markup { molto cresc.} s2.
 	% mm. 29-38
 	s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
+	% m. 39
+	s2.-\markup { \dynamic p \italic subito }
+	% m. 40-45
+	s2. s2. s2. s2. s2. s4 s2-\cresc
+	% m. 46-54
+	s2. s2. s2. s4\! s4 s4\ff s4 s2\cresc s2. s2. s2.\! s2.
+	% m. 55
+	s1\mp
 }
 
 redux_lower_I = \relative c, {
@@ -423,6 +441,12 @@ redux_lower_I = \relative c, {
 	% FIXME: Note clusters, how do they work?
 	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' g'>
 	r4 <a, ees' a>8 <c' cis c'> r4
+        % mm. 55 - Rehersal 5
+        \time 4/4
+        \set Staff.timeSignatureFraction = 12/8
+        \scaleDurations 2/3 {
+                g,2.~ g4 fis8 ees c r16 d
+        }
 
 }
 

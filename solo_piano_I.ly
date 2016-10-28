@@ -141,6 +141,7 @@ solo_upper_I = \relative c' {
 	% m. 50
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
 	% m. 51
+	\tempo "broaden"
 	<gis dis' gis> <f c' f> <ees bes' ees>16 <f f'> <ees bes' ees> <c c'>] <a e' a>8[ <e' b' e>
 	% m. 52
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c c'> <bes f' bes>8 <g d' g>] <a e' a>[ <ees' bes' ees>16 r32 <f c' f>]
@@ -155,6 +156,13 @@ solo_upper_I = \relative c' {
 		\change Staff = "solo_upper" <e'' gis c e>32
 		\change Staff = "solo_lower" <e,, gis c e>16.
 		\change Staff = "solo_upper" r4 \ottava #0 r4
+	% m. 55 - Rehersal 5
+	\mark #5
+	\time 4/4
+	\tempo "meno mosso"
+	\ottava #1
+	r16 <a'' cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> \ottava #0 <a cis>
+		<g bes> <fis bes> <cis g'> <c fis> <bes cis> <a cis> <g bes>8
 }
 
 solo_dynamics_I = {
@@ -182,7 +190,17 @@ solo_dynamics_I = {
 	% mm. 30-38
 	s2 s2 s2 s2 s2 s2 s2 s2 s2
 	% m. 39 - Rehersal 4
-	s2.-\markup { \dynamic p \italic Subito }
+	s2.-\markup { \dynamic p \italic subito }
+	% m. 40-45
+	% QUESTION: full score shows the crescendo starting on beat 2 of bar 45. PR shows it
+	%	    on beat 3. Which should it be?
+	s2. s2. s2. s2. s2. s4 s2-\cresc
+	% m. 46-52
+	s2. s2. s2. s4\! s4\ff s4 s2. s2. s2.
+	% m. 53-54
+	s4 \once \override TextScript.X-offset = #-5.0 s2-\markup { \dynamic fff } s2.
+	% m. 55
+	s1\mp
 }
 
 solo_lower_I = \relative c, {
@@ -363,5 +381,16 @@ solo_lower_I = \relative c, {
 	<d a' d>8[ <b fis' b>] s4 r4
 	% m. 54
 	s4 r4 r4
+	% m. 55 - Rehersal 5
+	\time 4/4
+	\clef bass
+	<<
+		\new Voice {
+			\voiceTwo <g,, g'>1
+		}
+		\new Voice {
+			\voiceOne r4 <ees'' ees'>8 <fis fis'> <g g'>4 <g g'>
+		}
+	>>
 }
 
