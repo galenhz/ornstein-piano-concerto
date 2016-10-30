@@ -278,6 +278,7 @@ redux_upper_I = \relative c' {
 	% mm. 63-69 - Rehersal 6
 	\mark #6
 	\time 4/4
+	\set Staff.timeSignatureFraction = 4/4
 	bes8 a~ a16 aes g bes fis8 fis4 d8
 	<<
 		\new Voice {
@@ -492,6 +493,7 @@ redux_lower_I = \relative c, {
         }
 	% mm. 63-69 - Rehersal 6
 	\time 4/4
+	\set Staff.timeSignatureFraction = 4/4
 	<bes bes'>8 <a a'>~ <a a'>16 <aes aes'> <g g'> <bes bes'> <fis fis'>8 <f f'>4 <d d'>8
 	\repeat unfold 6 { <cis cis'>2~ \tuplet 3/2 { <cis cis'>4 <d d'> <f f'> } }
 }
