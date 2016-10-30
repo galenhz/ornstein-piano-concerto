@@ -156,13 +156,29 @@ solo_upper_I = \relative c' {
 		\change Staff = "solo_upper" <e'' gis c e>32
 		\change Staff = "solo_lower" <e,, gis c e>16.
 		\change Staff = "solo_upper" r4 \ottava #0 r4
-	% m. 55 - Rehersal 5
+	% mm. 55-58 - Rehersal 5
+	% QUESTION: Inconsistant handling of the ottavas between measures 55 and 57.
+	%           My repeat structure copies 55's handling in both cases. Maybe not?
 	\mark #5
 	\time 4/4
 	\tempo "meno mosso"
-	\ottava #1
-	r16 <a'' cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> \ottava #0 <a cis>
-		<g bes> <fis bes> <cis g'> <c fis> <bes cis> <a cis> <g bes>8
+	\repeat unfold 2 {
+		\ottava #1 r16 <a'' cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> \ottava #0
+			<a cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> <a cis> <g bes>8
+		\ottava #1 r16 <c'' fis> <bes cis> <a cis> <g bes> <fis bes> <cis g'> <c fis>
+			\ottava #0 <bes cis> <a cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis>8
+	}
+	% mm. 59-62
+	% QUESTION: Same thing between 60 and 62.
+	\repeat unfold 2 {
+		\ottava #1 \tuplet 3/2 { r8 <c'' fis> <g cis> }
+			\tuplet 3/2 { <fis bes> <c g'> <c fis> }
+			\ottava #0 \tuplet 3/2 { <g cis> <fis bes> <c g'> }
+			\tuplet 3/2 { <c fis> <g cis> r }
+		\ottava #1 \tuplet 3/2 { r8 <gis'' c> <f a> } \tuplet 3/2 { <ees gis> <c f> <c f> }
+			\ottava #0 \tuplet 3/2 { <a ees'> <gis c> <f a> }
+			\tuplet 3/2 { <ees gis> <c f> r }
+	}
 }
 
 solo_dynamics_I = {
@@ -381,15 +397,40 @@ solo_lower_I = \relative c, {
 	<d a' d>8[ <b fis' b>] s4 r4
 	% m. 54
 	s4 r4 r4
-	% m. 55 - Rehersal 5
+	% mm. 55-62 - Rehersal 5
+	% FIXME: This section could use some cleanup when the "third" voice kicks in.
+	%        Also not sure about third voice in measure 62. Smudgy in PR.
 	\time 4/4
 	\clef bass
 	<<
 		\new Voice {
-			\voiceTwo <g,, g'>1
+			\voiceFour <g,, g'>1
+			<ees ees'>
+			\clef bass <g g'>
+			\clef bass <ees ees'>
+			\clef bass <f f'>
+			\clef bass <ees ees'>
+			\clef bass <f f'>
+			\clef bass <ees ees'>
 		}
 		\new Voice {
 			\voiceOne r4 <ees'' ees'>8 <fis fis'> <g g'>4 <g g'>
+			r8 \clef treble <fis fis'> <a bes a'>2.
+			r8 \clef treble <g g'> <cis cis'> <bes bes'> <bes bes'>4 <g g'>
+			\tuplet 3/2 { r8 \clef treble <g g'> <a a'> } <a a'>2.
+			r8 \clef treble <bes bes'> <c c'>2 <bes bes'>4
+			r8 \clef treble <a a'> <bes bes'> <a a'> <a a'>4 <g g'>8 <fis fis'>
+			r8 \clef treble <bes bes'> <c c'> <bes bes'> <cis cis'>4 <bes bes'>8 <a a'>
+			r8 \clef treble <a a'> <bes bes'> <a a'> <a a'>4 <g g'>8 <fis fis'>
+		}
+		\new Voice {
+			\voiceTwo
+			s1 s1 s1
+			\tuplet 3/2 { s8 cis'4~ } cis2.
+			s8 <cis e g>~ <e g>2 s4
+			s8 <c ees> s2.
+			s8 <cis e g>~ <e g>2.
+			s8 <c ees> s2.
 		}
 	>>
 }

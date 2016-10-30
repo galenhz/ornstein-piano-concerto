@@ -259,14 +259,21 @@ redux_upper_I = \relative c' {
 	% FIXME: Note clusters, how do they work?
 	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' cis fis g>
 	r4 <a, ees' a>8 <c' c' cis> r4
-	% mm. 55 - Rehersal 5
+	% mm. 55-62 - Rehersal 5
 	\mark #5
 	\tempo "meno mosso"
 	\time 4/4
 	\clef bass
 	\set Staff.timeSignatureFraction = 12/8
 	\scaleDurations 2/3 {
-		g,,2.~ g4 fis8 ees c r16 d
+		g,,2.~ g4 fis8 ees[ c r16 d]
+		fis2.~ fis4 g8 gis4~ gis16 cis
+		bes2.~ bes4 a8 gis[ d r16 ees]
+		fis2.~ \tuplet 2/3 { fis8 g } gis4~ gis16 r16
+		f''2.~ f4 e8~ e8. ees16 d f
+		d2.~ d4 cis8~ cis8. bes16 cis d
+		f2.~ f4 e8~ e8. ees16 d f
+		d2.~ d4 cis8~ cis8. c16 b d
 	}
 }
 
@@ -441,11 +448,18 @@ redux_lower_I = \relative c, {
 	% FIXME: Note clusters, how do they work?
 	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' g'>
 	r4 <a, ees' a>8 <c' cis c'> r4
-        % mm. 55 - Rehersal 5
+        % mm. 55-62 - Rehersal 5
         \time 4/4
         \set Staff.timeSignatureFraction = 12/8
         \scaleDurations 2/3 {
-                g,2.~ g4 fis8 ees c r16 d
+		g,2.~ g4 fis8 ees[ c r16 d]
+		fis2.~ fis4 g8 gis4~ gis16 cis
+		bes2.~ bes4 a8 gis[ d r16 ees]
+		fis2.~ \tuplet 2/3 { fis8 g } gis4~ gis16 <d' d'>
+		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
+		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <bes bes'>16 <cis cis'> <d d'>
+		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
+		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16 <b b'> <d d'>
         }
 
 }
