@@ -261,7 +261,7 @@ redux_upper_I = \relative c' {
 	r4 <a, ees' a>8 <c' c' cis> r4
 	% mm. 55-62 - Rehersal 5
 	\mark #5
-	\tempo "meno mosso"
+	\tempo "Meno mosso"
 	\time 4/4
 	\clef bass
 	\set Staff.timeSignatureFraction = 12/8
@@ -275,6 +275,33 @@ redux_upper_I = \relative c' {
 		f2.~ f4 e8~ e8. ees16 d f
 		d2.~ d4 cis8~ cis8. c16 b d
 	}
+	% mm. 63-69 - Rehersal 6
+	\mark #6
+	\time 4/4
+	bes8 a~ a16 aes g bes fis8 fis4 d8
+	<<
+		\new Voice {
+			\voiceOne \repeat unfold 2 {
+				\repeat tremolo 4 { b'32 gis } \repeat tremolo 4 { b gis }
+				\repeat tremolo 4 { c a } \repeat tremolo 4 { dis b }
+			}
+			\clef treble \repeat unfold 2 { fis'2 f4 e }
+			\clef bass \repeat unfold 2 { gis,2 g4 fis }
+		}
+		\new Voice {
+			\voiceTwo \repeat unfold 2 { e2 f4 gis }
+			\repeat unfold 2 {
+				\repeat tremolo 8 { b32 d }
+				\repeat tremolo 4 { a cis }
+				\repeat tremolo 4 { aes c }
+			}
+			\repeat unfold 2 {
+				\repeat tremolo 8 { d, fis }
+				\repeat tremolo 4 { des f }
+				\repeat tremolo 4 { c e }
+			}
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -295,12 +322,14 @@ redux_dynamics_I = {
 	s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
 	% m. 39
 	s2.-\markup { \dynamic p \italic subito }
-	% m. 40-45
+	% mm. 40-45
 	s2. s2. s2. s2. s2. s4 s2-\cresc
-	% m. 46-54
-	s2. s2. s2. s4\! s4 s4\ff s4 s2\cresc s2. s2. s2.\! s2.
-	% m. 55
-	s1\mp
+	% mm. 46-54
+	s2. s2. s2. s4\! s4 s4\ff s4 s2\cresc s2. s2. s2.\!\fff s2.
+	% mm. 55-62 - Rehersal 5
+	s1\mp s1 s1 s1 s1 s1 s1 s1
+	% mm. 63-69 - Rehersal 6
+	s1 s1 s1 s1 s1 s1 s1
 }
 
 redux_lower_I = \relative c, {
@@ -461,7 +490,10 @@ redux_lower_I = \relative c, {
 		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
 		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16 <b b'> <d d'>
         }
-
+	% mm. 63-69 - Rehersal 6
+	\time 4/4
+	<bes bes'>8 <a a'>~ <a a'>16 <aes aes'> <g g'> <bes bes'> <fis fis'>8 <f f'>4 <d d'>8
+	\repeat unfold 6 { <cis cis'>2~ \tuplet 3/2 { <cis cis'>4 <d d'> <f f'> } }
 }
 
 

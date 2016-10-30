@@ -161,7 +161,7 @@ solo_upper_I = \relative c' {
 	%           My repeat structure copies 55's handling in both cases. Maybe not?
 	\mark #5
 	\time 4/4
-	\tempo "meno mosso"
+	\tempo "Meno mosso"
 	\repeat unfold 2 {
 		\ottava #1 r16 <a'' cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> \ottava #0
 			<a cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> <a cis> <g bes>8
@@ -179,6 +179,29 @@ solo_upper_I = \relative c' {
 			\ottava #0 \tuplet 3/2 { <a ees'> <gis c> <f a> }
 			\tuplet 3/2 { <ees gis> <c f> r }
 	}
+	% mm. 63-69 - Rehersal 6
+	\mark #6
+	\time 4/4
+	\repeat unfold 2 { \tuplet 3/2 { r8 <ees' gis> <c f> } \tuplet 3/2 { <a ees'> <fis c'> <ees a> } }
+	<<
+		\new Voice {
+			% QUESTION: Not 100% sure of the f-a-c chord. Smudged in PR and FS.
+			\voiceOne <b e>2~ <b e>8 <f a c> \tuplet 3/2 { <dis dis'> <e e'> <g g'> }
+			<gis gis'>2~ \voiceTwo <gis gis'>8 <a a'> <bes bes'> <cis cis'>
+			<d d'> <cis cis'> <cis cis'>4~ <cis cis'>8 <b b'> <cis cis'> <b b'>
+			\tuplet 3/2 { <gis gis'> <g g'> <e e'> } <gis gis'>2.
+			\tuplet 3/2 { <fis fis'>8 <f f'> <d d'> } <fis fis'>4~ <fis fis'>8 <f f'> <a a'> <fis fis'>
+			\tuplet 3/2 { <fis fis'> <f f'> <d d'> } <fis fis'>4~ <fis fis'>8 <f f'> <a a'> <bes bes'>
+		}
+		\new Voice {
+			\voiceTwo <gis gis'>8 <g g'> <g g'>4~ <g g'>8 <e e'> s4
+			\voiceOne <b' e>1
+			<fis' b>4 <d fis>2.
+			<b e>1
+			<b d>2. <c e>4
+			<b d>2. r4
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -211,12 +234,16 @@ solo_dynamics_I = {
 	% QUESTION: full score shows the crescendo starting on beat 2 of bar 45. PR shows it
 	%	    on beat 3. Which should it be?
 	s2. s2. s2. s2. s2. s4 s2-\cresc
-	% m. 46-52
+	% mm. 46-52
 	s2. s2. s2. s4\! s4\ff s4 s2. s2. s2.
-	% m. 53-54
+	% mm. 53-54
 	s4 \once \override TextScript.X-offset = #-5.0 s2-\markup { \dynamic fff } s2.
-	% m. 55
-	s1\mp
+	% mm. 55-62 - Rehersal 5
+	s1\mp s1 s1 s1 s1 s1 s1 s1
+	% mm. 63-69 - Rehersal 6
+	s1-\markup { \italic {piu dim. e rit.} } s2.-\markup { \italic{molto espress. e legato} }
+		s4\<
+	s1\! s1\f s1 s1 s1
 }
 
 solo_lower_I = \relative c, {
@@ -431,6 +458,41 @@ solo_lower_I = \relative c, {
 			s8 <c ees> s2.
 			s8 <cis e g>~ <e g>2.
 			s8 <c ees> s2.
+		}
+	>>
+	% m. 63 - Rehersal 6
+	\time 4/4
+	\clef bass
+	<<
+		\new Voice {
+			\voiceThree <ees,,, ees'>2 <d d'>
+		}
+		\new Voice {
+			\voiceOne r8 <fis'' fis'> <g g'> <fis fis'>~ <fis fis'> <bes bes'>
+				<a a'> <fis fis'>
+		}
+		\new Voice {
+			\voiceTwo s8 <a c>8~ <a c>4~ <a c>8 <c ees>4.
+		}
+	>>
+	% mm. 64-69
+	<<
+		\new Voice {
+			\voiceThree \slashedGrace <cis,,, cis'>8 \voiceTwo gis'''8 g g4~ g8 e
+				\tuplet 3/2 { dis e g }
+			gis2~ gis8 a bes cis
+			\clef treble d cis cis4~ cis8 b cis b
+			\clef bass \tuplet 3/2 { gis g e } gis2.
+			\tuplet 3/2 { fis8 f d } fis4~ fis8 f a fis
+			\tuplet 3/2 { fis8 f d } fis4~ fis8 f a bes
+		}
+		\new Voice {
+			\voiceOne <b e>2~ <b e>8 <a c> s4
+			<b e>1
+			<fis' b>4 <d fis>2.
+			<b e>1
+			<b d>2. <c e>4
+			<b d>2. r4
 		}
 	>>
 }
