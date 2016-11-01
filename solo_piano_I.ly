@@ -191,10 +191,12 @@ solo_upper_I = \relative c' {
 			<d d'> <cis cis'> <cis cis'>4~ <cis cis'>8 <b b'> <cis cis'> <b b'>
 			\tuplet 3/2 { <gis gis'> <g g'> <e e'> } <gis gis'>2.
 			\tuplet 3/2 { <fis fis'>8 <f f'> <d d'> } <fis fis'>4~ <fis fis'>8 <f f'> <a a'> <fis fis'>
-			\tuplet 3/2 { <fis fis'> <f f'> <d d'> } <fis fis'>4~ <fis fis'>8 <f f'> <a a'> <bes bes'>
+			\tuplet 3/2 { <fis fis'> <f f'> <d d'> } <fis fis'>4~ <fis fis'>8 <f f'> <a a'>
+				\afterGrace <bes bes'> { \tuplet 5/4 { \change Staff = "solo_lower"
+					fis,,16 fis' \change Staff = "solo_upper" e' bes' e } }
 		}
 		\new Voice {
-			\voiceTwo <gis gis'>8 <g g'> <g g'>4~ <g g'>8 <e e'> s4
+			\voiceTwo <gis, gis'>8 <g g'> <g g'>4~ <g g'>8 <e e'> s4
 			\voiceOne <b' e>1
 			<fis' b>4 <d fis>2.
 			<b e>1
@@ -202,6 +204,29 @@ solo_upper_I = \relative c' {
 			<b d>2. r4
 		}
 	>>
+	% mm. 70-75
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { \tuplet 3/2 { cis'16 c a } c8~ c16 b~ b32 bes a c
+				\tuplet 3/2 { a16 gis f } gis8~ gis16 a8 bes16 }
+			\repeat unfold 2 { fis8 f4 e8 }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { <d fis>2 <bes des> }
+			\repeat unfold 2 { <ges bes> }
+		}
+	>>
+	% mm. 76-81
+	\time 3/8
+	<fis' fis'>8 <f f'> <e e'>
+	<cis cis'> <d d'> <dis dis'>
+	<fis fis'> <f f'> <e e'>
+	<d d'> <cis cis'> <b b'>
+	\repeat unfold 2 { r <d d'> <gis gis'> }
 }
 
 solo_dynamics_I = {
@@ -244,6 +269,10 @@ solo_dynamics_I = {
 	s1-\markup { \italic {piu dim. e rit.} } s2.-\markup { \italic{molto espress. e legato} }
 		s4\<
 	s1\! s1\f s1 s1 s1
+	% mm. 70-75
+	s2\p s2 s2 s2 s2 s2
+	% mm. 76-81
+	s4. s4. s4. s4. s4. s4 s8-\markup { \italic rit. }
 }
 
 solo_lower_I = \relative c, {
@@ -495,5 +524,30 @@ solo_lower_I = \relative c, {
 			<b d>2. r4
 		}
 	>>
+	% mm. 70-75
+	\time 4/8
+	\clef treble
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { a'4 aes8 g fis4 \tuplet 3/2 { f8 e g } }
+			\clef bass
+			\tuplet 3/2 { ees16 d bes } des8~ des16 c a c
+			\tuplet 3/2 { ees16 d bes } des8~ des16 c \tuplet 3/2 { a c cis }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { <bes e>2 <g cis> }
+			\repeat unfold 2 { <c, bes'>4. ees8 }
+		}
+	>>
+	% mm. 76-81
+	\time 3/8
+	\clef treble
+	fis'8 f e
+	cis d dis
+	fis f e
+	d cis b
+	\repeat unfold 2 { r d gis }
 }
 

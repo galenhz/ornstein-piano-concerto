@@ -275,10 +275,10 @@ redux_upper_I = \relative c' {
 		f2.~ f4 e8~ e8. ees16 d f
 		d2.~ d4 cis8~ cis8. c16 b d
 	}
+	\unset Staff.timeSignatureFraction
 	% mm. 63-69 - Rehersal 6
 	\mark #6
 	\time 4/4
-	\set Staff.timeSignatureFraction = 4/4
 	bes8 a~ a16 aes g bes fis8 fis4 d8
 	<<
 		\new Voice {
@@ -301,6 +301,43 @@ redux_upper_I = \relative c' {
 				\repeat tremolo 4 { des f }
 				\repeat tremolo 4 { c e }
 			}
+		}
+	>>
+	% mm. 70-75
+	\time 4/8
+	\clef treble
+	\tempo "Melancolico e sostenuto"
+	R2*6
+	% mm. 76-81
+	\time 3/8
+	<<
+		\new Voice {
+			\voiceOne
+			\tuplet 3/2 { e''16 ees c } ees8 d16 cis
+			\tuplet 3/2 { c b d } b8 c16 cis
+			\tuplet 3/2 { e ees c } ees8 d16 cis
+			\tuplet 3/2 { c b gis } b4~
+			b16 gis b4~
+			b16 gis b4
+		}
+		\new Voice {
+			\voiceTwo
+			fis8. f16 e ees
+			d8. dis16 e f
+			fis8. f16 e ees
+			d4 des16 c
+			<<
+				\new Voice {
+					\voiceTwo
+					<a d f>4.
+				}
+				\new Voice {
+					\voiceTwo
+					%% FIXME: What do I have to do to push this note out?
+					\once \override NoteColumn.force-hshift = #1.1 b4~ b16 bes
+				}
+			>>
+			<a bes d f>4.
 		}
 	>>
 }
@@ -491,11 +528,23 @@ redux_lower_I = \relative c, {
 		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
 		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16 <b b'> <d d'>
         }
+	\unset Staff.timeSignatureFraction
 	% mm. 63-69 - Rehersal 6
 	\time 4/4
-	\set Staff.timeSignatureFraction = 4/4
 	<bes bes'>8 <a a'>~ <a a'>16 <aes aes'> <g g'> <bes bes'> <fis fis'>8 <f f'>4 <d d'>8
 	\repeat unfold 6 { <cis cis'>2~ \tuplet 3/2 { <cis cis'>4 <d d'> <f f'> } }
+	% mm. 70-75
+	\time 4/8
+	<fis fis'>4. fis'8
+	gisis4 gisis8 ais
+	fis4. fis8
+	gisis4 gisis8 ais8
+	<c,, c'>4. <ees ees'>8
+	<c c'>4. <ees ees'>8
+	% mm. 76-81
+	\time 3/8
+	\repeat unfold 2 { <g' d' bes'>4. <bes aes' d> }
+	\repeat unfold 2 { <d, a' f'> }
 }
 
 
