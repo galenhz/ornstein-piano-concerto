@@ -340,6 +340,22 @@ redux_upper_I = \relative c' {
 			<a bes d f>4.
 		}
 	>>
+	% mm. 82-89 - Rehersal 7
+	\mark #7
+	\time 4/4
+	\tempo "Andante e molto sostenuto"
+	r8 <cis d fis cis'>~ \tuplet 3/2 { <cis d fis cis'>[ <bes bes'> r16 <a a'>] } <a a'>4~
+		\tuplet 3/2 { <a a'>8 <a a'> <a a'> }
+	<a c ees a> <g g'> <g g'>2 <g g'>8 <g g'>
+	\clef bass \tuplet 3/2 { <fis a d fis>[ <ees ees'> r16 <d d'>] } <d d'>2 \clef treble <a' a'>4
+	<a bes ees a>8 <g g'> <g g'>2 <a a'>8 <g g'>
+	\clef bass \tuplet 3/2 { <fis a d fis>[ <ees ees'> r16 <d d'>] } <d d'>2 \clef treble <a' a'>8 <a a'>
+	<a bes ees a>8 <g g'> <g g'>2 <bes bes'>8 <cis cis'>
+	\tuplet 3/2 { <ees fis a ees'> <d d'> <cis cis'> } <d d'>2 <cis cis'>8. <f f'>16
+	<d a' d>1~
+	% mm. 90-
+	\time 7/8
+	<d a' d>4 r4 r r8
 }
 
 redux_dynamics_I = {
@@ -545,6 +561,19 @@ redux_lower_I = \relative c, {
 	\time 3/8
 	\repeat unfold 2 { <g' d' bes'>4. <bes aes' d> }
 	\repeat unfold 2 { <d, a' f'> }
+	% mm. 82-89 - Rehersal 7
+	\time 4/4
+	<d a' d fis>1\arpeggio
+	<c a' ees'>
+	<d a'>
+	<bes ees bes'>
+	<d a'>
+	<bes ees bes'>
+	<d a'>
+	<bes ees bes'>~
+	% mm. 90-
+	\time 7/8
+	<bes ees bes'>4 r4 r4 r8
 }
 
 

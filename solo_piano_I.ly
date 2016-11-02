@@ -227,6 +227,38 @@ solo_upper_I = \relative c' {
 	<fis fis'> <f f'> <e e'>
 	<d d'> <cis cis'> <b b'>
 	\repeat unfold 2 { r <d d'> <gis gis'> }
+	% mm. 82-89 - Rehersal 7
+	\time 4/4
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\repeat unfold 3 {
+		r8 \tuplet 5/4 { \stemDown cis,,32 \stemUp d[ d' d, d'] }
+			\tuplet 5/4 { \stemDown fis, \stemUp g[ g' g, g'] }
+			\tuplet 5/4 { \stemDown gis, \stemUp a[ a' a, a'] }
+			\tuplet 5/4 { \stemDown fis, \stemUp g[ g' g, g'] }
+			\tuplet 5/4 { \stemDown cis,, \stemUp d[ d' d, d'] }
+			\tuplet 5/4 { \stemDown gis, \stemUp a[ a' a, a'] }
+			\tuplet 5/4 { \stemDown fis, \stemUp g[ g' g, g'] }
+	}
+	\repeat unfold 5 {
+		r8 \tuplet 5/4 { \stemDown cis,,32 \stemUp d[ d' d, d'] }
+			\tuplet 5/4 { \stemDown fis, \stemUp g[ g' g, g'] }
+			\tuplet 5/4 { \stemDown gis, \stemUp a[ a' a, a'] }
+			\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
+			\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
+			\tuplet 5/4 { \stemDown d, \stemUp ees[ ees' ees, ees'] }
+			\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
+	}
+	% mm. 90-
+	\time 7/8
+	\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
+		\tuplet 5/4 { \stemDown d, \stemUp ees[ ees' ees, ees'] }
+		\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
+		\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
+		\tuplet 5/4 { \stemDown d,, \stemUp ees[ ees' ees, ees'] }
+		\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
+		\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
+	\stemNeutral
 }
 
 solo_dynamics_I = {
@@ -549,5 +581,33 @@ solo_lower_I = \relative c, {
 	fis f e
 	d cis b
 	\repeat unfold 2 { r d gis }
+	% mm. 82-89 - Rehersal 7
+	\time 4/4
+	\clef bass
+	<d,, a' d fis>1
+	<<
+		\new Voice {
+			\voiceTwo <c a' ees'>
+			<d a' d fis>
+			<bes ees bes' g'>
+			<d a' fis'>
+			<bes ees bes' g'>
+			<d a' fis'>
+			<bes ees bes' g'>
+		}
+		\new Voice {
+			%% FIXME: Move this voice to the right of the whole-note chords, like PR.
+			\voiceOne \tuplet 5/4 { fis''32 a g16. } s8 s2.
+			s1
+			\tuplet 5/4 { a32 cis bes16. } s8 s2.
+			\tuplet 5/4 { a32 cis~ cis16. } s8 s2.
+			\tuplet 5/4 { a32 cis bes16. } s8 s2.
+			\tuplet 5/4 { a32 cis~ cis16. } s8 s2.
+			\tuplet 5/4 { cis32 f d16. } s8 s2.
+		}
+	>>
+	% mm. 90-
+	\time 7/8
+	R2..
 }
 
