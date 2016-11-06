@@ -303,14 +303,15 @@ solo_upper_I = \relative c' {
 		\ottava #0 \revert Staff.OttavaBracket.transparent
 		\change Staff = "solo_upper" r4 \ottava #0
 	\time 5/4
-	r4 r4 <<
-		\new Voice {
-			\voiceOne <e,, e'>8 <g g'> <bes bes'>4
-		}
-		\new Voice {
-			\voiceTwo <gis b>4 <d' g>
-		}
-	>>
+	r4 r4 \tempo "Piu animato"
+		<<
+			\new Voice {
+				\voiceOne <e,, e'>8 <g g'> <bes bes'>4
+			}
+			\new Voice {
+				\voiceTwo <gis b>4 <d' g>
+			}
+		>>
 		<c fis bes c>4
 	\time 6/4
 	r4 r4 <<
@@ -321,6 +322,10 @@ solo_upper_I = \relative c' {
 			\voiceTwo <gis, b>4 <d' g>
 		}
 	>>
+	% mm. 100-? - Rehersal 9
+	\mark #9
+	\time 4/4
+	\tempo "Allegro"
 }
 
 solo_dynamics_I = {
@@ -367,6 +372,10 @@ solo_dynamics_I = {
 	s2\p s2 s2 s2 s2 s2
 	% mm. 76-81
 	s4. s4. s4. s4. s4. s4 s8-\markup { \italic rit. }
+	% mm. 82-90 - Rehersal 7
+	s1 s1 s1 s1 s1 s1 s1 s1 s2. s8
+	% mm. 91-99 - Rehersal 8
+	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.\ff s1 s2^\markup { rit. }
 }
 
 solo_lower_I = \relative c, {
