@@ -383,9 +383,13 @@ redux_upper_I = \relative c' {
 			<e g>4 <g b>2.
 			\repeat unfold 2 { <e g>4 <g c>2. }
 			\time 5/4
+			\override TupletBracket.transparent = ##t
+			\override TupletNumber.transparent = ##t
 			\tuplet 5/4 { <bes, d>4 <bes d> <e g>8 } s4 s4 s4
 			\time 6/4
 			\tuplet 5/4 { <bes d>4 <bes d> <e g>8 } s4 s4 s4 s4
+			\revert TupletBracket.transparent
+			\revert TupletNumber.transparent
 		}
 	>>
 }
@@ -641,9 +645,13 @@ redux_lower_I = \relative c, {
 			\tuplet 5/4 { <bes bes'>8 <c c'> <bes bes'> <g g'> <fis fis'> } s1
 		}
 		\new Voice {
+			\override TupletBracket.transparent = ##t
+			\override TupletNumber.transparent = ##t
 			\voiceTwo \tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'>
 			\time 6/4
 			\tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'> <d d'>
+			\revert TupletBracket.transparent
+			\revert TupletNumber.transparent
 		}
 	>>
 }
