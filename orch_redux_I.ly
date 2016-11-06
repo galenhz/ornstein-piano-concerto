@@ -340,7 +340,7 @@ redux_upper_I = \relative c' {
 			<a bes d f>4.
 		}
 	>>
-	% mm. 82-89 - Rehersal 7
+	% mm. 82-90 - Rehersal 7
 	\mark #7
 	\time 4/4
 	\tempo "Andante e molto sostenuto"
@@ -353,9 +353,41 @@ redux_upper_I = \relative c' {
 	<a bes ees a>8 <g g'> <g g'>2 <bes bes'>8 <cis cis'>
 	\tuplet 3/2 { <ees fis a ees'> <d d'> <cis cis'> } <d d'>2 <cis cis'>8. <f f'>16
 	<d a' d>1~
-	% mm. 90-
 	\time 7/8
 	<d a' d>4 r4 r r8
+	% mm. 91-99 - Rehersal 8
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	<fis, bes d fis>2. <g b dis g>4
+	\time 7/4
+	<gis c e gis>1~ <gis c e gis>2.
+	\time 4/4
+	<fis bes d fis>2~ <fis fis'>8 <g b dis g> <gis c e gis> <b b'>
+	\time 7/4
+	<<
+		\new Voice {
+			\voiceOne <cis cis'>8 <cis cis'>~ <cis cis'>1~ <cis cis'>2
+			\time 4/4
+			\tuplet 3/2 { <b b'>8 <c c'> <dis dis'> } <e e'>2 <ees ees'>8 <c c'>
+			\tuplet 3/2 { <b b'>8 <c c'> <dis dis'>~ } <dis dis'>2 <g g'>8 <fis fis'>
+			\tuplet 3/2 { <b, b'>8 <c c'> <dis dis'> } <e e'>2 <ees ees'>8 <c c'>
+			\time 5/4
+			\tuplet 5/4 { <g g'> <f f'> <g g'> <bes bes'> <c c'> } r4 r4 r4
+			\time 6/4
+			\tuplet 5/4 { <g g'>8 <f f'> <g g'> <bes bes'> <c c'> } r4 r4 r4 r4
+		}
+		\new Voice {
+			\voiceTwo <e g>1 ~ <e g>2.
+			\time 4/4
+			<e g>4 <g b>2.
+			\repeat unfold 2 { <e g>4 <g c>2. }
+			\time 5/4
+			\tuplet 5/4 { <bes, d>4 <bes d> <e g>8 } s4 s4 s4
+			\time 6/4
+			\tuplet 5/4 { <bes d>4 <bes d> <e g>8 } s4 s4 s4 s4
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -561,7 +593,7 @@ redux_lower_I = \relative c, {
 	\time 3/8
 	\repeat unfold 2 { <g' d' bes'>4. <bes aes' d> }
 	\repeat unfold 2 { <d, a' f'> }
-	% mm. 82-89 - Rehersal 7
+	% mm. 82-90 - Rehersal 7
 	\time 4/4
 	<d a' d fis>1\arpeggio
 	<c a' ees'>
@@ -571,9 +603,49 @@ redux_lower_I = \relative c, {
 	<bes ees bes'>
 	<d a'>
 	<bes ees bes'>~
-	% mm. 90-
 	\time 7/8
 	<bes ees bes'>4 r4 r4 r8
+	% mm. 91-99 - Rehersal 8
+	<<
+		\new Voice {
+			\voiceTwo a1
+		}
+		\new Voice {
+			\voiceOne r4 ees'8 a
+			\tuplet 6/4 { bes16 b c b bes a }
+			\tuplet 5/4 { ees a bes b c }
+		}
+	>>
+	\time 7/4
+	<c, fis d'>1~ <c fis d'>2.
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceTwo a1
+		}
+		\new Voice {
+			\voiceOne r4 ees'8 a
+			\tuplet 6/4 { bes16 b c b bes a }
+			\tuplet 5/4 { ees a bes b c }
+		}
+	>>
+	\time 7/4
+	<cis, fis d' fis>1~ <cis fis d' fis>2.
+	\time 4/4
+	\repeat unfold 3 { <d aes' f'>4 <f cis' a'>2. }
+	\time 5/4
+	<<
+		\new Voice {
+			\voiceOne \tuplet 5/4 { <bes, bes'>8 <c c'> <bes bes'> <g g'> <fis fis'> } s2.
+			\time 6/4
+			\tuplet 5/4 { <bes bes'>8 <c c'> <bes bes'> <g g'> <fis fis'> } s1
+		}
+		\new Voice {
+			\voiceTwo \tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'>
+			\time 6/4
+			\tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'> <d d'>
+		}
+	>>
 }
 
 

@@ -227,7 +227,7 @@ solo_upper_I = \relative c' {
 	<fis fis'> <f f'> <e e'>
 	<d d'> <cis cis'> <b b'>
 	\repeat unfold 2 { r <d d'> <gis gis'> }
-	% mm. 82-89 - Rehersal 7
+	% mm. 82-90 - Rehersal 7
 	\time 4/4
 	\mark #7
 	\tempo "Andante e molto sostenuto"
@@ -249,7 +249,6 @@ solo_upper_I = \relative c' {
 			\tuplet 5/4 { \stemDown d, \stemUp ees[ ees' ees, ees'] }
 			\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
 	}
-	% mm. 90-
 	\time 7/8
 	\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
 		\tuplet 5/4 { \stemDown d, \stemUp ees[ ees' ees, ees'] }
@@ -259,6 +258,69 @@ solo_upper_I = \relative c' {
 		\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
 		\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
 	\stemNeutral
+	% mm. 91-99 - Rehersal 8
+	\mark #8
+	\tempo "Mosso"
+	\repeat unfold 2 {
+		\time 4/4
+		r1
+		\time 7/4
+		r4 \ottava #1 <bes' e bes'>4~ <bes e bes'>8 <aes d aes'>16. <bes e bes'>32 <aes d aes'>8
+			<ges c ges'>16. <aes d aes'>32 <ges c ges'>8 <d aes' d> <aes' d aes'> <bes e bes'>~
+			<bes e bes'>4
+	}
+	\ottava #0
+	\time 4/4
+	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
+		a8 \tuplet 9/8 { c64 cis e f \change Staff = "solo_upper" a c cis e f }
+		\stemUp gis8 \stemNeutral
+		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		\once \override TupletBracket.positions = #'(-5 . -12)
+		\tuplet 9/8 { f64[ e cis c a \change Staff = "solo_lower" f e cis c] }
+		\tupletNeutral
+		\ottava #0 \revert Staff.OttavaBracket.transparent
+		\change Staff = "solo_upper" r4 \ottava #0
+	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
+		a8 \tuplet 9/8 { c64 cis e f \change Staff = "solo_upper" a c cis e f }
+		\stemUp gis8 \stemNeutral
+		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		\once \override TupletBracket.positions = #'(-5 . -12)
+		\tuplet 9/8 { f64[ e cis c a \change Staff = "solo_lower" f e cis c] }
+		\tupletNeutral
+		\ottava #0 \revert Staff.OttavaBracket.transparent
+		\change Staff = "solo_upper" \ottava #0
+		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		\once \override TupletBracket.positions = #'(-5 . -12)
+		\tuplet 9/8 { f e cis c a \change Staff = "solo_lower" f e cis c }
+		\change Staff = "solo_upper" r8
+	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
+		a'8 \tuplet 9/8 { c64 cis e f \change Staff = "solo_upper" a c cis e f }
+		\stemUp gis8 \stemNeutral
+		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		\once \override TupletBracket.positions = #'(-5 . -12)
+		\tuplet 9/8 { f64[ e cis c a \change Staff = "solo_lower" f e cis c] }
+		\tupletNeutral
+		\ottava #0 \revert Staff.OttavaBracket.transparent
+		\change Staff = "solo_upper" r4 \ottava #0
+	\time 5/4
+	r4 r4 <<
+		\new Voice {
+			\voiceOne <e,, e'>8 <g g'> <bes bes'>4
+		}
+		\new Voice {
+			\voiceTwo <gis b>4 <d' g>
+		}
+	>>
+		<c fis bes c>4
+	\time 6/4
+	r4 r4 <<
+		\new Voice {
+			\voiceOne <e, e'>8 <g g'> <bes bes'> <c c'> <ees fis bis ees>4 <f a c f>
+		}
+		\new Voice {
+			\voiceTwo <gis, b>4 <d' g>
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -581,7 +643,7 @@ solo_lower_I = \relative c, {
 	fis f e
 	d cis b
 	\repeat unfold 2 { r d gis }
-	% mm. 82-89 - Rehersal 7
+	% mm. 82-90 - Rehersal 7
 	\time 4/4
 	\clef bass
 	<d,, a' d fis>1
@@ -606,8 +668,24 @@ solo_lower_I = \relative c, {
 			\tuplet 5/4 { cis32 f d16. } s8 s2.
 		}
 	>>
-	% mm. 90-
 	\time 7/8
 	R2..
+	% mm. 91-99 - Rehersal 8
+	\repeat unfold 2 {
+		\time 4/4
+		r1
+		\time 7/4
+		\clef treble
+		r4 <bes' e>~ <bes e>8 <aes d>16. <bes e>32 <aes d>8 <ges c>16. <aes d>32
+			<ges c>8 <d aes'> <aes' d> <bes e>~ <bes e>4
+	}
+	\time 4/4
+	r4 s2 r4
+	r4 s2 s8 r8
+	r4 s2 r4
+	\time 5/4
+	r4 r4 \clef bass <c,, f b>4 <g' d' g> <fis cis' fis>
+	\time 6/4
+	r4 r4 <c f b> <g' d' g> <fis cis' fis bes> <f c' f a c>
 }
 
