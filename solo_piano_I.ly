@@ -339,7 +339,7 @@ solo_upper_I = \relative c' {
 	R1*2
 	\time 2/4
 	R2
-	% mm. 106-? - Rehersal 10
+	% mm. 106-112 - Rehersal 10
 	\mark #10
 	\time 4/4
 	\repeat unfold 4 {
@@ -349,6 +349,32 @@ solo_upper_I = \relative c' {
 	\time 2/4
 	fis cis fis, \change Staff = "solo_lower" \clef treble fis cis fis, fis cis
 		fis, cis' fis \change Staff = "solo_upper" fis cis' fis fis cis'
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne cis,2 cis
+			cis cis
+		}
+		\new Voice {
+			\voiceTwo gis8 fis16. ais32 gis8 fis8 gis16 fis dis8 fis ais
+			gis8 fis16. ais32 gis8 fis8 gis16 fis dis8 fis ais
+		}
+	>>
+	\time 3/4
+	\repeat unfold 4 {
+		gis32 ais gis fis cis dis fis ais
+	}
+	\tuplet 6/4 { gis ais cis dis fis ais }
+	<<
+		\new Voice {
+			\voiceOne gis8[ cis] r
+		}
+		\new Voice {
+			\voiceTwo gis8 \tuplet 7/8 { gis32 fis d
+				\change Staff = "solo_lower" \clef treble \stemUp b g fis f }
+			\change Staff = "solo_upper" \stemNeutral
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -727,10 +753,27 @@ solo_lower_I = \relative c, {
 	R1*2
 	\time 2/4
 	R2
-	% mm. 106-? - Rehersal 10
+	% mm. 106-12 - Rehersal 10
 	\time 4/4
 	s1 s1
 	\time 2/4
 	s2
+	\time 4/4
+	\clef bass
+	\repeat unfold 2 { \tuplet 5/4 { fis,16 b e fis b } \tuplet 5/4 { e b fis e b } }
+	\tuplet 5/4 { e, b' e fis b } \tuplet 5/4 { e b fis e b }
+		\tuplet 5/4 { fis b e fis b } \tuplet 5/4 { e b fis e b }
+	\time 3/4
+	<cis, fis e'>2 <b e dis'>4
+	<<
+		\new Voice {
+			\slashedGrace <a dis>8~ \voiceTwo <a dis>2
+		}
+		\new Voice {
+			\voiceOne
+			<dis' gis cis>2
+		}
+	>>
+	s4
 }
 
