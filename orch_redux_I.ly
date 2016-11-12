@@ -392,6 +392,23 @@ redux_upper_I = \relative c' {
 			\revert TupletNumber.transparent
 		}
 	>>
+	% mm. 100-105 - Rehersal 9
+	c'4 bes~ bes8. d16 c8 bes
+	\tuplet 3/2 { c bes ges } bes2 \tuplet 3/2 { ges8 bes des }
+	\time 2/4
+	c[ bes fes ges]
+	\time 4/4
+	gis'4 fis~ fis8. ais16 gis8 fis
+	\tuplet 3/2 { gis fis dis } fis2 \tuplet 3/2 { dis8 fis ais }
+	\time 2/4
+	gis[ fis cis dis]
+	% mm. 106-? - Rehersal 10
+	\mark #10
+	\time 4/4
+	c4 bes~ bes8. d16 c8 bes
+	\tuplet 3/2 { c bes aes } bes2 \tuplet 3/2 { ges8 bes des }
+	\time 2/4
+	c[ bes fes ges]
 }
 
 redux_dynamics_I = {
@@ -662,6 +679,30 @@ redux_lower_I = \relative c, {
 			\revert TupletNumber.transparent
 		}
 	>>
+	% mm. 100-105 - Rehersal 9
+	\repeat unfold 2 {
+		\slashedGrace { <cis cis'>8 } \tuplet 5/4 { fis'''16 cis fis, fis cis }
+			\tuplet 5/4 { fis, cis' fis fis cis' }
+			\tuplet 7/4 { fis cis fis cis fis, fis cis }
+			\tuplet 5/4 { fis, cis' fis fis cis' }
+	}
+	\time 2/4
+	\tuplet 5/4 { fis cis fis, fis cis } \tuplet 5/4 { fis, cis' fis fis cis' }
+	\time 4/4
+	\repeat tremolo 12 { cis,32 gis } \repeat tremolo 4 { d gis }
+	\repeat tremolo 12 { cis gis } \repeat tremolo 4 { d gis }
+	\time 2/4
+	\repeat tremolo 4 { cis gis } \repeat tremolo 4 { d gis }
+	% mm. 106-? - Rehersal 10
+	\time 4/4
+	\repeat unfold 2 {
+		\tuplet 5/4 { fis''16 cis fis, fis cis }
+		\tuplet 5/4 { fis, cis' fis fis cis' }
+		\tuplet 7/4 { fis cis fis cis fis, fis cis }
+		\tuplet 5/4 { fis, cis' fis fis cis' }
+	}
+	\time 2/4
+	\tuplet 5/4 { fis cis fis, fis cis } \tuplet 5/4 { fis, cis' fis fis cis' }
 }
 
 

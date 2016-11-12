@@ -322,10 +322,33 @@ solo_upper_I = \relative c' {
 			\voiceTwo <gis, b>4 <d' g>
 		}
 	>>
-	% mm. 100-? - Rehersal 9
+	% mm. 100-105 - Rehersal 9
 	\mark #9
 	\time 4/4
 	\tempo "Allegro"
+	\change Staff = "solo_lower" \slashedGrace <fis,,, cis' fis>8
+		\change Staff = "solo_upper"
+		\repeat unfold 4 {
+		fis''''32 cis fis, \change Staff = "solo_lower" \clef treble fis cis fis, fis cis
+		fis, cis' fis \change Staff = "solo_upper" fis cis' fis fis cis'
+		}
+	\time 2/4
+	fis cis fis, \change Staff = "solo_lower" \clef treble fis cis fis, fis cis
+		fis, cis' fis \change Staff = "solo_upper" fis cis' fis fis cis'
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	% mm. 106-? - Rehersal 10
+	\mark #10
+	\time 4/4
+	\repeat unfold 4 {
+		fis32 cis fis, \change Staff = "solo_lower" \clef treble fis cis fis, fis cis
+		fis, cis' fis \change Staff = "solo_upper" fis cis' fis fis cis'
+	}
+	\time 2/4
+	fis cis fis, \change Staff = "solo_lower" \clef treble fis cis fis, fis cis
+		fis, cis' fis \change Staff = "solo_upper" fis cis' fis fis cis'
 }
 
 solo_dynamics_I = {
@@ -696,5 +719,18 @@ solo_lower_I = \relative c, {
 	r4 r4 \clef bass <c,, f b>4 <g' d' g> <fis cis' fis>
 	\time 6/4
 	r4 r4 <c f b> <g' d' g> <fis cis' fis bes> <f c' f a c>
+	% mm. 100-105 - Rehersal 9
+	s1 s1
+	\time 2/4
+	s2
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	% mm. 106-? - Rehersal 10
+	\time 4/4
+	s1 s1
+	\time 2/4
+	s2
 }
 
