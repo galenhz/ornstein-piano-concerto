@@ -450,6 +450,10 @@ redux_dynamics_I = {
 	s1 s1 s1 s1 s1 s1 s1 s1 s2. s8
 	% mm. 91-99 - Rehersal 8
 	s1 s4 s2 s1 s1 s2. s1 s1 s1 s1 s2 s2. s1 s2
+	% mm. 100-105 - Rehersal 9
+	s1 s1 s2 s1 s1 s2
+	% mm. 106-112 - Rehersal 10
+	s1 s1 s2 s1 s1 s2. s2.
 }
 
 redux_lower_I = \relative c, {
