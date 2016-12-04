@@ -773,7 +773,7 @@ redux_lower_I = \relative c, {
 			\time 2/4
 			f2
 			\time 4/4
-			\voiceTwo \tuplet 3/2 { r16 d d4~ } d2.~
+			\voiceTwo \tuplet 3/2 { r16 d d4~ } d2.
 			f1
 			\time 2/4
 			f2
