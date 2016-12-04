@@ -414,6 +414,38 @@ redux_upper_I = \relative c' {
 	R1*2
 	\time 3/4
 	R2.*2
+	% mm. 113-120 - Rehersal 11
+	\mark #11
+	\time 4/4
+	\tempo "slower"
+	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <f, d' f> <f d' f>8 <f d' f> } }
+	<<
+		\new Voice {
+			%% FIXME: How to get parenthesis on arbitrary musical phrases?
+			\voiceTwo \repeat unfold 4 { \tuplet 3/2 { r16 <d' f> <d f>8 <d f> } }
+			\repeat unfold 4 { \tuplet 3/2 { r16 <d f> <d f>8 <d f> } }
+			\repeat unfold 3 { \tuplet 3/2 { r16 <a cis> <a cis>8 <a cis> } } r4
+			\time 2/4
+			\repeat unfold 2 { \tuplet 3/2 { r16 <a cis> <a cis>8 <a cis> } }
+			\time 4/4
+			\repeat unfold 3 { \tuplet 3/2 { r16 <d f> <d f>8 <d f> } } r4
+			\repeat unfold 3 { \tuplet 3/2 { r16 <a cis> <a cis>8 <a cis> } } r4
+			\time 2/4
+			\repeat unfold 2 { \tuplet 3/2 { r16 <a cis> <a cis>8 <a cis> } }
+		}
+		\new Voice {
+			\voiceOne gis'4 a2~ a8 bes32 cis d ees
+			d8 cis bes a \grace { a16 cis } bes8 a4 fis8
+			g4 f~ f8~ f32 des f g aes16 g f des
+			\time 2/4
+			f2
+			\time 4/4
+			d'4 cis~ cis8 cis16 ees d cis bes a
+			g4 f~ f8~ f32 des f g aes16 g f des
+			\time 2/4
+			f2
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -718,6 +750,35 @@ redux_lower_I = \relative c, {
 	\time 3/4
 	<cis cis'>8 r8 r4 r4
 	R2.
+	% mm. 113-120 - Rehersal 11
+	\time 4/4
+	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <d' a'> <d a'>8 <d a'> } }
+	<<
+		\new Voice {
+			\voiceOne \repeat unfold 4 { \tuplet 3/2 { r16 <a' f'> <a f'>8 <a f'> } }
+			\repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
+			\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8 cis } }
+			\time 2/4
+			\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8 cis } }
+			\time 4/4
+			\repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
+			\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8 cis } }
+			\time 2/4
+			\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8 cis } }
+		}
+		\new Voice {
+			\voiceTwo \tuplet 3/2 { r16 d, d4~ } d2.~
+			d1
+			f1
+			\time 2/4
+			f2
+			\time 4/4
+			\voiceTwo \tuplet 3/2 { r16 d d4~ } d2.~
+			f1
+			\time 2/4
+			f2
+		}
+	>>
 }
 
 
