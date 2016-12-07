@@ -375,6 +375,90 @@ solo_upper_I = \relative c' {
 			\change Staff = "solo_upper" \stemNeutral
 		}
 	>>
+	% mm. 113-120 - Rehersal 11
+	\mark #11
+	\time 4/4
+	\tempo "slower"
+	%% SUPER ULTRA FIXME: What a mess. Not only does this not fit vertically, it doesn't
+	%%                    even fit horizontally. This needs massive work!
+	\repeat unfold 6 {
+		\tuplet 18/16 { \change Staff = "solo_lower" d,,64 a' f'
+			\change Staff = "solo_upper" a bes cis d f
+			\change Staff = "solo_lower" f, a bes cis d
+			\change Staff = "solo_upper" f a bes cis d
+		}
+		\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
+			\change Staff = "solo_upper" d cis bes a f
+			\change Staff = "solo_lower" \clef bass d cis bes a f
+			\change Staff = "solo_upper" f' d cis bes a
+			\change Staff = "solo_lower" f a,
+		}
+	}
+	\repeat unfold 2 {
+		\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
+			\change Staff = "solo_upper" cis f a bes cis
+			\change Staff = "solo_lower" a, cis f
+			\change Staff = "solo_upper" a bes cis f
+		}
+		\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
+			\change Staff = "solo_upper" f cis bes a
+			\change Staff = "solo_lower" \clef bass f cis a
+			\change Staff = "solo_upper" cis' bes a f cis
+			\change Staff = "solo_lower" a cis,
+		}
+	}
+	\time 2/4
+	\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
+		\change Staff = "solo_upper" cis f a bes cis
+		\change Staff = "solo_lower" a, cis f
+		\change Staff = "solo_upper" a bes cis f
+	}
+	\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
+		\change Staff = "solo_upper" f cis bes a
+		\change Staff = "solo_lower" \clef bass f cis a
+		\change Staff = "solo_upper" cis' bes a f cis
+		\change Staff = "solo_lower" a cis,
+	}
+	\time 4/4
+	\repeat unfold 2 {
+		\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
+			\change Staff = "solo_upper" a bes cis d f
+			\change Staff = "solo_lower" f, a bes cis d
+			\change Staff = "solo_upper" f a bes cis d
+		}
+		\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
+			\change Staff = "solo_upper" d cis bes a f
+			\change Staff = "solo_lower" \clef bass d cis bes a f
+			\change Staff = "solo_upper" f' d cis bes a
+			\change Staff = "solo_lower" f a,
+		}
+	}
+	\repeat unfold 2 {
+		\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
+			\change Staff = "solo_upper" cis f a bes cis
+			\change Staff = "solo_lower" a, cis f
+			\change Staff = "solo_upper" a bes cis f
+		}
+		\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
+			\change Staff = "solo_upper" f cis bes a
+			\change Staff = "solo_lower" \clef bass f cis a
+			\change Staff = "solo_upper" cis' bes a f cis
+			\change Staff = "solo_lower" a cis,
+		}
+	}
+	\time 2/4
+	\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
+		\change Staff = "solo_upper" cis f a bes cis
+		\change Staff = "solo_lower" a,-\markup { \italic cresc. } cis f
+		\change Staff = "solo_upper" a bes cis f
+	}
+	\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
+		\change Staff = "solo_upper" f cis bes a
+		\change Staff = "solo_lower" \clef bass f cis a
+		\change Staff = "solo_upper" cis' bes a f cis
+		\change Staff = "solo_lower" a cis,
+	}
+
 }
 
 solo_dynamics_I = {
@@ -429,6 +513,8 @@ solo_dynamics_I = {
 	s1 s1 s2 s1 s1 s2
 	% mm. 106-112 - Rehersal 10
 	s1 s1 s2 s1 s1 s2. s2.
+	% mm. 113-120 - Rehersal 11
+	s1 s1 s1 s1 s2 s1 s1 s2
 }
 
 solo_lower_I = \relative c, {
@@ -481,9 +567,13 @@ solo_lower_I = \relative c, {
 		\stemUp cis, \stemDown g'[ f' f b f' b, f' b, f' b, f f g,]
 	}
 	\tupletDown
-	%% Fixed: Need to force lilypond to add more space between staves?
+	%% FIXME: Need to force lilypond to add more space between staves?
 	%%        No. Don't try to emulate beaming in the written part. Scrap
 	%%        this code and keep it simpler.
+	%% FIXME: No again. I probably should strive to preserve the way the
+	%%        written part splits things up, because it's used to hint which
+	%%        hand to play with. Need to come up with a real solution for this
+	%%        because I'll need it for the passages starting at m. 118.
 	%%\override TupletBracket.bracket-visibility = ##t
 	%%\override TupletBracket.padding = #2
 	%%\tuplet 6/4 {
@@ -779,5 +869,15 @@ solo_lower_I = \relative c, {
 		}
 	>>
 	s4
+	% mm. 113-120 - Rehersal 11
+	\time 4/4
+	\clef bass
+	s1 s1 s1 s1
+	\time 2/4
+	s2
+	\time 4/4
+	s1 s1
+	\time 2/4
+	s2
 }
 
