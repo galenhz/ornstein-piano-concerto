@@ -501,6 +501,33 @@ solo_upper_I = \relative c' {
 			\change Staff = "solo_upper" g gis a cis bes }
 		\tuplet 10/8 { \change Staff = "solo_lower" \clef bass b,, c dis e f
 			\change Staff = "solo_upper" \clef bass g gis a cis bes }
+	% mm. 126-133 - Rehersal 13
+	\mark #13
+	\tempo Vivo
+	\time 7/8
+	<c, fis>8[ <e g> <c fis> <e g> <e ais> <g b> <ais d>]
+	\time 9/8
+	<bes cis>[ <g b> <bes cis> <g b> <e bes> <g b> <e bes> <e g> <c fis>]
+	\time 7/8
+	<c fis>[ <e g> <c fis> <e g> <g cis> <ais d> <cis f>]
+	\time 8/8
+	<cis e>[ <bes d> <cis e> <bes d> <g cis> <bes d> <g cis> <e bes'>]
+	\time 6/8
+	\clef treble <a dis>[ <c e> <c fis> <ees g> <g b> <fis ais>]
+	\time 8/8
+	<g b>[ <fis ais> <e g> <fis ais> <e g> <dis fis> <c g'> <dis fis>]
+	\time 6/8
+	<a dis>[ <c e> <c fis> <ees g> <g b> <fis ais>]
+	\time 8/8
+	<g b>[ <fis ais> <e g> <fis ais> <e g> <dis fis> <c g'> <dis fis>]
+	% mm. 134-141
+	\time 2/4
+	\repeat unfold 2 {
+		\repeat unfold 2 { \tuplet 11/8 { <g cis>16 <bes d> <g cis> <bes d> <bes d>
+			<cis ees> <d fis> <cis ees> <bes d> <g cis> <bes d> } }
+		\repeat unfold 2 { \tuplet 10/8 { <bes d>[ <cis ees> <bes d> <cis ees> <d fis>
+			<ees g> <fis bes> <ees g> <d fis> <cis ees>] } }
+	}
 }
 
 solo_dynamics_I = {
@@ -949,4 +976,31 @@ solo_lower_I = \relative c, {
 	\time 4/4
 	<d'' fis bes d>1
 	\clef treble <b' fis' g b>8 r8 s2.
+	% mm. 126-133 - Rehersal 13
+	% Cheat. Leave time signatures out of bass and just repeat the phrase
+	\time 7/8
+	%% FIXME: Lilypond unable to break lines with continued beams? Bad!
+	\repeat unfold 5 { <ais,, e'>8 <dis ais'> <ais e'> <dis ais'> <cis g'> <fis cis'> }
+	\repeat unfold 4 { <a, dis> a' <a, dis> a' <ees a> ees' }
+	<a,, dis>[ a' <a, dis> a' <ees ees'>]
+	% mm. 134-141
+	\time 2/4
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				r8 <d' g bes d>4 <d g bes d>8~
+				<d g bes d> <d g bes d>4 <d g bes d>8
+				r8 <fis bes d fis>4 <fis bes d fis>8~
+				<fis bes d fis> <fis bes d fis>4 <fis bes d fis>8
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				<g,, g'>2~ <g g'>
+				<bes bes'>~ <bes bes'>
+			}
+		}
+	>>
 }
