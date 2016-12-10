@@ -458,7 +458,49 @@ solo_upper_I = \relative c' {
 		\change Staff = "solo_upper" cis' bes a f cis
 		\change Staff = "solo_lower" a cis,
 	}
-
+	% mm. 121-125 - Rehersal 12
+	\mark #12
+	\time 4/4
+	%% FIXME: The nightmare continues
+	\repeat unfold 2 {
+		\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
+			\change Staff = "solo_upper" a bes cis d f
+			\change Staff = "solo_lower" f, a bes cis d
+			\change Staff = "solo_upper" f a bes cis d
+		}
+		\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
+			\change Staff = "solo_upper" d cis bes a f
+			\change Staff = "solo_lower" \clef bass d cis bes a f
+			\change Staff = "solo_upper" f' d cis bes a
+			\change Staff = "solo_lower" f a,
+		}
+	}
+	\change Staff = "solo_upper"
+	\repeat unfold 4 { \tuplet 9/8 { r32 c' fis b c c fis b c } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 9/8 { r32 c,, fis b c c fis b c } }
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 { r32 cis gis' d cis g fis ees }
+		}
+		\new Voice {
+			\voiceThree
+			<fis, cis' d gis>1
+		}
+		\new Voice {
+			\voiceTwo
+			s8 bes, e ees r8 ees16[ c f8 e]
+		}
+	>>
+	\tuplet 5/4 { fis''16 cis' g f d }
+		\tuplet 10/8 { \change Staff = "solo_lower" b,32 c dis e f
+			\change Staff = "solo_upper" g gis a cis bes }
+		\tuplet 10/8 { \change Staff = "solo_lower" b,, c dis e f
+			\change Staff = "solo_upper" g gis a cis bes }
+		\tuplet 10/8 { \change Staff = "solo_lower" \clef bass b,, c dis e f
+			\change Staff = "solo_upper" \clef bass g gis a cis bes }
 }
 
 solo_dynamics_I = {
@@ -879,5 +921,30 @@ solo_lower_I = \relative c, {
 	s1 s1
 	\time 2/4
 	s2
+	% mm. 121-125 - Rehersal 12
+	\time 4/4
+	s1
+	<<
+		\new Voice {
+			\voiceOne
+			b'4 a~ a8~ a32 fis a b c16 b a fis
+			\time 2/4
+			a2
+		}
+		\new Voice {
+			\voiceThree \tieDown
+			<cis, fis>1~
+			\time 2/4
+			<cis fis>2 \tieNeutral
+		}
+		\new Voice {
+			\voiceTwo
+			\slashedGrace <fis,, fis'>8~ <fis fis'>1~
+			\time 2/4
+			\stemDown <fis fis'>2 \stemNeutral
+		}
+	>>
+	\time 4/4
+	<d'' fis bes d>1
+	\clef treble <b' fis' g b>8 r8 s2.
 }
-

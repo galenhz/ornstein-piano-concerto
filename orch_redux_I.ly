@@ -446,6 +446,25 @@ redux_upper_I = \relative c' {
 			f2
 		}
 	>>
+	% mm. 121-125 - Rehersal 12
+	\mark #12
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceTwo \repeat unfold 2 { \tuplet 3/2 { r16 <d f> <d f>8 <d f> } }
+			\tuplet 3/2 { r16 <d f> <d f>8 r8 }
+			r4
+		}
+		\new Voice {
+			\voiceOne d'4 cis~ cis8 cis16 ees d cis bes a
+		}
+	>>
+	\tuplet 9/8 { a'32 b a b a b a aes g } s4
+		\tuplet 9/8 { a32 b a b a b a aes g } s4
+	\time 2/4
+	\tuplet 9/8 { a32 b a b a b a aes g } s4
+	\time 4/4
+	d1 r1
 }
 
 redux_dynamics_I = {
@@ -779,6 +798,25 @@ redux_lower_I = \relative c, {
 			f2
 		}
 	>>
+	% mm. 121-125 - Rehersal 12
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne \repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
+		}
+		\new Voice {
+			\voiceTwo \tuplet 3/2 { r16 d, d4~} d2.~
+		}
+	>>
+	s4 \clef treble \tuplet 9/8 { fis'''32 g fis g fis g fis g \change Staff = "redux_upper" gis }
+		\change Staff = "redux_lower" s4
+		\tuplet 9/8 { fis32 g fis g fis g fis g \change Staff = "redux_upper" gis }
+		\change Staff = "redux_lower"
+	\time 2/4
+	s4 \tuplet 9/8 { fis32 g fis g fis fis fis e \change Staff = "redux_upper" ees }
+		\change Staff = "redux_lower"
+	\time 4/4
+	r1 r1
 }
 
 
