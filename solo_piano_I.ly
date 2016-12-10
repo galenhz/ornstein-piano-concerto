@@ -557,6 +557,8 @@ solo_dynamics_I = {
 	s1 s1 s2 s1 s1 s2. s2.
 	% mm. 113-120 - Rehersal 11
 	s1 s1 s1 s1 s2 s1 s1 s2
+	% mm. 121-125 - Rehersal 12
+	s1 s2 s2-\markup { dim. } s2 s4 s8. s16-\markup { \italic {piu e piu animato} } s2 s1
 }
 
 solo_lower_I = \relative c, {
