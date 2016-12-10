@@ -979,10 +979,11 @@ solo_lower_I = \relative c, {
 	% mm. 126-133 - Rehersal 13
 	% Cheat. Leave time signatures out of bass and just repeat the phrase
 	\time 7/8
-	%% FIXME: Lilypond unable to break lines with continued beams? Bad!
-	\repeat unfold 5 { <ais,, e'>8 <dis ais'> <ais e'> <dis ais'> <cis g'> <fis cis'> }
-	\repeat unfold 4 { <a, dis> a' <a, dis> a' <ees a> ees' }
+	\override Beam.breakable = ##t
+	\repeat unfold 5 { <ais,, e'>8[ <dis ais'> <ais e'> <dis ais'> <cis g'> <fis cis'>] }
+	\repeat unfold 4 { <a, dis>[ a' <a, dis> a' <ees a> ees'] }
 	<a,, dis>[ a' <a, dis> a' <ees ees'>]
+	\revert Beam.breakable
 	% mm. 134-141
 	\time 2/4
 	<<

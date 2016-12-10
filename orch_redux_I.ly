@@ -466,25 +466,26 @@ redux_upper_I = \relative c' {
 	\time 4/4
 	d1 r1
 	% mm. 126-133 - Rehersal 13
-	% FIXME: We need same cross-line barring fix as solo piano to do this right
 	\mark #13
 	\tempo Vivo
 	\time 7/8
-	r4 e,8 fis e fis g
+	\override Beam.breakable = ##t
+	r4 e,8[ fis e fis g
 	\time 9/8
-	ais b d cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8
+	ais b] d[ cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8]
 	\time 7/8
-	g16 r32 ais g8 fis16 r32 g fis8 e fis g
+	g16[ r32 ais g8 fis16 r32 g fis8 e fis g
 	\time 8/8
-	ais b c dis e g fis16 r32 g fis8
+	ais b c dis e] g[ fis16 r32 g fis8
 	\time 6/8
 	e16 r32 fis e8 dis16 r32 e dis8 c16 r32 dis c8
 	\time 8/8
-	b dis e fis g b ais16 r32 b ais8
+	b] dis[ e fis g b ais16 r32 b ais8
 	\time 6/8
-	g16 r32 ais g8 fis16 r32 g fis8 e dis
+	g16 r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
-	e fis g b ais16 r32 b ais8 g16 r32 ais g8
+	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	\revert Beam.breakable
 	% mm. 134-141
 	% FIXME: Add markings for "optional"
 	\time 2/4
@@ -847,24 +848,25 @@ redux_lower_I = \relative c, {
 	\time 4/4
 	r1 r1
 	% mm. 126-133 - Rehersal 13
-        % FIXME: Need same fix as right hand for this bit
         \time 7/8
+	\override Beam.breakable = ##t
 	\clef bass
-        r4 e,,8 fis e fis g
+        r4 e,,8[ fis e fis g
         \time 9/8
-        ais b d cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8
+        ais b] d[ cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8]
         \time 7/8
-        g16 r32 ais g8 fis16 r32 g fis8 e fis g
+        g16[ r32 ais g8 fis16 r32 g fis8 e fis g
         \time 8/8
-        ais b c dis e g fis16 r32 g fis8
+        ais b c dis e] g[ fis16 r32 g fis8
         \time 6/8
         e16 r32 fis e8 dis16 r32 e dis8 c16 r32 dis c8
         \time 8/8
-        b dis e fis g b ais16 r32 b ais8
+        b] dis[ e fis g b ais16 r32 b ais8]
         \time 6/8
-        \clef treble g16 r32 ais g8 fis16 r32 g fis8 e dis
+        \clef treble g16[ r32 ais g8 fis16 r32 g fis8 e] dis[
         \time 8/8
-        e fis g b ais16 r32 b ais8 g16 r32 ais g8
+        e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	\revert Beam.breakable
 	% mm. 134-141
 	\time 2/4
 	\clef bass fis8 <d, g bes d>[ <d d'> <e e'>]
