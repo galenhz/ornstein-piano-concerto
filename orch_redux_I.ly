@@ -495,6 +495,39 @@ redux_upper_I = \relative c' {
 		\repeat unfold 2 { \tuplet 10/8 { <d fis>[ <ees g> <d fis> <ees g> <fis bes>
 			<f a> <e gis> <f a> <e gis> <ees g>] } }
 	}
+	% mm. 142-146 - Rehersal 14
+	\mark #14
+	\tempo "Meno mosso"
+	\time 6/4
+	<<
+		\new Voice {
+			\voiceOne
+			a,8 bis cis4~ \tuplet 3/2 { cis16 c dis c bes c bes a bes a gis a
+				aes fis aes ges f ges f ees f } ees d
+			\time 5/4
+			b'4. d8 fis2.
+			\time 6/4
+			a,8 bis cis4~ \tuplet 3/2 { cis16 c dis c bes c bes a bes a gis a
+				aes fis aes ges f ges f ees f } ees d
+			\time 4/4
+			\repeat unfold 2 { d2 des4~ des8[ \tuplet 3/2 { c16 a des] } }
+		}
+		\new Voice {
+			\voiceTwo
+			fis4~ \tuplet 3/2 { fis8 e f } gis4~ gis8 fis~ fis2
+			\time 5/4
+			d8 dis fis f~ \tuplet 3/2 { f16 ees f ees d ees d des d des c des
+				c bes c } bes a
+			\time 6/4
+			fis'4~ \tuplet 3/2 { fis8 e f } gis4~ gis8 fis~ fis2
+			\time 4/4
+			\repeat unfold 2 { \tuplet 3/2 { e,8 f gis }
+				\tuplet 3/2 { b16 bes b bes aes bes }
+				\tuplet 3/2 { aes g aes g fis g }
+				\tuplet 3/2 { ges f ges f e f }
+			}
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -877,6 +910,21 @@ redux_lower_I = \relative c, {
 	<g g'>[ <e e'> <aes aes'> <g g'>]
 	\tuplet 3/2 { <fis fis'> <bes, bes'> <a' a'> } <cis cis'> <cis cis'>
 	\tuplet 3/2 { <fis, fis'> <bes, bes'> <a' a'> } \clef treble <e' e'> <ees ees'>
+	% mm. 142-146 - Rehersal 14
+	\time 6/4
+	\clef bass
+	\repeat unfold 3 { \tuplet 5/4 { g16 cis, fis, g cis, }
+		\tuplet 5/4 { fis, cis' g' fis cis' } }
+	\time 5/4
+	\repeat unfold 2 { \tuplet 5/4 { ees aes, d, ees aes, }
+		\tuplet 5/4 { d, aes' ees' d aes' } }
+	ees'[ aes, d,8]
+	\time 6/4
+	\repeat unfold 3 { \tuplet 5/4 { g'16 cis, fis, g cis, }
+		\tuplet 5/4 { fis, cis' g' fis cis' } }
+	\time 4/4
+	\repeat unfold 2 { \tuplet 5/4 { cis gis d d gis, } \tuplet 5/4 { d gis d' d gis }
+		\tuplet 3/2 { a cis, fis,~ } fis4. }
 }
 
 

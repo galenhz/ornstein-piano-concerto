@@ -528,6 +528,29 @@ solo_upper_I = \relative c' {
 		\repeat unfold 2 { \tuplet 10/8 { <bes d>[ <cis ees> <bes d> <cis ees> <d fis>
 			<ees g> <fis bes> <ees g> <d fis> <cis ees>] } }
 	}
+	% mm. 142-146 - Rehersal 14
+	\mark #14
+	\tempo "Meno mosso"
+	\time 6/4
+	r4 \change Staff = "solo_lower" \clef treble
+		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
+	\change Staff = "solo_lower"
+		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" \ottava #1 fis' cis' fis g }
+		fis8 \ottava #0 r4 r4 r4
+	\time 5/4
+	r4 \change Staff = "solo_lower"
+		\tuplet 5/4 { <d,,, aes'>32 \change Staff = "solo_upper" d' aes' d ees } d8
+	\change Staff = "solo_lower"
+		\tuplet 5/4 { <d, aes'>32 \change Staff = "solo_upper" \ottava #1 d' aes' d ees } d8
+		\ottava #0 r4 r4
+	\time 6/4
+	r4 \change Staff = "solo_lower"
+		\tuplet 5/4 { <fis,,, cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
+	\change Staff = "solo_lower"
+		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" \ottava #1 fis' cis' fis g }
+		fis8 \ottava #0 r4 r4 r4
+	\time 4/4
+	R1*2
 }
 
 solo_dynamics_I = {
@@ -586,6 +609,12 @@ solo_dynamics_I = {
 	s1 s1 s1 s1 s2 s1 s1 s2
 	% mm. 121-125 - Rehersal 12
 	s1 s2 s2-\markup { dim. } s2 s4 s8. s16-\markup { \italic {piu e piu animato} } s2 s1
+	% mm. 126-133 - Rehersal 13
+	s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
+	% mm. 134-141
+	s2*8
+	% mm. 142-146 - Rehersal 14
+	s4 \once \override DynamicText.X-offset = #-4.0 s4-\pp s1 s1 s4 s1 s2 s1 s1
 }
 
 solo_lower_I = \relative c, {
@@ -1004,4 +1033,13 @@ solo_lower_I = \relative c, {
 			}
 		}
 	>>
+	% mm. 142-146 - Rehersal 14
+	\time 6/4
+	r4 s2 r4 r4 r4
+	\time 5/4
+	r4 s2 r4 r4
+	\time 6/4
+	r4 s2 r4 r4 r4
+	\time 4/4
+	R1*2
 }
