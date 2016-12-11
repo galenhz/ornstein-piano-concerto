@@ -554,8 +554,59 @@ solo_upper_I = \relative c' {
 	\time 4/4
 	R1*2
 	% mm. 147-154 - Rehersal 15
-	%\mark #15
-	%\tempo "cantabile"
+	\mark #15
+	\tempo "cantabile"
+	\time 5/4
+	<<
+		\new Voice {
+			\voiceOne
+			e,2~ e8 d~ d4~ d8 cis16 bes
+			\time 7/4
+			\tuplet 3/2 { a fis f } \tuplet 3/2 { fis a bes } cis1~ cis4 c8 des
+			\time 5/4
+			e2~ e8 d~ d4~ d8 cis16 bes
+			\tuplet 3/2 { a fis f } \tuplet 3/2 { fis a bes } cis2.~ cis8 b,16[ c]
+			\time 3/4
+			ees2~ ees8 \tuplet 3/2 { d16 a bes }
+			cis2~ cis8 b16 c
+			ees2~ ees8 \tuplet 3/2 { d16 a bes }
+			\time 7/8
+			cis2.~ cis8
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 { r8 g' aes } \tuplet 3/2 { c16 bes c }
+				\tuplet 3/2 { bes a bes } \tuplet 3/2 { a gis a }
+				\tuplet 3/2 { gis fis gis } \tuplet 3/2 { fis f fis }
+				\tuplet 3/2 { f ees f } ees8 d
+			\time 7/4
+			r4 \tuplet 3/2 { r8 c cis } \tuplet 3/2 { fes16 ees fes }
+				\tuplet 3/2 { ees des ees } \tuplet 3/2 { des c des }
+				\tuplet 3/2 { c bes c } \tuplet 3/2 { bes a bes }
+				\tuplet 3/2 { a gis a } \tuplet 3/2 { gis fis gis }
+				\tuplet 3/2 { fis eis fis } f8 ees
+			\time 5/4
+			\tuplet 3/2 { r8 g' aes } \tuplet 3/2 { c16 bes c }
+				\tuplet 3/2 { bes a bes } \tuplet 3/2 { a gis a }
+				\tuplet 3/2 { gis fis gis } \tuplet 3/2 { fis f fis }
+				\tuplet 3/2 { f ees f } ees8 d
+			r4 \tuplet 3/2 { r8 a bes } \tuplet 3/2 { des16 c des }
+				\tuplet 3/2 { c bes c } \tuplet 3/2 { bes a bes }
+				\tuplet 3/2 { a gis a } gis8 ges
+			\time 3/4
+			\tuplet 3/2 { r16 fes[ geses] } \tuplet 3/2 { aes[ ges aes }
+				\tuplet 3/2 { ges f ges] } \tuplet 3/2 { f[ ees f] } ees d r8
+			\tuplet 3/2 { r16 d[ ees] } \tuplet 3/2 { ges[ f ges }
+				\tuplet 3/2 { f ees f] } \tuplet 3/2 { ees[ d ees] } d des r8
+			\tuplet 3/2 { r16 fes[ geses] } \tuplet 3/2 { aes[ ges aes }
+				\tuplet 3/2 { ges f ges] } \tuplet 3/2 { f[ ees f] } ees d r8
+			\time 7/8
+			\tuplet 3/2 { r16 bis[ cis } \tuplet 3/2 { e dis e] }
+				\tuplet 3/2 { dis[ cis dis } des c]
+				\tuplet 3/2 { e[ dis e } \tuplet 3/2 { dis cis dis } des c]
+
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -1049,4 +1100,39 @@ solo_lower_I = \relative c, {
 	r4 s2 r4 r4 r4
 	\time 4/4
 	R1*2
+	% mm. 147-154 - Rehersal 15
+	\time 5/4
+	\clef bass
+	<ees' b'>8 <f,, f'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <f'' ees'> <b g'> \clef treble <ees aes>
+			\clef bass <b g'> <f ees'> } }
+	\time 7/4
+	<c b'>8 <ees,, ees'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <c'' b'> <g' ees'> <b f'> <g ees'> <c, b'> } }
+		\tuplet 3/2 { r8 <c b'> <g' ees'> } <b f'>4
+	\time 5/4
+	<ees, b'>8 <f,, f'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <f'' ees'> <b g'> \clef treble <ees aes>
+			\clef bass <b g'> <f ees'> } }
+	<c b'>8 <ees,, ees'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <c'' b'> <g' ees'> <b f'> <g ees'> <c, b'> } }
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			r8 f r f r f
+			r a r a r a
+			r f r f r f
+			\time 7/8
+			r <d gis d'> r <d gis d'> r <d gis d'> r
+		}
+		\new Voice {
+			\voiceTwo
+			<d, aes'>2.
+			<f d'>
+			<d aes'>
+			\time 7/8
+			<bes bes'>~ <bes bes'>8
+		}
+	>>
 }
