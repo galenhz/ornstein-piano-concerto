@@ -111,6 +111,7 @@ solo_upper_I = \relative c' {
 	\mark #4
 	\time 3/4
 	\tempo "L'istesso Tempo"
+	\override Beam.breakable = ##t
 	\ottava #0
 	r8 <d, a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
 	% m. 40
@@ -145,6 +146,7 @@ solo_upper_I = \relative c' {
 	<gis dis' gis> <f c' f> <ees bes' ees>16 <f f'> <ees bes' ees> <c c'>] <a e' a>8[ <e' b' e>
 	% m. 52
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c c'> <bes f' bes>8 <g d' g>] <a e' a>[ <ees' bes' ees>16 r32 <f c' f>]
+	\revert Beam.breakable
 	% m. 53
 	<d a' d>8[ <b fis' b>]
 		<a des f a>32 \change Staff = "solo_lower" <a,, des f a>16.
@@ -551,6 +553,9 @@ solo_upper_I = \relative c' {
 		fis8 \ottava #0 r4 r4 r4
 	\time 4/4
 	R1*2
+	% mm. 147-154 - Rehersal 15
+	%\mark #15
+	%\tempo "cantabile"
 }
 
 solo_dynamics_I = {
@@ -764,6 +769,7 @@ solo_lower_I = \relative c, {
 	% QUESTION: obvious error in PR, missing bass clef transition
 	\time 3/4
 	\clef bass
+	\override Beam.breakable = ##t
 	r8 <d, a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
 	% m. 40
 	<f c' f> <gis dis' gis>] \clef treble <a e' a>8[ <bes f' bes> <cis gis' cis> <d a' d>
@@ -795,6 +801,7 @@ solo_lower_I = \relative c, {
 	<gis dis' gis> <f c' f> <ees bes' ees>16 <f f'> <ees bes' ees> <c c'>] <a e' a>8[ <e' b' e>
 	% m. 52
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c c'> <bes f' bes>8 <g d' g>] <a e' a>[ <ees' bes' ees>16 r32 <f c' f>]
+	\revert Beam.breakable
 	% m. 53
 	<d a' d>8[ <b fis' b>] s4 r4
 	% m. 54
