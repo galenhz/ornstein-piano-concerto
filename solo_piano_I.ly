@@ -607,6 +607,24 @@ solo_upper_I = \relative c' {
 
 		}
 	>>
+	% mm. 155-164 - Rehersal 16
+	\mark #16
+	\tempo "Andantino"
+	\time 2/4
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { r8 b32 f' b cis b4 s2 }
+			\repeat unfold 2 { r8 d,32 aes' d ees d4 s2 }
+			r8 b,32 f' b cis b4 s2
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { s4 b8 b32 f' b cis b2 }
+			\repeat unfold 2 { s4 d,8 d32 aes' d ees d2 }
+			s4 b,8 b32 f' b cis b2
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -671,6 +689,10 @@ solo_dynamics_I = {
 	s2*8
 	% mm. 142-146 - Rehersal 14
 	s4 \once \override DynamicText.X-offset = #-4.0 s4-\pp s1 s1 s4 s1 s2 s1 s1
+	% mm. 147-154 - Rehersal 15
+	s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.-\markup { \italic {molto rit.} }
+	% mm. 155-164 - Rehersal 16
+	s8 s4.\p s2 s2 s2 s2 s2 s2 s2 s2 s2-\markup { \italic {poco rit.} }
 }
 
 solo_lower_I = \relative c, {
@@ -1135,4 +1157,15 @@ solo_lower_I = \relative c, {
 			<bes bes'>~ <bes bes'>8
 		}
 	>>
+	% mm. 155-164 - Rehersal 16
+	\repeat unfold 2 {
+		r4 \clef bass <b' f' b>4
+		\clef treble <b' f' b>2
+	}
+	\repeat unfold 2 {
+		r4 \clef bass <d, aes' d>4
+		\clef treble <d' aes' d>2
+	}
+	r4 \clef bass <b, f' b>4
+	\clef treble <b' f' b>2
 }

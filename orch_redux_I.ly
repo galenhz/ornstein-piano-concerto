@@ -546,6 +546,21 @@ redux_upper_I = \relative c' {
 	r2. r2. r2.
 	\time 7/8
 	r2. r8
+	% mm. 155-164 - Rehersal 16
+	\mark #16
+	\tempo "Andantino"
+	\time 2/4
+	\clef bass
+	b,2~
+	b8. b32 b \tuplet 3/2 { cis8 b gis }
+	b4 b4~
+	b8[ gis b cis]
+	d2~
+	\tuplet 3/2 { d8 cis b } \tuplet 3/2 { cis b bes }
+	b4 b~
+	b8. g16 \tuplet 3/2 { g8 bes cis }
+	b2~
+	b2
 }
 
 redux_dynamics_I = {
@@ -956,6 +971,11 @@ redux_lower_I = \relative c, {
 	\ottava #-1
 	bes2.~ bes8
 	\ottava #0
+	% mm. 155-164 - Rehersal 16
+	\time 2/4
+	\repeat unfold 4 { \tuplet 3/2 { d'8 <aes' f'> g } \tuplet 3/2 { <aes f'> f e } }
+	\repeat unfold 4 { \tuplet 3/2 { d <b' f'> ais } \tuplet 3/2 { <b f'> aes g } }
+	\repeat unfold 2 { \tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> f e } }
 }
 
 
