@@ -533,6 +533,19 @@ redux_upper_I = \relative c' {
 			}
 		}
 	>>
+	% mm. 147-154 - Rehersal 15
+	\mark #15
+	\tempo "cantabile"
+	\time 5/4
+	R1*5/4
+	\time 7/4
+	R1*7/4
+	\time 5/4
+	R1*5/4*2
+	\time 3/4
+	r2. r2. r2.
+	\time 7/8
+	r2. r8
 }
 
 redux_dynamics_I = {
@@ -930,6 +943,19 @@ redux_lower_I = \relative c, {
 	\time 4/4
 	\repeat unfold 2 { \tuplet 5/4 { cis gis d d gis, } \tuplet 5/4 { d gis d' d gis }
 		\tuplet 3/2 { a cis, fis,~ } fis4. }
+	% mm. 147-154 - Rehersal 15
+	\time 5/4
+	R1*5/4
+	\time 7/4
+	R1*7/4
+	\time 5/4
+	R1*5/4*2
+	\time 3/4
+	d,2. d d
+	\time 7/8
+	\ottava #-1
+	bes2.~ bes8
+	\ottava #0
 }
 
 
