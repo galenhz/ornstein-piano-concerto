@@ -561,6 +561,18 @@ redux_upper_I = \relative c' {
 	b8. g16 \tuplet 3/2 { g8 bes cis }
 	b2~
 	b2
+	% mm. 165-169
+	\time 7/8
+	des,8[ g16 g bes8 g c bes g]
+	\time 9/8
+	des[ g16 g bes g c8 c bes g] bes[ c]
+	\clef treble
+	des4 des8[ ees des c des c bes]
+	\time 6/8
+	\override Beam.breakable = ##t
+	g bes c des4 des8[
+	\time 8/8
+	ees des fes des c des c bes]
 }
 
 redux_dynamics_I = {
@@ -601,6 +613,23 @@ redux_dynamics_I = {
 	s1 s1 s2 s1 s1 s2
 	% mm. 106-112 - Rehersal 10
 	s1 s1 s2 s1 s1 s2. s2.
+	% mm. 113-120 - Rehersal 11
+	s1 s1 s1 s1 s2 s1 s1 s2
+	% mm. 121-125 - Rehersal 12
+	s1*4
+        % mm. 126-133 - Rehersal 13
+        s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
+        % mm. 134-141
+        s2*8
+        % mm. 142-146 - Rehersal 14
+        s2 s1 s1 s4 s1 s2 s1 s1
+        % mm. 147-154 - Rehersal 15
+        s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.
+        % mm. 155-164 - Rehersal 16
+        s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
+	% mm. 165-169
+	s2 s4. s1 s8 s1 s8 s2. s1
+
 }
 
 redux_lower_I = \relative c, {
@@ -975,7 +1004,19 @@ redux_lower_I = \relative c, {
 	\time 2/4
 	\repeat unfold 4 { \tuplet 3/2 { d'8 <aes' f'> g } \tuplet 3/2 { <aes f'> f e } }
 	\repeat unfold 4 { \tuplet 3/2 { d <b' f'> ais } \tuplet 3/2 { <b f'> aes g } }
-	\repeat unfold 2 { \tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> f e } }
+	\tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> f e }
+		\tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> e d }
+	% mm. 165-169
+	\time 7/8
+	<des, des'>8[ <g g'> <bes bes'> <g g'> <c c'> <bes bes'> <g g'>]
+	\time 9/8
+	<des des'>[ <g g'> <bes bes'> <c c'> <c c'> <bes bes'> <g g'>] <bes bes'>[ <c c'>]
+	<des des'>4 <des des'>8[ <ees ees'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
+	\time 6/8
+	\override Beam.breakable = ##t
+	<g g'> <bes bes'> <c c'> <des des'>4 <des des'>8[
+	\time 8/8
+	<ees ees'> <des des'> <fes fes'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
 }
 
 
