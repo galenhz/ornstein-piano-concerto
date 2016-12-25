@@ -625,6 +625,20 @@ solo_upper_I = \relative c' {
 			s4 b,8 b32 f' b cis b2
 		}
 	>>
+	% mm. 165-169
+	\time 7/8
+	\override Beam.breakable = ##t
+	s2 s4.
+	\time 9/8
+	s4. s4. s4.
+	s4. s4. s4.
+	\time 6/8
+	s2.
+	\time 8/8
+	s1
+	% mm. 170-174 - Rehersal 17
+	%\time 7/8
+	%<b, b'>8 <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>
 }
 
 solo_dynamics_I = {
@@ -1168,4 +1182,31 @@ solo_lower_I = \relative c, {
 	}
 	r4 \clef bass <b, f' b>4
 	\clef treble <b' f' b>2
+	% mm. 165-169
+	% FIXME: Still need to figure out note clusters and half-broken beams
+	\time 7/8
+	\clef bass
+	\override Beam.breakable = ##t
+	\repeat unfold 2 {
+		\tuplet 3/2 { r16 cis,[ g' } \tuplet 3/2 { <bes c> \change Staff = "solo_upper" cis g' }
+		\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <bes c> g cis,] }
+		\tuplet 3/2 { r16 g'[ c } \tuplet 3/2 { <cis fis> \change Staff = "solo_upper" g' cis }
+		\tuplet 3/2 { <fis g> cis g } \tuplet 3/2 { \change Staff = "solo_lower" <cis, fis> c g] }
+	}
+	\time 9/8 % ...this is actually the second 9/8 bar
+	\clef treble
+	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
+	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
+	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
+	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
+	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
+	\tuplet 3/2 { <dis e> bes e, } \tuplet 3/2 { \change Staff = "solo_lower" <bes ees> a e] }
+	% ...and a partial repeat of all the above
+	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
+	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
+	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
+	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
+	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
+	\tuplet 3/2 { <dis e> bes e,] }
+	\change Staff = "solo_lower"
 }
