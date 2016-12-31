@@ -573,6 +573,13 @@ redux_upper_I = \relative c' {
 	g bes c des4 des8[
 	\time 8/8
 	ees des fes des c des c bes]
+	% mm. 170-174 - Rehersal 17
+	\mark #17
+	\tempo "Allegro - con forza e marcato"
+	\time 7/8
+	\repeat unfold 6 { \clef bass <b, fis'>8 \clef treble <b' e b'>[ <c e c'> <cis e cis'> <d e d'>]}
+	gis,8[ d']
+	\revert Beam.breakable
 }
 
 redux_dynamics_I = {
@@ -1017,6 +1024,11 @@ redux_lower_I = \relative c, {
 	<g g'> <bes bes'> <c c'> <des des'>4 <des des'>8[
 	\time 8/8
 	<ees ees'> <des des'> <fes fes'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
+	% mm. 170-174 - Rehersal 17
+	\time 7/8
+	\repeat unfold 6 { <e, e'>8 <b'' e g>[ <c e g> <cis e g> <d e g>] }
+	<gis,, gis'>8[ <d' d'>]
+	\revert Beam.breakable
 }
 
 

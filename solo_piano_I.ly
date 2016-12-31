@@ -637,8 +637,26 @@ solo_upper_I = \relative c' {
 	\time 8/8
 	s1
 	% mm. 170-174 - Rehersal 17
-	%\time 7/8
-	%<b, b'>8 <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>
+	\mark #17
+	\tempo "Allegro - con forza e marcato"
+	\time 7/8
+	<b, b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
+	\time 6/8
+	<b b'>[ <e e'>16 q <g g'> <e e'> <a a'>8 <g g'> <e e'>]
+	\time 9/8 \ottava #1
+	<g g'>[ <a a'> <bes bes'> q16 q <c c'>8 <bes bes'>16 <a a'> <bes bes'> <a a'> <g g'>
+		<e e'> <g g'> <a a'>]
+	\time 7/8
+	<bes bes'>8[ q16 q <c c'> <bes bes'> <cis cis'>8 <bes bes'>16 <a a'> <bes bes'> <a a'>
+		<g g'> <e e'>]
+	\time 3/8
+	<g g'>[ <a a'> <bes bes'> <c c'> <cis cis'> <e e'>
+	% mm. 175 - ?
+	\time 6/8
+	% FIXME: Do we want to write the first chord the same as the rest? b-sharp, not c?
+	%        Gets rid of annoying note cluster...
+	<fis c' cis e fis>8] \revert Beam.breakable
+		\ottava #0
 }
 
 solo_dynamics_I = {
@@ -1209,4 +1227,21 @@ solo_lower_I = \relative c, {
 	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
 	\tuplet 3/2 { <dis e> bes e,] }
 	\change Staff = "solo_lower"
+	% mm. 170-174 - Rehersal 17
+	\time 7/8
+	\clef bass
+	<b,, b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
+	\time 6/8
+	<b b'>[ <e e'>16 q <g g'> <e e'> <a a'>8 <g g'> <e e'>]
+	\time 9/8 \clef treble
+	<g g'>[ <a a'> <bes bes'> q16 q <c c'>8 <bes bes'>16 <a a'> <bes bes'> <a a'> <g g'>
+		<e e'> <g g'> <a a'>]
+	\time 7/8
+	<bes bes'>8[ q16 q <c c'> <bes bes'> <cis cis'>8 <bes bes'>16 <a a'> <bes bes'> <a a'>
+		<g g'> <e e'>]
+	\time 3/8
+	<g g'>[ <a a'> <bes bes'> <c c'> <cis cis'> <e e'>
+        % mm. 175 - ?
+        \time 6/8
+        <fis c' fis>8] \revert Beam.breakable
 }
