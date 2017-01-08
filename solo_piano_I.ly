@@ -651,12 +651,26 @@ solo_upper_I = \relative c' {
 		<g g'> <e e'>]
 	\time 3/8
 	<g g'>[ <a a'> <bes bes'> <c c'> <cis cis'> <e e'>
-	% mm. 175 - ?
+	% mm. 175 - 181
 	\time 6/8
 	% FIXME: Do we want to write the first chord the same as the rest? b-sharp, not c?
 	%        Gets rid of annoying note cluster...
 	<fis c' cis e fis>8] \revert Beam.breakable
 		\ottava #0
+		\repeat unfold 5 { \slashedGrace { <bis, cis e>8 } <fis fis'>-> }
+	% FIXME: Piano reduction doesn't have barring, just repeat slashes. Copy barring from score.
+	\time 5/8
+	\repeat unfold 5 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	\time 6/8
+	\repeat unfold 6 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	\time 9/8
+	\repeat unfold 9 { \slashedGrace { <c ees fis>8 } <ges ges'>-> }
+	\time 6/8
+	\repeat unfold 6 { \slashedGrace { <bis' cis e>8 } <fis fis'>-> }
+	\time 5/8
+	\repeat unfold 5 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	\time 6/8
+	\repeat unfold 6 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
 }
 
 solo_dynamics_I = {
@@ -725,6 +739,12 @@ solo_dynamics_I = {
 	s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.-\markup { \italic {molto rit.} }
 	% mm. 155-164 - Rehersal 16
 	s8 s4.\p s2 s2 s2 s2 s2 s2 s2 s2 s2-\markup { \italic {poco rit.} }
+	% mm. 165-169
+	s2 s4. s4. s4. s4. s4. s4. s4. s2. s1
+	% mm. 170-174 - Rehersal 17
+	s2 s4. s2. s4.*3 s2 s4. s4.
+	% mm. 175-181
+	s8 s4\ff s4.
 }
 
 solo_lower_I = \relative c, {
@@ -1241,7 +1261,20 @@ solo_lower_I = \relative c, {
 		<g g'> <e e'>]
 	\time 3/8
 	<g g'>[ <a a'> <bes bes'> <c c'> <cis cis'> <e e'>
-        % mm. 175 - ?
+        % mm. 175 - 181
         \time 6/8
         <fis c' fis>8] \revert Beam.breakable
+		\repeat unfold 5 { \slashedGrace { <fis a c>8 } cis'-> }
+	\time 5/8
+	\repeat unfold 5 { \slashedGrace { <fis, a c>8 } cis'-> }
+	\time 6/8
+	\repeat unfold 6 { \slashedGrace { <fis, a c>8 } cis'-> }
+	\time 9/8
+	\repeat unfold 9 { \slashedGrace { <a, cis>8 } ees'-> }
+	\time 6/8
+	\repeat unfold 6 { \slashedGrace { <fis a c>8 } cis'-> }
+	\time 5/8
+	\repeat unfold 5 { \slashedGrace { <fis, a c>8 } cis'-> }
+	\time 6/8
+	\repeat unfold 6 { \slashedGrace { <fis, a c>8 } cis'-> }
 }

@@ -580,6 +580,21 @@ redux_upper_I = \relative c' {
 	\repeat unfold 6 { \clef bass <b, fis'>8 \clef treble <b' e b'>[ <c e c'> <cis e cis'> <d e d'>]}
 	gis,8[ d']
 	\revert Beam.breakable
+	% mm. 175-181
+	\time 6/8
+	r8 <c c'>[ <f f'> <fis fis'> <gis gis'>8. q16]
+	%%\time 5/8
+	<b b'>8[ <a a'>16 <gis gis'> <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
+	%%\time 6/8
+	<f f'>[ <d d'> <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
+	%%\time 9/8
+	r8 a[ ees' des16 c des c a ees' des c des c a8]
+	%%\time 6/8
+	r8 <c, c'>[ <f f'> <fis fis'> <gis gis'>8. q16]
+	%%\time 5/8
+	<b b'>8[ <a a'>16 <gis gis'> <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
+	%%\time 6/8
+	<f f'>[ <d d'> <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
 }
 
 redux_dynamics_I = {
@@ -1029,6 +1044,48 @@ redux_lower_I = \relative c, {
 	\repeat unfold 6 { <e, e'>8 <b'' e g>[ <c e g> <cis e g> <d e g>] }
 	<gis,, gis'>8[ <d' d'>]
 	\revert Beam.breakable
+	% mm. 175-181
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceTwo
+			<a ees' a>1*3/4
+		}
+		\new Voice {
+			\voiceOne
+			r8 <cis' fis a c>[ q q q q]
+		}
+	>>
+	%\time 5/8
+	q[ q q q q]
+	%\time 6/8
+	q[ q q q q q]
+	%\time 9/8
+	<<
+		\new Voice {
+			\voiceTwo
+			<bes, fis' cis'>1
+		}
+		\new Voice {
+			\voiceFour
+			r8 <cis' fis a c>[ q q q q q q q]
+		}
+	>>
+	%\time 6/8
+	<<
+		\new Voice {
+			\voiceTwo
+			<a, ees' a>1*3/4
+		}
+		\new Voice {
+			\voiceOne
+			r8 <cis' fis a c>[ q q q q]
+		}
+	>>
+	%\time 5/8
+	q[ q q q q]
+	%\time 6/8
+	q[ q q q q q]
 }
 
 
