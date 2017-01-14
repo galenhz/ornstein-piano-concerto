@@ -595,6 +595,14 @@ redux_upper_I = \relative c' {
 	<b b'>8[ <a a'>16 <gis gis'> <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
 	%%\time 6/8
 	<f f'>[ <d d'> <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
+	% mm. 182-185
+	\repeat unfold 6 { <gis, d' f gis>8 }
+	\time 5/8
+	\repeat unfold 5 { <g bes ees> }
+	\time 6/8
+	\repeat unfold 6 { <gis d' f gis> }
+	\time 5/8
+	\repeat unfold 5 { <g bes ees> }
 }
 
 redux_dynamics_I = {
@@ -1086,6 +1094,14 @@ redux_lower_I = \relative c, {
 	q[ q q q q]
 	%\time 6/8
 	q[ q q q q q]
+	% mm. 182-185
+	\repeat unfold 6 { <d, a' f'>8 }
+	\time 5/8
+	\repeat unfold 5 { <ees bes' fes'> }
+	\time 6/8
+	\repeat unfold 6 { <d a' f'> }
+	\time 5/8
+	\repeat unfold 5 { <ees bes' fes'> }
 }
 
 

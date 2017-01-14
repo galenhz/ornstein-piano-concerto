@@ -671,6 +671,29 @@ solo_upper_I = \relative c' {
 	\repeat unfold 5 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
 	\time 6/8
 	\repeat unfold 6 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	% mm. 182-185
+	<<
+		\new Voice {
+			\voiceOne
+			r8 d[ gis a gis16 fis fis8]
+			\time 5/8
+			r8 e[ ais bis] r
+			\time 6/8
+			r d,[ gis a gis16 fis fis8]
+			\time 5/8
+			r e ais bis r
+		}
+		\new Voice {
+			\voiceTwo
+			r8 \repeat unfold 5 { \slashedGrace { <a,, e'> } <d f> }
+			\time 5/8
+			r8 \repeat unfold 3 { \slashedGrace { <bes f'> } <ees g> } r
+			\time 6/8
+			r8 \repeat unfold 5 { \slashedGrace { <a, e'> } <d f> }
+			\time 5/8
+			r8 \repeat unfold 3 { \slashedGrace { <bes f'> } <ees g> } r
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -1277,4 +1300,13 @@ solo_lower_I = \relative c, {
 	\repeat unfold 5 { \slashedGrace { <fis, a c>8 } cis'-> }
 	\time 6/8
 	\repeat unfold 6 { \slashedGrace { <fis, a c>8 } cis'-> }
+	% mm. 182-185
+	\clef bass
+	<d,, d'>2.
+	\time 5/8
+	<ees ees'>2 q8
+	\time 6/8
+	<des des'>2.
+	\time 5/8
+	<ees ees'>2 q8
 }
