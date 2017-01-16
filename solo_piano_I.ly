@@ -657,20 +657,34 @@ solo_upper_I = \relative c' {
 	%        Gets rid of annoying note cluster...
 	<fis c' cis e fis>8] \revert Beam.breakable
 		\ottava #0
-		\repeat unfold 5 { \slashedGrace { <bis, cis e>8 } <fis fis'>-> }
-	% FIXME: Piano reduction doesn't have barring, just repeat slashes. Copy barring from score.
+		\slashedGrace { <bis, cis e>8 } <fis fis'>->[
+			\repeat unfold 3 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+			\slashedGrace { <bis cis e>8 } <fis fis'>->]
+	% Fixed: Piano reduction doesn't have barring, just repeat slashes. Copy barring from score.
 	\time 5/8
-	\repeat unfold 5 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	\slashedGrace { <bis cis e>8 } <fis fis'>->[
+		\repeat unfold 3 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+		\slashedGrace { <bis cis e>8 } <fis fis'>->]
 	\time 6/8
-	\repeat unfold 6 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	\slashedGrace { <bis cis e>8 } <fis fis'>->[
+		\repeat unfold 4 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+		\slashedGrace { <bis cis e>8 } <fis fis'>->]
 	\time 9/8
-	\repeat unfold 9 { \slashedGrace { <c ees fis>8 } <ges ges'>-> }
+	\slashedGrace { <c ees fis>8 } <ges ges'>->[
+		\repeat unfold 7 { \slashedGrace { <c ees fis>8 } <ges ges'>-> }
+		\slashedGrace { <c ees fis>8 } <ges ges'>->]
 	\time 6/8
-	\repeat unfold 6 { \slashedGrace { <bis' cis e>8 } <fis fis'>-> }
+	\slashedGrace { <bis' cis e>8 } <fis fis'>->[
+		\repeat unfold 4 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+		\slashedGrace { <bis cis e>8 } <fis fis'>->]
 	\time 5/8
-	\repeat unfold 5 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	\slashedGrace { <bis cis e>8 } <fis fis'>->[
+		\repeat unfold 3 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+		\slashedGrace { <bis cis e>8 } <fis fis'>->]
 	\time 6/8
-	\repeat unfold 6 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+	\slashedGrace { <bis cis e>8 } <fis fis'>->[
+		\repeat unfold 4 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
+		\slashedGrace { <bis cis e>8 } <fis fis'>->]
 	% mm. 182-185
 	<<
 		\new Voice {
@@ -685,13 +699,19 @@ solo_upper_I = \relative c' {
 		}
 		\new Voice {
 			\voiceTwo
-			r8 \repeat unfold 5 { \slashedGrace { <a,, e'> } <d f> }
+			r8 \slashedGrace { <a,, e'> } <d f>[
+				\repeat unfold 3 { \slashedGrace { <a e'> } <d f> }
+				\slashedGrace { <a e'> } <d f>]
 			\time 5/8
-			r8 \repeat unfold 3 { \slashedGrace { <bes f'> } <ees g> } r
+			r8 \slashedGrace { <bes f'> } <ees g>[ \slashedGrace { <bes f'> } <ees g>
+				\slashedGrace { <bes f'> } <ees g>] r
 			\time 6/8
-			r8 \repeat unfold 5 { \slashedGrace { <a, e'> } <d f> }
+			r8 \slashedGrace { <a, e'> } <d f>[
+				\repeat unfold 3 { \slashedGrace { <a e'> } <d f> }
+				\slashedGrace { <a e'> } <d f>]
 			\time 5/8
-			r8 \repeat unfold 3 { \slashedGrace { <bes f'> } <ees g> } r
+			r8 \slashedGrace { <bes f'> } <ees g>[ \slashedGrace { <bes f'> } <ees g>
+				\slashedGrace { <bes f'> } <ees g>] r
 		}
 	>>
 }
@@ -1287,19 +1307,33 @@ solo_lower_I = \relative c, {
         % mm. 175 - 181
         \time 6/8
         <fis c' fis>8] \revert Beam.breakable
-		\repeat unfold 5 { \slashedGrace { <fis a c>8 } cis'-> }
+		\slashedGrace { <fis a c>8 } cis'->[
+			\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
+			\slashedGrace { <fis, a c>8 } cis'->]
 	\time 5/8
-	\repeat unfold 5 { \slashedGrace { <fis, a c>8 } cis'-> }
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
 	\time 6/8
-	\repeat unfold 6 { \slashedGrace { <fis, a c>8 } cis'-> }
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
 	\time 9/8
-	\repeat unfold 9 { \slashedGrace { <a, cis>8 } ees'-> }
+	\slashedGrace { <a, cis>8 } ees'->[
+		\repeat unfold 7 { \slashedGrace { <a, cis>8 } ees'-> }
+		\slashedGrace { <a, cis>8 } ees'->]
 	\time 6/8
-	\repeat unfold 6 { \slashedGrace { <fis a c>8 } cis'-> }
+	\slashedGrace { <fis a c>8 } cis'->[
+		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
 	\time 5/8
-	\repeat unfold 5 { \slashedGrace { <fis, a c>8 } cis'-> }
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
 	\time 6/8
-	\repeat unfold 6 { \slashedGrace { <fis, a c>8 } cis'-> }
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
 	% mm. 182-185
 	\clef bass
 	<d,, d'>2.
