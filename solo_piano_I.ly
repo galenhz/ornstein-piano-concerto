@@ -1355,11 +1355,11 @@ solo_lower_I = \relative c, {
 	\clef bass
 	<d,, d'>2.
 	\time 5/8
-	<ees ees'>2 q8
+	<ees ees'>2 <e e'>8
 	\time 6/8
 	<des des'>2.
 	\time 5/8
-	<ees ees'>2 q8
+	<ees ees'>2 <e e'>8
 	% mm. 186-187 - Rehersal 18
 	\time 8/8
 	<e, b' f' b d>1~
