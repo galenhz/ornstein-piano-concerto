@@ -714,6 +714,23 @@ solo_upper_I = \relative c' {
 				\slashedGrace { <bes f'> } <ees g>] r
 		}
 	>>
+	% mm. 186-187 - Rehersal 18
+	\mark #18
+	\time 8/8
+	<<
+		\new Voice {
+			\voiceOne
+			r8 d''[ gis a gis16 fis f8 d a']
+			\time 4/8
+			gis16[ fis f8 d \slashedGrace { gis8 } fis]
+		}
+		\new Voice {
+			\voiceTwo
+			r8 d,,[ gis a gis16 fis f8 d a']
+			\time 4/8
+			gis16[ fis f8 d \slashedGrace { gis8 } fis]
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -1343,4 +1360,9 @@ solo_lower_I = \relative c, {
 	<des des'>2.
 	\time 5/8
 	<ees ees'>2 q8
+	% mm. 186-187 - Rehersal 18
+	\time 8/8
+	<e, b' f' b d>1~
+	\time 4/4
+	q2
 }

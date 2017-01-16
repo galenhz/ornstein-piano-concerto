@@ -603,6 +603,12 @@ redux_upper_I = \relative c' {
 	<gis d' f gis>[ q q q q q]
 	\time 5/8
 	<g bes ees>[ q q q q]
+	% mm. 186-187 - Rehersal 18
+	\mark #18
+	\time 8/8
+	<f b d f>1~
+	\time 4/8
+	<f b d f>2
 }
 
 redux_dynamics_I = {
@@ -1102,6 +1108,11 @@ redux_lower_I = \relative c, {
 	<d a' f'>[ q q q q q ]
 	\time 5/8
 	<ees bes' fes'>[ q q q q]
+	% mm. 186-187 - Rehersal 18
+	\time 8/8
+	<b e b'>1~
+	\time 4/8
+	<b e b'>2
 }
 
 
