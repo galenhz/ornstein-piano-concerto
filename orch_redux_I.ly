@@ -609,6 +609,12 @@ redux_upper_I = \relative c' {
 	<f b d f>1~
 	\time 4/8
 	<f b d f>2
+	% mm. 188-193
+	\tempo "Meno mosso; fluido"
+	\time 4/4
+	\clef bass
+	a4 gis~ gis8 a \tuplet 3/2 { gis fis f }
+	d2~ d8 f fis a
 }
 
 redux_dynamics_I = {
