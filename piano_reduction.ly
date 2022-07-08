@@ -1,6 +1,6 @@
 %% Initial test for the Ornstein Piano Concerto
 
-\version "2.18.2"
+\version "2.22.2"
 
 \include "solo_piano_I.ly"
 \include "orch_redux_I.ly"

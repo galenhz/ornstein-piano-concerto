@@ -679,7 +679,7 @@ redux_lower_I = \relative c, {
 	\clef bass
 	\time 3/4
 	% mm. 1-4
-	R2.*3 R2.\fermataMarkup
+	R2.*3 R2.\fermata
 	% m. 5
 	<d a' f'>4 \stemDown <f c' aes'> <fis cis' a'>
 	% m. 6
