@@ -615,6 +615,12 @@ redux_upper_I = \relative c' {
 	\clef bass
 	a4 gis~ gis8 a \tuplet 3/2 { gis fis f }
 	d2~ d8 f fis a
+	cis4 c~ c8 cis \tuplet 3/2 { c bes a }
+	fis2~ fis8 a c cis
+	\clef treble
+	e8[ dis16 r32 fis] f4. ees8 \tuplet 3/2 { d b bes }
+	\clef bass
+	a8[ gis16 r32 c] b8 gis g[ e16 r32 aes] g8 e
 }
 
 redux_dynamics_I = {
@@ -1119,6 +1125,20 @@ redux_lower_I = \relative c, {
 	<b e b'>1~
 	\time 4/8
 	<b e b'>2
+	% mm. 188-193
+	\time 4/4
+	\repeat tremolo 4 { a32 a' } \repeat tremolo 4 { gis, gis' } \repeat tremolo 2 { gis, gis' }
+		\repeat tremolo 2 { a, a' } \tuplet 3/2 { gis,16[ gis'] fis,[ fis'] f,[ f'] }
+	\repeat tremolo 8 { d,32 d' } \repeat tremolo 2 { d, d' } \repeat tremolo 2 { f, f' }
+		\repeat tremolo 2 { fis, fis' } \repeat tremolo 2 { a, a' }
+	\repeat tremolo 4 { cis, cis' } \repeat tremolo 4 { c, c' } \repeat tremolo 2 { c, c' }
+		\repeat tremolo 2 { cis, cis' } \tuplet 3/2 { c,16[ c'] bes,[ bes'] a,[ a'] }
+	\repeat tremolo 8 { fis,32 fis' } \repeat tremolo 2 { fis, fis' } \repeat tremolo 2 { a, a' }
+		\repeat tremolo 2 { c, c' } \repeat tremolo 2 { cis, cis' }
+	\repeat tremolo 2 { e, e' } dis,[ dis' fis, fis'] \repeat tremolo 6 { f, f' }
+		\repeat tremolo 2 { ees, ees' } \tuplet 3/2 { d,16[ d'] b,[ b'] bes,[ bes'] }
+	\repeat tremolo 2 { a,32 a' } gis,[ gis' a, a'] \repeat tremolo 2 { b, b' } \repeat tremolo 2 { gis, gis' }
+		\repeat tremolo 2 { g, g' } e,[ e' aes, aes'] \repeat tremolo 2 { g, g' } \repeat tremolo 2 { e, e' }
 }
 
 
