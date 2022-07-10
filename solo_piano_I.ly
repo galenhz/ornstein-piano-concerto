@@ -158,14 +158,16 @@ solo_upper_I = \relative c' {
 	% mm. 55-58 - Rehersal 5
 	% QUESTION: Inconsistant handling of the ottavas between measures 55 and 57.
 	%           My repeat structure copies 55's handling in both cases. Maybe not?
+	% QUESTION: m. 58 doesn't repeat the "stuttering beams" that are in m. 56. Copyist got lazy?
+	%           Well, I'm lazy too, so I'll just do it one way and repeat.
 	\mark #5
 	\time 4/4
 	\tempo "Meno mosso"
 	\repeat unfold 2 {
-		\ottava #1 r16 <a'' cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> \ottava #0
-			<a cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis> <a cis> <g bes>8
-		\ottava #1 r16 <c'' fis> <bes cis> <a cis> <g bes> <fis bes> <cis g'> <c fis>
-			\ottava #0 <bes cis> <a cis> <g bes> <fis bes> <cis g'> <c fis> <bes cis>8
+		\ottava #1 r16 <a'' cis>[ <g bes> \set stemRightBeamCount = #1 <fis bes> \set stemLeftBeamCount = #1 <cis g'> <c fis> <bes cis> \ottava #0
+			\set stemRightBeamCount = #1 <a cis> \set stemLeftBeamCount = #1 <g bes> <fis bes> <cis g'> \set stemRightBeamCount = #1 <c fis> \set stemLeftBeamCount = #1 <bes cis> <a cis> <g bes>8]
+		\ottava #1 r16 <c'' fis>[ <bes cis> \set stemRightBeamCount = #1 <a cis> \set stemLeftBeamCount = #1 <g bes> <fis bes> <cis g'> \set stemRightBeamCount = #1 <c fis>
+			\ottava #0 \set stemLeftBeamCount = #1 <bes cis> <a cis> <g bes> \set stemRightBeamCount = #1 <fis bes> \set stemLeftBeamCount = #1 <cis g'> <c fis> <bes cis>8]
 	}
 	% mm. 59-62
 	% QUESTION: Same thing between 60 and 62.
