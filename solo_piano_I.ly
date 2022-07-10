@@ -74,16 +74,15 @@ solo_upper_I = \relative c' {
 	\tempo "Appasionato, ma molto sostenuto"
 	<fis d' fis>8 <f des' f>4 \slashedGrace <e c' e>8 \tuplet 3/2 { <e c' e>16 <ees ces' ees> <fis d' fis> }
 	<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
-	%% FIXME: Try to get note barring more like the score
 	\ottava #1
 	<b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
 		<d bes' d> <des beses' des>  <c aes' c>
-		\tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>~
-		<e c' e> <ees ces' ees> \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
+		\tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>~
+		<e c' e> \set stemRightBeamCount = #1 <ees ces' ees> \set stemLeftBeamCount = #1 \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
 	% m. 27
 	\time 2/4
-	\tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>
-		\tuplet 3/2 { <g ees' g> <gis e' gis> <b g' b> } \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
+	\tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>
+		\tuplet 3/2 { <g ees' g> <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \set stemLeftBeamCount = #1 \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
 	% m. 28
 	%% Fixed: position of hand markup needs to be adjusted
 	\tempo "Allegro"
@@ -924,12 +923,12 @@ solo_lower_I = \relative c, {
 		<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
 	\clef treble <b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
 		<d bes' d> <des beses' des>  <c aes' c>
-		\tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>~
-		<e c' e> <ees ces' ees> \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
+		\tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>~
+		<e c' e> \set stemRightBeamCount = #1 <ees ces' ees> \set stemLeftBeamCount = #1 \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
 	% m. 27
 	\time 2/4
-        \tuplet 3/2 { <e c' e> <f des' f> <gis e' gis> } <f des' f> <e c' e>
-		\tuplet 3/2 { <g ees' g> <gis e' gis> <b g' b> } \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
+        \tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount= #1 <f des' f> <e c' e>
+		\tuplet 3/2 { <g ees' g> <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \set stemLeftBeamCount = #1 \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
 	% m. 28
 	\time 3/4
 	s2.
