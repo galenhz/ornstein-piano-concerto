@@ -122,10 +122,9 @@ solo_upper_I = \relative c' {
 	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
 	% m. 43
 	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
-		<cis gis' cis> <bes f' bes>
+		<cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes>
 	% m .44
-	% FIXME: Another odd partially-interrupted barring in PR. Mimic? How?
-	<a e' a> <fis cis' fis> <a e' a> <fis cis' fis>] r8 <d a' d>[ <ees bes' ees> <d a' d>
+	\set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e' a> <fis cis' fis>] r8 <d a' d>[ <ees bes' ees> <d a' d>
 	% m. 45
 	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] <a e' a>[ <bes f' bes>
 	% m. 46
@@ -135,8 +134,7 @@ solo_upper_I = \relative c' {
 	% m. 48
 	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
 	% m. 49
-	% FIXME: Yet *another* odd partially-interrupted barring in PR. Mimic? How?
-	r16 <bes f' bes>[ <cis gis' cis> <bes f' bes> <a e' a> <fis cis' fis> <a e'a> <fis cis' fis>]
+	r16 <bes f' bes>[ \set stemLeftBeamCount = #1 <cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes> \set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e'a> <fis cis' fis>]
 		<a e' a>8[ <e' b' e>
 	% m. 50
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
@@ -765,6 +763,8 @@ solo_dynamics_I = {
 	% mm. 46-52
 	s2. s2. s2. s4\! s4\ff s4 s2. s2. s2.
 	% mm. 53-54
+	% FIXME: Not convinced this override looks good. Perhaps follow PR and sqash it down
+	%        into the lower staff?
 	s4 \once \override TextScript.X-offset = #-5.0 s2-\markup { \dynamic fff } s2.
 	% mm. 55-62 - Rehersal 5
 	s1\mp s1 s1 s1 s1 s1 s1 s1
@@ -963,10 +963,9 @@ solo_lower_I = \relative c, {
 	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
 	% m. 43
 	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
-		<cis gis' cis> <bes f' bes>
+		<cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes>
 	% m .44
-	% FIXME: Another odd partially-interrupted barring in PR. Mimic? How?
-	<a e' a> <fis cis' fis> <a e' a> <fis cis' fis>] r8 \clef bass <d a' d>[ <ees bes' ees> <d a' d>
+	\set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e' a> <fis cis' fis>] r8 \clef bass <d a' d>[ <ees bes' ees> <d a' d>
 	% m. 45
 	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] \clef treble <a e' a>[ <bes f' bes>
 	% m. 46
@@ -976,8 +975,7 @@ solo_lower_I = \relative c, {
 	% m. 48
 	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
 	% m. 49
-	% FIXME: Yet *another* odd partially-interrupted barring in PR. Mimic? How?
-	r16 <bes f' bes>[ <cis gis' cis> <bes f' bes> <a e' a> <fis cis' fis> <a e'a> <fis cis' fis>]
+	r16 <bes f' bes>[ \set stemLeftBeamCount = #1 <cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes> \set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e'a> <fis cis' fis>]
 		<a e' a>8[ <e' b' e>
 	% m. 50
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
