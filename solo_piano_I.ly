@@ -730,6 +730,29 @@ solo_upper_I = \relative c' {
 			gis16[ fis f8 d \slashedGrace { gis8 } fis]
 		}
 	>>
+	% mm. 188-193
+	\tempo "Meno mosso; fluido"
+	\time 4/4
+	\tuplet 3/2 { r16 f, \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <e f> f b }
+		\tuplet 3/2 { <e f> b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 <e f> b f~ }
+	\repeat unfold 2 { \tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <e f> f b }
+		\tuplet 3/2 { <e f> b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 <e f> b f~ } }
+	\tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <e f> f b }
+		\tuplet 3/2 { <e f> b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 <e f> b f }
+	\tuplet 3/2 { r16 cis' \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 <bis cis> cis fis }
+		\tuplet 3/2 { <bis cis> fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 <bis cis> fis cis~ }
+	\repeat unfold 2 { \tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 <bis cis> cis fis  }
+		\tuplet 3/2 { <bis cis> fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 <bis cis> fis cis~ } }
+	\tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 <bis cis> cis fis }
+		\tuplet 3/2 { <bis cis> fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 <bis cis> fis cis }
+	\tuplet 3/2 { r16 fisis \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 <fis g> fisis cis' }
+		\tuplet 3/2 { <fis g> cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 <fis g> cis fisis,~ }
+	\tuplet 3/2 { fisis fisis \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 <fis g> fisis cis' }
+		\tuplet 3/2 { <fis g> cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 <fis g> cis fisis, }
+	\tuplet 3/2 { r16 d \set stemRightBeamCount = #1 aes' \set stemLeftBeamCount = #1 <des d> d aes' }
+		\tuplet 3/2 { <des d> aes \set stemRightBeamCount = #1 d, \set stemLeftBeamCount = #1 <des d> aes d, }
+	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 <bes' ces> b e }
+		\tuplet 3/2 { <bes' ces> e, \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <bes ces> e, b }
 }
 
 solo_dynamics_I = {
@@ -1362,6 +1385,31 @@ solo_lower_I = \relative c, {
 	% mm. 186-187 - Rehersal 18
 	\time 8/8
 	<e, b' f' b d>1~
-	\time 4/4
+	\time 4/8
 	q2
+	% mm. 188-193
+	% QUESTION: This is just a (near) copy of the right-hand part, but with some inconsistent clef changes. Should I
+	%           bother trying to mimic the PR? For now I'll do the clef changes in 192/3, but not the inconsistant one in 190.
+	\time 4/4
+	\tuplet 3/2 { r16 f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 e f b }
+		\tuplet 3/2 { e b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 e b f~ }
+	\repeat unfold 2 { \tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 e f b }
+		\tuplet 3/2 { e b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 e b f~ } }
+	\tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 e f b }
+		\tuplet 3/2 { e b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 e b f }
+	\tuplet 3/2 { r16 cis' \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 bis cis fis }
+		\tuplet 3/2 { bis fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 bis fis cis~ }
+	\repeat unfold 2 { \tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 bis cis fis  }
+		\tuplet 3/2 { bis fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 bis fis cis~ } }
+	\tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 bis cis fis }
+		\tuplet 3/2 { bis fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 bis fis cis }
+	\tuplet 3/2 { r16 fisis \clef treble \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 fis fisis cis' }
+		\tuplet 3/2 { fis cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 fis cis \clef bass fisis,~ }
+	\tuplet 3/2 { fisis fisis \clef treble \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 fis fisis cis' }
+		\tuplet 3/2 { fis cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 fis cis \clef bass fisis, }
+	\tuplet 3/2 { r16 d \set stemRightBeamCount = #1 aes' \clef treble \set stemLeftBeamCount = #1 des d aes' }
+		\tuplet 3/2 { des aes \set stemRightBeamCount = #1 d, \set stemLeftBeamCount = #1 des \clef bass aes d, }
+	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 bes' b \clef treble e }
+		\tuplet 3/2 { bes' e, \clef bass \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 bes e, b }
+
 }
