@@ -211,7 +211,7 @@ solo_upper_I = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
-			\repeat unfold 2 { \tuplet 3/2 { cis'16 c a } c8~ c16 b~ b32 bes a c
+			\repeat unfold 2 { \tuplet 3/2 { cis'16 c a } c8~ c16 \set stemRightBeamCount = #1 b~ \set stemLeftBeamCount = #1 b32 bes a c
 				\tuplet 3/2 { a16 gis f } gis8~ gis16 a8 bes16 }
 			\repeat unfold 2 { fis8 f4 e8 }
 		}
@@ -1069,8 +1069,8 @@ solo_lower_I = \relative c, {
 			\voiceOne
 			\repeat unfold 2 { a'4 aes8 g fis4 \tuplet 3/2 { f8 e g } }
 			\clef bass
-			\tuplet 3/2 { ees16 d bes } des8~ des16 c a c
-			\tuplet 3/2 { ees16 d bes } des8~ des16 c \tuplet 3/2 { a c cis }
+			\tuplet 3/2 { ees16 d bes } des8~ des16 \set stemRightBeamCount = #1 c \set stemLeftBeamCount = #1 a c
+			\tuplet 3/2 { ees16 d bes } des8~ des16 \set stemRightBeamCount = #1 c \set stemLeftBeamCount = #1 \tuplet 3/2 { a c cis }
 		}
 		\new Voice {
 			\voiceTwo
