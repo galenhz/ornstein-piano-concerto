@@ -871,7 +871,15 @@ solo_dynamics_I = {
 	% mm. 170-174 - Rehersal 17
 	s2 s4. s2. s4.*3 s2 s4. s4.
 	% mm. 175-181
-	s8 s4\ff s4.
+	s8 s4\ff s4. s2 s8 s2. s2. s4. s2. s2 s8 s2.
+	% mm. 182-185
+	s2. s2 s8 s2. s2 s8
+	% mm. 186-187 - Rehersal 18
+	s1 s2
+	% mm. 188-193
+	s1*5 s2. s4-\markup { \italic {rit.} }
+	% mm. 194-201 - Rehersal 19
+	s2.*7 s4. s4.-\markup { \italic {rit.} }
 }
 
 solo_lower_I = \relative c, {

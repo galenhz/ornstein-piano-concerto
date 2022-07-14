@@ -695,20 +695,31 @@ redux_dynamics_I = {
 	% mm. 113-120 - Rehersal 11
 	s1 s1 s1 s1 s2 s1 s1 s2
 	% mm. 121-125 - Rehersal 12
-	s1*4
-        % mm. 126-133 - Rehersal 13
-        s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
-        % mm. 134-141
-        s2*8
-        % mm. 142-146 - Rehersal 14
-        s2 s1 s1 s4 s1 s2 s1 s1
-        % mm. 147-154 - Rehersal 15
-        s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.
-        % mm. 155-164 - Rehersal 16
-        s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
+	s1*2 s2 s1*2
+    % mm. 126-133 - Rehersal 13
+    s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
+    % mm. 134-141
+    s2*8
+    % mm. 142-146 - Rehersal 14
+    s2 s1 s1 s4 s1 s2 s1 s1
+    % mm. 147-154 - Rehersal 15
+    s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.
+    % mm. 155-164 - Rehersal 16
+    s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
 	% mm. 165-169
 	s2 s4. s1 s8 s1 s8 s2. s1
-
+	% mm. 170-174 - Rehersal 17
+	s2 s4. s2. s4.*3 s2 s4. s4.
+	% mm. 175-181
+	s2. s2 s8 s2. s2. s4. s2. s2 s8 s2.
+	% mm. 182-185
+	s2. s2 s8 s2. s2 s8
+	% mm. 186-187 - Rehersal 18
+	s1 s2
+	% mm. 188-193
+	s1*5 s2. s4-\markup { \italic {rit.} }
+	% mm. 194-201 - Rehersal 19
+	s2.*7 s4. s4.-\markup { \italic {rit.} }
 }
 
 redux_lower_I = \relative c, {
