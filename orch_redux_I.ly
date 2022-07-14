@@ -622,6 +622,7 @@ redux_upper_I = \relative c' {
 	\clef bass
 	a8[ gis16 r32 c] b8 gis g[ e16 r32 aes] g8 e
 	% mm. 194-201 - Rehersal 19
+	% Fixed: Need empty grace notes here to match left hand
 	\time 6/8
 	\mark #19
 	\clef treble
@@ -633,10 +634,10 @@ redux_upper_I = \relative c' {
 			}
 			\new Voice {
 				\voiceTwo
-				<ges, bes>4. d'4 cis8
+				\grace s8 <ges, bes>4. d'4 cis8
 			}
 		>>
-		<b e gis a>8 r8 r r4.
+		\grace s8 <b e gis a>8 r8 r r4.
 	}
 	R2.
 	\repeat unfold 3 { \tuplet 3/2 { r16 <d' bes'> <fis e'> } \tuplet 3/2 { r <fis bes> <cis g'> } }
@@ -1170,8 +1171,7 @@ redux_lower_I = \relative c, {
 	\repeat tremolo 2 { a,32 a' } gis,[ gis' a, a'] \repeat tremolo 2 { b, b' } \repeat tremolo 2 { gis, gis' }
 		\repeat tremolo 2 { g, g' } e,[ e' aes, aes'] \repeat tremolo 2 { g, g' } \repeat tremolo 2 { e, e' }
 	% mm. 194-201 - Rehersal 19
-	% FIXME: Two problems in this section. I can't add the grace notes without breaking layout complete, and
-	%        I can't get the tie in the lower voice to terminate in m. 199.
+	% FIXME: I can't get the tie in the lower voice to terminate in m. 199.
 	\time 6/8
 	\repeat unfold 2 {
 		<<
@@ -1182,10 +1182,10 @@ redux_lower_I = \relative c, {
 			}
 			\new Voice {
 				\voiceTwo
-				%\slashedGrace ees8~ <ees bis'' ees>2.
-				%\slashedGrace <e e'>8~ <e e'>8
-				<ees, bis'' ees>2.
-				<e e'>8
+				\acciaccatura ees,8 <ees bis'' ees>2.
+				\acciaccatura <e e'>8 <e e'>8
+				%<ees, bis'' ees>2.
+				%<e e'>8
 			}
 		>>
 		r8 r8 r4.

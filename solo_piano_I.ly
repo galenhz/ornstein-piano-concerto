@@ -755,19 +755,21 @@ solo_upper_I = \relative c' {
 	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 <bes' ces> b e }
 		\tuplet 3/2 { <bes' ces> e, \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <bes ces> e, b }
 	% mm. 194-201 - Rehersal 19
+	% WORKAROUND: Add silent grace notes to four bars to match the piano reduction.
+	\mark #19
 	\time 6/8
-	R2.
+	\grace s8 R2.
 	<<
 		\new Voice {
 			\voiceOne
-			g'16 ais b8 d~ d16 ees fis4
+			\grace s8 g'16 ais b8 d~ d16 ees fis4
 		}
 		\new Voice {
 			\voiceTwo
 			<b,, e>4. <g' cis>
 		}
 	>>
-	R2.
+	\grace s8 R2.
 	<<
 		\new Voice {
 			\voiceOne
@@ -776,7 +778,7 @@ solo_upper_I = \relative c' {
 		}
 		\new Voice {
 			\voiceTwo
-			<b, e>2.
+			\grace s8 <b, e>2.
 			<c' e>
 		}
 	>>
@@ -1453,9 +1455,9 @@ solo_lower_I = \relative c, {
 	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 bes' b \clef treble e }
 		\tuplet 3/2 { bes' e, \clef bass \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 bes e, b }
 	% mm. 194-201 - Rehersal 19
+	% WORKAROUND: Add silent grace notes to four bars to match the piano reduction.
 	\time 6/8
-	\mark #19
-	R2.
+	\grace s8 R2.
 	<<
 		\new Voice {
 			\voiceOne
@@ -1463,10 +1465,10 @@ solo_lower_I = \relative c, {
 		}
 		\new Voice {
 			\voiceTwo
-			<d, aes' f'>2.
+			\grace s8 <d, aes' f'>2.
 		}
 	>>
-	R2.
+	\grace s8 R2.
 	<<
 		\new Voice {
 			\voiceOne
@@ -1474,7 +1476,7 @@ solo_lower_I = \relative c, {
 		}
 		\new Voice {
 			\voiceTwo
-			<d, aes' f'>2.
+			\grace s8 <d, aes' f'>2.
 		}
 	>>
 	e16 b' gis' gis d' bes e d bes gis gis d
