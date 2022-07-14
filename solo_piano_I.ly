@@ -749,10 +749,51 @@ solo_upper_I = \relative c' {
 		\tuplet 3/2 { <fis g> cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 <fis g> cis fisis,~ }
 	\tuplet 3/2 { fisis fisis \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 <fis g> fisis cis' }
 		\tuplet 3/2 { <fis g> cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 <fis g> cis fisis, }
+	% FIXME: Don't like the layout for the "des d" cluster. Can I get lilypond to do a split end like the PR?
 	\tuplet 3/2 { r16 d \set stemRightBeamCount = #1 aes' \set stemLeftBeamCount = #1 <des d> d aes' }
 		\tuplet 3/2 { <des d> aes \set stemRightBeamCount = #1 d, \set stemLeftBeamCount = #1 <des d> aes d, }
 	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 <bes' ces> b e }
 		\tuplet 3/2 { <bes' ces> e, \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <bes ces> e, b }
+	% mm. 194-201 - Rehersal 19
+	\time 6/8
+	R2.
+	<<
+		\new Voice {
+			\voiceOne
+			g'16 ais b8 d~ d16 ees fis4
+		}
+		\new Voice {
+			\voiceTwo
+			<b,, e>4. <g' cis>
+		}
+	>>
+	R2.
+	<<
+		\new Voice {
+			\voiceOne
+			g16 aes b d ees fis~ fis g bes4
+			b8 bes \tuplet 3/2 { a16 aes b } g fis f8 e
+		}
+		\new Voice {
+			\voiceTwo
+			<b, e>2.
+			<c' e>
+		}
+	>>
+	<cis, g' bes ees>8 r8 r8 r4.
+	<<
+		\new Voice {
+			\voiceOne
+			b''8 bes \tuplet 3/2 { a16 aes b } g fis f8 e
+		}
+		\new Voice {
+			\voiceTwo
+			<c e>2.
+		}
+	>>
+	r16 <f bes cis e f>16[ \tuplet 3/2 { \set stemLeftBeamCount = #1 <fis fis'> <a a'> \set stemRightBeamCount = #1 <bis bis'> }
+		\set stemLeftBeamCount = #1 <a a'> \set stemRightBeamCount = #1 <fis fis'> \set stemLeftBeamCount = #1 <f f'> \set stemRightBeamCount = #1 <d d'>
+		\set stemLeftBeamCount = #1 <f f'> <fis fis'> <a a'>8]
 }
 
 solo_dynamics_I = {
@@ -1411,5 +1452,35 @@ solo_lower_I = \relative c, {
 		\tuplet 3/2 { des aes \set stemRightBeamCount = #1 d, \set stemLeftBeamCount = #1 des \clef bass aes d, }
 	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 bes' b \clef treble e }
 		\tuplet 3/2 { bes' e, \clef bass \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 bes e, b }
-
+	% mm. 194-201 - Rehersal 19
+	\time 6/8
+	\mark #19
+	R2.
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { \tuplet 8/6 { r16 f' b bes e b bes f } }
+		}
+		\new Voice {
+			\voiceTwo
+			<d, aes' f'>2.
+		}
+	>>
+	R2.
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { \tuplet 8/6 { r16 f' b bes e b bes f } }
+		}
+		\new Voice {
+			\voiceTwo
+			<d, aes' f'>2.
+		}
+	>>
+	e16 b' gis' gis d' bes e d bes gis gis d
+	<cis, gis' cis>8 r8 r8 r4.
+	e16 b' gis' gis d' bes e d bes gis gis d
+	\tuplet 3/2 { r16 ees,[ a] } \tuplet 3/2 { ees'[ a, ees'] }
+		\tuplet 3/2 { a[ ees \set stemRightBeamCount = #1 a } \tuplet 3/2 { \set stemLeftBeamCount = #1 ees' a, \set stemRightBeamCount = #1 ees' }
+		\tuplet 3/2 { \set stemLeftBeamCount = #1 a ees \set stemRightBeamCount = #1 a, } \tuplet 3/2 { \set stemLeftBeamCount = #1 ees' a, ees] }
 }

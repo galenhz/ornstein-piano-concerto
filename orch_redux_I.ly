@@ -621,6 +621,36 @@ redux_upper_I = \relative c' {
 	e8[ dis16 r32 fis] f4. ees8 \tuplet 3/2 { d b bes }
 	\clef bass
 	a8[ gis16 r32 c] b8 gis g[ e16 r32 aes] g8 e
+	% mm. 194-201 - Rehersal 19
+	\time 6/8
+	\mark #19
+	\clef treble
+	\repeat unfold 2 {
+		<<
+			\new Voice {
+				\voiceOne
+				fis' f \tuplet 3/2 { e16 ees fis } d g gis8 cis,16 a'
+			}
+			\new Voice {
+				\voiceTwo
+				<ges, bes>4. d'4 cis8
+			}
+		>>
+		<b e gis a>8 r8 r r4.
+	}
+	R2.
+	\repeat unfold 3 { \tuplet 3/2 { r16 <d' bes'> <fis e'> } \tuplet 3/2 { r <fis bes> <cis g'> } }
+	<gis c e gis>2.
+	<<
+		\new Voice {
+			\voiceOne
+			ees
+		}
+		\new Voice {
+			\voiceTwo
+			cis4.~ cis4 a8
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -1139,6 +1169,40 @@ redux_lower_I = \relative c, {
 		\repeat tremolo 2 { ees, ees' } \tuplet 3/2 { d,16[ d'] b,[ b'] bes,[ bes'] }
 	\repeat tremolo 2 { a,32 a' } gis,[ gis' a, a'] \repeat tremolo 2 { b, b' } \repeat tremolo 2 { gis, gis' }
 		\repeat tremolo 2 { g, g' } e,[ e' aes, aes'] \repeat tremolo 2 { g, g' } \repeat tremolo 2 { e, e' }
+	% mm. 194-201 - Rehersal 19
+	% FIXME: Two problems in this section. I can't add the grace notes without breaking layout complete, and
+	%        I can't get the tie in the lower voice to terminate in m. 199.
+	\time 6/8
+	\repeat unfold 2 {
+		<<
+			\new Voice {
+				\voiceOne
+				\repeat unfold 2 { \tuplet 3/2 { r16 ees a, } \tuplet 3/2 { ees'8 \set stemLeftBeamCount = #2 \set stemRightBeamCount = #1 a,16 } \set stemLeftBeamCount = #1 ees' a, }
+				<aes' f'>8
+			}
+			\new Voice {
+				\voiceTwo
+				%\slashedGrace ees8~ <ees bis'' ees>2.
+				%\slashedGrace <e e'>8~ <e e'>8
+				<ees, bis'' ees>2.
+				<e e'>8
+			}
+		>>
+		r8 r8 r4.
+	}
+	R2.
+	<<
+		\new Voice {
+			\voiceOne
+			cis'''8 c \tuplet 3/2 { b16 bes g } bes8. b16 c cis
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 { r16 cis,~ g~ } <cis g>4~ <cis g>4.
+		}
+	>>
+	<d gis d'>2.
+	<ees, a ees'>4.~ <ees a ees'>4 <a, a'>8
 }
 
 
