@@ -653,6 +653,22 @@ redux_upper_I = \relative c' {
 		}
 	>>
 	% mm. 202-207 - Rehersal 20
+	\tempo "Andantino (meno)"
+	\mark #20
+	\clef bass
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 { cis16 ees d4~ d16 ees d4 }
+			\repeat unfold 2 { cis16 ees d4 d16 fis ees4 }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { <d, g bes>4 <d g bes cis>8~ <d g bes cis>4 <d g bes cis>8
+				<d aes'>4 <d aes' cis>8~ <d aes' cis>4. }
+			\repeat unfold 2 { <d g>4. <g cis> }
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -1218,6 +1234,12 @@ redux_lower_I = \relative c, {
 	<d gis d'>2.
 	<ees, a ees'>4.~ <ees a ees'>4 <a, a'>8
 	% mm. 202-207 - Rehersal 20
+	\repeat unfold 2 {
+		<g g'>4 <g g'>8~ <g g'>4 <g g'>8
+		<bes f' bes>4 <bes f' bes>8~ <bes f' bes> <a a'> <aes aes'>
+	}
+	<g g'>4. <ees ees'>
+	<g g'> <ees ees'>
 }
 
 
