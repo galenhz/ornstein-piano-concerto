@@ -652,6 +652,7 @@ redux_upper_I = \relative c' {
 			cis4.~ cis4 a8
 		}
 	>>
+	% mm. 202-207 - Rehersal 20
 }
 
 redux_dynamics_I = {
@@ -720,6 +721,7 @@ redux_dynamics_I = {
 	s1*5 s2. s4-\markup { \italic {rit.} }
 	% mm. 194-201 - Rehersal 19
 	s2.*7 s4. s4.-\markup { \italic {rit.} }
+	% mm. 202-207 - Rehersal 20
 }
 
 redux_lower_I = \relative c, {
@@ -1182,24 +1184,24 @@ redux_lower_I = \relative c, {
 	\repeat tremolo 2 { a,32 a' } gis,[ gis' a, a'] \repeat tremolo 2 { b, b' } \repeat tremolo 2 { gis, gis' }
 		\repeat tremolo 2 { g, g' } e,[ e' aes, aes'] \repeat tremolo 2 { g, g' } \repeat tremolo 2 { e, e' }
 	% mm. 194-201 - Rehersal 19
-	% FIXME: I can't get the tie in the lower voice to terminate in m. 199.
 	\time 6/8
 	\repeat unfold 2 {
+		% FIXME: Blech. I tried to keep the rests out of the voices structure so they got centered nicely, but
+		%        doing that breaks things; lilypond extends the redux lower voice out forever with empty bars.
+		%        I don't like that. It indicates something's stuck open which should be closed, and could cause
+		%        subtle bugs down the line. Do this for now. Figure out a real fix later.
 		<<
 			\new Voice {
 				\voiceOne
 				\repeat unfold 2 { \tuplet 3/2 { r16 ees a, } \tuplet 3/2 { ees'8 \set stemLeftBeamCount = #2 \set stemRightBeamCount = #1 a,16 } \set stemLeftBeamCount = #1 ees' a, }
-				<aes' f'>8
+				<aes' f'>8   r8 r8 r4.
 			}
 			\new Voice {
 				\voiceTwo
 				\acciaccatura ees,8 <ees bis'' ees>2.
-				\acciaccatura <e e'>8 <e e'>8
-				%<ees, bis'' ees>2.
-				%<e e'>8
+				\acciaccatura <e e'>8 <e e'>8   s8 s8 s4.
 			}
 		>>
-		r8 r8 r4.
 	}
 	R2.
 	<<
@@ -1209,11 +1211,13 @@ redux_lower_I = \relative c, {
 		}
 		\new Voice {
 			\voiceTwo
+			% FIXME: I can't get the cis tie in the lower voice to terminate in m. 199.
 			\tuplet 3/2 { r16 cis,~ g~ } <cis g>4~ <cis g>4.
 		}
 	>>
 	<d gis d'>2.
 	<ees, a ees'>4.~ <ees a ees'>4 <a, a'>8
+	% mm. 202-207 - Rehersal 20
 }
 
 

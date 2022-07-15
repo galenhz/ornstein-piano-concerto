@@ -796,6 +796,15 @@ solo_upper_I = \relative c' {
 	r16 <f bes cis e f>16[ \tuplet 3/2 { \set stemLeftBeamCount = #1 <fis fis'> <a a'> \set stemRightBeamCount = #1 <bis bis'> }
 		\set stemLeftBeamCount = #1 <a a'> \set stemRightBeamCount = #1 <fis fis'> \set stemLeftBeamCount = #1 <f f'> \set stemRightBeamCount = #1 <d d'>
 		\set stemLeftBeamCount = #1 <f f'> <fis fis'> <a a'>8]
+	% mm. 202-207 - Rehersal 20
+	\tempo "Andantino (meno)"
+	\mark #20
+	\repeat unfold 2 { r16 <a, d> <cis ees> <d fis> <cis ees> <a d> }
+	\repeat unfold 2 { r16 <bes f'> <d fis> <f a> <d fis> <bes f> }
+	\repeat unfold 2 { r16 <d a'> <gis bes> <a cis> <gis bes> <d a> }
+	\repeat unfold 2 { r16 <bes f'> <d fis> <f a> <d fis> <bes f> }
+	\repeat unfold 2 { r16 <g d'> <cis ees> <d fis> <cis ees> <g d>
+		r16 <g b> <bes c> <b ees> <bes c> <g b> }
 }
 
 solo_dynamics_I = {
@@ -880,6 +889,8 @@ solo_dynamics_I = {
 	s1*5 s2. s4-\markup { \italic {rit.} }
 	% mm. 194-201 - Rehersal 19
 	s2.*7 s4. s4.-\markup { \italic {rit.} }
+	% mm. 202-207 - Rehersal 20
+	%%s2.-\markup { \dynamic p espressivo } s2.*5
 }
 
 solo_lower_I = \relative c, {
@@ -1493,4 +1504,33 @@ solo_lower_I = \relative c, {
 	\tuplet 3/2 { r16 ees,[ a] } \tuplet 3/2 { ees'[ a, ees'] }
 		\tuplet 3/2 { a[ ees \set stemRightBeamCount = #1 a } \tuplet 3/2 { \set stemLeftBeamCount = #1 ees' a, \set stemRightBeamCount = #1 ees' }
 		\tuplet 3/2 { \set stemLeftBeamCount = #1 a ees \set stemRightBeamCount = #1 a, } \tuplet 3/2 { \set stemLeftBeamCount = #1 ees' a, ees] }
+	% mm. 202-207 - Rehersal 20
+	\clef treble
+	<<
+		\new Voice {
+			\voiceOne
+			g'4 fis8~ fis8. g16 \tuplet 3/2 { fis f d }
+			f4.~ f8 fis g
+			a4 gis8~ gis16 \set stemRightBeamCount = #1 a \set stemLeftBeamCount = #1 ais \set stemRightBeamCount = #1 g \tuplet 3/2 { \set stemLeftBeamCount = #1 fis f d }
+			f4.~ f16 fis f8 d16 cis
+		}
+		\new Voice {
+			\voiceTwo
+			<cis d>2.
+			<aes bes>
+			<cis d>
+			<aes bes>
+		}
+	>>
+	\clef bass
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { cis4. c4~ c16 bes }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { <d, g>8 g,4 <des' g>8 ees,4 }
+		}
+	>>
 }
