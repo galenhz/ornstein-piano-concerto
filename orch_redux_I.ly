@@ -718,6 +718,59 @@ redux_upper_I = \relative c' {
 			<a c> <e' g> \tuplet 3/2 { r8 <f a>4 } <a cis>
 		}
 	>>
+	% mm. 216-225 - Rehersal 23
+	\time 3/4
+	\tempo "Poco piu Lento"
+	\mark #23
+	%% FIXME: Lilypond misplacing 8th rests in bars 217 and 219
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { r4 b-\LH_mark bes8 g
+				r4 ces bes }
+		}
+		\new Voice {
+			\repeat unfold 2 {
+				\change Staff = "redux_lower" <ees,,, g a ces>8 \change Staff = "redux_upper" <g' b ces e> r <g b ces ees>[ r <g b ces ees>]
+				\change Staff = "redux_lower" <g,, d' bes'> \change Staff = "redux_upper" <d'' fis a bes d> r <d fis a bes d>[ r <d fis a bes d>]
+			}
+		}
+	>>
+	\tempo "Piu agitato e crescendo"
+	<<
+		\new Voice {
+			\voiceOne
+			r8 bes''16. e32 cis4 c8 a
+			r8 cis16. gis'32 f4 e8 cis
+			r8 bes16. e32 cis4 c8 a
+			\time 2/4
+			r8 des16. aes'32 f8 e
+		}
+		\new Voice {
+			\voiceTwo
+			\change Staff = "redux_lower" <a,,,,, bes'>8 \change Staff = "redux_upper" <d'' fis a bes d> r <d fis a bes d>[ r <d fis a bes d>]
+			\change Staff = "redux_lower" <f,, cis' f>8 \change Staff = "redux_upper" <a'' cis e gis> r <a cis e gis>[ r <a cis e gis>]
+			\change Staff = "redux_lower" <a,,, bes'>8 \change Staff = "redux_upper" <d'' fis a bes d> r <d fis a bes d>[ r <d fis a bes d>]
+			\time 2/4
+			\change Staff = "redux_lower" <f,, cis' f>8_\markup { \lower #4 { \italic {"molto "} \dynamic ff \italic {" e rall."} } } \change Staff = "redux_upper" <f'' a cis e f> r <f a cis e f>
+		}
+	>>
+	\ottava #1
+	<<
+		\new Voice {
+			\voiceOne
+			<a' cis e>4 <cis e f>
+			\time 3/4
+			<a cis e> <cis e f> <f a>
+		}
+		\new Voice {
+			\voiceTwo
+			<f, f'>8 <fis fis'> <a a'> <bes bes'>
+			\time 3/4
+			<f f'>[ <fis fis'>] <a a'>[ <bes bes'>] <c c'>[ <cis cis'>]
+		}
+	>>
+	\ottava #0
 }
 
 redux_dynamics_I = {
@@ -787,6 +840,14 @@ redux_dynamics_I = {
 	% mm. 194-201 - Rehersal 19
 	s2.*7 s4. s4.-\markup { \italic {rit.} }
 	% mm. 202-207 - Rehersal 20
+	s2.*6
+	% mm. 208-211 - Rehersal 21
+	s1 s1 s2. s1 s1 s2.
+	% mm. 212-215 - Rehersal 22
+	s1*4
+	% mm. 216-225 - Rehersal 23
+	% Can't use center dynamics channel in m. 223 due to staff crossing
+	s2.*7 s2*2 s2.
 }
 
 redux_lower_I = \relative c, {
@@ -1332,6 +1393,26 @@ redux_lower_I = \relative c, {
 		\new Voice {
 			\voiceTwo
 			<cis,, cis'>4 <f, f'> <a a'> <cis cis'>
+		}
+	>>
+	% mm. 216-225 - Rehersal 23
+	\time 3/4
+	s2.*7
+	\time 2/4
+	s2
+	\clef treble
+	<<
+		\new Voice {
+			\voiceOne
+			<des'' f a bes>4 <f a bes cis>
+			\time 3/4
+			<des f a bes> <f a bes cis> <a cis e f>
+		}
+		\new Voice {
+			\voiceTwo
+			f,2
+			\time 3/4
+			f2.
 		}
 	>>
 }
