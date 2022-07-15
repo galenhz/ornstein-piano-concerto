@@ -805,6 +805,50 @@ solo_upper_I = \relative c' {
 	\repeat unfold 2 { r16 <bes f'> <d fis> <f a> <d fis> <bes f> }
 	\repeat unfold 2 { r16 <g d'> <cis ees> <d fis> <cis ees> <g d>
 		r16 <g b> <bes c> <b ees> <bes c> <g b> }
+	% mm. 208-211 - Rehersal 21
+	\tempo "Moderato"
+	\mark #21
+	\repeat unfold 2 {
+		\time 4/4
+		R1
+		\time 7/4
+		r4 \ottava #1 <<
+			\new Voice {
+				\voiceOne
+				a''1 s2
+			}
+			\new Voice {
+				\voiceTwo
+				<ees ees'>4~ <ees ees'>8 <des des'>16. <ees ees'>32 <des des'>8 <ces ces'>16. <des des'>32 <ces ces'>8 <g g'> <des' des'> <ees ees'>~ <ees ees'>4
+			}
+		>>
+		\ottava #0
+	}
+	% mm. 212-215 - Rehersal 22
+	\time 4/4
+	\mark #22
+	%% FIXME: If I don't want to force tuplet brackets here, then maybe don't use them in the parallel passage
+	%%        at mm. 95?
+	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
+		bes8 cis64 e f \change Staff = "solo_upper" a bes cis e f \stemUp aes8 \stemNeutral
+		\tuplet 9/8 { f64[ e cis bes a \change Staff = "solo_lower" f e cis bes] }
+		\ottava #0 \revert Staff.OttavaBracket.transparent
+		\change Staff = "solo_upper" \ottava #0 r4
+	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
+		bes8 cis64 e f \change Staff = "solo_upper" a bes cis e f \stemUp aes8 \stemNeutral
+		\tuplet 9/8 { f64[ e cis bes a \change Staff = "solo_lower" f e cis bes] }
+		\ottava #0 \revert Staff.OttavaBracket.transparent
+		\change Staff = "solo_upper" \ottava #0
+		\tuplet 9/8 { f'64[ e cis bes a \change Staff = "solo_lower" f e cis bes] }
+		\change Staff = "solo_upper" r8
+	%% QUESTION: Ottava in m. 214 missing in PR, but in the full score. Pretty obvious it should be there, in parallel
+	%%           with the passage at m. 95. So 214 is a clone of 212.
+	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
+		bes'8 cis64 e f \change Staff = "solo_upper" a bes cis e f \stemUp aes8 \stemNeutral
+		\tuplet 9/8 { f64[ e cis bes a \change Staff = "solo_lower" f e cis bes] }
+		\ottava #0 \revert Staff.OttavaBracket.transparent
+		\change Staff = "solo_upper" \ottava #0 r4
+	R1
 }
 
 solo_dynamics_I = {
@@ -890,7 +934,11 @@ solo_dynamics_I = {
 	% mm. 194-201 - Rehersal 19
 	s2.*7 s4. s4.-\markup { \italic {rit.} }
 	% mm. 202-207 - Rehersal 20
-	%%s2.-\markup { \dynamic p espressivo } s2.*5
+	s2.-\markup { \dynamic p espressivo } s2.*5
+	% mm. 208-211 - Rehersal 21
+	s1 s1-\markup { \dynamic ff } s2. s1 s1 s2.
+	% mm. 212-215 - Rehersal 22
+	s1*4
 }
 
 solo_lower_I = \relative c, {
@@ -1533,4 +1581,18 @@ solo_lower_I = \relative c, {
 			\repeat unfold 2 { <d, g>8 g,4 <des' g>8 ees,4 }
 		}
 	>>
+	% mm. 208-211 - Rehersal 21
+	\repeat unfold 2 {
+		\time 4/4
+		R1
+		\time 7/4
+		\clef treble
+		r4 <ees''' a>4~ <ees a>8 <des g>16. <ees a>32 <des g>8 <ces f>16. <des g>32 <ces f>8 <g des'> <des' g> <ees a>~ <ees a>4
+	}
+	% mm. 212-215 - Rehersal 22
+	\time 4/4
+	r4 s2 r4
+	r4 s2 s8 r8
+	r4 s2 r4
+	R1
 }
