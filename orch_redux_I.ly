@@ -378,7 +378,7 @@ redux_upper_I = \relative c' {
 			\tuplet 5/4 { <g g'>8 <f f'> <g g'> <bes bes'> <c c'> } r4 r4 r4 r4
 		}
 		\new Voice {
-			\voiceTwo <e g>1 ~ <e g>2.
+			\voiceTwo \tieUp <e g>1 ~ <e g>2. \tieNeutral
 			\time 4/4
 			<e g>4 <g b>2.
 			\repeat unfold 2 { <e g>4 <g c>2. }
@@ -667,6 +667,55 @@ redux_upper_I = \relative c' {
 			\repeat unfold 2 { <d, g bes>4 <d g bes cis>8~ <d g bes cis>4 <d g bes cis>8
 				<d aes'>4 <d aes' cis>8~ <d aes' cis>4. }
 			\repeat unfold 2 { <d g>4. <g cis> }
+		}
+	>>
+	% mm. 208-211 - Rehersal 21
+	\tempo "Moderato"
+	\time 4/4
+	\mark #21
+	\clef treble
+	<<
+		\new Voice {
+			\voiceOne
+			<b b'>2. <c c'>4
+		}
+		\new Voice {
+			\voiceTwo
+			<e g>1
+		}
+	>>
+	\time 7/4
+	<cis f a cis>1~ <cis f a cis>2.
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			<b b'>2~ <b b'>8 <c c'> <cis cis'> <e e'>
+			\time 7/4
+			<fis fis'>8 <fis fis'>~ <fis fis'>1~ <fis fis'>2
+		}
+		\new Voice {
+			\voiceTwo
+			<e g>1
+			\time 7/4
+			\tieUp <a cis>1~ <a cis>2. \tieNeutral
+		}
+	>>
+	% mm. 212-215 - Rehersal 22
+	\time 4/4
+	\mark #22
+	<<
+		\new Voice {
+			\voiceOne
+			\tuplet 3/2 { <e e'>8 <f f'> <gis gis'> } <a a'>2 <aes aes'>8 <f f'>
+			\tuplet 3/2 { <e e'>8 <f f'> <aes aes'>~ } <aes aes'>2 <b b'>8 <c c'>
+			\tuplet 3/2 { <e, e'>8 <f f'> <gis gis'> } <a a'>2 <aes aes'>8 <f f'>
+			\tuplet 3/2 { <e e'>8 <f f'> <gis gis'> } <bes bes'> <a a'> \tuplet 3/2 { r8 <cis cis'> <c c'> } <fis fis'> <fis fis'>
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 3 { <a, cis>4 <cis f>2 s4 }
+			<a c> <e' g> \tuplet 3/2 { r8 <f a>4 } <a cis>
 		}
 	>>
 }
@@ -1240,6 +1289,51 @@ redux_lower_I = \relative c, {
 	}
 	<g g'>4. <ees ees'>
 	<g g'> <ees ees'>
+	% mm. 208-211 - Rehersal 21
+	\tempo "Moderato"
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			r4 aes'8 d \tuplet 6/4 { ees16 e f e ees d } \tuplet 5/4 { aes d ees e f }
+		}
+		\new Voice {
+			\voiceTwo
+			<d,, d'>1
+		}
+	>>
+	\time 7/4
+	<f' b g'>1~ <f b g'>2.
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			r4 aes8 d \tuplet 6/4 { ees16 e f e ees d } \tuplet 5/4 { aes d ees e f }
+		}
+		\new Voice {
+			\voiceTwo
+			d,1
+		}
+	>>
+	\time 7/4
+	<f g' b>1~ <f g' b>2.
+	% mm. 212-215 - Rehersal 22
+	\time 4/4
+	\repeat unfold 3 { <g des' bes'>4 \acciaccatura <bes fis' d'>8 <bes fis' d'>2. }
+	%% FIXME: Any way to get the parentheses to cover the whole chord, not just the note heads?
+	<<
+		\new Voice {
+			\voiceOne
+			\magnifyMusic 0.63 {
+			    \override Score.SpacingSpanner.spacing-increment = #(* 1.2 0.63)
+				\parenthesize <f' g b f'>4 \parenthesize <b, a' ees' g> \parenthesize <ees b' g'> \parenthesize <g b ees f>
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			<cis,, cis'>4 <f, f'> <a a'> <cis cis'>
+		}
+	>>
 }
 
 
