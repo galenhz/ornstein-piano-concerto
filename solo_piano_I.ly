@@ -849,6 +849,53 @@ solo_upper_I = \relative c' {
 		\ottava #0 \revert Staff.OttavaBracket.transparent
 		\change Staff = "solo_upper" \ottava #0 r4
 	R1
+	% mm. 216-225 - Rehersal 23
+	\time 3/4
+	\tempo "Poco piu Lento"
+	\mark #23
+	<<
+		\new Voice {
+			\voiceOne
+			r8 des, e4. des8
+			r8 fis16 g bes2
+			r8 des,8 e4. des8
+			r8 fis16 g bes8 cis4 d8
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				\repeat unfold 3 { \tuplet 6/4 { r32 b,, fis' ees g fis } bes8 }
+				\repeat unfold 3 { \tuplet 6/4 { r32 d, g fis bes g } cis8 }
+			}
+		}
+	>>
+	\tempo "Piu agitato e crescendo"
+	%% QUESTION: Odd that the "double voices" in the right hand here are only in every other measure. Check full score.
+	\ottava #1
+	<<
+		\new Voice {
+			\voiceOne
+			s2.
+			<e' f>2.
+			s2.
+			\time 2/4
+			<a cis>2
+			<a cis>
+			\time 3/4
+			<a cis>2.
+		}
+		\new Voice {
+			\voiceTwo
+			r8 <f, a cis e f> <fis fis'> <a a'> <bes bes'> <cis cis'>
+			\tuplet 3/2 { <bes bes'> <a a'> <bes bes'> } <a a'>4 <fis fis'>
+			r8 <f a cis e f> <fis fis'> <a a'> \tuplet 3/2 { <bes bes'> <cis cis'> <d d'> }
+			\time 2/4
+			\tuplet 3/2 { <fis fis'> <f f'> <fis fis'> } <f f'> <d d'>
+			<gis gis'> <fis fis'> <f f'> <d d'>
+			\time 3/4
+			<gis gis'> <fis fis'> <f f'> <d d'> <fis fis'> <a a'>
+		}
+	>>
 }
 
 solo_dynamics_I = {
@@ -939,6 +986,8 @@ solo_dynamics_I = {
 	s1 s1-\markup { \dynamic ff } s2. s1 s1 s2.
 	% mm. 212-215 - Rehersal 22
 	s1*4
+	% mm. 216-225 - Rehersal 23
+	s2.*7 s2-\markup { \italic {"molto "} \dynamic ff \italic {" e rall."} } s2 s2.
 }
 
 solo_lower_I = \relative c, {
@@ -1595,4 +1644,20 @@ solo_lower_I = \relative c, {
 	r4 s2 s8 r8
 	r4 s2 r4
 	R1
+	% mm. 216-225 - Rehersal 23
+	\time 3/4
+	\clef bass
+	\repeat unfold 2 {
+		<dis,,, a' g'>2.
+		<g d' bes'>
+	}
+	\clef treble
+	\repeat unfold 3 { \tuplet 6/4 { r32 d'' a' fis bes a } cis8 }
+	\repeat unfold 3 { \tuplet 6/4 { r32 f, bes a cis bes } e8 }
+	\repeat unfold 3 { \tuplet 6/4 { r32 d, a' fis bes a } cis8 }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 6/4 { r32 f, bes a cis bes } e8 }
+	\repeat unfold 2 { \tuplet 6/4 { r32 dis, a' f bes a } cis8 }
+	\time 3/4
+	\tuplet 6/4 { r32 dis, a' f bes a } cis8 \tuplet 6/4 { r32 f, bes a cis bes } e8 \tuplet 6/4 { r32 a, e' cis f e } <a cis e f>8
 }
