@@ -771,6 +771,80 @@ redux_upper_I = \relative c' {
 		}
 	>>
 	\ottava #0
+	\bar "||" %%% \mark \markup { \musicglyph "scripts.ufermata" }
+	% mm. 226-232 - Rehersal 24
+	% FIXME: Gotta combine bar fermata and rehersal mark.
+	% FIXME: What's going on with the rhythms in the inner voice? Check full score.
+	% FIXME: Push ties out of the way.
+	\time 6/8
+	\tempo "Andantino"
+	\mark #24
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 3 { r4 \slashedGrace b,8 <c c'>4 \slashedGrace b'8 <c c'>4 }
+			r4 \slashedGrace f,8 <fis fis'>4 \slashedGrace f'8 <fis fis'>4
+			r4 \slashedGrace b,,8 <c c'>4 \slashedGrace b'8 <c c'>4
+			r4 \slashedGrace f,8 <fis fis'>4 \slashedGrace f'8 <fis fis'>4
+			r4 \slashedGrace b,,8 <c c'>4 \slashedGrace b'8 <c c'>
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 3 { s4 \slashedGrace b,,8 c4 \slashedGrace b'8 c4 }
+			s4 \slashedGrace f,8 fis4 \slashedGrace f'8 fis4
+			s4 \slashedGrace b,,8 c4 \slashedGrace b'8 c4
+			s4 \slashedGrace f,8 fis4 \slashedGrace f'8 fis4
+			s4 \slashedGrace b,,8 c4 \slashedGrace b'8 c4
+		}
+		\new Voice {
+			\voiceThree \autoBeamOff
+			dis,4.~ dis8~ dis16 dis dis[ fis]
+			e2.
+			dis4.~ dis8~ dis16 fis fis[ bes]
+			g4.~ g8~ g[ fis]
+			bes4.~ bes8~ bes bes16[ c]
+			g4.~ g8~ g[ fis]
+			bes4.~ bes8~ bes16 bes[ bes c]
+			\autoBeamOn
+		}
+	>>
+	% mm. 233-239 - Rehersal 25
+	\time 4/4
+	\mark #25
+	% FIXME: Can't tie across voices in m. 233.
+	<<
+		\new Voice {
+			\voiceOne
+			<e, g b>32 r r16 cis' fis~ g bes8 cis16 d cis8.~ cis8 bes
+			\tuplet 3/2 { fis g bes~ } bes cis d cis4 bes8
+			\repeat unfold 2 { \tuplet 6/4 { cis[ f d cis bes g] } }
+		}
+		\new Voice {
+			\voiceTwo
+			s8 fis, <fis cis' fis>2.
+			<fis cis'>4~ <fis cis' fis>2.~
+			<fis cis' fis>1
+		}
+	>>
+	\time 6/8
+	\tempo "Piu mosso"
+	% WORKAROUND: Add extra notes to let ties go through, as I did in m. 199 in the left hand.
+	<<
+		\new Voice {
+			\voiceOne
+			cis'8 c \tuplet 3/2 { b16 bes d } a8 aes g16 fis
+			<cis f a cis>2.
+			fis'8 f \tuplet 3/2 { e16 ees g } d8 des c16 b
+			<d, fis bes e>2.
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 { cis'16 d,~ <d ges>~ } <d ges>4 \tuplet 3/2 {a'16 b,~ <b d>~ } <b d>4
+			s2.
+			\tuplet 3/2 { fis''16 fis,~ <fis b>~ } <fis b>8 r8 \tuplet 3/2 { d'16 d,~ <d fis>~ } <d fis>8 r8
+			s2.
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -1337,8 +1411,8 @@ redux_lower_I = \relative c, {
 		}
 		\new Voice {
 			\voiceTwo
-			% FIXME: I can't get the cis tie in the lower voice to terminate in m. 199.
-			\tuplet 3/2 { r16 cis,~ g~ } <cis g>4~ <cis g>4.
+			% WORKAROUND: Tweak the layout of the PR; add an extra cis so the tie goes through.
+			\tuplet 3/2 { r16 cis,~ <cis g>~ } <cis g>4~ <cis g>4.
 		}
 	>>
 	<d gis d'>2.
@@ -1415,6 +1489,52 @@ redux_lower_I = \relative c, {
 			f2.
 		}
 	>>
+	% mm. 226-232 - Rehersal 24
+	\time 6/8
+	\clef bass
+	<<
+		\new Voice {
+			\voiceOne
+			<g b>2.
+			<g b e>
+			<g b>
+			<b ees>
+			<b ees g>
+			<b ees>
+			<b ees g>
+		}
+		\new Voice {
+			\voiceTwo
+			<a,, ees' b'>2.
+			<c g' e'>
+			<a ees' b'>
+			<dis a' g'>
+			<a ees' b'>
+			<dis a' g'>
+			<a ees' b'>
+		}
+	>>
+	% mm. 233-239 - Rehersal 25
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			b''4~ b16 bes bes d b8 bes~ \tuplet 3/2 { bes g bes }
+			b bes g4~ g8 fis \tuplet 3/2 { ees fis g }
+			b bes g fis ees fis g bes
+		}
+		\new Voice {
+			\voiceTwo
+			<cis, fis>4~ <cis fis>2.
+			r4 r8 <cis fis>8~ <a, ees' cis' fis>2~
+			<a ees' cis' fis>1
+		}
+	>>
+	\time 6/8
+	\tuplet 8/6 { ges''16 b, f b ges b, ges' b, } \tuplet 8/6 { f b ges' b, ges' b f b }
+	<g f' a>2.
+	\tuplet 8/6 { ges'16 b, f b ges b, ges' b, } \tuplet 8/6 { f b ges' b, ges' b f b }
+	<gis d' bes'>2.
 }
 
 
