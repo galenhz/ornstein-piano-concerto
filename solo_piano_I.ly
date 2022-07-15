@@ -896,7 +896,35 @@ solo_upper_I = \relative c' {
 			<gis gis'> <fis fis'> <f f'> <d d'> <fis fis'> <a a'>
 		}
 	>>
+	\ottava #0
+	\bar "||" %%% \mark \markup { \musicglyph "scripts.ufermata" }
+	% mm. 226-232 - Rehersal 24
+	% FIXME: Gotta combine bar fermata and rehersal mark.
+	\time 6/8
+	\tempo "Andantino"
+	\mark #24
+	\repeat unfold 3 { r8 \ottava #1 \tuplet 7/4 { c32[ b fis c \ottava #0 \change Staff = "solo_lower" fis, c b] }
+		\change Staff = "solo_upper" \tuplet 6/4 { c'[ b fis c \change Staff = "solo_lower" fis, c] }
+		\tuplet 7/4 { b[ c fis \change Staff = "solo_upper" c' fis b c] }
+		\change Staff = "solo_lower" \tuplet 7/4 { b,[ c fis \change Staff = "solo_upper" \ottava #1 c' fis b c] } \ottava #0 r8 }
+	r8 \ottava #1 \tuplet 7/4 { fis32[ c b fis \ottava #0 \change Staff = "solo_lower" c b fis] }
+		\change Staff = "solo_upper" \tuplet 6/4 { fis'[ c b fis \change Staff = "solo_lower" c b] }
+		\tuplet 7/4 { fis[ b c \change Staff = "solo_upper" fis b c fis] }
+		\change Staff = "solo_lower" \tuplet 7/4 { fis,[ b c \change Staff = "solo_upper" \ottava #1 fis b c fis] } \ottava #0 r8
+	r8 \ottava #1 \tuplet 7/4 { c32[ b fis c \ottava #0 \change Staff = "solo_lower" fis, c b] }
+		\change Staff = "solo_upper" \tuplet 6/4 { c'[ b fis c \change Staff = "solo_lower" fis, c] }
+		\tuplet 7/4 { b[ c fis \change Staff = "solo_upper" c' fis b c] }
+		\change Staff = "solo_lower" \tuplet 7/4 { b,[ c fis \change Staff = "solo_upper" \ottava #1 c' fis b c] } \ottava #0 r8
+	r8 \ottava #1 \tuplet 7/4 { fis32[ c b fis \ottava #0 \change Staff = "solo_lower" c b fis] }
+		\change Staff = "solo_upper" \tuplet 6/4 { fis'[ c b fis \change Staff = "solo_lower" c b] }
+		\tuplet 7/4 { fis[ b c \change Staff = "solo_upper" fis b c fis] }
+		\change Staff = "solo_lower" \tuplet 7/4 { fis,[ b c \change Staff = "solo_upper" \ottava #1 fis b c fis] } \ottava #0 r8
+	r8 \ottava #1 \tuplet 7/4 { c32[ b fis c \ottava #0 \change Staff = "solo_lower" fis, c b] }
+		\change Staff = "solo_upper" \tuplet 6/4 { c'[ b fis c \change Staff = "solo_lower" fis, c] }
+		\tuplet 7/4 { b[ c fis \change Staff = "solo_upper" c' fis b c] }
+		\change Staff = "solo_lower" \tuplet 7/4 { b,[ c fis \change Staff = "solo_upper" \ottava #1 c' fis b c] } \ottava #0 r8
 }
+
 
 solo_dynamics_I = {
 	% mm. 1-9
@@ -988,6 +1016,8 @@ solo_dynamics_I = {
 	s1*4
 	% mm. 216-225 - Rehersal 23
 	s2.*7 s2-\markup { \italic {"molto "} \dynamic ff \italic {" e rall."} } s2 s2.
+	% mm. 226-232 - Rehersal 24
+	s2.*7
 }
 
 solo_lower_I = \relative c, {
@@ -1660,4 +1690,7 @@ solo_lower_I = \relative c, {
 	\repeat unfold 2 { \tuplet 6/4 { r32 dis, a' f bes a } cis8 }
 	\time 3/4
 	\tuplet 6/4 { r32 dis, a' f bes a } cis8 \tuplet 6/4 { r32 f, bes a cis bes } e8 \tuplet 6/4 { r32 a, e' cis f e } <a cis e f>8
+	% mm. 226-232 - Rehersal 24
+	\time 6/8
+	\repeat unfold 7 { r8 s2 r8 }
 }
