@@ -908,6 +908,27 @@ redux_upper_I = \relative c' {
 			s8 cis, bes'
 		}
 	>>
+	% mm. 253-258
+	\time 6/8
+	\clef bass
+	<ees,,, g b>8 <d gis bes> \tuplet 3/2 { <des f a>16 <c e gis> <e gis b> } <c e gis>8. <des f a>16 <d fis ais> <ees g b>
+	\time 2/8
+	r8 \clef treble \tuplet 3/2 { r16 <bes' d fis> <bes d fis> }
+	\tuplet 3/2 { <bes d a'>[ <bes d fis> r32 <bes d fis>] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
+	\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d fis a>] } \tuplet 3/2 { <d fis a>8 <d fis a>16 }
+	\tuplet 3/2 { <d fis bes> <d fis a> <d fis g> } \tuplet 3/2 { <bes d a> <bes d g> <bes d fis> }
+	\tuplet 3/2 { <bes d ees> <bes d fis>8~ } <bes d fis>
+	% mm. 259-264 - Rehersal 28
+	\mark #28
+	\time 6/8
+	\tempo "Sempre agitato"
+	R2.
+	\time 2/8
+	r8 \tuplet 3/2 { r16 <d fis bes> <d fis bes> }
+	\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d f bes>] } \tuplet 3/2 { <d fis bes>16 <f bes cis> <fis bes d> }
+	\tuplet 3/2 { <fis bes f'>[ <fis bes d> r32 <fis bes des>] } \tuplet 3/2 { <fis bes des>8 <fis bes des>16 }
+	\tuplet 3/2 { <fis bes d> <fis bes des> <fis bes ces> } \tuplet 3/2 { <d fis cis'> <d fis b> <d fis bes> }
+	\tuplet 3/2 { <d fis g> <d fis bes>8~ } <d fis bes>
 }
 
 redux_dynamics_I = {
@@ -993,6 +1014,8 @@ redux_dynamics_I = {
 	s2.*8
 	% mm. 248-252 - Rehersal 27
 	s2.*4 s8 s4-\markup { \italic {rit.} }
+	% mm. 253-258
+	s2.-\markup { \dynamic p \italic {subito} } s4*5
 }
 
 redux_lower_I = \relative c, {
@@ -1633,6 +1656,35 @@ redux_lower_I = \relative c, {
 	\repeat unfold 2 { <c g' c>4. <g' cis g'> }
 	\time 3/8
 	<g cis g'>
+	% mm. 253-258
+	\time 6/8
+	<c,, c'>4. <fis fis'>
+	\time 2/8
+	<<
+		\new Voice {
+			\voiceTwo
+			<c c'>4~ <c c'>~ <c c'>~ <c c'>~ <c c'>
+		}
+		\new Voice {
+			\voiceOne
+			<f'' a cis>32 <e gis c>16.~ <e gis c>8~ <e gis c>4~ <e gis c>~ <e gis c>~ <e gis c>
+		}
+	>>
+	% mm. 259-264 - Rehersal 28
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne
+			<f a cis>8 <e aes c> \tuplet 3/2 { <ees g b>16 <d fis aes> <fis aes cis> } <d fis aes>8. <ees g b>16 <e aes c> <f a cis>
+			\time 2/8
+			<g b ees>32 <fis bes d>16.~ <fis bes d>8~ <fis bes d>4~ <fis bes d>4~ <fis bes d>4~ <fis bes d>4
+		}
+		\new Voice {
+			\voiceTwo
+			<c,, c'>4. <fis fis'>
+			<c c'>4~ <c c'>4~ <c c'>4~ <c c'>4~ <c c'>4
+		}
+	>>
 }
 
 
