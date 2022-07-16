@@ -885,6 +885,29 @@ redux_upper_I = \relative c' {
 			}
 		}
 	>>
+	% mm. 248-252 - Rehersal 27
+	\mark #27
+	% QUESTION: I think I understand the correction in m. 248. Should sanity check against orchestra.
+	<ees g b ees>4 <d fis bes d>8 <des f a des>4 <c e gis c>8
+	<b ees b'>4 <bes d bes'>8 <a des a'> <aes c aes'> <g b g'>
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { r8 ees'''8 <a, a'> r8 \ottava #1 cis' <bes bes'> \ottava #0 }
+			\time 3/8
+			r8 \ottava #1 cis <bes bes'> \ottava #0
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { <fis,,, bes d fis>4. <cis' fis ais cis> }
+			<cis fis ais cis>
+		}
+		\new Voice {
+			\voiceFour
+			\repeat unfold 2 { s8 ees a s8 cis bes' }
+			s8 cis, bes'
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -962,6 +985,14 @@ redux_dynamics_I = {
 	% mm. 216-225 - Rehersal 23
 	% Can't use center dynamics channel in m. 223 due to staff crossing
 	s2.*7 s2*2 s2.
+	% mm. 226-232 - Rehersal 24
+	s2.*7
+	% mm. 233-239 - Rehersal 25
+	s1*3 s2.*4
+	% mm. 240-247 - Rehersal 26
+	s2.*8
+	% mm. 248-252 - Rehersal 27
+	s2.*4 s8 s4-\markup { \italic {rit.} }
 }
 
 redux_lower_I = \relative c, {
@@ -1596,6 +1627,12 @@ redux_lower_I = \relative c, {
 			s2.
 		}
 	>>
+	% mm. 248-252 - Rehersal 27
+	<g f' a>4 <g d' fis>8 <cis, g' f'>4 <e a cis>8
+	<g des' f>4 <fis c' e>8 <f b ees> <e bes' d> <ees a des>
+	\repeat unfold 2 { <c g' c>4. <g' cis g'> }
+	\time 3/8
+	<g cis g'>
 }
 
 
