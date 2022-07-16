@@ -845,6 +845,46 @@ redux_upper_I = \relative c' {
 			s2.
 		}
 	>>
+	% mm. 240-247 - Rehersal 26
+	\tempo "Animato"
+	\mark #26
+	<<
+		\new Voice {
+			\voiceOne
+			ees''8 d \tuplet 3/2 { des16 c e } b bes a8 aes16 g
+			fis8 f \tuplet 3/2 { e16 ees g } d des c8 b16 bes
+			ees'8 d \tuplet 3/2 { des16 c e } b bes a8 aes16 g
+			fis8[ f e32 d c b] bes[ cis a \set stemRightBeamCount = #1 aes \set stemLeftBeamCount = #1 g fis f \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 ees16 d32 des]
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 { ees''16 ees,~ <ees aes>~ } <ees aes>8 r8 r8 \tuplet 3/2 { a16 b,~ <b ees>~ } <b ees>8
+			\tuplet 3/2 { fis'16 ges,~ <ges bes>~ } <ges bes>8 r8 r8 \tuplet 3/2 { c16 d,~ <d fis>~ } <d fis>8
+			\tuplet 3/2 { ees''16 ees,~ <ees aes>~ } <ees aes>8 r8 r8 \tuplet 3/2 { a16 b,~ <b ees>~ } <b ees>8
+			\tuplet 3/2 { fis'16 ges, bes } s4 s4.
+		}
+	>>
+	\tempo "Meno"
+	% QUESTION: Rhythmic error in m. 244 compared to m. 246.
+	% FIXME:    It also looks like the copyist gave up on the voiced stuff the second time round. Ties there are
+	%           super ugly. Maybe back-patch instead of trying to make ties work?
+	%			You know what would really solve this? A third staff in the middle for the triplets!
+	<<
+		\new Voice {
+			\voiceOne
+			<b, e g b>4 <bes ees bes'>16 <aes aes'> <a cis f a>4.~
+			<a cis f a>4.~ <a cis f a>4 s8
+			<cis f a cis>4 <c e c'>16 <a a'> <a cis f a>4.
+			s2.
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				r4 r8 \tuplet 3/2 { r16 e' \set stemRightBeamCount = #1 f } \tuplet 3/2 { \set stemLeftBeamCount = #1 gis f \set stemRightBeamCount = #1 a } \tuplet 3/2 { \set stemLeftBeamCount = #1 f gis f }
+				\tuplet 3/2 { a f \set stemRightBeamCount = #1 gis } \tuplet 3/2 { \set stemLeftBeamCount = #1 f a \set stemRightBeamCount = #1 f } \tuplet 3/2 { \set stemLeftBeamCount = #1 gis f a } \tuplet 3/2 { f gis f } r8 r8
+			}
+		}
+	>>
 }
 
 redux_dynamics_I = {
@@ -1535,6 +1575,27 @@ redux_lower_I = \relative c, {
 	<g f' a>2.
 	\tuplet 8/6 { ges'16 b, f b ges b, ges' b, } \tuplet 8/6 { f b ges' b, ges' b f b }
 	<gis d' bes'>2.
+	% mm. 240-247 - Rehersal 26
+	\repeat unfold 2 {
+		\tuplet 8/6 { c'16 f, b, f' c f, c' f, } \tuplet 8/6 { b, f' c' f, c' f b, f' }
+		\tuplet 8/6 { ees' aes, d, aes' ees aes, ees' aes, } \tuplet 8/6 { d, aes' ees' aes, ees' aes d, aes' }
+	}
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				r4 r8 \tuplet 3/2 { r16 gis \set stemRightBeamCount = #1 cis } \tuplet 3/2 { \set stemLeftBeamCount = #1 e cis \set stemRightBeamCount = #1 e } \tuplet 3/2 { \set stemLeftBeamCount = #1 cis e cis }
+				\tuplet 3/2 { e cis \set stemRightBeamCount = #1 e } \tuplet 3/2 { \set stemLeftBeamCount = #1 cis e \set stemRightBeamCount = #1 cis } \tuplet 3/2 { \set stemLeftBeamCount = #1 e cis e } \tuplet 3/2 { cis e cis } r8 r8
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			<c,, g' e'>4. <ees a f'>4.~
+			<ees a f'>4.~ <ees a f'>4 s8
+			<a, ees' a>4. <ees' a ees'>
+			s2.
+		}
+	>>
 }
 
 
