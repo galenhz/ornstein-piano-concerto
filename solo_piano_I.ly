@@ -923,6 +923,36 @@ solo_upper_I = \relative c' {
 		\change Staff = "solo_upper" \tuplet 6/4 { c'[ b fis c \change Staff = "solo_lower" fis, c] }
 		\tuplet 7/4 { b[ c fis \change Staff = "solo_upper" c' fis b c] }
 		\change Staff = "solo_lower" \tuplet 7/4 { b,[ c fis \change Staff = "solo_upper" \ottava #1 c' fis b c] } \ottava #0 r8
+	% mm. 233-239 - Rehersal 25
+	\time 4/4
+	\mark #25
+	\repeat unfold 2 {
+		\tuplet 9/8 { r32 cis, f d ges, \change Staff = "solo_lower" cis, f d ges, }
+		\change Staff = "solo_upper" \tuplet 9/8 { r32 d fis cis' bes \change Staff = "solo_lower" ges cis f d } \change Staff = "solo_upper"
+	}
+	\repeat unfold 3 {
+		\ottava #1 \tuplet 9/8 {r32 f' b g c, \ottava #0 \change Staff = "solo_lower" fis, bes g cis, }
+		\change Staff = "solo_upper" \tuplet 9/8 { r32 d, fis cis' bes \change Staff = "solo_lower" ges cis f d } \change Staff = "solo_upper"
+	}
+	\ottava #1 \tuplet 9/8 {r32 f' b g c, \ottava #0 \change Staff = "solo_lower" fis, bes g cis, }
+		\change Staff = "solo_upper"  \tuplet 9/8 { r32 fis cis' g cis, \change Staff = "solo_lower" \clef bass fis,, cis' g cis, } \change Staff = "solo_upper"
+	\time 6/8
+	\tempo "Piu mosso"
+	% QUESTION: Almost certainly a missing treble clef change in PR for m. 237
+	% QUESTION: And the last nonuplet is missing a note? an Octuplet?
+	<d' ges cis ges'>8 r8 r8 r4.
+	r8 \ottava #1 \tuplet 9/8 { gis'''64[ cis, gis' cis, gis \ottava #0 \change Staff = "solo_lower" f d cis a] } \change Staff = "solo_upper" 
+		\repeat unfold 2 { \tuplet 9/8 { gis'[ cis, gis' cis, gis \change Staff = "solo_lower" f d cis a] } \change Staff = "solo_upper" }
+		gis'[ cis, gis' cis, gis \change Staff = "solo_lower" f d cis] \change Staff = "solo_upper"
+		\tuplet 6/4 { gis'32[ cis gis' gis cis gis'] }
+	R2.
+	r8 \ottava #1 \tuplet 10/8 { f'64[ bes, f' bes, f \ottava #0 \change Staff = "solo_lower" e d cis bes gis] } \change Staff = "solo_upper"
+		\repeat unfold 2 { \tuplet 10/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes gis] } \change Staff = "solo_upper" }
+		\tuplet 9/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes] } \change Staff = "solo_upper"
+		\tuplet 6/4 { f'32[ bes f' f bes f'] }
+	% mm. 240-247 - Rehersal 26
+	\tempo "Animato"
+	R2.
 }
 
 
@@ -1693,4 +1723,15 @@ solo_lower_I = \relative c, {
 	% mm. 226-232 - Rehersal 24
 	\time 6/8
 	\repeat unfold 7 { r8 s2 r8 }
+	% mm. 233-239 - Rehersal 25
+	\time 4/4
+	s1*3
+	\time 6/8
+	<f,,, b ges'>8 r8 r8 r4.
+	\clef treble
+	r8 s8 s8 s8 s8 a'64[ cis d f a cis d f]
+	R2.
+	r8 s8 s8 s8 s8 \tuplet 10/8 { gis,,64[ bes cis d e gis bes cis d e] }
+	% mm. 240-247 - Rehersal 26
+	R2.
 }
