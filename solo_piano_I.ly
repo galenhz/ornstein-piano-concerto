@@ -7,7 +7,7 @@ solo_upper_I = \relative c' {
 	\time 3/4
 	\tempo "Moderato Assai"
 	% mm. 1-9
-	R2.*3 R2.\fermata R2.*5
+	R2.*3 r2.\fermata R2.*5
 	% m. 10
 	\time 4/4
 	R1
@@ -1086,7 +1086,7 @@ solo_lower_I = \relative c, {
 	\clef bass
 	\time 3/4
 	% mm. 1-9
-	R2.*3 R2.\fermata R2.*5
+	R2.*3 r2.\fermata R2.*5
 	% m. 10
 	\time 4/4
 	R1
