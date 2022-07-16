@@ -951,8 +951,25 @@ solo_upper_I = \relative c' {
 		\tuplet 9/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes] } \change Staff = "solo_upper"
 		\tuplet 6/4 { f'32[ bes f' f bes f'] }
 	% mm. 240-247 - Rehersal 26
+	% FIXME: Another horrendous mess, like m. 118. Pry staves apart, shrink notes?
 	\tempo "Animato"
+	\mark #26
 	R2.
+	r8 \ottava #1 \tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+		\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+		r8 \tuplet 9/8 { ees''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+		\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+	R2.
+	r8 \ottava #1 \tuplet 9/8 { ees''''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+		\tuplet 15/8 { ees'[ bes ees bes ees, \change Staff = "solo_lower" d bes a fis a bes d \change Staff = "solo_upper" ees bes' ees] }
+		r8 \ottava #1 \tuplet 9/8 { a'64[ cis, a' cis, a \ottava #0 \change Staff = "solo_lower" fis d cis bes] } \change Staff = "solo_upper"
+		\ottava #1 \tuplet 15/8 { a'[ cis, a' cis, a \ottava #0 \change Staff = "solo_lower" fis d cis bes cis d fis \change Staff = "solo_upper" \ottava #1 a cis a'] }
+	\tempo "Meno"
+	% QUESTION: Broken bars in 247. Copy in 245?
+	<b, e g b>8 <bes bes'> \tuplet 3/2 { <a a'>16( <gis gis'> <b b'>) } <gis cis eis gis>4.~
+	<gis cis eis gis>4.~ <gis cis eis gis>8~ <gis cis eis gis>16 <a a'> <ais ais'> <b b'>
+	<c f a c>8 <b b'> \tuplet 3/2 { <bes bes'>16( <a a'> <c c'>) } <a des f a>4.~
+	<a des f a>4.~ <a des f a>8~ <a des f a>16 \set stemRightBeamCount = #1 <ais ais'> \set stemLeftBeamCount = #1 <b b'> <c c'>
 }
 
 
@@ -1733,5 +1750,14 @@ solo_lower_I = \relative c, {
 	R2.
 	r8 s8 s8 s8 s8 \tuplet 10/8 { gis,,64[ bes cis d e gis bes cis d e] }
 	% mm. 240-247 - Rehersal 26
+	% QUESTION: Bass clef transition in PR in bar 242 clearly a mistake, based on shared pattern between bars 241 and 243.
 	R2.
+	r8 s4 r8 s4
+	R2.
+	r8 s4 s4.
+	% FIXME: Perhaps push staves apart here, so the 3 bracket can be on the opposite side of the slur?
+	<b, e g b>8 <bes bes'> \tuplet 3/2 { <a a'>16( <gis gis'> <b b'>) } <gis cis eis gis>4.~
+	<gis cis eis gis>4.~ <gis cis eis gis>8~ <gis cis eis gis>16 <a a'> <ais ais'> <b b'>
+	<c f a c>8 <b b'> \tuplet 3/2 { <bes bes'>16( <a a'> <c c'>) } <a des f a>4.~
+	<a des f a>4.~ <a des f a>8~ <a des f a>16 \set stemRightBeamCount = #1 <ais ais'> \set stemLeftBeamCount = #1 <b b'> <c c'>
 }
