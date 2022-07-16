@@ -970,6 +970,15 @@ solo_upper_I = \relative c' {
 	<gis cis eis gis>4.~ <gis cis eis gis>8~ <gis cis eis gis>16 <a a'> <ais ais'> <b b'>
 	<c f a c>8 <b b'> \tuplet 3/2 { <bes bes'>16( <a a'> <c c'>) } <a des f a>4.~
 	<a des f a>4.~ <a des f a>8~ <a des f a>16 \set stemRightBeamCount = #1 <ais ais'> \set stemLeftBeamCount = #1 <b b'> <c c'>
+	% mm. 248-252 - Rehersal 27
+	% QUESTION: I think the ottava ends one beat too early. Makes it too wierd to play as written.
+	\mark #27
+	<cis f a cis>8 <c c'> \tuplet 3/2 { <b b'>16 <bes bes'> <d d'> } <a des f a> <aes aes'>8 <g g'> <fis fis'>16 \ottava #0
+	<f b des f>8 <e e'> \tuplet 3/2 { <ees ees'>16 <d d'> <fis fis'> } \tuplet 3/2 { <cis f a cis> <c c'> \set stemRightBeamCount = #1 <g' g'> } \set stemLeftBeamCount = #1 <b, b'> \set stemRightBeamCount = #1 <bes bes'> \set stemLeftBeamCount = #1 <a a'> <aes aes'>
+	r16 <g g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \ottava #1 r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'> \ottava #0
+	r16 <g,, g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \ottava #1 r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
+	\time 3/8
+	r16 <g, g'> <b b'> <ees ees'> <fis fis'> <bes bes'> \ottava #0
 }
 
 
@@ -1065,6 +1074,12 @@ solo_dynamics_I = {
 	s2.*7 s2-\markup { \italic {"molto "} \dynamic ff \italic {" e rall."} } s2 s2.
 	% mm. 226-232 - Rehersal 24
 	s2.*7
+	% mm. 233-239 - Rehersal 25
+	s1*3 s2.*4
+	% mm. 240-247 - Rehersal 26
+	s2.*8
+	% mm. 248-252 - Rehersal 27
+	s2.*2 s2.-\markup { \dynamic ff } s2. s8-\markup { \dynamic fff } s4-\markup { \italic {rit.} }
 }
 
 solo_lower_I = \relative c, {
@@ -1760,4 +1775,13 @@ solo_lower_I = \relative c, {
 	<gis cis eis gis>4.~ <gis cis eis gis>8~ <gis cis eis gis>16 <a a'> <ais ais'> <b b'>
 	<c f a c>8 <b b'> \tuplet 3/2 { <bes bes'>16( <a a'> <c c'>) } <a des f a>4.~
 	<a des f a>4.~ <a des f a>8~ <a des f a>16 \set stemRightBeamCount = #1 <ais ais'> \set stemLeftBeamCount = #1 <b b'> <c c'>
+	% mm. 248-252 - Rehersal 27
+	<cis f a cis>8 <c c'> \tuplet 3/2 { <b b'>16 <bes bes'> <d d'> } <a des f a> <aes aes'>8 <g g'> <fis fis'>16 \clef bass
+	<f b des f>8 <e e'> \tuplet 3/2 { <ees ees'>16 <d d'> <fis fis'> } \tuplet 3/2 { <cis f a cis> <c c'> \set stemRightBeamCount = #1 <g' g'> } \set stemLeftBeamCount = #1 <b, b'> \set stemRightBeamCount = #1 <bes bes'> \set stemLeftBeamCount = #1 <a a'> <aes aes'>
+	r16 <g g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \clef treble r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'> \clef bass
+	r16 <g,, g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \clef treble r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
+	\time 3/8
+	r16 <g, g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
+	%
+	\clef bass
 }
