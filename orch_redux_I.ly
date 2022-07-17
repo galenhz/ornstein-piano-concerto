@@ -961,6 +961,26 @@ redux_upper_I = \relative c' {
 			<a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8]
 		}
 	>>
+	% mm. 272-280 - Rehersal 30
+	\mark #30
+	\time 6/8
+	r8 ees[ fis g a8. a16]
+	\time 4/8
+	c8[ bes16 \set stemRightBeamCount = #1 a \set stemLeftBeamCount = #1 bes a g8]
+	\time 6/8
+	a16[ \set stemRightBeamCount = #1 g \set stemLeftBeamCount = #1 fis \set stemRightBeamCount = #1 ees \set stemLeftBeamCount = #1 fis g a8 c bes16 a
+	\time 4/8
+	g8] r8 ees[ fis
+	\time 6/8
+	g a8. a16] c8[ bes16 \set stemRightBeamCount = #1 a \set stemLeftBeamCount = #1 bes a
+	\time 4/8
+	g8 a16 \set stemRightBeamCount = #1 g \set stemLeftBeamCount = #1 fis \set stemRightBeamCount = #1 ees \set stemLeftBeamCount = #1 fis g
+	\time 6/8
+	a8 c bes16 a g8] r8 fis[
+	\time 4/8
+	a bes a16 g fis8]
+	\time 6/8
+	r8 fis[ a g16 \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 g fis ees8]
 	\revert Beam.breakable
 }
 
@@ -1744,6 +1764,31 @@ redux_lower_I = \relative c, {
 			<fis bes d>4. r4 <fis bes d>8~
 			<fis bes d>4. r4 <fis bes d>4 r4
 			r4 <fis bes d>
+		}
+	>>
+	% mm. 272-280 - Rehersal 30
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 {
+				\time 6/8
+				r8 ees[ a ees bes'16 a ees8]
+				\time 4/8
+				r16 ees[ \set stemLeftBeamCount = #1 a \set stemRightBeamCount = #1 ees \set stemLeftBeamCount = #1 bes' a ees8]
+			}
+			\time 6/8
+			r8 ees[ a ees bes'16 a ees8]
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 4 {
+				\time 6/8
+				<a,, a'>2.
+				\time 4/8
+				<ees ees'>2
+			}
+			\time 6/8
+			<a a'>2.
 		}
 	>>
 }
