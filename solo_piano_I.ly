@@ -899,7 +899,8 @@ solo_upper_I = \relative c' {
 	\ottava #0
 	\bar "||" %%% \mark \markup { \musicglyph "scripts.ufermata" }
 	% mm. 226-232 - Rehersal 24
-	% FIXME: Gotta combine bar fermata and rehersal mark.
+	% FIXME: Gotta combine bar fermata and rehersal mark. Very tricky. Note that if we break on this measure, the fermata has
+	%        to go before the break, and the mark afterwards.
 	\time 6/8
 	\tempo "Andantino"
 	\mark #24
@@ -979,8 +980,48 @@ solo_upper_I = \relative c' {
 	r16 <g,, g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \ottava #1 r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
 	\time 3/8
 	r16 <g, g'> <b b'> <ees ees'> <fis fis'> <bes bes'> \ottava #0
+	% mm. 253-258
+	\time 6/8
+	\tuplet 3/2 { <c,, c'>16[ <fis, fis'> r32 <fis fis'>] } \tuplet 3/2 { <fis fis'>16 <c' c'> <fis fis'> }
+		\tuplet 3/2 { <g g'>[ <fis fis'> r32 <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 }
+		\tuplet 3/2 { <des des'> <c c'> <fis, fis'> } <c' c'>8~
+	\time 2/8
+	<c c'>4~ <c c'>4~ <c c'>4~ <c c'>4~ <c c'>8 r8
+	% mm. 259-264 - Rehersal 28
+	\mark #28
+	\tempo "Sempre agitato"
+	\time 6/8
+	\tuplet 3/2 { <fis fis'>16[ <c c'> r32 <c c'>] } \tuplet 3/2 { <c c'>16 <fis fis'> <g g'> }
+		\tuplet 3/2 { <c c'>[ <g g'> r32 <fis fis'>] } \tuplet 3/2 { <fis fis'>8 <fis fis'>16 }
+		\tuplet 3/2 { <g g'>[ <fis fis'> <c c'>] } <fis fis'>8~
+	\time 2/4
+	<fis fis'>4~ <fis fis'>4~ <fis fis'>4~ <fis fis'>4~ <fis fis'>8 r8
+	% mm. 265-271 - Rehersal 29
+	\mark #29
+	\time 6/8
+	\tuplet 3/2 { <a, a'>16[ <ees' ees'> r32 <f f'>] } \tuplet 3/2 { <f f'>8 <f f'>16 }
+		\tuplet 3/2 { <b b'>[ <f f'> <ees ees'>] } \tuplet 3/2 { <f f'>8 <ees ees'>16 }
+		\tuplet 3/2 { <a, a'>[ <ees' ees'> r32 <f f'>] } \tuplet 3/2 { <f f'>8 <ees ees'>16 }
+	\time 5/8
+	\ottava #1 \tuplet 3/2 { <gis gis'>[ <cis cis'> <d d'>] } \tuplet 3/2 { <gis gis'>8[ <d d'>16] } \tuplet 3/2 { <cis cis'>8 <gis gis'>16 }
+		\tuplet 3/2 { r <gis' gis'> <d d'> } \tuplet 3/2 { <cis cis'>8[ <gis gis'>16] } \ottava #0
+	\time 6/8
+	\tuplet 3/2 { <a, a'>16[ <ees' ees'> <f f'>] } \tuplet 3/2 { <f f'>8 <f f'>16 }
+		\tuplet 3/2 { <b b'>[ <f f'> <ees ees'>] } \tuplet 3/2 { <f f'>8 <ees ees'>16 }
+		\tuplet 3/2 { <a, a'>[ <ees' ees'> r32 <f f'>] } \tuplet 3/2 { <f f'>16 <ees ees'> <bes d fis> }
+	\time 9/8
+	<d fis bes>8[ <d fis b> <d fis cis'>8. <d fis cis'>16]
+		<d fis e'>8[ <d fis d'>16 \set stemRightBeamCount = #1 <d fis cis'> \set stemLeftBeamCount = #1 <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
+	\time 6/8
+	<d fis bes>16[ \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8] <d fis e'>[ <d fis d'>16 <d fis cis'> <d fis b>8]
+	\time 9/8
+	% QUESTION: PR has f natural on the 8th beat of this measure. Pretty sure repition from last measture shows it should be f#.
+	% FIXME: Lilypond runs m. 270 right off the end of the page! Only way to fix is to not use voicing in other parts. Possible bug.
+	<d fis bes>16[ \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8. <d fis cis'>16]
+		<d fis e'>8[ <d fis d'>16 \set stemRightBeamCount = #1 <d fis cis'> \set stemLeftBeamCount = #1 <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
+	\time 4/8
+	<d fis bes> \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8 <d fis e'>16 <d fis cis'>
 }
-
 
 solo_dynamics_I = {
 	% mm. 1-9
@@ -1080,6 +1121,12 @@ solo_dynamics_I = {
 	s2.*8
 	% mm. 248-252 - Rehersal 27
 	s2.*2 s2.-\markup { \dynamic ff } s2. s8-\markup { \dynamic fff } s4-\markup { \italic {rit.} }
+	% mm. 253-258
+	s2.-\markup { \dynamic p \italic {subito} } s4*5
+	% mm. 259-264 - Rehersal 28
+	s2. s4*5
+	% mm. 265-271 - Rehersal 29
+	s2. s4.-\markup { \dynamic f } s4 s2. s2.-\markup { \dynamic fff } s4. s2. s2. s4. s2
 }
 
 solo_lower_I = \relative c, {
@@ -1782,6 +1829,29 @@ solo_lower_I = \relative c, {
 	r16 <g,, g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \clef treble r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
 	\time 3/8
 	r16 <g, g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
-	%
+	% mm. 253-258
+	% mm. 259-264 - Rehersal 28
 	\clef bass
+	\time 6/8
+	% QUESTION: 16ths in PR but really should be 32nds
+	\repeat unfold 16 { \tuplet 5/4 { c,,,32[ fis c' fis, \set stemRightBeamCount = #1 c' } \tuplet 5/4 { \set stemLeftBeamCount = #1 fis c fis, c' fis,] } }
+	% mm. 265-271 - Rehersal 29
+	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \set stemRightBeamCount = #1 ees'  } \tuplet 5/4 { \set stemLeftBeamCount = #1 a ees a, ees' a,] } }
+	\time 5/8
+	\repeat unfold 2 { \tuplet 5/4 { a,32[ ees' a ees \set stemRightBeamCount = #1 a } \tuplet 5/4 { \set stemLeftBeamCount = #1 ees' a, ees a ees] } }
+		\tuplet 5/4 { a,[ ees' a ees a] }
+	\time 6/8
+	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \set stemRightBeamCount = #1 ees'  } \tuplet 5/4 { \set stemLeftBeamCount = #1 a ees a, ees' a,] } }
+	\time 9/8
+	\override Beam.breakable = ##t
+	<<
+		\new Voice {
+			\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 7 { r4 <c,, c'>4 }
+		}
+	>>
+	\revert Beam.breakable
 }
