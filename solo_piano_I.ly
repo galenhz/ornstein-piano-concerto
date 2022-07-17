@@ -1016,7 +1016,6 @@ solo_upper_I = \relative c' {
 	<d fis bes>16[ \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8] <d fis e'>[ <d fis d'>16 <d fis cis'> <d fis b>8]
 	\time 9/8
 	% QUESTION: PR has f natural on the 8th beat of this measure. Pretty sure repition from last measture shows it should be f#.
-	% FIXME: Lilypond runs m. 270 right off the end of the page! Only way to fix is to not use voicing in other parts. Possible bug.
 	<d fis bes>16[ \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8. <d fis cis'>16]
 		<d fis e'>8[ <d fis d'>16 \set stemRightBeamCount = #1 <d fis cis'> \set stemLeftBeamCount = #1 <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
 	\time 4/8
@@ -1844,14 +1843,16 @@ solo_lower_I = \relative c, {
 	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \set stemRightBeamCount = #1 ees'  } \tuplet 5/4 { \set stemLeftBeamCount = #1 a ees a, ees' a,] } }
 	\time 9/8
 	\override Beam.breakable = ##t
-	<<
-		\new Voice {
-			\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] }
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 7 { r4 <c,, c'>4 }
-		}
-	>>
+	% FIXME: Workaround for what seems to be a lilypond bug. Having voices here causes m. 270 to be run off the page. Score is now incorrect.
+	%<<
+	%	\new Voice {
+	%		\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] }
+	%	}
+	%	\new Voice {
+	%		\voiceTwo
+	%		\repeat unfold 7 { r4 <c,, c'>4 }
+	%	}
+	%>>
+	\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> <c, c'>8 <d'' fis bes c d>] }
 	\revert Beam.breakable
 }

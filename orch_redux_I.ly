@@ -954,10 +954,10 @@ redux_upper_I = \relative c' {
 			\voiceTwo
 			<fis, fis'>8[ <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'>] <fis fis'>[ <ees ees'>
 			\time 6/8
-			<fis fis'>16 <g g'> <a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8] <ees ees'>[
+			% FIXME: Have to break barring here because the following 9/8 is being run right off the page. See solo piano lower comment. Can revert to sanity when bug is fixed.
+			<fis fis'>16 <g g'> <a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8] <ees ees'>
 			\time 9/8
-			<fis fis'> <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'>] <fis fis'>16[ \set stemRightBeamCount = #1 <ees ees'> \set stemLeftBeamCount = #1 <fis fis'> <g g'>]
-			% FIXME: Have to break barring here because the previous 9/8 is being run right off the page. See solo piano upper comment. Can revert to sanity when bug is fixed.
+			<fis fis'> <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'> <fis fis'>16[ \set stemRightBeamCount = #1 <ees ees'> \set stemLeftBeamCount = #1 <fis fis'> <g g'>]
 			\time 4/8
 			<a a'>8[ <bes bes'> <a a'>16 <g g'> <a a'>8]
 		}
