@@ -929,6 +929,39 @@ redux_upper_I = \relative c' {
 	\tuplet 3/2 { <fis bes f'>[ <fis bes d> r32 <fis bes des>] } \tuplet 3/2 { <fis bes des>8 <fis bes des>16 }
 	\tuplet 3/2 { <fis bes d> <fis bes des> <fis bes ces> } \tuplet 3/2 { <d fis cis'> <d fis b> <d fis bes> }
 	\tuplet 3/2 { <d fis g> <d fis bes>8~ } <d fis bes>
+	% mm. 265-271 - Rehersal 29
+	\mark #29
+	\time 6/8
+	\override Beam.breakable = ##t
+	r16 <g, b ees>[ \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees fis> <b ees g> <b ees bes'> } <b ees b'>8 <b ees bes'>16 \set stemRightBeamCount = #1 <b ees g> \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees bes'> <b ees g> <b ees fis>] } r16 <f' a cis>[
+	\time 5/8
+	\tuplet 3/2 { \set stemLeftBeamCount = #1 <a cis e> <a cis f> <a cis gis'> } <a cis a'>8 <a cis gis'>16 \set stemRightBeamCount = #1 <a cis f> \tuplet 3/2 { \set stemLeftBeamCount = #1 <a cis gis> <a cis f> \set stemRightBeamCount = #1 <a cis e> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a cis f> <a cis e> <a cis>] }
+	\time 6/8
+	r16 <g, b ees>[ \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees fis> <b ees g> <b ees bes'> } <b ees b'>8 <b ees bes'>16 \set stemRightBeamCount = #1 <b ees g> \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees bes'> <b ees g> <b ees fis>] } r8
+	\time 9/8
+	<<
+		\new Voice {
+			\voiceOne
+			<bes' d>4 <d fis> <d fis> r8 <bes d>4
+			\time 6/8
+			<bes d>4. <d fis>4 <bes d>8
+			\time 9/8
+			<bes d>4 <d fis> <d fis> r8 <bes d> <bes d>
+			\time 4/8
+			<d fis>4 <d fis>
+		}
+		\new Voice {
+			\voiceTwo
+			<fis, fis'>8[ <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'>] <fis fis'>[ <ees ees'>
+			\time 6/8
+			<fis fis'>16 <g g'> <a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8] <ees ees'>[
+			\time 9/8
+			<fis fis'> <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'>] <fis fis'>16[ \set stemRightBeamCount = #1 <ees ees'> \set stemLeftBeamCount = #1 <fis fis'> <g g'>
+			\time 4/8
+			<a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8]
+		}
+	>>
+	\revert Beam.breakable
 }
 
 redux_dynamics_I = {
@@ -1683,6 +1716,34 @@ redux_lower_I = \relative c, {
 			\voiceTwo
 			<c,, c'>4. <fis fis'>
 			<c c'>4~ <c c'>4~ <c c'>4~ <c c'>4~ <c c'>4
+		}
+	>>
+	% mm. 265-271 - Rehersal 29
+	\time 6/8
+	<a' a'>2.
+	\time 5/8
+	<ees ees'>4.~ <ees ees'>4
+	\time 6/8
+	<a a'>2.
+	<<
+		\new Voice {
+			\voiceTwo
+			\time 9/8
+			<c, c'>2 <c' c'>4 <c, c'>4.~
+			\time 6/8
+			<c c'>8 <c' c'>4 <c, c'>4.~
+			\time 9/8
+			<c c'>8 <c' c'>4 <c, c'>2 <c' c'>4
+			\time 4/8
+			<c, c'>2
+		}
+		\new Voice {
+			% QUESTION: m. 270. Is the second hit a quarter note or half note? Missing a rest if quarter.
+			\voiceOne
+			r4 <fis'' bes d>2 r4 <fis bes d>8~
+			<fis bes d>4. r4 <fis bes d>8~
+			<fis bes d>4. r4 <fis bes d>4 r4
+			r4 <fis bes d>
 		}
 	>>
 }
