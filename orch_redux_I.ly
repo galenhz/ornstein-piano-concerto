@@ -982,6 +982,44 @@ redux_upper_I = \relative c' {
 	\time 6/8
 	r8 fis[ a g16 \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 g fis ees8]
 	\revert Beam.breakable
+	% mm. 281-284 - Rehersal 31
+	\time 4/4
+	\mark #31
+	\tempo "Doppio Lento"
+	\repeat unfold 4 { <a' cis>16 <d, g> <a' c> <d, g> <a' b> <d, g> <a' bes> <d, g> }
+	\repeat unfold 2 { <d' fis> <g, cis> <d' f> <g, cis> <d' e> <g, cis> <d' ees> <g, cis> }
+	\repeat unfold 2 { <a cis> <ees g> <a c> <ees g> <a b> <ees g> <a bes> <ees g> }
+	% mm. 285-290 - Rehersal 32
+	\mark #32
+	\time 2/4
+	\repeat unfold 4 { <d' fis> <g, cis> <d' f> <g, cis> <d' e> <g, cis> <d' ees> <g, cis> }
+	\time 3/4
+	\repeat unfold 3 { <d' fis> <fis, cis'> <d' f> <fis, cis'> <d' e> <fis, cis'> <d' ees> <fis, cis'> }
+	% mm. 291-296 - Rehersal 33
+	\mark #33
+	\time 4/8
+	\tuplet 3/2 { <bes,, d a'>16[ <bes d fis> r32 <bes d fis>] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
+		\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d fis a>] } \tuplet 3/2 { <d fis a>8 <d fis a>16 }
+	\tuplet 3/2 { <d fis bes>[ <d fis a> <d fis g>] } \tuplet 3/2 { <bes d a'> <bes d g> <bes d fis> }
+		\tuplet 3/2 { <bes d ees>[ <bes d fis>8~] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
+	\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d fis bes>] } \tuplet 3/2 { <d fis bes>16 <f bes cis> <fis bes d> }
+		\tuplet 3/2 { <fis bes f'>[ <fis bes d> r32 <fis bes cis>] } \tuplet 3/2 { <fis bes cis>8 <fis bes cis>16 }
+	\tuplet 3/2 { <fis bes d>[ <fis bes des> <fis bes cis>] } \tuplet 3/2 { <d fis cis'> <d fis b> <d fis bes> }
+		\tuplet 3/2 { <d fis g>[ <d fis bes>8]~ } \tuplet 3/2 { <d fis bes>16 <fis bes cis> <fis b d> }
+	\tuplet 3/2 { <a cis e>[ <a cis f> r32 <a cis gis'>] } \tuplet 3/2 { <a cis gis'>8 <a cis gis'>16 }
+		\tuplet 3/2 { <bes d a'>[ <bes d gis> <bes d fis>] } \tuplet 3/2 { <bes d gis> <bes d fis> <bes d f> }
+	\tuplet 3/2 { <a cis e>[ <a cis f> r32 <a cis gis'>] } \tuplet 3/2 { <a cis gis'>16 <a cis a'> <a cis bes'> }
+		\tuplet 3/2 { <d fis cis'> <d fis cis'> <d fis bes> } \tuplet 3/2 { <d fis c'> <d fis bes> <d fis a> }
+	% mm. 297-300
+	\tempo "Stretto"
+	\tuplet 3/2 { r16 <fis, bes cis>[ <fis bes d>] } \tuplet 3/2 { <fis bes f'>8 <fis bes e>16 }
+		\tuplet 3/2 { r16 <fis bes cis>[ <fis bes d>] } \tuplet 3/2 { <a cis gis'> <a cis f> <a cis e> }
+	\tuplet 3/2 { r16 <fis' bes cis>[ <fis bes d>] } \tuplet 3/2 { <fis bes f'>8 <fis bes e>16 }
+		\tuplet 3/2 { r16 <fis bes cis>[ <fis bes d>] } \tuplet 3/2 { <a cis gis'> <a cis f> <a cis e> }
+	\tempo "Molto Agitato"
+	\repeat unfold 2 { \tuplet 3/2 { r16 <fis bes cis>[ <fis bes d>] } \ottava #1 \tuplet 3/2 { <d' fis cis'> <d fis bes> <d fis a> } \ottava #0 }
+	\tuplet 3/2 { r16 <fis, bes cis>[ <fis bes d>] } \ottava #1
+		\repeat unfold 3 { \tuplet 3/2 { <d' fis cis'>[ <d fis bes> <d fis a>] } } \ottava #0
 }
 
 redux_dynamics_I = {
@@ -1069,6 +1107,20 @@ redux_dynamics_I = {
 	s2.*4 s8 s4-\markup { \italic {rit.} }
 	% mm. 253-258
 	s2.-\markup { \dynamic p \italic {subito} } s4*5
+	% mm. 259-264 - Rehersal 28
+	s2. s4*5
+	% mm. 265-271 - Rehersal 29
+	s2. s4. s4 s2. s2. s4. s2. s2. s4. s2
+	% mm. 272-280 - Rehersal 30
+	s2. s2 s2. s2 s2. s2 s2. s2 s2.
+	% mm. 281-284 - Rehersal 31
+	s1*4
+	% mm. 285-290 - Rehersal 32
+	s2*4 s2.*2
+	% mm. 291-296 - Rehersal 33
+	s2*6
+	% mm. 297-300
+	s2*3 s2-\markup { \italic {rit.} }
 }
 
 redux_lower_I = \relative c, {
@@ -1791,6 +1843,79 @@ redux_lower_I = \relative c, {
 			<a a'>2.
 		}
 	>>
+	% mm. 281-284 - Rehersal 31
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			r4 <ees'' bes' ees>8~ <fis bes fis'> <g g'>4 <g g'>
+			r8 <fis cis' fis>8~ <a cis a'>2.
+			r8 <g bes g'> <cis d cis'> <bes bes'> <bes bes'>4 <g g'>
+			\tuplet 3/2 { r8 <g g'> <a a'> } <a a'>2.
+		}
+		\new Voice {
+			\voiceFour
+			s2 d2
+			s1
+			s1
+			\tuplet 3/2 { s8 cis4~ } cis2.
+		}
+		\new Voice {
+			\voiceTwo
+			<g,, g'>1
+			<ees ees'>
+			<g g'>
+			<ees ees'>
+		}
+	>>
+	% mm. 285-291 - Rehersal 32
+	\time 2/4
+	% QUESTION: I am really unsure of those chords in voice one.
+	<<
+		\new Voice {
+			\voiceOne \stemDown
+			r8 <bes''' c cis e bes'>~ <c e c'> <bes bes'>
+			r8 <a cis ees a>~ \tuplet 3/2 { <bes c ees bes'> <a a'> <fis fis'> }
+			r8 <bes cis e bes'>~ <cis e cis'> <bes bes'>
+			r8 <a cis e a>~ \tuplet 3/2 { <bes cis e bes'> <a a'> <f f'> } \stemNeutral
+		}
+		\new Voice {
+			\voiceTwo
+			<a,, a'>2
+			<ees ees'>
+			<a a'>
+			<ees ees'>
+		}
+	>>
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			r8 <fis'' fis'>8 <g g'>4 <fis fis'>8 <ees ees'>
+			r8 <fis fis'>8 <g g'>2
+		}
+		\new Voice {
+			\voiceFour
+			\repeat unfold 2 { s8 <a c>~ <a c>2 }
+		}
+		\new Voice {
+			\voiceTwo
+			<d,,, d'>2.
+			<a a'>
+		}
+	>>
+	% mm. 291-206 - Rehersal 33
+	\time 4/8
+	\repeat unfold 3 { \tuplet 3/2 { <c' c'>16[ fis r32 <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
+		\tuplet 3/2 { <c c'>16[ f16. <c c'>32] } \tuplet 3/2 { <c c'>8 <c c'>16 }
+	\repeat unfold 2 { \tuplet 3/2 { <c c'>16[ fis r32 <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
+	\repeat unfold 2 { \tuplet 3/2 { <c c'>16[ f16. <c c'>32] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
+	\repeat unfold 2 { \tuplet 3/2 { <a a'>16[ ees' r32 <a, a'>] } \tuplet 3/2 { <a a'>8 <a a'>16 }
+		\tuplet 3/2 { <c c'>[ fis <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
+	% mm. 297-300
+	\repeat unfold 2 { \tuplet 3/2 { <fis, c'>16[ fis' <fis, c'>] } \tuplet 3/2 { fis'[ <fis, c'> fis'] }
+		\tuplet 3/2 { <a, ees'>[ a' <a, ees'>] } \tuplet 3/2 { a'[ <a, ees'> a'] } }
+	\repeat unfold 4 { \tuplet 3/2 { <c,, c'>[ fis <c c'>] } \tuplet 3/2 { fis[ <c c'> fis] } }
 }
 
 
