@@ -51,6 +51,20 @@ solo_upper_I = \relative c' {
 	a,,[ b d e g a] d[ e g a]
 	% m. 20
 	a,,[ b d e g a] d[ e g a]
+
+	% FIXME: Backport this better version of the above. I did it like this in the recap, but it runs up
+	% against the dynamics in the center.
+	% mm. 16-20
+	%\time 10/8
+	%\tempo "con moto"
+	%\stemUp r8 <e, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
+	%\time 11/8
+	%\ottava #1 r8 <g g'>[ <c c'> <d d'> <fis fis'> <g g'> <g, g'> <c c'> <d d'> <fis fis'> <g g'>] \ottava #0
+	%\time 10/8
+	%\stemUp r8 <e,, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
+	%\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
+	%\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
+
 	% mm. 21-24 - Rehersal 2
 	\mark #2
 	\time 4/4
@@ -1139,6 +1153,33 @@ solo_upper_I = \relative c' {
 	\repeat unfold 2 { \tuplet 3/2 { r16 <fis' c' fis>[ <f f'>] } \tuplet 3/2 { <f f'>8 <d d'>16 } }
 	\tuplet 3/2 { r16 <fis a fis'>[ <fis fis'>] }
 		\repeat unfold 3 { \tuplet 3/2 { <d d'>[ <fis a fis'> <f f'>] } }
+	% mm. 301-303 - Rehersal 34
+	% Copied from rehersal 1.
+	\time 6/8
+	\tempo "Tempo I"
+	\mark #34
+	\tuplet 4/3 { <b, e gis b>8
+			<bes ees g bes>~ <bes ees g bes>16
+			<a a'> <gis gis'> <b b'> }
+	<gis cis e gis>8~ <gis cis e gis>16 <a a'> <bes bes'> <b b'>
+	\tuplet 4/3 { <c f a c>16. <b e gis b>32 <b e gis b>8~ <b e gis b>16
+			<bes ees g bes> <a a'> <c c'> }
+	\tuplet 4/3 { <a d fis a>8 <aes des f aes>~ <aes des f aes>16
+			<g g'> <fis fis'> <a a'> }
+	<fis b dis fis>8 <f b d f>4
+	\ottava #0
+	\stemUp <c fis a c>8
+	<d gis b d> <ees a c ees> \stemNeutral
+	% mm. 304-308 - Rehersal 35
+	\mark #35
+	\time 10/8
+	\stemUp r8 <e, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
+	\time 11/8
+	\ottava #1 r8 <g g'>[ <c c'> <d d'> <fis fis'> <g g'> <g, g'> <c c'> <d d'> <fis fis'> <g g'>] \ottava #0
+	\time 10/8
+	\stemUp r8 <e,, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
+	\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
+	\change Staff = "solo_lower" <e,, a>[ bes' \change Staff = "solo_upper" des ees ges aes bes cis ees aes]
 }
 
 solo_dynamics_I = {
@@ -1254,7 +1295,7 @@ solo_dynamics_I = {
 	% mm. 285-290 - Rehersal 32
 	s2*4 s2.*2
 	% mm. 291-296 - Rehersal 33
-	s2*3 \tempo "Stringento sempre e cresc." s2*3
+	s2*6
 	% mm. 297-300
 	s2*2 s2-\ff s2-\markup { \italic {rit.} }
 }
@@ -2023,4 +2064,63 @@ solo_lower_I = \relative c, {
 		\clef treble
 		\tuplet 5/4 { fis,[ c' fis c fis] } \tuplet 5/4 { c[ fis c' fis, c'] }
 		\tuplet 6/4 { fis, c' fis c fis c' }
+	% mm. 301-303 - Rehersal 34
+	% Copied from rehersal 1.
+	\time 6/8
+	\clef bass
+	\tuplet 18/12 {
+		\stemUp <fis,,,,, fis'>32 \stemDown cis''[ fis bes c cis
+		\clef treble
+		fis bes c bes c bes fis
+		\clef bass
+		cis c bes fis cis]
+	}
+	\tuplet 16/12 {
+		\stemUp <a, a'> \stemDown a'[ e' b' a
+		\clef treble
+		e' b' e, b' e, b' e,
+		\clef bass
+		a, b e, a,]
+	}
+	\tuplet 18/12 {
+		\stemUp <fis, fis'>32 \stemDown cis''[ fis bes c cis
+		\clef treble
+		fis bes c bes c bes fis
+		\clef bass
+		cis c bes fis cis]
+	}
+	\tuplet 16/12 {
+		\stemUp <a, a'> \stemDown a'[ e' b' a
+		\clef treble
+		e' b' e, b' e, b' e,
+		\clef bass
+		a, b e, a,]
+	}
+	\tuplet 14/12 {
+		\stemUp cis, \stemDown g'[ f' f b f' b, f' b, f' b, f f g,]
+	}
+	\tupletDown
+	\stemDown
+	\tuplet 6/4 {
+		fis[ cis' a' \change Staff = "solo_upper" c fis c']
+		\change Staff = "solo_lower"
+	}
+	\tuplet 6/4 {
+		gis,,[ dis' b' \change Staff = "solo_upper" d gis d']
+		\change Staff = "solo_lower"
+	}
+	\tuplet 10/8 {
+		a,,64[ e' c' \change Staff = "solo_upper" e a c ees a ees'
+		\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
+	}
+	\stemNeutral
+	% mm. 304-308 - Rehersal 35
+	\time 10/8
+	r8 e,,,,[ fis b c \change Staff = "solo_upper" e fis g b c] \change Staff = "solo_lower"
+	\time 11/8
+	\clef treble r8 g[ c d fis g g, c d fis g]
+	\time 10/8
+	\clef bass r8 e,,[ fis b c \change Staff = "solo_upper" e fis g b c] \change Staff = "solo_lower"
+	\stemDown <e,,, a d>2~ <e a d>8 \stemNeutral <b e a>4 <a d g>~ <a d g>8
+	\stemDown <e' a d>4~ <e a d>8 \stemNeutral <c f bes>2 <bes ees aes>4~ <bes ees aes>8
 }
