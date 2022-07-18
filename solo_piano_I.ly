@@ -1030,7 +1030,7 @@ solo_upper_I = \relative c' {
 		\tuplet 3/2 { \change Staff = "solo_upper" <d' ees>[ \change Staff = "solo_lower" <g, cis> <g cis>] } \change Staff = "solo_upper"
 	}
 	\tuplet 3/2 { <d' fis>16[ \change Staff = "solo_lower"  \clef treble <g, cis> <g cis>] }
-		ees,8
+		ees,8 \glissando
 	% mm. 281-284 - Rehersal 31
 	\time 4/4
 	\mark #31
@@ -1114,6 +1114,31 @@ solo_upper_I = \relative c' {
 			\change Staff = "solo_upper" <bes bes'> \change Staff = "solo_lower" a]
 		}
 	}
+	\change Staff = "solo_upper"
+	% mm. 291-296 - Rehersal 33
+	\mark #33
+	\time 4/8
+	\repeat unfold 2 {
+		\tuplet 3/2 { <fis bes d fis>16[ <g g'> r32 <gis gis'> } \tuplet 3/2 { <gis gis'>8 <a a'>16] }
+			\tuplet 3/2 { <bes d fis bes>[ <b b'> r32 <c c'> } \tuplet 3/2 { <c c'>8 <cis cis'>16] }
+		\tuplet 3/2 { <e a e'>[ <ees ees'> r32 <d d'> } \tuplet 3/2 { <d d'>8 <cis cis'>16] }
+			\tuplet 3/2 { <fis a fis'>[ <f f'> r32 <e e'> } \tuplet 3/2 { <e e'>8 <ees ees'>16] }
+	}
+	\repeat unfold 2 {
+		\tuplet 3/2 { <aes aes'>16[ <g g'> r32 <fis fis'> } \tuplet 3/2 { <fis fis'>8 <fis fis'>16]~ }
+			\tuplet 3/2 { <fis fis'> <e e'> \set stemRightBeamCount = #1 <des des'> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <des des'> <c c'> <a a'> }
+	}
+	% mm. 297-300
+	\tempo "Stretto"
+	\ottava #1
+	\repeat unfold 2 {
+		\tuplet 3/2 { r16 <cis' fis cis'>[ <c c'>] } \tuplet 3/2 { <c fis c'>8 <bes bes'>16 }
+			\tuplet 3/2 { r16 <bes bes'>[ <a a'>] } \tuplet 3/2 { <a a'> <gis gis'> <f f'> }
+	}
+	\tempo "Molto Agitato"
+	\repeat unfold 2 { \tuplet 3/2 { r16 <fis' c' fis>[ <f f'>] } \tuplet 3/2 { <f f'>8 <d d'>16 } }
+	\tuplet 3/2 { r16 <fis a fis'>[ <fis fis'>] }
+		\repeat unfold 3 { \tuplet 3/2 { <d d'>[ <fis a fis'> <f f'>] } }
 }
 
 solo_dynamics_I = {
@@ -1220,6 +1245,18 @@ solo_dynamics_I = {
 	s2. s4*5
 	% mm. 265-271 - Rehersal 29
 	s2. s4.-\markup { \dynamic f } s4 s2. s2.-\markup { \dynamic fff } s4. s2. s2. s4. s2
+	% mm. 272-280 - Rehersal 30
+	s2. s2 s2. s2 s2. s2 s2. s2 s2.
+	% mm. 281-284 - Rehersal 31
+	% FIXME: Need to shove this down out of the way. Not sure why this isn't working!
+	\once \override DynamicLineSpanner.Y-offset = #-4.0
+	s1-\ff s1*3
+	% mm. 285-290 - Rehersal 32
+	s2*4 s2.*2
+	% mm. 291-296 - Rehersal 33
+	s2*6
+	% mm. 297-300
+	s2*2 s2-\ff s2-\markup { \italic {rit.} }
 }
 
 solo_lower_I = \relative c, {
@@ -1965,4 +2002,25 @@ solo_lower_I = \relative c, {
 	s2*4
 	\time 3/4
 	s2.*2
+	% mm. 291-296 - Rehersal 33
+	\time 4/8
+	\clef bass
+	\repeat unfold 4 {
+		\tuplet 10/8 { fis32[ c' fis c fis c fis c' fis, c'] }
+			\tuplet 10/8 { fis[ c fis, c' fis, c' fis, c fis c] }
+	}
+	\repeat unfold 2 {
+		\tuplet 10/8 { a[ ees' a ees a ees a ees' a, ees'] }
+			\tuplet 10/8 { c,[ fis c' fis, c' fis, c' fis c fis] }
+	}
+	% mm. 297-300
+	\repeat unfold 2 {
+		\tuplet 10/8 { fis,,[  c' fis c fis c fis c' fis, c'] }
+			\tuplet 10/8 { a,[ ees' a ees a ees a ees' a, ees'] }
+	}
+	\repeat unfold 2 { \tuplet 10/8 { c,[ fis c' fis, c' fis, c' fis c fis] } }
+	\tuplet 5/4 { c[ fis c' fis, c'] }
+		\clef treble
+		\tuplet 5/4 { fis,[ c' fis c fis] } \tuplet 5/4 { c[ fis c' fis, c'] }
+		\tuplet 6/4 { fis, c' fis c fis c' }
 }
