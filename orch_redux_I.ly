@@ -1011,7 +1011,7 @@ redux_upper_I = \relative c' {
 	\tuplet 3/2 { <a cis e>[ <a cis f> r32 <a cis gis'>] } \tuplet 3/2 { <a cis gis'>8 <a cis gis'>16 }
 		\tuplet 3/2 { <bes d a'>[ <bes d gis> <bes d fis>] } \tuplet 3/2 { <bes d gis> <bes d fis> <bes d f> }
 	\tuplet 3/2 { <a cis e>[ <a cis f> r32 <a cis gis'>] } \tuplet 3/2 { <a cis gis'>16 <a cis a'> <a cis bes'> }
-		\tuplet 3/2 { <d fis cis'> <d fis cis'> <d fis bes> } \tuplet 3/2 { <d fis c'> <d fis bes> <d fis a> }
+		\tuplet 3/2 { <d fis cis'>[ <d fis cis'> <d fis bes>] } \tuplet 3/2 { <d fis c'> <d fis bes> <d fis a> }
 	% mm. 297-300
 	\tempo "Stretto"
 	\tuplet 3/2 { r16 <fis, bes cis>[ <fis bes d>] } \tuplet 3/2 { <fis bes f'>8 <fis bes e>16 }
