@@ -1020,6 +1020,100 @@ solo_upper_I = \relative c' {
 		<d fis e'>8[ <d fis d'>16 \set stemRightBeamCount = #1 <d fis cis'> \set stemLeftBeamCount = #1 <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
 	\time 4/8
 	<d fis bes> \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8 <d fis e'>16 <d fis cis'>
+	% mm. 272-280 - Rehersal 30
+	\mark #30
+	\time 6/8
+	\repeat unfold 11 {
+		\tuplet 3/2 { <d' fis>16[ \change Staff = "solo_lower"  \clef treble <g, cis> <g cis>] }
+		\tuplet 3/2 { \change Staff = "solo_upper" <d' f>[ \change Staff = "solo_lower" <g, cis> <g cis>] }
+		\tuplet 3/2 { \change Staff = "solo_upper" <d' e>[ \change Staff = "solo_lower" <g, cis> <g cis>] }
+		\tuplet 3/2 { \change Staff = "solo_upper" <d' ees>[ \change Staff = "solo_lower" <g, cis> <g cis>] } \change Staff = "solo_upper"
+	}
+	\tuplet 3/2 { <d' fis>16[ \change Staff = "solo_lower"  \clef treble <g, cis> <g cis>] }
+		ees,8
+	% mm. 281-284 - Rehersal 31
+	\time 4/4
+	\mark #31
+	\tempo "Doppio Lento"
+	% FIXME: Force tuplet brackets this time?
+	\change Staff = "solo_upper" \ottava #1
+	\repeat unfold 2 {
+		\repeat unfold 2 {
+			\tuplet 10/8 {
+				\change Staff = "solo_upper" <cis'' cis'>32[ \change Staff = "solo_lower" c
+				\repeat unfold 3 { \change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c }
+				\change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c]
+			}
+			\tuplet 10/8 {
+				\change Staff = "solo_upper" <b b'>[ \change Staff = "solo_lower" bes
+				\repeat unfold 3 { \change Staff = "solo_upper" <b b'> \change Staff = "solo_lower" bes }
+				\change Staff = "solo_upper" <b b'> \change Staff = "solo_lower" bes]
+			}
+		}
+		\repeat unfold 2 {
+			\tuplet 10/8 {
+				\change Staff = "solo_upper" <cis cis'>[ \change Staff = "solo_lower" c
+				\repeat unfold 3 { \change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c }
+				\change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c]
+			}
+			\tuplet 10/8 {
+				\change Staff = "solo_upper" <bes bes'>[ \change Staff = "solo_lower" a
+				\repeat unfold 3 { \change Staff = "solo_upper" <bes bes'> \change Staff = "solo_lower" a }
+				\change Staff = "solo_upper" <bes bes'> \change Staff = "solo_lower" a]
+			}
+		}
+	}
+	% mm. 285-290 - Rehersal 32
+	\mark #32
+	\time 2/4
+	\repeat unfold 2 {
+		\tuplet 10/8 {
+			\change Staff = "solo_upper" <fis' fis'>[ \change Staff = "solo_lower" f
+			\repeat unfold 3 {\change Staff = "solo_upper" <fis fis'> \change Staff = "solo_lower" f }
+			\change Staff = "solo_upper" <fis fis'> \change Staff = "solo_lower" f]
+		}
+		\tuplet 10/8 {
+			\change Staff = "solo_upper" <e e'>[ \change Staff = "solo_lower" ees
+			\repeat unfold 3 { \change Staff = "solo_upper" <e e'> \change Staff = "solo_lower" ees }
+			\change Staff = "solo_upper" <e e'> \change Staff = "solo_lower" ees]
+		}
+		\tuplet 10/8 {
+			\change Staff = "solo_upper" <fis fis'>[ \change Staff = "solo_lower" f
+			\repeat unfold 3 { \change Staff = "solo_upper" <fis fis'> \change Staff = "solo_lower" f }
+			\change Staff = "solo_upper" <fis fis'> \change Staff = "solo_lower" f]
+		}
+		\tuplet 10/8 {
+			\change Staff = "solo_upper" <ees ees'>[ \change Staff = "solo_lower" d
+			\repeat unfold 3 { \change Staff = "solo_upper" <ees ees'> \change Staff = "solo_lower" d }
+			\change Staff = "solo_upper" <ees ees'> \change Staff = "solo_lower" d]
+		}
+	}
+	\time 3/4
+	\tuplet 10/8 {
+		\change Staff = "solo_upper" <cis cis'>32[ \change Staff = "solo_lower" c
+		\repeat unfold 3 { \change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c }
+		\change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c]
+	}
+	\repeat unfold 2 {
+		\tuplet 10/8 {
+			\change Staff = "solo_upper" <bes bes'>[ \change Staff = "solo_lower" a
+			\repeat unfold 3 { \change Staff = "solo_upper" <bes bes'> \change Staff = "solo_lower" a }
+			\change Staff = "solo_upper" <bes bes'> \change Staff = "solo_lower" a]
+		}
+	}
+	\change Staff = "solo_upper" \ottava #0
+	\tuplet 10/8 {
+		\change Staff = "solo_upper" <cis, cis'>32[ \change Staff = "solo_lower" c
+		\repeat unfold 3 { \change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c }
+		\change Staff = "solo_upper" <cis cis'> \change Staff = "solo_lower" c]
+	}
+	\repeat unfold 2 {
+		\tuplet 10/8 {
+			\change Staff = "solo_upper" <bes bes'>[ \change Staff = "solo_lower" a
+			\repeat unfold 3 { \change Staff = "solo_upper" <bes bes'> \change Staff = "solo_lower" a }
+			\change Staff = "solo_upper" <bes bes'> \change Staff = "solo_lower" a]
+		}
+	}
 }
 
 solo_dynamics_I = {
@@ -1855,4 +1949,20 @@ solo_lower_I = \relative c, {
 	%>>
 	\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> <c, c'>8 <d'' fis bes c d>] }
 	\revert Beam.breakable
+	% mm. 272-280 - Rehersal 30
+	\time 6/8
+	\stemDown <ees,, ees'>2. \stemNeutral
+	\time 4/8
+	s2
+	\time 6/8 s2. \time 4/8 s2 \time 6/8 s2. \time 4/8 s2 \time 6/8 s2. \time 4/8 s2
+	\time 6/8
+	s2.
+	% mm. 281-284 - Rehersal 31
+	\time 4/4
+	s1*4
+	% mm. 285-290 - Rehersal 32
+	\time 2/4
+	s2*4
+	\time 3/4
+	s2.*2
 }
