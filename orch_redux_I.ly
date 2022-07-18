@@ -1021,6 +1021,74 @@ redux_upper_I = \relative c' {
 	\repeat unfold 2 { \tuplet 3/2 { r16 <fis bes cis>[ <fis bes d>] } \ottava #1 \tuplet 3/2 { <d' fis cis'> <d fis bes> <d fis a> } \ottava #0 }
 	\tuplet 3/2 { r16 <fis, bes cis>[ <fis bes d>] } \ottava #1
 		\repeat unfold 3 { \tuplet 3/2 { <d' fis cis'>[ <d fis bes> <d fis a>] } } \ottava #0
+	% mm. 301-303 - Rehersal 34
+	\time 6/8
+	\tempo "Tempo I"
+	\mark #34
+	R2.*3
+	% mm. 304-308 - Rehersal 35
+	\time 10/8
+	\mark #35
+	<a,, d g>8[ <b e a>] <b e a>4 <a d g> <c fis b> <b e a>
+	\time 11/8
+	<a d g>8[ <b e a>] <b e a>4 <a d g> <fis b e> <b e a> <a d g>8
+	\time 10/8
+	<a d g>8[ <b e a>] <b e a>4 <a d g> <c fis b> <b e a>
+	<a d g> <fis b e> <b e a> <e a d> <b e a>
+	<a d g> <f bes ees> <bes ees aes> <ees gis cis> <f bes ees>
+	% mm. 309-315 - Rehersal 36
+	\time 4/4
+	\mark #36
+	<ges c f>8 r8 r4 a'8[ aes~ aes16 g fis a]
+	fis2 d8[ cis~ cis16 c b d]
+	b2 a'8[ aes~ aes16 g fis a]
+	<c, fis c'>8 r8 r4 r2
+	\time 8/8
+	\tempo "Meno"
+	\repeat unfold 2 {
+		\repeat tremolo 2 { <b, g'>32 <c f> } \repeat tremolo 4 { <b' g'> <c f> } \repeat tremolo 2 { <b, g'> <c f> }
+			\repeat tremolo 2 { <d bes'> <e aes> } \repeat tremolo 4 { <d' bes'> <e aes> } \repeat tremolo 2 { <d, bes'> <e aes> }
+	}
+	\time 4/8
+	\repeat tremolo 2 { <b g'>32 <c f> } \repeat tremolo 4 { <b' g'> <c f> } \repeat tremolo 2 { <b, g'> <cis f> }
+	% mm. 316-327 - Rehersal 37
+	\mark #37
+	\time 2/4
+	\tempo "Mosso"
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 { ges'2~ ges2 a4 g }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 4 { \repeat tremolo 8 { f32 cis } \repeat tremolo 8 { f32 cis }
+				\repeat tremolo 4 { g' e } \repeat tremolo 4 { f d }
+			}
+		}
+	>>
+	% mm. 328-331
+	\time 4/4
+	\tempo "Calmato"
+	<<
+		\new Voice {
+			\voiceOne
+			cis'1
+			cis
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				% Not bothering with the staff change here.
+				g8 fis~ fis16 f e aes \tuplet 5/4 { ees[ d des a a] } \tuplet 3/2 { aes8 g fis }
+			}
+		}
+	>>
+	\time 3/4
+	% QUESTION: Rhythm in bar 330 only makes sense if the first three 8ths are a triplet. Orchestra parts confirm this.
+	\tuplet 3/2 { r8 <cis' fis> <cis fis>~ } <cis fis>[ <cis fis>]~ <cis fis>[ <cis fis>]~
+	<cis fis>2.
+	\bar "|."
 }
 
 redux_dynamics_I = {
@@ -1917,6 +1985,84 @@ redux_lower_I = \relative c, {
 	\repeat unfold 2 { \tuplet 3/2 { <fis, c'>16[ fis' <fis, c'>] } \tuplet 3/2 { fis'[ <fis, c'> fis'] }
 		\tuplet 3/2 { <a, ees'>[ a' <a, ees'>] } \tuplet 3/2 { a'[ <a, ees'> a'] } }
 	\repeat unfold 4 { \tuplet 3/2 { <c,, c'>[ fis <c c'>] } \tuplet 3/2 { fis[ <c c'> fis] } }
+	% mm. 301-303 - Rehersal 34
+	\time 6/8
+	R2.*3
+	% mm. 304-308 - Rehersal 35
+	\time 10/8
+	<<
+		\new Voice {
+			\voiceOne e''8[ fis] fis4 e g fis
+		}
+		\new Voice {
+			\voiceTwo <c, g'>2. <e b'>2
+		}
+	>>
+	\time 11/8
+	<<
+		\new Voice {
+			\voiceOne e'8[ fis] fis4 e c fis e8
+		}
+		\new Voice {
+			\voiceTwo <c, g'>2. <a e'>2~ a8
+		}
+	>>
+	\time 10/8
+	<<
+		\new Voice {
+			\voiceOne e''8[ fis] fis4 e g fis
+		}
+		\new Voice {
+			\voiceTwo <c, g'>2. <e b'>2
+		}
+	>>
+	e'4 d fis g fis
+	e ees2. <des bes'>4
+	% mm. 309-316 - Rehersal 36
+	<fis b>8 r8 r4 b,8 fis' d' fis
+	\repeat unfold 2 { \clef treble d' fis, d \clef bass fis, b, fis' d' fis }
+	<aes,,, aes'>2 <g g'>
+	\time 8/8
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				\repeat tremolo 2 { b'32 c } \repeat tremolo 4 { b' c } \repeat tremolo 2 { b, c }
+					\repeat tremolo 2 { d e } \repeat tremolo 4 { d' e } \repeat tremolo 2 { d, e }
+			}
+			\repeat tremolo 2 { <cis f> g' } \repeat tremolo 4 { <cis f> g' } \repeat tremolo 2 { <cis,, f> g' }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { f,8 f'4 f,8\noBeam aes aes'4 aes,8 }
+			cis,2
+		}
+	>>
+	% mm. 316-327 - Rehersal 37
+	\time 2/4
+	\repeat unfold 4 {
+		<fis, fis'>32[ cis''] a' cis, a' cis, a' cis, \repeat tremolo 4 { a' cis, }
+		\repeat tremolo 8 { a' cis, }
+		a e' c' e, c' e, c' e,
+			g, d' b' d, b' d, b' d,
+	}
+	% mm. 328-331
+	\time 4/4
+	\repeat unfold 2 { \tuplet 7/4 { <fis,, f'>4 cis'' a' cis, a ees a, } }
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceTwo
+			% QUESTION: Error in PR. Bottom note should be f# as well
+			<fis fis'>2.~ <fis fis'>
+		}
+		\new Voice {
+			\voiceOne
+			\tuplet 3/2 { r8 <cis'' a'> <cis a'>~ } <cis a'>[ <cis a'>]~ <cis a'>[ <cis a'>]~
+			<cis a'>2.
+		}
+	>>
+	\bar "|."
 }
 
 
