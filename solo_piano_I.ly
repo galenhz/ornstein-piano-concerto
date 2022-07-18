@@ -1254,7 +1254,7 @@ solo_dynamics_I = {
 	% mm. 285-290 - Rehersal 32
 	s2*4 s2.*2
 	% mm. 291-296 - Rehersal 33
-	s2*6
+	s2*3 \tempo "Stringento sempre e cresc." s2*3
 	% mm. 297-300
 	s2*2 s2-\ff s2-\markup { \italic {rit.} }
 }

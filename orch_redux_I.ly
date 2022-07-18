@@ -1005,6 +1005,7 @@ redux_upper_I = \relative c' {
 		\tuplet 3/2 { <bes d ees>[ <bes d fis>8~] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
 	\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d fis bes>] } \tuplet 3/2 { <d fis bes>16 <f bes cis> <fis bes d> }
 		\tuplet 3/2 { <fis bes f'>[ <fis bes d> r32 <fis bes cis>] } \tuplet 3/2 { <fis bes cis>8 <fis bes cis>16 }
+	\tempo "Stringendo sempre e. cresc"
 	\tuplet 3/2 { <fis bes d>[ <fis bes des> <fis bes cis>] } \tuplet 3/2 { <d fis cis'> <d fis b> <d fis bes> }
 		\tuplet 3/2 { <d fis g>[ <d fis bes>8]~ } \tuplet 3/2 { <d fis bes>16 <fis bes cis> <fis b d> }
 	\tuplet 3/2 { <a cis e>[ <a cis f> r32 <a cis gis'>] } \tuplet 3/2 { <a cis gis'>8 <a cis gis'>16 }
