@@ -12,15 +12,15 @@
   <<
 	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
 		\set Score.markFormatter = #format-mark-circle-numbers
-		\new Staff = "solo_upper" \solo_upper_I
+		\new Staff = "solo_upper" { \accidentalStyle forget \solo_upper_I }
 		\new Dynamics \solo_dynamics_I
-		\new Staff = "solo_lower" \solo_lower_I
+		\new Staff = "solo_lower" { \accidentalStyle forget \solo_lower_I }
 	>>
 	\new PianoStaff \with { instrumentName = "Orchestra" } <<
 		\set Score.markFormatter = #format-mark-circle-numbers
-		\new Staff = "redux_upper" \redux_upper_I
+		\new Staff = "redux_upper" { \accidentalStyle forget \redux_upper_I }
 		\new Dynamics \redux_dynamics_I
-		\new Staff = "redux_lower" \redux_lower_I
+		\new Staff = "redux_lower" { \accidentalStyle forget \redux_lower_I }
 	>>
   >>
   \layout { }
