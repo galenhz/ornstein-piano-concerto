@@ -1427,8 +1427,9 @@ redux_lower_I = \relative c, {
 		}
 	>>
 	% mm. 100-105 - Rehersal 9
+	\slashedGrace { <cis cis'>8 }
 	\repeat unfold 2 {
-		\slashedGrace { <cis cis'>8 } \tuplet 5/4 { fis'''16 cis fis, fis cis }
+			\tuplet 5/4 { fis'''16 cis fis, fis cis }
 			\tuplet 5/4 { fis, cis' fis fis cis' }
 			\tuplet 7/4 { fis cis fis cis fis, fis cis }
 			\tuplet 5/4 { fis, cis' fis fis cis' }
