@@ -1071,10 +1071,11 @@ redux_upper_I = \relative c' {
 	% mm. 328-331
 	\time 4/4
 	\tempo "Calmato"
+	% WORKAROUND: Add silent grace note to bar 328 to match the solo piano.
 	<<
 		\new Voice {
 			\voiceOne
-			cis'1
+			\grace s8 cis'1
 			cis
 		}
 		\new Voice {
@@ -2049,7 +2050,8 @@ redux_lower_I = \relative c, {
 	}
 	% mm. 328-331
 	\time 4/4
-	\repeat unfold 2 { \tuplet 7/4 { <fis,, f'>4 cis'' a' cis, a ees a, } }
+	% WORKAROUND: Add silent grace note to bar 328 to match the solo piano.
+	\grace s8 \repeat unfold 2 { \tuplet 7/4 { <fis,, f'>4 cis'' a' cis, a ees a, } }
 	\time 3/4
 	<<
 		\new Voice {

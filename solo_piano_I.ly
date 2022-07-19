@@ -1214,6 +1214,69 @@ solo_upper_I = \relative c' {
 	\tuplet 3/2 { <e c' e>[ <f bes' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f bes' f> <e c' e>]
 		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a f' a> <bes gis' bes> <cis a' cis>] }
 	\ottava #0
+	% mm. 316-327 - Rehersal 37
+	\mark #37
+	\time 2/4
+	\tempo "Mosso"
+	\ottava #1
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { <f, g>2
+				<des e>
+				<a b>
+			}
+			<c e>2
+			\ottava #0
+			<bis cis>
+			<fis gis>
+			\ottava #1
+			<c' e>
+			\ottava #0
+			<bis cis>
+			<fis gis>
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				<c' c'>8 <b b'>~ <b b'>16 <bes bes'> <a a'> <c c'>
+				<a a'>8 <aes aes'>4 <g g'>8
+				\tuplet 3/2 { <e e'>4 <g g'> <aes aes'> }
+			}
+			\repeat unfold 2 {
+				<a a'>8 <aes aes'>~ <aes aes'>16 <g g'> <fis fis'> <a a'>
+				<fis fis'>8 <f f'>4 <e e'>8
+				\tuplet 3/2 { <cis cis'>4 <e e'> <f f'> }
+			}
+		}
+	>>
+	% mm. 328-331
+	\time 4/4
+	\tempo "Calmato"
+	% WORKAROUND: Silent grace note to match left hand.
+	<<
+		\new Voice {
+			\voiceOne
+			\grace s8
+			% Supress the upper tuplet information. It just gets in the way of the ottava.
+			\omit TupletBracket \omit TupletNumber
+			\repeat unfold 2 { \tuplet 5/4 { <fis fis'>4 <g g'> \ottava #1 <cis cis'> <d d'> <gis gis'> \ottava #0 } }
+			\undo \omit TupletBracket \undo \omit TupletNumber
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { \tuplet 5/4 { fis,, g cis d gis } }
+		}
+	>>
+	\time 3/4
+	% QUESTION: These have to be tuples for the rhythm to work, but not printed as such. Added.
+	\omit TupletBracket
+	\change Staff = "solo_lower" \clef treble \tuplet 6/4 { r32 <cis,, fis a c>[ \change Staff = "solo_upper" fis' cis' fis g] } fis8
+	\change Staff = "solo_lower" \clef treble \tuplet 6/4 { r32 <cis, fis a c>[ \change Staff = "solo_upper" \ottava #1 fis' cis' fis g] } fis8
+	\undo \omit TupletBracket
+	\ottava #0 r4
+	R2.
+	\bar "|."
 }
 
 solo_dynamics_I = {
@@ -1332,6 +1395,16 @@ solo_dynamics_I = {
 	s2*6
 	% mm. 297-300
 	s2*2 s2-\ff s2-\markup { \italic {rit.} }
+	% mm. 301-303 - Rehersal 34
+	s2.*3
+	% mm. 304-308 - Rehersal 35
+	s1 s4 s1 s4 s8 s1 s4 s1 s4 s1 s4
+	% mm. 309-315 - Rehersal 36
+	s1*4 s1*2 s2
+	% mm. 316-327 - Rehersal 37
+	s2*12
+	% mm. 328-331
+	s1*2 s2.\pp s2.
 }
 
 solo_lower_I = \relative c, {
@@ -2175,4 +2248,30 @@ solo_lower_I = \relative c, {
 	\time 4/8
 	\tuplet 3/2 { <e c' e>[ <f bes' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f bes' f> <e c' e>]
 		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a f' a> <bes gis' bes> <cis a' cis>] }
+	% mm. 316-327 - Rehersal 37
+	\time 2/4
+	% QUESTION: PR missing transition to bass clef. It's pretty obvious it should be there, and it's in the full score.
+	\clef bass
+	\repeat unfold 4 {
+		\tuplet 3/2 { fis,,,4 <cis' a> \clef treble <cis' fis> }
+		\tuplet 3/2 { <a' c des> <cis, fis> \clef bass <cis, a'> }
+		<<
+			\new Voice {
+				\voiceOne
+				a4. g8
+			}
+			\new Voice {
+				\voiceTwo
+				a8[ e' c' g,]
+			}
+		>>
+	}
+	% mm. 328-331
+	\time 4/4
+	% QUESTION: PR missing tied notse in 329 (they're in the full score)
+	\slashedGrace <fis cis'> <fis cis'>1~
+	<fis cis'>
+	\time 3/4
+	s2 r4 R2.
+	\bar "|."
 }
