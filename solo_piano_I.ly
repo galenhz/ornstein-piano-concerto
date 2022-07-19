@@ -1180,6 +1180,40 @@ solo_upper_I = \relative c' {
 	\stemUp r8 <e,, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
 	\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
 	\change Staff = "solo_lower" <e,, a>[ bes' \change Staff = "solo_upper" des ees ges aes bes cis ees aes]
+	% mm. 309-316 - Rehersal 36
+	\time 4/4
+	\mark #36
+	<<
+		\new Voice {
+			\voiceOne
+			\ottava #1
+			f'8[ e~ e16 ees d f] d8 des4 c8
+			\ottava #0
+			b8 c4 des8~ des d ees e
+			\ottava #1
+			f8[ e~ e16 ees d f] d8 des4 c8
+			\ottava #0
+			fis8 f~ f16 e ees fis ees8 f g a
+		}
+		\new Voice {
+			\voiceTwo
+			c,8 b4 bes8 \tuplet 3/2 { bes[ a aes] } \tuplet 3/2 { g[ ges f] }
+			fis8 f~ f16 e ees fis d8 des4 c8
+			c'8 b4 bes8 \tuplet 3/2 { bes[ a aes] } \tuplet 3/2 { g[ ges f] }
+			\tuplet 3/2 { c'8 b bes } c16 cis c bes <d, g c>8 <e a d> <g b ees> <a cis f>
+		}
+	>>
+	\time 8/8
+	\tempo "Meno"
+	\ottava #1
+	<b g' b>8[ <bes ges' bes>~ <bes ges' bes> \slashedGrace <a f' a> \tuplet 3/2 { <a f' a>16 <aes fes' aes> <b g' b>] }
+		<aes fes' aes>4. \tuplet 3/2 { <b g' b>16 <c aes' c> <cis a' cis> }
+	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \set stemRightBeamCount = #1 <g ees' g> \set stemLeftBeamCount = #1 <ges eeses' ges> <f des' f>]
+		\tuplet 3/2 { <e c' e>[ <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>]~ <e c' e>[ \set stemRightBeamCount = #1 <ees ces' ees> \tuplet 3/2 { \set stemLeftBeamCount = #1 <d bes' d> <b g' b> <d bes' d>] }
+	\time 4/8
+	\tuplet 3/2 { <e c' e>[ <f bes' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f bes' f> <e c' e>]
+		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a f' a> <bes gis' bes> <cis a' cis>] }
+	\ottava #0
 }
 
 solo_dynamics_I = {
@@ -2123,4 +2157,22 @@ solo_lower_I = \relative c, {
 	\clef bass r8 e,,[ fis b c \change Staff = "solo_upper" e fis g b c] \change Staff = "solo_lower"
 	\stemDown <e,,, a d>2~ <e a d>8 \stemNeutral <b e a>4 <a d g>~ <a d g>8
 	\stemDown <e' a d>4~ <e a d>8 \stemNeutral <c f bes>2 <bes ees aes>4~ <bes ees aes>8
+	% mm. 309-316 - Rehersal 36
+	\time 4/4
+	% FIXME: Perhaps regularize the clef transitions instead of mimicing PR? Same question as mm. 21-23.
+	% QUESTION: Also, are the opening Ds in measure 310 wrong? Should they be Bs?
+	<b, b'>16 f'''[ b ees \clef treble f fis b ees] f[ ees b fis f ees \clef bass b fis]
+	<d, d'> f'[ b \clef treble ees f fis b ees] f[ ees b fis f ees \clef bass b fis]
+	<b,, b'> f''[ b \clef treble ees f fis b ees] f[ ees b fis f ees \clef bass b fis]
+	\tuplet 15/8 { <aes,, aes'> d'[ aes' ees' d, aes' \clef treble ees' d aes' ees' aes, d, ees \clef bass aes, d,] }
+		\tuplet 3/2 { r8 \clef treble <b' ees g b>[ <ees, ees'>] } <fis' a c fis> <g b ees g>
+	\time 8/8
+	% Straightforward clone of the right hand.
+	<b, g' b>8[ <bes ges' bes>~ <bes ges' bes> \slashedGrace <a f' a> \tuplet 3/2 { <a f' a>16 <aes fes' aes> <b g' b>] }
+		<aes fes' aes>4. \tuplet 3/2 { <b g' b>16 <c aes' c> <cis a' cis> }
+	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \set stemRightBeamCount = #1 <g ees' g> \set stemLeftBeamCount = #1 <ges eeses' ges> <f des' f>]
+		\tuplet 3/2 { <e c' e>[ <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>]~ <e c' e>[ \set stemRightBeamCount = #1 <ees ces' ees> \tuplet 3/2 { \set stemLeftBeamCount = #1 <d bes' d> <b g' b> <d bes' d>] }
+	\time 4/8
+	\tuplet 3/2 { <e c' e>[ <f bes' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f bes' f> <e c' e>]
+		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a f' a> <bes gis' bes> <cis a' cis>] }
 }
