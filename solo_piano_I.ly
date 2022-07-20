@@ -91,12 +91,12 @@ solo_upper_I = \relative c' {
 	\ottava #1
 	<b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
 		<d bes' d> <des beses' des>  <c aes' c>
-		\tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>~
-		<e c' e> \set stemRightBeamCount = #1 <ees ces' ees> \set stemLeftBeamCount = #1 \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
+		\tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>~
+		<e c' e> \beamCutR <ees ces' ees> \beamCutL \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
 	% m. 27
 	\time 2/4
-	\tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>
-		\tuplet 3/2 { <g ees' g> <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \set stemLeftBeamCount = #1 \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
+	\tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>
+		\tuplet 3/2 { <g ees' g> <gis e' gis> \beamCutR <b g' b> } \beamCutL \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
 	% m. 28
 	%% Fixed: position of hand markup needs to be adjusted
 	\tempo "Allegro"
@@ -136,9 +136,9 @@ solo_upper_I = \relative c' {
 	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
 	% m. 43
 	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
-		<cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes>
+		<cis gis' cis> \beamCutR <bes f' bes>
 	% m .44
-	\set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e' a> <fis cis' fis>] r8 <d a' d>[ <ees bes' ees> <d a' d>
+	\beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e' a> <fis cis' fis>] r8 <d a' d>[ <ees bes' ees> <d a' d>
 	% m. 45
 	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] <a e' a>[ <bes f' bes>
 	% m. 46
@@ -148,7 +148,7 @@ solo_upper_I = \relative c' {
 	% m. 48
 	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
 	% m. 49
-	r16 <bes f' bes>[ \set stemLeftBeamCount = #1 <cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes> \set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e'a> <fis cis' fis>]
+	r16 <bes f' bes>[ \beamCutL <cis gis' cis> \beamCutR <bes f' bes> \beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e'a> <fis cis' fis>]
 		<a e' a>8[ <e' b' e>
 	% m. 50
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
@@ -178,10 +178,10 @@ solo_upper_I = \relative c' {
 	\time 4/4
 	\tempo "Meno mosso"
 	\repeat unfold 2 {
-		\ottava #1 r16 <a'' cis>[ <g bes> \set stemRightBeamCount = #1 <fis bes> \set stemLeftBeamCount = #1 <cis g'> <c fis> <bes cis> \ottava #0
-			\set stemRightBeamCount = #1 <a cis> \set stemLeftBeamCount = #1 <g bes> <fis bes> <cis g'> \set stemRightBeamCount = #1 <c fis> \set stemLeftBeamCount = #1 <bes cis> <a cis> <g bes>8]
-		\ottava #1 r16 <c'' fis>[ <bes cis> \set stemRightBeamCount = #1 <a cis> \set stemLeftBeamCount = #1 <g bes> <fis bes> <cis g'> \set stemRightBeamCount = #1 <c fis>
-			\ottava #0 \set stemLeftBeamCount = #1 <bes cis> <a cis> <g bes> \set stemRightBeamCount = #1 <fis bes> \set stemLeftBeamCount = #1 <cis g'> <c fis> <bes cis>8]
+		\ottava #1 r16 <a'' cis>[ <g bes> \beamCutR <fis bes> \beamCutL <cis g'> <c fis> <bes cis> \ottava #0
+			\beamCutR <a cis> \beamCutL <g bes> <fis bes> <cis g'> \beamCutR <c fis> \beamCutL <bes cis> <a cis> <g bes>8]
+		\ottava #1 r16 <c'' fis>[ <bes cis> \beamCutR <a cis> \beamCutL <g bes> <fis bes> <cis g'> \beamCutR <c fis>
+			\ottava #0 \beamCutL <bes cis> <a cis> <g bes> \beamCutR <fis bes> \beamCutL <cis g'> <c fis> <bes cis>8]
 	}
 	% mm. 59-62
 	% QUESTION: Same thing between 60 and 62.
@@ -225,7 +225,7 @@ solo_upper_I = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
-			\repeat unfold 2 { \tuplet 3/2 { cis'16 c a } c8~ c16 \set stemRightBeamCount = #1 b~ \set stemLeftBeamCount = #1 b32 bes a c
+			\repeat unfold 2 { \tuplet 3/2 { cis'16 c a } c8~ c16 \beamCutR b~ \beamCutL b32 bes a c
 				\tuplet 3/2 { a16 gis f } gis8~ gis16 a8 bes16 }
 			\repeat unfold 2 { fis8 f4 e8 }
 		}
@@ -747,27 +747,27 @@ solo_upper_I = \relative c' {
 	% mm. 188-193
 	\tempo "Meno mosso; fluido"
 	\time 4/4
-	\tuplet 3/2 { r16 f, \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <e f> f b }
-		\tuplet 3/2 { <e f> b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 <e f> b f~ }
-	\repeat unfold 2 { \tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <e f> f b }
-		\tuplet 3/2 { <e f> b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 <e f> b f~ } }
-	\tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <e f> f b }
-		\tuplet 3/2 { <e f> b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 <e f> b f }
-	\tuplet 3/2 { r16 cis' \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 <bis cis> cis fis }
-		\tuplet 3/2 { <bis cis> fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 <bis cis> fis cis~ }
-	\repeat unfold 2 { \tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 <bis cis> cis fis  }
-		\tuplet 3/2 { <bis cis> fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 <bis cis> fis cis~ } }
-	\tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 <bis cis> cis fis }
-		\tuplet 3/2 { <bis cis> fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 <bis cis> fis cis }
-	\tuplet 3/2 { r16 fisis \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 <fis g> fisis cis' }
-		\tuplet 3/2 { <fis g> cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 <fis g> cis fisis,~ }
-	\tuplet 3/2 { fisis fisis \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 <fis g> fisis cis' }
-		\tuplet 3/2 { <fis g> cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 <fis g> cis fisis, }
+	\tuplet 3/2 { r16 f, \beamCutR b \beamCutL <e f> f b }
+		\tuplet 3/2 { <e f> b \beamCutR f \beamCutL <e f> b f~ }
+	\repeat unfold 2 { \tuplet 3/2 { f f \beamCutR b \beamCutL <e f> f b }
+		\tuplet 3/2 { <e f> b \beamCutR f \beamCutL <e f> b f~ } }
+	\tuplet 3/2 { f f \beamCutR b \beamCutL <e f> f b }
+		\tuplet 3/2 { <e f> b \beamCutR f \beamCutL <e f> b f }
+	\tuplet 3/2 { r16 cis' \beamCutR fis \beamCutL <bis cis> cis fis }
+		\tuplet 3/2 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis~ }
+	\repeat unfold 2 { \tuplet 3/2 { cis cis \beamCutR fis \beamCutL <bis cis> cis fis  }
+		\tuplet 3/2 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis~ } }
+	\tuplet 3/2 { cis cis \beamCutR fis \beamCutL <bis cis> cis fis }
+		\tuplet 3/2 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis }
+	\tuplet 3/2 { r16 fisis \beamCutR cis' \beamCutL <fis g> fisis cis' }
+		\tuplet 3/2 { <fis g> cis \beamCutR fisis, \beamCutL <fis g> cis fisis,~ }
+	\tuplet 3/2 { fisis fisis \beamCutR cis' \beamCutL <fis g> fisis cis' }
+		\tuplet 3/2 { <fis g> cis \beamCutR fisis, \beamCutL <fis g> cis fisis, }
 	% FIXME: Don't like the layout for the "des d" cluster. Can I get lilypond to do a split end like the PR?
-	\tuplet 3/2 { r16 d \set stemRightBeamCount = #1 aes' \set stemLeftBeamCount = #1 <des d> d aes' }
-		\tuplet 3/2 { <des d> aes \set stemRightBeamCount = #1 d, \set stemLeftBeamCount = #1 <des d> aes d, }
-	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 <bes' ces> b e }
-		\tuplet 3/2 { <bes' ces> e, \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 <bes ces> e, b }
+	\tuplet 3/2 { r16 d \beamCutR aes' \beamCutL <des d> d aes' }
+		\tuplet 3/2 { <des d> aes \beamCutR d, \beamCutL <des d> aes d, }
+	\tuplet 3/2 { r16 b \beamCutR e \beamCutL <bes' ces> b e }
+		\tuplet 3/2 { <bes' ces> e, \beamCutR b \beamCutL <bes ces> e, b }
 	% mm. 194-201 - Rehersal 19
 	% WORKAROUND: Add silent grace notes to four bars to match the piano reduction.
 	\mark #19
@@ -807,9 +807,9 @@ solo_upper_I = \relative c' {
 			<c e>2.
 		}
 	>>
-	r16 <f bes cis e f>16[ \tuplet 3/2 { \set stemLeftBeamCount = #1 <fis fis'> <a a'> \set stemRightBeamCount = #1 <bis bis'> }
-		\set stemLeftBeamCount = #1 <a a'> \set stemRightBeamCount = #1 <fis fis'> \set stemLeftBeamCount = #1 <f f'> \set stemRightBeamCount = #1 <d d'>
-		\set stemLeftBeamCount = #1 <f f'> <fis fis'> <a a'>8]
+	r16 <f bes cis e f>16[ \tuplet 3/2 { \beamCutL <fis fis'> <a a'> \beamCutR <bis bis'> }
+		\beamCutL <a a'> \beamCutR <fis fis'> \beamCutL <f f'> \beamCutR <d d'>
+		\beamCutL <f f'> <fis fis'> <a a'>8]
 	% mm. 202-207 - Rehersal 20
 	\tempo "Andantino (meno)"
 	\mark #20
@@ -984,12 +984,12 @@ solo_upper_I = \relative c' {
 	<b, e g b>8 <bes bes'> \tuplet 3/2 { <a a'>16( <gis gis'> <b b'>) } <gis cis eis gis>4.~
 	<gis cis eis gis>4.~ <gis cis eis gis>8~ <gis cis eis gis>16 <a a'> <ais ais'> <b b'>
 	<c f a c>8 <b b'> \tuplet 3/2 { <bes bes'>16( <a a'> <c c'>) } <a des f a>4.~
-	<a des f a>4.~ <a des f a>8~ <a des f a>16 \set stemRightBeamCount = #1 <ais ais'> \set stemLeftBeamCount = #1 <b b'> <c c'>
+	<a des f a>4.~ <a des f a>8~ <a des f a>16 \beamCutR <ais ais'> \beamCutL <b b'> <c c'>
 	% mm. 248-252 - Rehersal 27
 	% QUESTION: I think the ottava ends one beat too early. Makes it too wierd to play as written.
 	\mark #27
 	<cis f a cis>8 <c c'> \tuplet 3/2 { <b b'>16 <bes bes'> <d d'> } <a des f a> <aes aes'>8 <g g'> <fis fis'>16 \ottava #0
-	<f b des f>8 <e e'> \tuplet 3/2 { <ees ees'>16 <d d'> <fis fis'> } \tuplet 3/2 { <cis f a cis> <c c'> \set stemRightBeamCount = #1 <g' g'> } \set stemLeftBeamCount = #1 <b, b'> \set stemRightBeamCount = #1 <bes bes'> \set stemLeftBeamCount = #1 <a a'> <aes aes'>
+	<f b des f>8 <e e'> \tuplet 3/2 { <ees ees'>16 <d d'> <fis fis'> } \tuplet 3/2 { <cis f a cis> <c c'> \beamCutR <g' g'> } \beamCutL <b, b'> \beamCutR <bes bes'> \beamCutL <a a'> <aes aes'>
 	r16 <g g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \ottava #1 r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'> \ottava #0
 	r16 <g,, g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \ottava #1 r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
 	\time 3/8
@@ -1025,15 +1025,15 @@ solo_upper_I = \relative c' {
 		\tuplet 3/2 { <a, a'>[ <ees' ees'> r32 <f f'>] } \tuplet 3/2 { <f f'>16 <ees ees'> <bes d fis> }
 	\time 9/8
 	<d fis bes>8[ <d fis b> <d fis cis'>8. <d fis cis'>16]
-		<d fis e'>8[ <d fis d'>16 \set stemRightBeamCount = #1 <d fis cis'> \set stemLeftBeamCount = #1 <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
+		<d fis e'>8[ <d fis d'>16 \beamCutR <d fis cis'> \beamCutL <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
 	\time 6/8
-	<d fis bes>16[ \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8] <d fis e'>[ <d fis d'>16 <d fis cis'> <d fis b>8]
+	<d fis bes>16[ \beamCutR <d fis g> \beamCutL <d fis bes> <d fis b> <d fis cis'>8] <d fis e'>[ <d fis d'>16 <d fis cis'> <d fis b>8]
 	\time 9/8
 	% QUESTION: PR has f natural on the 8th beat of this measure. Pretty sure repition from last measture shows it should be f#.
-	<d fis bes>16[ \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8. <d fis cis'>16]
-		<d fis e'>8[ <d fis d'>16 \set stemRightBeamCount = #1 <d fis cis'> \set stemLeftBeamCount = #1 <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
+	<d fis bes>16[ \beamCutR <d fis g> \beamCutL <d fis bes> <d fis b> <d fis cis'>8. <d fis cis'>16]
+		<d fis e'>8[ <d fis d'>16 \beamCutR <d fis cis'> \beamCutL <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
 	\time 4/8
-	<d fis bes> \set stemRightBeamCount = #1 <d fis g> \set stemLeftBeamCount = #1 <d fis bes> <d fis b> <d fis cis'>8 <d fis e'>16 <d fis cis'>
+	<d fis bes> \beamCutR <d fis g> \beamCutL <d fis bes> <d fis b> <d fis cis'>8 <d fis e'>16 <d fis cis'>
 	% mm. 272-280 - Rehersal 30
 	\mark #30
 	\time 6/8
@@ -1140,7 +1140,7 @@ solo_upper_I = \relative c' {
 	}
 	\repeat unfold 2 {
 		\tuplet 3/2 { <aes aes'>16[ <g g'> r32 <fis fis'> } \tuplet 3/2 { <fis fis'>8 <fis fis'>16]~ }
-			\tuplet 3/2 { <fis fis'> <e e'> \set stemRightBeamCount = #1 <des des'> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <des des'> <c c'> <a a'> }
+			\tuplet 3/2 { <fis fis'> <e e'> \beamCutR <des des'> } \tuplet 3/2 { \beamCutL <des des'> <c c'> <a a'> }
 	}
 	% mm. 297-300
 	\tempo "Stretto"
@@ -1208,11 +1208,11 @@ solo_upper_I = \relative c' {
 	\ottava #1
 	<b g' b>8[ <bes ges' bes>~ <bes ges' bes> \slashedGrace <a f' a> \tuplet 3/2 { <a f' a>16 <aes fes' aes> <b g' b>] }
 		<aes fes' aes>4. \tuplet 3/2 { <b g' b>16 <c aes' c> <cis a' cis> }
-	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \set stemRightBeamCount = #1 <g ees' g> \set stemLeftBeamCount = #1 <ges eeses' ges> <f des' f>]
-		\tuplet 3/2 { <e c' e>[ <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>]~ <e c' e>[ \set stemRightBeamCount = #1 <ees ces' ees> \tuplet 3/2 { \set stemLeftBeamCount = #1 <d bes' d> <b g' b> <d bes' d>] }
+	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \beamCutR <g ees' g> \beamCutL <ges eeses' ges> <f des' f>]
+		\tuplet 3/2 { <e c' e>[ <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>]~ <e c' e>[ \beamCutR <ees ces' ees> \tuplet 3/2 { \beamCutL <d bes' d> <b g' b> <d bes' d>] }
 	\time 4/8
-	\tuplet 3/2 { <e c' e>[ <f bes' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f bes' f> <e c' e>]
-		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a f' a> <bes gis' bes> <cis a' cis>] }
+	\tuplet 3/2 { <e c' e>[ <f bes' f> \beamCutR <gis e' gis> } \beamCutL <f bes' f> <e c' e>]
+		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \beamCutR <b g' b> } \tuplet 3/2 { \beamCutL <a f' a> <bes gis' bes> <cis a' cis>] }
 	\ottava #0
 	% mm. 316-327 - Rehersal 37
 	\mark #37
@@ -1524,12 +1524,12 @@ solo_lower_I = \relative c, {
 		<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
 	\clef treble <b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
 		<d bes' d> <des beses' des>  <c aes' c>
-		\tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>~
-		<e c' e> \set stemRightBeamCount = #1 <ees ces' ees> \set stemLeftBeamCount = #1 \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
+		\tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>~
+		<e c' e> \beamCutR <ees ces' ees> \beamCutL \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
 	% m. 27
 	\time 2/4
-        \tuplet 3/2 { <e c' e> <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount= #1 <f des' f> <e c' e>
-		\tuplet 3/2 { <g ees' g> <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \set stemLeftBeamCount = #1 \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
+        \tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \set stemLeftBeamCount= #1 <f des' f> <e c' e>
+		\tuplet 3/2 { <g ees' g> <gis e' gis> \beamCutR <b g' b> } \beamCutL \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
 	% m. 28
 	\time 3/4
 	s2.
@@ -1564,9 +1564,9 @@ solo_lower_I = \relative c, {
 	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
 	% m. 43
 	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
-		<cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes>
+		<cis gis' cis> \beamCutR <bes f' bes>
 	% m .44
-	\set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e' a> <fis cis' fis>] r8 \clef bass <d a' d>[ <ees bes' ees> <d a' d>
+	\beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e' a> <fis cis' fis>] r8 \clef bass <d a' d>[ <ees bes' ees> <d a' d>
 	% m. 45
 	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] \clef treble <a e' a>[ <bes f' bes>
 	% m. 46
@@ -1576,7 +1576,7 @@ solo_lower_I = \relative c, {
 	% m. 48
 	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
 	% m. 49
-	r16 <bes f' bes>[ \set stemLeftBeamCount = #1 <cis gis' cis> \set stemRightBeamCount = #1 <bes f' bes> \set stemLeftBeamCount = #1 <a e' a> \set stemRightBeamCount = #1 <fis cis' fis> \set stemLeftBeamCount = #1 <a e'a> <fis cis' fis>]
+	r16 <bes f' bes>[ \beamCutL <cis gis' cis> \beamCutR <bes f' bes> \beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e'a> <fis cis' fis>]
 		<a e' a>8[ <e' b' e>
 	% m. 50
 	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
@@ -1668,8 +1668,8 @@ solo_lower_I = \relative c, {
 			\voiceOne
 			\repeat unfold 2 { a'4 aes8 g fis4 \tuplet 3/2 { f8 e g } }
 			\clef bass
-			\tuplet 3/2 { ees16 d bes } des8~ des16 \set stemRightBeamCount = #1 c \set stemLeftBeamCount = #1 a c
-			\tuplet 3/2 { ees16 d bes } des8~ des16 \set stemRightBeamCount = #1 c \set stemLeftBeamCount = #1 \tuplet 3/2 { a c cis }
+			\tuplet 3/2 { ees16 d bes } des8~ des16 \beamCutR c \beamCutL a c
+			\tuplet 3/2 { ees16 d bes } des8~ des16 \beamCutR c \beamCutL \tuplet 3/2 { a c cis }
 		}
 		\new Voice {
 			\voiceTwo
@@ -1967,26 +1967,26 @@ solo_lower_I = \relative c, {
 	% QUESTION: This is just a (near) copy of the right-hand part, but with some inconsistent clef changes. Should I
 	%           bother trying to mimic the PR? For now I'll do the clef changes in 192/3, but not the inconsistant one in 190.
 	\time 4/4
-	\tuplet 3/2 { r16 f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 e f b }
-		\tuplet 3/2 { e b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 e b f~ }
-	\repeat unfold 2 { \tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 e f b }
-		\tuplet 3/2 { e b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 e b f~ } }
-	\tuplet 3/2 { f f \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 e f b }
-		\tuplet 3/2 { e b \set stemRightBeamCount = #1 f \set stemLeftBeamCount = #1 e b f }
-	\tuplet 3/2 { r16 cis' \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 bis cis fis }
-		\tuplet 3/2 { bis fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 bis fis cis~ }
-	\repeat unfold 2 { \tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 bis cis fis  }
-		\tuplet 3/2 { bis fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 bis fis cis~ } }
-	\tuplet 3/2 { cis cis \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 bis cis fis }
-		\tuplet 3/2 { bis fis \set stemRightBeamCount = #1 cis \set stemLeftBeamCount = #1 bis fis cis }
-	\tuplet 3/2 { r16 fisis \clef treble \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 fis fisis cis' }
-		\tuplet 3/2 { fis cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 fis cis \clef bass fisis,~ }
-	\tuplet 3/2 { fisis fisis \clef treble \set stemRightBeamCount = #1 cis' \set stemLeftBeamCount = #1 fis fisis cis' }
-		\tuplet 3/2 { fis cis \set stemRightBeamCount = #1 fisis, \set stemLeftBeamCount = #1 fis cis \clef bass fisis, }
-	\tuplet 3/2 { r16 d \set stemRightBeamCount = #1 aes' \clef treble \set stemLeftBeamCount = #1 des d aes' }
-		\tuplet 3/2 { des aes \set stemRightBeamCount = #1 d, \set stemLeftBeamCount = #1 des \clef bass aes d, }
-	\tuplet 3/2 { r16 b \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 bes' b \clef treble e }
-		\tuplet 3/2 { bes' e, \clef bass \set stemRightBeamCount = #1 b \set stemLeftBeamCount = #1 bes e, b }
+	\tuplet 3/2 { r16 f \beamCutR b \beamCutL e f b }
+		\tuplet 3/2 { e b \beamCutR f \beamCutL e b f~ }
+	\repeat unfold 2 { \tuplet 3/2 { f f \beamCutR b \beamCutL e f b }
+		\tuplet 3/2 { e b \beamCutR f \beamCutL e b f~ } }
+	\tuplet 3/2 { f f \beamCutR b \beamCutL e f b }
+		\tuplet 3/2 { e b \beamCutR f \beamCutL e b f }
+	\tuplet 3/2 { r16 cis' \beamCutR fis \beamCutL bis cis fis }
+		\tuplet 3/2 { bis fis \beamCutR cis \beamCutL bis fis cis~ }
+	\repeat unfold 2 { \tuplet 3/2 { cis cis \beamCutR fis \beamCutL bis cis fis  }
+		\tuplet 3/2 { bis fis \beamCutR cis \beamCutL bis fis cis~ } }
+	\tuplet 3/2 { cis cis \beamCutR fis \beamCutL bis cis fis }
+		\tuplet 3/2 { bis fis \beamCutR cis \beamCutL bis fis cis }
+	\tuplet 3/2 { r16 fisis \clef treble \beamCutR cis' \beamCutL fis fisis cis' }
+		\tuplet 3/2 { fis cis \beamCutR fisis, \beamCutL fis cis \clef bass fisis,~ }
+	\tuplet 3/2 { fisis fisis \clef treble \beamCutR cis' \beamCutL fis fisis cis' }
+		\tuplet 3/2 { fis cis \beamCutR fisis, \beamCutL fis cis \clef bass fisis, }
+	\tuplet 3/2 { r16 d \beamCutR aes' \clef treble \beamCutL des d aes' }
+		\tuplet 3/2 { des aes \beamCutR d, \beamCutL des \clef bass aes d, }
+	\tuplet 3/2 { r16 b \beamCutR e \beamCutL bes' b \clef treble e }
+		\tuplet 3/2 { bes' e, \clef bass \beamCutR b \beamCutL bes e, b }
 	% mm. 194-201 - Rehersal 19
 	% WORKAROUND: Add silent grace notes to four bars to match the piano reduction.
 	\time 6/8
@@ -2016,8 +2016,8 @@ solo_lower_I = \relative c, {
 	<cis, gis' cis>8 r8 r8 r4.
 	e16 b' gis' gis d' bes e d bes gis gis d
 	\tuplet 3/2 { r16 ees,[ a] } \tuplet 3/2 { ees'[ a, ees'] }
-		\tuplet 3/2 { a[ ees \set stemRightBeamCount = #1 a } \tuplet 3/2 { \set stemLeftBeamCount = #1 ees' a, \set stemRightBeamCount = #1 ees' }
-		\tuplet 3/2 { \set stemLeftBeamCount = #1 a ees \set stemRightBeamCount = #1 a, } \tuplet 3/2 { \set stemLeftBeamCount = #1 ees' a, ees] }
+		\tuplet 3/2 { a[ ees \beamCutR a } \tuplet 3/2 { \beamCutL ees' a, \beamCutR ees' }
+		\tuplet 3/2 { \beamCutL a ees \beamCutR a, } \tuplet 3/2 { \beamCutL ees' a, ees] }
 	% mm. 202-207 - Rehersal 20
 	\clef treble
 	<<
@@ -2025,7 +2025,7 @@ solo_lower_I = \relative c, {
 			\voiceOne
 			g'4 fis8~ fis8. g16 \tuplet 3/2 { fis f d }
 			f4.~ f8 fis g
-			a4 gis8~ gis16 \set stemRightBeamCount = #1 a \set stemLeftBeamCount = #1 ais \set stemRightBeamCount = #1 g \tuplet 3/2 { \set stemLeftBeamCount = #1 fis f d }
+			a4 gis8~ gis16 \beamCutR a \beamCutL ais \beamCutR g \tuplet 3/2 { \beamCutL fis f d }
 			f4.~ f16 fis f8 d16 cis
 		}
 		\new Voice {
@@ -2099,10 +2099,10 @@ solo_lower_I = \relative c, {
 	<b, e g b>8 <bes bes'> \tuplet 3/2 { <a a'>16( <gis gis'> <b b'>) } <gis cis eis gis>4.~
 	<gis cis eis gis>4.~ <gis cis eis gis>8~ <gis cis eis gis>16 <a a'> <ais ais'> <b b'>
 	<c f a c>8 <b b'> \tuplet 3/2 { <bes bes'>16( <a a'> <c c'>) } <a des f a>4.~
-	<a des f a>4.~ <a des f a>8~ <a des f a>16 \set stemRightBeamCount = #1 <ais ais'> \set stemLeftBeamCount = #1 <b b'> <c c'>
+	<a des f a>4.~ <a des f a>8~ <a des f a>16 \beamCutR <ais ais'> \beamCutL <b b'> <c c'>
 	% mm. 248-252 - Rehersal 27
 	<cis f a cis>8 <c c'> \tuplet 3/2 { <b b'>16 <bes bes'> <d d'> } <a des f a> <aes aes'>8 <g g'> <fis fis'>16 \clef bass
-	<f b des f>8 <e e'> \tuplet 3/2 { <ees ees'>16 <d d'> <fis fis'> } \tuplet 3/2 { <cis f a cis> <c c'> \set stemRightBeamCount = #1 <g' g'> } \set stemLeftBeamCount = #1 <b, b'> \set stemRightBeamCount = #1 <bes bes'> \set stemLeftBeamCount = #1 <a a'> <aes aes'>
+	<f b des f>8 <e e'> \tuplet 3/2 { <ees ees'>16 <d d'> <fis fis'> } \tuplet 3/2 { <cis f a cis> <c c'> \beamCutR <g' g'> } \beamCutL <b, b'> \beamCutR <bes bes'> \beamCutL <a a'> <aes aes'>
 	r16 <g g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \clef treble r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'> \clef bass
 	r16 <g,, g'> <bes bes'> <ees ees'> <fis fis'> <a a'> \clef treble r16 <g g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
 	\time 3/8
@@ -2112,14 +2112,14 @@ solo_lower_I = \relative c, {
 	\clef bass
 	\time 6/8
 	% QUESTION: 16ths in PR but really should be 32nds
-	\repeat unfold 16 { \tuplet 5/4 { c,,,32[ fis c' fis, \set stemRightBeamCount = #1 c' } \tuplet 5/4 { \set stemLeftBeamCount = #1 fis c fis, c' fis,] } }
+	\repeat unfold 16 { \tuplet 5/4 { c,,,32[ fis c' fis, \beamCutR c' } \tuplet 5/4 { \beamCutL fis c fis, c' fis,] } }
 	% mm. 265-271 - Rehersal 29
-	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \set stemRightBeamCount = #1 ees'  } \tuplet 5/4 { \set stemLeftBeamCount = #1 a ees a, ees' a,] } }
+	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
 	\time 5/8
-	\repeat unfold 2 { \tuplet 5/4 { a,32[ ees' a ees \set stemRightBeamCount = #1 a } \tuplet 5/4 { \set stemLeftBeamCount = #1 ees' a, ees a ees] } }
+	\repeat unfold 2 { \tuplet 5/4 { a,32[ ees' a ees \beamCutR a } \tuplet 5/4 { \beamCutL ees' a, ees a ees] } }
 		\tuplet 5/4 { a,[ ees' a ees a] }
 	\time 6/8
-	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \set stemRightBeamCount = #1 ees'  } \tuplet 5/4 { \set stemLeftBeamCount = #1 a ees a, ees' a,] } }
+	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
 	\time 9/8
 	\override Beam.breakable = ##t
 	% FIXME: Workaround for what seems to be a lilypond bug. Having voices here causes m. 270 to be run off the page. Score is now incorrect.
@@ -2243,11 +2243,11 @@ solo_lower_I = \relative c, {
 	% Straightforward clone of the right hand.
 	<b, g' b>8[ <bes ges' bes>~ <bes ges' bes> \slashedGrace <a f' a> \tuplet 3/2 { <a f' a>16 <aes fes' aes> <b g' b>] }
 		<aes fes' aes>4. \tuplet 3/2 { <b g' b>16 <c aes' c> <cis a' cis> }
-	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \set stemRightBeamCount = #1 <g ees' g> \set stemLeftBeamCount = #1 <ges eeses' ges> <f des' f>]
-		\tuplet 3/2 { <e c' e>[ <f des' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f des' f> <e c' e>]~ <e c' e>[ \set stemRightBeamCount = #1 <ees ces' ees> \tuplet 3/2 { \set stemLeftBeamCount = #1 <d bes' d> <b g' b> <d bes' d>] }
+	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \beamCutR <g ees' g> \beamCutL <ges eeses' ges> <f des' f>]
+		\tuplet 3/2 { <e c' e>[ <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>]~ <e c' e>[ \beamCutR <ees ces' ees> \tuplet 3/2 { \beamCutL <d bes' d> <b g' b> <d bes' d>] }
 	\time 4/8
-	\tuplet 3/2 { <e c' e>[ <f bes' f> \set stemRightBeamCount = #1 <gis e' gis> } \set stemLeftBeamCount = #1 <f bes' f> <e c' e>]
-		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \set stemRightBeamCount = #1 <b g' b> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a f' a> <bes gis' bes> <cis a' cis>] }
+	\tuplet 3/2 { <e c' e>[ <f bes' f> \beamCutR <gis e' gis> } \beamCutL <f bes' f> <e c' e>]
+		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \beamCutR <b g' b> } \tuplet 3/2 { \beamCutL <a f' a> <bes gis' bes> <cis a' cis>] }
 	% mm. 316-327 - Rehersal 37
 	\time 2/4
 	% QUESTION: PR missing transition to bass clef. It's pretty obvious it should be there, and it's in the full score.

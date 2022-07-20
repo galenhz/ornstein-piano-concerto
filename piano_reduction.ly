@@ -2,6 +2,10 @@
 
 \version "2.22.2"
 
+
+beamCutL = { \set stemLeftBeamCount = #1 }
+beamCutR = { \set stemRightBeamCount = #1 }
+
 \include "solo_piano_I.ly"
 \include "orch_redux_I.ly"
 

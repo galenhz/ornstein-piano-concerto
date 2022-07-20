@@ -854,7 +854,7 @@ redux_upper_I = \relative c' {
 			ees''8 d \tuplet 3/2 { des16 c e } b bes a8 aes16 g
 			fis8 f \tuplet 3/2 { e16 ees g } d des c8 b16 bes
 			ees'8 d \tuplet 3/2 { des16 c e } b bes a8 aes16 g
-			fis8[ f e32 d c b] bes[ cis a \set stemRightBeamCount = #1 aes \set stemLeftBeamCount = #1 g fis f \set stemRightBeamCount = #1 e \set stemLeftBeamCount = #1 ees16 d32 des]
+			fis8[ f e32 d c b] bes[ cis a \beamCutR aes \beamCutL g fis f \beamCutR e \beamCutL ees16 d32 des]
 		}
 		\new Voice {
 			\voiceTwo
@@ -880,8 +880,8 @@ redux_upper_I = \relative c' {
 		\new Voice {
 			\voiceTwo
 			\repeat unfold 2 {
-				r4 r8 \tuplet 3/2 { r16 e' \set stemRightBeamCount = #1 f } \tuplet 3/2 { \set stemLeftBeamCount = #1 gis f \set stemRightBeamCount = #1 a } \tuplet 3/2 { \set stemLeftBeamCount = #1 f gis f }
-				\tuplet 3/2 { a f \set stemRightBeamCount = #1 gis } \tuplet 3/2 { \set stemLeftBeamCount = #1 f a \set stemRightBeamCount = #1 f } \tuplet 3/2 { \set stemLeftBeamCount = #1 gis f a } \tuplet 3/2 { f gis f } r8 r8
+				r4 r8 \tuplet 3/2 { r16 e' \beamCutR f } \tuplet 3/2 { \beamCutL gis f \beamCutR a } \tuplet 3/2 { \beamCutL f gis f }
+				\tuplet 3/2 { a f \beamCutR gis } \tuplet 3/2 { \beamCutL f a \beamCutR f } \tuplet 3/2 { \beamCutL gis f a } \tuplet 3/2 { f gis f } r8 r8
 			}
 		}
 	>>
@@ -933,11 +933,11 @@ redux_upper_I = \relative c' {
 	\mark #29
 	\time 6/8
 	\override Beam.breakable = ##t
-	r16 <g, b ees>[ \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees fis> <b ees g> <b ees bes'> } <b ees b'>8 <b ees bes'>16 \set stemRightBeamCount = #1 <b ees g> \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees bes'> <b ees g> <b ees fis>] } r16 <f' a cis>[
+	r16 <g, b ees>[ \tuplet 3/2 { \beamCutL <b ees fis> <b ees g> <b ees bes'> } <b ees b'>8 <b ees bes'>16 \beamCutR <b ees g> \tuplet 3/2 { \beamCutL <b ees bes'> <b ees g> <b ees fis>] } r16 <f' a cis>[
 	\time 5/8
-	\tuplet 3/2 { \set stemLeftBeamCount = #1 <a cis e> <a cis f> <a cis gis'> } <a cis a'>8 <a cis gis'>16 \set stemRightBeamCount = #1 <a cis f> \tuplet 3/2 { \set stemLeftBeamCount = #1 <a cis gis> <a cis f> \set stemRightBeamCount = #1 <a cis e> } \tuplet 3/2 { \set stemLeftBeamCount = #1 <a cis f> <a cis e> <a cis>] }
+	\tuplet 3/2 { \beamCutL <a cis e> <a cis f> <a cis gis'> } <a cis a'>8 <a cis gis'>16 \beamCutR <a cis f> \tuplet 3/2 { \beamCutL <a cis gis> <a cis f> \beamCutR <a cis e> } \tuplet 3/2 { \beamCutL <a cis f> <a cis e> <a cis>] }
 	\time 6/8
-	r16 <g, b ees>[ \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees fis> <b ees g> <b ees bes'> } <b ees b'>8 <b ees bes'>16 \set stemRightBeamCount = #1 <b ees g> \tuplet 3/2 { \set stemLeftBeamCount = #1 <b ees bes'> <b ees g> <b ees fis>] } r8
+	r16 <g, b ees>[ \tuplet 3/2 { \beamCutL <b ees fis> <b ees g> <b ees bes'> } <b ees b'>8 <b ees bes'>16 \beamCutR <b ees g> \tuplet 3/2 { \beamCutL <b ees bes'> <b ees g> <b ees fis>] } r8
 	\time 9/8
 	<<
 		\new Voice {
@@ -957,7 +957,7 @@ redux_upper_I = \relative c' {
 			% FIXME: Have to break barring here because the following 9/8 is being run right off the page. See solo piano lower comment. Can revert to sanity when bug is fixed.
 			<fis fis'>16 <g g'> <a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8] <ees ees'>
 			\time 9/8
-			<fis fis'> <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'> <fis fis'>16[ \set stemRightBeamCount = #1 <ees ees'> \set stemLeftBeamCount = #1 <fis fis'> <g g'>]
+			<fis fis'> <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'> <fis fis'>16[ \beamCutR <ees ees'> \beamCutL <fis fis'> <g g'>]
 			\time 4/8
 			<a a'>8[ <bes bes'> <a a'>16 <g g'> <a a'>8]
 		}
@@ -967,21 +967,21 @@ redux_upper_I = \relative c' {
 	\time 6/8
 	r8 ees[ fis g a8. a16]
 	\time 4/8
-	c8[ bes16 \set stemRightBeamCount = #1 a \set stemLeftBeamCount = #1 bes a g8]
+	c8[ bes16 \beamCutR a \beamCutL bes a g8]
 	\time 6/8
-	a16[ \set stemRightBeamCount = #1 g \set stemLeftBeamCount = #1 fis \set stemRightBeamCount = #1 ees \set stemLeftBeamCount = #1 fis g a8 c bes16 a
+	a16[ \beamCutR g \beamCutL fis \beamCutR ees \beamCutL fis g a8 c bes16 a
 	\time 4/8
 	g8] r8 ees[ fis
 	\time 6/8
-	g a8. a16] c8[ bes16 \set stemRightBeamCount = #1 a \set stemLeftBeamCount = #1 bes a
+	g a8. a16] c8[ bes16 \beamCutR a \beamCutL bes a
 	\time 4/8
-	g8 a16 \set stemRightBeamCount = #1 g \set stemLeftBeamCount = #1 fis \set stemRightBeamCount = #1 ees \set stemLeftBeamCount = #1 fis g
+	g8 a16 \beamCutR g \beamCutL fis \beamCutR ees \beamCutL fis g
 	\time 6/8
 	a8 c bes16 a g8] r8 fis[
 	\time 4/8
 	a bes a16 g fis8]
 	\time 6/8
-	r8 fis[ a g16 \set stemRightBeamCount = #1 fis \set stemLeftBeamCount = #1 g fis ees8]
+	r8 fis[ a g16 \beamCutR fis \beamCutL g fis ees8]
 	\revert Beam.breakable
 	% mm. 281-284 - Rehersal 31
 	\time 4/4
@@ -1664,7 +1664,7 @@ redux_lower_I = \relative c, {
 		<<
 			\new Voice {
 				\voiceOne
-				\repeat unfold 2 { \tuplet 3/2 { r16 ees a, } \tuplet 3/2 { ees'8 \set stemLeftBeamCount = #2 \set stemRightBeamCount = #1 a,16 } \set stemLeftBeamCount = #1 ees' a, }
+				\repeat unfold 2 { \tuplet 3/2 { r16 ees a, } \tuplet 3/2 { ees'8 \set stemLeftBeamCount = #2 \beamCutR a,16 } \beamCutL ees' a, }
 				<aes' f'>8   r8 r8 r4.
 			}
 			\new Voice {
@@ -1815,8 +1815,8 @@ redux_lower_I = \relative c, {
 		\new Voice {
 			\voiceOne
 			\repeat unfold 2 {
-				r4 r8 \tuplet 3/2 { r16 gis \set stemRightBeamCount = #1 cis } \tuplet 3/2 { \set stemLeftBeamCount = #1 e cis \set stemRightBeamCount = #1 e } \tuplet 3/2 { \set stemLeftBeamCount = #1 cis e cis }
-				\tuplet 3/2 { e cis \set stemRightBeamCount = #1 e } \tuplet 3/2 { \set stemLeftBeamCount = #1 cis e \set stemRightBeamCount = #1 cis } \tuplet 3/2 { \set stemLeftBeamCount = #1 e cis e } \tuplet 3/2 { cis e cis } r8 r8
+				r4 r8 \tuplet 3/2 { r16 gis \beamCutR cis } \tuplet 3/2 { \beamCutL e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e cis }
+				\tuplet 3/2 { e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e \beamCutR cis } \tuplet 3/2 { \beamCutL e cis e } \tuplet 3/2 { cis e cis } r8 r8
 			}
 		}
 		\new Voice {
@@ -1898,7 +1898,7 @@ redux_lower_I = \relative c, {
 				\time 6/8
 				r8 ees[ a ees bes'16 a ees8]
 				\time 4/8
-				r16 ees[ \set stemLeftBeamCount = #1 a \set stemRightBeamCount = #1 ees \set stemLeftBeamCount = #1 bes' a ees8]
+				r16 ees[ \beamCutL a \beamCutR ees \beamCutL bes' a ees8]
 			}
 			\time 6/8
 			r8 ees[ a ees bes'16 a ees8]
