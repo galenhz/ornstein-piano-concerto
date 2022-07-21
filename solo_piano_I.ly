@@ -394,23 +394,40 @@ solo_upper_I = \relative c' {
 	\mark #11
 	\time 4/4
 	\tempo "slower"
-	%% SUPER ULTRA FIXME: What a mess. Not only does this not fit vertically, it doesn't
-	%%                    even fit horizontally. This needs massive work!
-	\repeat unfold 6 {
-		\tuplet 18/16 { \change Staff = "solo_lower" d,,64 a' f'
-			\change Staff = "solo_upper" a bes cis d f
-			\change Staff = "solo_lower" f, a bes cis d
-			\change Staff = "solo_upper" f a bes cis d
+	%% WORKAROUND: Too many notes, so we shrink 'em to fit on the page. A better solution may be possible.
+	%%             This magnification factor is (barely) good enough to squeeze one bar per line on
+	%%             US Letter. It's not quite enough for A4.
+	%%             The smarter play might be to combine this with % repeats, which I intentionally haven't
+	%%             been using.
+	\magnifyMusic 0.63 {
+		\repeat unfold 6 {
+			\tuplet 18/16 { \change Staff = "solo_lower" d,,64 a' f'
+				\change Staff = "solo_upper" a bes cis d f
+				\change Staff = "solo_lower" f, a bes cis d
+				\change Staff = "solo_upper" f a bes cis d
+			}
+			\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
+				\change Staff = "solo_upper" d cis bes a f
+				\change Staff = "solo_lower" \clef bass d cis bes a f
+				\change Staff = "solo_upper" f' d cis bes a
+				\change Staff = "solo_lower" f a,
+			}
 		}
-		\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
-			\change Staff = "solo_upper" d cis bes a f
-			\change Staff = "solo_lower" \clef bass d cis bes a f
-			\change Staff = "solo_upper" f' d cis bes a
-			\change Staff = "solo_lower" f a,
+		\repeat unfold 2 {
+			\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
+				\change Staff = "solo_upper" cis f a bes cis
+				\change Staff = "solo_lower" a, cis f
+				\change Staff = "solo_upper" a bes cis f
+			}
+			\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
+				\change Staff = "solo_upper" f cis bes a
+				\change Staff = "solo_lower" \clef bass f cis a
+				\change Staff = "solo_upper" cis' bes a f cis
+				\change Staff = "solo_lower" a cis,
+			}
 		}
-	}
-	\repeat unfold 2 {
-		\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
+		\time 2/4
+		\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
 			\change Staff = "solo_upper" cis f a bes cis
 			\change Staff = "solo_lower" a, cis f
 			\change Staff = "solo_upper" a bes cis f
@@ -421,37 +438,37 @@ solo_upper_I = \relative c' {
 			\change Staff = "solo_upper" cis' bes a f cis
 			\change Staff = "solo_lower" a cis,
 		}
-	}
-	\time 2/4
-	\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
-		\change Staff = "solo_upper" cis f a bes cis
-		\change Staff = "solo_lower" a, cis f
-		\change Staff = "solo_upper" a bes cis f
-	}
-	\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
-		\change Staff = "solo_upper" f cis bes a
-		\change Staff = "solo_lower" \clef bass f cis a
-		\change Staff = "solo_upper" cis' bes a f cis
-		\change Staff = "solo_lower" a cis,
-	}
-	\time 4/4
-	\repeat unfold 2 {
-		\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
-			\change Staff = "solo_upper" a bes cis d f
-			\change Staff = "solo_lower" f, a bes cis d
-			\change Staff = "solo_upper" f a bes cis d
+		\time 4/4
+		\repeat unfold 2 {
+			\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
+				\change Staff = "solo_upper" a bes cis d f
+				\change Staff = "solo_lower" f, a bes cis d
+				\change Staff = "solo_upper" f a bes cis d
+			}
+			\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
+				\change Staff = "solo_upper" d cis bes a f
+				\change Staff = "solo_lower" \clef bass d cis bes a f
+				\change Staff = "solo_upper" f' d cis bes a
+				\change Staff = "solo_lower" f a,
+			}
 		}
-		\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
-			\change Staff = "solo_upper" d cis bes a f
-			\change Staff = "solo_lower" \clef bass d cis bes a f
-			\change Staff = "solo_upper" f' d cis bes a
-			\change Staff = "solo_lower" f a,
+		\repeat unfold 2 {
+			\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
+				\change Staff = "solo_upper" cis f a bes cis
+				\change Staff = "solo_lower" a, cis f
+				\change Staff = "solo_upper" a bes cis f
+			}
+			\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
+				\change Staff = "solo_upper" f cis bes a
+				\change Staff = "solo_lower" \clef bass f cis a
+				\change Staff = "solo_upper" cis' bes a f cis
+				\change Staff = "solo_lower" a cis,
+			}
 		}
-	}
-	\repeat unfold 2 {
-		\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
+		\time 2/4
+		\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
 			\change Staff = "solo_upper" cis f a bes cis
-			\change Staff = "solo_lower" a, cis f
+			\change Staff = "solo_lower" a,-\markup { \italic cresc. } cis f
 			\change Staff = "solo_upper" a bes cis f
 		}
 		\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
@@ -460,36 +477,23 @@ solo_upper_I = \relative c' {
 			\change Staff = "solo_upper" cis' bes a f cis
 			\change Staff = "solo_lower" a cis,
 		}
-	}
-	\time 2/4
-	\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
-		\change Staff = "solo_upper" cis f a bes cis
-		\change Staff = "solo_lower" a,-\markup { \italic cresc. } cis f
-		\change Staff = "solo_upper" a bes cis f
-	}
-	\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
-		\change Staff = "solo_upper" f cis bes a
-		\change Staff = "solo_lower" \clef bass f cis a
-		\change Staff = "solo_upper" cis' bes a f cis
-		\change Staff = "solo_lower" a cis,
-	}
 	% mm. 121-125 - Rehersal 12
 	\mark #12
 	\time 4/4
-	%% FIXME: The nightmare continues
-	\repeat unfold 2 {
-		\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
-			\change Staff = "solo_upper" a bes cis d f
-			\change Staff = "solo_lower" f, a bes cis d
-			\change Staff = "solo_upper" f a bes cis d
+		\repeat unfold 2 {
+			\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
+				\change Staff = "solo_upper" a bes cis d f
+				\change Staff = "solo_lower" f, a bes cis d
+				\change Staff = "solo_upper" f a bes cis d
+			}
+			\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
+				\change Staff = "solo_upper" d cis bes a f
+				\change Staff = "solo_lower" \clef bass d cis bes a f
+				\change Staff = "solo_upper" f' d cis bes a
+				\change Staff = "solo_lower" f a,
+			}
 		}
-		\tuplet 18/16 { \change Staff = "solo_lower" \clef treble f
-			\change Staff = "solo_upper" d cis bes a f
-			\change Staff = "solo_lower" \clef bass d cis bes a f
-			\change Staff = "solo_upper" f' d cis bes a
-			\change Staff = "solo_lower" f a,
-		}
-	}
+	} %magnifyMusic end
 	\change Staff = "solo_upper"
 	\repeat unfold 4 { \tuplet 9/8 { r32 c' fis b c c fis b c } }
 	\time 2/4
@@ -547,6 +551,7 @@ solo_upper_I = \relative c' {
 	\mark #14
 	\tempo "Meno mosso"
 	\time 6/4
+	%% FIXME: First tuplet in m. 142 and 144 is broken!
 	r4 \change Staff = "solo_lower" \clef treble
 		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
 	\change Staff = "solo_lower"
@@ -966,19 +971,21 @@ solo_upper_I = \relative c' {
 		\tuplet 9/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes] } \change Staff = "solo_upper"
 		\tuplet 6/4 { f'32[ bes f' f bes f'] }
 	% mm. 240-247 - Rehersal 26
-	% FIXME: Another horrendous mess, like m. 118. Pry staves apart, shrink notes?
+	% WORKAROUND: Again, like m. 113, shrink notes.
 	\tempo "Animato"
 	\mark #26
-	R2.
-	r8 \ottava #1 \tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
-		\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
-		r8 \tuplet 9/8 { ees''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
-		\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
-	R2.
-	r8 \ottava #1 \tuplet 9/8 { ees''''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
-		\tuplet 15/8 { ees'[ bes ees bes ees, \change Staff = "solo_lower" d bes a fis a bes d \change Staff = "solo_upper" ees bes' ees] }
-		r8 \ottava #1 \tuplet 9/8 { a'64[ cis, a' cis, a \ottava #0 \change Staff = "solo_lower" fis d cis bes] } \change Staff = "solo_upper"
-		\ottava #1 \tuplet 15/8 { a'[ cis, a' cis, a \ottava #0 \change Staff = "solo_lower" fis d cis bes cis d fis \change Staff = "solo_upper" \ottava #1 a cis a'] }
+	\magnifyMusic 0.75 {
+		R2.
+		r8 \ottava #1 \tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+			\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+				r8 \tuplet 9/8 { ees''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+			\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+		R2.
+		r8 \ottava #1 \tuplet 9/8 { ees''''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
+			\tuplet 15/8 { ees'[ bes ees bes ees, \change Staff = "solo_lower" d bes a fis a bes d \change Staff = "solo_upper" ees bes' ees] }
+			r8 \ottava #1 \tuplet 9/8 { a'64[ cis, a' cis, a \ottava #0 \change Staff = "solo_lower" fis d cis bes] } \change Staff = "solo_upper"
+			\ottava #1 \tuplet 15/8 { a'[ cis, a' cis, a \ottava #0 \change Staff = "solo_lower" fis d cis bes cis d fis \change Staff = "solo_upper" \ottava #1 a cis a'] }
+	}
 	\tempo "Meno"
 	% QUESTION: Broken bars in 247. Copy in 245?
 	<b, e g b>8 <bes bes'> \tuplet 3/2 { <a a'>16( <gis gis'> <b b'>) } <gis cis eis gis>4.~
@@ -1049,7 +1056,7 @@ solo_upper_I = \relative c' {
 	\time 4/4
 	\mark #31
 	\tempo "Doppio Lento"
-	% FIXME: Force tuplet brackets this time?
+	% FIXME: Force tuplet brackets this time? Plus, the numbers are mashing against the notes. Fix.
 	\change Staff = "solo_upper" \ottava #1
 	\repeat unfold 2 {
 		\repeat unfold 2 {
