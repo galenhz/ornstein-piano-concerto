@@ -15,19 +15,23 @@ beamCutR = { \set stemRightBeamCount = #1 }
 \score {
   <<
 	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
-		\set Score.markFormatter = #format-mark-circle-numbers
 		\new Staff = "solo_upper" { \accidentalStyle forget \solo_upper_I }
 		\new Dynamics \solo_dynamics_I
 		\new Staff = "solo_lower" { \accidentalStyle forget \solo_lower_I }
 	>>
 	\new PianoStaff \with { instrumentName = "Orchestra" } <<
-		\set Score.markFormatter = #format-mark-circle-numbers
 		\new Staff = "redux_upper" { \accidentalStyle forget \redux_upper_I }
 		\new Dynamics \redux_dynamics_I
 		\new Staff = "redux_lower" { \accidentalStyle forget \redux_lower_I }
 	>>
   >>
-  \layout { }
+  \layout {
+	\context {
+	\Score
+		\numericTimeSignature
+		markFormatter = #format-mark-circle-numbers
+	}
+  }
   \midi { \tempo 4 = 96 }
 }
 
