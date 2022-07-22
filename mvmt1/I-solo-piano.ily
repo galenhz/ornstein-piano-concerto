@@ -1,7 +1,4 @@
 
-LH_mark = \markup { \fontsize #-4 { "L.H." } }
-RH_mark = \markup { \fontsize #-4 { "R.H." } }
-
 solo_upper_I = \relative c' {
 	\clef treble
 	\time 3/4
