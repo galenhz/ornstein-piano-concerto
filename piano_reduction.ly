@@ -12,6 +12,11 @@ beamCutR = { \set stemRightBeamCount = #1 }
 
 #(set-default-paper-size "letter")
 
+\header {
+	title = "Piano Concerto"
+	composer = "Leo Ornstein"
+}
+
 \score {
   <<
 	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
@@ -27,7 +32,7 @@ beamCutR = { \set stemRightBeamCount = #1 }
   >>
   \layout {
 	\context {
-	\Score
+		\Score
 		\numericTimeSignature
 		markFormatter = #format-mark-circle-numbers
 	}
