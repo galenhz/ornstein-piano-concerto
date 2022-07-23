@@ -6,8 +6,8 @@
 %%% Section AB - mm. 5-12
 
 %% EDIT: In m. 10 (all oboes unison) the parts all give the second half the rhythm X8. X16. The
-%% score wierdly has X8 X8 for the first and second, and X8. X16 for the third and fourth. That's
-%% pretty obviously a mistake in the score. But it does make me wonder: the other instruments
+%% score oddly has X8 X8 for the first and second, and X8. X16 for the third and fourth. That's
+%% pretty clearly a mistake in the score. But it does make me wonder: the other instruments
 %% playing this rhythm (flute I/II, clarinet I/II has X8 R16 X16 instead. Should I make the oboes
 %% consistant with the others (and the piano reduction)? Doing that for now, but willing to
 %% reconsider.
@@ -17,7 +17,7 @@
 
 Oboe_I_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
-	d8(\ff cis) c4 \tuplet 3/2 { c8\> cis( d)\! }
+	d8(\ff cis) c4 \tuplet 3/2 { c8\< cis( d)\! }
 	fis([ c')] cis([ fis,)] \tuplet 3/2 { e\>( a bes)\! }
 	r8 e\>( ees d des c)~\!
 	c[ b( bes a] aes[ d,)]
@@ -36,7 +36,7 @@ Oboe_I_mvmt_I_AB = \relative c' {
 
 Oboe_II_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
-	d8(\ff cis) c4 \tuplet 3/2 { c8\> cis( d)\! }
+	d8(\ff cis) c4 \tuplet 3/2 { c8\< cis( d)\! }
 	fis([ c')] cis([ fis,)] \tuplet 3/2 { e\>( a bes)\! }
 	r8 e\>( ees d des c)~\!
 	c[ b( bes a] aes[ d,)]

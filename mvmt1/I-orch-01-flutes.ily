@@ -11,12 +11,15 @@ Picc_mvmt_I_AB = \relative c'' {
 	r8 bes c bes r8 bes' c bes
 }
 
+%% m. 5: Artificially lengthen bar length in flute I/II part so not to squash the crescendo.
 %% m. 6: Supress second part's dynamics in score, force first part down.
 %% EDIT: Perhaps instead I should change second's part crescendo to match stop point of the first?
 
 Flute_I_mvmt_I_AB = \relative c'' {
 	\tempo "con moto"
-	a4\ff\< e'4.\!\> cis8\!
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
+		a4\ff\< e'4.\!\> cis8\!
+	\tag #'Part \revert NoteHead.extra-spacing-width
 	r8 a_\< \tuplet 3/2 { gis( a b)_\! } ees_\> c~_\!
 	c2.
 	R2. R2.
@@ -33,7 +36,9 @@ Flute_I_mvmt_I_AB = \relative c'' {
 
 Flute_II_mvmt_I_AB = \relative c' {
 	\tempo "con moto" 
-	c4\ff\< b'4.\!\> cis8\!
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
+		c4\ff\< b'4.\!\> cis8\!
+	\tag #'Part \revert NoteHead.extra-spacing-width
 	\tag #'Part { r8 a\< gis4\! bes\> } \tag #'Score { r8 a gis4 bes }
 	R2.\! R2. R2.
 	\time 4/4
