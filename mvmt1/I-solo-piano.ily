@@ -1,19 +1,44 @@
+%% Piano solo
 
-solo_upper_I = \relative c' {
+%%% Section AA - mm. 1-4
+%%% Section AB - mm. 5-12
+
+solo_upper_I_AA_AB = \relative c' {
 	\clef treble
 	\time 3/4
 	\tempo "Moderato assai"
-	% mm. 1-9
 	R2.*3 r2.\fermata R2.*5
-	% m. 10
 	\time 4/4
 	R1
-	% m. 11
 	\time 3/4
 	R2.
-	% m. 12
 	\time 4/4
 	R1
+}
+
+solo_dynamics_I_AA_AB = {
+	% mm. 1-9
+	s2.*9
+	% mm. 10-12
+	s1 s2. s1
+}
+
+solo_lower_I_AA_AB = \relative c, {
+	\clef bass
+	\time 3/4
+	R2.*3 r2.\fermata R2.*5
+	\time 4/4
+	R1
+	\time 3/4
+	R2.
+	\time 4/4
+	R1
+}
+
+
+%%% Section AC - mm. 13-15 (Rehersal 1)
+
+solo_upper_I_AC = \relative c' {
 	% m. 13 - Rehersal 1
 	\mark #1
 	\time 6/8
@@ -34,10 +59,101 @@ solo_upper_I = \relative c' {
 	\ottava #0
 	\stemUp <c fis a c>8-\markup { \italic {poco rit.} }
 	<d gis b d> <ees a c ees> \stemNeutral
+}
+
+solo_dynamics_I_AC = {
+	% m. 13
+	s2.-\markup { \dynamic fff \italic Sostenuto }
+	% mm. 14-15
+	s2.*2
+}
+
+solo_lower_I_AC = \relative c, {
+	% m. 13
+	\time 6/8
+	\tuplet 18/12 {
+		\stemUp <fis, fis'>32 \stemDown cis''[ fis bes c cis
+		\clef treble
+		fis bes c bes c bes fis
+		\clef bass
+		cis c bes fis cis]
+	}
+	\tuplet 16/12 {
+		\stemUp <a, a'> \stemDown a'[ e' b' a
+		\clef treble
+		e' b' e, b' e, b' e,
+		\clef bass
+		a, b e, a,]
+	}
+	% m. 14
+	\tuplet 18/12 {
+		\stemUp <fis, fis'>32 \stemDown cis''[ fis bes c cis
+		\clef treble
+		fis bes c bes c bes fis
+		\clef bass
+		cis c bes fis cis]
+	}
+	\tuplet 16/12 {
+		\stemUp <a, a'> \stemDown a'[ e' b' a
+		\clef treble
+		e' b' e, b' e, b' e,
+		\clef bass
+		a, b e, a,]
+	}
+	% m. 15
+	\tuplet 14/12 {
+		\stemUp cis, \stemDown g'[ f' f b f' b, f' b, f' b, f f g,]
+	}
+	\tupletDown
+	%% FIXME: Need to force lilypond to add more space between staves?
+	%%        No. Don't try to emulate beaming in the written part. Scrap
+	%%        this code and keep it simpler.
+	%% FIXME: No again. I probably should strive to preserve the way the
+	%%        written part splits things up, because it's used to hint which
+	%%        hand to play with. Need to come up with a real solution for this
+	%%        because I'll need it for the passages starting at m. 118.
+	%%\override TupletBracket.bracket-visibility = ##t
+	%%\override TupletBracket.padding = #2
+	%%\tuplet 6/4 {
+	%%	\stemUp fis[ cis' a' \change Staff = "solo_upper" \stemDown c fis c']
+	%%	\change Staff = "solo_lower"
+	%%}
+	%%\tuplet 6/4 {
+	%%	\stemUp gis,,[ dis' b' \change Staff = "solo_upper" \stemDown d gis d']
+	%%	\change Staff = "solo_lower"
+	%%}
+	%%\revert TupletBracket.padding
+	%%\once \override TupletBracket.positions = #'(-4 . 1)
+	%%\tuplet 10/4 {
+	%%	\stemUp a,,[ e' c' \change Staff = "solo_upper" \stemDown e a c ees a ees'
+	%%	\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
+	%%}
+	%%\tupletNeutral
+	%%\revert TupletBracket.bracket-visibility
+	%%\stemNeutral
+	\stemDown
+	\tuplet 6/4 {
+		fis[ cis' a' \change Staff = "solo_upper" c fis c']
+		\change Staff = "solo_lower"
+	}
+	\tuplet 6/4 {
+		gis,,[ dis' b' \change Staff = "solo_upper" d gis d']
+		\change Staff = "solo_lower"
+	}
+	\tuplet 10/8 {
+		a,,64[ e' c' \change Staff = "solo_upper" e a c ees a ees'
+		\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
+	}
+	\stemNeutral
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c' {
 	% m. 16
 	\time 10/8
 	\tempo "con moto"
-	r8 <e, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>]
+	r8 <e e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>]
 	% m. 17
 	\time 11/8
 	r8 \ottava #1 <g g'>[ <c c'> <d d'> <fis fis'> <g g'> <g, g'> <c c'> <d d'> <fis fis'> <g g'>] \ottava #0
@@ -1283,15 +1399,7 @@ solo_upper_I = \relative c' {
 	\bar "|."
 }
 
-solo_dynamics_I = {
-	% mm. 1-9
-	s2.*9
-	% mm. 10-12
-	s1 s2. s1
-	% m. 13
-	s2.-\markup { \dynamic fff \italic Sostenuto }
-	% mm. 14-15
-	s2.*2
+solo_dynamics_I_remain = {
 	% mm. 16-18
 	s1 s4 s1 s4 s8 s1 s4
 	% m. 19
@@ -1411,99 +1519,10 @@ solo_dynamics_I = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I = \relative c, {
-	\clef bass
-	\time 3/4
-	% mm. 1-9
-	R2.*3 r2.\fermata R2.*5
-	% m. 10
-	\time 4/4
-	R1
-	% m. 11
-	\time 3/4
-	R2.
-	% m. 12
-	\time 4/4
-	R1
-	% m. 13
-	\time 6/8
-	\tuplet 18/12 {
-		\stemUp <fis, fis'>32 \stemDown cis''[ fis bes c cis
-		\clef treble
-		fis bes c bes c bes fis
-		\clef bass
-		cis c bes fis cis]
-	}
-	\tuplet 16/12 {
-		\stemUp <a, a'> \stemDown a'[ e' b' a
-		\clef treble
-		e' b' e, b' e, b' e,
-		\clef bass
-		a, b e, a,]
-	}
-	% m. 14
-	\tuplet 18/12 {
-		\stemUp <fis, fis'>32 \stemDown cis''[ fis bes c cis
-		\clef treble
-		fis bes c bes c bes fis
-		\clef bass
-		cis c bes fis cis]
-	}
-	\tuplet 16/12 {
-		\stemUp <a, a'> \stemDown a'[ e' b' a
-		\clef treble
-		e' b' e, b' e, b' e,
-		\clef bass
-		a, b e, a,]
-	}
-	% m. 15
-	\tuplet 14/12 {
-		\stemUp cis, \stemDown g'[ f' f b f' b, f' b, f' b, f f g,]
-	}
-	\tupletDown
-	%% FIXME: Need to force lilypond to add more space between staves?
-	%%        No. Don't try to emulate beaming in the written part. Scrap
-	%%        this code and keep it simpler.
-	%% FIXME: No again. I probably should strive to preserve the way the
-	%%        written part splits things up, because it's used to hint which
-	%%        hand to play with. Need to come up with a real solution for this
-	%%        because I'll need it for the passages starting at m. 118.
-	%%\override TupletBracket.bracket-visibility = ##t
-	%%\override TupletBracket.padding = #2
-	%%\tuplet 6/4 {
-	%%	\stemUp fis[ cis' a' \change Staff = "solo_upper" \stemDown c fis c']
-	%%	\change Staff = "solo_lower"
-	%%}
-	%%\tuplet 6/4 {
-	%%	\stemUp gis,,[ dis' b' \change Staff = "solo_upper" \stemDown d gis d']
-	%%	\change Staff = "solo_lower"
-	%%}
-	%%\revert TupletBracket.padding
-	%%\once \override TupletBracket.positions = #'(-4 . 1)
-	%%\tuplet 10/4 {
-	%%	\stemUp a,,[ e' c' \change Staff = "solo_upper" \stemDown e a c ees a ees'
-	%%	\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
-	%%}
-	%%\tupletNeutral
-	%%\revert TupletBracket.bracket-visibility
-	%%\stemNeutral
-	\stemDown
-	\tuplet 6/4 {
-		fis[ cis' a' \change Staff = "solo_upper" c fis c']
-		\change Staff = "solo_lower"
-	}
-	\tuplet 6/4 {
-		gis,,[ dis' b' \change Staff = "solo_upper" d gis d']
-		\change Staff = "solo_lower"
-	}
-	\tuplet 10/8 {
-		a,,64[ e' c' \change Staff = "solo_upper" e a c ees a ees'
-		\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
-	}
-	\stemNeutral
+solo_lower_I_remain = \relative c {
 	% m. 16
 	\time 10/8
-	r8 e,,,,[ fis b c] \clef treble e[ fis g b c]
+	r8 e[ fis b c] \clef treble e[ fis g b c]
 	% m. 17
 	r8 g[ c d fis g g, c d fis g] \clef bass
 	% m. 18
@@ -2279,3 +2298,14 @@ solo_lower_I = \relative c, {
 	s2 r4 R2.
 	\bar "|."
 }
+
+%%% Final assembly
+
+solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_remain }
+solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC }
+
+solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_remain }
+solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC }
+
+solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_remain }
+solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC }

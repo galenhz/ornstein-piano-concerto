@@ -1,6 +1,8 @@
 
 \version "2.22.2"
 
+\include "common.ily"
+
 \include "mvmt1/I-common.ily"
 
 \include "mvmt1/I-orch-01-flutes.ily"
@@ -14,119 +16,7 @@
 \include "mvmt1/I-orch-09-violins-viola.ily"
 \include "mvmt1/I-orch-10-cello-bass.ily"
 
-solo_upper_I = \relative c' {
-	\clef treble
-	\time 3/4
-	\tempo "Moderato assai"
-	% mm. 1-9
-	R2.*3 r2.\fermata R2.*5
-	% m. 10
-	\time 4/4
-	R1
-	% m. 11
-	\time 3/4
-	R2.
-	% m. 12
-	\time 4/4
-	R1
-	% m. 13 - Rehersal 1
-	\mark #1
-	\time 6/8
-	\tempo "Allegro, ma non troppo"
-	\ottava #1
-	\tuplet 4/3 { <b'' e gis b>8
-			<bes ees g bes>~ <bes ees g bes>16
-			<a a'> <gis gis'> <b b'> }
-	<gis cis e gis>8~ <gis cis e gis>16 <a a'> <bes bes'> <b b'>
-	% mm. 14
-	\tuplet 4/3 { <c f a c>16. <b e gis b>32 <b e gis b>8~ <b e gis b>16
-			<bes ees g bes> <a a'> <c c'> }
-	\tuplet 4/3 { <a d fis a>8 <aes des f aes>~ <aes des f aes>16
-			<g g'> <fis fis'> <a a'> }
-	% m. 15
-	\time 3/4
-	<fis b dis fis>8 <f b d f>4
-	\ottava #0
-	\stemUp <c fis a c>8-\markup { \italic {poco rit.} }
-	<d gis b d> <ees a c ees> \stemNeutral
-}
-
-solo_dynamics_I = {
-	% mm. 1-9
-	s2.*9
-	% mm. 10-12
-	s1 s2. s1
-	% m. 13
-	s2.-\markup { \dynamic fff \italic Sostenuto }
-	% mm. 14-15
-	s2.*2
-}
-
-solo_lower_I = \relative c, {
-	\clef bass
-	\time 3/4
-	% mm. 1-9
-	R2.*3 r2.\fermata R2.*5
-	% m. 10
-	\time 4/4
-	R1
-	% m. 11
-	\time 3/4
-	R2.
-	% m. 12
-	\time 4/4
-	R1
-	% m. 13
-	\time 6/8
-	\tuplet 18/12 {
-		\stemUp <fis, fis'>32 \stemDown cis''[ fis bes c cis
-		\clef treble
-		fis bes c bes c bes fis
-		\clef bass
-		cis c bes fis cis]
-	}
-	\tuplet 16/12 {
-		\stemUp <a, a'> \stemDown a'[ e' b' a
-		\clef treble
-		e' b' e, b' e, b' e,
-		\clef bass
-		a, b e, a,]
-	}
-	% m. 14
-	\tuplet 18/12 {
-		\stemUp <fis, fis'>32 \stemDown cis''[ fis bes c cis
-		\clef treble
-		fis bes c bes c bes fis
-		\clef bass
-		cis c bes fis cis]
-	}
-	\tuplet 16/12 {
-		\stemUp <a, a'> \stemDown a'[ e' b' a
-		\clef treble
-		e' b' e, b' e, b' e,
-		\clef bass
-		a, b e, a,]
-	}
-	% m. 15
-	\tuplet 14/12 {
-		\stemUp cis, \stemDown g'[ f' f b f' b, f' b, f' b, f f g,]
-	}
-	\tupletDown
-	\stemDown
-	\tuplet 6/4 {
-		fis[ cis' a' \change Staff = "solo_upper" c fis c']
-		\change Staff = "solo_lower"
-	}
-	\tuplet 6/4 {
-		gis,,[ dis' b' \change Staff = "solo_upper" d gis d']
-		\change Staff = "solo_lower"
-	}
-	\tuplet 10/8 {
-		a,,64[ e' c' \change Staff = "solo_upper" e a c ees a ees'
-		\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
-	}
-	\stemNeutral
-}
+\include "mvmt1/I-solo-piano.ily"
 
 \paper {
 	#(set-paper-size "a3")
@@ -213,9 +103,9 @@ iNameRight = \override InstrumentName.self-alignment-X = #RIGHT
 	\new Staff = "Staff_Tympani_I" \with { instrumentName = "Tympani I" shortInstrumentName = "Tym. I" } \Tympani_I_mvmt
 	\new Staff = "Staff_Tympani_II" \with { instrumentName = "Tympani II" shortInstrumentName = "Tym. II" } \Tympani_II_mvmt
 	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
-		\new Staff = "solo_upper" \solo_upper_I
-		\new Dynamics \solo_dynamics_I
-		\new Staff = "solo_lower" \solo_lower_I
+		\new Staff = "solo_upper" \solo_upper_I_limited
+		\new Dynamics \solo_dynamics_I_limited
+		\new Staff = "solo_lower" \solo_lower_I_limited
 	>>
 	\new StaffGroup = "StaffGroup_strings" <<
 		\new Staff = "Staff_violinI" \with { instrumentName = "Violin I" shortInstrumentName = "Vn. I" } \Violin_I_mvmt

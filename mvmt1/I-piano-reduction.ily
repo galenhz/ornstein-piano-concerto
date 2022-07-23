@@ -1,11 +1,16 @@
-redux_upper_I = \relative c' {
+%% Piano reduction of the orchestra
+
+%%% Section AA - mm. 1-4
+%%% Section AB - mm. 5-12
+
+redux_upper_I_AA_AB = \relative c' {
 	\set Staff.midiInstrument = #"electric piano 1"
 	\clef treble
 	\time 3/4
 	\tempo "Moderato assai"
 	% mm. 1-4
 	fis4 c'4. a8~
-	% QUESTION: Rhythm doesn't match orcestral version. Fix?
+	% EDIT: Rhythm doesn't match orcestral version. Just leaving it alone.
 	a fis \tuplet 3/2 { f d gis } b8. es16
 	c2.~ c2.\fermata
 	% m. 5
@@ -77,6 +82,88 @@ redux_upper_I = \relative c' {
 			\voiceTwo r8 bes, c bes s8 bes c bes
 		}
 	>>
+}
+
+
+redux_dynamics_I_AA_AB = {
+	% mm. 1-4
+	s2.\f s2. s2. s2.
+	% mm. 5-12
+	s2. s2. s2. s2. s2. s1 s2. s4\< s2 s4\!
+
+}
+
+redux_lower_I_AA_AB = \relative c, {
+	\set Staff.midiInstrument = #"electric piano 1"
+	\clef bass
+	\time 3/4
+	% mm. 1-4
+	R2.*3 r2.\fermata
+	% m. 5
+	<d a' f'>4 \stemDown <f c' aes'> <fis cis' a'>
+	% m. 6
+	<<
+		\new Voice {
+			\voiceTwo <d a' fis'> <des aes' f'> <c g' e'>
+		}
+		\new Voice {
+			\voiceThree s2 bes''8 \change Staff = "redux_upper" \stemDown c8
+		}
+	>>
+	% m. 7
+	<fis,, cis' a'>2. \stemNeutral
+	% m. 8
+	<<
+		\new Voice {
+			\voiceOne r8 cis''~ \tuplet 3/2 { cis bis cis } \tuplet 3/2 { d f d }
+		}
+		\new Voice {
+			\voiceTwo s8 <gis, d>8~ <gis d>2
+		}
+		\new Voice {
+			\voiceFour <bes,, bes'>2.
+		}
+	>>
+	% m. 9
+	<<
+		\new Voice {
+			\voiceTwo <c g' e'>2.
+		}
+		\new Voice {
+			\voiceOne <bes'' des e f>2.
+                }
+
+	>>
+	% m. 10
+	\time 4/4
+	<fis, cis' a' c ees fis g>1
+	% m. 11
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceTwo <c g' e'>2.
+		}
+		\new Voice {
+			\voiceOne <bes'' des ees>2.
+		}
+	>>
+	% m. 12
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceTwo <ees,, aes ees'>2 <a, a' cis>2
+		}
+		\new Voice {
+			\voiceOne <bes'' cis ees fis>2
+				\change Staff = "redux_upper"
+				<g a cis ees fis a>2
+		}
+	>>
+}
+
+%%% Section AC - mm. 13-15 (Rehersal 1)
+
+redux_upper_I_AC = {
 	% mm. 13-14 - Rehersal 1
 	\mark #1
 	\time 6/8
@@ -85,6 +172,25 @@ redux_upper_I = \relative c' {
 	% m. 15
 	\time 3/4
 	R2.
+}
+
+redux_dynamics_I_AC = {
+	% mm. 13-15
+	s2. s2. s2.
+}
+
+redux_lower_I_AC = {
+	% mm. 13-14
+	\time 6/8
+	R2.*2
+	% m. 15
+	\time 3/4
+	R2.
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% m. 16
 	\time 10/8
 	\tempo "con moto"
@@ -1093,13 +1199,7 @@ redux_upper_I = \relative c' {
 	\bar "|."
 }
 
-redux_dynamics_I = {
-	% mm. 1-4
-	s2.\f s2. s2. s2.
-	% mm. 5-12
-	s2. s2. s2. s2. s2. s1 s2. s4\< s2 s4\!
-	% mm. 13-15
-	s2. s2. s2.
+redux_dynamics_I_remain = {
 	% mm. 16-20
 	s1\mf s4 s1 s4 s8 s1 s4 s1-\markup { "poco più" \dynamic p "e rit." } s4 s2 s2.\>
 	% mm. 21-24
@@ -1194,78 +1294,7 @@ redux_dynamics_I = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I = \relative c, {
-	\set Staff.midiInstrument = #"electric piano 1"
-	\clef bass
-	\time 3/4
-	% mm. 1-4
-	R2.*3 r2.\fermata
-	% m. 5
-	<d a' f'>4 \stemDown <f c' aes'> <fis cis' a'>
-	% m. 6
-	<<
-		\new Voice {
-			\voiceTwo <d a' fis'> <des aes' f'> <c g' e'>
-		}
-		\new Voice {
-			\voiceThree s2 bes''8 \change Staff = "redux_upper" \stemDown c8
-		}
-	>>
-	% m. 7
-	<fis,, cis' a'>2. \stemNeutral
-	% m. 8
-	<<
-		\new Voice {
-			\voiceOne r8 cis''~ \tuplet 3/2 { cis bis cis } \tuplet 3/2 { d f d }
-		}
-		\new Voice {
-			\voiceTwo s8 <gis, d>8~ <gis d>2
-		}
-		\new Voice {
-			\voiceFour <bes,, bes'>2.
-		}
-	>>
-	% m. 9
-	<<
-		\new Voice {
-			\voiceTwo <c g' e'>2.
-		}
-		\new Voice {
-			\voiceOne <bes'' des e f>2.
-                }
-
-	>>
-	% m. 10
-	\time 4/4
-	<fis, cis' a' c ees fis g>1
-	% m. 11
-	\time 3/4
-	<<
-		\new Voice {
-			\voiceTwo <c g' e'>2.
-		}
-		\new Voice {
-			\voiceOne <bes'' des ees>2.
-		}
-	>>
-	% m. 12
-	\time 4/4
-	<<
-		\new Voice {
-			\voiceTwo <ees,, aes ees'>2 <a, a' cis>2
-		}
-		\new Voice {
-			\voiceOne <bes'' cis ees fis>2
-				\change Staff = "redux_upper"
-				<g a cis ees fis a>2
-		}
-	>>
-	% mm. 13-14
-	\time 6/8
-	R2.*2
-	% m. 15
-	\time 3/4
-	R2.
+redux_lower_I_remain = \relative c {
 	% m. 16
 	\time 10/8
 	<<
@@ -2069,4 +2098,10 @@ redux_lower_I = \relative c, {
 	\bar "|."
 }
 
+
+%%% Final assembly
+
+redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_remain }
+redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_remain }
+redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_remain }
 
