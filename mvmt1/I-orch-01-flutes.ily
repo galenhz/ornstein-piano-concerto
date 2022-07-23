@@ -52,7 +52,7 @@ Flute_III_mvmt_I_AB = \relative c''' {
 	R2.*5
 	\time 4/4
 	\partCombineApart
-	r4 \tag #`part a16(_\f \tag #'Score a16( fis)fis fis r4 a16( fis) fis fis
+	r4 \tag #`Part a16(\f \tag #'Score a16( fis)fis fis r4 a16( fis) fis fis
 	\partCombineAutomatic
 	\time 3/4
 	R2.
