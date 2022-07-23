@@ -12,20 +12,23 @@
 %% consistant with the others (and the piano reduction)? Doing that for now, but willing to
 %% reconsider.
 
+% FIXME: m. 9 and 11: Supress I and III's dynamic in score.
+% It turns out that octave changes in relative mode impact the music even if "tagged out".
+
 Oboe_I_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
-	d8(_\ff cis) c4 \tuplet 3/2 { c8_\> cis( d)_\! }
-	fis([ c')] cis([ fis,)] \tuplet 3/2 { e_\>( a bes)_\! }
+	d8(\ff cis) c4 \tuplet 3/2 { c8\> cis( d)\! }
+	fis([ c')] cis([ fis,)] \tuplet 3/2 { e\>( a bes)\! }
 	r8 e\>( ees d des c)~\!
 	c[ b( bes a] aes[ d,)]
 	\partCombineApart
-	r4 dis'16(_\f cis) cis cis dis16( cis) cis cis
+	r4 \tag #`Part dis'16(\f \tag #'Score dis16( cis) cis cis dis16( cis) cis cis
 	\partCombineAutomatic
 	\time 4/4
-	\tuplet 3/2 { r8_\fff d( e) } \tuplet 3/2 { cis( c  a) } d[ r16 fis] ees4
+	\tuplet 3/2 { r8 d(\fff e) } \tuplet 3/2 { cis( c a) } d[ r16 fis] ees4
 	\time 3/4
 	\partCombineApart
-	r4 dis16( cis) cis cis dis( cis) cis cis
+	r4 \tag #`Part dis16(\f \tag #'Score dis16( cis) cis cis dis( cis) cis cis
 	\partCombineAutomatic
 	\time 4/4
 	r2 r8 bes'--_\fff c-- bes--
@@ -33,15 +36,15 @@ Oboe_I_mvmt_I_AB = \relative c' {
 
 Oboe_II_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
-	d8(_\ff cis) c4 \tuplet 3/2 { c8_\> cis( d)_\! }
-	fis([ c')] cis([ fis,)] \tuplet 3/2 { e_\>( a bes)_\! }
+	d8(\ff cis) c4 \tuplet 3/2 { c8\> cis( d)\! }
+	fis([ c')] cis([ fis,)] \tuplet 3/2 { e\>( a bes)\! }
 	r8 e\>( ees d des c)~\!
 	c[ b( bes a] aes[ d,)]
-	r16 cis'_\f cis cis e4 e
+	r16 cis'\f cis cis e4 e
 	\time 4/4
-	\tuplet 3/2 { r8_\fff d( e) } \tuplet 3/2 { cis( c  a) } d[ r16 fis] ees4
+	\tuplet 3/2 { r8 d(\fff e) } \tuplet 3/2 { cis( c a) } d[ r16 fis] ees4
 	\time 3/4
-	r16 cis cis cis e4 e
+	r16 cis\f cis cis e4 e
 	\time 4/4
 	fis,2 r8 bes'--_\fff c-- bes--
 }
@@ -49,11 +52,15 @@ Oboe_II_mvmt_I_AB = \relative c' {
 Oboe_III_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
 	R2.*4
-	r4 dis16_\f cis cis cis dis cis cis cis
+	\partCombineApart
+	r4 \tag #`Part dis16(\f \tag #'Score dis16( cis) cis cis dis( cis) cis cis
+	\partCombineAutomatic
 	\time 4/4
-	\tuplet 3/2 { r8_\fff d'( e) } \tuplet 3/2 { cis( c  a) } d[ r16 fis] ees4
+	\tuplet 3/2 { r8 d'\fff ( e) } \tuplet 3/2 { cis( c  a) } d[ r16 fis] ees4
 	\time 3/4
-	r4 dis,16_\f cis cis cis dis cis cis cis
+	\partCombineApart
+	r4 \tag #`Part dis,16(_\f \tag #'Score dis16( cis) cis cis dis( cis) cis cis
+	\partCombineAutomatic
 	\time 4/4
 	ees2 a
 }
@@ -63,7 +70,7 @@ Oboe_IV_mvmt_I_AB = \relative c' {
 	R2.*4
 	r16 cis_\f cis cis e4 e4
 	\time 4/4
-	\tuplet 3/2 { r8_\fff d'( e) } \tuplet 3/2 { cis( c  a) } d[ r16 fis] ees4
+	\tuplet 3/2 { r8 d'(\fff e) } \tuplet 3/2 { cis( c  a) } d[ r16 fis] ees4
 	\time 3/4
 	r16 cis,_\f cis cis e4 e4
 	\time 4/4

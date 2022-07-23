@@ -145,16 +145,16 @@ iNameColumnVII_VIII = \markup { \center-column { "VII" "VIII" } }
 \score {
   <<
 	\new StaffGroup = "StaffGroup_winds" <<
-		\new Staff = "Piccolo" \with { instrumentName = "Piccolo" shortInstrumentName = "Picc." } \Picc_mvmt_I
+		\new Staff = "Piccolo" \with { instrumentName = "Piccolo" shortInstrumentName = "Picc." } \keepWithTag #'Score \Picc_mvmt_I
 		\new StaffGroup = "StaffGroup_winds_flute" <<
-			\new Staff = "Flutes12" \with { instrumentName = "Flutes I/II" shortInstrumentName = "Fl. I/II" } \partCombine \keepWithTag #'Score  \Flute_I_mvmt_I \keepWithTag #'Score \Flute_II_mvmt_I
+			\new Staff = "Flutes12" \with { instrumentName = "Flutes I/II" shortInstrumentName = "Fl. I/II" } \partCombine \keepWithTag #'Score \Flute_I_mvmt_I \keepWithTag #'Score \Flute_II_mvmt_I
 			\new Staff = "Flutes34" \with { instrumentName = "Flutes III/IV" shortInstrumentName = "Fl. III/IV"} \partCombine \keepWithTag #'Score \Flute_III_mvmt_I \keepWithTag #'Score \Flute_IV_mvmt_I
 		>>
 		\new StaffGroup = "StaffGroup_winds_oboe" <<
-			\new Staff = "Oboes12" \with { instrumentName = "Oboe I/II" shortInstrumentName = "Ob. I/II" } \partCombine \Oboe_I_mvmt_I \Oboe_II_mvmt_I
-			\new Staff = "Oboes34" \with { instrumentName = "Oboe III/IV" shortInstrumentName = "Ob. III/IV" } \partCombine \Oboe_III_mvmt_I \Oboe_IV_mvmt_I
+			\new Staff = "Oboes12" \with { instrumentName = "Oboe I/II" shortInstrumentName = "Ob. I/II" } \partCombine \keepWithTag #'Score \Oboe_I_mvmt_I \keepWithTag #'Score \Oboe_II_mvmt_I
+			\new Staff = "Oboes34" \with { instrumentName = "Oboe III/IV" shortInstrumentName = "Ob. III/IV" } \partCombine \keepWithTag #'Score \Oboe_III_mvmt_I \keepWithTag #'Score \Oboe_IV_mvmt_I
 		>>
-		\new Staff = "EnglishHorn" \with { instrumentName = "English Horn" shortInstrumentName = "E.h." } \transpose f c' \EnglishHorn_mvmt_I
+		\new Staff = "EnglishHorn" \with { instrumentName = "English Horn" shortInstrumentName = "E.h." } \transpose f c' \keepWithTag #'Score \EnglishHorn_mvmt_I
 		\new StaffGroup = "StaffGroup_winds_clarinet" <<
 			\new Staff = "Staff_Clarinets_1_2" \with { instrumentName = "Clarinet I/II" shortInstrumentName = "Cl. I/II" } \transpose bes c' \partCombine \Clarinet_I_mvmt \Clarinet_II_mvmt
 			\new Staff = "Staff Clarinets_3_4" \with { instrumentName = "Clarinet III/IV" shortInstrumentName = "Cl. III/IV" } \transpose bes c' \partCombine \Clarinet_III_mvmt \Clarinet_IV_mvmt
