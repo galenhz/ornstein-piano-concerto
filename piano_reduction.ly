@@ -4,8 +4,8 @@
 
 \include "common.ily"
 
-\include "solo_piano_I.ly"
-\include "orch_redux_I.ly"
+\include "mvmt1/I-solo-piano.ily"
+\include "mvmt1/I-piano-reduction.ily"
 
 
 #(set-default-paper-size "letter")
