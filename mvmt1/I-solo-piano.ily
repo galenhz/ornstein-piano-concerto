@@ -2,7 +2,7 @@
 solo_upper_I = \relative c' {
 	\clef treble
 	\time 3/4
-	\tempo "Moderato Assai"
+	\tempo "Moderato assai"
 	% mm. 1-9
 	R2.*3 r2.\fermata R2.*5
 	% m. 10

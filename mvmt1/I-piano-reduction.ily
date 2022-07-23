@@ -2,7 +2,7 @@ redux_upper_I = \relative c' {
 	\set Staff.midiInstrument = #"electric piano 1"
 	\clef treble
 	\time 3/4
-	\tempo "Moderato Assai"
+	\tempo "Moderato assai"
 	% mm. 1-4
 	fis4 c'4. a8~
 	% QUESTION: Rhythm doesn't match orcestral version. Fix?

@@ -9,7 +9,7 @@ Picc_mvmt_AB = \relative c'' {
 Picc_mvmt = { \NULL_I_AA \Picc_mvmt_AB \NULL_I_AC }
 
 Flute_I_mvmt_AB = \relative c'' {
-	\tempo "con moto" 
+	\tempo "con moto"
 	a4_\ff\< e'4.\!\> cis8\!
 	r8 a \tuplet 3/2 { gis( a b) } ees c~
 	c2.

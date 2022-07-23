@@ -8,7 +8,7 @@ Clarinet_I_mvmt_AB = \transpose c' bes \relative c'' {
 	R2.
 	r8 a,( gis g4\> fis8)\!
 	\time 4/4
-	\tuplet 3/2 { r8\ffff e'( fis) } \tuplet 3/2 { dis( d b) } e r16 gis f4
+	\tuplet 3/2 { r8\ffff e'( fis) } \tuplet 3/2 { dis( d b) } e[ r16 gis] f4
 	\time 3/4
 	r8 a,( gis g4 fis8)
 	\time 4/4
@@ -24,7 +24,7 @@ Clarinet_II_mvmt_AB = \transpose c' bes \relative c' {
 	R2.\!
 	r8 a( gis g4\> fis8\!)
 	\time 4/4
-	\tuplet 3/2 { r8\ffff e'( fis) } \tuplet 3/2 { dis( d b) } e r16 gis f4
+	\tuplet 3/2 { r8\ffff e'( fis) } \tuplet 3/2 { dis( d b) } e[ r16 gis] f4
 	\time 3/4
 	r8 a,( gis g4 fis8)
 	\time 4/4
