@@ -5,7 +5,7 @@
 
 %%% Section AB - mm. 5-12
 
-%% FIXME: m. 12, Need "crescendo to bar" for 2/3/tb like on many other parts
+%% FIXME: m. 12: Score doesn't show crescendo for 3/4.
 %%               Also need to consider combining dynamics on 1/2 once I solve that bit.
 
 Trombone_I_mvmt_I_AB = \relative c {
@@ -38,7 +38,7 @@ Trombone_II_mvmt_I_AB = \relative c {
 	a,2 cis\<\!
 }
 
-Trombone_III_mvmt_I_AB = \relative c {
+Trombone_III_mvmt_I_AB_AC = \relative c {
 	\tempo "con moto"
 	a4(\mf\< c cis)\!
 	a(\> gis g)\!
@@ -50,10 +50,12 @@ Trombone_III_mvmt_I_AB = \relative c {
 	\time 3/4
 	g2.
 	\time 4/4
-	ees2 bes''2\<\!
+	ees2 bes''\<\!
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
-Tuba_mvmt_I_AB = \relative c, {
+Tuba_mvmt_I_AB_AC = \relative c, {
 	\tempo "con moto"
 	d4(\mf\< f fis)\!
 	d(\> cis c)\!
@@ -66,10 +68,12 @@ Tuba_mvmt_I_AB = \relative c, {
 	c2.
 	\time 4/4
 	ees2 a,\<\!
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
 
 Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB \NULL_I_AC }
 Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB \NULL_I_AC }
-Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB \NULL_I_AC }
-Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB \NULL_I_AC }
+Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC }
+Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC }

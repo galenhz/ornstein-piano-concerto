@@ -5,7 +5,7 @@
 
 %%% Section AB - mm. 5-12
 
-Tympani_I_mvmt_I_AB = \relative c {
+Tympani_I_mvmt_I_AB_AC = \relative c {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
@@ -13,7 +13,9 @@ Tympani_I_mvmt_I_AB = \relative c {
 	\time 3/4
 	R2.
 	\time 4/4
-	ees2:32\ppp\< a,2:32\!
+	ees2:32\ppp\< a,2:32
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
 Tympani_II_mvmt_I_AB = \relative c {
@@ -33,5 +35,5 @@ Tympani_II_mvmt_I_AB = \relative c {
 
 %%% Final assembly
 
-Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB \NULL_I_AC }
+Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC }

@@ -13,7 +13,7 @@
 Clarinet_I_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\tempo "con moto"
 	\tag #'Part { g4\f\< ais4.\!\>( b8\!) } \tag #'Score { g4 ais4.( b8) }
-	r8 e,4.\< c'4\!\> |\!
+	r8 e,4.\< c'4\!\> |
 	r8 fis--\fff\> g-- ais-- b-- ais--\!
 	R2.
 	r8 a,( gis g4\> fis8)\!
@@ -31,7 +31,7 @@ Clarinet_I_mvmt_I_AB = \transpose c' bes \relative c'' {
 Clarinet_II_mvmt_I_AB = \transpose c' bes \relative c' {
 	\tempo "con moto"
 	e4\f\< g4.\!\>~ g8\!
-	r8 e4.\< a4\!\> |\!
+	r8 e4.\< a4\!\> |
 	r8 fis--\fff\> g-- ais-- b-- ais--\!
 	R2.
 	r8 a( gis g4\> fis8\!)
@@ -50,7 +50,7 @@ Clarinet_II_mvmt_I_AB = \transpose c' bes \relative c' {
 Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\tempo "con moto"
 	\tag #'Part { r4 cis4.\f\>( b8)\! } \tag #'Score { r4 cis4.( b8) }
-	r8 e,4.\< c'4\!\> |\!
+	r8 e,4.\< c'4\!\> |
 	R2.
 	R2.*2
 	\time 4/4
@@ -69,7 +69,7 @@ Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 Clarinet_IV_mvmt_I_AB = \transpose c' bes \relative c' {
 	\tempo "con moto"
 	b4\f\< fis'4.\!\>( g8)\!
-	r8 e4.\< a4\!\> |\!
+	r8 e4.\< a4\!\> |
 	R2.
 	R2.*2
 	\time 4/4
@@ -81,7 +81,7 @@ Clarinet_IV_mvmt_I_AB = \transpose c' bes \relative c' {
 		\tuplet 6/4 { r16 gis gis gis gis gis } \tuplet 6/4 { b( gis) gis gis gis gis }
 }
 
-BassClarinet_mvmt_I_AB = \transpose c' bes, \relative c'' {
+BassClarinet_mvmt_I_AB_AC = \transpose c' bes, \relative c'' {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
@@ -89,7 +89,9 @@ BassClarinet_mvmt_I_AB = \transpose c' bes, \relative c'' {
 	\time 3/4
 	R2.
 	\time 4/4
-	c2\ff c2\<\!
+	c2\ff c2\< |
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
 
@@ -99,4 +101,4 @@ Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC }
 Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC }
 Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC }
 Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC }
-BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB \NULL_I_AC }
+BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC }

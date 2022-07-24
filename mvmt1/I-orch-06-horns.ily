@@ -16,7 +16,7 @@ Horn_I_mvmt_I_AA = \transpose c' f \relative c'' {
 %% FIXME: m. 6, do I really want to bother with the hairpin override in 3/4?
 %% FIXME: m. 12, how to create the crescendo-to-the barline effect for 1/2/3/4?
 
-Horn_I_mvmt_I_AB = \transpose c' f \relative c'' {
+Horn_I_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 	\tempo "con moto" 
 	e4\mf fis4.(_\< gis8)\!
 	r4 r4 f,8( g)
@@ -32,10 +32,12 @@ Horn_I_mvmt_I_AB = \transpose c' f \relative c'' {
 	r4 f,\mf_\< \tuplet 3/2 { b16[( bes g } cis8]\!)
 	\partCombineAutomatic
 	\time 4/4
-	f,2\f bes
+	f,2\f bes\<\!
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
-Horn_II_mvmt_I_AB = \transpose c' f \relative c' {
+Horn_II_mvmt_I_AB_AC = \transpose c' f \relative c' {
 	\tempo "con moto"
 	e4\mf r4 r8 gis8
 	r8 a4.\>( bes4)\!
@@ -47,10 +49,12 @@ Horn_II_mvmt_I_AB = \transpose c' f \relative c' {
 	\time 3/4
 	aes2.
 	\time 4/4
-	d,2\f d
+	d,2\f d\<\!
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
-Horn_III_mvmt_I_AB = \transpose c' f \relative c'' {
+Horn_III_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 	\tempo "con moto"
 	a4\mf\< c4. c8\!
 	r2 \once \override Hairpin.to-barline = ##f f4\>(
@@ -62,10 +66,12 @@ Horn_III_mvmt_I_AB = \transpose c' f \relative c'' {
 	\time 3/4
 	bes2.\!\<
 	\time 4/4
-	gis2\f\! bes
+	gis2\f\! bes\<\!
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
-Horn_IV_mvmt_I_AB = \transpose c' f \relative c' {
+Horn_IV_mvmt_I_AB_AC = \transpose c' f \relative c' {
 	\tempo "con moto"
 	c4\f\< ees( e)\!
 	r2 \once \override Hairpin.to-barline = ##f d4\>(
@@ -77,7 +83,9 @@ Horn_IV_mvmt_I_AB = \transpose c' f \relative c' {
 	\time 3/4
 	d2.\!\<
 	\time 4/4
-	f2\f\! d
+	f2\f\! d\<\!
+	%% Have to manually put NULL_I_AC here to place a crescendo stop.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
 Horn_V_mvmt_I_AB = \transpose c' f \relative c'' {
@@ -105,10 +113,10 @@ Horn_VI_mvmt_I_AB = \transpose c' f \relative c' {
 
 %%% Final assembly
 
-Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB \NULL_I_AC }
-Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB \NULL_I_AC }
-Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB \NULL_I_AC }
-Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB \NULL_I_AC }
+Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC }
+Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC }
+Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB_AC }
+Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB_AC }
 Horn_V_mvmt_I = { \NULL_I_AA \Horn_V_mvmt_I_AB \NULL_I_AC }
 Horn_VI_mvmt_I = { \NULL_I_AA \Horn_VI_mvmt_I_AB \NULL_I_AC }
 Horn_VII_mvmt_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC }
