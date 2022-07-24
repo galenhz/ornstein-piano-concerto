@@ -45,11 +45,12 @@ Clarinet_II_mvmt_I_AB = \transpose c' bes \relative c' {
 }
 
 %% m. 5: Supress third part's dynamics in score.
+%% FIXME: m. 6: III/IV dynamics missing from score entirely?
 
 Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\tempo "con moto"
 	\tag #'Part { r4 cis4.\f\>( b8)\! } \tag #'Score { r4 cis4.( b8) }
-	r8e,4.\< c'4\!\> |\!
+	r8 e,4.\< c'4\!\> |\!
 	R2.
 	R2.*2
 	\time 4/4
@@ -68,7 +69,7 @@ Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 Clarinet_IV_mvmt_I_AB = \transpose c' bes \relative c' {
 	\tempo "con moto"
 	b4\f\< fis'4.\!\>( g8)\!
-	r8e4.\< a4\!\> |\!
+	r8 e4.\< a4\!\> |\!
 	R2.
 	R2.*2
 	\time 4/4
