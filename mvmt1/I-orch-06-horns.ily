@@ -13,6 +13,9 @@ Horn_I_mvmt_I_AA = \transpose c' f \relative c'' {
 
 %%% Section AB - mm. 5-12
 
+%% FIXME: m. 6, do I really want to bother with the hairpin override in 3/4?
+%% FIXME: m. 12, how to create the crescendo-to-the barline effect for 1/2/3/4?
+
 Horn_I_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto" 
 	e4\mf fis4.(_\< gis8)\!
@@ -20,13 +23,13 @@ Horn_I_mvmt_I_AB = \transpose c' f \relative c'' {
 	gis(_\< b) \tuplet 3/2 { c( dis e) } \tuplet 3/2 { g( gis g)\! }
 	r8 gis8~\mf gis2
 	\partCombineApart
-	r4 f,\mf \tuplet 3/2 { b16[( bes g } cis8])
+	r4 f,\mf_\< \tuplet 3/2 { b16[( bes g } cis8]\!)
 	\partCombineAutomatic
 	\time 4/4
-	d2 cis4 f8.( g16)
+	d2 cis4_\< f8.( g16)\!
 	\time 3/4
 	\partCombineApart
-	r4 f,\mf \tuplet 3/2 { b16[( bes g } cis8])
+	r4 f,\mf_\< \tuplet 3/2 { b16[( bes g } cis8]\!)
 	\partCombineAutomatic
 	\time 4/4
 	f,2\f bes
@@ -50,31 +53,31 @@ Horn_II_mvmt_I_AB = \transpose c' f \relative c' {
 Horn_III_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto"
 	a4\mf\< c4. c8\!
-	r2 f4\>(
+	r2 \once \override Hairpin.to-barline = ##f f4\>(
 	dis2.\!)
 	r8 dis~\mf dis2
 	bes2.\<
 	\time 4/4
-	cis1\!
+	cis1\!\>
 	\time 3/4
-	bes2.
+	bes2.\!\<
 	\time 4/4
-	gis2\f bes\<\!
+	gis2\f\! bes
 }
 
 Horn_IV_mvmt_I_AB = \transpose c' f \relative c' {
 	\tempo "con moto"
 	c4\f\< ees( e)\!
-	r2 d4\>(
+	r2 \once \override Hairpin.to-barline = ##f d4\>(
 	e2.\!)
 	r8 gis~\mf gis2
 	d2.\<
 	\time 4/4
-	g1\!
+	g1\!\>
 	\time 3/4
-	d2.
+	d2.\!\<
 	\time 4/4
-	f2 d
+	f2\f\! d
 }
 
 Horn_V_mvmt_I_AB = \transpose c' f \relative c'' {

@@ -105,32 +105,7 @@ solo_lower_I_AC = \relative c, {
 		\stemUp cis, \stemDown g'[ f' f b f' b, f' b, f' b, f f g,]
 	}
 	\tupletDown
-	%% FIXME: Need to force lilypond to add more space between staves?
-	%%        No. Don't try to emulate beaming in the written part. Scrap
-	%%        this code and keep it simpler.
-	%% FIXME: No again. I probably should strive to preserve the way the
-	%%        written part splits things up, because it's used to hint which
-	%%        hand to play with. Need to come up with a real solution for this
-	%%        because I'll need it for the passages starting at m. 118.
-	%%\override TupletBracket.bracket-visibility = ##t
-	%%\override TupletBracket.padding = #2
-	%%\tuplet 6/4 {
-	%%	\stemUp fis[ cis' a' \change Staff = "solo_upper" \stemDown c fis c']
-	%%	\change Staff = "solo_lower"
-	%%}
-	%%\tuplet 6/4 {
-	%%	\stemUp gis,,[ dis' b' \change Staff = "solo_upper" \stemDown d gis d']
-	%%	\change Staff = "solo_lower"
-	%%}
-	%%\revert TupletBracket.padding
-	%%\once \override TupletBracket.positions = #'(-4 . 1)
-	%%\tuplet 10/4 {
-	%%	\stemUp a,,[ e' c' \change Staff = "solo_upper" \stemDown e a c ees a ees'
-	%%	\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
-	%%}
-	%%\tupletNeutral
-	%%\revert TupletBracket.bracket-visibility
-	%%\stemNeutral
+	%% m. 15: Lilypond's beaming is a little different than PR. Don't feel this is an issue.
 	\stemDown
 	\tuplet 6/4 {
 		fis[ cis' a' \change Staff = "solo_upper" c fis c']

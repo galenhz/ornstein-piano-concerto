@@ -24,7 +24,7 @@ Clarinet_I_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\time 4/4
 	\partCombineApart
 	\tuplet 6/4 { r16 gis' gis gis gis gis } \tuplet 6/4 { c( gis) gis gis gis gis }
-		\tuplet 6/4 { r16 gis gis gis gis gis } \tuplet 6/4 { c(_\markup "rit." gis) gis gis gis gis }
+		\tuplet 6/4 { r16 gis gis gis gis gis } \tuplet 6/4 { c( gis) gis gis gis gis }
 	\partCombineAutomatic
 }
 
@@ -41,11 +41,11 @@ Clarinet_II_mvmt_I_AB = \transpose c' bes \relative c' {
 	r8 a,( gis g4 fis8)
 	\time 4/4
 	\tuplet 6/4 { r16 gis' gis gis gis gis } \tuplet 6/4 { b( gis) gis gis gis gis }
-		\tuplet 6/4 { r16 gis gis gis gis gis } \tuplet 6/4 { b(_\markup "rit." gis) gis gis gis gis }
+		\tuplet 6/4 { r16 gis gis gis gis gis } \tuplet 6/4 { b( gis) gis gis gis gis }
 }
 
 %% m. 5: Supress third part's dynamics in score.
-%% FIXME: m. 6: III/IV dynamics missing from score entirely?
+%% FIXME: m. 6: III/IV dynamics missing from score entirely? partCombine treats it differently than 1/2.
 
 Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\tempo "con moto"

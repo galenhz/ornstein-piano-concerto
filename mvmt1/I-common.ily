@@ -11,9 +11,11 @@
 % AG = mm. 29-     (Rehersal 3)
 
 %% EDIT: The PR has "con moto" at m. 5. The parts have "moderato con moto" at m. 16.
-%%       The score has what *might* be a scratcy "con moto" at m. 5, and a stronger
+%%       The score has what *might* be a scratchy "con moto" at m. 5, and a stronger
 %%       "con moto" at m. 16 which might have been scratched out. Not sure what
 %%       represents the final intentions. For now, I'm sticking with the PR version.
+%% EDIT: m. 29 has another discrepancy. PR is "Appassionata, ma molto sostenuto" and
+%%       the score and parts are just "Appassionata"
 
 NULL_I_AA = { \tempo "Moderato assai" \time 3/4 R2.*3 r2.\fermata }
 NULL_I_AB = { \tempo "con moto" R2.*5 \time 4/4 R1 \time 3/4 R2. \time 4/4 R1 }

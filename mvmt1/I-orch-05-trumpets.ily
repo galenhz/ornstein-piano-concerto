@@ -9,6 +9,9 @@ Trumpet_I_mvmt_I_AA = \relative c'' {
 
 %%% Section AB - mm. 5-12
 
+%% FIXME: m. 7: The crescendo to the bar in 3 and 4 causes a blank staff to appear on next page.
+%%              Possibly a lilypond bug.
+
 Trumpet_I_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
 	R2.*5 \time 4/4 R1 \time 3/4 R2. \time 4/4

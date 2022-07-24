@@ -5,6 +5,9 @@
 
 %%% Section AB - mm. 5-12
 
+%% FIXME: m. 12, Need "crescendo to bar" for 2/3/tb like on many other parts
+%%               Also need to consider combining dynamics on 1/2 once I solve that bit.
+
 Trombone_I_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	R2.
@@ -17,7 +20,9 @@ Trombone_I_mvmt_I_AB = \relative c {
 	\time 3/4
 	e2.
 	\time 4/4
+	\partCombineApart
 	ees2 r8 bes'--\< c-- bes--\!
+	\partCombineAutomatic
 }
 
 Trombone_II_mvmt_I_AB = \relative c {
