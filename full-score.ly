@@ -54,10 +54,10 @@ iNameRight = \override InstrumentName.self-alignment-X = #RIGHT
 		>>
 		\new Staff = "EnglishHorn" \with { instrumentName = "English Horn" shortInstrumentName = "E.H." } \transpose f c' \keepWithTag #'Score \EnglishHorn_mvmt_I
 		\new StaffGroup = "StaffGroup_winds_clarinet" \with { instrumentName = "4 Clarinets in Bb" shortInstrumentName = "Cl.     " } <<
-			\new Staff = "Staff_Clarinets_1_2" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } \transpose bes c' \partCombine \Clarinet_I_mvmt \Clarinet_II_mvmt
-			\new Staff = "Staff Clarinets_3_4" \with { \iNameRight instrumentName = \iNameColumnIII_IV shortInstrumentName = \iNameColumnIII_IV } \transpose bes c' \partCombine \Clarinet_III_mvmt \Clarinet_IV_mvmt
+			\new Staff = "Staff_Clarinets_1_2" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } \transpose bes c' \partCombine \keepWithTag #'Score \Clarinet_I_mvmt_I \keepWithTag #'Score \Clarinet_II_mvmt_I
+			\new Staff = "Staff Clarinets_3_4" \with { \iNameRight instrumentName = \iNameColumnIII_IV shortInstrumentName = \iNameColumnIII_IV } \transpose bes c' \partCombine \keepWithTag #'Score \Clarinet_III_mvmt_I \keepWithTag #'Score \Clarinet_IV_mvmt_I
 		>>
-		\new Staff = "Staff_BassClarinet" \with { instrumentName = "Bass Clarinet" shortInstrumentName = "Bcl." } \transpose bes, c' \BassClarinet_mvmt
+		\new Staff = "Staff_BassClarinet" \with { instrumentName = "Bass Clarinet" shortInstrumentName = "Bcl." } \transpose bes, c' \BassClarinet_mvmt_I
 		\new StaffGroup = "StaffGroup_winds_bassoon" \with { instrumentName = "4 Bassoons" shortInstrumentName = "Bsn.     " }  <<
 			\new Staff = "Staff_Bassoon_I_II" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } \partCombine \Bassoon_I_mvmt \Bassoon_II_mvmt
 			\new Staff = "Staff_Bassoon_III_IV" \with { \iNameRight instrumentName = \iNameColumnIII_IV shortInstrumentName = \iNameColumnIII_IV } \partCombine \Bassoon_III_mvmt \Bassoon_IV_mvmt

@@ -14,6 +14,7 @@ Picc_mvmt_I_AB = \relative c'' {
 %% m. 5: Artificially lengthen bar length in flute I/II part so not to squash the crescendo.
 %% m. 6: Supress second part's dynamics in score, force first part down.
 %% EDIT: Perhaps instead I should change second's part crescendo to match stop point of the first?
+%% m. 12: Supress I's forte.
 
 Flute_I_mvmt_I_AB = \relative c'' {
 	\tempo "con moto"
@@ -29,7 +30,7 @@ Flute_I_mvmt_I_AB = \relative c'' {
 	R2.
 	\time 4/4
 	\partCombineApart
-	\tuplet 6/4 { r16 fis,\f fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis }
+	\tuplet 6/4 { r16 \tag #'Part fis,\f \tag #'Score fis fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis }
 		\tuplet 6/4 { r16 fis fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis }
 	\partCombineAutomatic
 }
@@ -51,6 +52,7 @@ Flute_II_mvmt_I_AB = \relative c' {
 }
 
 % m. 10: Supress III's dynamic in score.
+% m. 12: Supress III's forte.
 
 Flute_III_mvmt_I_AB = \relative c''' {
 	\tempo "con moto" 
@@ -63,7 +65,7 @@ Flute_III_mvmt_I_AB = \relative c''' {
 	R2.
 	\time 4/4
 	\partCombineApart
-	\tuplet 6/4 { r16 fis,\f fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis }
+	\tuplet 6/4 { r16 \tag #'Part fis,\f \tag #'Score fis fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis }
 		\tuplet 6/4 { r16 fis fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis }
 	\partCombineAutomatic
 }
