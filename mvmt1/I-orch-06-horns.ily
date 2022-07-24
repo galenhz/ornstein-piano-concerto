@@ -1,6 +1,9 @@
 %%% 8 Horns
+%%% (...only 7 in the first movement, though.)
 
-Horn_I_mvmt_AA = \transpose c' f \relative c'' {
+%%% Section AA - mm. 1-4
+
+Horn_I_mvmt_I_AA = \transpose c' f \relative c'' {
 	\tempo "Moderato assai"
     \time 3/4 
 	cis4\f g'4. e8~(\>
@@ -8,7 +11,9 @@ Horn_I_mvmt_AA = \transpose c' f \relative c'' {
 	r2. r2.\fermata
 }
 
-Horn_I_mvmt_AB = \transpose c' f \relative c'' {
+%%% Section AB - mm. 5-12
+
+Horn_I_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto" 
 	e4\mf fis4.(_\< gis8)\!
 	r4 r4 f,8( g)
@@ -27,7 +32,7 @@ Horn_I_mvmt_AB = \transpose c' f \relative c'' {
 	f,2\f bes
 }
 
-Horn_II_mvmt_AB = \transpose c' f \relative c' {
+Horn_II_mvmt_I_AB = \transpose c' f \relative c' {
 	\tempo "con moto"
 	e4\mf r4 r8 gis8
 	r8 a4.\>( bes4)\!
@@ -42,7 +47,7 @@ Horn_II_mvmt_AB = \transpose c' f \relative c' {
 	d,2\f d
 }
 
-Horn_III_mvmt_AB = \transpose c' f \relative c'' {
+Horn_III_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto"
 	a4\mf\< c4. c8\!
 	r2 f4\>(
@@ -57,7 +62,7 @@ Horn_III_mvmt_AB = \transpose c' f \relative c'' {
 	gis2\f bes\<\!
 }
 
-Horn_IV_mvmt_AB = \transpose c' f \relative c' {
+Horn_IV_mvmt_I_AB = \transpose c' f \relative c' {
 	\tempo "con moto"
 	c4\f\< ees( e)\!
 	r2 d4\>(
@@ -72,7 +77,7 @@ Horn_IV_mvmt_AB = \transpose c' f \relative c' {
 	f2 d
 }
 
-Horn_V_mvmt_AB = \transpose c' f \relative c'' {
+Horn_V_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
@@ -83,7 +88,7 @@ Horn_V_mvmt_AB = \transpose c' f \relative c'' {
 	r8 f\ff g f r8 f--\fff\< g-- f--\!
 }
 
-Horn_VI_mvmt_AB = \transpose c' f \relative c' {
+Horn_VI_mvmt_I_AB = \transpose c' f \relative c' {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
@@ -94,11 +99,13 @@ Horn_VI_mvmt_AB = \transpose c' f \relative c' {
 	r8 f\ff g f r8 f--\fff\< g-- f--\!
 }
 
-Horn_I_mvmt = { \Horn_I_mvmt_AA \Horn_I_mvmt_AB \NULL_I_AC }
-Horn_II_mvmt = { \NULL_I_AA \Horn_II_mvmt_AB \NULL_I_AC }
-Horn_III_mvmt = { \NULL_I_AA \Horn_III_mvmt_AB \NULL_I_AC }
-Horn_IV_mvmt = { \NULL_I_AA \Horn_IV_mvmt_AB \NULL_I_AC }
-Horn_V_mvmt = { \NULL_I_AA \Horn_V_mvmt_AB \NULL_I_AC }
-Horn_VI_mvmt = { \NULL_I_AA \Horn_VI_mvmt_AB \NULL_I_AC }
-Horn_VII_mvmt = { \NULL_I_AA \NULL_I_AB \NULL_I_AC }
-Horn_VIII_mvmt = { \NULL_I_AA \NULL_I_AB \NULL_I_AC }
+
+%%% Final assembly
+
+Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB \NULL_I_AC }
+Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB \NULL_I_AC }
+Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB \NULL_I_AC }
+Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB \NULL_I_AC }
+Horn_V_mvmt_I = { \NULL_I_AA \Horn_V_mvmt_I_AB \NULL_I_AC }
+Horn_VI_mvmt_I = { \NULL_I_AA \Horn_VI_mvmt_I_AB \NULL_I_AC }
+Horn_VII_mvmt_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC }

@@ -1,6 +1,11 @@
 %% Tympani
 
-Tympani_I_mvmt = \relative c {
+%%% Section AA - mm. 1-4
+%%% Tacet
+
+%%% Section AB - mm. 5-12
+
+Tympani_I_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
@@ -11,11 +16,11 @@ Tympani_I_mvmt = \relative c {
 	ees2:32\ppp\< a,2:32\!
 }
 
-Tympani_II_mvmt = \relative c {
+Tympani_II_mvmt_I_AB = \relative c {
 	d4\mf r2
 	d4\mf r2
 	R2.*2
-	% FIXME: ppp or mf?
+	% EDIT: ppp or mf? Part was changed to mf, and it seems to make sense.
 	c2.:32\mf
 	\time 4/4
 	R1
@@ -25,5 +30,8 @@ Tympani_II_mvmt = \relative c {
 	R1
 }
 
-Tympani_I_mvmt = { \clef bass \NULL_I_AA \Tympani_I_mvmt \NULL_I_AC }
-Tympani_II_mvmt = { \clef bass \NULL_I_AA \Tympani_II_mvmt \NULL_I_AC }
+
+%%% Final assembly
+
+Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB \NULL_I_AC }
+Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC }

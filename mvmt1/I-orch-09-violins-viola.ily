@@ -1,6 +1,11 @@
-%% Violin I
+%% Violin I/II/Viola
 
-Violin_I_mvmt_AB = \relative c' {
+%%% Section AA - mm. 1-4
+%%% Tacet
+
+%%% Section AB - mm. 5-12
+
+Violin_I_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
 	<a d a'>4\ff\< <e' b' e>4.\!\> cis'8\!
 	r8 a\< \tuplet 3/2 { gis( f b)\! } ees\> c~\!
@@ -16,11 +21,7 @@ Violin_I_mvmt_AB = \relative c' {
 		\tuplet 6/4 { bes( fis) fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis\! }
 }
 
-Violin_I_mvmt = { \NULL_I_AA \Violin_I_mvmt_AB \NULL_I_AC }
-
-%% Violin II
-
-Violin_II_mvmt_AB = \relative c' {
+Violin_II_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
 	f4\f\< <f b>4.\!\> <f a>8\!
 	r8\< d4. bes'4\!\>
@@ -35,11 +36,7 @@ Violin_II_mvmt_AB = \relative c' {
 	r8 bes, c bes r8 <bes' bes'>\f <c c'> <bes bes'>
 }
 
-Violin_II_mvmt = { \NULL_I_AA \Violin_II_mvmt_AB \NULL_I_AC }
-
-%% Viola
-
-Viola_mvmt_AB = \relative c' {
+Viola_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
 	a4\f\< e'4.(\> cis8)\!
 	r8 a\< \tuplet 3/2 { gis( f b) } ees--\> c~\!
@@ -54,4 +51,9 @@ Viola_mvmt_AB = \relative c' {
 	r8 bes c bes r8 bes,--\ff c-- bes--
 }
 
-Viola_mvmt= { \clef alto \NULL_I_AA \Viola_mvmt_AB \NULL_I_AC }
+
+%%% Final assembly
+
+Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC }
+Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC }
+Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC }

@@ -1,6 +1,11 @@
-%% Cello
+%% Cello/Bass
 
-Cello_mvmt_AB = \relative c {
+%%% Section AA - mm. 1-4
+%%% Tacet
+
+%%% Section AB - mm. 5-12
+
+Cello_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	<< { f4:32^"div." aes:32 a:32 fis:32 f:32 e:32 } { a,:32\f\< c:32\!\> cis:32\! a:32\< aes:32\!\> g:32\! } >>
 	\clef tenor
@@ -12,11 +17,7 @@ Cello_mvmt_AB = \relative c {
 	>>
 }
 
-Cello_mvmt = { \clef bass \NULL_I_AA \Cello_mvmt_AB \NULL_I_AC }
-
-%% Bass
-
-Bass_mvmt_AB = \relative c {
+Bass_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	d4:32\f\< f:32\!\> fis:32\!
 	d:32\< cis:32\!\> c:32\!
@@ -31,4 +32,7 @@ Bass_mvmt_AB = \relative c {
 	ees2:32 a,:32
 }
 
-Bass_mvmt = { \clef bass \NULL_I_AA \Bass_mvmt_AB \NULL_I_AC }
+%%% Final assembly
+
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB \NULL_I_AC }
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB \NULL_I_AC }
