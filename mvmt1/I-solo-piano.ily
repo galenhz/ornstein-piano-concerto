@@ -122,9 +122,9 @@ solo_lower_I_AC = \relative c, {
 	\stemNeutral
 }
 
-%%% This is as far as I've gotten
+%%% Section AD = mm. 16-20
 
-solo_upper_I_remain = \relative c' {
+solo_upper_I_AD = \relative c' {
 	% m. 16
 	\time 10/8
 	\tempo "con moto"
@@ -152,7 +152,36 @@ solo_upper_I_remain = \relative c' {
 	%\stemUp r8 <e,, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
 	%\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
 	%\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
+}
 
+solo_dynamics_I_AD = {
+	% mm. 16-18
+	s1 s4 s1 s4 s8 s1 s4
+	% m. 19
+	s1-\markup { \italic "poco più" \dynamic p \italic "e rit." } s4
+	% m. 20
+	s2 s2.\>
+}
+
+solo_lower_I_AD = \relative c {
+	% m. 16
+	\time 10/8
+	r8 e[ fis b c] \clef treble e[ fis g b c]
+	% m. 17
+	r8 g[ c d fis g g, c d fis g] \clef bass
+	% m. 18
+	\time 10/8
+	r8 e,,[ fis b c] \clef treble e[ fis g b c]
+	% m. 19
+	\clef bass
+	<e,,, a d>2~ <e a d>8 <b e a>4 <a d g>~ <a d g>8
+	% m. 20
+	<e' a d>2~ <e a d>8 <b e a>4 <a d g>~ <a d g>8
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c''' {
 	% mm. 21-24 - Rehersal 2
 	\mark #2
 	\time 4/4
@@ -1375,12 +1404,6 @@ solo_upper_I_remain = \relative c' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 16-18
-	s1 s4 s1 s4 s8 s1 s4
-	% m. 19
-	s1-\markup { \italic "poco più" \dynamic p \italic "e rit." } s4
-	% m. 20
-	s2 s2.\>
 	% mm. 21-24
 	s1\!\p s1 s1 s2 s4-\markup { rit. }
 	\once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
@@ -1494,20 +1517,7 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c {
-	% m. 16
-	\time 10/8
-	r8 e[ fis b c] \clef treble e[ fis g b c]
-	% m. 17
-	r8 g[ c d fis g g, c d fis g] \clef bass
-	% m. 18
-	\time 10/8
-	r8 e,,[ fis b c] \clef treble e[ fis g b c]
-	% m. 19
-	\clef bass
-	<e,,, a d>2~ <e a d>8 <b e a>4 <a d g>~ <a d g>8
-	% m. 20
-	<e' a d>2~ <e a d>8 <b e a>4 <a d g>~ <a d g>8
+solo_lower_I_remain = \relative c,, {
 	% mm. 21-23
 	% QUESTION: same notes, but clef changes at different spots in PR. I've imitated this
 	%           here. FC is consistantly handled like mm21. Regularize?
@@ -2276,11 +2286,11 @@ solo_lower_I_remain = \relative c {
 
 %%% Final assembly
 
-solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_remain }
-solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC }
+solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_remain }
+solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD }
 
-solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_remain }
-solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC }
+solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_remain }
+solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD }
 
-solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_remain }
-solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC }
+solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_remain }
+solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD }

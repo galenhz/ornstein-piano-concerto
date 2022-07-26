@@ -188,9 +188,9 @@ redux_lower_I_AC = {
 	R2.
 }
 
-%%% This is as far as I've gotten
+%%% Section AD = mm. 16-20
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_AD = \relative c' {
 	% m. 16
 	\time 10/8
 	\tempo "con moto"
@@ -205,6 +205,52 @@ redux_upper_I_remain = \relative c' {
 	<a d g> <fis b e> <b e a> <e a d> <b e a>
 	% m. 20
 	<a d g> <fis b e> <b e a> <e a d> <fis b e>
+}
+
+redux_dynamics_I_AD = {
+	% mm. 16-20
+	s1\mf s4 s1 s4 s8 s1 s4 s1-\markup { "poco più" \dynamic p "e rit." } s4 s2 s2.\>
+}
+redux_lower_I_AD = \relative c {
+	% m. 16
+	\time 10/8
+	<<
+		\new Voice {
+			\voiceOne e8[ fis] fis4 e g fis
+		}
+		\new Voice {
+			\voiceTwo c,2. e2
+		}
+	>>
+	% m. 17
+	\time 11/8
+	<<
+		\new Voice {
+			\voiceOne e'8[ fis] fis4 e c fis e8
+		}
+		\new Voice {
+			\voiceTwo c,2. a2~ a8
+		}
+	>>
+	% m. 18
+	\time 10/8
+	<<
+		\new Voice {
+			\voiceOne e''8[ fis] fis4 e g fis
+		}
+		\new Voice {
+			\voiceTwo c,2. e2
+		}
+	>>
+	% m. 19
+	e'4 d fis g fis
+	% m. 20
+	e d fis a g
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 21-24 - Rehersal 2
 	\mark #2
 	\time 4/4
@@ -1200,8 +1246,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 16-20
-	s1\mf s4 s1 s4 s8 s1 s4 s1-\markup { "poco più" \dynamic p "e rit." } s4 s2 s2.\>
 	% mm. 21-24
 	s1\!\p s1 s1 s2 s4-\markup { rit. }
         \once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
@@ -1294,44 +1338,10 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c {
-	% m. 16
-	\time 10/8
-	<<
-		\new Voice {
-			\voiceOne e8[ fis] fis4 e g fis
-		}
-		\new Voice {
-			\voiceTwo c,2. e2
-		}
-	>>
-	% m. 17
-	\time 11/8
-	<<
-		\new Voice {
-			\voiceOne e'8[ fis] fis4 e c fis e8
-		}
-		\new Voice {
-			\voiceTwo c,2. a2~ a8
-		}
-	>>
-	% m. 18
-	\time 10/8
-	<<
-		\new Voice {
-			\voiceOne e''8[ fis] fis4 e g fis
-		}
-		\new Voice {
-			\voiceTwo c,2. e2
-		}
-	>>
-	% m. 19
-	e'4 d fis g fis
-	% m. 20
-	e d fis a g
+redux_lower_I_remain = \relative c, {
 	% mm. 21-23
 	\time 4/4
-	<fis, cis' cis'>8 r8 r4 fis8 cis' a' cis
+	<fis cis' cis'>8 r8 r4 fis8 cis' a' cis
 	a' cis, a cis, fis, cis' a' cis
 	a' cis, a cis, fis, cis' a' cis
 	% m. 24
@@ -2101,7 +2111,7 @@ redux_lower_I_remain = \relative c {
 
 %%% Final assembly
 
-redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_remain }
-redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_remain }
-redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_remain }
+redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_remain }
+redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_remain }
+redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_remain }
 
