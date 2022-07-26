@@ -5,6 +5,8 @@
 
 %%% Section AB - mm. 5-12
 
+
+%% m. 8: Suppress MF for second trombone
 %% FIXME: m. 12: Score doesn't show crescendo for 3/4.
 %%               Also need to consider fixing articulations on 1/2 once I solve that bit.
 
@@ -12,7 +14,7 @@ Trombone_I_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	R2.
 	fis4(\f\> f e)\!
-	a2.\>\!
+	a2._\>\!
 	r8 gis\mf~ gis2
 	bes2.
 	\time 4/4
@@ -28,7 +30,7 @@ Trombone_I_mvmt_I_AB = \relative c {
 Trombone_II_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	R2.*3
-	r8 d\mf~ d2
+	r8 \tag #'Part d\mf~ \tag #'Score d~ d2
 	e2.
 	\time 4/4
 	cis1
