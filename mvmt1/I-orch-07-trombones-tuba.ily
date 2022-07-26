@@ -6,7 +6,7 @@
 %%% Section AB - mm. 5-12
 
 %% FIXME: m. 12: Score doesn't show crescendo for 3/4.
-%%               Also need to consider combining dynamics on 1/2 once I solve that bit.
+%%               Also need to consider fixing articulations on 1/2 once I solve that bit.
 
 Trombone_I_mvmt_I_AB = \relative c {
 	\tempo "con moto"
@@ -21,7 +21,7 @@ Trombone_I_mvmt_I_AB = \relative c {
 	e2.
 	\time 4/4
 	\partCombineApart
-	ees2 r8 bes'--\< c-- bes--\!
+	ees2 r8 bes'--_\< c-- bes--_\!
 	\partCombineAutomatic
 }
 

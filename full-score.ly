@@ -82,11 +82,11 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 		\new StaffGroup = "StaffGroup_winds_bassoon" \with { instrumentName = "4 Bassoons" shortInstrumentName = "Bsn.     " }  <<
 			\new Staff = "Staff_Bassoon_I_II" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } {
 				\setSoloTextI_II
-				\partCombine \Bassoon_I_mvmt_I \Bassoon_II_mvmt_I
+				\partCombine \keepWithTag #'Score \Bassoon_I_mvmt_I \keepWithTag #'Score \Bassoon_II_mvmt_I
 			}
 			\new Staff = "Staff_Bassoon_III_IV" \with { \iNameRight instrumentName = \iNameColumnIII_IV shortInstrumentName = \iNameColumnIII_IV } {
 				\setSoloTextIII_IV
-				\partCombine \Bassoon_III_mvmt_I \Bassoon_IV_mvmt_I
+				\partCombine \keepWithTag #'Score \Bassoon_III_mvmt_I \keepWithTag #'Score \Bassoon_IV_mvmt_I
 			}
 		>>
 		\new Staff = "Staff_Contrabassooon" \with { instrumentName = "Contrabassoon" shortInstrumentName = "Cbsn." } \Contrabassoon_mvmt_I
@@ -95,39 +95,39 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 		\new StaffGroup = "StaffGroup_brass_trumpet" \with { instrumentName = "4 Trumpets in C" shortInstrumentName = "Tpt.     " }  <<
 			\new Staff = "Staff_trumpet12" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } {
 				\setSoloTextI_II
-				\partCombine \Trumpet_I_mvmt_I \Trumpet_II_mvmt_I
+				\partCombine \keepWithTag #'Score \Trumpet_I_mvmt_I \keepWithTag #'Score \Trumpet_II_mvmt_I
 			}
 			\new Staff = "Staff_trumpet34" \with { \iNameRight instrumentName = \iNameColumnIII_IV shortInstrumentName = \iNameColumnIII_IV } {
 				\setSoloTextIII_IV
-				\partCombine \Trumpet_III_mvmt_I \Trumpet_IV_mvmt_I
+				\partCombine \keepWithTag #'Score \Trumpet_III_mvmt_I \keepWithTag #'Score \Trumpet_IV_mvmt_I
 			}
 		>>
 		\new StaffGroup = "StaffGroup_brass_horn" \with { instrumentName = "8 Horns in F    " shortInstrumentName = "Hn.     " }  <<
 			\new Staff = "Staff_hornI_II" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } {
 				\setSoloTextI_II
-				\partCombine \transpose f c' \Horn_I_mvmt_I \transpose f c' \Horn_II_mvmt_I
+				\partCombine \transpose f c' \keepWithTag #'Score \Horn_I_mvmt_I \transpose f c' \keepWithTag #'Score \Horn_II_mvmt_I
 			}
 			\new Staff = "Staff_HornIII_IV" \with { \iNameRight instrumentName = \iNameColumnIII_IV shortInstrumentName = \iNameColumnIII_IV } {
 				\setSoloTextIII_IV
-				\partCombine \transpose f c' \Horn_III_mvmt_I \transpose f c' \Horn_IV_mvmt_I
+				\partCombine \transpose f c' \keepWithTag #'Score \Horn_III_mvmt_I \transpose f c' \keepWithTag #'Score \Horn_IV_mvmt_I
 			}
 			\new Staff = "Staff_HornV_VI" \with { \iNameRight instrumentName = \iNameColumnV_VI shortInstrumentName = \iNameColumnV_VI } {
 				\setSoloTextV_VI
-				\partCombine \transpose f c' \Horn_V_mvmt_I \transpose f c' \Horn_VI_mvmt_I
+				\partCombine \transpose f c' \keepWithTag #'Score \Horn_V_mvmt_I \transpose f c' \keepWithTag #'Score \Horn_VI_mvmt_I
 			}
 			\new Staff = "Staff_HornVII_VIII" \with { \iNameRight instrumentName = \iNameColumnVII_VIII shortInstrumentName = "VII" } {
-				\transpose f c' \Horn_VII_mvmt_I
+				\transpose f c' \keepWithTag #'Score \Horn_VII_mvmt_I
 			}
 		>>
 		\new StaffGroup = "StaffGroup_brass_trm_tb" \with { instrumentName = \markup { \center-column { "3 Trombones   " "and Tuba   " } } shortInstrumentName = "Tbn.     "} <<
 			\new Staff = "Staff_TromboneI_II" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } {
 				\setSoloTextI_II
-				\partCombine \Trombone_I_mvmt_I \Trombone_II_mvmt_I
+				\partCombine \keepWithTag #'Score \Trombone_I_mvmt_I \keepWithTag #'Score \Trombone_II_mvmt_I
 			}
 			\new Staff = "Staff_TromboneIII_Tuba" \with { \iNameRight instrumentName = \markup \center-column { "III" "Tb." } shortInstrumentName = \markup \center-column { "III" "Tb." } } {
 				\set Staff.soloText = #"Solo III"
 				\set Staff.soloIIText = #"Tuba"
-				\partCombine \Trombone_III_mvmt_I \Tuba_mvmt_I
+				\partCombine \keepWithTag #'Score \Trombone_III_mvmt_I \keepWithTag #'Score \Tuba_mvmt_I
 			}
 		>>
 	>>
@@ -139,11 +139,19 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 		\new Staff = "solo_lower" \solo_lower_I_limited
 	>>
 	\new StaffGroup = "StaffGroup_strings" <<
-		\new Staff = "Staff_violinI" \with { instrumentName = "Violin I" shortInstrumentName = "Vn. I" } \Violin_I_mvmt_I
-		\new Staff = "Staff_violinII" \with { instrumentName = "Violin II" shortInstrumentName = "Vn. II" } \Violin_II_mvmt_I
-		\new Staff = "Staff_viola" \with { instrumentName = "Viola" shortInstrumentName = "Va." } \Viola_mvmt_I
-		\new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." } \Cello_mvmt_I
-		\new Staff = "Staff_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } \Bass_mvmt_I
+		\new StaffGroup = "StaffGroup_violinI" \with { instrumentName = "Violin I" shortInstrumentName = "Vn. I" \RemoveAllEmptyStaves } <<
+			\new Staff = "Staff_violinI" \keepWithTag #'Score \Violin_I_mvmt_I
+			\new Staff = "Staff_violinI_divisi_II" \keepWithTag #'Score \Violin_I_divisi_II_mvmt_I
+		>>
+		\new StaffGroup = "StaffGroup_violinII" \with { instrumentName = "Violin II" shortInstrumentName = "Vn. II" \RemoveAllEmptyStaves } <<
+			\new Staff = "Staff_violinII" \keepWithTag #'Score \Violin_II_mvmt_I
+			\new Staff = "Staff_violinII_divisi_II" \keepWithTag #'Score \Violin_II_divisi_II_mvmt_I
+		>>
+		\new StaffGroup = "StaffGroup_violinII" \with { instrumentName = "Viola" shortInstrumentName = "Va." \RemoveAllEmptyStaves } <<
+			\new Staff = "Staff_viola" \keepWithTag #'Score \Viola_mvmt_I
+		>>
+		\new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." } \keepWithTag #'Score \Cello_mvmt_I
+		\new Staff = "Staff_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } \keepWithTag #'Score \Bass_mvmt_I
 	>>
   >>
   \layout {
