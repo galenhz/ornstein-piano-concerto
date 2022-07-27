@@ -203,8 +203,9 @@ solo_dynamics_I_AE = {
 
 solo_lower_I_AE = \relative c,, {
 	% mm. 21-23
-	% QUESTION: same notes, but clef changes at different spots in PR. I've imitated this
-	%           here. FC is consistantly handled like mm21. Regularize?
+	% EDIT: same notes, but clef changes at different spots in PR. I've imitated this
+	%       here. Full Score is consistantly handled like mm21. Regularize? And if so,
+	%       in which direction?
 	<fis fis'>16 cis''[ fis bes c \clef treble cis fis bes] c[ bes fis cis \clef bass c bes fis cis]
 	<fis,, fis'> cis''[ fis bes c cis \clef treble fis bes] c[ bes fis \clef bass cis c bes fis cis]
 	<fis,, fis'> cis''[ fis bes c cis \clef treble fis bes] c[ bes fis cis \clef bass c bes fis cis]
@@ -298,10 +299,11 @@ solo_lower_I_AG = \relative c' {
 	% mm. 33-36
 	r8 <cis cis'> <cis g' bes cis> <d d'>
 	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
-	% QUESTION: unconvinced the bottom a-sharp on the second beat of m. 35 is
-	%           correct. Full score is smudgy here but doesn't seem to show it. Also
-	%           doesn't match m. 37 which otherwise repeats the pattern.
-	r8 <fis fis'> <ais cis ees a> <bes bes'>
+	% EDIT: unconvinced the bottom a-sharp on the second beat of m. 35 is
+	%       correct. Full score is a big smudgy here but doesn't show it. Also
+	%       doesn't match m. 37 which otherwise repeats the pattern. Going
+	%       with the pattern and following the full score.
+	r8 <fis fis'> <a cis ees a> <bes bes'>
 	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
 	% mm. 37-38
 	r8 <fis fis'> <a cis ees a> <bes bes'>
