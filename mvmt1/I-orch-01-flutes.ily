@@ -82,11 +82,29 @@ Flute_IV_mvmt_I_AB = \relative c'' {
 		\tuplet 6/4 { r16 fis fis fis fis fis } \tuplet 6/4 { a( fis) fis fis fis fis }
 }
 
+%%% Section AD = mm. 16-20
+
+Flute_I_mvmt_I_AD_AE = \relative c'' {
+	\time 10/8
+	g8[(\f a] a4 g) b(\> a)\!
+	\time 11/8
+	g8[(\< a])\! a4(\> g)\! e(\> a g8)\!
+	\time 10/8
+	g8[( a] a4 g) b( a)
+	g(-\markup { \italic "poco più" \dynamic p \italic "e rit." } e a) d( a)
+	g(\> e a) d( e)
+	% AE
+	\mark #2
+	\time 4/4
+	fis\!\p r4 r2
+	R1*2 \tempo "più agitato" R1
+}
+
 
 %%% Final assembly
 
-Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC }
-Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC }
-Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC }
-Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC }
-Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC }
+Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
+Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE }
+Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
+Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
+Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD }

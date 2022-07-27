@@ -157,14 +157,31 @@ Viola_mvmt_I_AB = \relative c' {
 	r8 bes c bes r8 bes,--\ff c-- bes--
 }
 
+%%% Section AD = mm. 16-20
+
+%% FIXME: Trill constructs too large.
+
+trSh = ^\trill^\markup { \sharp }
+trNat = ^\trill^\markup { \natural }
+
+Viola_mvmt_I_AD = \relative c {
+	\time 10/8
+	e8[(\trSh_\markup { \dynamic mf "con sord." } fis])\trNat fis4(\trNat e)\trSh g(\trNat fis)\trNat
+	\time 11/8
+	e8[(\trSh fis])\trNat fis4(\trNat e)\trSh c(\trNat fis\trNat e8)\trSh
+	\time 10/8
+	e8[(\trSh fis])\trNat fis4(\trNat e)\trSh g(\trNat fis)\trNat
+	e(\trSh-\markup { \italic "poco più" \dynamic p \italic "e rit." } d\trNat fis)\trNat g(\trNat fis)\trNat
+	e(\trSh d\trNat fis)\trNat a(\trNat g)\trNat
+}
 
 
 %%% Final assembly
 
-Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC }
-Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC }
+Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
+Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
 
-Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC }
-Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC }
+Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
+Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
 
-Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC }
+Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD }

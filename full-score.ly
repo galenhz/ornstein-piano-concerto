@@ -20,6 +20,7 @@
 
 \paper {
 	#(set-paper-size "a3")
+	system-separator-markup = \slashSeparator
 }
 
 \header {

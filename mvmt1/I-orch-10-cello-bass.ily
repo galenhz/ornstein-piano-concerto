@@ -51,7 +51,31 @@ Bass_mvmt_I_AB_AC  = \relative c {
 	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
 
+%%% Section AD = mm. 16-20
+
+%% EDIT: Should I copy bass dynamics into cello part?
+
+Cello_mvmt_I_AD = \relative c {
+	\time 10/8
+	g2.\mf b2\>
+	\time 11/8
+	g2.\! e2~ e8
+	\time 10/8
+	g2. b2
+	R1*10/8*2
+}
+
+Bass_mvmt_I_AD = \relative c {
+	\time 10/8
+	c2.\mf e2\>
+	\time 11/8
+	c2.\!\espressivo a2~\> a8
+	\time 10/8
+	c2.\! e2
+	R1*10/8*2
+}
+
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC }
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC }
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD }
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD }

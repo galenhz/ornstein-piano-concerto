@@ -14,6 +14,7 @@
 %%       The score has what *might* be a scratchy "con moto" at m. 5, and a stronger
 %%       "con moto" at m. 16 which might have been scratched out. Not sure what
 %%       represents the final intentions. For now, I'm sticking with the PR version.
+%% EDIT: m. 19: put the "pocu piu/rit" in every part? Some parts have it under the rest.
 %% EDIT: m. 29 has another discrepancy. PR is "Appassionata, ma molto sostenuto" and
 %%       the score and parts are just "Appassionata"
 
