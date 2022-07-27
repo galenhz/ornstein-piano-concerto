@@ -247,10 +247,9 @@ redux_lower_I_AD = \relative c {
 	% m. 20
 	e d fis a g
 }
+%%% Section AE = mm. 21-24
 
-%%% This is as far as I've gotten
-
-redux_upper_I_remain = \relative c' {
+redux_upper_I_AE = \relative c' {
 	% mm. 21-24 - Rehersal 2
 	\mark #2
 	\time 4/4
@@ -258,8 +257,30 @@ redux_upper_I_remain = \relative c' {
 	cis2 a8 gis~ gis16 g fis a
 	fis2 e'8 ees~ ees16 d cis e
 	<g, cis g'>8 r8 r4 r2
+}
+
+redux_dynamics_I_AE = {
+	% mm. 21-24
+	s1\!\p s1 s1 s2 s4-\markup { rit. }
+        \once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
+}
+
+redux_lower_I_AE = \relative c, {
+	% mm. 21-23
+	\time 4/4
+	<fis cis' cis'>8 r8 r4 fis8 cis' a' cis
+	a' cis, a cis, fis, cis' a' cis
+	a' cis, a cis, fis, cis' a' cis
+	% m. 24
+	\repeat tremolo 8 { ees,,,32 ees' }
+	\repeat tremolo 8 { d, d' }
+}
+
+%%% Section AF = mm. 25-28
+
+redux_upper_I_AF = \relative c {
 	% m. 25-26
-	\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis, d'>32 <g c> } \stemNeutral
+	\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis d'>32 <g c> } \stemNeutral
 		\change Staff = "redux_upper" \repeat tremolo 4 { <fis' d'> <g c> }
 		\change Staff = "redux_lower" \stemUp \repeat tremolo 2 { <fis, d'> <g c> } \stemNeutral
 	\change Staff = "redux_upper" \repeat tremolo 2 { <a f'> <b ees> }
@@ -278,17 +299,40 @@ redux_upper_I_remain = \relative c' {
 	\change Staff = "redux_upper" \repeat tremolo 2 { <fis' des> <g c> }
 	% m. 28
 	%% FIXME: Initial rest placement completely wrong. Changed but still needs work.
-	<< \new Voice {
-		\voiceOne r8 <g, cis fis g> r <g' cis fis g> r <g' cis fis g>
-	}
-	\new Voice {
-		\voiceTwo r8 \change Staff = "redux_lower" <cis,,, fis>
-			\change Staff = "redux_upper" r <cis' fis> r <cis' fis>
-	} >>
+	<<
+		\new Voice {
+			\voiceOne r8 <g, cis fis g> r <g' cis fis g> r <g' cis fis g>
+		}
+		\new Voice {
+			\voiceTwo r8 \change Staff = "redux_lower" <cis,,, fis>
+				\change Staff = "redux_upper" r <cis' fis> r <cis' fis>
+		}
+	>>
+}
+
+redux_dynamics_I_AF = {
+	% mm. 25-28
+	s1 s1 s2-\markup { molto cresc.} s2.
+}
+
+redux_lower_I_AF = \relative c, {
+	% mm. 25-28
+	\stemDown <c g'>2 <ees a>
+	<c g'> <ees a>
+	\time 2/4
+	<a, a'>4 <fis fis'>
+	\time 3/4
+	<ees ees'>2.
+}
+
+%%% Section AG = mm. 29-38   (Rehersal 3)
+
+redux_upper_I_AG = \relative c,, {
+	% FIXME: Too many letters. Deploy strategic repeats.
 	% m. 29 - Rehersal 3
 	\mark #3
 	\time 2/4
-	\change Staff = "redux_lower" <d,,,, d'>16
+	\change Staff = "redux_lower" <d d'>16
 	\change Staff = "redux_upper" <d''' d'>
 	\change Staff = "redux_lower" <g,, g'>
 	\change Staff = "redux_upper" <g'' g'>
@@ -308,14 +352,14 @@ redux_upper_I_remain = \relative c' {
 	\change Staff = "redux_lower" <d,, d'>
 	\change Staff = "redux_upper" <d'' d'>
 	% m. 31
-        \change Staff = "redux_lower" <ees,,,, ees'>16
-        \change Staff = "redux_upper" <ees''' ees'>
-        \change Staff = "redux_lower" <a,, a'>
-        \change Staff = "redux_upper" <a'' a'>
-        \change Staff = "redux_lower" <cis,, cis'>
-        \change Staff = "redux_upper" <cis'' cis'>
-        \change Staff = "redux_lower" <f,, f'>
-        \change Staff = "redux_upper" <f'' f'>
+    \change Staff = "redux_lower" <ees,,,, ees'>16
+    \change Staff = "redux_upper" <ees''' ees'>
+    \change Staff = "redux_lower" <a,, a'>
+    \change Staff = "redux_upper" <a'' a'>
+    \change Staff = "redux_lower" <cis,, cis'>
+    \change Staff = "redux_upper" <cis'' cis'>
+    \change Staff = "redux_lower" <f,, f'>
+    \change Staff = "redux_upper" <f'' f'>
 	% m. 32
 	\change Staff = "redux_lower" <e,, e'>32
 	\change Staff = "redux_upper" <e'' e'>
@@ -393,11 +437,33 @@ redux_upper_I_remain = \relative c' {
 	\change Staff = "redux_upper" <bes'' bes'>
 	\change Staff = "redux_lower" <aes,, aes'>
 	\change Staff = "redux_upper" <aes'' aes'>
+}
+
+redux_dynamics_I_AG = {
+	% mm. 29-38
+	s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
+}
+
+redux_lower_I_AG = \relative c,, {
+	% mm. 29-38 Rehersal 3
+	\time 2/4
+	% FIXME: mergeDifferentlyHeadedOn only half-working!
+	\mergeDifferentlyHeadedOn
+	\override Tie.direction = #-1
+	<d d'>2~ <d d'> <ees ees'>~ <ees ees'>
+	<d d'>2~ <d d'> <ees ees'>~ <ees ees'> <ees ees'>~ <ees ees'>
+	\revert Tie.direction
+	\stemNeutral
+}
+
+%%% Section AH = mm. 39-54   (Rehersal 4)
+
+redux_upper_I_AH = \relative c' {
 	% mm. 39-43 - Rehersal 4
 	\mark #4
 	\time 3/4
 	\tempo "L'istesso Tempo"
-	\repeat unfold 5 { <d, a' d>4 <ees bes' ees>8 <d a' d> <fis cis' fis> <ees bes' ees> }
+	\repeat unfold 5 { <d a' d>4 <ees bes' ees>8 <d a' d> <fis cis' fis> <ees bes' ees> }
 	% m. 44
 	<d a' d>8 r <c fis c'>4 <fis, c' fis>8 <c' fis c'>
 	% mm. 45-49
@@ -411,6 +477,38 @@ redux_upper_I_remain = \relative c' {
 	% FIXME: Note clusters, how do they work?
 	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' cis fis g>
 	r4 <a, ees' a>8 <c' c' cis> r4
+}
+
+redux_dynamics_I_AH = {
+	% m. 39
+	s2.-\markup { \dynamic p \italic subito }
+	% mm. 40-45
+	s2. s2. s2. s2. s2. s4 s2-\cresc
+	% mm. 46-54
+	s2. s2. s2. s4\! s4 s4\ff s4 s2\cresc s2. s2. s2.\!\fff s2.
+}
+
+redux_lower_I_AH = \relative c, {
+	% mm. 39-43 - Rehersal 4
+	\time 3/4
+	\repeat unfold 5 { <d a' d>4 <ees bes' ees>8 <d a' d> <fis cis' fis> <ees bes' ees> }
+	% m. 44
+	<d a' d>8 r <c fis c'>4 <fis, c' fis>8 <c' fis c'>
+	% mm. 45-49
+	\repeat unfold 5 { <des g des'> <c fis c'> <c fis c'>4 <fis, c' fis>8 <c' fis c'> }
+	% m. 50
+	<des g des'> <c fis c'> <a ees' a>4 <ees' a ees'>8 <a, a'>
+	% mm. 51-52
+	\repeat unfold 2 { <f' f'>8 <ees ees'> <a, ees' a>4 <ees' a ees'>8 <a, a'> }
+	% mm. 53-54
+	% FIXME: Note clusters, how do they work?
+	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' g'>
+	r4 <a, ees' a>8 <c' cis c'> r4
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c {
 	% mm. 55-62 - Rehersal 5
 	\mark #5
 	\tempo "Meno mosso"
@@ -418,7 +516,7 @@ redux_upper_I_remain = \relative c' {
 	\clef bass
 	\set Staff.timeSignatureFraction = 12/8
 	\scaleDurations 2/3 {
-		g,,2.~ g4 fis8 ees[ c r16 d]
+		g2.~ g4 fis8 ees[ c r16 d]
 		fis2.~ fis4 g8 gis4~ gis16 cis
 		bes2.~ bes4 a8 gis[ d r16 ees]
 		fis2.~ \tuplet 2/3 { fis8 g } gis4~ gis16 r16
@@ -1246,19 +1344,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 21-24
-	s1\!\p s1 s1 s2 s4-\markup { rit. }
-        \once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
-	% mm. 25-28
-	s1 s1 s2-\markup { molto cresc.} s2.
-	% mm. 29-38
-	s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
-	% m. 39
-	s2.-\markup { \dynamic p \italic subito }
-	% mm. 40-45
-	s2. s2. s2. s2. s2. s4 s2-\cresc
-	% mm. 46-54
-	s2. s2. s2. s4\! s4 s4\ff s4 s2\cresc s2. s2. s2.\!\fff s2.
 	% mm. 55-62 - Rehersal 5
 	s1\mp s1 s1 s1 s1 s1 s1 s1
 	% mm. 63-69 - Rehersal 6
@@ -1339,50 +1424,11 @@ redux_dynamics_I_remain = {
 }
 
 redux_lower_I_remain = \relative c, {
-	% mm. 21-23
-	\time 4/4
-	<fis cis' cis'>8 r8 r4 fis8 cis' a' cis
-	a' cis, a cis, fis, cis' a' cis
-	a' cis, a cis, fis, cis' a' cis
-	% m. 24
-	\repeat tremolo 8 { ees,,,32 ees' }
-	\repeat tremolo 8 { d, d' }
-	% mm. 25-28
-	\stemDown <c g'>2 <ees a>
-	<c g'> <ees a>
-	\time 2/4
-	<a, a'>4 <fis fis'>
-	\time 3/4
-	<ees ees'>2.
-	% mm. 29-38 Rehersal 3
-	\time 2/4
-	% FIXME: mergeDifferentlyHeadedOn only half-working!
-	\mergeDifferentlyHeadedOn
-	\override Tie.direction = #-1
-	<d d'>2~ <d d'> <ees ees'>~ <ees ees'>
-	<d d'>2~ <d d'> <ees ees'>~ <ees ees'> <ees ees'>~ <ees ees'>
-	\revert Tie.direction
-	\stemNeutral
-	% mm. 39-43 - Rehersal 4
-	\time 3/4
-	\repeat unfold 5 { <d' a' d>4 <ees bes' ees>8 <d a' d> <fis cis' fis> <ees bes' ees> }
-	% m. 44
-	<d a' d>8 r <c fis c'>4 <fis, c' fis>8 <c' fis c'>
-	% mm. 45-49
-	\repeat unfold 5 { <des g des'> <c fis c'> <c fis c'>4 <fis, c' fis>8 <c' fis c'> }
-	% m. 50
-	<des g des'> <c fis c'> <a ees' a>4 <ees' a ees'>8 <a, a'>
-	% mm. 51-52
-	\repeat unfold 2 { <f' f'>8 <ees ees'> <a, ees' a>4 <ees' a ees'>8 <a, a'> }
-	% mm. 53-54
-	% FIXME: Note clusters, how do they work?
-	<f' f'> <ees ees'> r4 <a, ees' a>8 <g' g'>
-	r4 <a, ees' a>8 <c' cis c'> r4
         % mm. 55-62 - Rehersal 5
         \time 4/4
         \set Staff.timeSignatureFraction = 12/8
         \scaleDurations 2/3 {
-		g,2.~ g4 fis8 ees[ c r16 d]
+		g2.~ g4 fis8 ees[ c r16 d]
 		fis2.~ fis4 g8 gis4~ gis16 cis
 		bes2.~ bes4 a8 gis[ d r16 ees]
 		fis2.~ \tuplet 2/3 { fis8 g } gis4~ gis16 <d' d'>
@@ -2111,7 +2157,10 @@ redux_lower_I_remain = \relative c, {
 
 %%% Final assembly
 
-redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_remain }
-redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_remain }
-redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_remain }
+redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
+		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_remain }
+redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
+		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_remain }
+redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
+		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_remain }
 

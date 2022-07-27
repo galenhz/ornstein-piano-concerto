@@ -124,6 +124,11 @@ solo_lower_I_AC = \relative c, {
 
 %%% Section AD = mm. 16-20
 
+%% FIXME: ...maybe? m. 19-20 in PR splits the right hand between the staves, but it gets in the way
+%%        of the dynamics. Should I care?
+%%        Might backport the version from later in the movement, but they might have been written
+%%        differently for a reason.
+
 solo_upper_I_AD = \relative c' {
 	% m. 16
 	\time 10/8
@@ -139,19 +144,6 @@ solo_upper_I_AD = \relative c' {
 	a,,[ b d e g a] d[ e g a]
 	% m. 20
 	a,,[ b d e g a] d[ e g a]
-
-	% FIXME: Backport this better version of the above. I did it like this in the recap, but it runs up
-	% against the dynamics in the center.
-	% mm. 16-20
-	%\time 10/8
-	%\tempo "con moto"
-	%\stemUp r8 <e, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
-	%\time 11/8
-	%\ottava #1 r8 <g g'>[ <c c'> <d d'> <fis fis'> <g g'> <g, g'> <c c'> <d d'> <fis fis'> <g g'>] \ottava #0
-	%\time 10/8
-	%\stemUp r8 <e,, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
-	%\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
-	%\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
 }
 
 solo_dynamics_I_AD = {
@@ -179,9 +171,9 @@ solo_lower_I_AD = \relative c {
 	<e' a d>2~ <e a d>8 <b e a>4 <a d g>~ <a d g>8
 }
 
-%%% This is as far as I've gotten
+%%% Section AE = mm. 21-24
 
-solo_upper_I_remain = \relative c''' {
+solo_upper_I_AE = \relative c''' {
 	% mm. 21-24 - Rehersal 2
 	\mark #2
 	\time 4/4
@@ -201,6 +193,29 @@ solo_upper_I_remain = \relative c''' {
 		}
 	>>
 	<a, d g bis>8 <c e a c> <d fis bes d>-^ <e gis c e>-^
+}
+
+solo_dynamics_I_AE = {
+	% mm. 21-24
+	s1\!\p s1 s1 s2 s4-\markup { rit. }
+	\once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
+}
+
+solo_lower_I_AE = \relative c,, {
+	% mm. 21-23
+	% QUESTION: same notes, but clef changes at different spots in PR. I've imitated this
+	%           here. FC is consistantly handled like mm21. Regularize?
+	<fis fis'>16 cis''[ fis bes c \clef treble cis fis bes] c[ bes fis cis \clef bass c bes fis cis]
+	<fis,, fis'> cis''[ fis bes c cis \clef treble fis bes] c[ bes fis \clef bass cis c bes fis cis]
+	<fis,, fis'> cis''[ fis bes c cis \clef treble fis bes] c[ bes fis cis \clef bass c bes fis cis]
+	% m. 24
+	\tuplet 15/8 { <ees,, ees'> a'[ ees' bes' a, ees' bes' a ees' \clef treble bes' ees, \clef bass a, bes ees, a,] }
+	\tuplet 3/2 { r8 <fis' bes fis'> <bes, bes'> } \clef treble <cis' e g cis> <d fis bes d>
+}
+
+%%% Section AF = mm. 25-28
+
+solo_upper_I_AF = \relative c'' {
 	% mm. 25-26
 	\tempo "Appasionato, ma molto sostenuto"
 	<fis d' fis>8 <f des' f>4 \slashedGrace <e c' e>8 \tuplet 3/2 { <e c' e>16 <ees ces' ees> <fis d' fis> }
@@ -225,6 +240,33 @@ solo_upper_I_remain = \relative c''' {
 	}
 	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
 	\ottava #1 g'8.-\LH_mark \once \override TextScript.X-offset = #-1.0 \ottava #0 g,16-\RH_mark
+}
+
+solo_dynamics_I_AF = {
+	% mm. 25-28
+	s1\ff s1 s2-\markup { molto cresc. } s2.
+}
+
+solo_lower_I_AF = \relative c {
+	% mm. 25-26
+	\clef bass <fis d' fis>8 <f des' f>4 \slashedGrace <e c' e>8 \tuplet 3/2 { <e c' e>16 <ees ces' ees> <fis d' fis> }
+		<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
+	\clef treble <b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
+		<d bes' d> <des beses' des>  <c aes' c>
+		\tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>~
+		<e c' e> \beamCutR <ees ces' ees> \beamCutL \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
+	% m. 27
+	\time 2/4
+        \tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \set stemLeftBeamCount= #1 <f des' f> <e c' e>
+		\tuplet 3/2 { <g ees' g> <gis e' gis> \beamCutR <b g' b> } \beamCutL \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
+	% m. 28
+	\time 3/4
+	s2.
+}
+
+%%% Section AG = mm. 29-38   (Rehersal 3)
+
+solo_upper_I_AG = \relative c''' {
 	% mm. 29-32 - Rehersal 3
 	\mark #3
 	\time 2/4
@@ -237,13 +279,45 @@ solo_upper_I_remain = \relative c''' {
 	\repeat unfold 4 { \tuplet 3/2 { <a, g' a>16 ees' <a, g' a> } \tuplet 3/2 { <cis cis'>8 ees16 } }
 	% mm. 37-38
 	\repeat unfold 4 { \tuplet 3/2 { <a, g' a>16 ees' <a, g' a> } \tuplet 3/2 { <cis cis'>8 ees16 } }
+}
+
+solo_dynamics_I_AG = {
+	% m. 29 - Rehersal 3
+	s2-\markup { \dynamic ff \italic "sempre" }
+	% mm. 30-38
+	s2*9
+}
+
+solo_lower_I_AG = \relative c' {
+	% mm. 29-32 - Rehersal 3
+	\time 2/4
+	r8 <cis cis'> <cis g' bes cis> <d d'>
+	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
+	r8 <a cis ees a> <c c'> <cis cis'>
+	<d fis a d>16 <cis cis'> <bes bes'>8 <bes bes'>4
+	% mm. 33-36
+	r8 <cis cis'> <cis g' bes cis> <d d'>
+	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
+	% QUESTION: unconvinced the bottom a-sharp on the second beat of m. 35 is
+	%           correct. Full score is smudgy here but doesn't seem to show it. Also
+	%           doesn't match m. 37 which otherwise repeats the pattern.
+	r8 <fis fis'> <ais cis ees a> <bes bes'>
+	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
+	% mm. 37-38
+	r8 <fis fis'> <a cis ees a> <bes bes'>
+	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
+}
+
+%%% Section AH = mm. 39-54   (Rehersal 4)
+
+solo_upper_I_AH = \relative c'' {
 	% m. 39 - Rehersal 4
 	\mark #4
 	\time 3/4
 	\tempo "L'istesso Tempo"
 	\override Beam.breakable = ##t
 	\ottava #0
-	r8 <d, a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
+	r8 <d a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
 	% m. 40
 	\ottava #1
 	<f c' f> <gis dis' gis>] <a e' a>8[ <bes f' bes> <cis gis' cis> <d a' d>
@@ -286,6 +360,68 @@ solo_upper_I_remain = \relative c''' {
 		\change Staff = "solo_upper" <e'' gis c e>32
 		\change Staff = "solo_lower" <e,, gis c e>16.
 		\change Staff = "solo_upper" r4 \ottava #0 r4
+}
+
+solo_dynamics_I_AH = {
+	% m. 39 - Rehersal 4
+	s2.-\markup { \dynamic p \italic subito }
+	% m. 40-45
+	% EDIT: full score shows the crescendo starting on beat 2 of bar 45. PR shows it
+	%	    on beat 3. Which should it be?
+	s2. s2. s2. s2. s2. s4 s2-\cresc
+	% mm. 46-52
+	s2. s2. s2. s4\! s4\ff s4 s2. s2. s2.
+	% mm. 53-54
+	% FIXME: Not convinced this override looks good. Perhaps follow PR and sqash it down
+	%        into the lower staff?
+	s4 \once \override TextScript.X-offset = #-5.0 s2-\markup { \dynamic fff } s2.
+}
+
+solo_lower_I_AH = \relative c {
+	% m. 39 - Rehersal 4
+	% EDIT: obvious error in PR, missing bass clef transition
+	\time 3/4
+	\clef bass
+	\override Beam.breakable = ##t
+	r8 <d a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
+	% m. 40
+	<f c' f> <gis dis' gis>] \clef treble <a e' a>8[ <bes f' bes> <cis gis' cis> <d a' d>
+	% m. 41
+	<ees bes' ees>16 <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>] r <bes f' bes>[
+	% m. 42
+	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
+	% m. 43
+	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
+		<cis gis' cis> \beamCutR <bes f' bes>
+	% m .44
+	\beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e' a> <fis cis' fis>] r8 \clef bass <d a' d>[ <ees bes' ees> <d a' d>
+	% m. 45
+	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] \clef treble <a e' a>[ <bes f' bes>
+	% m. 46
+	<cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8 <d a' d> <cis gis' cis>]
+	% m. 47
+	r8 <bes f' bes>[ <cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8
+	% m. 48
+	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
+	% m. 49
+	r16 <bes f' bes>[ \beamCutL <cis gis' cis> \beamCutR <bes f' bes> \beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e'a> <fis cis' fis>]
+		<a e' a>8[ <e' b' e>
+	% m. 50
+	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
+	% m. 51
+	<gis dis' gis> <f c' f> <ees bes' ees>16 <f f'> <ees bes' ees> <c c'>] <a e' a>8[ <e' b' e>
+	% m. 52
+	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c c'> <bes f' bes>8 <g d' g>] <a e' a>[ <ees' bes' ees>16 r32 <f c' f>]
+	\revert Beam.breakable
+	% m. 53
+	<d a' d>8[ <b fis' b>] s4 r4
+	% m. 54
+	s4 r4 r4
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c'''' {
 	% mm. 55-58 - Rehersal 5
 	% QUESTION: Inconsistant handling of the ottavas between measures 55 and 57.
 	%           My repeat structure copies 55's handling in both cases. Maybe not?
@@ -295,7 +431,7 @@ solo_upper_I_remain = \relative c''' {
 	\time 4/4
 	\tempo "Meno mosso"
 	\repeat unfold 2 {
-		\ottava #1 r16 <a'' cis>[ <g bes> \beamCutR <fis bes> \beamCutL <cis g'> <c fis> <bes cis> \ottava #0
+		\ottava #1 r16 <a cis>[ <g bes> \beamCutR <fis bes> \beamCutL <cis g'> <c fis> <bes cis> \ottava #0
 			\beamCutR <a cis> \beamCutL <g bes> <fis bes> <cis g'> \beamCutR <c fis> \beamCutL <bes cis> <a cis> <g bes>8]
 		\ottava #1 r16 <c'' fis>[ <bes cis> \beamCutR <a cis> \beamCutL <g bes> <fis bes> <cis g'> \beamCutR <c fis>
 			\ottava #0 \beamCutL <bes cis> <a cis> <g bes> \beamCutR <fis bes> \beamCutL <cis g'> <c fis> <bes cis>8]
@@ -1404,27 +1540,6 @@ solo_upper_I_remain = \relative c''' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 21-24
-	s1\!\p s1 s1 s2 s4-\markup { rit. }
-	\once \override TextScript.X-offset = #-3.0 s4-\markup { molto cresc. }
-	% mm. 25-28
-	s1\ff s1 s2-\markup { molto cresc. } s2.
-	% m. 29 - Rehersal 3
-	s2-\markup { \dynamic ff \italic "sempre" }
-	% mm. 30-38
-	s2 s2 s2 s2 s2 s2 s2 s2 s2
-	% m. 39 - Rehersal 4
-	s2.-\markup { \dynamic p \italic subito }
-	% m. 40-45
-	% QUESTION: full score shows the crescendo starting on beat 2 of bar 45. PR shows it
-	%	    on beat 3. Which should it be?
-	s2. s2. s2. s2. s2. s4 s2-\cresc
-	% mm. 46-52
-	s2. s2. s2. s4\! s4\ff s4 s2. s2. s2.
-	% mm. 53-54
-	% FIXME: Not convinced this override looks good. Perhaps follow PR and sqash it down
-	%        into the lower staff?
-	s4 \once \override TextScript.X-offset = #-5.0 s2-\markup { \dynamic fff } s2.
 	% mm. 55-62 - Rehersal 5
 	s1\mp s1 s1 s1 s1 s1 s1 s1
 	% mm. 63-69 - Rehersal 6
@@ -1517,86 +1632,7 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c,, {
-	% mm. 21-23
-	% QUESTION: same notes, but clef changes at different spots in PR. I've imitated this
-	%           here. FC is consistantly handled like mm21. Regularize?
-	<fis fis'>16 cis''[ fis bes c \clef treble cis fis bes] c[ bes fis cis \clef bass c bes fis cis]
-	<fis,, fis'> cis''[ fis bes c cis \clef treble fis bes] c[ bes fis \clef bass cis c bes fis cis]
-	<fis,, fis'> cis''[ fis bes c cis \clef treble fis bes] c[ bes fis cis \clef bass c bes fis cis]
-	% m. 24
-	\tuplet 15/8 { <ees,, ees'> a'[ ees' bes' a, ees' bes' a ees' \clef treble bes' ees, \clef bass a, bes ees, a,] }
-	\tuplet 3/2 { r8 <fis' bes fis'> <bes, bes'> } \clef treble <cis' e g cis> <d fis bes d>
-	% mm. 25-26
-	\clef bass <fis, d' fis>8 <f des' f>4 \slashedGrace <e c' e>8 \tuplet 3/2 { <e c' e>16 <ees ces' ees> <fis d' fis> }
-		<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
-	\clef treble <b g' b> <c aes' c> <ees ces' ees>8~ <ees ces' ees>16
-		<d bes' d> <des beses' des>  <c aes' c>
-		\tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>~
-		<e c' e> \beamCutR <ees ces' ees> \beamCutL \tuplet 3/2 { <d bes'd > <b g' b> <d bes' d> }
-	% m. 27
-	\time 2/4
-        \tuplet 3/2 { <e c' e> <f des' f> \beamCutR <gis e' gis> } \set stemLeftBeamCount= #1 <f des' f> <e c' e>
-		\tuplet 3/2 { <g ees' g> <gis e' gis> \beamCutR <b g' b> } \beamCutL \tuplet 3/2 { <a f' a> <bes g'bes> <cis gis' cis> }
-	% m. 28
-	\time 3/4
-	s2.
-	% mm. 29-32 - Rehersal 3
-	\time 2/4
-	r8 <cis, cis'> <cis g' bes cis> <d d'>
-	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
-	r8 <a cis ees a> <c c'> <cis cis'>
-	<d fis a d>16 <cis cis'> <bes bes'>8 <bes bes'>4
-	% mm. 33-36
-	r8 <cis cis'> <cis g' bes cis> <d d'>
-	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
-	% QUESTION: unconvinced the bottom a-sharp on the second beat of m. 35 is
-	%           correct. Full score is smudgy here but doesn't seem to show it. Also
-	%           doesn't match m. 37 which otherwise repeats the pattern.
-	r8 <fis fis'> <ais cis ees a> <bes bes'>
-	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
-	% mm. 37-38
-	r8 <fis fis'> <a cis ees a> <bes bes'>
-	<cis g' a cis>16 <c c'> <bes bes'> <a a'>~ <a a'>4
-	% m. 39 - Rehersal 4
-	% QUESTION: obvious error in PR, missing bass clef transition
-	\time 3/4
-	\clef bass
-	\override Beam.breakable = ##t
-	r8 <d, a' d>[ <ees bes' ees> <d a' d>] <fis cis' fis>16[ <ees bes' ees> <d a' d>8
-	% m. 40
-	<f c' f> <gis dis' gis>] \clef treble <a e' a>8[ <bes f' bes> <cis gis' cis> <d a' d>
-	% m. 41
-	<ees bes' ees>16 <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>] r <bes f' bes>[
-	% m. 42
-	<cis gis' cis> <d a' d>] <ees bes' ees>16[ <f c' f> <ees bes' ees>8 <d a' d> <cis gis' cis>]
-	% m. 43
-	<bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>] r16 <bes f' bes>[
-		<cis gis' cis> \beamCutR <bes f' bes>
-	% m .44
-	\beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e' a> <fis cis' fis>] r8 \clef bass <d a' d>[ <ees bes' ees> <d a' d>
-	% m. 45
-	<fis cis' fis>16 <ees bes' ees> <d a' d>8 <f c' f> <gis dis' gis>] \clef treble <a e' a>[ <bes f' bes>
-	% m. 46
-	<cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8 <d a' d> <cis gis' cis>]
-	% m. 47
-	r8 <bes f' bes>[ <cis gis' cis> <d a' d> <ees bes' ees>16 <gis gis'> <ees bes' ees>8
-	% m. 48
-	<d a' d> <cis gis' cis>] <bes f' bes>16[ <cis gis' cis> <bes f' bes>8 <a e' a> <fis cis' fis>]
-	% m. 49
-	r16 <bes f' bes>[ \beamCutL <cis gis' cis> \beamCutR <bes f' bes> \beamCutL <a e' a> \beamCutR <fis cis' fis> \beamCutL <a e'a> <fis cis' fis>]
-		<a e' a>8[ <e' b' e>
-	% m. 50
-	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c g' c> <bes f' bes>8 <g d' g>] <a e' a>8[ <fis' cis' fis>
-	% m. 51
-	<gis dis' gis> <f c' f> <ees bes' ees>16 <f f'> <ees bes' ees> <c c'>] <a e' a>8[ <e' b' e>
-	% m. 52
-	<ees bes' ees>16 <ees ees'> <ees bes' ees> <c c'> <bes f' bes>8 <g d' g>] <a e' a>[ <ees' bes' ees>16 r32 <f c' f>]
-	\revert Beam.breakable
-	% m. 53
-	<d a' d>8[ <b fis' b>] s4 r4
-	% m. 54
-	s4 r4 r4
+solo_lower_I_remain = \relative c, {
 	% mm. 55-62 - Rehersal 5
 	% FIXME: This section could use some cleanup when the "third" voice kicks in.
 	%        Also not sure about third voice in measure 62. Smudgy in PR.
@@ -1604,7 +1640,7 @@ solo_lower_I_remain = \relative c,, {
 	\clef bass
 	<<
 		\new Voice {
-			\voiceFour <g,, g'>1
+			\voiceFour <g g'>1
 			<ees ees'>
 			\clef bass <g g'>
 			\clef bass <ees ees'>
@@ -2286,11 +2322,14 @@ solo_lower_I_remain = \relative c,, {
 
 %%% Final assembly
 
-solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_remain }
-solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD }
+solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
+		\solo_upper_I_AH \solo_upper_I_remain }
+solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE }
 
-solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_remain }
-solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD }
+solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
+		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_remain }
+solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE }
 
-solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_remain }
-solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD }
+solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
+		\solo_lower_I_AH \solo_lower_I_remain }
+solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE }
