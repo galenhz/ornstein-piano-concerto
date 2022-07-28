@@ -15,7 +15,7 @@ Cello_mvmt_I_AB_AC = \relative c {
 	gis d16 r32 gis f4.->\> ( e8)\!
 	\clef bass
 	<< \new Voice { \voiceOne bes2.:32^"div." \time 4/4 a1:32 \time 3/4 bes2.:32 \time 4/4 ees,2:32 cis2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2}
-		\new Voice { \voiceTwo e2.:32\f\> \time 4/4 cis1:32\! \time 3/4 e2.:32\< \time 4/4 a,2:32\ff\< a2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! }
+		\new Voice { \voiceTwo e2.:32\f\> \time 4/4 cis1:32\! \time 3/4 e2.:32\espressivo \time 4/4 a,2:32\ff\< a2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! }
 	>>
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
 	\time 3/4 R2.
@@ -42,7 +42,7 @@ Bass_mvmt_I_AB_AC  = \relative c {
 			bes,:32
 			c:32
 			s1
-			c2.:32
+			c2.:32\espressivo
 		}
 	>>
 	\time 4/4
@@ -75,7 +75,29 @@ Bass_mvmt_I_AD = \relative c {
 	R1*10/8*2
 }
 
+%%% Section AE = mm. 21-24
+
+%% FIXME: m. 24 crescendo needs to go to the end of the bar.
+
+Cello_mvmt_I_AE = \relative c, {
+	\mark #2
+	\time 4/4
+	<fis cis'>4\p r4 fis8(\p\> cis' a' cis)
+	\repeat unfold 2 { a'(\!\ppp cis, a cis,) fis,( cis' a' cis) }
+	\tempo "più agitato"
+	ees,,2\< d\!_\markup { \italic "rit.  molto cresc." }
+}
+
+Bass_mvmt_I_AE = \relative c, {
+	\mark #2
+	\time 4/4
+	fis4\p r4 r2
+	R1*2
+	\tempo "più agitato"
+	ees2\< d\!_\markup { \italic "rit.  molto cresc." }
+}
+
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD }
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD }
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE }
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE }

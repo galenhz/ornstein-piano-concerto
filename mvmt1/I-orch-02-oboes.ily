@@ -94,7 +94,7 @@ EnglishHorn_mvmt_I_AB = \transpose c' f \relative c' {
 
 %%% Section AD = mm. 16-20
 
-EnglishHorn_mvmt_I_AD = \transpose c' f \relative c'' {
+EnglishHorn_mvmt_I_AD_AE = \transpose c' f \relative c'' {
 	\time 10/8
 	R1*10/8
 	\time 11/8
@@ -109,8 +109,20 @@ EnglishHorn_mvmt_I_AD = \transpose c' f \relative c'' {
 	R1*2 \tempo "più agitato" R1
 }
 
-Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD }
+%%% Section AE = mm. 21-24
+
+Oboe_I_mvmt_I_AE = \relative c'' {
+	\mark #2
+	\time 4/4
+	r1
+	r2 \tag #'Score a8[(\f \tag #'Part a8[(\f^"Solo" gis~ gis16 g fis a)]
+	fis2 r2
+	\tempo "più agitato"
+	R1
+}
+
+Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE}
+Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE }

@@ -97,10 +97,22 @@ BassClarinet_mvmt_I_AB_AC = \transpose c' bes, \relative c'' {
 %%% Section AD = mm. 16-20
 %%% Tacet
 
+%%% Section AE = mm. 21-24
+
+Clarinet_I_mvmt_I_AE = \transpose c' bes \relative c'' {
+	\mark #2
+	\time 4/4
+	r2 \tag #'Score fis8[(\f \tag #'Part fis8[(\f^"Solo" f~ f16 e ees fis)]
+	ees2 r2
+	r2 \tag #'Score fis8[(\f \tag #'Part fis8[(\f^"Solo" f~ f16 e ees fis)]
+	\tempo "più agitato"
+	ees8 r8 r4 r2
+}
+
 %%% Final assembly
 
-Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD }
+Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_I_mvmt_I_AE }
+Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE }

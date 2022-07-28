@@ -106,7 +106,7 @@ Bassoon_I_mvmt_I_AD_AE = \relative c'' {
 	R1*2
 	\clef bass
 	\tempo "più agitato"
-	ees,,,2\p d
+	ees,,,2\p d_"rit."
 }
 
 Bassoon_II_mvmt_I_AD_AE = \relative c' {
@@ -126,10 +126,8 @@ Bassoon_II_mvmt_I_AD_AE = \relative c' {
 	R1*2
 	\clef bass
 	\tempo "più agitato"
-	ees,,2\p d
+	ees,,2\p d_"rit."
 }
-
-%% FIXME: finish 3/4
 
 Bassoon_III_mvmt_I_AD_AE = \relative c' {
 	\time 10/8
@@ -143,10 +141,12 @@ Bassoon_III_mvmt_I_AD_AE = \relative c' {
 	% AE
 	\mark #2
 	\time 4/4
-	cis\!\p r4 r2
-	%R1*2
-	%\tempo "più agitato"
-	%ees,,,2\p d
+	\partCombineApart
+	cis\!\p r4 r4 a8(\p cis)
+	\repeat unfold 2 { a'8 r8 a,( cis,) fis, r8 a'( cis) }
+	\tempo "più agitato"
+	\partCombineAutomatic
+	a'8 r8 r4 r2_"rit."
 }
 
 Bassoon_IV_mvmt_I_AD_AE = \relative c {
@@ -161,10 +161,10 @@ Bassoon_IV_mvmt_I_AD_AE = \relative c {
 	% AE
 	\mark #2
 	\time 4/4
-	cis,\!\p r4 r2
-	%R1*2
-	%\tempo "più agitato"
-	%ees,,,2\p d
+	cis,\!\p r4 fis,8[\p( cis')] a' r8
+	\repeat unfold 2 { a'([ cis,)] a r8 fis,([ cis')] a' r8 }
+	\tempo "più agitato"
+	R1
 }
 
 Contrabasoon_mvmt_I_AD_AE = \relative c {
@@ -182,7 +182,7 @@ Contrabasoon_mvmt_I_AD_AE = \relative c {
 	fis'4\!\p r4 r2
 	R1*2
 	\tempo "più agitato"
-	ees,2\p d
+	ees,2\p d_"rit."
 }
 
 %%% Final assembly

@@ -175,13 +175,41 @@ Viola_mvmt_I_AD = \relative c {
 	e(\trSh d\trNat fis)\trNat a(\trNat g)\trNat
 }
 
+%%% Section AE = mm. 21-24
+
+Violin_I_mvmt_I_AE = \relative c'' {
+	\mark #2
+	\time 4/4
+	<< \new Voice { \voiceOne fis4^"div." } \new Voice { \voiceTwo fis,4\p } >> r4 r2
+	R1*2
+	\tempo "più agitato"
+	g'8\p^"unis." r8 r4 r2_"rit."
+}
+
+Violin_II_mvmt_I_AE = \relative c'' {
+	\mark #2
+	\time 4/4
+	<< \new Voice { \voiceOne cis4^"div." } \new Voice { \voiceTwo cis,4\p } >> r4 r2
+	R1*2
+	\tempo "più agitato"
+	cis'8\p^"unis." r8 r4 r2_"rit."
+}
+
+Viola_mvmt_I_AE = \relative c {
+	\mark #2
+	\time 4/4
+	fis4\p r4 r2_"senza sord."
+	R1*2
+	\tempo "più agitato"
+	g'8\p r8 r4 r2_"rit."
+}
 
 %%% Final assembly
 
-Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
+Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_I_mvmt_I_AE }
+Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
 
-Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
-Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD }
+Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_mvmt_I_AE }
+Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
 
-Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD }
+Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE }
