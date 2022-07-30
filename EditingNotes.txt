@@ -1,8 +1,32 @@
 
+General
+
+The tempo markings often differ significantly between the piano reduction and
+the full score and parts. The PR may have been done later than the score/parts,
+and may represent the composer's final thoughts...but the score/parts were
+never corrected, which may point against that theory. I am currently trying
+to blend the two in a way that makes sense.
+
 Movement I
 
-MM 2. Horn I solo and part has different rhythm than piano reduction.
+m. 2: Horn I (score/part) has different rhythm than piano reduction.
+(I-piano-reduction)
 
-MM 21-23. Solo piano, 2PR, same notes but different transition points for clefs. Bad idea? Regularize like FS to match MM 21?
+m. 5: The PR has "con moto" here. The parts have "moderato con moto" at m. 16.
+The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
+"con moto" at m. 16 which might have been scratched out.
+(I-common)
+
+m. 19: put the "pocu piu/rit" in every part? Some parts have it under the rest.
+Some don't.
+(I-common)
+
+mm. 21-23: Solo piano, 2PR, same notes but different transition points for
+clefs. Bad idea? Regularize like FS to match MM 21?
+(I-solo-piano)
+
+m. 29: Tempo discrepancy. PR is "Appassionata, ma molto sostenuto" and the
+score and parts are just "Appasionata".
+(I-common)
 
 
