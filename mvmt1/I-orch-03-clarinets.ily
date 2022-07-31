@@ -161,10 +161,38 @@ Clarinet_IV_mvmt_I_AF = \transpose c' bes \relative c'' {
 	r4 r4 r8 dis8\f
 }
 
+
+%%% Section AG = mm. 29-38 (Rehersal 3)
+
+Clarinet_I_II_mvmt_I_AG = \transpose c' bes \relative c' {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	e8[(_\markup { \dynamic f \italic "sempre" } a]) e'[( a])
+	gis16[( a gis8) f( e)]
+	f,[( b) dis( g)]
+	fis16[( g fis8) dis c16( bes)]
+	d,8 r8 r4
+	R2*5
+}
+
+Clarinet_III_IV_mvmt_I_AG = \transpose c' bes \relative c' {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	R2*4
+	e8[(_\markup { \dynamic f \italic "sempre" } a]) e'[( a])
+	gis16[( a gis8) f( e)]
+	\repeat unfold 2 {
+		f,[( b) dis( g)]
+		fis16[( g fis8) dis c16( bes)]
+	}
+}
+
 %%% Final assembly
 
-Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF }
-Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF }
-Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_III_mvmt_I_AF }
-Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_IV_mvmt_I_AF }
-BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF }
+Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG }
+Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG }
+Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG }
+Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG }
+BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG }

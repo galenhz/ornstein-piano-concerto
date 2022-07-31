@@ -8,7 +8,7 @@
 %% EDIT: In m. 10 (all oboes unison) the parts all give the second half the rhythm X8. X16. The
 %% score oddly has X8 X8 for the first and second, and X8. X16 for the third and fourth. That's
 %% pretty clearly a mistake in the score. But it does make me wonder: the other instruments
-%% playing this rhythm (flute I/II, clarinet I/II has X8 R16 X16 instead. Should I make the oboes
+%% playing this rhythm (flute I/II, clarinet I/II) has X8 R16 X16 instead. Should I make the oboes
 %% consistant with the others (and the piano reduction)? Doing that for now, but willing to
 %% reconsider.
 
@@ -185,9 +185,31 @@ EnglishHorn_mvmt_I_AF = \transpose c' f \relative c' {
 	r4 r4 r8 d'8\f
 }
 
+%%% Section AG = mm. 29-38 (Rehersal 3)
 
-Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF }
-Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF }
-Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF }
-Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF }
-EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF }
+%%% EDIT: m. 29, dynamic f in score, fff in parts. Possibly a performer markup; hard to tell.
+%%%%      m. 36 and 38, part doesn't have semi-broken beaming, score and bassoon parts do. Going with score.
+
+Oboe_I_II_mvmt_I_AG = \relative c'' {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	r8 cis_\markup { \dynamic f \italic "sempre" } cis([ d)]
+	cis16([ d cis8)] bes( a)
+	r8 a c([ cis)]
+	d16([ cis bes8)] bes4
+	r8 cis cis[( d])
+	cis16[( d cis8]) bes( a)
+	\repeat unfold 2 {
+		r8 fis a[( bes])
+		cis16[( \beamCutR c) \beamCutL bes( a~] a4)
+	}
+}
+
+%%% Final assembly
+
+Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG }
+Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG }
+Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG }
+Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG }
+EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG }

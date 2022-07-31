@@ -285,15 +285,80 @@ Viola_mvmt_I_AF = \relative c {
 			r8 cis,,\< r8 cis' \clef treble r8 cis'\!
 		}
 	>>
+}
+
+%%% Section AG = mm. 29-38 (Rehersal 3)
+
+%%% EDIT: I'm not breaking up the divisi in the score, because the octaves keep things simple. I don't
+%%%       know if I'll do differently with the parts yet.
+
+Violin_I_mvmt_I_AG = \relative c' {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	\tuplet 3/2 { <d d'>16[_\markup { \dynamic f \italic "sempre" }^"div." q \beamCutR q } \tuplet 3/2 { \beamCutL <g g'> q q] }
+		\tuplet 3/2 { <d' d'>16[ q \beamCutR q } \tuplet 3/2 { \beamCutL <g g'> q q] }
+	<fis fis'>32[ q <g g'> \beamCutR q \tuplet 3/2 { \beamCutL <fis fis'>16 q q] }
+		\tuplet 3/2 { <ees ees'>[ q \beamCutR q } \tuplet 3/2 { \beamCutL <d d'> q q] }
+	\tuplet 3/2 { <ees, ees'>[ q \beamCutR q } \tuplet 3/2 { \beamCutL <a a'> q q] }
+		\tuplet 3/2 { <cis cis'>[ q \beamCutR q } \tuplet 3/2 { \beamCutL <f f'> q q] }
+	<e e'>32[ q <f f'> \beamCutR q \tuplet 3/2 { \beamCutL <e e'>16 q q] }
+		\tuplet 3/2 { <cis cis'>[ q \beamCutR q } \beamCutL <bes bes'>32 q <aes aes'> q]
+	\tuplet 3/2 { <d, d'>16[_\markup { \dynamic f \italic "sempre" }^"div." q \beamCutR q } \tuplet 3/2 { \beamCutL <g g'> q q] }
+		\tuplet 3/2 { <d' d'>16[ q \beamCutR q } \tuplet 3/2 { \beamCutL <g g'> q q] }
+	<fis fis'>32[ q <g g'> \beamCutR q \tuplet 3/2 { \beamCutL <fis fis'>16 q q] }
+		\tuplet 3/2 { <ees ees'>[ q \beamCutR q } \tuplet 3/2 { \beamCutL <d d'> q q] }
+	\repeat unfold 2 {
+		\tuplet 3/2 { <ees, ees'>[ q \beamCutR q } \tuplet 3/2 { \beamCutL <a a'> q q] }
+			\tuplet 3/2 { <cis cis'>[ q \beamCutR q } \tuplet 3/2 { \beamCutL <f f'> q q] }
+		<e e'>32[ q <f f'> \beamCutR q \tuplet 3/2 { \beamCutL <e e'>16 q q] }
+			\tuplet 3/2 { <cis cis'>[ q \beamCutR q } \beamCutL <bes bes'>32 q <aes aes'> q]
+	}
+}
+
+Violin_II_mvmt_I_AG = \relative c' {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	<d d'>16[_\markup { \dynamic f \italic "sempre" }^"div." \beamCutR q \beamCutL <g g'> \beamCutR q \beamCutL <d' d'> \beamCutR q \beamCutL <g g'> q]
+	<fis fis'>[ \beamCutR <g g'> \beamCutL <fis fis'> \beamCutR q \beamCutL <ees ees'> \beamCutR q \beamCutL <d d'> q]
+	<ees, ees'>[ \beamCutR q \beamCutL <a a'> \beamCutR q \beamCutL <cis cis'> \beamCutR q \beamCutL <f f'> q]
+	<e e'>[ \beamCutR <f f'> \beamCutL <e e'> \beamCutR q \beamCutL <cis cis'> \beamCutR q \beamCutL <bes bes'> <aes aes'>]
+	<d d'>16[ \beamCutR q \beamCutL <g g'> \beamCutR q \beamCutL <d' d'> \beamCutR q \beamCutL <g g'> q]
+	<fis fis'>[ \beamCutR <g g'> \beamCutL <fis fis'> \beamCutR q \beamCutL <ees ees'> \beamCutR q \beamCutL <d d'> q]
+	\repeat unfold 2 {
+		<ees, ees'>[ \beamCutR q \beamCutL <a a'> \beamCutR q \beamCutL <cis cis'> \beamCutR q \beamCutL <f f'> q]
+		<e e'>[ \beamCutR <f f'> \beamCutL <e e'> \beamCutR q \beamCutL <cis cis'> \beamCutR q \beamCutL <bes bes'> <aes aes'>]
+	}
+}
+
+%%% EDIT: mm. 29-38, the barring is inconstant between score and parts. Parts break up, score doesn't.
+%%%       Following score for now. We have crescendos and decrescendos in the part which are not in the
+%%%       score. May be performer additions.
+
+Viola_mvmt_I_AG = \relative c {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
 	\clef alto
+	d16[_\markup { \dynamic f \italic "sempre" }^"unis." \beamCutR d \beamCutL g \beamCutR g \beamCutL d' \beamCutR d \beamCutL g g]
+	fis32[ fis g \beamCutR g \beamCutL fis16 \beamCutR fis \beamCutL ees \beamCutR ees \beamCutL d d]
+	ees,[ \beamCutR ees \beamCutL a \beamCutR a \beamCutL cis \beamCutR cis \beamCutL f f]
+	e32[ e f \beamCutR f \beamCutL e16 \beamCutR e \beamCutL cis \beamCutR cis \beamCutL bes32 bes aes aes]
+	d,16[ \beamCutR d \beamCutL g \beamCutR g \beamCutL d' \beamCutR d \beamCutL g g]
+	fis32[ fis g \beamCutR g \beamCutL fis16 \beamCutR fis \beamCutL ees \beamCutR ees \beamCutL d d]
+	\repeat unfold 2 {
+		ees,[ \beamCutR ees \beamCutL a \beamCutR a \beamCutL cis \beamCutR cis \beamCutL f f]
+		e32[ e f \beamCutR f \beamCutL e16 \beamCutR e \beamCutL cis \beamCutR cis \beamCutL bes32 bes aes aes]
+	}
 }
 
 %%% Final assembly
 
-Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF }
-Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF }
+Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF \Violin_I_mvmt_I_AG }
+Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG }
 
-Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF }
-Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Violin_II_divisi_II_mvmt_I_AF }
+Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF \Violin_II_mvmt_I_AG }
+Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG }
 
-Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF }
+Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF \Viola_mvmt_I_AG }

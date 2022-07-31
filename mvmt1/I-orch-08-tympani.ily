@@ -64,7 +64,7 @@ Tympani_I_mvmt_I_AF = \relative c {
 	R2
 	\time 3/4
 	\tempo "Allegro"
-	ees2.\p\<\!
+	ees2.:32\p\<
 }
 
 Tympani_II_mvmt_I_AF = \relative c {
@@ -78,7 +78,32 @@ Tympani_II_mvmt_I_AF = \relative c {
 	\tempo "Allegro"
 	R2.
 }
+
+%%% Section AG = mm. 29-38 (Rehersal 3)
+
+Tympani_I_mvmt_I_AG = \relative c {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	R2*2\!
+	ees8\f r8 r4
+	ees8 r8 r4
+	R2*2
+	\repeat unfold 4 { ees8 r8 r4 }
+}
+
+Tympani_II_mvmt_I_AG = \relative c {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	d8\f r8 r4
+	d8 r8 r4
+	R2*2
+	\repeat unfold 2 { d8 r8 r4 }
+	R2*4
+}
+
 %%% Final assembly
 
-Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF }
-Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF }
+Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG }
+Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF \Tympani_II_mvmt_I_AG }

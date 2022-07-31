@@ -101,14 +101,14 @@ Bass_mvmt_I_AE = \relative c, {
 
 Cello_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4	
+	\time 4/4
 	g8:64 g'4:64-> g,8:64 \clef tenor b8:64 b'4:64-> b,8:64
 	g8:64 g'4:64-> g,8:64 b8:64 b'4:64-> b,8:64
 	\time 2/4
 	cis,8:32[ cis'8:32-> cis,8:32 cis'8:32]->
 	\time 3/4
 	\clef bass
-	ees,,2.\f
+	ees,,2.\f\<
 }
 
 Cello_divisi_II_mvmt_I_AF = \relative c {
@@ -119,12 +119,12 @@ Cello_divisi_II_mvmt_I_AF = \relative c {
 	cis,8:32[ cis'8:32-> cis,8:32 cis'8:32]->
 	\time 3/4
 	\clef bass
-	ees,,2.\f
+	ees,,2.
 }
 
 Bass_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4	
+	\time 4/4
 	<<
 		\new Voice {
 			\voiceOne
@@ -138,17 +138,51 @@ Bass_mvmt_I_AF = \relative c' {
 			c2\mf\< ees\!\>
 			c\!\< ees\!\>
 			\time 2/4
-			a,4_\markup { \italic "molto cresc." } fis
+			a,4\!_\markup { \italic "molto cresc." } fis
 		}
 	>>
 	\time 3/4
 	\tempo "Allegro"
-	ees2.^"unis."
+	ees2.^"unis."\<
+}
+
+%%% Section AG = mm. 29-38 (Rehersal 3)
+
+Cello_mvmt_I_AG = \relative c, {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	d16\![_\markup { \dynamic f \italic "sempre" } \beamCutR d \beamCutL g \beamCutR g \beamCutL d' \beamCutR d \beamCutL g g]
+	fis16[ \beamCutR g \beamCutL fis \beamCutR fis \beamCutL ees \beamCutR ees \beamCutL d d]
+	ees,16[ \beamCutR ees \beamCutL a \beamCutR a \beamCutL cis \beamCutR cis \beamCutL f f]
+	e16[ \beamCutR f \beamCutL e \beamCutR e \beamCutL cis \beamCutR cis \beamCutL bes aes]
+	d16[ \beamCutR d \beamCutL g \beamCutR g \beamCutL d' \beamCutR d \beamCutL g g]
+	fis16[ \beamCutR g \beamCutL fis \beamCutR fis \beamCutL ees \beamCutR ees \beamCutL d d]
+	\repeat unfold 2 {
+		ees,16[ \beamCutR ees \beamCutL a \beamCutR a \beamCutL cis \beamCutR cis \beamCutL f f]
+		e16[ \beamCutR f \beamCutL e \beamCutR e \beamCutL cis \beamCutR cis \beamCutL bes aes]
+	}
+}
+
+Bass_mvmt_I_AG = \relative c, {
+	\mark #3
+	\time 2/4
+	\tempo "molto marcato"
+	d2\!_\markup { \dynamic f \italic "sempre" }~
+	d
+	ees~
+	ees
+	d~
+	d
+	ees~
+	ees
+	ees~
+	ees
 }
 
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF }
-Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Cello_divisi_II_mvmt_I_AF}
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG }
+Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Cello_divisi_II_mvmt_I_AF \NULL_I_AG }
 
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF }
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG }
