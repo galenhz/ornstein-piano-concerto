@@ -251,9 +251,9 @@ Bassoon_I_II_mvmt_I_AG = \relative c' {
 	cis16([ \beamCutR c) \beamCutL bes( a)]~ a4
 	\clef bass
 	r8 fis a[( bis])
-	cis16([ \beamCutR c) \beamCutL bes( a)]~ a4	
+	cis16([ \beamCutR c) \beamCutL bes( a)]~ a4
 }
- 
+
 Bassoon_III_IV_mvmt_I_AG = \relative c, {
 	\mark #3
 	\time 2/4
