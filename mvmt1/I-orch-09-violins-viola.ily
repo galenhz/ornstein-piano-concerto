@@ -204,12 +204,96 @@ Viola_mvmt_I_AE = \relative c {
 	g'8\p r8 r4 r2_"rit."
 }
 
+%%% Section AF = mm. 25-28
+
+%%% EDIT: OK. What to do about all these notes? Full score writes 'em all out. Part simplifies with
+%%%       tremolos, but not in the same way on all parts. Oh, and dynamics on violin I are
+%%%       inconsistant between m. 25 and 26.
+%%%       For now, I'll use tremolos to save space. I'll do the tremolos on v1 like they are on v2/vla.
+
+Violin_I_mvmt_I_AF = \relative c' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	d64([\mf c d c d c d c)] \repeat tremolo 4 { d'(-> c } \repeat tremolo 4 { d64 c) } \repeat tremolo 4 { d,( c) }
+		\repeat tremolo 4 { f( ees) } \repeat tremolo 4 { f'->( ees } \repeat tremolo 4 { f ees) } \repeat tremolo 4 { f,( ees) }
+	d64([ c d c d c d c)] \repeat tremolo 4 { d'(-> c } \repeat tremolo 4 { d64 c) } \repeat tremolo 4 { d,( c) }
+		\repeat tremolo 4 { f( ees) } \repeat tremolo 4 { f'->( ees } \repeat tremolo 4 { f ees) } \repeat tremolo 4 { f,( ees) }
+	\time 2/4
+	\repeat tremolo 4 { des(_\markup { \italic "molto cresc." } c) } \repeat tremolo 4 { des'(-> c) }
+		\repeat tremolo 4 { des,( c) } \repeat tremolo 4 { des'(-> c) }
+	\time 3/4
+	\tempo "Allegro"
+	<<
+		\new Voice {
+			\voiceOne
+			r8 g^"div." r8 g' r8 g'
+		}
+		\new Voice {
+			\voiceTwo
+			r8 cis,,,\< r8 cis' r8 cis'\!
+		}
+	>>
+}
+
+%%% EDIT: Those articulations in m. 27 may be player additions, not real. I need to
+%%%       go over that more generally in the parts, probably.
+%%%       Also, should I re-combine the divisi here? Or perhaps combine them only
+%%%       in the score?
+
+Violin_II_mvmt_I_AF = \relative c' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	d8:64\mf d'4:64 d,8:64 f8:64 f'4:64 f,8:64
+	d8:32 d'4:64 d,8:64 f8:64 f'4:64 f,8:64
+	\time 2/4
+	fis8:64[_\markup { \italic "molto cresc." } fis'8:64-> fis,8:64 fis'8:64]->
+	\time 3/4
+	\tempo "Allegro"
+	r8 fis,\< r8 fis' r8 fis'\!
+}
+
+Violin_II_divisi_II_mvmt_I_AF = \relative c' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	\repeat unfold 2 { c8:64 c'4:64 c,8:64 ees8:64 ees'4:64 ees,8:64 }
+	\time 2/4
+	fis8:64[ fis'8:64-> fis,8:64 fis'8:64]->
+	\time 3/4
+	\tempo "Allegro"
+	r8 g,,\< r8 g' r8 g'\!
+}
+
+Viola_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	fis64([\mf g fis g fis g fis g)] \repeat tremolo 4 { fis'(-> g } \repeat tremolo 4 { fis g) } \repeat tremolo 4 { fis,( g) }
+		\repeat tremolo 4 { a( b) } \repeat tremolo 4 { a'(-> b } \repeat tremolo 4 { a b) } \repeat tremolo 4 { a,( b) }
+	fis64([ g fis g fis g fis g)] \repeat tremolo 4 { fis'(-> g } \repeat tremolo 4 { fis g) } \repeat tremolo 4 { fis,( g) }
+		\repeat tremolo 4 { a( b) } \repeat tremolo 4 { a'(-> b } \repeat tremolo 4 { a b) } \repeat tremolo 4 { a,( b) }
+	\time 2/4
+	\repeat tremolo 4 { fis(_\markup { \italic "molto cresc." } g) } \repeat tremolo 4 { fis'( g }
+		\repeat tremolo 4 { fis, g) } \repeat tremolo 4 { fis'( g) }
+	\time 3/4
+	\tempo "Allegro"
+	<<
+		\new Voice {
+			\voiceOne
+			r8 fis,^"div." r8 fis' \clef treble r8 fis'
+		}
+		\new Voice {
+			\voiceTwo
+			r8 cis,,\< r8 cis' \clef treble r8 cis'\!
+		}
+	>>
+	\clef alto
+}
+
 %%% Final assembly
 
-Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_I_mvmt_I_AE }
-Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF }
+Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF }
 
-Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_mvmt_I_AE }
-Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
+Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF }
+Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Violin_II_divisi_II_mvmt_I_AF }
 
-Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE }
+Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF }

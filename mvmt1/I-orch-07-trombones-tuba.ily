@@ -80,7 +80,55 @@ Tuba_mvmt_I_AB_AC = \relative c, {
 %%% Section AE = mm. 21-24
 %%% Tacet
 
-Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
-Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
-Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE }
-Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE }
+%%% Section AF = mm. 25-28
+
+Trombone_I_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	r8 fis\mf r4 r4
+}
+
+Trombone_II_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	r8 cis\mf r4 r4
+}
+
+%%% FIXME: m. 28, how to get that final hanging F dynamic? Silent voice?
+
+Trombone_III_mvmt_I_AF = \relative c, {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	ees2.\mf\<\!
+}
+
+Tuba_mvmt_I_AF = \relative c,, {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	ees2.\mf\<\!
+}
+
+Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF }
+Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF }
+Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF }
+Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF}

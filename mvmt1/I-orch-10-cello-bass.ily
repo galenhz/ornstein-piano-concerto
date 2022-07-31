@@ -85,7 +85,7 @@ Cello_mvmt_I_AE = \relative c, {
 	<fis cis'>4\p r4 fis8(\p\> cis' a' cis)
 	\repeat unfold 2 { a'(\!\ppp cis, a cis,) fis,( cis' a' cis) }
 	\tempo "più agitato"
-	ees,,2\< d\!_\markup { \italic "rit.  molto cresc." }
+	ees,,2:32\< d2:32\!_\markup { \italic "rit.  molto cresc." }
 }
 
 Bass_mvmt_I_AE = \relative c, {
@@ -94,10 +94,61 @@ Bass_mvmt_I_AE = \relative c, {
 	fis4\p r4 r2
 	R1*2
 	\tempo "più agitato"
-	ees2\< d\!_\markup { \italic "rit.  molto cresc." }
+	ees2:32\< d2:32\!_\markup { \italic "rit.  molto cresc." }
+}
+
+%%% Section AF - mm. 25-28
+
+Cello_mvmt_I_AF = \relative c' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4	
+	g8:64 g'4:64-> g,8:64 \clef tenor b8:64 b'4:64-> b,8:64
+	g8:64 g'4:64-> g,8:64 b8:64 b'4:64-> b,8:64
+	\time 2/4
+	cis,8:32[ cis'8:32-> cis,8:32 cis'8:32]->
+	\time 3/4
+	\clef bass
+	ees,,2.\f
+}
+
+Cello_divisi_II_mvmt_I_AF = \relative c {
+	\time 4/4
+	fis8:64 fis'4:64-> fis,8:64 \clef tenor a8:64 a'4:64-> a,8:64
+	fis8:64 fis'4:64-> fis,8:64 a8:64 a'4:64-> a,8:64
+	\time 2/4
+	cis,8:32[ cis'8:32-> cis,8:32 cis'8:32]->
+	\time 3/4
+	\clef bass
+	ees,,2.\f
+}
+
+Bass_mvmt_I_AF = \relative c' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4	
+	<<
+		\new Voice {
+			\voiceOne
+			g2^"div." a2
+			g a
+			\time 2/4
+			a4 fis
+		}
+		\new Voice {
+			\voiceTwo
+			c2\mf\< ees\!\>
+			c\!\< ees\!\>
+			\time 2/4
+			a,4_\markup { \italic "molto cresc." } fis
+		}
+	>>
+	\time 3/4
+	\tempo "Allegro"
+	ees2.^"unis."
 }
 
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE }
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE }
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF }
+Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Cello_divisi_II_mvmt_I_AF}
+
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF }

@@ -218,7 +218,7 @@ solo_lower_I_AE = \relative c,, {
 
 solo_upper_I_AF = \relative c'' {
 	% mm. 25-26
-	\tempo "Appasionato, ma molto sostenuto"
+	\tempo "Appasionata, ma molto sostenuto"
 	<fis d' fis>8 <f des' f>4 \slashedGrace <e c' e>8 \tuplet 3/2 { <e c' e>16 <ees ces' ees> <fis d' fis> }
 	<ees ces' ees>4. \tuplet 3/2 { <fis d' fis>16 <g ees' g> <gis e' gis> }
 	\ottava #1
@@ -300,7 +300,7 @@ solo_lower_I_AG = \relative c' {
 	r8 <cis cis'> <cis g' bes cis> <d d'>
 	<cis g' b cis>16 <d d'> <cis cis'>8 <bes bes'> <a a'>
 	% EDIT: unconvinced the bottom a-sharp on the second beat of m. 35 is
-	%       correct. Full score is a big smudgy here but doesn't show it. Also
+	%       correct. Full score is a bit smudgy here but doesn't show it. Also
 	%       doesn't match m. 37 which otherwise repeats the pattern. Going
 	%       with the pattern and following the full score.
 	r8 <fis fis'> <a cis ees a> <bes bes'>
@@ -2326,12 +2326,12 @@ solo_lower_I_remain = \relative c, {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_remain }
-solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE }
+solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_remain }
-solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE }
+solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_remain }
-solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE }
+solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF }

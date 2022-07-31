@@ -53,8 +53,32 @@ Tympani_II_mvmt_I_AE = \relative c {
 	r2 d2:32_\mf\<_"rit."
 }
 
+%%% Section AF = mm. 25-28
 
+Tympani_I_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	r4 r4 ees2\pp
+	R1
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	ees2.\p\<\!
+}
+
+Tympani_II_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	c2\mp r4 r4
+	R1
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	R2.
+}
 %%% Final assembly
 
-Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE }
-Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE }
+Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF }
+Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF }

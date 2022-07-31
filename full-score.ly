@@ -148,10 +148,13 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 			\new Staff = "Staff_violinII" \keepWithTag #'Score \Violin_II_mvmt_I
 			\new Staff = "Staff_violinII_divisi_II" \keepWithTag #'Score \Violin_II_divisi_II_mvmt_I
 		>>
-		\new StaffGroup = "StaffGroup_violinII" \with { instrumentName = "Viola" shortInstrumentName = "Va." \RemoveAllEmptyStaves } <<
+		\new StaffGroup = "StaffGroup_viola" \with { instrumentName = "Viola" shortInstrumentName = "Va." \RemoveAllEmptyStaves } <<
 			\new Staff = "Staff_viola" \keepWithTag #'Score \Viola_mvmt_I
 		>>
-		\new Staff = "Staff_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." } \keepWithTag #'Score \Cello_mvmt_I
+		\new StaffGroup = "StaffGroup_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." \RemoveAllEmptyStaves } <<
+			\new Staff = "Staff_cello" \keepWithTag #'Score \Cello_mvmt_I
+			\new Staff = "Staff_cello_divisi_III" \keepWithTag #'Score \Cello_divisi_II_mvmt_I
+		>>
 		\new Staff = "Staff_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } \keepWithTag #'Score \Bass_mvmt_I
 	>>
   >>

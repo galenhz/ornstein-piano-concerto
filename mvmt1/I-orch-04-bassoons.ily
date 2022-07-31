@@ -141,8 +141,7 @@ Bassoon_III_mvmt_I_AD_AE = \relative c' {
 	% AE
 	\mark #2
 	\time 4/4
-	\partCombineApart
-	cis\!\p r4 r4 a8(\p cis)
+	cis\p\! \partCombineApart r4 r4 a8(\p cis)
 	\repeat unfold 2 { a'8 r8 a,( cis,) fis, r8 a'( cis) }
 	\tempo "più agitato"
 	\partCombineAutomatic
@@ -167,7 +166,7 @@ Bassoon_IV_mvmt_I_AD_AE = \relative c {
 	R1
 }
 
-Contrabasoon_mvmt_I_AD_AE = \relative c {
+Contrabassoon_mvmt_I_AD_AE = \relative c {
 	\time 10/8
 	c2.\mf e2\>\!
 	\time 11/8
@@ -185,10 +184,60 @@ Contrabasoon_mvmt_I_AD_AE = \relative c {
 	ees,2\p d_"rit."
 }
 
+%%% Section AF - mm. 25-28
+
+Bassoon_I_II_mvmt_I_AF = \relative c, {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	c2\mf ees
+	c ees
+	\time 2/4
+	a4_\markup { \italic "molto cresc." } fis
+	\time 3/4
+	\tempo "Allegro"
+	ees2.
+}
+
+Bassoon_III_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	g2\mf ees'
+	g, ees'
+	\time 2/4
+	a,4_\markup { \italic "molto cresc." } fis
+	\time 3/4
+	\tempo "Allegro"
+	ees2.
+}
+
+Bassoon_IV_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	g2\mf a
+	g a
+	\time 2/4
+	a4_\markup { \italic "molto cresc." } fis
+	\time 3/4
+	\tempo "Allegro"
+	ees2.
+}
+
+Contrabassoon_mvmt_I_AF = \relative c {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	c2\mf ees
+	c ees
+	\time 2/4
+	a,4_\markup { \italic "molto cresc." } fis
+	\time 3/4
+	\tempo "Allegro"
+	ees2.
+}
+
 %%% Final assembly
 
-Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE }
-Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB \NULL_I_AC \Bassoon_II_mvmt_I_AD_AE }
-Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE }
-Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE }
-Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabasoon_mvmt_I_AD_AE }
+Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF }
+Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB \NULL_I_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF }
+Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF }
+Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF }
+Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF }

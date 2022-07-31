@@ -121,8 +121,73 @@ Oboe_I_mvmt_I_AE = \relative c'' {
 	R1
 }
 
-Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE}
-Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
-Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
-Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE }
-EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE }
+%%% Section AF = mm. 25-28
+
+Oboe_I_mvmt_I_AF = \relative c' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	\partCombineApart
+	r2 ees32[(\mf f ees16]) ees'32([ f ees16)]~ ees8[ ees,32( f ees16)]
+	r2 ees32[( f ees16]) ees'32([ f ees16)]~ ees8[ ees,32( f ees16)]
+	\partCombineAutomatic
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	r4 r4 r8 g'8\f
+}
+
+Oboe_II_mvmt_I_AF = \relative c'' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	r8 g32([\mf fis g fis)] g([ fis g fis)] r8
+		r8 b32([ a b a)] b([ a b a)] r8
+	r8 g32([ fis g fis)] g([ fis g fis)] r8
+		r8 b32([ a b a)] b([ a b a)] r8
+	\time 2/4
+	r8 g32([ fis g fis)] r8 g32([ fis g fis)]
+	\time 3/4
+	\tempo "Allegro"
+	r4 r4 r8 g'8\f
+}
+
+Oboe_III_mvmt_I_AF = \relative c'' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	r4 r4 r8 fis8\f
+}
+
+Oboe_IV_mvmt_I_AF = \relative c'' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 3/4
+	\tempo "Allegro"
+	r4 r4 r8 cis8\f
+}
+
+EnglishHorn_mvmt_I_AF = \transpose c' f \relative c' {
+	\tempo "Appasionata, ma molto sostenuto"
+	\time 4/4
+	d32(\mf cis d cis) r8 r8 d32( cis d cis) fis( e fis e) r8 r8 fis32( e fis e)
+	d32( cis d cis) r8 r8 d32( cis d cis) fis( e fis e) r8 r8 fis32( e fis e)
+	\time 2/4
+	d32( cis d cis) r8 d32( cis d cis) r8
+	\time 3/4
+	\tempo "Allegro"
+	r4 r4 r8 d'8\f
+}
+
+
+Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF }
+Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF }
+Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF }
+Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF }
+EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF }
