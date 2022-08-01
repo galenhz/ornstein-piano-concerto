@@ -76,3 +76,11 @@ In practice, it amounts to the same thing (why push a slur over a tie? It gets "
 anyway). Can't use the score as a tiebreaker because the score doesn't have the slurs
 at all. Leaving them inconsistent for now.
 (I-orch-02-oboes, I-orch-04-bassoons)
+
+m. 39: Bottom staff of solo piano has an obvious error in the PR, missing a bass clef
+transistion. It's there in the full score. Fixed.
+(I-solo-piano)
+
+m. 45: Placement of the "cresc." is a bit odd. PR places it squarely in beat 3; the score
+seems to suggest 2 or 2-1/2, and the parts show either 2 or 3 depending on how you read
+them. I'm sticking with 3.

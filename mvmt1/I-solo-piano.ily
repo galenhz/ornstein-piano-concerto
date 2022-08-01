@@ -369,8 +369,8 @@ solo_dynamics_I_AH = {
 	s2.-\markup { \dynamic p \italic subito }
 	% m. 40-45
 	% EDIT: full score shows the crescendo starting on beat 2 of bar 45. PR shows it
-	%	    on beat 3. Which should it be?
-	s2. s2. s2. s2. s2. s4 s2-\cresc
+	%	    on beat 3. Which should it be? Parts show both; sticking with 3 for now.
+	s2. s2. s2. s2. s2. s2 s4-\cresc
 	% mm. 46-52
 	s2. s2. s2. s4\! s4\ff s4 s2. s2. s2.
 	% mm. 53-54

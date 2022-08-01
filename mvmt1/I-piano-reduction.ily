@@ -483,7 +483,7 @@ redux_dynamics_I_AH = {
 	% m. 39
 	s2.-\markup { \dynamic p \italic subito }
 	% mm. 40-45
-	s2. s2. s2. s2. s2. s4 s2-\cresc
+	s2. s2. s2. s2. s2. s2 s4-\cresc
 	% mm. 46-54
 	s2. s2. s2. s4\! s4 s4\ff s4 s2\cresc s2. s2. s2.\!\fff s2.
 }
