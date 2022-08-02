@@ -101,7 +101,6 @@ Bass_mvmt_I_AE = \relative c, {
 
 Cello_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	g8:64 g'4:64-> g,8:64 \clef tenor b8:64 b'4:64-> b,8:64
 	g8:64 g'4:64-> g,8:64 b8:64 b'4:64-> b,8:64
 	\time 2/4
@@ -112,7 +111,6 @@ Cello_mvmt_I_AF = \relative c' {
 }
 
 Cello_divisi_II_mvmt_I_AF = \relative c {
-	\time 4/4
 	fis8:64 fis'4:64-> fis,8:64 \clef tenor a8:64 a'4:64-> a,8:64
 	fis8:64 fis'4:64-> fis,8:64 a8:64 a'4:64-> a,8:64
 	\time 2/4
@@ -124,7 +122,6 @@ Cello_divisi_II_mvmt_I_AF = \relative c {
 
 Bass_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	<<
 		\new Voice {
 			\voiceOne

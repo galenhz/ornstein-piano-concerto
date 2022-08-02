@@ -69,7 +69,6 @@ Trumpet_IV_mvmt_I_AB_AC = \relative c' {
 
 Trumpet_I_mvmt_I_AF = \relative c''' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -80,7 +79,6 @@ Trumpet_I_mvmt_I_AF = \relative c''' {
 
 Trumpet_II_mvmt_I_AF = \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -91,7 +89,6 @@ Trumpet_II_mvmt_I_AF = \relative c'' {
 
 Trumpet_III_mvmt_I_AF = \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -102,7 +99,6 @@ Trumpet_III_mvmt_I_AF = \relative c'' {
 
 Trumpet_IV_mvmt_I_AF = \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2

@@ -123,7 +123,6 @@ Horn_VI_mvmt_I_AB = \transpose c' f \relative c' {
 
 Horn_I_mvmt_I_AF = \transpose c' f \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -134,7 +133,6 @@ Horn_I_mvmt_I_AF = \transpose c' f \relative c'' {
 
 Horn_II_mvmt_I_AF = \transpose c' f \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -145,7 +143,6 @@ Horn_II_mvmt_I_AF = \transpose c' f \relative c'' {
 
 Horn_III_mvmt_I_AF = \transpose c' f \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -156,7 +153,6 @@ Horn_III_mvmt_I_AF = \transpose c' f \relative c'' {
 
 Horn_IV_mvmt_I_AF = \transpose c' f \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2

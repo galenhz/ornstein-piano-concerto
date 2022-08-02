@@ -57,7 +57,6 @@ Tympani_II_mvmt_I_AE = \relative c {
 
 Tympani_I_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	r4 r4 ees2\pp
 	R1
 	\time 2/4
@@ -69,7 +68,6 @@ Tympani_I_mvmt_I_AF = \relative c {
 
 Tympani_II_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	c2\mp r4 r4
 	R1
 	\time 2/4

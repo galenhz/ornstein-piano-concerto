@@ -188,7 +188,6 @@ Contrabassoon_mvmt_I_AD_AE = \relative c {
 
 Bassoon_I_II_mvmt_I_AF = \relative c, {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	c2\mf ees
 	c ees
 	\time 2/4
@@ -200,7 +199,6 @@ Bassoon_I_II_mvmt_I_AF = \relative c, {
 
 Bassoon_III_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	g2\mf ees'
 	g, ees'
 	\time 2/4
@@ -212,7 +210,6 @@ Bassoon_III_mvmt_I_AF = \relative c {
 
 Bassoon_IV_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	g2\mf a
 	g a
 	\time 2/4
@@ -224,7 +221,6 @@ Bassoon_IV_mvmt_I_AF = \relative c {
 
 Contrabassoon_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	c2\mf ees
 	c ees
 	\time 2/4

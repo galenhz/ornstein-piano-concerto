@@ -84,7 +84,6 @@ Tuba_mvmt_I_AB_AC = \relative c, {
 
 Trombone_I_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -95,7 +94,6 @@ Trombone_I_mvmt_I_AF = \relative c {
 
 Trombone_II_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -108,7 +106,6 @@ Trombone_II_mvmt_I_AF = \relative c {
 
 Trombone_III_mvmt_I_AF_AG = \relative c, {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -121,7 +118,6 @@ Trombone_III_mvmt_I_AF_AG = \relative c, {
 
 Tuba_mvmt_I_AF_AG = \relative c,, {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2

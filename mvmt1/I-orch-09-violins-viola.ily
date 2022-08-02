@@ -213,7 +213,6 @@ Viola_mvmt_I_AE = \relative c {
 
 Violin_I_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	d64([\mf c d c d c d c)] \repeat tremolo 4 { d'(-> c } \repeat tremolo 4 { d64 c) } \repeat tremolo 4 { d,( c) }
 		\repeat tremolo 4 { f( ees) } \repeat tremolo 4 { f'->( ees } \repeat tremolo 4 { f ees) } \repeat tremolo 4 { f,( ees) }
 	d64([ c d c d c d c)] \repeat tremolo 4 { d'(-> c } \repeat tremolo 4 { d64 c) } \repeat tremolo 4 { d,( c) }
@@ -242,7 +241,6 @@ Violin_I_mvmt_I_AF = \relative c' {
 
 Violin_II_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	d8:64\mf d'4:64 d,8:64 f8:64 f'4:64 f,8:64
 	d8:32 d'4:64 d,8:64 f8:64 f'4:64 f,8:64
 	\time 2/4
@@ -254,7 +252,6 @@ Violin_II_mvmt_I_AF = \relative c' {
 
 Violin_II_divisi_II_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	\repeat unfold 2 { c8:64 c'4:64 c,8:64 ees8:64 ees'4:64 ees,8:64 }
 	\time 2/4
 	fis8:64[ fis'8:64-> fis,8:64 fis'8:64]->
@@ -265,7 +262,6 @@ Violin_II_divisi_II_mvmt_I_AF = \relative c' {
 
 Viola_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	fis64([\mf g fis g fis g fis g)] \repeat tremolo 4 { fis'(-> g } \repeat tremolo 4 { fis g) } \repeat tremolo 4 { fis,( g) }
 		\repeat tremolo 4 { a( b) } \repeat tremolo 4 { a'(-> b } \repeat tremolo 4 { a b) } \repeat tremolo 4 { a,( b) }
 	fis64([ g fis g fis g fis g)] \repeat tremolo 4 { fis'(-> g } \repeat tremolo 4 { fis g) } \repeat tremolo 4 { fis,( g) }

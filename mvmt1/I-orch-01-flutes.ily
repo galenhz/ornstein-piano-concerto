@@ -107,7 +107,6 @@ Flute_I_mvmt_I_AD_AE = \relative c'' {
 
 Picc_I_mvmt_I_AF = \relative c''' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -118,7 +117,6 @@ Picc_I_mvmt_I_AF = \relative c''' {
 
 Flute_I_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	\repeat unfold 2 { c32->([\< d c16)] c'32->([ d c16~)]\! c8 c,32->([\> d c16)]\! r2 }
 	\time 2/4
 	R2
@@ -129,7 +127,6 @@ Flute_I_mvmt_I_AF = \relative c' {
 
 Flute_II_mvmt_I_AF = \relative c''' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -141,7 +138,6 @@ Flute_II_mvmt_I_AF = \relative c''' {
 
 Flute_III_mvmt_I_AF = \relative c''' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	r8 \tuplet 6/4 { c32(\mf d c d c d) } \tuplet 6/4 { c( d c d c d) } r8
 		r8 \tuplet 6/4 { ees32( f ees f ees f) } \tuplet 6/4 { ees( f ees f ees f) } r8
 	r8 \tuplet 6/4 { c32( d c d c d) } \tuplet 6/4 { c( d c d c d) } r8
@@ -156,7 +152,6 @@ Flute_III_mvmt_I_AF = \relative c''' {
 
 Flute_IV_mvmt_I_AF = \relative c''' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2

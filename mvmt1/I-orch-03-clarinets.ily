@@ -113,7 +113,6 @@ Clarinet_I_mvmt_I_AE = \transpose c' bes \relative c'' {
 
 Clarinet_I_mvmt_I_AF = \transpose c' bes \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	\tuplet 6/4 { d32([\mp e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
 		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g)] } }
 	\tuplet 6/4 { d32([ e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
@@ -127,7 +126,6 @@ Clarinet_I_mvmt_I_AF = \transpose c' bes \relative c'' {
 
 Clarinet_II_mvmt_I_AF = \transpose c' bes \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -138,7 +136,6 @@ Clarinet_II_mvmt_I_AF = \transpose c' bes \relative c'' {
 
 Clarinet_III_mvmt_I_AF = \transpose c' bes \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	\tuplet 6/4 { d32(\mp e d e d e) } \repeat unfold 3 { \tuplet 6/4 { d( e d e d e) } }
 		\repeat unfold 4 { \tuplet 6/4 { f( g f g f g) } }
 	\tuplet 6/4 { d32( e d e d e) } \repeat unfold 3 { \tuplet 6/4 { d( e d e d e) } }
@@ -152,7 +149,6 @@ Clarinet_III_mvmt_I_AF = \transpose c' bes \relative c' {
 
 Clarinet_IV_mvmt_I_AF = \transpose c' bes \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2

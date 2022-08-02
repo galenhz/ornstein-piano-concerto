@@ -125,7 +125,6 @@ Oboe_I_mvmt_I_AE = \relative c'' {
 
 Oboe_I_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	\partCombineApart
 	r2 ees32[(\mf f ees16]) ees'32([ f ees16)]~ ees8[ ees,32( f ees16)]
 	r2 ees32[( f ees16]) ees'32([ f ees16)]~ ees8[ ees,32( f ees16)]
@@ -139,7 +138,6 @@ Oboe_I_mvmt_I_AF = \relative c' {
 
 Oboe_II_mvmt_I_AF = \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	r8 g32([\mf fis g fis)] g([ fis g fis)] r8
 		r8 b32([ a b a)] b([ a b a)] r8
 	r8 g32([ fis g fis)] g([ fis g fis)] r8
@@ -153,7 +151,6 @@ Oboe_II_mvmt_I_AF = \relative c'' {
 
 Oboe_III_mvmt_I_AF = \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -164,7 +161,6 @@ Oboe_III_mvmt_I_AF = \relative c'' {
 
 Oboe_IV_mvmt_I_AF = \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	R1*2
 	\time 2/4
 	R2
@@ -175,7 +171,6 @@ Oboe_IV_mvmt_I_AF = \relative c'' {
 
 EnglishHorn_mvmt_I_AF = \transpose c' f \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\time 4/4
 	d32(\mf cis d cis) r8 r8 d32( cis d cis) fis( e fis e) r8 r8 fis32( e fis e)
 	d32( cis d cis) r8 r8 d32( cis d cis) fis( e fis e) r8 r8 fis32( e fis e)
 	\time 2/4
