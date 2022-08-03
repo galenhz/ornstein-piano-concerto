@@ -118,7 +118,7 @@ Clarinet_I_mvmt_I_AF = \transpose c' bes \relative c'' {
 	\tuplet 6/4 { d32([ e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
 		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g)] } }
 	\time 2/4
-	\repeat unfold 4 { \tuplet 6/4 { d( ees d ees d ees) } }
+	\repeat unfold 4 { \tuplet 6/4 { d([ ees d ees d ees)] } }
 	\time 3/4
 	\tempo "Allegro"
 	r4 r4 r8 gis8\f
@@ -136,12 +136,12 @@ Clarinet_II_mvmt_I_AF = \transpose c' bes \relative c'' {
 
 Clarinet_III_mvmt_I_AF = \transpose c' bes \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\tuplet 6/4 { d32(\mp e d e d e) } \repeat unfold 3 { \tuplet 6/4 { d( e d e d e) } }
-		\repeat unfold 4 { \tuplet 6/4 { f( g f g f g) } }
-	\tuplet 6/4 { d32( e d e d e) } \repeat unfold 3 { \tuplet 6/4 { d( e d e d e) } }
-		\repeat unfold 4 { \tuplet 6/4 { f( g f g f g) } }
+	\tuplet 6/4 { d32([\mp e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
+		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g) }] }
+	\tuplet 6/4 { d32([ e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
+		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g)] } }
 	\time 2/4
-	\repeat unfold 4 { \tuplet 6/4 { d( ees d ees d ees) } }
+	\repeat unfold 4 { \tuplet 6/4 { d([ ees d ees d ees)] } }
 	\time 3/4
 	\tempo "Allegro"
 	r4 r4 r8 gis'8\f
