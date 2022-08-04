@@ -6,15 +6,20 @@ the full score and parts. The PR may have been done later than the score/parts,
 and may represent the composer's final thoughts...but the score/parts were
 never corrected, which may point against that theory. I am currently biased
 towards the PR, but trying to blend the two in a way that makes sense.
+Edits related to this are marked #TEMPO.
 
 Dynamics are not always consistant. It is often difficult, when reading the
-parts, to differentiate between what was originally there and what was a bit of
-markup by the performer. The score is often lacking any clues.
+parts, to differentiate between what was originally written by the copyist
+and what was a bit of markup by the performer. The score is often lacking
+any clues. Edits related to this are marked #DYNAMICS.
 
 The string divisi sections are complicated. I generally want to use a rule of
 "what's in the score and in the part match up", but sometimes it clearly makes
-more sense to compress the divisi, as in the full score, but write them in
-separate staves for the player. Playing this one by ear for now.
+more sense to compress the divisi, as in the MS full score, but write them in
+separate staves for the player in the part. Playing this one by ear for now.
+What makes this more fun is I can only "backfill" divisi lines with unison sections
+in both by doing the compilation, noting where line/page breaks are, and using
+that as a guide. Would be cool if that could be automated.
 
 Movement I
 
@@ -23,10 +28,10 @@ m. 2: Horn I (score/part) has different rhythm than piano reduction.
 
 m. 5: The PR has "con moto" here. The parts have "moderato con moto" at m. 16.
 The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
-"con moto" at m. 16 which might have been scratched out.
+"con moto" at m. 16 which might have been scratched out. #TEMPO
 (I-common)
 
-m. 6: Flutes I/II have an odd crescendo difference.
+m. 6: Flutes I/II have an odd crescendo difference. #DYNAMICS
 (I-orch-01-flutes)
 
 m. 10: The oboe parts all give the second half of the rhythm X8. X16. The score
@@ -46,12 +51,12 @@ clefs. Bad idea? Regularize like FS to match MM 21?
 (I-solo-piano)
 
 m. 29: Tempo discrepancy. PR is "Appassionata, ma molto sostenuto" and the
-score and parts are just "Appasionata".
+score and parts are just "Appasionata". #TEMPO
 (I-common)
 
 m. 29: Oboes have fff in the parts, f in the score. I think the fff is something
 written in by the performer, but it's hard to tell. Sticking with score dynamic
-for now.
+for now. #DYNAMICS
 (I-orch-02-oboes)
 
 mm. 29-38: Violas bar layout inconsistant between score and parts. Parts break up,
@@ -60,7 +65,7 @@ score doesn't. Sticking with score for now.
 
 mm. 29-38: There are a bunch of crescendo/decrescendo bits in the string parts which
 aren't in the score. I can't tell yet if these are from the copyist or were added
-by players.
+by players. #DYNAMICS
 (I-orch-09-violins-viola I-orch-10-cello-bass)
 
 m.35: Solo piano lower staff; unconvinced the bottom a-sharp on the second beat
@@ -71,10 +76,12 @@ with the pattern and following the full score.
 
 m. 36 and 38: Oboes and bassoons have the "half-broken beam" in the score. The bassoons
 have it in the parts. The oboes do not; changing them to match the score.
-Also interesting is that the bassoons and the oboes slur differently in these measures.
-In practice, it amounts to the same thing (why push a slur over a tie? It gets "slurred"
-anyway). Can't use the score as a tiebreaker because the score doesn't have the slurs
-at all. Leaving them inconsistent for now.
+(I-orch-02-oboes, I-orch-04-bassoons)
+
+m. 36 and 38:  Also interesting is that the bassoons and the oboes slur differently in
+these measures.In practice, it amounts to the same thing (why push a slur over a tie?
+It gets "slurred" anyway). Can't use the score as a tiebreaker because the score doesn't
+have the slurs at all. Leaving them inconsistent for now.
 (I-orch-02-oboes, I-orch-04-bassoons)
 
 m. 39: Bottom staff of solo piano has an obvious error in the PR, missing a bass clef
@@ -84,3 +91,4 @@ transistion. It's there in the full score. Fixed.
 m. 45: Placement of the "cresc." is a bit odd. PR places it squarely in beat 3; the score
 seems to suggest 2 or 2-1/2, and the parts show either 2 or 3 depending on how you read
 them. I'm sticking with 3.
+
