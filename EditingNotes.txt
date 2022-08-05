@@ -45,10 +45,18 @@ Should I make the oboes consistant with the others (and the piano reduction)? Do
 that for now, but willing to reconsider.
 (I-orch-02-oboes)
 
+m. 10: Oboes I/II FF in score, FFFF in part, but part looks like player markup. #DYNAMICS
+(I-orch-02-oboes)
+
 m. 12: Piccolo FFF in part, F in score. FFF could be copyist. Sticking with FFF
 by analogy with flutes in m. 10.
 #DYNAMICS
 (I-orch-01-flutes)
+
+m. 12: Oboes I/I FF in score, FFF in part, but FFF could be copyist. Sticking with FFF
+for now; if I revisit this one, should do it in conjunction with other dynamics in
+measures 10 and 12. #DYNAMICS
+(I-orch-02-oboes)
 
 m. 16: Flute I has mf scratched out and replaced with F in both score and part.
 Seems official to me. #DYNAMICS
@@ -67,8 +75,7 @@ score and parts are just "Appasionata". #TEMPO
 (I-common)
 
 m. 29: Oboes have fff in the parts, f in the score. I think the fff is something
-written in by the performer, but it's hard to tell. Sticking with score dynamic
-for now. #DYNAMICS
+written in by the performer. Sticking with score dynamic for now. #DYNAMICS
 (I-orch-02-oboes)
 
 mm. 29-38: Violas bar layout inconsistant between score and parts. Parts break up,
