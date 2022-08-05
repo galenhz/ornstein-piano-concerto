@@ -5,10 +5,25 @@
 
 %%% Section AB - mm. 5-12
 
-Picc_mvmt_I_AB = \relative c'' {
-	R2.*5 \time 4/4 R1 \time 3/4 R2.
+Picc_mvmt_I_AB = \relative c''' {
+	\tempo "con moto"
+	R2.*5
 	\time 4/4
-	r8 bes c bes r8 bes' c bes
+	\tag #'Score R1
+	\tag #'Part {
+		<<
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+			\new CueVoice {
+				\tuplet 3/2 { r8_"I+II Fl." d e } \tuplet 3/2 { cis( c a) } d8[ r16 fis] ees4
+			}
+		>>
+	}
+	\time 3/4 R2.
+	\time 4/4
+	r8 bes,\fff c bes r8 bes' c bes
 }
 
 %% m. 5: Artificially lengthen bar length in flute I/II part so not to squash the crescendo.
@@ -21,9 +36,9 @@ Flute_I_mvmt_I_AB = \relative c'' {
 	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
 		a4\ff\< e'4.\!\> cis8\!
 	\tag #'Part \revert NoteHead.extra-spacing-width
-	r8 a_\< \tuplet 3/2 { gis( a b)_\! } ees_\> c~_\!
+	r8 a_\< \tuplet 3/2 { gis( f b)_\! } ees_\> c~_\!
 	c2.
-	R2. R2.
+	R2.*2
 	\time 4/4
 	\tuplet 3/2 { r8 d'\fff e } \tuplet 3/2 { cis( c a) } d8[ r16 fis] ees4
 	\time 3/4
@@ -41,7 +56,7 @@ Flute_II_mvmt_I_AB = \relative c' {
 		c4\ff\< b'4.\!\> cis8\!
 	\tag #'Part \revert NoteHead.extra-spacing-width
 	\tag #'Part { r8 a\< gis4\! bes\> } \tag #'Score { r8 a gis4 bes }
-	R2.\! R2. R2.
+	R2.*3\!
 	\time 4/4
 	\tuplet 3/2 { r8 d'\fff e } \tuplet 3/2 { cis( c a) } d8[ r16 fis] ees4
 	\time 3/4
@@ -86,7 +101,7 @@ Flute_IV_mvmt_I_AB = \relative c'' {
 
 Flute_I_mvmt_I_AD_AE = \relative c'' {
 	\time 10/8
-	g8[(\f a] a4 g) b(\> a)\!
+	g8[(\f^\Solo_mark a] a4 g) b(\> a)\!
 	\time 11/8
 	g8[(\< a])\! a4(\> g)\! e(\> a g8)\!
 	\time 10/8
@@ -103,16 +118,52 @@ Flute_I_mvmt_I_AD_AE = \relative c'' {
 %%% Section AE = mm. 21-24
 %%% Tacet
 
+Flute_III_mvmt_I_AE = \relative c'' {
+	\tag #'Score { \NULL_I_AE }
+	\tag #'Part {
+		\mark #2
+		\time 4/4
+		R1
+		<<
+			\new CueVoice {
+				r2 a8[(_"I. Ob." gis~ gis16 g fis a)]
+				fis2 r2
+			}
+			\new Voice {
+				\voiceTwo
+				R1*2
+			}
+		>>
+		\tempo "più agitato"
+		R1
+	}
+}
+
 %%% Section AF = mm. 25-28
 
-Picc_I_mvmt_I_AF = \relative c''' {
+% "CueDuring" worked for the flute 1 cues but broke with bad rhythm for flute 3.
+% Just doing it by hand.
+
+Picc_I_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
-	\time 2/4
-	R2
-	\time 3/4
+	\tag #'Score { R1*2 \time 2/4 R2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				c32->([_"I Fl." d c16)] c'32->([ d c16~)] c8 c,32->([ d c16)] r2
+				c32->([ d c16)] c'32->([ d c16~)] c8 c,32->([ d c16)] r2
+				\time 2/4
+				r8_"III Fl." \tuplet 6/4 { c''32([ des c des c des)] } r8 \tuplet 6/4 { c32([ des c des c des)] }
+			}
+			\new Voice {
+				\voiceTwo
+				R1*2 \time 2/4 R2
+			}
+		>>
+	}
 	\tempo "Allegro"
-	r4 r4 r8 g8\f
+	\time 3/4
+	r4 r4 r8 g,8\f
 }
 
 Flute_I_mvmt_I_AF = \relative c' {
@@ -125,16 +176,27 @@ Flute_I_mvmt_I_AF = \relative c' {
 	r4 r4 r8 g'''8\f
 }
 
-Flute_II_mvmt_I_AF = \relative c''' {
+Flute_II_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
-	\time 2/4
-	R2
+	\tag #'Score { R1*2 \time 2/4 R2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				c32->([_"I Fl." d c16)] c'32->([ d c16~)] c8 c,32->([ d c16)] r2
+				c32->([ d c16)] c'32->([ d c16~)] c8 c,32->([ d c16)] r2
+				\time 2/4
+				r8_"III Fl." \tuplet 6/4 { c''32([ des c des c des)] } r8 \tuplet 6/4 { c32([ des c des c des)] }
+			}
+			\new Voice {
+				\voiceTwo
+				R1*2 \time 2/4 R2
+			}
+		>>
+	}
 	\time 3/4
 	\tempo "Allegro"
 	r4 r4 r8 cis8\f
 }
-
 
 Flute_III_mvmt_I_AF = \relative c''' {
 	\tempo "Appasionata, ma molto sostenuto"
@@ -149,15 +211,26 @@ Flute_III_mvmt_I_AF = \relative c''' {
 	r4 r4 r8 fis8\f
 }
 
-
-Flute_IV_mvmt_I_AF = \relative c''' {
+Flute_IV_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
-	\time 2/4
-	R2
+	\tag #'Score { R1*2 \time 2/4 R2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				c32->([_"I Fl." d c16)] c'32->([ d c16~)] c8 c,32->([ d c16)] r2
+				c32->([ d c16)] c'32->([ d c16~)] c8 c,32->([ d c16)] r2
+				\time 2/4
+				r8_"III Fl." \tuplet 6/4 { c''32([ des c des c des)] } r8 \tuplet 6/4 { c32([ des c des c des)] }
+			}
+			\new Voice {
+				\voiceTwo
+				R1*2 \time 2/4 R2
+			}
+		>>
+	}
 	\time 3/4
 	\tempo "Allegro"
-	r4 r4 r8 g8\f
+	r4 r4 r8 g,8\f
 }
 
 %%% Section AG = mm. 29-38 (Rehersal 3)
@@ -168,5 +241,5 @@ Flute_IV_mvmt_I_AF = \relative c''' {
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG }
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG }
-Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG }
+Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG }

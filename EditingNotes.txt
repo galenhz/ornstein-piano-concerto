@@ -34,6 +34,9 @@ The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
 m. 6: Flutes I/II have an odd crescendo difference. #DYNAMICS
 (I-orch-01-flutes)
 
+m. 10: Flutes I/II parts show FFF, score may show F or FF. Keeping FFF for now. #DYNAMICS
+(I-orch-01-flutes)
+
 m. 10: The oboe parts all give the second half of the rhythm X8. X16. The score
 oddly has X8 X8 for the first and second, and X8. X16 for the third and fourth.
 That's pretty clearly a mistake in the score. But it does make me wonder: the other
@@ -41,6 +44,15 @@ instruments playing this rhythm (flute I/II, clarinet I/II has X8 R16 X16 instea
 Should I make the oboes consistant with the others (and the piano reduction)? Doing
 that for now, but willing to reconsider.
 (I-orch-02-oboes)
+
+m. 12: Piccolo FFF in part, F in score. FFF could be copyist. Sticking with FFF
+by analogy with flutes in m. 10.
+#DYNAMICS
+(I-orch-01-flutes)
+
+m. 16: Flute I has mf scratched out and replaced with F in both score and part.
+Seems official to me. #DYNAMICS
+(I-orch-01-flutes)
 
 m. 19: put the "pocu piu/rit" in every part? Some parts have it under the rest.
 Some don't.
