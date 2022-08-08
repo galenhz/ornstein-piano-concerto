@@ -34,8 +34,18 @@ The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
 m. 6: Flutes I/II have an odd crescendo difference. #DYNAMICS
 (I-orch-01-flutes)
 
-m. 10: Flutes I/II parts show FFF, score may show F or FF. Keeping FFF for now. #DYNAMICS
-(I-orch-01-flutes)
+m. 6: Clarinet II has hairpins I lacks. Give them to I as well. #DYNAMICS
+(I-orch-03-clarinets)
+
+m. 7: Clarinet II has a decrescendo that I lacks, and is in the score. Give it to I as well.
+#DYNAMICS
+(I-orch-03-clarinets)
+
+m. 10: The dynamics for this bar on Flutes, Oboes, Clarinets are kind of a mess. Score looks
+like FF for everbody. Flute parts show FFF, oboe and clarinet parts show FFFF, and I'm
+not sure if these are markups or work of the copyist. I think they should be consistent,
+though. Sticking with score; FF for all. #DYNAMICS
+(I-orch-01-flutes, I-orch-02-oboes, I-orch-03-clarinets)
 
 m. 10: The oboe parts all give the second half of the rhythm X8. X16. The score
 oddly has X8 X8 for the first and second, and X8. X16 for the third and fourth.
@@ -43,9 +53,6 @@ That's pretty clearly a mistake in the score. But it does make me wonder: the ot
 instruments playing this rhythm (flute I/II, clarinet I/II has X8 R16 X16 instead.
 Should I make the oboes consistant with the others (and the piano reduction)? Doing
 that for now, but willing to reconsider.
-(I-orch-02-oboes)
-
-m. 10: Oboes I/II FF in score, FFFF in part, but part looks like player markup. #DYNAMICS
 (I-orch-02-oboes)
 
 m. 12: Piccolo FFF in part, F in score. FFF could be copyist. Sticking with FFF
@@ -69,6 +76,14 @@ Some don't.
 mm. 21-23: Solo piano, 2PR, same notes but different transition points for
 clefs. Bad idea? Regularize like FS to match MM 21?
 (I-solo-piano)
+
+m. 21 and 23: Clarinet and oboe solos have mf in score and (originally) parts, but
+parts had it scratched out and replaced with f. Sticking with mf for now. #DYNAMICS
+(I-orch-02-oboes, I-orch-03-clarinets)
+
+m. 25: Clarinets I and III have mf in score like everyone else, player replaced with mp.
+Sticking with original. #DYNAMICS
+(I-orch-03-clarinets)
 
 m. 29: Tempo discrepancy. PR is "Appassionata, ma molto sostenuto" and the
 score and parts are just "Appasionata". #TEMPO

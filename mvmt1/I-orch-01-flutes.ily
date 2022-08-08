@@ -40,7 +40,7 @@ Flute_I_mvmt_I_AB = \relative c'' {
 	c2.
 	R2.*2
 	\time 4/4
-	\tuplet 3/2 { r8 d'\fff e } \tuplet 3/2 { cis( c a) } d8[ r16 fis] ees4
+	\tuplet 3/2 { r8 d'\ff e } \tuplet 3/2 { cis( c a) } d8[ r16 fis] ees4
 	\time 3/4
 	R2.
 	\time 4/4
@@ -58,7 +58,7 @@ Flute_II_mvmt_I_AB = \relative c' {
 	\tag #'Part { r8 a\< gis4\! bes\> } \tag #'Score { r8 a gis4 bes }
 	R2.*3\!
 	\time 4/4
-	\tuplet 3/2 { r8 d'\fff e } \tuplet 3/2 { cis( c a) } d8[ r16 fis] ees4
+	\tuplet 3/2 { r8 d'\ff e } \tuplet 3/2 { cis( c a) } d8[ r16 fis] ees4
 	\time 3/4
 	R2.
 	\time 4/4
@@ -168,7 +168,8 @@ Picc_I_mvmt_I_AF = \relative c' {
 
 Flute_I_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\repeat unfold 2 { c32->([\< d c16)] c'32->([ d c16~)]\! c8 c,32->([\> d c16)]\! r2 }
+	c32->([\mf\< d c16)] c'32->([ d c16~)]\! c8 c,32->([\> d c16)]\! r2
+	c32->([\< d c16)] c'32->([ d c16~)]\! c8 c,32->([\> d c16)]\! r2
 	\time 2/4
 	R2
 	\time 3/4

@@ -124,6 +124,9 @@ EnglishHorn_mvmt_I_AD_AE = \transpose c' f \relative c'' {
 
 %%% Section AE = mm. 21-24
 
+%%% EDIT: m. 21 and 23: Oboe I solo has mf in score and (originally) part, but
+%%%       part had it scratched out and replaced with f. Same with clarinet.
+
 % Oboe I/II part has flute cues for AD section, but leaving them out. Clarinet cues
 % should be good enough, hopefully.
 % FIXME: Maybe add Oboe I cue to Oboe II part?
@@ -133,7 +136,7 @@ Oboe_I_mvmt_I_AE = \relative c'' {
 	\time 4/4
 	\tag #'Score {
 		R1
-		r2 a8[(\f gis~ gis16 g fis a)]
+		r2 a8[(\mf gis~ gis16 g fis a)]
 	}
 	\tag #'Part {
 		<<
@@ -144,7 +147,7 @@ Oboe_I_mvmt_I_AE = \relative c'' {
 			\new Voice {
 				\voiceTwo
 				r1
-				r2 \voiceOne a8[(\f^\Solo_mark gis~ gis16 g fis a)]
+				r2 \voiceOne a8[(\mf^\Solo_mark gis~ gis16 g fis a)]
 			}
 		>>
 	}

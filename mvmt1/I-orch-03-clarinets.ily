@@ -5,20 +5,21 @@
 
 %%% Section AB - mm. 5-12
 
-%% m. 5: Supress first part's dynamics in score
+%% m. 5: Supress first part's dynamics in score. Expand everybody's measures.
 %% EDIT: m. 6: Clarinet II has hairpins I lacks. Give them to I as well.
-%% EDIT: m. 7: Clarinet II has a decrescendo that I lacks. Give it to I as well.
-%% EDIT:       Clarinet I has fff, clarinet II has ff. No dynamics at all in full score.  fff to both.
+%% EDIT: m. 7: Clarinet II has a decrescendo that I lacks, and is in the score. Give it to I as well.
 
 Clarinet_I_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\tempo "con moto"
-	\tag #'Part { g4\f\< ais4.\!\>( b8\!) } \tag #'Score { g4 ais4.( b8) }
-	r8 e,4.\< c'4\!\> |
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
+		\tag #'Part { g4\f\< ais4.\!\>( b8\!) } \tag #'Score { g4 ais4.( b8) }
+		r8 e,4.\< c'4\!\> |
+	\tag #'Part \revert NoteHead.extra-spacing-width
 	r8\! fis--\fff\> g-- ais-- b-- ais--\!
 	R2.
 	r8 a,( gis g4\> fis8)\!
 	\time 4/4
-	\tuplet 3/2 { r8 e'(\ffff fis) } \tuplet 3/2 { dis( d b) } e[ r16 gis] f4
+	\tuplet 3/2 { r8 e'(\ff fis) } \tuplet 3/2 { dis( d b) } e[ r16 gis] f4
 	\time 3/4
 	r8 a,( gis g4 fis8)
 	\time 4/4
@@ -30,13 +31,15 @@ Clarinet_I_mvmt_I_AB = \transpose c' bes \relative c'' {
 
 Clarinet_II_mvmt_I_AB = \transpose c' bes \relative c' {
 	\tempo "con moto"
-	e4\f\< g4.\!\>~ g8\!
-	r8 e4.\< a4\!\> |
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
+		e4\f\< g4.\!\>~ g8\!
+		r8 e4.\< a4\!\> |
+	\tag #'Part \revert NoteHead.extra-spacing-width
 	r8\! fis--\fff\> g-- ais-- b-- ais--\!
 	R2.
 	r8 a( gis g4\> fis8\!)
 	\time 4/4
-	\tuplet 3/2 { r8 e'(\fffff fis) } \tuplet 3/2 { dis( d b) } e[ r16 gis] f4
+	\tuplet 3/2 { r8 e'(\ff fis) } \tuplet 3/2 { dis( d b) } e[ r16 gis] f4
 	\time 3/4
 	r8 a,( gis g4 fis8)
 	\time 4/4
@@ -49,8 +52,10 @@ Clarinet_II_mvmt_I_AB = \transpose c' bes \relative c' {
 
 Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\tempo "con moto"
-	\tag #'Part { r4 cis4.\f\>( b8)\! } \tag #'Score { r4 cis4.( b8) }
-	r8 e,4.\< c'4\!\> |
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
+		\tag #'Part { r4 cis4.\f\>( b8)\! } \tag #'Score { r4 cis4.( b8) }
+		r8 e,4.\< c'4\!\>
+	\tag #'Part \revert NoteHead.extra-spacing-width
 	R2.\!
 	R2.*2
 	\time 4/4
@@ -68,8 +73,10 @@ Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 
 Clarinet_IV_mvmt_I_AB = \transpose c' bes \relative c' {
 	\tempo "con moto"
-	b4\f\< fis'4.\!\>( g8)\!
-	r8 e4.\< a4\!\> |
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
+		b4\f\< fis'4.\!\>( g8)\!
+		r8 e4.\< a4\!\>
+	\tag #'Part \revert NoteHead.extra-spacing-width
 	R2.\!
 	R2.*2
 	\time 4/4
@@ -89,7 +96,7 @@ BassClarinet_mvmt_I_AB_AC = \transpose c' bes, \relative c'' {
 	\time 3/4
 	R2.
 	\time 4/4
-	c2\ff c2\< |
+	c2\ff c2\<
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
 	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
@@ -97,23 +104,69 @@ BassClarinet_mvmt_I_AB_AC = \transpose c' bes, \relative c'' {
 %%% Section AD = mm. 16-20
 %%% Tacet
 
+%%% ...but give clarinet I cues, since they have a solo coming up.
+
+Clarinet_I_mvmt_I_AD = \transpose c' bes \relative c'' {
+	\tag #'Score { \NULL_I_AD }
+	\tag #'Part {
+		\time 10/8 R1*10/8 \time 11/8 R1*11/8 \time 10/8 R1*10/8
+		<<
+			\new CueVoice {
+				a4^"I Fl." fis b e b
+				a fis b e fis
+			}
+			\new Voice {
+				\voiceTwo
+				R1*10/8*2
+			}
+		>>
+	}
+}
+
 %%% Section AE = mm. 21-24
+
+%%% EDIT: m. 21 and 23: Clarinet I solo has mf in score and (originally) part, but
+%%%       part had it scratched out and replaced with f. Same with oboe.
 
 Clarinet_I_mvmt_I_AE = \transpose c' bes \relative c'' {
 	\mark #2
 	\time 4/4
-	r2 \tag #'Score fis8[(\f \tag #'Part fis8[(\f^"Solo" f~ f16 e ees fis)]
+	r2 \tag #'Score fis8[(\mf \tag #'Part fis8[(\mf^\Solo_mark f~ f16 e ees fis)]
 	ees2 r2
-	r2 \tag #'Score fis8[(\f \tag #'Part fis8[(\f^"Solo" f~ f16 e ees fis)]
+	r2 fis8[(\mf f~ f16 e ees fis)]
 	\tempo "più agitato"
 	ees8 r8 r4 r2
 }
 
+Clarinet_III_IV_mvmt_I_AE = \transpose c' bes \relative c'' {
+	\tag #'Score \NULL_I_AE
+	\tag #'Part {
+		\mark #2
+		\time 4/4
+		<<
+			\new CueVoice {
+				r2 fis8[(^"I Cl."  f~ f16 e ees fis)]
+				ees2 r2
+				r2 fis8[( f~ f16 e ees fis)]
+				\tempo "più agitato"
+				ees8 s8 s4 s2
+			}
+			\new Voice {
+				\voiceTwo
+				R1 R1 R1 R1
+			}
+		>>
+	}
+}
+
 %%% Section AF = mm. 25-28
+
+%%% EDIT: m. 25: Clarinets I and III have mf in score like everyone else, player
+%%%       replaced with mp. Sticking with original.
 
 Clarinet_I_mvmt_I_AF = \transpose c' bes \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\tuplet 6/4 { d32([\mp e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
+	\tuplet 6/4 { d32([\mf e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
 		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g)] } }
 	\tuplet 6/4 { d32([ e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
 		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g)] } }
@@ -126,7 +179,19 @@ Clarinet_I_mvmt_I_AF = \transpose c' bes \relative c'' {
 
 Clarinet_II_mvmt_I_AF = \transpose c' bes \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
+	\tag #'Score { R1*2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\tuplet 6/4 { d32([^"I Cl." e d e d e)] } \repeat percent 3 { \tuplet 6/4 { d32([ e d e d e)] } }
+				\repeat percent 4 { \tuplet 6/4 { f([ g f g f g)] } }
+			}
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+		>>
+	}
 	\time 2/4
 	R2
 	\time 3/4
@@ -136,7 +201,7 @@ Clarinet_II_mvmt_I_AF = \transpose c' bes \relative c'' {
 
 Clarinet_III_mvmt_I_AF = \transpose c' bes \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\tuplet 6/4 { d32([\mp e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
+	\tuplet 6/4 { d32([\mf e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
 		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g) }] }
 	\tuplet 6/4 { d32([ e d e d e)] } \repeat unfold 3 { \tuplet 6/4 { d([ e d e d e)] } }
 		\repeat unfold 4 { \tuplet 6/4 { f([ g f g f g)] } }
@@ -187,8 +252,8 @@ Clarinet_III_IV_mvmt_I_AG = \transpose c' bes \relative c' {
 
 %%% Final assembly
 
-Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG }
+Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \Clarinet_I_mvmt_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG }
 Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG }
-Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG }
-Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG }
+Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG }
+Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG }
 BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG }
