@@ -23,7 +23,7 @@ Picc_mvmt_I_AB = \relative c''' {
 	}
 	\time 3/4 R2.
 	\time 4/4
-	r8 bes,\fff c bes r8 bes' c bes
+	r8 bes,\f c bes r8 bes' c bes
 }
 
 %% m. 5: Artificially lengthen bar length in flute I/II part so not to squash the crescendo.

@@ -41,11 +41,11 @@ m. 7: Clarinet II has a decrescendo that I lacks, and is in the score. Give it t
 #DYNAMICS
 (I-orch-03-clarinets)
 
-m. 10: The dynamics for this bar on Flutes, Oboes, Clarinets are kind of a mess. Score looks
-like FF for everbody. Flute parts show FFF, oboe and clarinet parts show FFFF, and I'm
-not sure if these are markups or work of the copyist. I think they should be consistent,
+m. 10: The dynamics for this bar on Flutes, Oboes, Clarinets, Bassoons are kind of a mess.
+Score looks like FF for everbody. Flute parts show FFF, oboe/clarinet/bassoon parts show FFFF,
+and I'm not sure if these are markups or work of the copyist. I think they should be consistent,
 though. Sticking with score; FF for all. #DYNAMICS
-(I-orch-01-flutes, I-orch-02-oboes, I-orch-03-clarinets)
+(I-orch-01-flutes, I-orch-02-oboes, I-orch-03-clarinets, I-orch-04-bassoons)
 
 m. 10: The oboe parts all give the second half of the rhythm X8. X16. The score
 oddly has X8 X8 for the first and second, and X8. X16 for the third and fourth.
@@ -55,8 +55,8 @@ Should I make the oboes consistant with the others (and the piano reduction)? Do
 that for now, but willing to reconsider.
 (I-orch-02-oboes)
 
-m. 12: Piccolo FFF in part, F in score. FFF could be copyist. Sticking with FFF
-by analogy with flutes in m. 10.
+m. 12: Piccolo FFF in part, F in score. FFF could be copyist. Sticking with score,
+as I have for measure 10.
 #DYNAMICS
 (I-orch-01-flutes)
 
@@ -85,13 +85,17 @@ m. 25: Clarinets I and III have mf in score like everyone else, player replaced 
 Sticking with original. #DYNAMICS
 (I-orch-03-clarinets)
 
-m. 29: Tempo discrepancy. PR is "Appassionata, ma molto sostenuto" and the
+m. 25: Tempo discrepancy. PR is "Appassionata, ma molto sostenuto" and the
 score and parts are just "Appasionata". #TEMPO
 (I-common)
 
 m. 29: Oboes have fff in the parts, f in the score. I think the fff is something
 written in by the performer. Sticking with score dynamic for now. #DYNAMICS
 (I-orch-02-oboes)
+
+m. 29: Bassoons I and II are in unison, but whoever copied the parts put I in tenor
+clef and II in bass clef. Absent a compelling reason, I'm just keeping both in tenor.
+(I-orch-04-bassoons)
 
 mm. 29-38: Violas bar layout inconsistant between score and parts. Parts break up,
 score doesn't. Sticking with score for now.

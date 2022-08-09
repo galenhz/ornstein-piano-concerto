@@ -16,11 +16,11 @@ Bassoon_I_mvmt_I_AB_AC = \relative c {
 	c) b( bes a aes d,)
 	R2.
 	\time 4/4
-	\tuplet 3/2 { r8 d'( e) } \tuplet 3/2 { cis( c a) } d[ r16 fis] ees4
+	\tuplet 3/2 { r8 d'(\ff e) } \tuplet 3/2 { cis( c a) } d[ r16 fis] ees4
 	\time 3/4
 	R2.
 	\time 4/4
-	a,,2\f cis_\<\! |
+	a,,2\f cis_\<
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
 	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
@@ -33,14 +33,14 @@ Bassoon_II_mvmt_I_AB = \relative c {
 	c) b( bes a aes d,)
 	R2.
 	\time 4/4
-	\tuplet 3/2 { r8 d'( e) } \tuplet 3/2 { cis( c a) } d[ r16 fis] ees4
+	\tuplet 3/2 { r8 d'(\ff e) } \tuplet 3/2 { cis( c a) } d[ r16 fis] ees4
 	\time 3/4
 	R2.
 	\time 4/4
-	ees,,2 r2 |
+	ees,,2 r2
 }
 
-%% EDIT: m. 11: Add same decrescendo to III/IV as in m. 9? It's not in the parts...
+%% EDIT: m. 11: Add same decrescendo to III/IV as in m. 9? It's not in the parts or the score.
 %% FIXME: Cue notes for 3/4?
 
 Bassoon_III_mvmt_I_AB_AC = \relative c {
