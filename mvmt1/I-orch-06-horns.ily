@@ -6,19 +6,20 @@
 Horn_I_mvmt_I_AA = \transpose c' f \relative c'' {
 	\tempo "Moderato assai"
     \time 3/4 
-	cis4\f g'4. e8~(\>
+	\tag #'Score cis4\f \tag #'Part cis4\f^\Solo_mark g'4. e8~(\>
 	e cis)\! \tuplet 3/2 { c16(\< a des) } fis8~\! fis8. r16
 	r2. r2.\fermata
 }
 
 %%% Section AB - mm. 5-12
 
-%% FIXME: m. 6, do I really want to bother with the hairpin override in 3/4?
-%% FIXME: m. 12, how to create the crescendo-to-the barline effect for 1/2/3/4?
+%% EDIT: m. 6, different dynamics for III/IV in parts, but same in score?
+%% EDIT: m. 12, beat 3, FFF in V/VI not in score, but looks like copyist.
+%% m. 6: Supress 4's dynamics in score.
 
 Horn_I_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 	\tempo "con moto" 
-	e4\mf fis4.(_\< gis8)\!
+	e4\mf_\< fis4.( gis8)\!
 	r4 r4 f,8( g)
 	gis(_\< b) \tuplet 3/2 { c( dis e) } \tuplet 3/2 { g( gis g)\! }
 	r8 gis8~\mf gis2
@@ -39,7 +40,7 @@ Horn_I_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 
 Horn_II_mvmt_I_AB_AC = \transpose c' f \relative c' {
 	\tempo "con moto"
-	e4\mf r4 r8 gis8
+	\tag #'Part e4\mf \tag #'Score e4 r4 r8 gis8
 	r8 a4.\>( bes4)\!
 	c2._\<
 	r8\! a8~\mf a2
@@ -56,9 +57,9 @@ Horn_II_mvmt_I_AB_AC = \transpose c' f \relative c' {
 
 Horn_III_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 	\tempo "con moto"
-	a4\mf\< c4. c8\!
-	r2 \once \override Hairpin.to-barline = ##f f4\>(
-	dis2.\!)
+	a4_\mf_\< c4. c8_\!
+	r2 \tag #'Part f4\>( \tag #'Score f4(
+	\tag #'Part dis2.\!) \tag #'Score dis2.)
 	r8 dis~\mf dis2
 	bes2.\<
 	\time 4/4
@@ -73,8 +74,8 @@ Horn_III_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 
 Horn_IV_mvmt_I_AB_AC = \transpose c' f \relative c' {
 	\tempo "con moto"
-	c4\f\< ees( e)\!
-	r2 \once \override Hairpin.to-barline = ##f d4\>(
+	\tag #'Part { c4\f\< ees( e)\! } \tag #'Score { c4 ees( e) }
+	r2 d4\>(
 	e2.\!)
 	r8 gis~\mf gis2
 	d2.\<
@@ -92,22 +93,44 @@ Horn_V_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
-	R1
-	\time 3/4
-	R2.
+	\tag #'Score { R1 \time 3/4 R2. }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				d2^"I. Hn." cis4 f8.( g16)
+				\time 3/4
+				r4 f, \tuplet 3/2 { b16[( bes g } cis8])
+			}
+			\new Voice {
+				\voiceTwo
+				R1 \time 3/4 R2.
+			}
+		>>
+	}
 	\time 4/4
 	r8 f\ff g f r8 f--\fff\< g-- f--\!
 }
 
-Horn_VI_mvmt_I_AB = \transpose c' f \relative c' {
+Horn_VI_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
-	R1
-	\time 3/4
-	R2.
+	\tag #'Score { R1 \time 3/4 R2. }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				d2^"I. Hn." cis4 f8.( g16)
+				\time 3/4
+				r4 f, \tuplet 3/2 { b16[( bes g } cis8])
+			}
+			\new Voice {
+				\voiceTwo
+				R1 \time 3/4 R2.
+			}
+		>>
+	}
 	\time 4/4
-	r8 f\ff g f r8 f--\fff\< g-- f--\!
+	r8 f,\ff g f r8 f--\fff\< g-- f--\!
 }
 
 %%% Section AD = mm. 16-20
@@ -119,31 +142,73 @@ Horn_VI_mvmt_I_AB = \transpose c' f \relative c' {
 %%% Section AF = mm. 25-28
 
 % m. 28 - Supress the bit of markup for horn I
-% FIXME: m. 28 - squeeze horn II's markup just a smidge to the left
 
 Horn_I_mvmt_I_AF = \transpose c' f \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
+	\tag #'Score R1
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\repeat tremolo 4 { a64_"I Vn." g } \repeat tremolo 4 { a'64 g } \repeat tremolo 4 { a64 g } \repeat tremolo 4 { a,64 g }
+					\repeat tremolo 4 { c bes } \repeat tremolo 4 { c' bes } \repeat tremolo 4 { c bes } \repeat tremolo 4 { c, bes }
+			}
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+		>>
+	}
+	R1
 	\time 2/4
 	R2
 	\time 3/4
 	\tempo "Allegro"
-	r8 d\mf r8 \tag #'Part cis-\markup { \italic "più" \dynamic f } \tag #'Score cis r4
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-1.5 . 1.5)
+	r8 d\mf \tag #'Part r8-\markup { \italic "più" \dynamic f } \tag #'Score r8 cis r4
+	\tag #'Part \revert NoteHead.extra-spacing-width
 }
 
 Horn_II_mvmt_I_AF = \transpose c' f \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
+	\tag #'Score R1
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\repeat tremolo 4 { a64_"I Vn." g } \repeat tremolo 4 { a'64 g } \repeat tremolo 4 { a64 g } \repeat tremolo 4 { a,64 g }
+					\repeat tremolo 4 { c bes } \repeat tremolo 4 { c' bes } \repeat tremolo 4 { c bes } \repeat tremolo 4 { c, bes }
+			}
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+		>>
+	}
+	R1
 	\time 2/4
 	R2
 	\time 3/4
 	\tempo "Allegro"
-	r8 gis\mf r8 gis-\markup { \italic "più" \dynamic f } r4
+	\tag #`Part \override NoteHead.extra-spacing-width = #'(-1.5 . 1.5)
+	r8 gis\mf r8-\markup { \italic "più" \dynamic f } gis r4
+	\tag #'Part \revert NoteHead.extra-spacing-width
 }
 
 Horn_III_mvmt_I_AF = \transpose c' f \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
+	\tag #'Score R1
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\repeat tremolo 4 { a64_"I Vn." g } \repeat tremolo 4 { a'64 g } \repeat tremolo 4 { a64 g } \repeat tremolo 4 { a,64 g }
+					\repeat tremolo 4 { c bes } \repeat tremolo 4 { c' bes } \repeat tremolo 4 { c bes } \repeat tremolo 4 { c, bes }
+			}
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+		>>
+	}
+	R1
 	\time 2/4
 	R2
 	\time 3/4
@@ -151,14 +216,27 @@ Horn_III_mvmt_I_AF = \transpose c' f \relative c'' {
 	r8 cis\mf r4 r4
 }
 
-Horn_IV_mvmt_I_AF = \transpose c' f \relative c' {
+Horn_IV_mvmt_I_AF = \transpose c' f \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	R1*2
+	\tag #'Score R1
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\repeat tremolo 4 { a64_"I Vn." g } \repeat tremolo 4 { a'64 g } \repeat tremolo 4 { a64 g } \repeat tremolo 4 { a,64 g }
+					\repeat tremolo 4 { c bes } \repeat tremolo 4 { c' bes } \repeat tremolo 4 { c bes } \repeat tremolo 4 { c, bes }
+			}
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+		>>
+	}
+	R1
 	\time 2/4
 	R2
 	\time 3/4
 	\tempo "Allegro"
-	r8 d\mf r4 r4
+	r8 d,\mf r4 r4
 }
 
 %%% Section AG = mm. 29-38 (Rehersal 3)

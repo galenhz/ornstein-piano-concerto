@@ -37,6 +37,10 @@ m. 6: Flutes I/II have an odd crescendo difference. #DYNAMICS
 m. 6: Clarinet II has hairpins I lacks. Give them to I as well. #DYNAMICS
 (I-orch-03-clarinets)
 
+m. 6: Horns III and IV have different dynamics in part (mf and f), but same in score.
+#DYNAMICS
+(I-orch-06-horns)
+
 m. 7: Clarinet II has a decrescendo that I lacks, and is in the score. Give it to I as well.
 #DYNAMICS
 (I-orch-03-clarinets)
@@ -64,6 +68,10 @@ m. 12: Oboes I/I FF in score, FFF in part, but FFF could be copyist. Sticking wi
 for now; if I revisit this one, should do it in conjunction with other dynamics in
 measures 10 and 12. #DYNAMICS
 (I-orch-02-oboes)
+
+m. 12: Horns V/VI have first FF then FFF in the part. Only FF may have backing in
+score, but looks like copyist. Keeping for now.
+(I-orch-06-horns)
 
 m. 16: Flute I has mf scratched out and replaced with F in both score and part.
 Seems official to me. #DYNAMICS
