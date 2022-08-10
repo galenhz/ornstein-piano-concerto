@@ -101,7 +101,7 @@ Flute_IV_mvmt_I_AB = \relative c'' {
 
 Flute_I_mvmt_I_AD_AE = \relative c'' {
 	\time 10/8
-	g8[(\f^\Solo_mark a] a4 g) b(\> a)\!
+	\tag #'Score g8[(\f \tag #'Part g8[(\f^\Solo_mark a] a4 g) b(\> a)\!
 	\time 11/8
 	g8[(\< a])\! a4(\> g)\! e(\> a g8)\!
 	\time 10/8
