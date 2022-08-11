@@ -7,16 +7,16 @@
 
 Violin_I_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
-	<a d a'>4\ff\< <e' b' e>4.\!\> cis'8\!
+	<a d a'>4\ff\<^\Unis_mark <e' b' e>4.\!\> cis'8\!
 	r8 a\< \tuplet 3/2 { gis( f b)\! } ees\> c~\!
 	c2.
 	R2.
-	r8 e\ff fis( bes) c(  b)
+	r8 e\ff fis( bes) c(  bes)
 	\time 4/4
 	<<
 		\new Voice {
 			\voiceOne
-			\tuplet 6/4 { r16^\markup "div." fis\f fis fis fis fis } \repeat unfold 3 { \tuplet 6/4 { bes( fis) fis fis fis fis } }
+			\tuplet 6/4 { r16^\Div_mark fis\f fis fis fis fis } \repeat unfold 3 { \tuplet 6/4 { bes( fis) fis fis fis fis } }
 		}
 		\new Voice {
 			\voiceTwo
@@ -24,12 +24,12 @@ Violin_I_mvmt_I_AB = \relative c' {
 		}
 	>>
 	\time 3/4
-	r8^\markup "unis." e\ff fis( bes) c(  b)
+	r8^\Unis_mark e\ff fis( bes) c(  bes)
 	\time 4/4
 	<<
 		\new Voice {
 			\voiceOne
-				\tuplet 6/4 { r16^\markup "div." fis fis fis fis fis } \tuplet 6/4 { bes(\< fis) fis fis fis fis }
+				\tuplet 6/4 { r16^\Div_mark fis fis fis fis fis } \tuplet 6/4 { bes(\< fis) fis fis fis fis }
 						\tuplet 6/4 { bes( fis) fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis\! }
 		}
 		\new Voice {
@@ -43,12 +43,12 @@ Violin_I_mvmt_I_AB = \relative c' {
 %% m.7 is the correct place to pick up for both score and part
 Violin_I_divisi_II_mvmt_I_AB = \relative c'' {
 	r2.*4
-	r8 e\ff fis( bes) c(  b)
+	r8 e\ff fis( bes) c(  bes)
 	\time 4/4
 	<<
 		\new Voice {
 			\voiceOne
-			\tuplet 6/4 { r16^\markup "div." fis,\f fis fis fis fis } \repeat unfold 3 { \tuplet 6/4 { bes( fis) fis fis fis fis } }
+			\tuplet 6/4 { r16^\Div_mark fis,\f fis fis fis fis } \repeat unfold 3 { \tuplet 6/4 { bes( fis) fis fis fis fis } }
 		}
 		\new Voice {
 			\voiceTwo
@@ -56,12 +56,12 @@ Violin_I_divisi_II_mvmt_I_AB = \relative c'' {
 		}
 	>>
 	\time 3/4
-	r8^\markup "unis." e'\ff fis( bes) c(  b)
+	r8^\Unis_mark e'\ff fis( bes) c(  bes)
 	\time 4/4
 	<<
 		\new Voice {
 			\voiceOne
-			\tuplet 6/4 { r16^\markup "div." fis, fis fis fis fis } \tuplet 6/4 { bes(\< fis) fis fis fis fis }
+			\tuplet 6/4 { r16^\Div_mark fis, fis fis fis fis } \tuplet 6/4 { bes(\< fis) fis fis fis fis }
 					\tuplet 6/4 { bes( fis) fis fis fis fis } \tuplet 6/4 { bes( fis) fis fis fis fis\! }
 		}
 		\new Voice {
@@ -81,7 +81,7 @@ Violin_II_mvmt_I_AB = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
-			\tuplet 6/4 { r16^\markup "div." cis\f cis cis cis cis } \repeat unfold 2 { \tuplet 6/4 { e( cis) cis cis cis cis } }
+			\tuplet 6/4 { r16^\Div_mark cis\f cis cis cis cis } \repeat unfold 2 { \tuplet 6/4 { e( cis) cis cis cis cis } }
 		}
 		\new Voice {
 			\voiceTwo
@@ -102,11 +102,10 @@ Violin_II_mvmt_I_AB = \relative c' {
 		}
 	>>
 	\time 4/4
-	r8 bes,^\markup "unis." c bes r8 <bes' bes'>\f <c c'> <bes bes'>
+	r8 bes,^\Unis_mark c bes r8 <bes' bes'>\f <c c'> <bes bes'>
 }
 
-%% Need to clone m. 12 for the part.
-
+% Break off at m. 12 for both score and part.
 Violin_II_divisi_II_mvmt_I_AB = \relative c' {
 	d4\f\< gis4.\!\> <f a>8\!
 	r8\< d4. g4\!\>
@@ -115,7 +114,7 @@ Violin_II_divisi_II_mvmt_I_AB = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
-			\tuplet 6/4 { r16^\markup "div." cis,\f cis cis cis cis } \repeat unfold 2 { \tuplet 6/4 { e( cis) cis cis cis cis } }
+			\tuplet 6/4 { r16^\Div_mark cis,\f cis cis cis cis } \repeat unfold 2 { \tuplet 6/4 { e( cis) cis cis cis cis } }
 		}
 		\new Voice {
 			\voiceTwo
@@ -136,8 +135,7 @@ Violin_II_divisi_II_mvmt_I_AB = \relative c' {
 		}
 	>>
 	\time 4/4
-	\tag #'Score { r1 }
-	\tag #'Part { r8 bes^\markup "unis." c bes r8 <bes' bes'>\f <c c'> <bes bes'> }
+	R1
 }
 
 %% FIXME: m. 7: Can't break into "voices" without losing the tie.
@@ -146,8 +144,8 @@ Viola_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
 	a4\f\< e'4.(\> cis8)\!
 	r8 a\< \tuplet 3/2 { gis( f b) } ees--\> c~
-	<c a>2.:32^"div."\!
-	r8 cis~^"unis." \tuplet 3/2 { cis c( cis) } \tuplet 3/2 { d( f d) }
+	<c a>2.:32\!^\Div_mark
+	r8 cis~^\Unis_mark \tuplet 3/2 { cis c( cis) } \tuplet 3/2 { d( f d) }
 	r8 e\f fis( bes) c(\> bes)\!
 	\time 4/4
 	c,1:32
@@ -158,6 +156,23 @@ Viola_mvmt_I_AB = \relative c' {
 }
 
 %%% Section AD = mm. 16-20
+
+% English horn cues.
+Violin_I_II_mvmt_I_AD = \relative c'' {
+	\tag #'Score \NULL_I_AD
+	\tag #'Part {
+		\time 10/8 R1*10/8 \time 11/8 R1*11/8 \time 10/8 R1*10/8*2
+		<<
+			\new CueVoice {
+				r2 a4^"E.H." d( e)
+			}
+			\new Voice {
+				\voiceTwo
+				R1*10/8
+			}
+		>>
+	}
+}
 
 %% FIXME: Trill constructs too large.
 
@@ -180,19 +195,31 @@ Viola_mvmt_I_AD = \relative c {
 Violin_I_mvmt_I_AE = \relative c'' {
 	\mark #2
 	\time 4/4
-	<< \new Voice { \voiceOne fis4^"div." } \new Voice { \voiceTwo fis,4\p } >> r4 r2
+	<< \new Voice { \voiceOne fis4^\Div_mark } \new Voice { \voiceTwo fis,4\p } >> r4 r2
 	R1*2
 	\tempo "più agitato"
-	g'8\p^"unis." r8 r4 r2_"rit."
+	g'8\p^\Unis_mark r8 r4 r2_"rit."
 }
 
 Violin_II_mvmt_I_AE = \relative c'' {
 	\mark #2
 	\time 4/4
-	<< \new Voice { \voiceOne cis4^"div." } \new Voice { \voiceTwo cis,4\p } >> r4 r2
+	<< \new Voice { \voiceOne cis4^\Div_mark } \new Voice { \voiceTwo cis,4\p } >> r4 r2
 	R1*2
 	\tempo "più agitato"
-	cis'8\p^"unis." r8 r4 r2_"rit."
+	cis'8\p^\Unis_mark r8 r4 r2_"rit."
+}
+
+% Need to start this divsi in m. 24 for score only.
+Violin_II_divisi_II_mvmt_I_AE = \relative c'' {
+	\tag #'Part \NULL_I_AE
+	\tag #'Score {
+		\mark #2
+		\time 4/4
+		R1*3
+		\tempo "più agitato"
+		cis8\p^\Unis_mark r8 r4 r2_"rit."
+	}
 }
 
 Viola_mvmt_I_AE = \relative c {
@@ -208,7 +235,7 @@ Viola_mvmt_I_AE = \relative c {
 
 %%% EDIT: OK. What to do about all these notes? Full score writes 'em all out. Part simplifies with
 %%%       tremolos, but not in the same way on all parts. Oh, and dynamics on violin I are
-%%%       inconsistant between m. 25 and 26.
+%%%       inconsistant between m. 25 and 26. They may be performer marks, not copyist.
 %%%       For now, I'll use tremolos to save space. I'll do the tremolos on v1 like they are on v2/vla.
 
 Violin_I_mvmt_I_AF = \relative c' {
@@ -236,8 +263,6 @@ Violin_I_mvmt_I_AF = \relative c' {
 
 %%% EDIT: Those articulations in m. 27 may be player additions, not real. I need to
 %%%       go over that more generally in the parts, probably.
-%%%       Also, should I re-combine the divisi here? Or perhaps combine them only
-%%%       in the score?
 
 Violin_II_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
@@ -247,9 +272,25 @@ Violin_II_mvmt_I_AF = \relative c' {
 	fis8:64[_\markup { \italic "molto cresc." } fis'8:64-> fis,8:64 fis'8:64]->
 	\time 3/4
 	\tempo "Allegro"
-	r8 fis,\< r8 fis' r8 fis'\!
+	\tag #'Part {
+		r8 fis,\< r8 fis' r8 fis'\!
+	}
+	\tag #'Score {
+		<<
+			\new Voice {
+				\voiceOne
+				r8 fis,,^\Div_mark r8 fis' r8 fis'
+			}
+			\new Voice {
+				\voiceTwo
+				r8 g,,,\< r8 g' r8 g'\!
+			}
+		>>
+	}
 }
 
+% Divisi in score needs to end in m. 28 to save space, and has to continue in
+% the part to match line break.
 Violin_II_divisi_II_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
 	\repeat unfold 2 { c8:64 c'4:64 c,8:64 ees8:64 ees'4:64 ees,8:64 }
@@ -257,7 +298,10 @@ Violin_II_divisi_II_mvmt_I_AF = \relative c' {
 	fis8:64[ fis'8:64-> fis,8:64 fis'8:64]->
 	\time 3/4
 	\tempo "Allegro"
-	r8 g,,\< r8 g' r8 g'\!
+	\tag #'Part {
+		r8 g,,\< r8 g' r8 g'\!
+	}
+	\tag #'Score R2.
 }
 
 Viola_mvmt_I_AF = \relative c {
@@ -351,10 +395,10 @@ Viola_mvmt_I_AG = \relative c {
 
 %%% Final assembly
 
-Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF \Violin_I_mvmt_I_AG }
+Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF \Violin_I_mvmt_I_AG }
 Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG }
 
-Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF \Violin_II_mvmt_I_AG }
-Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG }
+Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF \Violin_II_mvmt_I_AG }
+Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_divisi_II_mvmt_I_AE \Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG }
 
 Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF \Viola_mvmt_I_AG }

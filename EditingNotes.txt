@@ -97,6 +97,11 @@ m. 25: Tempo discrepancy. PR is "Appassionata, ma molto sostenuto" and the
 score and parts are just "Appasionata". #TEMPO
 (I-common)
 
+mm. 25-28: There are a bunch of crescendo/decrescendo bits in Violin I/II which
+aren't in the score. I can't tell yet if these are from the copyist or were added
+by players. #DYNAMICS
+(I-orch-09-violins-viola)
+
 m. 29: Oboes have fff in the parts, f in the score. I think the fff is something
 written in by the performer. Sticking with score dynamic for now. #DYNAMICS
 (I-orch-02-oboes)
@@ -109,9 +114,9 @@ mm. 29-38: Violas bar layout inconsistant between score and parts. Parts break u
 score doesn't. Sticking with score for now.
 (I-orch-09-violins-viola)
 
-mm. 29-38: There are a bunch of crescendo/decrescendo bits in the string parts which
-aren't in the score. I can't tell yet if these are from the copyist or were added
-by players. #DYNAMICS
+mm. 29-38: There are a bunch of crescendo/decrescendo bits in all the string parts
+which aren't in the score. I can't tell yet if these are from the copyist or were
+added by players. #DYNAMICS
 (I-orch-09-violins-viola I-orch-10-cello-bass)
 
 m.35: Solo piano lower staff; unconvinced the bottom a-sharp on the second beat

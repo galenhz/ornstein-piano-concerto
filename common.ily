@@ -8,6 +8,9 @@ beamCutR = { \set stemRightBeamCount = #1 }
 
 Solo_mark = \markup "Solo"
 
+Unis_mark = \markup "unis."
+Div_mark = \markup "div."
+
 %% Two marks used in the piano parts.
 LH_mark = \markup { \fontsize #-4 { "L.H." } }
 RH_mark = \markup { \fontsize #-4 { "R.H." } }
