@@ -132,8 +132,8 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 			}
 		>>
 	>>
-	\new Staff = "Staff_Tympani_I" \with { instrumentName = "Tympani I" shortInstrumentName = "Tym. I" } \Tympani_I_mvmt_I
-	\new Staff = "Staff_Tympani_II" \with { instrumentName = "Tympani II" shortInstrumentName = "Tym. II" } \Tympani_II_mvmt_I
+	\new Staff = "Staff_Tympani_I" \with { instrumentName = "Tympani I" shortInstrumentName = "Tym. I" } \keepWithTag #'Score \Tympani_I_mvmt_I
+	\new Staff = "Staff_Tympani_II" \with { instrumentName = "Tympani II" shortInstrumentName = "Tym. II" } \keepWithTag #'Score \Tympani_II_mvmt_I
 	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
 		\new Staff = "solo_upper" \solo_upper_I_limited
 		\new Dynamics \solo_dynamics_I_limited

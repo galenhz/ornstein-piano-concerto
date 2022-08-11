@@ -1,19 +1,33 @@
 %% Tympani
 
+%%% FIXME: Figure out a good way to write the starting pitches into the part.
+
 %%% Section AA - mm. 1-4
 %%% Tacet
 
 %%% Section AB - mm. 5-12
 
-Tympani_I_mvmt_I_AB_AC = \relative c {
+Tympani_I_mvmt_I_AB_AC = \relative c'' {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
 	R1
 	\time 3/4
-	R2.
+	\tag #'Score { R2. }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\cueClef "treble" r8^"I Vn." e fis( bes) c( bes)
+				\cueClef "bass"
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+			}
+		>>
+	}
 	\time 4/4
-	ees2:32\ppp\< a,2:32
+	ees,,,2:32\ppp\< a,2:32
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
 	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
@@ -22,8 +36,8 @@ Tympani_II_mvmt_I_AB = \relative c {
 	d4\mf r2
 	d4\mf r2
 	R2.*2
-	% EDIT: ppp or mf? Part was changed to mf, and it seems to make sense.
-	c2.:32\mf
+	% EDIT: ppp or mf? Part was changed to mf.
+	c2.:32\ppp
 	\time 4/4
 	R1
 	\time 3/4
@@ -57,7 +71,7 @@ Tympani_II_mvmt_I_AE = \relative c {
 
 Tympani_I_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	r4 r4 ees2\pp
+	r2 ees\pp
 	R1
 	\time 2/4
 	R2
@@ -68,7 +82,7 @@ Tympani_I_mvmt_I_AF = \relative c {
 
 Tympani_II_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	c2\mp r4 r4
+	c2\mp r2
 	R1
 	\time 2/4
 	R2
