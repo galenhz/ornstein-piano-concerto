@@ -9,12 +9,12 @@
 
 Cello_mvmt_I_AB_AC = \relative c {
 	\tempo "con moto"
-	<< { f4:32^"div." aes:32 a:32 fis:32 f:32 e:32 } { a,:32\f\< c:32\!\> cis:32\! a:32\< aes:32\!\> g:32\! } >>
+	<< { f4:32^\Div_mark aes:32 a:32 fis:32 f:32 e:32 } { a,:32\f\< c:32\!\> cis:32\! a:32\< aes:32\!\> g:32\! } >>
 	\clef tenor
-	r8^"unis." e''8\ff f gis a\> gis\!~
+	r8^\Unis_mark e''8\ff f gis a\> gis\!~
 	gis d16 r32 gis f4.->\> ( e8)\!
 	\clef bass
-	<< \new Voice { \voiceOne bes2.:32^"div." \time 4/4 a1:32 \time 3/4 bes2.:32 \time 4/4 ees,2:32 cis2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2}
+	<< \new Voice { \voiceOne bes2.:32^\Div_mark \time 4/4 a1:32 \time 3/4 bes2.:32 \time 4/4 ees,2:32 cis2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2}
 		\new Voice { \voiceTwo e2.:32\f\> \time 4/4 cis1:32\! \time 3/4 e2.:32\espressivo \time 4/4 a,2:32\ff\< a2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! }
 	>>
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
@@ -28,13 +28,13 @@ Bass_mvmt_I_AB_AC  = \relative c {
 	<<
 		\new Voice {
 			\voiceOne
-			cis'2.:32^"div."
+			cis'2.:32^\Div_mark
 			bes:32
 			g:32\f\>
 			\time 4/4
-			fis1:32\!
+			fis1:32\!^\Unis_mark
 			\time 3/4
-			g2.:32
+			g2.:32^\Div_mark
 		}
 		\new Voice {
 			\voiceTwo
@@ -46,7 +46,7 @@ Bass_mvmt_I_AB_AC  = \relative c {
 		}
 	>>
 	\time 4/4
-	ees2:32\ff\< a,:32
+	ees2:32\ff\<^\Unis_mark a,:32
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
 	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
 }
@@ -77,15 +77,30 @@ Bass_mvmt_I_AD = \relative c {
 
 %%% Section AE = mm. 21-24
 
-%% FIXME: m. 24 crescendo needs to go to the end of the bar.
+%% FIXME: m. 24 crescendo needs to go to the end of the bar. And maybe figure out a proper way
+%%        to squeeze that "rit molto cresc" in that's less ugly?
 
 Cello_mvmt_I_AE = \relative c, {
 	\mark #2
 	\time 4/4
 	<fis cis'>4\p r4 fis8(\p\> cis' a' cis)
-	\repeat unfold 2 { a'(\!\ppp cis, a cis,) fis,( cis' a' cis) }
+	a'(\!\ppp cis, a cis,) fis,( cis' a' cis)
+	a'( cis, a cis,) fis,( cis' a' cis)
 	\tempo "più agitato"
-	ees,,2:32\< d2:32\!_\markup { \italic "rit.  molto cresc." }
+	\tag #'Part \textLengthOn ees,,2:32\< d2:32\!_\markup { \italic "rit.  molto cresc." } \tag #'Part \textLengthOff
+}
+
+% Cello divisi requires one earlier bar in score than in part.
+
+Cello_divisi_II_mvmt_I_AE = \relative c, {
+	\tag #'Part \NULL_I_AE
+	\tag #'Score {
+		\mark #2
+		\time 4/4
+		R1*3
+		\tempo "più agitato"
+		ees2:32\< d2:32\!_\markup { \italic "rit.  molto cresc." }
+	}
 }
 
 Bass_mvmt_I_AE = \relative c, {
@@ -94,30 +109,33 @@ Bass_mvmt_I_AE = \relative c, {
 	fis4\p r4 r2
 	R1*2
 	\tempo "più agitato"
-	ees2:32\< d2:32\!_\markup { \italic "rit.  molto cresc." }
+	\tag #'Part \textLengthOn ees2:32\< d2:32\!_\markup { \italic "rit.  molto cresc." } \tag #'Part \textLengthOff
 }
 
 %%% Section AF - mm. 25-28
 
 Cello_mvmt_I_AF = \relative c' {
+	\tag #'Part \once \override Score.MetronomeMark.padding = #3
 	\tempo "Appasionata, ma molto sostenuto"
-	g8:64 g'4:64-> g,8:64 \clef tenor b8:64 b'4:64-> b,8:64
-	g8:64 g'4:64-> g,8:64 b8:64 b'4:64-> b,8:64
+	g8:64\< g'4:64->\!\> g,8:64\! \clef tenor b8:64\< b'4:64->\!\> b,8:64\!
+	g8:64\< g'4:64->\!\> g,8:64\! b8:64\< b'4:64->\!\> b,8:64\!
 	\time 2/4
-	cis,8:32[ cis'8:32-> cis,8:32 cis'8:32]->
+	cis,8:32[_\markup { \italic "molto cresc." } cis'8:32-> cis,8:32 cis'8:32]->
 	\time 3/4
 	\clef bass
 	ees,,2.\f\<
 }
 
+% Cello divisi requires one more bar in part than in score.
+
 Cello_divisi_II_mvmt_I_AF = \relative c {
-	fis8:64 fis'4:64-> fis,8:64 \clef tenor a8:64 a'4:64-> a,8:64
-	fis8:64 fis'4:64-> fis,8:64 a8:64 a'4:64-> a,8:64
+	fis8:64\< fis'4:64->\!\> fis,8:64\! \clef tenor a8:64\< a'4:64->\!\> a,8:64\!
+	fis8:64\< fis'4:64->\!\> fis,8:64\! a8:64\< a'4:64->\!\> a,8:64\!
 	\time 2/4
-	cis,8:32[ cis'8:32-> cis,8:32 cis'8:32]->
+	cis,8:32[_\markup { \italic "molto cresc." } cis'8:32-> cis,8:32 cis'8:32]->
 	\time 3/4
 	\clef bass
-	ees,,2.
+	\tag #'Part { ees,,2. } \tag #'Score { R2. }
 }
 
 Bass_mvmt_I_AF = \relative c' {
@@ -125,7 +143,7 @@ Bass_mvmt_I_AF = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
-			g2^"div." a2
+			g2^\Div_mark a2
 			g a
 			\time 2/4
 			a4 fis
@@ -140,7 +158,7 @@ Bass_mvmt_I_AF = \relative c' {
 	>>
 	\time 3/4
 	\tempo "Allegro"
-	ees2.^"unis."\<
+	ees2.^\Unis_mark\<
 }
 
 %%% Section AG = mm. 29-38 (Rehersal 3)
@@ -180,6 +198,6 @@ Bass_mvmt_I_AG = \relative c, {
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG }
-Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Cello_divisi_II_mvmt_I_AF \NULL_I_AG }
+Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF \NULL_I_AG }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG }
