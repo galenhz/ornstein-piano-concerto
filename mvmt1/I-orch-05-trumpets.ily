@@ -5,7 +5,7 @@
 Trumpet_I_mvmt_I_AA = \relative c'' {
 	\tempo "Moderato assai"
 	\time 3/4
-	r2. r2 r8 r16^\Solo_mark ees\f c2.\sfz\>~ c2.\p\!\fermata
+	r2. r2 r8 \tag #'Part r16^\Solo_mark \tag #'Score r16 ees\f c2.\sfz\>~ c2.\p\!\fermata
 }
 
 %%% Section AB - mm. 5-12
