@@ -506,9 +506,9 @@ redux_lower_I_AH = \relative c, {
 	r4 <a, ees' a>8 <c' cis c'> r4
 }
 
-%%% This is as far as I've gotten
+%%% Section AI = mm. 55-62 (Rehersal 5)
 
-redux_upper_I_remain = \relative c {
+redux_upper_I_AI = \relative c {
 	% mm. 55-62 - Rehersal 5
 	\mark #5
 	\tempo "Meno mosso"
@@ -526,6 +526,33 @@ redux_upper_I_remain = \relative c {
 		d2.~ d4 cis8~ cis8. c16 b d
 	}
 	\unset Staff.timeSignatureFraction
+}
+
+redux_dynamics_I_AI = {
+	% mm. 55-62 - Rehersal 5
+	s1\mp s1 s1 s1 s1 s1 s1 s1
+}
+
+redux_lower_I_AI = \relative c, {
+	% mm. 55-62 - Rehersal 5
+	\time 4/4
+	\set Staff.timeSignatureFraction = 12/8
+	\scaleDurations 2/3 {
+		g2.~ g4 fis8 ees[ c r16 d]
+		fis2.~ fis4 g8 gis4~ gis16 cis
+		bes2.~ bes4 a8 gis[ d r16 ees]
+		fis2.~ \tuplet 2/3 { fis8 g } gis4~ gis16 <d' d'>
+		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
+		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <bes bes'>16 <cis cis'> <d d'>
+		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
+		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16 <b b'> <d d'>
+	}
+	\unset Staff.timeSignatureFraction
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 63-69 - Rehersal 6
 	\mark #6
 	\time 4/4
@@ -1344,8 +1371,6 @@ redux_upper_I_remain = \relative c {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 55-62 - Rehersal 5
-	s1\mp s1 s1 s1 s1 s1 s1 s1
 	% mm. 63-69 - Rehersal 6
 	s1 s1 s1 s1 s1 s1 s1
 	% mm. 70-75
@@ -1424,20 +1449,6 @@ redux_dynamics_I_remain = {
 }
 
 redux_lower_I_remain = \relative c, {
-        % mm. 55-62 - Rehersal 5
-        \time 4/4
-        \set Staff.timeSignatureFraction = 12/8
-        \scaleDurations 2/3 {
-		g2.~ g4 fis8 ees[ c r16 d]
-		fis2.~ fis4 g8 gis4~ gis16 cis
-		bes2.~ bes4 a8 gis[ d r16 ees]
-		fis2.~ \tuplet 2/3 { fis8 g } gis4~ gis16 <d' d'>
-		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
-		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <bes bes'>16 <cis cis'> <d d'>
-		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16 <d d'> <f f'>
-		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16 <b b'> <d d'>
-        }
-	\unset Staff.timeSignatureFraction
 	% mm. 63-69 - Rehersal 6
 	\time 4/4
 	<bes bes'>8 <a a'>~ <a a'>16 <aes aes'> <g g'> <bes bes'> <fis fis'>8 <f f'>4 <d d'>8
@@ -2158,9 +2169,9 @@ redux_lower_I_remain = \relative c, {
 %%% Final assembly
 
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
-		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_remain }
+		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
-		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_remain }
+		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
-		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_remain }
+		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_remain }
 

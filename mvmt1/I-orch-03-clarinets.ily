@@ -368,13 +368,32 @@ BassClarinet_mvmt_I_AH = \transpose c' bes, \relative c' {
 	r4 r8 dis\fff r4
 }
 
+%%% Section AI = mm. 55-62 (Rehersal 5)
+
+Clarinet_I_III_mvmt_I_AI = \transpose c' bes \relative c' {
+	\mark #5
+	\tempo "Meno mosso"
+	\time 4/4
+	\set Staff.timeSignatureFraction = 12/8
+	R1*3
+	\scaleDurations 2/3 {
+		r2. \tuplet 2/3 { r8 a\mp\< } ais4~ ais16 e'
+		g2.~\! g4\> fis8~ fis8. f16( e g)
+		e2.~\! e4 dis8~ dis8. c16( dis e)
+		g2.~ g4 fis8~ fis8. f16( e g)
+		e2.~ e4 dis8~ dis8. d16( cis e)
+	}
+	%\unset Staff.timeSignatureFraction
+}
+
 %%% Final assembly
 
 Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \Clarinet_I_mvmt_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG
-		\Clarinet_I_mvmt_I_AH }
-Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG \Clarinet_II_mvmt_I_AH }
+		\Clarinet_I_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI }
+Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG \Clarinet_II_mvmt_I_AH
+		\NULL_I_AI }
 Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_III_mvmt_I_AH }
+		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI }
 Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_IV_mvmt_I_AH }
-BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH }
+		\Clarinet_IV_mvmt_I_AH \NULL_I_AI }
+BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH \NULL_I_AI }

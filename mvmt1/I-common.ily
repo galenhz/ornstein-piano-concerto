@@ -10,6 +10,12 @@
 % AF = mm. 25-28
 % AG = mm. 29-38   (Rehersal 3)
 % AH = mm. 39-54   (Rehersal 4)
+% AI = mm. 55-62   (Rehersal 5)
+% AJ = mm. 63-69   (Rehersal 6)
+% AK = mm. 70-81
+% AL = mm. 82-90   (Rehersal 7)
+
+
 
 %% EDIT: The PR has "con moto" at m. 5. The parts have "moderato con moto" at m. 16.
 %%       The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
@@ -27,3 +33,4 @@ NULL_I_AE = { \mark #2 \time 4/4 R1*3 \tempo "più agitato" R1 }
 NULL_I_AF = { \tempo "Appasionata, ma molto sostenuto" R1*2 \time 2/4 R2 \time 3/4 \tempo "Allegro" R2. }
 NULL_I_AG = { \mark #3 \time 2/4 \tempo "molto marcato" R2*10 }
 NULL_I_AH = { \mark #4 \time 3/4 \tempo "L'istesso Tempo" R2.*12 \tempo "broaden" R2.*4 }
+NULL_I_AI = { \mark #5 \tempo "Meno mosso" \time 4/4 \set Staff.timeSignatureFraction = 12/8 R1*8 \unset Staff.timeSignatureFraction }

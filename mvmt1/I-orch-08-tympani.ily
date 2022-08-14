@@ -155,7 +155,12 @@ Tympani_II_mvmt_I_AH = \relative c {
 	R2.*4
 }
 
+%%% Section AI = mm. 55-62 (Rehersal 5)
+%%% Tacet
+
 %%% Final assembly
 
-Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG \Tympani_I_mvmt_I_AH }
-Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF \Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH }
+Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
+		\Tympani_I_mvmt_I_AH \NULL_I_AI }
+Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
+		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI }

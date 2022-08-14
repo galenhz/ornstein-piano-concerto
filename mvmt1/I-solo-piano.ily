@@ -421,14 +421,16 @@ solo_lower_I_AH = \relative c {
 	s4 r4 r4
 }
 
-%%% This is as far as I've gotten
+%%% Section AI = mm. 55-62 (Rehersal 5)
 
-solo_upper_I_remain = \relative c'''' {
+solo_upper_I_AI = \relative c'''' {
 	% mm. 55-58 - Rehersal 5
-	% QUESTION: Inconsistant handling of the ottavas between measures 55 and 57.
-	%           My repeat structure copies 55's handling in both cases. Maybe not?
-	% QUESTION: m. 58 doesn't repeat the "stuttering beams" that are in m. 56. Copyist got lazy?
-	%           Well, I'm lazy too, so I'll just do it one way and repeat.
+	% EDIT: PR has inconsistant handling of the ottavas between measures 55 and 57.
+	%       Same notes, just different cutoff point. Score does it like 55 both times
+	%       (although amusingly the actual ottava line is missing). My repeat structure
+	%       copies 55's handling in both cases, but 57's seems a little easier on the eye.
+	% EDIT: m. 58 PR doesn't repeat the "stuttering beams" that are in m. 56. Score does.
+	%       I don't see any reason not to.
 	\mark #5
 	\time 4/4
 	\tempo "Meno mosso"
@@ -439,7 +441,7 @@ solo_upper_I_remain = \relative c'''' {
 			\ottava #0 \beamCutL <bes cis> <a cis> <g bes> \beamCutR <fis bes> \beamCutL <cis g'> <c fis> <bes cis>8]
 	}
 	% mm. 59-62
-	% QUESTION: Same thing between 60 and 62.
+	% EDIT: Same ottava thing between 60 and 62.
 	\repeat unfold 2 {
 		\ottava #1 \tuplet 3/2 { r8 <c'' fis> <g cis> }
 			\tuplet 3/2 { <fis bes> <c g'> <c fis> }
@@ -449,10 +451,60 @@ solo_upper_I_remain = \relative c'''' {
 			\ottava #0 \tuplet 3/2 { <a ees'> <gis c> <f a> }
 			\tuplet 3/2 { <ees gis> <c f> r }
 	}
+}
+
+solo_dynamics_I_AI = {
+	% mm. 55-62 - Rehersal 5
+	s1\mp s1 s1 s1 s1 s1 s1 s1
+}
+
+solo_lower_I_AI = \relative c, {
+	% mm. 55-62 - Rehersal 5
+	% EDIT: m. 60 PR lacks the tie to the dotted half that's in m. 62 and others.
+	%             but it's there in the score. Put it in.
+	% FIXME: This section could use some cleanup when the "third" voice kicks in.
+	\time 4/4
+	\clef bass
+	<<
+		\new Voice {
+			\voiceFour <g g'>1
+			<ees ees'>
+			\clef bass <g g'>
+			\clef bass <ees ees'>
+			\clef bass <f f'>
+			\clef bass <ees ees'>
+			\clef bass <f f'>
+			\clef bass <ees ees'>
+		}
+		\new Voice {
+			\voiceOne r4 <ees'' ees'>8 <fis fis'> <g g'>4 <g g'>
+			r8 \clef treble <fis fis'> <a bes a'>2.
+			r8 \clef treble <g g'> <cis cis'> <bes bes'> <bes bes'>4 <g g'>
+			\tuplet 3/2 { r8 \clef treble <g g'> <a a'> } <a a'>2.
+			r8 \clef treble <bes bes'> <c c'>2 <bes bes'>4
+			r8 \clef treble <a a'> <bes bes'> <a a'> <a a'>4 <g g'>8 <fis fis'>
+			r8 \clef treble <bes bes'> <c c'> <bes bes'> <cis cis'>4 <bes bes'>8 <a a'>
+			r8 \clef treble <a a'> <bes bes'> <a a'> <a a'>4 <g g'>8 <fis fis'>
+		}
+		\new Voice {
+			\voiceTwo
+			s1 s1 s1
+			\tuplet 3/2 { s8 cis'4~ } cis2.
+			s8 <cis e g>~ <e g>2 s4
+			s8 <c ees>~ <c ees>2.
+			s8 <cis e g>~ <e g>2.
+			s8 <c ees>~ <c ees>2.
+		}
+	>>
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c''' {
 	% mm. 63-69 - Rehersal 6
 	\mark #6
 	\time 4/4
-	\repeat unfold 2 { \tuplet 3/2 { r8 <ees' gis> <c f> } \tuplet 3/2 { <a ees'> <fis c'> <ees a> } }
+	\repeat unfold 2 { \tuplet 3/2 { r8 <ees gis> <c f> } \tuplet 3/2 { <a ees'> <fis c'> <ees a> } }
 	<<
 		\new Voice {
 			% QUESTION: Not 100% sure of the f-a-c chord. Smudged in PR and FS.
@@ -1542,8 +1594,6 @@ solo_upper_I_remain = \relative c'''' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 55-62 - Rehersal 5
-	s1\mp s1 s1 s1 s1 s1 s1 s1
 	% mm. 63-69 - Rehersal 6
 	s1-\markup { \italic {piu dim. e rit.} } s2.-\markup { \italic{molto espress. e legato} }
 		s4\<
@@ -1634,49 +1684,13 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c, {
-	% mm. 55-62 - Rehersal 5
-	% FIXME: This section could use some cleanup when the "third" voice kicks in.
-	%        Also not sure about third voice in measure 62. Smudgy in PR.
-	\time 4/4
-	\clef bass
-	<<
-		\new Voice {
-			\voiceFour <g g'>1
-			<ees ees'>
-			\clef bass <g g'>
-			\clef bass <ees ees'>
-			\clef bass <f f'>
-			\clef bass <ees ees'>
-			\clef bass <f f'>
-			\clef bass <ees ees'>
-		}
-		\new Voice {
-			\voiceOne r4 <ees'' ees'>8 <fis fis'> <g g'>4 <g g'>
-			r8 \clef treble <fis fis'> <a bes a'>2.
-			r8 \clef treble <g g'> <cis cis'> <bes bes'> <bes bes'>4 <g g'>
-			\tuplet 3/2 { r8 \clef treble <g g'> <a a'> } <a a'>2.
-			r8 \clef treble <bes bes'> <c c'>2 <bes bes'>4
-			r8 \clef treble <a a'> <bes bes'> <a a'> <a a'>4 <g g'>8 <fis fis'>
-			r8 \clef treble <bes bes'> <c c'> <bes bes'> <cis cis'>4 <bes bes'>8 <a a'>
-			r8 \clef treble <a a'> <bes bes'> <a a'> <a a'>4 <g g'>8 <fis fis'>
-		}
-		\new Voice {
-			\voiceTwo
-			s1 s1 s1
-			\tuplet 3/2 { s8 cis'4~ } cis2.
-			s8 <cis e g>~ <e g>2 s4
-			s8 <c ees> s2.
-			s8 <cis e g>~ <e g>2.
-			s8 <c ees> s2.
-		}
-	>>
+solo_lower_I_remain = \relative c,, {
 	% m. 63 - Rehersal 6
 	\time 4/4
 	\clef bass
 	<<
 		\new Voice {
-			\voiceThree <ees,,, ees'>2 <d d'>
+			\voiceThree <ees ees'>2 <d d'>
 		}
 		\new Voice {
 			\voiceOne r8 <fis'' fis'> <g g'> <fis fis'>~ <fis fis'> <bes bes'>
@@ -2325,16 +2339,16 @@ solo_lower_I_remain = \relative c, {
 %%% Final assembly
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
-		\solo_upper_I_AH \solo_upper_I_remain }
+		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
-		\solo_upper_I_AG \solo_upper_I_AH }
+		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
-		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_remain }
+		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
-		\solo_dynamics_I_AG \solo_dynamics_I_AH }
+		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
-		\solo_lower_I_AH \solo_lower_I_remain }
+		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
-		\solo_lower_I_AG \solo_lower_I_AH }
+		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI }

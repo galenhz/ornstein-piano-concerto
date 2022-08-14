@@ -155,7 +155,7 @@ what I think is a reasonable way. #DYNAMICS
 m. 44: Clarinets get a > on their final note of the phrase; oboes do not. Score hasn't
 had the > for several measures, despite them being in the parts, so can't use it as a
 tiebreaker. Bassoons have them too. Tympani doesn't, though. Viola part is missing the
-articulations entirely.
+articulations entirely. Should make this consistent, but in what direction?
 (I-orch-*)
 
 m. 45: Placement of the "cresc." is a bit odd. PR places it squarely in beat 3; the score
@@ -176,3 +176,38 @@ line. I think this was an error by the copyist. Using the score pattern.
 m. 53: The parts which have a FFF on beat 1 omit it on beat 3, except for Tympani.
 Perhaps make tympani consistant with everbody else here?
 (I-orch-08-tympani)
+
+mm. 55-62: The orchestra parts, playing in unison, don't have consistent handling of either
+the dynamic hairpins (throughout) or some of the slurs at the end of measures (mm. 59-62).
+For the former, several examples: a decrecendo for the bass in 55 that no one else has,
+a crescendo in strings in 58 missing from the clarinets, a decrescendo in 59 that's not
+starting from the same place in all parts (and missing from cello). Score not helpful;
+there might be faint traces of hairpins but I can't tell. Bringing them into a consistent
+state for now. As for the slurs, clarinets and cellos have them, and the viola has one.
+They make musical sense. Adding them to everybody. #DYNAMICS
+(I-orch-03-clarinets, I-orch-04-bassoons, I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+mm. 55-58: Solo piano right hand PR has inconsistant handling of the ottavas between
+measures 55 and 57. Same notes, just different cutoff point. Score does it like 55 both times
+(although amusingly the actual ottava line is missing). My repeat structure copies 55's
+handling in both cases, but 57's seems a little easier on the eye.
+(I-solo-piano)
+
+m. 58: The score and piano reduction use a "duplet" figure ou the third beat, but most
+of the parts just print that as a pair of dotted eighth notes.
+(I-orch-03-clarinets, I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+m. 58: PR doesn't repeat the "stuttering beams" that are in m. 56. Score does.
+I don't see any reason not to.
+(I-solo-piano)
+
+mm. 60-62: Again, the ottava is handled differently in PR, same in score.
+(I-solo-piano)
+
+mm. 60-62: The hairpins stop here in score and parts. Speculation: should I continue
+adding them according to the pattern? Next mark is the "piu dim" in 63. #DYNAMICS
+(I-orch-03-clarinets, I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+m. 60: The solo piano in the PR doesn't have the continuing ties in the left hand middle voice,
+but it's clearly there in the score. Fixed.
+(I-solo-piano)

@@ -283,9 +283,50 @@ Bass_mvmt_I_AH = \relative c {
 	r4 a8\fff cis' r4
 }
 
+%%% Section AI = mm. 55-62 (Rehersal 5)
+
+%%% Not using the divisi staff here yet. May hold off on it until we get to
+%%% the unison/divisi alternation in m. 76.
+
+Cello_mvmt_I_AI = \relative c {
+	\mark #5
+	\tempo "Meno mosso"
+	\time 4/4
+	\set Staff.timeSignatureFraction = 12/8
+	\scaleDurations 2/3 {
+		<g g'>2.~\mp^\Div_mark <g g'>4\> <fis fis'>8 <ees ees'>([ <c c'>) r16 <d d'>]
+		<fis fis'>2.~\! <fis fis'>4\< <g g'>8 <gis gis'>4~ <gis gis'>16 <cis cis'>
+		<bes bes'>2.~\! <bes bes'>4\> <a a'>8 <gis gis'>[( <d d'>) r16 <ees ees'>]
+		<fis fis'>2.~\! \tuplet 2/3 { <fis fis'>8 <g g'>\< } <gis gis'>4~ <gis gis'>16 <d' d'>
+		<f f'>2.~\! <f f'>4\< <e e'>8~ <e e'>8. <ees ees'>16( <d d'> <f f'>)
+		<d d'>2.~\! <d d'>4 <cis cis'>8~ <cis cis'>8. <bes bes'> 16( <c c'> <d d'>)
+		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16( <d d'> <f f'>)
+		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16( <b b'> <d d'>)
+	}
+	%%\unset Staff.timeSignatureFraction
+}
+
+Bass_mvmt_I_AI = \relative c {
+	\mark #5
+	\tempo "Meno mosso"
+	\time 4/4
+	\set Staff.timeSignatureFraction = 12/8
+	\scaleDurations 2/3 {
+		g2.~\mp g4\> fis8 ees([ c) r16 d]
+		fis2.~\! fis4\< g8 gis4~ gis16 cis
+		bes2.~\! bes4\> a8 gis[( d) r16 ees]
+		fis2.~\! \tuplet 2/3 { fis8 g\< } gis4~ gis16 d'
+		f2.~\! f4\> e8~ e8. ees16( d f)
+		d2.~\! d4 cis8~ cis8. bes16( c d)
+		f2.~ f4 e8~ e8. ees16( d f)
+		d2.~ d4 cis8~ cis8. c16( b d)
+	}
+	%%\unset Staff.timeSignatureFraction
+}
+
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH }
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH \Cello_mvmt_I_AI }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH }
 
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH }
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH \Bass_mvmt_I_AI }
