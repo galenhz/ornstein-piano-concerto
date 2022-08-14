@@ -169,6 +169,10 @@ seems to suggest that it starts as trumpet III only with IV added at some point.
 the parts.
 (I-orch-05-trumpets)
 
+m. 52: Cello part and score do not match. Cello score repeats m. 51, but part copies the bass
+line. I think this was an error by the copyist. Using the score pattern.
+(I-orch-10-cello-bass)
+
 m. 53: The parts which have a FFF on beat 1 omit it on beat 3, except for Tympani.
 Perhaps make tympani consistant with everbody else here?
 (I-orch-08-tympani)
