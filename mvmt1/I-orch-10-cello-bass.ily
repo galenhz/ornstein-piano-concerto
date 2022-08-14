@@ -195,9 +195,97 @@ Bass_mvmt_I_AG = \relative c, {
 	ees
 }
 
+%%% Section AH = mm. 39-54 (Rehersal 4)
+
+%%% WORKAROUND: There's only a bit of divisi material here, but I can't start a
+%%%             crescendo in a single-voice context and end it inside a split one.
+
+Cello_mvmt_I_AH = \relative c, {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*5
+	r4
+	<<
+		\new Voice {
+			\voiceOne
+				fis->\mf c8-. fis-.
+			g-. fis-. fis4->\cresc c8-. fis-.
+			\repeat unfold 3 { g-. fis-. fis4-> c8-. fis-. }
+			g-. fis-. fis4->\ff\!\cresc c8-. fis-.
+			g-. fis-.
+				a4->^\Div_mark ees'8-. a,-.
+			\tempo "broaden"
+			\repeat unfold 2 { f'-. ees-. a,4-> ees'8-. a,-. }
+			f'-.[\fff ees-.]
+		}
+		\new Voice {
+			\voiceTwo
+				s2
+			s2.*5
+			s4
+				ees,4-> ees'8-. a,-.
+			\tempo "broaden"
+			\repeat unfold 2 { f'-. ees-. ees,4-> ees'8-. a,-. }
+			f'-.[ ees-.]
+		}
+	>>
+	r4
+	<<
+		\new Voice {
+			\voiceOne
+			a,8[ cis']
+		}
+		\new Voice {
+			\voiceTwo
+			ees,,[ cis'']
+		}
+	>>
+	r4
+	<<
+		\new Voice {
+			\voiceOne
+			a,8[ cis']
+		}
+		\new Voice {
+			\voiceTwo
+			ees,,[\fff cis'']
+		}
+	>>
+	r4
+}
+
+Bass_mvmt_I_AH = \relative c {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*5
+	r4 c->\mf fis,8-. c'-.
+	des-. c-. c4->\cresc fis,8-. c'-.
+	\repeat unfold 3 { des-. c-. c4-> fis,8-. c'-. }
+	des-. c-. c4->\ff\cresc fis,8-. c'-.
+	des-. c-. a4->
+	<<
+		\new Voice {
+			\voiceOne
+				a'8-. a,-.
+			\tempo "broaden"
+			\repeat unfold 2 { f'-. ees-. a,4-> a'8-. a,-. }
+		}
+		\new Voice {
+			\voiceTwo
+				ees'8-. a,-.
+			\tempo "broaden"
+			\repeat unfold 2 { f'-. ees-. a,4-> ees'8-. a,-. }
+		}
+	>>
+	f'-.\fff^\Unis_mark ees-. r4 a,
+	r4 a8\fff cis' r4
+}
+
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG }
-Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF \NULL_I_AG }
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH }
+Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH }
 
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG }
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH }

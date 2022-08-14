@@ -5,8 +5,9 @@
 
 %%% Section AB - mm. 5-12
 
-%% FIXME: m. 12: No matter what I try, the full score doesn't get the crescendo for 1. Can't figure out why.
-%%               Almost certainly something to do with partcombiner, because the parts look fine.
+%% WORKAROUND: m. 12: Had to force partCombineApart to get the crescendo to display and terminate properly.
+%%             Even better, had to continue it past AB, making me have to silence 2's rest and
+%%             manually nudge 1's.
 
 Bassoon_I_mvmt_I_AB_AC = \relative c {
 	\tempo "con moto"
@@ -20,12 +21,14 @@ Bassoon_I_mvmt_I_AB_AC = \relative c {
 	\time 3/4
 	R2.
 	\time 4/4
+	\partCombineApart
 	a,,2\f cis_\<
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \tag #'Score { \once \override MultiMeasureRest.staff-position = #0 R2.\! }\tag #'Part R2.\! R2. \time 3/4 R2.
+	\partCombineAutomatic
 }
 
-Bassoon_II_mvmt_I_AB = \relative c {
+Bassoon_II_mvmt_I_AB_AC = \relative c {
 	\tempo "con moto"
 	d8\ff( cis) c4~ \tuplet 3/2 { c8\< cis( d)\! }
 	fis([ c')] cis([ fis,)] e r8
@@ -38,6 +41,9 @@ Bassoon_II_mvmt_I_AB = \relative c {
 	R2.
 	\time 4/4
 	ees,,2 r2
+	%% What an egregious hack. Need to make the first rest "disappear" for the score's sake,
+	%% because of the partCombineApart I did to get the crescendo termination right.
+	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \tag #'Score s2. \tag #'Part R2. R2. \time 3/4 R2.
 }
 
 %% EDIT: m. 11: Add same decrescendo to III/IV as in m. 9? It's not in the parts or the score.
@@ -266,10 +272,106 @@ Bassoon_III_IV_mvmt_I_AG = \relative c, {
 	}
 }
 
+%%% Section AH = mm. 39-54 (Rehersal 4)
+
+Bassoon_I_mvmt_I_AH = \relative c {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	\tag #'Score d4-> \tag #'Part d4->_\markup { \dynamic p \italic "subito" } ees8-.[ d-.] fis-.[ ees-.]
+	\repeat unfold 4 { d4-> ees8-.[ d-.] fis-.[ ees-.] }
+	d4-> c-> \tag #'Score c'-. \tag #'Part c-.\mf
+	c-. \tag #'Score c-> \tag #'Part c->\cresc c8-. c-.
+	c-. c-. c4-> c-.
+	c-. c-> c8-. c-.
+	c-. c-. c4-> c-.
+	c-. \tag #'Score c-> \tag #'Part c->\ff\cresc c8-. c-.
+	c-. c-. a,4-> ees'8-. a,-.
+	\tempo "broaden"
+	\repeat unfold 2 { f'-. ees-. a,4-> ees'8-. a,-. }
+	\partCombineApart
+	\tag #'Score f'-. \tag #'Part f-.\fff ees-. r4 a8 g
+	\partCombineAutomatic
+	r4 a8\fff cis r4
+}
+
+Bassoon_II_mvmt_I_AH = \relative c {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	a4->_\markup { \dynamic p \italic "subito"  } bes8-.[ a-.] cis-.[ bes-.]
+	\repeat unfold 4 { a4-> bes8-.[ a-.] cis-.[ bes-.] }
+	a4-> c-> c8-.\mf c-.
+	c-. c-. c4->\cresc c-.
+	c-. c-> c8-. c-.
+	c-. c-. c4-> c-.
+	c-. c-> c8-. c-.
+	c-. c-. c4->\ff\cresc c-.
+	c-. ees,-> a-.
+	\tempo "broaden"
+	f'8-. ees-. ees,4-> a-.
+	f'8-. ees-. ees,4-> a-.
+	f'8-.\fff ees-. r4 a,8 g'
+	r4 a8\fff cis r4
+}
+
+Bassoon_III_mvmt_I_AH = \relative c, {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	d4->_\markup { \dynamic p \italic "subito" } ees8-.[ d-.] fis-.[ ees-.]
+	\repeat unfold 4 { d4-> ees8-.[ d-.] fis-.[ ees-.] }
+	d4-> c-> \tag #'Score c''8-. \tag #'Part c8-.\mf c-.
+	c-. c-. \tag #'Score c4-> \tag #'Part c4->\cresc c
+	c c-> c8-. c-.
+	c-. c-. c4-> c-.
+	c-. c-> c8-. c-.
+	c-. c-. \tag #'Score c4-> \tag #'Part c4->\ff c-.
+	c-. r2
+	\tempo "broaden"
+	R2.*2
+	r2 a,4\fff
+	r4 a8\fff cis r4
+}
+
+Bassoon_IV_mvmt_I_AH = \relative c, {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	d4->_\markup { \dynamic p \italic "subito" } ees8-.[ d-.] fis-.[ ees-.]
+	\repeat unfold 4 { d4-> ees8-.[ d-.] fis-.[ ees-.] }
+	d4-> c-> c'-.\mf
+	c4-. c->\cresc c8-. c-.
+	c-. c-. c4-> c-.
+	c4-. c-> c8-. c-.
+	c-. c-. c4-> c-.
+	c4-. c->\ff c8-. c-.
+	c-. c-. r2
+	\tempo "broaden"
+	R2.*2
+	r2 ees,4\fff
+	r4 ees8\fff cis' r4
+}
+
+Contrabassoon_mvmt_I_AH = \relative c {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	d4->_\markup { \dynamic p \italic "subito" } ees8-.[ d-.] fis-.[ ees-.]
+	\repeat unfold 4 { d4-> ees8-.[ d-.] fis-.[ ees-.] }
+	d4-> r2
+	R2.*5
+	r4 a->\ff\cresc ees'8-. a,-.
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-.\fff ees-. r4 a,4
+	r4 ees'8\fff cis' r4
+}
+
 %%% Final assembly
 
-Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG }
-Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB \NULL_I_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG }
-Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG }
-Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG }
-Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF \NULL_I_AG }
+Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG \Bassoon_I_mvmt_I_AH }
+Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG \Bassoon_II_mvmt_I_AH }
+Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG \Bassoon_III_mvmt_I_AH }
+Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG \Bassoon_IV_mvmt_I_AH }
+Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF \NULL_I_AG \Contrabassoon_mvmt_I_AH }

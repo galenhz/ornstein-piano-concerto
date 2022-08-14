@@ -237,10 +237,100 @@ Flute_IV_mvmt_I_AF = \relative c' {
 %%% Section AG = mm. 29-38 (Rehersal 3)
 %%% Tacet
 
+%%% Section AH = mm. 39-54 (Rehersal 4)
+
+Flute_I_II_mvmt_I_AH_partial = \relative c'' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	\tag #'Score { R2.*11 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				d4^"I Ob." ees8[ d] fis[ ees]
+				\repeat unfold 4 { d4 ees8[ d] fis[ ees]}
+				d4 r2
+			}
+			\new Voice {
+				\voiceTwo
+				R2.*6
+			}
+		>>
+		R2.*5
+	}
+	r4 a->\ff\cresc ees'8-. a,-.
+	\tempo "broaden"
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-.\!\fff ees-. r4 r8 g
+}
+
+Flute_I_mvmt_I_AH = {
+	\Flute_I_II_mvmt_I_AH_partial
+	\relative c''' {
+		r4 r8 c\fff r4
+	}
+}
+
+Flute_II_mvmt_I_AH = \relative c'' {
+	\Flute_I_II_mvmt_I_AH_partial
+	\relative c'' {
+		r4 r8 c\fff r4
+	}
+}
+
+Flute_III_IV_Picc_mvmt_I_AH_Partial = \relative c'' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*11
+	\tag #'Score { R2.*3 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r4 a ees'8 a,
+				\tempo "broaden"
+				f' ees a,4 ees'8 a,
+				f' ees a,4 ees'8 a,
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\tempo "broaden"
+				R2.*2
+			}
+		>>
+	}
+}
+
+Flute_III_mvmt_I_AH = {
+	\Flute_III_IV_Picc_mvmt_I_AH_Partial
+	\relative c''' {
+		r2 r8 g8\fff
+		r4 r8 c\fff r4
+	}
+}
+
+Flute_IV_mvmt_I_AH = {
+	\Flute_III_IV_Picc_mvmt_I_AH_Partial
+	\relative c''' {
+		r2 r8 g8\fff
+		r4 r8 c,\fff r4
+	}
+}
+
+Picc_mvmt_I_AH = {
+	\Flute_III_IV_Picc_mvmt_I_AH_Partial
+	\relative c'' {
+		R2.
+		r4 r8 cis8\fff r4
+	}
+}
+
 %%% Final assembly
 
-Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG }
-Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG }
-Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG }
-Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG }
-Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG }
+Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH }
+Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH }
+Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH }
+Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG \Flute_III_mvmt_I_AH }
+Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH }

@@ -140,7 +140,35 @@ m. 39: Bottom staff of solo piano has an obvious error in the PR, missing a bass
 transistion. It's there in the full score. Fixed.
 (I-solo-piano)
 
+mm. 39-53: The articulation patterns start out clearly in score and parts; we have
+accented beats, and everything else is staccato. The score stops writing them after
+three bars, but the various parts continue. Some parts, like bassoons and first
+clarinet, start losing them in m. 50...but the score, at least for bassoons
+and flutes, seems to still have the staccato notes. Trumpet and Horn parts keep
+them as well.
+This almost certainly should be made consistent. As editor, my vote is to just
+keep them for everyone for now.
+Crescendos in this section are sometimes not consistent; I've regularized this in
+what I think is a reasonable way. #DYNAMICS
+(I-orch-*)
+
+m. 44: Clarinets get a > on their final note of the phrase; oboes do not. Score hasn't
+had the > for several measures, despite them being in the parts, so can't use it as a
+tiebreaker. Bassoons have them too. Tympani doesn't, though. Viola part is missing the
+articulations entirely.
+(I-orch-*)
+
 m. 45: Placement of the "cresc." is a bit odd. PR places it squarely in beat 3; the score
 seems to suggest 2 or 2-1/2, and the parts show either 2 or 3 depending on how you read
-them. I'm sticking with 3.
+them. I'm sticking with 2 for the orchestra, but leaving at 3 in the piano for now.
+Will probably revisit.
+(I-solo-piano)
 
+mm. 50-54: Trumpet III/IV parts show them playing in unison (almost) throughout. Score
+seems to suggest that it starts as trumpet III only with IV added at some point. Following
+the parts.
+(I-orch-05-trumpets)
+
+m. 53: The parts which have a FFF on beat 1 omit it on beat 3, except for Tympani.
+Perhaps make tympani consistant with everbody else here?
+(I-orch-08-tympani)

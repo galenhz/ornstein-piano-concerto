@@ -115,7 +115,47 @@ Tympani_II_mvmt_I_AG = \relative c {
 	R2*4
 }
 
+%%% Section AH = mm. 39-54 (Rehersal 4)
+
+Tympani_I_mvmt_I_AH = \relative c {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*11
+	r4
+	<<
+		\new Voice {
+			\voiceOne
+			ees4-> ees8-. ees-.
+			\repeat unfold 2 { ees8-. ees-. ees4-> ees8-. ees-. }
+			ees-. ees-. r4 ees8-. ees-.
+			r4 ees8-. ees-. r4
+		}
+		\new Voice {
+			\voiceTwo
+			a,4->\ff\cresc a8-. a-.
+			\repeat unfold 2 { a8-. a-. a4-> a8-. a-. }
+			a-.\fff a-. r4 a8-.\fff a-.
+			r4 a8-.\fff a-. r4
+		}
+	>>
+}
+
+Tympani_II_mvmt_I_AH = \relative c {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	d4->\pp d8-.[ d-.] d-.[ d-.]
+	\repeat unfold 4 { d4-> d8-.[ d-.] d-.[ d-.] }
+	d4 c-> c8-. c-.
+	c-. c-. c4->\cresc c8-. c-.
+	\repeat unfold 4 { c-. c-. c4-> c8-. c-. }
+	c-. c-.\! r2
+	\tempo "broaden"
+	R2.*4
+}
+
 %%% Final assembly
 
-Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG }
-Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF \Tympani_II_mvmt_I_AG }
+Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG \Tympani_I_mvmt_I_AH }
+Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF \Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH }

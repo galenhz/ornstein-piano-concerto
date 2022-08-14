@@ -213,9 +213,83 @@ Trumpet_IV_mvmt_I_AF = \relative c' {
 %%% Section AG = mm. 29-38 (Rehersal 3)
 %%% Tacet
 
+%%% Section AH = mm. 39-54 (Rehersal 4)
+
+Trumpet_all_mvmt_I_AH_horncues = \relative c'' {
+	\tag #'Score { R2.*6 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r4 c^"I Hn." fis,8 c'
+				\repeat unfold 5 { des c c4 fis,8 c' }
+			}
+			\new Voice {
+				\voiceTwo
+				R2.*6
+			}
+		>>
+	}
+}
+
+Trumpet_I_mvmt_I_AH = \relative c'' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*5
+	\Trumpet_all_mvmt_I_AH_horncues
+	r4 a->\ff\cresc ees'8-. a,-.
+	\tempo "broaden"
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-.\fff ees-. r4 a,
+	r4 a\fff r4
+}
+
+Trumpet_II_mvmt_I_AH = \relative c' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*5
+	\Trumpet_all_mvmt_I_AH_horncues
+	r4 a->\ff\cresc ees'8-. a,-.
+	\tempo "broaden"
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-. ees-. a,4-> ees'8-. a,-.
+	f'-.\fff ees-. r4 ees
+	r4 a\fff r4
+}
+
+Trumpet_III_mvmt_I_AH = \relative c' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*5
+	\Trumpet_all_mvmt_I_AH_horncues
+	r4 ees->\ff\cresc a
+	\tempo "broaden"
+	r4 ees-> a
+	r4 ees-> a
+	f8-.\fff ees-. r4 a4
+	r4 a\fff r4
+}
+
+Trumpet_IV_mvmt_I_AH = \relative c' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	R2.*5
+	\Trumpet_all_mvmt_I_AH_horncues
+	r4 ees->\ff\cresc a
+	\tempo "broaden"
+	r4 ees-> a
+	r4 ees-> a
+	f8-.\fff ees-. r4 a,4
+	r4 a'\fff r4
+}
+
 %%% Final assembly
 
-Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG }
-Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG }
-Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG }
-Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG }
+Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG \Trumpet_I_mvmt_I_AH }
+Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG \Trumpet_II_mvmt_I_AH }
+Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG \Trumpet_III_mvmt_I_AH }
+Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG \Trumpet_IV_mvmt_I_AH }

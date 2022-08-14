@@ -260,10 +260,183 @@ Oboe_I_II_mvmt_I_AG = \relative c'' {
 	}
 }
 
+%%% Section AH = mm. 39-54 (Rehersal 4)
+
+Oboe_I_mvmt_I_AH = \relative c'' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	\tag #'Score d4-> \tag #'Part d4->_\markup { \dynamic p \italic "subito" } ees8-.[ d-.] fis-.[ ees-.]
+	\repeat unfold 4 { d4-> ees8-.[ d-.] fis-.[ ees-.] }
+	d4 r2
+	R2.*5
+	\tag #'Score {
+		R2.
+		\tempo "broaden"
+		R2.*2
+		r2 r8 fis8\fff
+	}
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r4 a,4^"I/II Fl." ees'8 a,
+				\tempo "broaden"
+				\repeat unfold 2 { f' ees a,4 ees'8 a, }
+				f' ees s2
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\tempo "broaden"
+				R2.*2
+				r2 r8 fis8\fff
+			}
+		>>
+	}
+	r4 r8 g8\fff r4
+}
+
+Oboe_II_mvmt_I_AH = \relative c' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	d4->_\markup { \dynamic p \italic "subito" } ees8-.[ d-.] fis-.[ ees-.]
+	\repeat unfold 4 { d4-> ees8-.[ d-.] fis-.[ ees-.] }
+	d4 r2
+	R2.*5
+	\tag #'Score {
+		R2.
+		\tempo "broaden"
+		R2.*2
+		r2 r8 g8\fff
+	}
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r4 a4^"I/II Fl." ees'8 a,
+				\tempo "broaden"
+				\repeat unfold 2 { f' ees a,4 ees'8 a, }
+				f' ees s2
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\tempo "broaden"
+				R2.*2
+				r2 r8 \stemUp g,8\fff \stemNeutral
+			}
+		>>
+	}
+	r4 r8 g8\fff r4
+}
+
+Oboe_III_mvmt_I_AH = \relative c'' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	\partCombineApart
+	\tag #'Score a4-> \tag #'Part a4->_\markup { \dynamic p \italic "subito" } bes8-.[ a-.] cis-.[ bes-.]
+	\repeat unfold 4 { a4-> bes8-.[ a-.] cis-.[ bes-.] }
+	a4 \partCombineAutomatic r2
+	R2.*5
+	\tag #'Score {
+		R2.
+		\tempo "broaden"
+		R2.*2
+		r2 r8 cis8\fff
+	}
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r4 a4^"I/II Fl." ees'8 a,
+				\tempo "broaden"
+				\repeat unfold 2 { f' ees a,4 ees'8 a, }
+				f' ees s2
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\tempo "broaden"
+				R2.*2
+				r2 r8 cis8\fff
+			}
+		>>
+	}
+	r4 r8 des\fff r4
+}
+
+Oboe_IV_mvmt_I_AH = \relative c'' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	a4->_\markup { \dynamic p \italic "subito" } bes8-. r8 cis8-. r8
+	\repeat unfold 4 { a4-> bes8-. r8 cis8-. r8 }
+	a4 r2
+	R2.*5
+	\tag #'Score {
+		R2.
+		\tempo "broaden"
+		R2.*2
+		r2 r8 cis8\fff
+	}
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r4 a4^"I/II Fl." ees'8 a,
+				\tempo "broaden"
+				\repeat unfold 2 { f' ees a,4 ees'8 a, }
+				f' ees s2
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\tempo "broaden"
+				R2.*2
+				r2 r8 cis8\fff
+			}
+		>>
+	}
+	r4 r8 des\fff r4
+}
+
+EnglishHorn_mvmt_I_AH = \transpose c' f \relative c'' {
+	\mark #4
+	\time 3/4
+	\tempo "L'istesso Tempo"
+	a4->_\markup { \dynamic p \italic "subito" } bes8-.[ a-.] cis8-.[ bes-.]
+	\repeat unfold 4 { a4-> bes8-.[ a-.] cis8-.[ bes-.] }
+	a4 r2
+	R2.*5
+	\tag #'Score {
+		R2.
+		\tempo "broaden"
+		R2.*2
+		r2 r8 d,8\fff
+	}
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r4 e'4^"I/II Fl." bes'8 e,
+				\tempo "broaden"
+				\repeat unfold 2 { c' bes e,4 bes'8 e, }
+				c' ees s2
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\tempo "broaden"
+				R2.*2
+				r2 r8 \stemUp d,,8\fff \stemNeutral
+			}
+		>>
+	}
+	r4 r8 d'\fff r4
+}
+
 %%% Final assembly
 
-Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG }
-Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG }
-Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG }
-Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG }
-EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG }
+Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG \Oboe_I_mvmt_I_AH }
+Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG \Oboe_II_mvmt_I_AH }
+Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG \Oboe_III_mvmt_I_AH }
+Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH }
+EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG \EnglishHorn_mvmt_I_AH }
