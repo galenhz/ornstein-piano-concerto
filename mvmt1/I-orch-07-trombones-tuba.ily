@@ -295,13 +295,16 @@ Tuba_mvmt_I_AH = \relative c, {
 %%% Section AJ = mm. 63-69 (Rehersal 6)
 %%% Tacet
 
+%%% Section AK = mm. 70-81
+%%% Tacet
+
 %%% Final assembly
 
 Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF \NULL_I_AG
-		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF \NULL_I_AG
-		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF_AG
-		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF_AG \Tuba_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ }
+		\NULL_I_AJ \NULL_I_AK }

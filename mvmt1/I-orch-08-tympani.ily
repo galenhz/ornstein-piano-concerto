@@ -161,9 +161,37 @@ Tympani_II_mvmt_I_AH = \relative c {
 %%% Section AJ = mm. 63-69 (Rehersal 6)
 %%% Tacet
 
+%%% Section AK = mm. 70-81
+
+Tympani_I_mvmt_I_AK = \relative c {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	R2
+	\autoBeamOff
+	a4\pp a8 bes
+	R2
+	a4 a8 bes
+	\autoBeamOn
+	R2*2
+	\time 3/8
+	R4.*6
+}
+
+Tympani_II_mvmt_I_AK = \relative c, {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	fis4.\pp fis8
+	R2
+	fis4. fis8
+	R2*3
+	\time 3/8
+	R4.*6
+}
+
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
-		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
-		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK }

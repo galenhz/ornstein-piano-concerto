@@ -333,15 +333,43 @@ Picc_mvmt_I_AH = {
 %%% Section AJ = mm. 63-69 (Rehersal 6)
 %%% Tacet
 
+%%% Section AK = mm. 70-81
+
+%% Flip note stem at the end so slurs don't look ugly.
+
+Flute_I_mvmt_I_AK = \relative c'' {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	R2*6
+	\time 3/8
+	\tag #'Score { R4.*4 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\tuplet 3/2 { e16([^"I Ob." ees c) } ees8 d16( cis)]
+				\tuplet 3/2 { c([ b d) } b8 c16( cis)]
+				\tuplet 3/2 { e16([ ees c) } ees8 d16( cis)]
+				\tuplet 3/2 { c( b gis) } b4
+			}
+			\new Voice {
+				\voiceTwo
+				\override MultiMeasureRest.staff-position = #-10 R4.*4 \revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	r16 \tag #'Score gis16(\p \tag #'Part gis16(\p^\Solo_mark \stemUp b4)~
+	b16 gis( b4)_\markup { \italic "rit." } \stemNeutral
+}
+
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ }
+		\NULL_I_AJ \NULL_I_AK }
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ }
+		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG
-		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK }

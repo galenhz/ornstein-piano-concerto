@@ -3,10 +3,9 @@ General
 
 The tempo markings often differ significantly between the piano reduction and
 the full score and parts. The PR may have been done later than the score/parts,
-and may represent the composer's final thoughts...but the score/parts were
-never corrected, which may point against that theory. I am currently biased
-towards the PR, but trying to blend the two in a way that makes sense.
-Edits related to this are marked #TEMPO.
+and may represent the composer's final thoughts. I am currently biased towards
+the PR, but trying to blend the two in a way that makes sense when needed. Edits
+related to this are marked #TEMPO.
 
 Dynamics are not always consistant. It is often difficult, when reading the
 parts, to differentiate between what was originally written by the copyist
@@ -129,7 +128,7 @@ which aren't in the score. I can't tell yet if these are from the copyist or wer
 added by players. #DYNAMICS
 (I-orch-09-violins-viola I-orch-10-cello-bass)
 
-m.35: Solo piano lower staff; unconvinced the bottom a-sharp on the second beat
+m. 35: Solo piano lower staff; unconvinced the bottom a-sharp on the second beat
 of m. 35 is correct in the PR. Full score is a bit smudgy here but doesn't show
 an accidental. Also doesn't match m. 37 which otherwise repeats the pattern. Going
 with the pattern and following the full score.
@@ -210,6 +209,10 @@ m. 58: PR doesn't repeat the "stuttering beams" that are in m. 56. Score does.
 I don't see any reason not to.
 (I-solo-piano)
 
+m. 60: The solo piano in the PR doesn't have the continuing ties in the left hand middle voice,
+but it's clearly there in the score. Fixed.
+(I-solo-piano)
+
 mm. 60-62: Again, the ottava is handled differently in PR, same in score.
 (I-solo-piano)
 
@@ -217,10 +220,14 @@ mm. 60-62: The hairpins stop here in score and parts. Speculation: should I cont
 adding them according to the pattern? Next mark is the "piu dim" in 63. #DYNAMICS
 (I-orch-03-clarinets, I-orch-09-violins-viola, I-orch-10-cello-bass)
 
-m. 60: The solo piano in the PR doesn't have the continuing ties in the left hand middle voice,
-but it's clearly there in the score. Fixed.
-(I-solo-piano)
-
 m. 63: Beat 2, the clarinet part has broken bars, and so do score lower strings, but
 lower string parts don't. It's pretty much free for me, so I'll do it.
+Also...do I want to add slurs to the second beat for low strings, matching clarinets?
+Listen to the recording, see if I can hear slurring.
 (I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+m. 64-69: Dynamics all over the place. I've copied from parts. Needs attention. #DYNAMICS
+
+m. 70-73: The score and parts ask Tympani I to field a b-flat here, which the player seems
+to have balked at; they scratched out the "e-flat to b-flat" directive from the copyist.
+(I-orch-08-tympani)

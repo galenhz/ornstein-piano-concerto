@@ -439,15 +439,43 @@ EnglishHorn_mvmt_I_AH = \transpose c' f \relative c'' {
 %%% Section AJ = mm. 63-69 (Rehersal 6)
 %%% Tacet
 
+%%% Section AK = mm. 70-81
+
+Oboe_I_mvmt_I_AK = \relative c''' {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	\tag #'Score { R2*2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\tuplet 3/2 { cis16_"Piano" c a } c8~ c16 \beamCutR b~ \beamCutL b32 bes a c
+				\tuplet 3/2 { a16 gis f } gis8~ gis16 a8 bes16
+			}
+			\new Voice {
+				\voiceTwo
+				R2*2
+			}
+		>>
+	}
+	R2*4
+	\time 3/8
+	\tuplet 3/2 { \tag #'Part e,16([\p^\Solo_mark \tag #'Score e16([\p ees c) } ees8 d16( cis)]
+	\tuplet 3/2 { c([ b d) } b8 c16( cis)]
+	\tuplet 3/2 { e16([ ees c) } ees8 d16( cis)]
+	\tuplet 3/2 { c( b gis) } b4~
+	b16 r16 r4
+	R4.
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
-		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
-		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }

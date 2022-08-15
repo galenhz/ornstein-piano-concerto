@@ -594,9 +594,9 @@ redux_lower_I_AJ = \relative c, {
 	\repeat unfold 6 { <cis cis'>2~ \tuplet 3/2 { <cis cis'>4 <d d'> <f f'> } }
 }
 
-%%% This is as far as I've gotten
+%%% Section AK = mm. 70-81
 
-redux_upper_I_remain = \relative c'' {
+redux_upper_I_AK = \relative c'' {
 	% mm. 70-75
 	\time 4/8
 	\clef treble
@@ -634,6 +634,33 @@ redux_upper_I_remain = \relative c'' {
 			<a bes d f>4.
 		}
 	>>
+}
+
+redux_dynamics_I_AK = {
+	% mm. 70-75
+	s2 s2 s2 s2 s2 s2
+	% mm. 76-81
+	s4. s4. s4. s4. s4. s4.
+}
+
+redux_lower_I_AK = \relative c,, {
+	% mm. 70-75
+	\time 4/8
+	<fis fis'>4. fis'8
+	gisis4 gisis8 ais
+	fis4. fis8
+	gisis4 gisis8 ais8
+	<c,, c'>4. <ees ees'>8
+	<c c'>4. <ees ees'>8
+	% mm. 76-81
+	\time 3/8
+	\repeat unfold 2 { <g' d' bes'>4. <bes aes' d> }
+	\repeat unfold 2 { <d, a' f'> }
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 82-90 - Rehersal 7
 	\mark #7
 	\time 4/4
@@ -1388,10 +1415,6 @@ redux_upper_I_remain = \relative c'' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 70-75
-	s2 s2 s2 s2 s2 s2
-	% mm. 76-81
-	s4. s4. s4. s4. s4. s4.
 	% mm. 82-90 - Rehersal 7
 	s1 s1 s1 s1 s1 s1 s1 s1 s2. s8
 	% mm. 91-99 - Rehersal 8
@@ -1463,19 +1486,7 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c,, {
-	% mm. 70-75
-	\time 4/8
-	<fis fis'>4. fis'8
-	gisis4 gisis8 ais
-	fis4. fis8
-	gisis4 gisis8 ais8
-	<c,, c'>4. <ees ees'>8
-	<c c'>4. <ees ees'>8
-	% mm. 76-81
-	\time 3/8
-	\repeat unfold 2 { <g' d' bes'>4. <bes aes' d> }
-	\repeat unfold 2 { <d, a' f'> }
+redux_lower_I_remain = \relative c, {
 	% mm. 82-90 - Rehersal 7
 	\time 4/4
 	<d a' d fis>1\arpeggio
@@ -2180,10 +2191,10 @@ redux_lower_I_remain = \relative c,, {
 %%% Final assembly
 
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
-		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_remain }
+		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
-		\redux_dynamics_I_remain }
+		\redux_dynamics_I_AK \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
-		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_remain }
+		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_remain }
 

@@ -14,7 +14,17 @@
 % AJ = mm. 63-69   (Rehersal 6)
 % AK = mm. 70-81
 % AL = mm. 82-90   (Rehersal 7)
-
+% AM = mm. 91-99   (Rehersal 8)
+% AN - mm. 100-113 (Rehersal 9/10)
+% AO = mm. 114-121 (Rehersal 11/12)
+% AP = mm. 122-125
+% AQ = mm. 126-133 (Rehersal 13)
+% AR = mm. 134-141
+% AS = mm. 142-146 (Rehersal 14)
+% AT = mm. 147-154 (Rehersal 15)
+% AU = mm. 155-164 (Rehersal 16)
+% AV = mm. 165-169
+% AW = mm. 170-187(?) (Rehersal 17/18)
 
 
 %% EDIT: The PR has "con moto" at m. 5. The parts have "moderato con moto" at m. 16.
@@ -35,3 +45,7 @@ NULL_I_AG = { \mark #3 \time 2/4 \tempo "molto marcato" R2*10 }
 NULL_I_AH = { \mark #4 \time 3/4 \tempo "L'istesso Tempo" R2.*12 \tempo "broaden" R2.*4 }
 NULL_I_AI = { \mark #5 \tempo "Meno mosso" \time 4/4 \set Staff.timeSignatureFraction = 12/8 R1*8 \unset Staff.timeSignatureFraction }
 NULL_I_AJ = { \mark #6 \time 4/4 R1*7 }
+NULL_I_AK = { \tempo "Melancolico e sostenuto" \time 4/8 R2*6 \time 3/8 R4.*6 }
+NULL_I_AL = { \mark #7 \tempo "Andante e molto sostenuto" \time 4/4 R1*8 \time 7/8 R1*7/8 }
+NULL_I_AM = { \mark #8 \tempo "Mosso" \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1*3 \time 5/4 R2 \tempo "Pin animato" R2. \time 6/4 R1*6/4 }
+NULL_I_AN = { \mark #9 \tempo "Allegro" \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 \mark #10 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 3/4 R2.*2 }

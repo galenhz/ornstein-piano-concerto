@@ -368,12 +368,58 @@ Bass_mvmt_I_AJ = \relative c {
 	>>
 }
 
+%%% Section AK = mm. 70-81
+
+Cello_mvmt_I_AK = \relative c, {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	R2*4
+	c4.\pp\>^\Unis_mark ees8
+	c4.\! ees8
+	\time 3/8
+	<g d'>4.\p\>
+	d''4.\!
+	<g,, d'>4.\>
+	d''4.\!
+	d4.\pp
+	d4~ d16_\markup { \italic "rit." } r16
+}
+
+Cello_divisi_II_mvmt_I_AK = \relative c {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	R2*6
+	\time 3/8
+	<g d'>4.\p\>
+	bes4.\!
+	<g d'>4.\>
+	bes4.\!
+	a4.\pp
+	a4~ a16_\markup { \italic "rit." } r16
+}
+
+Bass_mvmt_I_AK = \relative c, {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	<fis fis'>4.\p r8
+	R2*3
+	c4.^\Unis_mark ees8
+	c4. ees8
+	\time 3/8
+	g4.
+	bes
+	g
+	bes4~ bes16. cis32
+	d4.
+	d4~ d16_\markup { \italic "rit." } r16
+}
+
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
-		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ }
+		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
-		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ }
+		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Cello_divisi_II_mvmt_I_AK }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
-		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ }
+		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK }
