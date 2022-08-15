@@ -486,19 +486,69 @@ Viola_mvmt_I_AI = \relative c' {
 		f2.~ f4 e8~ e8. ees16( d f)
 		d2.~ d4 cis8~ cis8. c16( b d)
 	}
-	%%\unset Staff.timeSignatureFraction
+	\unset Staff.timeSignatureFraction
+}
+
+%%% Section AJ = mm. 63-69 (Rehersal 6)
+
+%%% Not jumping into divisi at this point. May revisit for parts.
+
+Violin_I_II_mvmt_I_AJ = \relative c' {
+	\mark #6
+	\time 4/4
+	\tag #'Score R1
+	\tag #'Part {
+		<<
+			\new Voice {
+				\voiceOne
+				R1
+			}
+			\new CueVoice {
+				bes8^"Vla." a~ a16 \beamCutR aes \beamCutL g bes fis8 f4( d8)
+			}
+		>>
+	}
+	<<
+		\new Voice {
+			\voiceOne
+			b'2:32^\Div_mark c4:32 dis4:32
+			b2:32 c4:32 dis4:32
+			d2:32 cis4:32 c4:32
+			d2:32 cis4:32 c4:32
+		}
+		\new Voice {
+			\voiceTwo
+			g2:32\p\< a4:32 b:32
+			g2:32\!\< a4:32 b:32
+			b2:32\!\mf\> a4:32 aes4:32
+			b2:32\!\> a4:32 aes4:32\!
+		}
+	>>
+	R1*2
+}
+
+Viola_mvmt_I_AJ = \relative c' {
+	\mark #6
+	\time 4/4
+	bes8_\markup { \italic {più dim. e rit.} } a~ a16 \beamCutR aes \beamCutL g bes fis8 f4( d8)
+	e2\p f4\< gis
+	e2 f4 gis
+	fis'2\!\mf\> f4 e
+	fis2\!\p\> f4 e
+	gis,2\!\< g4 fis
+	gis2\!\> g4 fis\!
 }
 
 %%% Final assembly
 
 Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF \Violin_I_mvmt_I_AG
-		\Violin_I_mvmt_I_AH \NULL_I_AI }
+		\Violin_I_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ }
 Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI }
 
 Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF \Violin_II_mvmt_I_AG
-		\Violin_II_mvmt_I_AH \NULL_I_AI }
+		\Violin_II_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ }
 Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_divisi_II_mvmt_I_AE
-		\Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI }
+		\Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ }
 
 Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF \Viola_mvmt_I_AG \Viola_mvmt_I_AH
-		\Viola_mvmt_I_AI }
+		\Viola_mvmt_I_AI \Viola_mvmt_I_AJ }

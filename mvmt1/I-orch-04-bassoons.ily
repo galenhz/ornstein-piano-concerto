@@ -385,12 +385,34 @@ Bassoon_I_II_mvmt_I_AI = \relative c' {
 	\unset Staff.timeSignatureFraction
 }
 
+%%% Section AJ = mm. 63-69 (Rehersal 6)
+
+Bassoon_I_mvmt_I_AJ = \relative c {
+	\mark #6
+	\time 4/4
+	r2 fis8\pp f4 d8
+	cis8 r8 r4 r2
+	R1*3
+	fis2\mf f4( e)
+	fis2 f4(\> e)\!
+}
+
+Bassoon_II_mvmt_I_AJ = \relative c {
+	\mark #6
+	\time 4/4
+	r2 fis8\pp f4 d8
+	cis8 r8 r4 r2
+	R1*3
+	d2\mf des4( c)
+	d2 des4(\> c)\!
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
-		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI }
+		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ }
 Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
-		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI }
+		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ }
 Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_III_mvmt_I_AH \NULL_I_AI }
 Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG

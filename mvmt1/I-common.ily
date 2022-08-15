@@ -34,3 +34,4 @@ NULL_I_AF = { \tempo "Appasionata, ma molto sostenuto" R1*2 \time 2/4 R2 \time 3
 NULL_I_AG = { \mark #3 \time 2/4 \tempo "molto marcato" R2*10 }
 NULL_I_AH = { \mark #4 \time 3/4 \tempo "L'istesso Tempo" R2.*12 \tempo "broaden" R2.*4 }
 NULL_I_AI = { \mark #5 \tempo "Meno mosso" \time 4/4 \set Staff.timeSignatureFraction = 12/8 R1*8 \unset Staff.timeSignatureFraction }
+NULL_I_AJ = { \mark #6 \time 4/4 R1*7 }

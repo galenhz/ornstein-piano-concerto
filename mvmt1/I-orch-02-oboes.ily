@@ -436,10 +436,18 @@ EnglishHorn_mvmt_I_AH = \transpose c' f \relative c'' {
 %%% Section AI = mm. 55-62 (Rehersal 5)
 %%% Tacet
 
+%%% Section AJ = mm. 63-69 (Rehersal 6)
+%%% Tacet
+
 %%% Final assembly
 
-Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG \Oboe_I_mvmt_I_AH \NULL_I_AI }
-Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG \Oboe_II_mvmt_I_AH \NULL_I_AI }
-Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG \Oboe_III_mvmt_I_AH \NULL_I_AI }
-Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH \NULL_I_AI }
-EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG \EnglishHorn_mvmt_I_AH \NULL_I_AI }
+Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
+		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
+		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
+		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
+		\NULL_I_AI \NULL_I_AJ }
+EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
+		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }

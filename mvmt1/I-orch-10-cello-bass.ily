@@ -303,7 +303,7 @@ Cello_mvmt_I_AI = \relative c {
 		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16( <d d'> <f f'>)
 		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16( <b b'> <d d'>)
 	}
-	%%\unset Staff.timeSignatureFraction
+	\unset Staff.timeSignatureFraction
 }
 
 Bass_mvmt_I_AI = \relative c {
@@ -321,12 +321,59 @@ Bass_mvmt_I_AI = \relative c {
 		f2.~ f4 e8~ e8. ees16( d f)
 		d2.~ d4 cis8~ cis8. c16( b d)
 	}
-	%%\unset Staff.timeSignatureFraction
+	\unset Staff.timeSignatureFraction
+}
+
+%%% Section AJ = mm. 63-69 (Rehersal 6)
+
+Cello_mvmt_I_AJ = \relative c {
+	\mark #6
+	\time 4/4
+	<bes bes'>8_\markup { \italic {più dim. e rit.} } <a a'>~ <a a'>16 \beamCutR <aes aes'> \beamCutL <g g'> <bes bes'> <fis fis'>8 <f f'>4( <d d'>8)
+	<cis cis'>8\p r8 r4 r2
+	R1*3
+	<<
+		\new Voice {
+			\voiceOne
+			fis'2:32^\Div_mark f4:32 e:32
+			fis2:32 f4:32 e:32
+		}
+		\new Voice {
+			\voiceTwo
+			d2:32 des4:32 c:32
+			d2:32\> des4:32 c:32\!
+		}
+	>>
+}
+
+Bass_mvmt_I_AJ = \relative c {
+	\mark #6
+	\time 4/4
+	bes8_\markup { \italic {più dim. e rit.} } a~ a16 \beamCutR aes \beamCutL g bes fis8 f4( d8)
+	<<
+		\new Voice {
+			\voiceOne
+			cis'2~^\Div_mark \tuplet 3/2 { cis4 d f }
+			\repeat unfold 5 { cis2~ \tuplet 3/2 { cis4 d f } }
+		}
+		\new Voice {
+			\voiceTwo
+			cis,2~\p\< \tuplet 3/2 { cis4 d f }
+			cis2~ \tuplet 3/2 { cis4 d f }
+			cis2~\!\mf \tuplet 3/2 { cis4 d f }
+			cis2~ \tuplet 3/2 { cis4 d f }
+			cis2~ \tuplet 3/2 { cis4 d f }
+			cis2~ \tuplet 3/2 { cis4 d f }
+		}
+	>>
 }
 
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH \Cello_mvmt_I_AI }
-Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH }
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
+		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ }
+Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
+		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ }
 
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH \Bass_mvmt_I_AI }
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
+		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ }

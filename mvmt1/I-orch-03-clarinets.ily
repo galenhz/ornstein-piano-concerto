@@ -369,8 +369,9 @@ BassClarinet_mvmt_I_AH = \transpose c' bes, \relative c' {
 }
 
 %%% Section AI = mm. 55-62 (Rehersal 5)
+%%% Section AJ = mm. 63-69 (Rehersal 6)
 
-Clarinet_I_III_mvmt_I_AI = \transpose c' bes \relative c' {
+Clarinet_I_III_mvmt_I_AI_AJ = \transpose c' bes \relative c' {
 	\mark #5
 	\tempo "Meno mosso"
 	\time 4/4
@@ -383,17 +384,24 @@ Clarinet_I_III_mvmt_I_AI = \transpose c' bes \relative c' {
 		g2.~ g4 fis8~ fis8. f16( e g)
 		e2.~ e4 dis8~ dis8. d16( cis e)
 	}
-	%\unset Staff.timeSignatureFraction
+	\unset Staff.timeSignatureFraction
+	\mark #6
+	\time 4/4
+	c8_\markup { \italic {più dim. e rit.} } b~ b16 \beamCutR bes( \beamCutL a c) gis8 r8 r4
+	R1*6
 }
+
+%%% Section AJ = mm. 63-69 (Rehersal 6)
 
 %%% Final assembly
 
 Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \Clarinet_I_mvmt_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG
-		\Clarinet_I_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI }
+		\Clarinet_I_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ }
 Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG \Clarinet_II_mvmt_I_AH
-		\NULL_I_AI }
+		\NULL_I_AI \NULL_I_AJ}
 Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI }
+		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ }
 Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_IV_mvmt_I_AH \NULL_I_AI }
-BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH \NULL_I_AI }
+		\Clarinet_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ }
+BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH \NULL_I_AI
+		\NULL_I_AJ }
