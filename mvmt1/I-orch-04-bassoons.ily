@@ -179,7 +179,7 @@ Contrabassoon_mvmt_I_AD_AE = \relative c {
 	c2.\< a2~\!\> a8\!
 	\time 10/8
 	c2. e2
-	c4 a1
+	c4-\markup { \italic "poco più" \dynamic p \italic "e rit." } a1
 	c4 a1\>
 	% AE
 	\mark #2
