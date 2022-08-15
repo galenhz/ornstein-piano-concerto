@@ -226,8 +226,11 @@ Also...do I want to add slurs to the second beat for low strings, matching clari
 Listen to the recording, see if I can hear slurring.
 (I-orch-09-violins-viola, I-orch-10-cello-bass)
 
-m. 64-69: Dynamics all over the place. I've copied from parts. Needs attention. #DYNAMICS
+m. 64-69: Dynamics all over the place. I've copied various hairpins from parts. Needs
+attention. #DYNAMICS
+(I-orch-09-violins-viola, I-orch-10-cello-bass)
 
-m. 70-73: The score and parts ask Tympani I to field a b-flat here, which the player seems
-to have balked at; they scratched out the "e-flat to b-flat" directive from the copyist.
+m. 70-73: The score and parts ask Tympani I (a-e) to field a b-flat here, which the player
+seems to have balked at; they scratched out the "e-flat to b-flat" directive from the
+copyist.
 (I-orch-08-tympani)

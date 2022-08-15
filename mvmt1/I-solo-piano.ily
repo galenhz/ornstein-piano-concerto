@@ -636,9 +636,9 @@ solo_lower_I_AK = \relative c'' {
 	\repeat unfold 2 { r d gis }
 }
 
-%%% This is as far as I've gotten
+%%% Section AL = mm. 82-90 (Rehersal 7)
 
-solo_upper_I_remain = \relative c' {
+solo_upper_I_AL = \relative c' {
 	% mm. 82-90 - Rehersal 7
 	\time 4/4
 	\mark #7
@@ -670,6 +670,46 @@ solo_upper_I_remain = \relative c' {
 		\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
 		\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
 	\stemNeutral
+}
+
+solo_dynamics_I_AL = {
+	% mm. 82-90 - Rehersal 7
+	s1 s1 s1 s1 s1 s1 s1 s1 s2. s8
+}
+
+solo_lower_I_AL = \relative c, {
+	% mm. 82-90 - Rehersal 7
+	\time 4/4
+	\clef bass
+	<d a' d fis>1
+	<<
+		\new Voice {
+			\voiceTwo <c a' ees'>
+			<d a' d fis>
+			<bes ees bes' g'>
+			<d a' fis'>
+			<bes ees bes' g'>
+			<d a' fis'>
+			<bes ees bes' g'>
+		}
+		\new Voice {
+			%% FIXME: Move this voice to the right of the whole-note chords, like PR.
+			\voiceOne \tuplet 5/4 { fis''32 a g16. } s8 s2.
+			s1
+			\tuplet 5/4 { a32 cis bes16. } s8 s2.
+			\tuplet 5/4 { a32 cis~ cis16. } s8 s2.
+			\tuplet 5/4 { a32 cis bes16. } s8 s2.
+			\tuplet 5/4 { a32 cis~ cis16. } s8 s2.
+			\tuplet 5/4 { cis32 f d16. } s8 s2.
+		}
+	>>
+	\time 7/8
+	R2..
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c''' {
 	% mm. 91-99 - Rehersal 8
 	\mark #8
 	\tempo "Mosso"
@@ -677,7 +717,7 @@ solo_upper_I_remain = \relative c' {
 		\time 4/4
 		r1
 		\time 7/4
-		r4 \ottava #1 <bes' e bes'>4~ <bes e bes'>8 <aes d aes'>16. <bes e bes'>32 <aes d aes'>8
+		r4 \ottava #1 <bes e bes'>4~ <bes e bes'>8 <aes d aes'>16. <bes e bes'>32 <aes d aes'>8
 			<ges c ges'>16. <aes d aes'>32 <ges c ges'>8 <d aes' d> <aes' d aes'> <bes e bes'>~
 			<bes e bes'>4
 	}
@@ -1684,8 +1724,6 @@ solo_upper_I_remain = \relative c' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 82-90 - Rehersal 7
-	s1 s1 s1 s1 s1 s1 s1 s1 s2. s8
 	% mm. 91-99 - Rehersal 8
 	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.\ff s1 s2^\markup { rit. }
 	% mm. 100-105 - Rehersal 9
@@ -1766,41 +1804,14 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c, {
-	% mm. 82-90 - Rehersal 7
-	\time 4/4
-	\clef bass
-	<d a' d fis>1
-	<<
-		\new Voice {
-			\voiceTwo <c a' ees'>
-			<d a' d fis>
-			<bes ees bes' g'>
-			<d a' fis'>
-			<bes ees bes' g'>
-			<d a' fis'>
-			<bes ees bes' g'>
-		}
-		\new Voice {
-			%% FIXME: Move this voice to the right of the whole-note chords, like PR.
-			\voiceOne \tuplet 5/4 { fis''32 a g16. } s8 s2.
-			s1
-			\tuplet 5/4 { a32 cis bes16. } s8 s2.
-			\tuplet 5/4 { a32 cis~ cis16. } s8 s2.
-			\tuplet 5/4 { a32 cis bes16. } s8 s2.
-			\tuplet 5/4 { a32 cis~ cis16. } s8 s2.
-			\tuplet 5/4 { cis32 f d16. } s8 s2.
-		}
-	>>
-	\time 7/8
-	R2..
+solo_lower_I_remain = \relative c'' {
 	% mm. 91-99 - Rehersal 8
 	\repeat unfold 2 {
 		\time 4/4
 		r1
 		\time 7/4
 		\clef treble
-		r4 <bes' e>~ <bes e>8 <aes d>16. <bes e>32 <aes d>8 <ges c>16. <aes d>32
+		r4 <bes e>~ <bes e>8 <aes d>16. <bes e>32 <aes d>8 <ges c>16. <aes d>32
 			<ges c>8 <d aes'> <aes' d> <bes e>~ <bes e>4
 	}
 	\time 4/4
@@ -2361,16 +2372,17 @@ solo_lower_I_remain = \relative c, {
 %%% Final assembly
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
-		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_remain }
+		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
-		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK }
+		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
-		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_remain }
+		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
+		\solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
-		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK }
+		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
-		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_remain }
+		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
-		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK }
+		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL }
