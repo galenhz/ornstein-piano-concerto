@@ -376,26 +376,26 @@ Cello_mvmt_I_AK = \relative c, {
 	R2*4
 	c4.\pp\>^\Unis_mark ees8
 	c4.\! ees8
-	\time 3/8
-	<g d'>4.\p\>
-	d''4.\!
-	<g,, d'>4.\>
-	d''4.\!
-	d4.\pp
-	d4~ d16_\markup { \italic "rit." } r16
-}
-
-Cello_divisi_II_mvmt_I_AK = \relative c {
-	\time 4/8
-	\tempo "Melancolico e sostenuto"
-	R2*6
-	\time 3/8
-	<g d'>4.\p\>
-	bes4.\!
-	<g d'>4.\>
-	bes4.\!
-	a4.\pp
-	a4~ a16_\markup { \italic "rit." } r16
+	<<
+		\new Voice {
+			\voiceOne
+			<g d'>4.\p\>^\Unis_mark
+			d''\!^\Div_mark
+			<g,, d'>\>^\Unis_mark
+			d''\!^\Div_mark
+			d\pp
+			d4~ d16_\markup { \italic "rit." } r16
+		}
+		\new Voice {
+			\voiceTwo
+			s4.
+			bes,
+			s
+			bes
+			a
+			a4~ a16
+		}
+	>>
 }
 
 Bass_mvmt_I_AK = \relative c, {
@@ -419,7 +419,7 @@ Bass_mvmt_I_AK = \relative c, {
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
 		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
-		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Cello_divisi_II_mvmt_I_AK }
+		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
 		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK }

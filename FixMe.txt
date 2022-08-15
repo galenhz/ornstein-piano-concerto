@@ -16,8 +16,6 @@ m. 55-62: Solo piano. Lower hand is a bit of a mess, needs tweaking.
 m. 58: Clarinets have the tuplet bracket missing in score, probably due to colliding
 with the Solo text.
 
-m. 68: Go back and patch up cello divisi.
-
 m. 69: Solo piano. Lilypond trying too hard with those quarter rests. Adjust placement?
 
 Fermata bar: add mark to previous bar and hack it to print at end,
