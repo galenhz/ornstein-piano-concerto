@@ -240,10 +240,10 @@ Viola_mvmt_I_AE = \relative c {
 
 Violin_I_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	d64([\mf c d c d c d c)] \repeat tremolo 4 { d'(-> c } \repeat tremolo 4 { d64 c) } \repeat tremolo 4 { d,( c) }
-		\repeat tremolo 4 { f( ees) } \repeat tremolo 4 { f'->( ees } \repeat tremolo 4 { f ees) } \repeat tremolo 4 { f,( ees) }
-	d64([ c d c d c d c)] \repeat tremolo 4 { d'(-> c } \repeat tremolo 4 { d64 c) } \repeat tremolo 4 { d,( c) }
-		\repeat tremolo 4 { f( ees) } \repeat tremolo 4 { f'->( ees } \repeat tremolo 4 { f ees) } \repeat tremolo 4 { f,( ees) }
+	d64([\mf\< c d c d c d c)] \repeat tremolo 4 { d'(->\! c } \repeat tremolo 4 { d64\> c) } \repeat tremolo 4 { d,(\! c) }
+		\repeat tremolo 4 { f(\< ees) } \repeat tremolo 4 { f'->(\! ees } \repeat tremolo 4 { f\> ees) } \repeat tremolo 4 { f,(\! ees) }
+	d64([\< c d c d c d c)] \repeat tremolo 4 { d'(->\! c } \repeat tremolo 4 { d64\> c) } \repeat tremolo 4 { d,(\! c) }
+		\repeat tremolo 4 { f(\< ees) } \repeat tremolo 4 { f'->(\! ees } \repeat tremolo 4 { f\> ees) } \repeat tremolo 4 { f,(\! ees) }
 	\time 2/4
 	\repeat tremolo 4 { des(_\markup { \italic "molto cresc." } c) } \repeat tremolo 4 { des'(-> c) }
 		\repeat tremolo 4 { des,( c) } \repeat tremolo 4 { des'(-> c) }
@@ -261,13 +261,13 @@ Violin_I_mvmt_I_AF = \relative c' {
 	>>
 }
 
-%%% EDIT: Those articulations in m. 27 may be player additions, not real. I need to
-%%%       go over that more generally in the parts, probably.
+%%% EDIT: Those articulations in m. 27 may be player additions, but they match
+%%% the other strings. Keeping them (and adding more).
 
 Violin_II_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	d8:64\mf d'4:64 d,8:64 f8:64 f'4:64 f,8:64
-	d8:32 d'4:64 d,8:64 f8:64 f'4:64 f,8:64
+	d8:64\mf\< d'4:64->\!\> d,8:64\! f8:64\< f'4:64->\!\> f,8:64\!
+	d8:32\< d'4:64->\!\> d,8:64\! f8:64\< f'4:64->\!\> f,8:64\!
 	\time 2/4
 	fis8:64[_\markup { \italic "molto cresc." } fis'8:64-> fis,8:64 fis'8:64]->
 	\time 3/4
@@ -293,7 +293,7 @@ Violin_II_mvmt_I_AF = \relative c' {
 % the part to match line break.
 Violin_II_divisi_II_mvmt_I_AF = \relative c' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\repeat unfold 2 { c8:64 c'4:64 c,8:64 ees8:64 ees'4:64 ees,8:64 }
+	\repeat unfold 2 { c8:64 c'4:64-> c,8:64 ees8:64 ees'4:64-> ees,8:64 }
 	\time 2/4
 	fis8:64[ fis'8:64-> fis,8:64 fis'8:64]->
 	\time 3/4
@@ -306,13 +306,13 @@ Violin_II_divisi_II_mvmt_I_AF = \relative c' {
 
 Viola_mvmt_I_AF = \relative c {
 	\tempo "Appasionata, ma molto sostenuto"
-	fis64([\mf g fis g fis g fis g)] \repeat tremolo 4 { fis'(-> g } \repeat tremolo 4 { fis g) } \repeat tremolo 4 { fis,( g) }
-		\repeat tremolo 4 { a( b) } \repeat tremolo 4 { a'(-> b } \repeat tremolo 4 { a b) } \repeat tremolo 4 { a,( b) }
-	fis64([ g fis g fis g fis g)] \repeat tremolo 4 { fis'(-> g } \repeat tremolo 4 { fis g) } \repeat tremolo 4 { fis,( g) }
-		\repeat tremolo 4 { a( b) } \repeat tremolo 4 { a'(-> b } \repeat tremolo 4 { a b) } \repeat tremolo 4 { a,( b) }
+	fis64([\mf\< g fis g fis g fis g)] \repeat tremolo 4 { fis'(->\! g } \repeat tremolo 4 { fis\> g) } \repeat tremolo 4 { fis,\!( g) }
+		\repeat tremolo 4 { a(\< b) } \repeat tremolo 4 { a'(->\! b } \repeat tremolo 4 { a\> b) } \repeat tremolo 4 { a,(\! b) }
+	fis64([\< g fis g fis g fis g)] \repeat tremolo 4 { fis'(->\! g } \repeat tremolo 4 { fis\> g) } \repeat tremolo 4 { fis,(\! g) }
+		\repeat tremolo 4 { a(\< b) } \repeat tremolo 4 { a'(->\! b } \repeat tremolo 4 { a\> b) } \repeat tremolo 4 { a,(\! b) }
 	\time 2/4
-	\repeat tremolo 4 { fis(_\markup { \italic "molto cresc." } g) } \repeat tremolo 4 { fis'( g }
-		\repeat tremolo 4 { fis, g) } \repeat tremolo 4 { fis'( g) }
+	\repeat tremolo 4 { fis(_\markup { \italic "molto cresc." } g) } \repeat tremolo 4 { fis'( g) }
+		\repeat tremolo 4 { fis,( g) } \repeat tremolo 4 { fis'( g) }
 	\time 3/4
 	\tempo "Allegro"
 	<<

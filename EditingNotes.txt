@@ -99,8 +99,17 @@ score and parts are just "Appasionata". #TEMPO
 
 mm. 25-28: There are a bunch of crescendo/decrescendo bits in Violin I/II which
 aren't in the score. I can't tell yet if these are from the copyist or were added
-by players. I've got them in the Cellos...maybe they belong in the violin
-parts too. Thinking about this. #DYNAMICS
+by players. I've got them in the Cellos, and at least some of them look real.
+Adding them to all string parts. #DYNAMICS
+(I-orch-09-violins-viola)
+
+mm. 25-28: And for that matter, note the flute and oboe are both playing into
+those same string parts...the flute has hairpins, and the oboe does not. Flute
+hairpins aren't quite aligned with the string ones, either. Either both should
+have them or neither. Thinking it over.
+(I-orch-01-flutes, I-orch-02-oboes)
+
+m. 27: Viola slurring different from all their neighbors. Adjusting to match.
 (I-orch-09-violins-viola)
 
 m. 29: Oboes have fff in the parts, f in the score. I think the fff is something
@@ -211,3 +220,7 @@ adding them according to the pattern? Next mark is the "piu dim" in 63. #DYNAMIC
 m. 60: The solo piano in the PR doesn't have the continuing ties in the left hand middle voice,
 but it's clearly there in the score. Fixed.
 (I-solo-piano)
+
+m. 63: Beat 2, the clarinet part has broken bars, and so do score lower strings, but
+lower string parts don't. It's pretty much free for me, so I'll do it.
+(I-orch-09-violins-viola, I-orch-10-cello-bass)
