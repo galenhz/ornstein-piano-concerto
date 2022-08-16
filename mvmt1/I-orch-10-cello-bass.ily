@@ -393,7 +393,7 @@ Cello_mvmt_I_AK = \relative c, {
 			s
 			bes
 			a
-			a4~ a16
+			a4~ a16 r16
 		}
 	>>
 }

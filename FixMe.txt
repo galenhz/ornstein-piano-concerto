@@ -18,6 +18,12 @@ with the Solo text.
 
 m. 69: Solo piano. Lilypond trying too hard with those quarter rests. Adjust placement?
 
+m. 82-90: Solo piano. The tuplet brackets have a tendency to run up against accidentals
+when things get tight. They probably need to be adjusted. The trick is, whether this is
+true or not depends on how much horizontal squeeze there is. So the necessary tweak may
+be different for score and PR, and may even be different if I change paper sizes. Should
+only come back here once the whole movement is done.
+
 Fermata bar: add mark to previous bar and hack it to print at end,
 put number mark in tempo mark next bar?
 

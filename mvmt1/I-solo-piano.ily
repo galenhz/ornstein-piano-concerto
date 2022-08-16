@@ -643,9 +643,11 @@ solo_upper_I_AL = \relative c' {
 	\time 4/4
 	\mark #7
 	\tempo "Andante e molto sostenuto"
+	\tupletDown
 	\repeat unfold 3 {
 		r8 \tuplet 5/4 { \stemDown cis32 \stemUp d[ d' d, d'] }
 			\tuplet 5/4 { \stemDown fis, \stemUp g[ g' g, g'] }
+			% \once \override TupletBracket.positions = #'(-6 . -4)
 			\tuplet 5/4 { \stemDown gis, \stemUp a[ a' a, a'] }
 			\tuplet 5/4 { \stemDown fis, \stemUp g[ g' g, g'] }
 			\tuplet 5/4 { \stemDown cis,, \stemUp d[ d' d, d'] }
@@ -670,6 +672,7 @@ solo_upper_I_AL = \relative c' {
 		\tuplet 5/4 { \stemDown cis, \stemUp d[ d' d, d'] }
 		\tuplet 5/4 { \stemDown gis,, \stemUp a[ a' a, a'] }
 	\stemNeutral
+	\tupletNeutral
 }
 
 solo_dynamics_I_AL = {
