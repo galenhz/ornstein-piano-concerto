@@ -698,9 +698,9 @@ redux_lower_I_AL = \relative c, {
 	<bes ees bes'>4 r4 r4 r8
 }
 
-%%% This is as far as I've gotten
+%%% Section AM = mm. 91-99 (Rehersal 8)
 
-redux_upper_I_remain = \relative c {
+redux_upper_I_AM = \relative c {
 	% mm. 91-99 - Rehersal 8
 	\mark #8
 	\tempo "Mosso"
@@ -738,8 +738,66 @@ redux_upper_I_remain = \relative c {
 			\revert TupletNumber.transparent
 		}
 	>>
+}
+
+redux_dynamics_I_AM = {
+	% mm. 91-99 - Rehersal 8
+	s1 s4 s2 s1 s1 s2. s1 s1 s1 s1 s2 s2. s1 s2
+}
+
+redux_lower_I_AM = \relative c, {
+	% mm. 91-99 - Rehersal 8
+	<<
+		\new Voice {
+			\voiceTwo a1
+		}
+		\new Voice {
+			\voiceOne r4 ees'8 a
+			\tuplet 6/4 { bes16 b c b bes a }
+			\tuplet 5/4 { ees a bes b c }
+		}
+	>>
+	\time 7/4
+	<c, fis d'>1~ <c fis d'>2.
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceTwo a1
+		}
+		\new Voice {
+			\voiceOne r4 ees'8 a
+			\tuplet 6/4 { bes16 b c b bes a }
+			\tuplet 5/4 { ees a bes b c }
+		}
+	>>
+	\time 7/4
+	<cis, fis d' fis>1~ <cis fis d' fis>2.
+	\time 4/4
+	\repeat unfold 3 { <d aes' f'>4 <f cis' a'>2. }
+	\time 5/4
+	<<
+		\new Voice {
+			\voiceOne \tuplet 5/4 { <bes, bes'>8 <c c'> <bes bes'> <g g'> <fis fis'> } s2.
+			\time 6/4
+			\tuplet 5/4 { <bes bes'>8 <c c'> <bes bes'> <g g'> <fis fis'> } s1
+		}
+		\new Voice {
+			\override TupletBracket.transparent = ##t
+			\override TupletNumber.transparent = ##t
+			\voiceTwo \tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'>
+			\time 6/4
+			\tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'> <d d'>
+			\revert TupletBracket.transparent
+			\revert TupletNumber.transparent
+		}
+	>>
+}
+
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+
+redux_upper_I_AN = \relative c'' {
 	% mm. 100-105 - Rehersal 9
-	c'4 bes~ bes8. d16 c8 bes
+	c4 bes~ bes8. d16 c8 bes
 	% Fixed: beat four has d-flat as last note, orchestral score has d. Match score.
 	\tuplet 3/2 { c bes ges } bes2 \tuplet 3/2 { ges8 bes d }
 	\time 2/4
@@ -760,11 +818,57 @@ redux_upper_I_remain = \relative c {
 	R1*2
 	\time 3/4
 	R2.*2
+}
+
+redux_dynamics_I_AN = {
+	% mm. 100-105 - Rehersal 9
+	s1 s1 s2 s1 s1 s2
+	% mm. 106-112 - Rehersal 10
+	s1 s1 s2 s1 s1 s2. s2.
+}
+
+redux_lower_I_AN = \relative c,, {
+	% mm. 100-105 - Rehersal 9
+	\slashedGrace { <cis cis'>8 }
+	\repeat unfold 2 {
+			\tuplet 5/4 { fis'''16 cis fis, fis cis }
+			\tuplet 5/4 { fis, cis' fis fis cis' }
+			\tuplet 7/4 { fis cis fis cis fis, fis cis }
+			\tuplet 5/4 { fis, cis' fis fis cis' }
+	}
+	\time 2/4
+	\tuplet 5/4 { fis cis fis, fis cis } \tuplet 5/4 { fis, cis' fis fis cis' }
+	\time 4/4
+	\repeat tremolo 12 { cis,32 gis } \repeat tremolo 4 { d gis }
+	\repeat tremolo 12 { cis gis } \repeat tremolo 4 { d gis }
+	\time 2/4
+	\repeat tremolo 4 { cis gis } \repeat tremolo 4 { d gis }
+	% mm. 106-112 - Rehersal 10
+	\time 4/4
+	\repeat unfold 2 {
+		\tuplet 5/4 { fis''16 cis fis, fis cis }
+		\tuplet 5/4 { fis, cis' fis fis cis' }
+		\tuplet 7/4 { fis cis fis cis fis, fis cis }
+		\tuplet 5/4 { fis, cis' fis fis cis' }
+	}
+	\time 2/4
+	\tuplet 5/4 { fis cis fis, fis cis } \tuplet 5/4 { fis, cis' fis fis cis' }
+	\time 4/4
+	<fis,,, fis'>2 <fis fis'>
+	<e e'> <fis fis'>
+	\time 3/4
+	<cis cis'>8 r8 r4 r4
+	R2.
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c {
 	% mm. 113-120 - Rehersal 11
 	\mark #11
 	\time 4/4
 	\tempo "slower"
-	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <f, d' f> <f d' f>8 <f d' f> } }
+	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <f d' f> <f d' f>8 <f d' f> } }
 	<<
 		\new Voice {
 			%% FIXME: How to get parenthesis on arbitrary musical phrases?
@@ -1440,12 +1544,6 @@ redux_upper_I_remain = \relative c {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 91-99 - Rehersal 8
-	s1 s4 s2 s1 s1 s2. s1 s1 s1 s1 s2 s2. s1 s2
-	% mm. 100-105 - Rehersal 9
-	s1 s1 s2 s1 s1 s2
-	% mm. 106-112 - Rehersal 10
-	s1 s1 s2 s1 s1 s2. s2.
 	% mm. 113-120 - Rehersal 11
 	s1 s1 s1 s1 s2 s1 s1 s2
 	% mm. 121-125 - Rehersal 12
@@ -1510,85 +1608,9 @@ redux_dynamics_I_remain = {
 }
 
 redux_lower_I_remain = \relative c, {
-	% mm. 91-99 - Rehersal 8
-	<<
-		\new Voice {
-			\voiceTwo a1
-		}
-		\new Voice {
-			\voiceOne r4 ees'8 a
-			\tuplet 6/4 { bes16 b c b bes a }
-			\tuplet 5/4 { ees a bes b c }
-		}
-	>>
-	\time 7/4
-	<c, fis d'>1~ <c fis d'>2.
-	\time 4/4
-	<<
-		\new Voice {
-			\voiceTwo a1
-		}
-		\new Voice {
-			\voiceOne r4 ees'8 a
-			\tuplet 6/4 { bes16 b c b bes a }
-			\tuplet 5/4 { ees a bes b c }
-		}
-	>>
-	\time 7/4
-	<cis, fis d' fis>1~ <cis fis d' fis>2.
-	\time 4/4
-	\repeat unfold 3 { <d aes' f'>4 <f cis' a'>2. }
-	\time 5/4
-	<<
-		\new Voice {
-			\voiceOne \tuplet 5/4 { <bes, bes'>8 <c c'> <bes bes'> <g g'> <fis fis'> } s2.
-			\time 6/4
-			\tuplet 5/4 { <bes bes'>8 <c c'> <bes bes'> <g g'> <fis fis'> } s1
-		}
-		\new Voice {
-			\override TupletBracket.transparent = ##t
-			\override TupletNumber.transparent = ##t
-			\voiceTwo \tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'>
-			\time 6/4
-			\tuplet 5/4 { s2 c'8} <f, f'>4 <e e'> <ees ees'> <d d'>
-			\revert TupletBracket.transparent
-			\revert TupletNumber.transparent
-		}
-	>>
-	% mm. 100-105 - Rehersal 9
-	\slashedGrace { <cis cis'>8 }
-	\repeat unfold 2 {
-			\tuplet 5/4 { fis'''16 cis fis, fis cis }
-			\tuplet 5/4 { fis, cis' fis fis cis' }
-			\tuplet 7/4 { fis cis fis cis fis, fis cis }
-			\tuplet 5/4 { fis, cis' fis fis cis' }
-	}
-	\time 2/4
-	\tuplet 5/4 { fis cis fis, fis cis } \tuplet 5/4 { fis, cis' fis fis cis' }
-	\time 4/4
-	\repeat tremolo 12 { cis,32 gis } \repeat tremolo 4 { d gis }
-	\repeat tremolo 12 { cis gis } \repeat tremolo 4 { d gis }
-	\time 2/4
-	\repeat tremolo 4 { cis gis } \repeat tremolo 4 { d gis }
-	% mm. 106-112 - Rehersal 10
-	\time 4/4
-	\repeat unfold 2 {
-		\tuplet 5/4 { fis''16 cis fis, fis cis }
-		\tuplet 5/4 { fis, cis' fis fis cis' }
-		\tuplet 7/4 { fis cis fis cis fis, fis cis }
-		\tuplet 5/4 { fis, cis' fis fis cis' }
-	}
-	\time 2/4
-	\tuplet 5/4 { fis cis fis, fis cis } \tuplet 5/4 { fis, cis' fis fis cis' }
-	\time 4/4
-	<fis,,, fis'>2 <fis fis'>
-	<e e'> <fis fis'>
-	\time 3/4
-	<cis cis'>8 r8 r4 r4
-	R2.
 	% mm. 113-120 - Rehersal 11
 	\time 4/4
-	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <d' a'> <d a'>8 <d a'> } }
+	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <d a'> <d a'>8 <d a'> } }
 	<<
 		\new Voice {
 			\voiceOne \repeat unfold 4 { \tuplet 3/2 { r16 <a' f'> <a f'>8 <a f'> } }
@@ -2203,10 +2225,10 @@ redux_lower_I_remain = \relative c, {
 
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
-		\redux_upper_I_remain }
+		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
-		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_remain }
+		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
-		\redux_lower_I_remain }
+		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_remain }

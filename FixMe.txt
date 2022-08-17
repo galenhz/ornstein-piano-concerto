@@ -1,7 +1,7 @@
 
 m. 12: Trombone III/Tuba crescendo messes up the score when I try to print it in any way.
 Redacted it entirely from the score for now, although it's in the parts. Need to figure
-out what's wrong.
+out what's wrong. May be more partcombine magic I have to work around with silences.
 
 m. 28: Piano reduction. Initial rest placement completely wrong. Changed but still needs work.
 
@@ -14,7 +14,7 @@ m. 54: Piano reduction. Need to break up obnoxious "c and c#" chord like PR.
 m. 55-62: Solo piano. Lower hand is a bit of a mess, needs tweaking.
 
 m. 58: Clarinets have the tuplet bracket missing in score, probably due to colliding
-with the Solo text.
+with the Solo text. Maybe force tupletdown in score.
 
 m. 69: Solo piano. Lilypond trying too hard with those quarter rests. Adjust placement?
 
@@ -23,9 +23,15 @@ when things get tight. They probably need to be adjusted. The trick is, whether 
 true or not depends on how much horizontal squeeze there is. So the necessary tweak may
 be different for score and PR, and may even be different if I change paper sizes. Should
 only come back here once the whole movement is done.
+Also in this same passage, the lower staff sometimes places the quintuplet figures
+to the left of the whole notes, which is not what the PR does. I'm not sure if it's
+worth changing, though.
 
 m. 82-89: Flutes and Clarinets. I and II get the tuplet bracket eaten by PartCombine for
 no obvious reason.
+
+m. 98-99: Piano reduction. Quarter rests too high. Switch it so that voiceOne is tranparent
+and voiceTwo is printed?
 
 Fermata bar: add mark to previous bar and hack it to print at end,
 put number mark in tempo mark next bar?

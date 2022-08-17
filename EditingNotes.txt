@@ -240,3 +240,7 @@ like there might have been white-out involved there. The PR plays a X8 X8 R16 X1
 Recording is straight triplets. Allowing the discrepancy to stand for now, but might want to adjust
 this in PR as well.
 (I-orch-06-horns, I-piano-reduction)
+
+m. 101: The piano reduction ends the bar with d-flat; the english horn solo it's following has 
+d-natural in both score and part. Adjusting reduction to match.
+(I-piano-reduction)

@@ -710,9 +710,13 @@ solo_lower_I_AL = \relative c, {
 	R2..
 }
 
-%%% This is as far as I've gotten
+%%% Section AM = mm. 91-99 (Rehersal 8)
 
-solo_upper_I_remain = \relative c''' {
+%%% I initially overrode lilypond and had it create tuplet brackets for the solo piano
+%%% here, to match the PR. As I've worked on this I've changed my mind about the importance
+%%% of that. Commenting out the code. May revisit later.
+
+solo_upper_I_AM = \relative c''' {
 	% mm. 91-99 - Rehersal 8
 	\mark #8
 	\tempo "Mosso"
@@ -729,32 +733,32 @@ solo_upper_I_remain = \relative c''' {
 	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
 		a8 \tuplet 9/8 { c64 cis e f \change Staff = "solo_upper" a c cis e f }
 		\stemUp gis8 \stemNeutral
-		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
-		\once \override TupletBracket.positions = #'(-5 . -12)
+		%% \tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		%% \once \override TupletBracket.positions = #'(-5 . -12)
 		\tuplet 9/8 { f64[ e cis c a \change Staff = "solo_lower" f e cis c] }
-		\tupletNeutral
+		%% \tupletNeutral
 		\ottava #0 \revert Staff.OttavaBracket.transparent
 		\change Staff = "solo_upper" r4 \ottava #0
 	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
 		a8 \tuplet 9/8 { c64 cis e f \change Staff = "solo_upper" a c cis e f }
 		\stemUp gis8 \stemNeutral
-		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
-		\once \override TupletBracket.positions = #'(-5 . -12)
+		%% \tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		%% \once \override TupletBracket.positions = #'(-5 . -12)
 		\tuplet 9/8 { f64[ e cis c a \change Staff = "solo_lower" f e cis c] }
-		\tupletNeutral
+		%% \tupletNeutral
 		\ottava #0 \revert Staff.OttavaBracket.transparent
 		\change Staff = "solo_upper" \ottava #0
-		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
-		\once \override TupletBracket.positions = #'(-5 . -12)
+		%% \tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		%% \once \override TupletBracket.positions = #'(-5 . -12)
 		\tuplet 9/8 { f e cis c a \change Staff = "solo_lower" f e cis c }
 		\change Staff = "solo_upper" r8
 	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
 		a'8 \tuplet 9/8 { c64 cis e f \change Staff = "solo_upper" a c cis e f }
 		\stemUp gis8 \stemNeutral
-		\tupletDown \once \override TupletBracket.bracket-visibility = ##t
-		\once \override TupletBracket.positions = #'(-5 . -12)
+		%% \tupletDown \once \override TupletBracket.bracket-visibility = ##t
+		%% \once \override TupletBracket.positions = #'(-5 . -12)
 		\tuplet 9/8 { f64[ e cis c a \change Staff = "solo_lower" f e cis c] }
-		\tupletNeutral
+		%% \tupletNeutral
 		\ottava #0 \revert Staff.OttavaBracket.transparent
 		\change Staff = "solo_upper" r4 \ottava #0
 	\time 5/4
@@ -777,11 +781,41 @@ solo_upper_I_remain = \relative c''' {
 			\voiceTwo <gis, b>4 <d' g>
 		}
 	>>
+}
+
+solo_dynamics_I_AM = {
+	% mm. 91-99 - Rehersal 8
+	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.\ff s1 s2^\markup { rit. }
+}
+
+solo_lower_I_AM = \relative c'' {
+	% mm. 91-99 - Rehersal 8
+	\repeat unfold 2 {
+		\time 4/4
+		r1
+		\time 7/4
+		\clef treble
+		r4 <bes e>~ <bes e>8 <aes d>16. <bes e>32 <aes d>8 <ges c>16. <aes d>32
+			<ges c>8 <d aes'> <aes' d> <bes e>~ <bes e>4
+	}
+	\time 4/4
+	r4 s2 r4
+	r4 s2 s8 r8
+	r4 s2 r4
+	\time 5/4
+	r4 r4 \clef bass <c,, f b>4 <g' d' g> <fis cis' fis>
+	\time 6/4
+	r4 r4 <c f b> <g' d' g> <fis cis' fis bes> <f c' f a c>
+}
+
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+
+solo_upper_I_AN = \relative c, {
 	% mm. 100-105 - Rehersal 9
 	\mark #9
 	\time 4/4
 	\tempo "Allegro"
-	\change Staff = "solo_lower" \slashedGrace <fis,,, cis' fis>8
+	\change Staff = "solo_lower" \slashedGrace <fis cis' fis>8
 		\change Staff = "solo_upper"
 		\repeat unfold 4 {
 		fis''''32 cis fis, \change Staff = "solo_lower" \clef treble fis cis fis, fis cis
@@ -830,6 +864,51 @@ solo_upper_I_remain = \relative c''' {
 			\change Staff = "solo_upper" \stemNeutral
 		}
 	>>
+}
+
+solo_dynamics_I_AN = {
+	% mm. 100-105 - Rehersal 9
+	s1 s1 s2 s1 s1 s2
+	% mm. 106-112 - Rehersal 10
+	s1 s1 s2 s1 s1 s2. s2.
+}
+
+solo_lower_I_AN = \relative c, {
+	% mm. 100-105 - Rehersal 9
+	s1 s1
+	\time 2/4
+	s2
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	% mm. 106-12 - Rehersal 10
+	\time 4/4
+	s1 s1
+	\time 2/4
+	s2
+	\time 4/4
+	\clef bass
+	\repeat unfold 2 { \tuplet 5/4 { fis16 b e fis b } \tuplet 5/4 { e b fis e b } }
+	\tuplet 5/4 { e, b' e fis b } \tuplet 5/4 { e b fis e b }
+		\tuplet 5/4 { fis b e fis b } \tuplet 5/4 { e b fis e b }
+	\time 3/4
+	<cis, fis e'>2 <b e dis'>4
+	<<
+		\new Voice {
+			\slashedGrace <a dis>8~ \voiceTwo <a dis>2
+		}
+		\new Voice {
+			\voiceOne
+			<dis' gis cis>2
+		}
+	>>
+	s4
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c, {
 	% mm. 113-120 - Rehersal 11
 	\mark #11
 	\time 4/4
@@ -841,7 +920,7 @@ solo_upper_I_remain = \relative c''' {
 	%%             been using.
 	\magnifyMusic 0.63 {
 		\repeat unfold 6 {
-			\tuplet 18/16 { \change Staff = "solo_lower" d,,64 a' f'
+			\tuplet 18/16 { \change Staff = "solo_lower" d64 a' f'
 				\change Staff = "solo_upper" a bes cis d f
 				\change Staff = "solo_lower" f, a bes cis d
 				\change Staff = "solo_upper" f a bes cis d
@@ -1727,12 +1806,6 @@ solo_upper_I_remain = \relative c''' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 91-99 - Rehersal 8
-	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.\ff s1 s2^\markup { rit. }
-	% mm. 100-105 - Rehersal 9
-	s1 s1 s2 s1 s1 s2
-	% mm. 106-112 - Rehersal 10
-	s1 s1 s2 s1 s1 s2. s2.
 	% mm. 113-120 - Rehersal 11
 	s1 s1 s1 s1 s2 s1 s1 s2
 	% mm. 121-125 - Rehersal 12
@@ -1807,54 +1880,7 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c'' {
-	% mm. 91-99 - Rehersal 8
-	\repeat unfold 2 {
-		\time 4/4
-		r1
-		\time 7/4
-		\clef treble
-		r4 <bes e>~ <bes e>8 <aes d>16. <bes e>32 <aes d>8 <ges c>16. <aes d>32
-			<ges c>8 <d aes'> <aes' d> <bes e>~ <bes e>4
-	}
-	\time 4/4
-	r4 s2 r4
-	r4 s2 s8 r8
-	r4 s2 r4
-	\time 5/4
-	r4 r4 \clef bass <c,, f b>4 <g' d' g> <fis cis' fis>
-	\time 6/4
-	r4 r4 <c f b> <g' d' g> <fis cis' fis bes> <f c' f a c>
-	% mm. 100-105 - Rehersal 9
-	s1 s1
-	\time 2/4
-	s2
-	\time 4/4
-	R1*2
-	\time 2/4
-	R2
-	% mm. 106-12 - Rehersal 10
-	\time 4/4
-	s1 s1
-	\time 2/4
-	s2
-	\time 4/4
-	\clef bass
-	\repeat unfold 2 { \tuplet 5/4 { fis,16 b e fis b } \tuplet 5/4 { e b fis e b } }
-	\tuplet 5/4 { e, b' e fis b } \tuplet 5/4 { e b fis e b }
-		\tuplet 5/4 { fis b e fis b } \tuplet 5/4 { e b fis e b }
-	\time 3/4
-	<cis, fis e'>2 <b e dis'>4
-	<<
-		\new Voice {
-			\slashedGrace <a dis>8~ \voiceTwo <a dis>2
-		}
-		\new Voice {
-			\voiceOne
-			<dis' gis cis>2
-		}
-	>>
-	s4
+solo_lower_I_remain = \relative c' {
 	% mm. 113-120 - Rehersal 11
 	\time 4/4
 	\clef bass
@@ -1871,7 +1897,7 @@ solo_lower_I_remain = \relative c'' {
 	<<
 		\new Voice {
 			\voiceOne
-			b'4 a~ a8~ a32 fis a b c16 b a fis
+			b4 a~ a8~ a32 fis a b c16 b a fis
 			\time 2/4
 			a2
 		}
@@ -2375,17 +2401,19 @@ solo_lower_I_remain = \relative c'' {
 %%% Final assembly
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
-		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_remain }
+		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
+		\solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_remain }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
-		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_remain }
+		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
+		\solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL }

@@ -15,8 +15,8 @@
 % AK = mm. 70-81
 % AL = mm. 82-90   (Rehersal 7)
 % AM = mm. 91-99   (Rehersal 8)
-% AN - mm. 100-113 (Rehersal 9/10)
-% AO = mm. 114-121 (Rehersal 11/12)
+% AN - mm. 100-112 (Rehersal 9/10)
+% AO = mm. 113-121 (Rehersal 11/12)
 % AP = mm. 122-125
 % AQ = mm. 126-133 (Rehersal 13)
 % AR = mm. 134-141
