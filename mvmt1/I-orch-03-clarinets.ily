@@ -79,8 +79,7 @@ Clarinet_IV_mvmt_I_AB = \transpose c' bes \relative c' {
 		b4\f\< fis'4.\!\>( g8)\!
 		r8 e4.\< a4\!\> |
 	\tag #'Part \revert NoteHead.extra-spacing-width
-	s2.\!
-	R2.*2
+	\tag #'Score { s2.\! R2.*2 } \tag #'Part { R2.*3\! }
 	\time 4/4
 	r16 gis gis gis c4 r16 gis gis gis c4
 	\time 3/4
