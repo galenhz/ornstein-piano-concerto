@@ -296,9 +296,70 @@ Trumpet_IV_mvmt_I_AH = \relative c' {
 %%% Section AK = mm. 70-81
 %%% Tacet
 
+%%% Section AL = mm. 82-90 (Rehersal 7)
+
+Trumpet_I_mvmt_I_AL = \relative c'' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	\tag #'Score { R1*5 r2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r8 cis \tuplet 3/2 { c[ bes r16 a] } a4~ \tuplet 3/2 { a8 a a }
+				a( g) g2 g8 g
+				\tuplet 3/2 { fis( ees) d } d2 a'4
+				a8( g) g2 a8( g)
+				\tuplet 3/2 { fis( ees) d } d2 a'8 a
+				a( g) g4
+			}
+			\new Voice {
+				\voiceTwo
+				\override MultiMeasureRest.staff-position = #-10
+				R1*5 r2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	r4 bes8\mf( cis)
+	\tuplet 3/2 { ees( d cis) } d2 cis8.(\< f16)
+	d1~\!\f\>
+	\time 7/8
+	d2.\!_\markup { \italic "più dim." } r8
+}
+
+Trumpet_II_III_IV_mvmt_I_AL = \relative c'' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	R1*5
+	\tag #'Score { R1*3 \time 7/8 R1*7/8 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				r2 r4 bes8(^"I Tpt." cis)
+				\tuplet 3/2 { ees( d cis) } d2 cis8.( f16)
+				d1~
+				\time 7/8
+				d2. r8
+			}
+			\new Voice {
+				\voiceTwo
+				R1*3
+				\time 7/8
+				R1*7/8
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
-Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG \Trumpet_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG \Trumpet_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG \Trumpet_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG \Trumpet_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG \Trumpet_I_mvmt_I_AH \NULL_I_AI
+		\NULL_I_AJ \NULL_I_AK \Trumpet_I_mvmt_I_AL }
+Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG \Trumpet_II_mvmt_I_AH \NULL_I_AI
+		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL }
+Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG \Trumpet_III_mvmt_I_AH \NULL_I_AI
+		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL }
+Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG \Trumpet_IV_mvmt_I_AH \NULL_I_AI
+		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL }

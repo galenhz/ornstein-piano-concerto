@@ -24,6 +24,9 @@ true or not depends on how much horizontal squeeze there is. So the necessary tw
 be different for score and PR, and may even be different if I change paper sizes. Should
 only come back here once the whole movement is done.
 
+m. 82-89: Flutes and Clarinets. I and II get the tuplet bracket eaten by PartCombine for
+no obvious reason.
+
 Fermata bar: add mark to previous bar and hack it to print at end,
 put number mark in tempo mark next bar?
 

@@ -467,15 +467,50 @@ Oboe_I_mvmt_I_AK = \relative c''' {
 	R4.
 }
 
+%%% Section AL = mm. 82-90 (Rehersal 7)
+
+%%% FIXME: Add cues.
+%%% FIXME: PartCombine is breaking on I/II in a really wierd way.
+
+Oboe_I_mvmt_I_AL = \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	R1*7
+	r2 \tuplet 3/2 { r8 d( d,) } r4
+	\time 7/8
+	R1*7/8
+}
+
+Oboe_II_mvmt_I_AL = \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	R1*7
+	r2 \tuplet 3/2 { r8 cis( bes) } r4
+	\time 7/8
+	R1*7/8
+}
+
+Oboe_III_mvmt_I_AL = \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	R1*7
+	r2 \tuplet 3/2 { r8 g( d) } r4
+	\time 7/8
+	R1*7/8
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK }
+		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
-		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
-		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }

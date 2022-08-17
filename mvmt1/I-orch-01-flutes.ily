@@ -361,15 +361,117 @@ Flute_I_mvmt_I_AK = \relative c'' {
 	b16 gis( b4)_\markup { \italic "rit." } \stemNeutral
 }
 
+Flute_All_Cues_mvmt_I_AK = \relative c'' {
+	\time 4/8
+	\tempo "Melancolico e sostenuto"
+	R2*6
+	\time 3/8
+	\tag #'Score { R4.*6 }
+	\tag #'Part {
+		R4.*4
+		<<
+			\new CueVoice {
+				r16 gis16(^"I Fl." \stemUp b4)~
+				b16 gis( b4)_\markup { \italic "rit." } \stemNeutral
+			}
+			\new Voice {
+				\voiceTwo
+				R4.*2
+			}
+		>>
+	}
+}
+
+%%% Section AL = mm. 82-90 (Rehersal 7)
+
+Picc_I_mvmt_I_AL = \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	R1*3
+	r4 \tuplet 3/2 { r8 cis\p( cis,) } r2
+	R1
+	r4 \tuplet 3/2 { r8 cis'( cis,) } r2
+	R1
+	\tuplet 3/2 { r8 cis'( bes) } r4 r2
+	\time 7/8
+	R1*7/8
+}
+
+%%% Flute I and II get ottava'd because all those ledger lines make layout bad and give me a headache.
+%%% Suppress slurs in the score where PartCombiner makes them undrawable.
+%%% FIXME: PartCombine is breaking on I/II in a really wierd way.
+
+Flute_I_mvmt_I_AL = \relative c'''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	\ottava #1 \tuplet 3/2 { r8 \tag #'Score c( \tag #'Part c(\p a,) } \ottava #0 r4 r2
+	\repeat unfold 2 { r4 \ottava #1 \tuplet 3/2 { r8 c'( a,) } \ottava #0 r2 }
+	r4 \ottava #1 \tuplet 3/2 { r8 c'( bes) } \ottava #0 r2
+	r4 \ottava #1 \tuplet 3/2 { r8 c( a,) } \ottava #0 r2
+	r4 \ottava #1 \tuplet 3/2 { r8 c'( bes) } \ottava #0 r2
+	r4 \ottava #1 \tuplet 3/2 { r8 c( a,) } \ottava #0 r2
+	\ottava #1 \tuplet 3/2 { r8 g'( bes) } \ottava #0 r4 r2
+	\time 7/8
+	R1*7/8
+}
+
+Flute_II_mvmt_I_AL = \relative c'''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	\ottava #1 \tuplet 3/2 { r8 g(\p fis) } \ottava #0 r4 r2
+	\repeat unfold 2 { r4 \ottava #1 \tuplet 3/2 { r8 g( fis) } \ottava #0 r2 }
+	R1
+	r4 \ottava #1 \tuplet 3/2 { r8 g( fis) } \ottava #0 r2
+	R1
+	r4 \ottava #1 \tuplet 3/2 { r8 g( fis) } \ottava #0 r2
+	\ottava #1 \tuplet 3/2 { r8 \tag #'Part { g( d) } \tag #'Score { g d } } \ottava #0 r4 r2
+	\time 7/8
+	R1*7/8
+}
+
+Flute_III_mvmt_I_AL = \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	\tuplet 3/2 { r8 d(\p fis) } r4 r2
+	r4 \tuplet 3/2 { r8 ees( fis) } r2
+	r4 \tuplet 3/2 { r8 d( fis) } r2
+	r4 \tuplet 3/2 { r8 g( bis) } r2
+	r4 \tuplet 3/2 { r8 d,( fis) } r2
+	r4 \tuplet 3/2 { r8 g( bis) } r2
+	R1*2
+	\time 7/8
+	R1*7/8
+}
+
+Flute_IV_mvmt_I_AL = \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	\tuplet 3/2 { r8 \tag #'Part {d(\p a)} \tag #'Score {d\p a} } r4 r2
+	r4 \tuplet 3/2 { r8 \tag #'Part { ees'( a,) } \tag #'Score { ees' a, } } r2
+	r4 \tuplet 3/2 { r8 \tag #'Part { d( a) } \tag #'Score { d a } } r2
+	r4 \tuplet 3/2 { r8 \tag #'Part { g'( cis,) } \tag #'Score { g' cis, } } r2
+	r4 \tuplet 3/2 { r8 \tag #'Part { d( a) } \tag #'Score { d a }} r2
+	r4 \tuplet 3/2 { r8 \tag #'Part { g'( cis,) } \tag #'Score {g' cis, } } r2
+	r4 \tuplet 3/2 { r8 d( a) } r2
+	R1
+	\time 7/8
+	R1*7/8
+}
+
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \NULL_I_AK }
+		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_I_mvmt_I_AL }
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK }
+		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL }
 Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG
-		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_III_mvmt_I_AL }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL }

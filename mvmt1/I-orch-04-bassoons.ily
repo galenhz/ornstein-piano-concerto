@@ -408,28 +408,50 @@ Bassoon_II_mvmt_I_AJ = \relative c {
 }
 
 %%% Section AK = mm. 70-81
+%%% Section AL = mm. 82-90 (Rehersal 7)
 
-%% FIXME: Add cues.
-
-Bassoon_I_mvmt_I_AK = \relative c {
+Bassoon_I_mvmt_I_AK_AL = \relative c'' {
 	\time 4/8
 	\tempo "Melancolico e sostenuto"
 	R2*6
 	\time 3/8
-	R4.*5
-	r4 f16 fis
+	\tag #'Score { R4.*5 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\ottava #1
+				\tuplet 3/2 { e16([_"I Ob." ees c) } ees8 d16( cis)]
+				\tuplet 3/2 { c([ b d) } b8 c16( cis)]
+				\tuplet 3/2 { e16([ ees c) } ees8 d16( cis)]
+				\tuplet 3/2 { c( b gis) } b4~
+				\autoBeamOff b16 gis16(_"I Fl." b4~) \autoBeamOn
+				\ottava #0
+			}
+			\new Voice {
+				\voiceTwo
+				R4.*5
+			}
+		>>
+	}
+	r4 r16 \tag #'Score f,32 \tag #'Part f32^\Solo_mark fis
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	fis1
+	R1*7
+	\time 7/8
+	R1*7/8
 }
-
 
 %%% Final assembly
 
 Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
-		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ \Bassoon_I_mvmt_I_AK }
+		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ \Bassoon_I_mvmt_I_AK_AL }
 Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
-		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK }
+		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK \NULL_I_AL }
 Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
-		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
 Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
-		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
 Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF \NULL_I_AG
-		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }

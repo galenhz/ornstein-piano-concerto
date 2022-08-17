@@ -34,6 +34,9 @@
 %% EDIT: m. 19: put the "pocu piu/rit" in every part? Some parts have it under the rest.
 %% EDIT: m. 25 has another discrepancy. PR is "Appassionata, ma molto sostenuto" and
 %%       the score and parts are just "Appassionata"
+%%       m. 55: "Moderato" evolved to "Meno mosso". This has been changed in some parts.
+%%       m. 82: "Andante con moto" became "Andante e molto sostenuto". This is changed
+%%       in the score and some parts.
 
 NULL_I_AA = { \tempo "Moderato assai" \time 3/4 R2.*3 r2.\fermata }
 NULL_I_AB = { \tempo "con moto" R2.*5 \time 4/4 R1 \time 3/4 R2. \time 4/4 R1 }

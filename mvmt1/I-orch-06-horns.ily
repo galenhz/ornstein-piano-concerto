@@ -44,7 +44,7 @@ Horn_II_mvmt_I_AB_AC = \transpose c' f \relative c' {
 	\tempo "con moto"
 	\tag #'Part e4\mf \tag #'Score e4 r4 r8 gis8
 	r8 a4.\>( bes4)\!
-	c2._\<
+	\tag #'Part c2._\< \tag #'Score c2.
 	r8\! a8~\mf a2
 	aes2.
 	\time 4/4
@@ -323,12 +323,109 @@ Horn_IV_mvmt_I_AH = \transpose c' f \relative c' {
 %%% Section AK = mm. 70-81
 %%% Tacet
 
+%%% ...but give some cues anyway.
+Horn_All_mvmt_I_AK = \transpose c' f \relative c''' {
+	\tag #'Score { \NULL_I_AK }
+	\tag #'Part {
+		\time 4/8
+		\tempo "Melancolico e sostenuto"
+		R2*6
+		\time 3/8
+		<<
+			\new CueVoice {
+				\tuplet 3/2 { b16[(^"I Ob." bes g) } bes8 a16( gis)]
+				\tuplet 3/2 { g16([ fis a) } fis8 g16( gis)]
+				\tuplet 3/2 { b16[( bes g) } bes8 a16( gis)]
+				\tuplet 3/2 { g16( fis dis) } fis4~
+				\autoBeamOff fis16 dis(^"I Fl." fis4)~ \autoBeamOn
+				fis16 dis( fis4)_\markup { \italic "rit." }
+			}
+			\new Voice {
+				\voiceTwo
+				R4.*6
+			}
+		>>
+	}
+}
+
+%%% Section AL = mm. 82-90 (Rehersal 7)
+
+Horn_I_mvmt_I_AL = \transpose c' f \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r8 \tag #'Score gis\mf \tag #'Part gis\mf^\Soli_mark \tuplet 3/2 { g( f8.) e16 } e4~ \tuplet 3/2 { e8 e e }
+	e( d) d2 d8 d
+	\tuplet 3/2 { cis( bes) a } a2 e'4
+	e8( d) d2 e8( d)
+	\tuplet 3/2 { cis( bes) a } a2 e'8 e
+	e( d) d2 r4
+	R1*2
+	\time 7/8
+	R1*7/8
+}
+
+Horn_II_mvmt_I_AL = \transpose c' f \relative c'' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r8 \tag #'Score gis\mf \tag #'Part gis\mf^\Soli_mark \tuplet 3/2 { g( f8.) e16 } e4~ \tuplet 3/2 { e8 e e }
+	e( d) d2 d8 d
+	\tuplet 3/2 { cis( bes) a } a2 e'4
+	e8( d) d2 e8( d)
+	\tuplet 3/2 { cis( bes) a } a2 e'8 e
+	e( d) d2 f8( gis)
+	\tuplet 3/2 { bes( a gis) } a2 gis8.( c16)
+	a1~\f
+	\time 7/8
+	a2._\markup { \italic "più dim." } r8
+}
+
+Horn_III_mvmt_I_AL = \transpose c' f \relative c'' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r8 cis8~\mf cis2.
+	bes1
+	a
+	bes
+	a
+	bes
+	e2. r4
+	R1
+	\time 7/8
+	R1*7/8
+}
+
+Horn_IV_mvmt_I_AL = \transpose c' f \relative c'' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r8 a8~\mf a2.
+	g1
+	e
+	f
+	e
+	f
+	cis'2. r4
+	d1~\f\>
+	\time 7/8
+	d2.\!_\markup { \italic "più dim." } r8
+}
+
 %%% Final assembly
 
-Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_III_mvmt_I_AF \NULL_I_AG \Horn_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_IV_mvmt_I_AF \NULL_I_AG \Horn_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Horn_V_mvmt_I = { \NULL_I_AA \Horn_V_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Horn_VI_mvmt_I = { \NULL_I_AA \Horn_VI_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
-Horn_VII_mvmt_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+		\Horn_All_mvmt_I_AK \Horn_I_mvmt_I_AL }
+Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+		\Horn_All_mvmt_I_AK \Horn_II_mvmt_I_AL }
+Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_III_mvmt_I_AF \NULL_I_AG \Horn_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+		\Horn_All_mvmt_I_AK \Horn_III_mvmt_I_AL }
+Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_IV_mvmt_I_AF \NULL_I_AG \Horn_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+		\Horn_All_mvmt_I_AK \Horn_IV_mvmt_I_AL }
+Horn_V_mvmt_I = { \NULL_I_AA \Horn_V_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
+		\NULL_I_AL }
+Horn_VI_mvmt_I = { \NULL_I_AA \Horn_VI_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
+		\NULL_I_AL }
+Horn_VII_mvmt_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
+		\NULL_I_AL }

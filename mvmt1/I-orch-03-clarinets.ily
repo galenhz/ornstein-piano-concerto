@@ -54,7 +54,7 @@ Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\tempo "con moto"
 	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
 		\tag #'Part { r4 cis4.\f\>( b8)\! } \tag #'Score { r4 cis4.( b8) }
-		r8 e,4.\< c'4\!\>
+		\tag #'Part { r8 e,4.\< c'4\!\> } \tag #'Score { r8 e,4. c'4 }
 	\tag #'Part \revert NoteHead.extra-spacing-width
 	R2.\!
 	R2.*2
@@ -71,13 +71,15 @@ Clarinet_III_mvmt_I_AB = \transpose c' bes \relative c'' {
 	\partCombineAutomatic
 }
 
+%%% WORKAROUND: That s2. is needed so that the \! can work.
+
 Clarinet_IV_mvmt_I_AB = \transpose c' bes \relative c' {
 	\tempo "con moto"
 	\tag #`Part \override NoteHead.extra-spacing-width = #'(-2 . 2)
 		b4\f\< fis'4.\!\>( g8)\!
-		r8 e4.\< a4\!\>
+		r8 e4.\< a4\!\> |
 	\tag #'Part \revert NoteHead.extra-spacing-width
-	R2.\!
+	s2.\!
 	R2.*2
 	\time 4/4
 	r16 gis gis gis c4 r16 gis gis gis c4
@@ -393,6 +395,8 @@ Clarinet_I_III_mvmt_I_AI_AJ = \transpose c' bes \relative c' {
 
 %%% Section AK = mm. 70-81
 
+%%% FIXME: Cues for II/III/IV/Bass for the end of AK?
+
 Clarinet_I_mvmt_I_AK = \transpose c' bes \relative c''' {
 	\time 4/8
 	\tempo "Melancolico e sostenuto"
@@ -419,15 +423,85 @@ Clarinet_I_mvmt_I_AK = \transpose c' bes \relative c''' {
 	c4~ c16_\markup { \italic "rit." } r16
 }
 
+%%% Section AL = mm. 82-90 (Rehersal 7)
+
+%%% Suppress slurs in the score where PartCombiner makes them undrawable.
+%%% FIXME: PartCombine is breaking on I/II in a really wierd way.
+
+Clarinet_I_mvmt_I_AL = \transpose c' bes \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r4 \tuplet 3/2 { r8 b(\p b,) } r2
+	\repeat unfold 2 {
+		r2 \tuplet 3/2 { r8 b'( b,) } r4
+	}
+	r2 \tuplet 3/2 { r8 dis'( dis,) } r4
+	r2 \tuplet 3/2 { r8 b'( b,) } r4
+	r2 \tuplet 3/2 { r8 dis'( dis,) } r4
+	r2 \tuplet 3/2 { r8 b'( b,) } r4
+	r4 \tuplet 3/2 { r8 e'( e,) } r4 \tuplet 3/2 { r8 e( e,) }
+	\time 7/8
+	R1*7/8
+}
+
+Clarinet_II_mvmt_I_AL = \transpose c' bes \relative c''' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r4 \tuplet 3/2 { r8 a\p( gis) } r2
+	\repeat unfold 2 {
+		r2 \tuplet 3/2 { r8 a( gis) } r4
+	}
+	r2 \tuplet 3/2 { r8 d'( c) } r4
+	r2 \tuplet 3/2 { r8 a( gis) } r4
+	r2 \tuplet 3/2 { r8 d'( c) } r4
+	r2 \tuplet 3/2 { r8 a( gis) } r4
+	r4 \tuplet 3/2 { r8 dis'( c) } r4 \tuplet 3/2 { r8 dis( c) }
+	\time 7/8
+	R1*7/8
+}
+
+Clarinet_III_mvmt_I_AL = \transpose c' bes \relative c'' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r4 \tuplet 3/2 { r8 e(\p gis) } r2
+	r2 \tuplet 3/2 { r8 f( gis) } r4
+	r2 \tuplet 3/2 { r8 e( gis) } r4
+	r2 \tuplet 3/2 { r8 a( c) } r4
+	r2 \tuplet 3/2 { r8 e,( gis) } r4
+	r2 \tuplet 3/2 { r8 a( c) } r4
+	r2 \tuplet 3/2 { r8 e,( b) } r4
+	r4 \tuplet 3/2 { r8 a'( e) } r4 \tuplet 3/2 { r8 a,( c) }
+	\time 7/8
+	R1*7/8
+}
+
+Clarinet_IV_mvmt_I_AL = \transpose c' bes \relative c'' {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	r4 \tuplet 3/2 { r8 \tag #'Part {e(\p b}) \tag #'Score {e\p b} } r2
+	r2 \tuplet 3/2 { r8 \tag #'Part {f'( b,)} \tag #'Score {f' b,} } r4
+	r2 \tuplet 3/2 { r8 \tag #'Part {e( b)} \tag #'Score {e b} } r4
+	r2 \tuplet 3/2 { r8 \tag #'Part {a'( dis,)} \tag #'Score {a' dis,} } r4
+	r2 \tuplet 3/2 { r8 \tag #'Part {e( b)} \tag #'Score {e b} } r4
+	r2 \tuplet 3/2 { r8 \tag #'Part {a'( dis,)} \tag #'Score {a' dis,} } r4
+	R1*2
+	\time 7/8
+	R1*7/8
+}
+
 %%% Final assembly
 
 Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \Clarinet_I_mvmt_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG
-		\Clarinet_I_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \Clarinet_I_mvmt_I_AK }
+		\Clarinet_I_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \Clarinet_I_mvmt_I_AK \Clarinet_I_mvmt_I_AL }
 Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG \Clarinet_II_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \Clarinet_II_mvmt_I_AL }
 Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \NULL_I_AK }
+		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \NULL_I_AK \Clarinet_III_mvmt_I_AL }
 Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Clarinet_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Clarinet_IV_mvmt_I_AL }
 BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \NULL_I_AK }
+		\NULL_I_AJ \NULL_I_AK \NULL_I_AL }

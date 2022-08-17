@@ -298,13 +298,108 @@ Tuba_mvmt_I_AH = \relative c, {
 %%% Section AK = mm. 70-81
 %%% Tacet
 
+%%% At least give them some cues.
+
+Trombones_Tuba_mvmt_I_AK = \relative c'' {
+	\tag #'Score { \NULL_I_AK }
+	\tag #'Part {
+		\time 4/8
+		\tempo "Melancolico e sostenuto"
+		R2*6
+		\time 3/8
+		\override MultiMeasureRest.staff-position = #-6
+		<<
+			\new CueVoice {
+				\ottava #1
+				\tuplet 3/2 { e16([_"I Ob." ees c) } ees8 d16( cis)]
+				\tuplet 3/2 { c([ b d) } b8 c16( cis)]
+				\tuplet 3/2 { e16([ ees c) } ees8 d16( cis)]
+				\tuplet 3/2 { c( b gis) } b4~
+				\autoBeamOff b16 gis16(_"I Fl." b4~) \autoBeamOn
+				b16[ gis( b8]) \ottava #0 r16 f,32_"I Bsn." fis
+			}
+			\new Voice {
+				\voiceTwo
+			}
+				R4.*6
+		>>
+		\revert MultiMeasureRest.staff-position
+	}
+}
+
+%%% Section AL = mm. 82-90 (Rehersal 7)
+
+Trombone_I_mvmt_I_AL = \relative c {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	fis1\pp
+	g
+	fis
+	g
+	fis
+	g
+	fis
+	g~
+	\time 7/8
+	\tag #'Score g2. \tag #'Part g2._\markup { \italic "più dim." } r8
+}
+
+Trombone_II_mvmt_I_AL = \relative c {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	d1\pp
+	ees
+	d
+	bes
+	d
+	cis
+	d
+	bes~
+	\time 7/8
+	bes2._\markup { \italic "più dim." } r8
+}
+
+Trombone_III_mvmt_I_AL = \relative c {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	a1\pp
+	a
+	a
+	ees
+	a
+	ees
+	a
+	ees~
+	\time 7/8
+	\tag #'Score ees2. \tag #'Part ees2._\markup { \italic "più dim." } r8
+}
+
+Tuba_mvmt_I_AL = \relative c, {
+	\mark #7
+	\tempo "Andante e molto sostenuto"
+	\time 4/4
+	d1\pp
+	c
+	d
+	bes
+	d
+	bes
+	d
+	bes~
+	\time 7/8
+	bes2._\markup { \italic "più dim." } r8
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF \NULL_I_AG
-		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_I_mvmt_I_AL }
 Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF \NULL_I_AG
-		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_II_mvmt_I_AL }
 Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF_AG
-		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK }
+		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_III_mvmt_I_AL }
 Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF_AG \Tuba_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \NULL_I_AK }
+		\NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Tuba_mvmt_I_AL }

@@ -7,6 +7,7 @@ beamCutL = { \set stemLeftBeamCount = #1 }
 beamCutR = { \set stemRightBeamCount = #1 }
 
 Solo_mark = \markup "Solo"
+Soli_mark = \markup "Soli"
 
 Unis_mark = \markup "unis."
 Div_mark = \markup "div."

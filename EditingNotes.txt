@@ -234,3 +234,9 @@ m. 70-73: The score and parts ask Tympani I (a-e) to field a b-flat here, which 
 seems to have balked at; they scratched out the "e-flat to b-flat" directive from the
 copyist.
 (I-orch-08-tympani)
+
+m. 84 and 86: The horn parts and score indicate a simple triplet on the first beat, but it looks
+like there might have been white-out involved there. The PR plays a X8 X8 R16 X16 on both beats.
+Recording is straight triplets. Allowing the discrepancy to stand for now, but might want to adjust
+this in PR as well.
+(I-orch-06-horns, I-piano-reduction)
