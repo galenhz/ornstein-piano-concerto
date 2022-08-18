@@ -14,8 +14,15 @@ Cello_mvmt_I_AB_AC = \relative c {
 	r8^\Unis_mark e''8\ff f gis a\> gis\!~
 	gis d16 r32 gis f4.->\> ( e8)\!
 	\clef bass
-	<< \new Voice { \voiceOne bes2.:32^\Div_mark \time 4/4 a1:32 \time 3/4 bes2.:32 \time 4/4 ees,2:32 cis2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2}
-		\new Voice { \voiceTwo e2.:32\f\> \time 4/4 cis1:32\! \time 3/4 e2.:32\espressivo \time 4/4 a,2:32\ff\< a2:32 \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! }
+	<<
+		\new Voice {
+			\voiceOne bes2.:32^\Div_mark \time 4/4 a1:32 \time 3/4 bes2.:32 \time 4/4 ees,2:32 cis2:32
+			\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \override MultiMeasureRest.staff-position = #0 R2.*2 \revert MultiMeasureRest.staff-position
+		}
+		\new Voice {
+			\voiceTwo e2.:32\f\> \time 4/4 cis1:32\! \time 3/4 e2.:32\espressivo \time 4/4 a,2:32\ff\< a2:32
+			\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 s2.\! s2.
+		}
 	>>
 	%% Have to manually put NULL_I_AC here to place a crescendo stop.
 	\time 3/4 R2.
@@ -482,12 +489,95 @@ Bass_mvmt_I_AL = \relative c' {
 	>>
 }
 
+%%% Section AM = mm. 91-99 (Rehersal 8)
+
+%%% If I'm going to do divisi part breakup in AN, start the part breakup here.
+%%% FIXME: Add final crescendo to last bar once I've got AN plugged in.
+
+Cello_mvmt_I_AM = \relative c, {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	r4 ees8(\f\<^\Unis_mark a) \tuplet 6/4 { bes16( b c b bes a) } \tuplet 5/4 { e( a bes b c) }
+	\time 7/4
+	d1~\!\ff d2.
+	\time 4/4
+	r4 ees,8(\f\< a) \tuplet 6/4 { bes16( b c b bes a) } \tuplet 5/4 { e( a bes b c)\! }
+	\time 7/4
+	<<
+		\new Voice {
+			\voiceOne
+			fis1~^\Div_mark fis2.
+			\time 4/4
+			f4 a2.-^
+			f4 e'2.
+			f,4 a2.
+			\time 5/4
+			\tuplet 5/4 { bes,8:32 c8:32 bes8:32 g8:32 fis8:32 } \tempo "Più animato" f4 e ees
+			\time 6/4
+			\tuplet 5/4 { bes'8:32 c8:32 bes8:32 g8:32 fis8:32 } f4 e ees d
+		}
+		\new Voice {
+			\voiceTwo
+			d'1~\ff d2.
+			\time 4/4
+			aes4\< cis2.-^\!\f
+			aes4\< <c a'>2.\!\f
+			aes4\< cis2.\!\f
+			\time 5/4
+			\override TupletBracket.bracket-visibility = ##f
+			\override TupletNumber.stencil = ##f
+			\tuplet 5/4 { e,2:32\f\< c8\! } \tempo "Più animato" f4\ff e ees
+			\time 6/4
+			\tuplet 5/4 { e2:32\f\< c8\! }f4\ff e ees d
+			\revert TupletBracket.bracket-visibility
+			\revert TupletNumber.stencil
+		}
+	>>
+}
+
+Bass_mvmt_I_AM = \relative c' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			a1:32
+			\time 7/4
+			fis1~ fis2.
+			\time 4/4
+			s1^\Unis_mark
+			\time 7/4
+			fis1~^\Div_mark fis2.
+		}
+		\new Voice {
+			\voiceTwo
+			a,1:32\mp\<
+			\time 7/4
+			c1~\!\ff c2.
+			\time 4/4
+			a1\mp\<
+			\time 7/4
+			c1~\!\ff c2.
+		}
+	>>
+	\time 4/4
+	d4\<^\Unis_mark f2.-^\!\f
+	d4\< f2.\!\f
+	d4\< f2.\!\f
+	\time 5/4
+	\tuplet 5/4 { bes,8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } \tempo "Più animato" f4\ff e ees
+	\time 6/4
+	\tuplet 5/4 { bes'8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } f4\ff e ees d
+}
+
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
-		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL }
+		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
-		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
+		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
-		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL }
+		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM }

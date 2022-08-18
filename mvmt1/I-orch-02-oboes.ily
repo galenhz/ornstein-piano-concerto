@@ -502,15 +502,59 @@ Oboe_III_mvmt_I_AL = \relative c''' {
 	R1*7/8
 }
 
+%%% Section AM = mm. 91-99 (Rehersal 8)
+
+%%% FIXME: Add cues.
+
+Oboe_I_mvmt_I_AM = \relative c'' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1*2
+	\tuplet 3/2 { b8\f( c dis) } e2 ees8( c)
+	\time 5/4
+	\tuplet 5/4 { g8(\f f g bes c) } \tempo "Più animato" r2 r4
+	\time 6/4
+	\tuplet 5/4 { g8(\ff f g bes c) } r2 r2
+}
+
+EnglishHorn_mvmt_I_AM = \transpose c' f \relative c' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1*2
+	\tuplet 3/2 { fis8(\ff g ais) } b2 bes8( g)
+	\time 5/4
+	r2 \tempo "Più animato" r2.
+	\time 6/4
+	R1*6/4
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL }
+		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL }
+		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
-		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL }
+		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
-		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
+		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM }

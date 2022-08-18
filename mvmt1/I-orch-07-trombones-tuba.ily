@@ -393,13 +393,74 @@ Tuba_mvmt_I_AL = \relative c, {
 	bes2._\markup { \italic "più dim." } r8
 }
 
+%%% Section AM = mm. 91-99 (Rehersal 8)
+
+%%% FIXME: cues, maybe?
+
+Trombone_I_mvmt_I_AM = \relative c' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1*3
+	\time 5/4
+	\tuplet 5/4 { d4\mf d( g8) } \tempo "Più animato" r2 r4
+	\time 6/4
+	\tuplet 5/4 { d4 d( g8) } r2 r2
+}
+
+Trombone_II_mvmt_I_AM = \relative c' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1*3
+	\time 5/4
+	\tuplet 5/4 { bes4\mf bes( e8) } \tempo "Più animato" r2 r4
+	\time 6/4
+	\tuplet 5/4 { bes4 bes( e8) } r2 r2
+}
+
+Tuba_mvmt_I_AM = \relative c, {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1
+	\time 7/4
+	R1*7/4
+	\time 4/4
+	R1*3
+	\time 5/4
+	\tuplet 5/4 { e2(\mf c8) } \tempo "Più animato" f4( e ees)
+	\time 6/4
+	\tuplet 5/4 { e2( c8) } f4( e ees d)
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF \NULL_I_AG
-		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_I_mvmt_I_AL }
+		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_I_mvmt_I_AL \Trombone_I_mvmt_I_AM }
 Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF \NULL_I_AG
-		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_II_mvmt_I_AL }
+		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_II_mvmt_I_AL \Trombone_II_mvmt_I_AM }
 Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF_AG
-		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_III_mvmt_I_AL }
+		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_III_mvmt_I_AL \NULL_I_AM }
 Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF_AG \Tuba_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Tuba_mvmt_I_AL }
+		\NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Tuba_mvmt_I_AL \Tuba_mvmt_I_AM }

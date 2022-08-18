@@ -7,7 +7,7 @@ and may represent the composer's final thoughts. I am currently biased towards
 the PR, but trying to blend the two in a way that makes sense when needed. Edits
 related to this are marked #TEMPO.
 
-Dynamics are not always consistant. It is often difficult, when reading the
+Dynamics are not always consistent. It is often difficult, when reading the
 parts, to differentiate between what was originally written by the copyist
 and what was a bit of markup by the performer. The score is often lacking
 any clues. Edits related to this are marked #DYNAMICS.
@@ -54,7 +54,7 @@ m. 10: The oboe parts all give the second half of the rhythm X8. X16. The score
 oddly has X8 X8 for the first and second, and X8. X16 for the third and fourth.
 That's pretty clearly a mistake in the score. But it does make me wonder: the other
 instruments playing this rhythm (flute I/II, clarinet I/II has X8 R16 X16 instead.
-Should I make the oboes consistant with the others (and the piano reduction)? Doing
+Should I make the oboes consistent with the others (and the piano reduction)? Doing
 that for now, but willing to reconsider.
 (I-orch-02-oboes)
 
@@ -119,7 +119,7 @@ m. 29: Bassoons I and II are in unison, but whoever copied the parts put I in te
 clef and II in bass clef. Absent a compelling reason, I'm just keeping both in tenor.
 (I-orch-04-bassoons)
 
-mm. 29-38: Violas bar layout inconsistant between score and parts. Parts break up,
+mm. 29-38: Violas bar layout inconsistent between score and parts. Parts break up,
 score doesn't. Sticking with score for now.
 (I-orch-09-violins-viola)
 
@@ -182,7 +182,7 @@ line. I think this was an error by the copyist. Using the score pattern.
 (I-orch-10-cello-bass)
 
 m. 53: The parts which have a FFF on beat 1 omit it on beat 3, except for Tympani.
-Perhaps make tympani consistant with everbody else here?
+Perhaps make tympani consistent with everbody else here?
 (I-orch-08-tympani)
 
 mm. 55-62: The orchestra parts, playing in unison, don't have consistent handling of either
@@ -195,13 +195,13 @@ state for now. As for the slurs, clarinets and cellos have them, and the viola h
 They make musical sense. Adding them to everybody. #DYNAMICS
 (I-orch-03-clarinets, I-orch-04-bassoons, I-orch-09-violins-viola, I-orch-10-cello-bass)
 
-mm. 55-58: Solo piano right hand PR has inconsistant handling of the ottavas between
+mm. 55-58: Solo piano right hand PR has inconsistent handling of the ottavas between
 measures 55 and 57. Same notes, just different cutoff point. Score does it like 55 both times
 (although amusingly the actual ottava line is missing). My repeat structure copies 55's
 handling in both cases, but 57's seems a little easier on the eye.
 (I-solo-piano)
 
-m. 58: The score and piano reduction use a "duplet" figure ou the third beat, but most
+m. 58: The score and piano reduction use a "duplet" figure on the third beat, but most
 of the parts just print that as a pair of dotted eighth notes.
 (I-orch-03-clarinets, I-orch-09-violins-viola, I-orch-10-cello-bass)
 
@@ -240,6 +240,31 @@ like there might have been white-out involved there. The PR plays a X8 X8 R16 X1
 Recording is straight triplets. Allowing the discrepancy to stand for now, but might want to adjust
 this in PR as well.
 (I-orch-06-horns, I-piano-reduction)
+
+
+m. 91: Clarinet I/I lack starting dynamic, III/IV has p. Nothing in score. Giving dynamic
+to all. #DYNAMICS
+(I-orch-03-clarinets)
+
+m. 93: Clarinets lack dynamics in this bar that appear to be in score, plus basoons. Adding
+them in. #DYNAMICS
+(I-orch-03-clarinets)
+
+m. 91 and 93: Full score shows crescendos for all the strings in 91, but only for Violin I in 93.
+It seems strange that the other string parts would be expected to just jump from mp to ff, so
+adding them to other strings as well. In fact, since the strings are playing in accord, it makes
+the most sense to harmonize everybody across this section.
+(I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+m. 94: Dynamics are f for all wind parts except for Bassoon IV, whose part could be either f or ff.
+Score clearly gives a strong ff in m. 92, but is silent in 94 except for what might be pencilled in
+f on the bassoons, and strong f in the horns. Making it consistent F for winds/brass. #DYNAMICS
+(I-orch-*)
+
+mm. 95-97: The second beat ^ articulations are again inconsistent. Score gives them to everbody
+in 95, bassoons/horns only in 96, and nobody in 97. Violin II is missing in part entirely, so
+adding at least the ^ in 95. For now, leaving everything else as score and parts have it.
+(I-orch-*)
 
 m. 101: The piano reduction ends the bar with d-flat; the english horn solo it's following has 
 d-natural in both score and part. Adjusting reduction to match.

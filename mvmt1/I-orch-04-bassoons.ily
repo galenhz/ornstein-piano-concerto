@@ -443,15 +443,126 @@ Bassoon_I_mvmt_I_AK_AL = \relative c'' {
 	R1*7/8
 }
 
+%%% Section AM = mm. 91-99 (Rehersal 8)
+
+Bassoon_I_mvmt_I_AM = \relative c' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	\clef tenor
+	fis8[\p\< fis] fis[ fis] fis[ fis] g[ g]
+	\time 7/4
+	gis1~\!\ff gis2.
+	\time 4/4
+	fis8[\p\< fis] fis[ fis] fis[ g] ais[ b]
+	\time 7/4
+	cis->\!\f( c)~ c1.
+	\time 4/4
+	\clef bass
+	f,,4\mf\< a2.-^\!
+	f4\< e'2.-^\!
+	f,4\< a2.\!
+	\time 5/4
+	\tuplet 5/4 { bes,8(\f c bes g fis) } \tempo "Più animato" f4(\ff e ees)
+	\time 6/4
+	\tuplet 5/4 { bes'8(\f c bes g fis) } f4( e ees d)
+}
+
+Bassoon_II_mvmt_I_AM = \relative c {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	\tag #'Score \clef tenor
+	fis8[\p\< fis] fis[ fis] fis[ fis] g[ g]
+	\time 7/4
+	gis1~\!\ff gis2.
+	\time 4/4
+	fis8[\p\< fis] fis[ fis] fis[ g] ais[ b]
+	\time 7/4
+	cis->\!\f( c)~ c1.
+	\time 4/4
+	\tag #'Score \clef bass
+	aes,4\mf\< cis2.-^\!
+	aes4\< a'2.\!
+	aes,4\< cis2.\!
+	\time 5/4
+	\tuplet 5/4 { \tag #'Score bes,8\f \tag #'Part bes8(\f c bes g' \tag #'Score fis \tag #'Part fis) } \tempo "Più animato" f4(\ff e ees)
+	\time 6/4
+	\tuplet 5/4 { \tag #'Score bes8 \tag #'Part bes8( c bes g' \tag #'Score fis \tag #'Part fis) } f4( e ees d)
+}
+
+Bassoon_III_mvmt_I_AM = \relative c' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	\tag #'Part \clef tenor
+	d8[\p\< d] d[ d] d[ d] dis[ dis]
+	\time 7/4
+	e1~\!\ff e2.
+	\time 4/4
+	d8[\p\< d] d[ d] d[ dis ] e[ e]
+	\time 7/4
+	gis1~\!\f gis2.
+	\time 4/4
+	\tag #'Part \clef bass
+	d,,4\< f2.-^\!
+	d4\< cis'2.-^\!
+	d,4\< f2.\!
+	\time 5/4
+	r2 \tempo "Più animato" r2 r4
+	\time 6/4
+	R1*6/4
+}
+
+Bassoon_IV_mvmt_I_AM = \relative c' {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	bes8[\p\< bes] bes[ bes] bes[ bes] b[ b]
+	\time 7/4
+	c1~\!\ff c2.
+	\time 4/4
+	bes8[\p\< bes] bes[ bes] bes[ b] c[ c]
+	\time 7/4
+	e1~\!\f e2.
+	\time 4/4
+	d,,4\< f2.-^\!
+	d4\< f2.\!
+	d4\< f2.\!
+	\time 5/4
+	r2 \tempo "Più animato" r2 r4
+	\time 6/4
+	R1*6/4
+}
+
+Contrabassoon_mvmt_I_AM = \relative c {
+	\mark #8
+	\tempo "Mosso"
+	\time 4/4
+	a1\p\<
+	\time 7/4
+	c1~\!\ff c2.
+	\time 4/4
+	a1\p\<
+	\time 7/4
+	c1~\!\f c2.
+	\time 4/4
+	R1*3
+	\time 5/4
+	\tuplet 5/4 { e2(\ff c8) } \tempo "Più animato" f,4( e ees)
+	\time 6/4
+	\tuplet 5/4 { e'2( c8) } f,4( e ees d)
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
-		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ \Bassoon_I_mvmt_I_AK_AL }
+		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ \Bassoon_I_mvmt_I_AK_AL \Bassoon_I_mvmt_I_AM }
 Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
-		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK \NULL_I_AL }
+		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_II_mvmt_I_AM }
 Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
-		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
+		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_III_mvmt_I_AM }
 Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
-		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
+		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_IV_mvmt_I_AM }
 Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF \NULL_I_AG
-		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL }
+		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Contrabassoon_mvmt_I_AM }
