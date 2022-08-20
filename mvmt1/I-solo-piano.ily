@@ -905,9 +905,9 @@ solo_lower_I_AN = \relative c, {
 	s4
 }
 
-%%% This is as far as I've gotten
+%%% Section AO = mm. 113-121 (Rehersal 11/12)
 
-solo_upper_I_remain = \relative c, {
+solo_upper_I_AO = \relative c, {
 	% mm. 113-120 - Rehersal 11
 	\mark #11
 	\time 4/4
@@ -995,7 +995,7 @@ solo_upper_I_remain = \relative c, {
 			\change Staff = "solo_upper" cis' bes a f cis
 			\change Staff = "solo_lower" a cis,
 		}
-	% mm. 121-125 - Rehersal 12
+	% m. 121 - Rehersal 12
 	\mark #12
 	\time 4/4
 		\repeat unfold 2 {
@@ -1013,7 +1013,36 @@ solo_upper_I_remain = \relative c, {
 		}
 	} %magnifyMusic end
 	\change Staff = "solo_upper"
-	\repeat unfold 4 { \tuplet 9/8 { r32 c' fis b c c fis b c } }
+}
+
+solo_dynamics_I_AO = {
+	% mm. 113-120 - Rehersal 11
+	s1 s1 s1 s1 s2 s1 s1 s2
+	% m. 121 - Rehersal 12
+	s1
+}
+
+solo_lower_I_AO = {
+	% mm. 113-120 - Rehersal 11
+	\time 4/4
+	\clef bass
+	s1 s1 s1 s1
+	\time 2/4
+	s2
+	\time 4/4
+	s1 s1
+	\time 2/4
+	s2
+	% mm. 121 - Rehersal 12
+	\time 4/4
+	s1
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c' {
+	% mm. 122-125
+	\repeat unfold 4 { \tuplet 9/8 { r32 c fis b c c fis b c } }
 	\time 2/4
 	\repeat unfold 2 { \tuplet 9/8 { r32 c,, fis b c c fis b c } }
 	\time 4/4
@@ -1805,10 +1834,8 @@ solo_upper_I_remain = \relative c, {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 113-120 - Rehersal 11
-	s1 s1 s1 s1 s2 s1 s1 s2
-	% mm. 121-125 - Rehersal 12
-	s1 s2 s2-\markup { dim. } s2 s4 s8. s16-\markup { \italic {piu e piu animato} } s2 s1
+	% mm. 122-125
+	s2 s2-\markup { dim. } s2 s4 s8. s16-\markup { \italic {piu e piu animato} } s2 s1
 	% mm. 126-133 - Rehersal 13
 	s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
 	% mm. 134-141
@@ -1880,19 +1907,7 @@ solo_dynamics_I_remain = {
 }
 
 solo_lower_I_remain = \relative c' {
-	% mm. 113-120 - Rehersal 11
-	\time 4/4
-	\clef bass
-	s1 s1 s1 s1
-	\time 2/4
-	s2
-	\time 4/4
-	s1 s1
-	\time 2/4
-	s2
-	% mm. 121-125 - Rehersal 12
-	\time 4/4
-	s1
+	% mm. 122-125
 	<<
 		\new Voice {
 			\voiceOne
@@ -2401,21 +2416,21 @@ solo_lower_I_remain = \relative c' {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
-		\solo_upper_I_remain }
+		\solo_upper_I_AO \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
 		\solo_upper_I_AM \solo_upper_I_AN }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_remain }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
-		\solo_lower_I_remain }
+		\solo_lower_I_AO \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
 		\solo_lower_I_AM \solo_lower_I_AN }

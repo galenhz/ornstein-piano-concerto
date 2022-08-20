@@ -861,9 +861,9 @@ redux_lower_I_AN = \relative c,, {
 	R2.
 }
 
-%%% This is as far as I've gotten
+%%% Section AO = mm. 113-121 (Rehersal 11/12)
 
-redux_upper_I_remain = \relative c {
+redux_upper_I_AO = \relative c {
 	% mm. 113-120 - Rehersal 11
 	\mark #11
 	\time 4/4
@@ -896,7 +896,7 @@ redux_upper_I_remain = \relative c {
 			f2
 		}
 	>>
-	% mm. 121-125 - Rehersal 12
+	% m. 121 - Rehersal 12
 	\mark #12
 	\time 4/4
 	<<
@@ -909,7 +909,62 @@ redux_upper_I_remain = \relative c {
 			\voiceOne d'4 cis~ cis8 cis16 ees d cis bes a
 		}
 	>>
-	\tuplet 9/8 { a'32 b a b a b a aes g } s4
+}
+
+redux_dynamics_I_AO = {
+	% mm. 113-120 - Rehersal 11
+	s1 s1 s1 s1 s2 s1 s1 s2
+	% mm. 121 - Rehersal 12
+	s1
+}
+
+redux_lower_I_AO = \relative c, {
+	% mm. 113-120 - Rehersal 11
+	\time 4/4
+	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <d a'> <d a'>8 <d a'> } }
+	<<
+		\new Voice {
+			\voiceOne \repeat unfold 4 { \tuplet 3/2 { r16 <a' f'> <a f'>8 <a f'> } }
+			\repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
+			\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8 cis } }
+			\time 2/4
+			\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8 cis } }
+			\time 4/4
+			\repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
+			\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8 cis } }
+			\time 2/4
+			\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8 cis } }
+		}
+		\new Voice {
+			\voiceTwo \tuplet 3/2 { r16 d, d4~ } d2.~
+			d1
+			f1
+			\time 2/4
+			f2
+			\time 4/4
+			\voiceTwo \tuplet 3/2 { r16 d d4~ } d2.
+			f1
+			\time 2/4
+			f2
+		}
+	>>
+	% mm. 121 - Rehersal 12
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne \repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
+		}
+		\new Voice {
+			\voiceTwo \tuplet 3/2 { r16 d, d4~} d2.~
+		}
+	>>
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c''' {
+	% mm. 122-125
+	\tuplet 9/8 { a32 b a b a b a aes g } s4
 		\tuplet 9/8 { a32 b a b a b a aes g } s4
 	\time 2/4
 	\tuplet 9/8 { a32 b a b a b a aes g } s4
@@ -1544,10 +1599,8 @@ redux_upper_I_remain = \relative c {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 113-120 - Rehersal 11
-	s1 s1 s1 s1 s2 s1 s1 s2
-	% mm. 121-125 - Rehersal 12
-	s1*2 s2 s1*2
+	% mm. 122-125
+	s1 s2 s1*2
     % mm. 126-133 - Rehersal 13
     s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
     % mm. 134-141
@@ -1607,47 +1660,9 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c, {
-	% mm. 113-120 - Rehersal 11
-	\time 4/4
-	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <d a'> <d a'>8 <d a'> } }
-	<<
-		\new Voice {
-			\voiceOne \repeat unfold 4 { \tuplet 3/2 { r16 <a' f'> <a f'>8 <a f'> } }
-			\repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
-			\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8 cis } }
-			\time 2/4
-			\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8 cis } }
-			\time 4/4
-			\repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
-			\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8 cis } }
-			\time 2/4
-			\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8 cis } }
-		}
-		\new Voice {
-			\voiceTwo \tuplet 3/2 { r16 d, d4~ } d2.~
-			d1
-			f1
-			\time 2/4
-			f2
-			\time 4/4
-			\voiceTwo \tuplet 3/2 { r16 d d4~ } d2.
-			f1
-			\time 2/4
-			f2
-		}
-	>>
-	% mm. 121-125 - Rehersal 12
-	\time 4/4
-	<<
-		\new Voice {
-			\voiceOne \repeat unfold 4 { \tuplet 3/2 { r16 <a f'> <a f'>8 <a f'> } }
-		}
-		\new Voice {
-			\voiceTwo \tuplet 3/2 { r16 d, d4~} d2.~
-		}
-	>>
-	s4 \clef treble \tuplet 9/8 { fis'''32 g fis g fis g fis g \change Staff = "redux_upper" gis }
+redux_lower_I_remain = \relative c'' {
+	% mm. 122-125
+	s4 \clef treble \tuplet 9/8 { fis32 g fis g fis g fis g \change Staff = "redux_upper" gis }
 		\change Staff = "redux_lower" s4
 		\tuplet 9/8 { fis32 g fis g fis g fis g \change Staff = "redux_upper" gis }
 		\change Staff = "redux_lower"
@@ -2225,10 +2240,11 @@ redux_lower_I_remain = \relative c, {
 
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
-		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_remain }
+		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
-		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_remain }
+		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
+		\redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
-		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_remain }
+		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_remain }
