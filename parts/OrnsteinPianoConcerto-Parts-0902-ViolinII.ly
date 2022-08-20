@@ -16,7 +16,7 @@ instrumentName = "Violin II"
 \score {
 	\new StaffGroup <<
 		\new Staff \compressMMRests \keepWithTag #'Part { \markLengthOn \Violin_II_mvmt_I }
-		\new Staff \compressMMRests \keepWithTag #'Part \Violin_II_divisi_II_mvmt_I
+		\new Staff \with { \RemoveAllEmptyStaves } \compressMMRests \keepWithTag #'Part \Violin_II_divisi_II_mvmt_I
 	>>
 	\layout {
 	\context {
@@ -24,7 +24,6 @@ instrumentName = "Violin II"
 			markFormatter = #format-mark-circle-numbers 
 			\numericTimeSignature
 	}
-	\context { \Staff \RemoveAllEmptyStaves }
   }
 }
 

@@ -466,15 +466,136 @@ Flute_IV_mvmt_I_AL = \relative c''' {
 %%% Section AM = mm. 91-99 (Rehersal 8)
 %%% Tacet
 
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+
+Picc_mvmt_I_AN = \relative c'' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score { \slashedGrace s8 R1*2 \time 2/4 R2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\time 4/4
+				c4(_"E.H." bes4~ bes8.) d16( c8 bes)
+				\tuplet 3/2 { c( bes ges) } bes2 \tuplet 3/2 { ges8( bes d) }
+				\time 2/4
+				c([ bes) fes( ges)]
+			}
+			\new Voice {
+				\override MultiMeasureRest.staff-position = #-8
+				\voiceTwo
+				\time 4/4
+				R1*2
+				\time 2/4
+				R2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	\time 4/4
+	cis32[(\ff dis fis gis dis fis gis cis]) gis[( cis gis fis dis gis fis dis])
+	\repeat unfold 3 { cis32[( dis fis gis dis fis gis cis]) gis[( cis gis fis dis gis fis dis]) }
+	\time 2/4
+	cis32[( dis fis gis dis fis gis cis]) gis[( cis gis fis dis gis fis dis])
+	\mark #10
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
+Flute_I_mvmt_I_AN = \relative c'' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score { \slashedGrace s8 R1*2 \time 2/4 R2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\time 4/4
+				c4(_"E.H." bes4~ bes8.) d16( c8 bes)
+				\tuplet 3/2 { c( bes ges) } bes2 \tuplet 3/2 { ges8( bes d) }
+				\time 2/4
+				c([ bes) fes( ges)]
+			}
+			\new Voice {
+				\override MultiMeasureRest.staff-position = #-8
+				\voiceTwo
+				\time 4/4
+				R1*2
+				\time 2/4
+				R2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	\time 4/4
+	\tuplet 3/2 { cis'32(\ff dis fis } gis8.~) gis2 cis,4
+	dis \tuplet 3/2 { cis32( dis fis } gis8.~ gis4 cis,)
+	\time 2/4
+	\tuplet 3/2 { cis32( dis fis } gis8.~) gis4
+	\mark #10
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
+Flute_other_mvmt_I_AN = \relative c''' {
+	\tag #'Score \NULL_I_AN
+	\tag #'Part {
+		\mark #9
+		\tempo "Allegro"
+		\time 4/4
+		R1*2
+		\time 2/4
+		R2
+		<<
+			\new CueVoice {
+				\time 4/4
+				\tuplet 3/2 { cis32(_"I Fl." dis fis } gis8.~) gis2 cis,4
+				dis \tuplet 3/2 { cis32( dis fis } gis8.~ gis4 cis,)
+				\time 2/4
+				\tuplet 3/2 { cis32( dis fis } gis8.~) gis4
+			}
+			\new Voice {
+				\voiceTwo
+				\time 4/4
+				R1*2
+				\time 2/4
+				R2
+			}
+		>>
+		\mark #10
+		\time 4/4
+		R1*2
+		\time 2/4
+		R2
+		\time 4/4
+		R1*2
+		\time 3/4
+		R2.*2
+	}
+}
+
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_I_mvmt_I_AL \NULL_I_AM }
+		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_I_mvmt_I_AL \NULL_I_AM \Picc_mvmt_I_AN }
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL \NULL_I_AM }
+		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL \NULL_I_AM \Flute_I_mvmt_I_AN }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL \NULL_I_AM }
+		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN }
 Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG
-		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_III_mvmt_I_AL \NULL_I_AM }
+		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_III_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL \NULL_I_AM }
+		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN }

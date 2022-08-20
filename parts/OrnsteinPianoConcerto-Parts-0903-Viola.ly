@@ -14,7 +14,10 @@ instrumentName = "Viola"
 }
 
 \score {
-	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Viola_mvmt_I }
+	\new StaffGroup <<
+		\new Staff \compressMMRests \keepWithTag #'Part { \markLengthOn \Viola_mvmt_I }
+		\new Staff \with { \RemoveAllEmptyStaves } \compressMMRests \keepWithTag #'Part \Viola_divisi_II_mvmt_I
+	>>
 	\layout {
 	\context {
 		\Score
@@ -23,3 +26,4 @@ instrumentName = "Viola"
 	}
   }
 }
+

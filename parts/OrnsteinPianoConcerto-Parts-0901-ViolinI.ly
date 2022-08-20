@@ -24,7 +24,6 @@ instrumentName = "Violin I"
 			markFormatter = #format-mark-circle-numbers 
 			\numericTimeSignature
 	}
-	%%\context { \Staff \RemoveAllEmptyStaves }
   }
 }
 

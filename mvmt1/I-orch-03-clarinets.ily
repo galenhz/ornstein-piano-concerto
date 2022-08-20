@@ -136,7 +136,7 @@ Clarinet_I_mvmt_I_AE = \transpose c' bes \relative c'' {
 	ees2 r2
 	r2 fis8[(\mf f~ f16 e ees fis)]
 	\tempo "più agitato"
-	ees8 r8 r4 r2
+	ees8 r8 r4 r2_\markup \italic "rit."
 }
 
 Clarinet_III_IV_mvmt_I_AE = \transpose c' bes \relative c'' {
@@ -180,7 +180,7 @@ Clarinet_I_mvmt_I_AF = \transpose c' bes \relative c'' {
 
 Clarinet_II_mvmt_I_AF = \transpose c' bes \relative c'' {
 	\tempo "Appasionata, ma molto sostenuto"
-	\tag #'Score { R1*2 }
+	\tag #'Score { R1 }
 	\tag #'Part {
 		<<
 			\new CueVoice {
@@ -193,6 +193,7 @@ Clarinet_II_mvmt_I_AF = \transpose c' bes \relative c'' {
 			}
 		>>
 	}
+	R1
 	\time 2/4
 	R2
 	\time 3/4
@@ -394,8 +395,6 @@ Clarinet_I_III_mvmt_I_AI_AJ = \transpose c' bes \relative c' {
 
 %%% Section AK = mm. 70-81
 
-%%% FIXME: Cues for II/III/IV/Bass for the end of AK?
-
 Clarinet_I_mvmt_I_AK = \transpose c' bes \relative c''' {
 	\time 4/8
 	\tempo "Melancolico e sostenuto"
@@ -422,10 +421,61 @@ Clarinet_I_mvmt_I_AK = \transpose c' bes \relative c''' {
 	c4~ c16_\markup { \italic "rit." } r16
 }
 
+%%% Cl. I cues for everyone else
+
+Clarinet_other_mvmt_I_AK = \transpose c' bes \relative c'' {
+	\tag #'Score \NULL_I_AK
+	\tag #'Part {
+		\time 4/8
+		\tempo "Melancolico e sostenuto"
+		R2*6
+		\time 3/8
+		<<
+			\new CueVoice {
+				gis8.[^"I Cl." g16( fis f)]
+				e8.[ eis16( fis g)]
+				gis8.[ g16( fis f)]
+				e4 ees16 des
+			}
+			\new Voice {
+				\voiceTwo
+				\override MultiMeasureRest.staff-position = #-8
+				R4.*4
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+		R4.*2
+	}
+
+}
+
+BassClarinet_mvmt_I_AK = \transpose c' bes, \relative c''' {
+	\tag #'Score \NULL_I_AK
+	\tag #'Part {
+		\time 4/8
+		\tempo "Melancolico e sostenuto"
+		R2*6
+		\time 3/8
+		<<
+			\new CueVoice {
+				gis8.[_"I Cl." g16( fis f)]
+				e8.[ eis16( fis g)]
+				gis8.[ g16( fis f)]
+				e4 ees16 des
+			}
+			\new Voice {
+				\voiceTwo
+				R4.*4
+			}
+		>>
+		R4.*2
+	}
+}
+
 %%% Section AL = mm. 82-90 (Rehersal 7)
 
 %%% Suppress slurs in the score where PartCombiner makes them undrawable.
-%%% FIXME: PartCombine is breaking on I/II in a really wierd way.
+%%% FIXME: PartCombine is breaking on I/II in a really wierd way, like flutes.
 
 Clarinet_I_mvmt_I_AL = \transpose c' bes \relative c''' {
 	\mark #7
@@ -511,7 +561,7 @@ Clarinet_I_mvmt_I_AM = \transpose c' bes \relative c'' {
 	\time 5/4
 	\tuplet 5/4 { a,8(\f g a c d) } \tempo "Più animato" r2 r4
 	\time 6/4
-	\tuplet 5/4 { a8(\ff g a c d) } r2 r2
+	\tuplet 5/4 { a8(\ff g a c d) } r2 r2_\markup \italic "rit."
 }
 
 Clarinet_II_mvmt_I_AM = \transpose c' bes \relative c' {
@@ -550,7 +600,7 @@ Clarinet_III_mvmt_I_AM = \transpose c' bes \relative c' {
 	\time 5/4
 	\tuplet 5/4 { e4\f e a8 } \tempo "Più animato" r2 r4
 	\time 6/4
-	\tuplet 5/4 { e4\ff e a8} r2 r2
+	\tuplet 5/4 { e4\ff e a8} r2 r2_\markup \italic "rit."
 }
 
 Clarinet_IV_mvmt_I_AM = \transpose c' bes \relative c' {
@@ -569,18 +619,157 @@ Clarinet_IV_mvmt_I_AM = \transpose c' bes \relative c' {
 	\time 5/4
 	\tuplet 5/4 { c4\f c fis8 } \tempo "Più animato" r2 r4
 	\time 6/4
-	\tuplet 5/4 { c4\ff c fis8 } r2 r2
+	\tuplet 5/4 { c4\ff c fis8 } r2 r2_\markup \italic "rit."
+}
+
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+
+%%% EDIT: "Solo I" in score, but it's in both parts.
+
+Clarinet_I_II_mvmt_I_AN = \transpose c' bes \relative c'' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score { \slashedGrace s8 R1*2 \time 2/4 R2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\time 4/4
+				d4(_"E.H." c4~ c8.) e16( d8 c)
+				\tuplet 3/2 { d( c aes) } c2 \tuplet 3/2 { aes8( c e) }
+				\time 2/4
+				d([ c) ges( aes)]
+			}
+			\new Voice {
+				\override MultiMeasureRest.staff-position = #-8
+				\voiceTwo
+				\time 4/4
+				R1*2
+				\time 2/4
+				R2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	\time 4/4
+	ais'4(\ff gis~ gis8.) bis16( ais8 gis)
+	\tuplet 3/2 { ais( gis eis) } gis2 \tuplet 3/2 { eis8( gis bis) }
+	\time 2/4
+	ais([ gis) dis( eis)]
+	\mark #10
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
+Clarinet_III_mvmt_I_AN = \transpose c' bes \relative c'' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	gis32(\p fis gis fis d c d fis gis16) r16 r8
+		\repeat unfold 3 { gis32( fis gis fis d c d fis gis16) r16 r8 }
+	\time 2/4
+	gis32( fis gis fis d c d fis gis16) r16 r8
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\mark #10
+	\time 4/4
+	gis32(\p fis gis fis d c d fis gis16) r16 r8
+		\repeat unfold 3 { gis32( fis gis fis d c d fis gis16) r16 r8 }
+	\time 2/4
+	gis32( fis gis fis d c d fis gis16) r16 r8
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
+Clarinet_IV_mvmt_I_AN = \transpose c' bes \relative c'' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	r4 gis32(\p fis gis fis d c d fis gis16) r16 r8
+		\repeat unfold 2 { gis32( fis gis fis d c d fis gis16) r16 r8 }
+		gis32( fis gis fis d c d fis
+	\time 2/4
+	gis16) r16 r8 gis32( fis gis fis d c d fis
+	\time 4/4
+	gis16) r16 r8 r4 r2
+	R1
+	\time 2/4
+	R2
+	\mark #10
+	\time 4/4
+	r4 gis32(\p fis gis fis d c d fis gis16) r16 r8
+		\repeat unfold 2 { gis32( fis gis fis d c d fis gis16) r16 r8 }
+		gis32( fis gis fis d c d fis
+	\time 2/4
+	gis16) r16 r8 gis32( fis gis fis d c d fis)
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
+BassClarinet_mvmt_I_AN = \transpose c' bes, \relative c'' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score { \slashedGrace s8 R1*2 \time 2/4 R2 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\time 4/4
+				d4(_"E.H." c4~ c8.) e16( d8 c)
+				\tuplet 3/2 { d( c aes) } c2 \tuplet 3/2 { aes8( c e) }
+				\time 2/4
+				d([ c) ges( aes)]
+			}
+			\new Voice {
+				\override MultiMeasureRest.staff-position = #-8
+				\voiceTwo
+				\time 4/4
+				R1*2
+				\time 2/4
+				R2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	\time 4/4
+	gis'4\mp~( gis16 dis \slashedGrace gis eis dis eis4~) \tuplet 3/2 { eis8 ais,( dis }
+	ais'16 eis \slashedGrace gis eis dis eis4)~ \tuplet 3/2 {eis8 ais,( \slashedGrace gis' eis } dis eis)~
+	\time 2/4
+	eis2
+	\mark #10
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
 }
 
 %%% Final assembly
 
 Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \Clarinet_I_mvmt_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG
-		\Clarinet_I_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \Clarinet_I_mvmt_I_AK \Clarinet_I_mvmt_I_AL \Clarinet_I_mvmt_I_AM }
+		\Clarinet_I_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \Clarinet_I_mvmt_I_AK \Clarinet_I_mvmt_I_AL \Clarinet_I_mvmt_I_AM \Clarinet_I_II_mvmt_I_AN }
 Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG \Clarinet_II_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \Clarinet_II_mvmt_I_AL \Clarinet_II_mvmt_I_AM }
+		\NULL_I_AI \NULL_I_AJ \Clarinet_other_mvmt_I_AK \Clarinet_II_mvmt_I_AL \Clarinet_II_mvmt_I_AM \Clarinet_I_II_mvmt_I_AN }
 Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \NULL_I_AK \Clarinet_III_mvmt_I_AL \Clarinet_III_mvmt_I_AM }
+		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \Clarinet_other_mvmt_I_AK \Clarinet_III_mvmt_I_AL \Clarinet_III_mvmt_I_AM \Clarinet_III_mvmt_I_AN }
 Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
-		\Clarinet_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Clarinet_IV_mvmt_I_AL \Clarinet_IV_mvmt_I_AM }
+		\Clarinet_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Clarinet_other_mvmt_I_AK \Clarinet_IV_mvmt_I_AL \Clarinet_IV_mvmt_I_AM \Clarinet_IV_mvmt_I_AN }
 BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM }
+		\NULL_I_AJ \BassClarinet_mvmt_I_AK \NULL_I_AL \NULL_I_AM \BassClarinet_mvmt_I_AN }

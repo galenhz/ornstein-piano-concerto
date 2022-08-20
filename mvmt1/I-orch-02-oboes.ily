@@ -523,7 +523,7 @@ Oboe_I_mvmt_I_AM = \relative c'' {
 	\time 5/4
 	\tuplet 5/4 { g8(\f f g bes c) } \tempo "Più animato" r2 r4
 	\time 6/4
-	\tuplet 5/4 { g8(\ff f g bes c) } r2 r2
+	\tuplet 5/4 { g8(\ff f g bes c) } r2 r2_\markup \italic "rit."
 }
 
 EnglishHorn_mvmt_I_AM = \transpose c' f \relative c' {
@@ -546,15 +546,81 @@ EnglishHorn_mvmt_I_AM = \transpose c' f \relative c' {
 	R1*6/4
 }
 
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+
+Oboe_all_mvmt_I_AN = \relative c'' {
+	\tag #'Score { \NULL_I_AN }
+	\tag #'Part {
+		\mark #9
+		\time 4/4
+		R1*2
+		\time 2/4
+		R2
+		\time 4/4
+		R1*2
+		\time 2/4
+		R2
+		\mark #10
+		\tempo "Allegro"
+		<<
+			\new CueVoice {
+				\time 4/4
+				c4(_"E.H." bes4~ bes8.) d16( c8 bes)
+				\tuplet 3/2 { c( bes ges) } bes2 \tuplet 3/2 { ges8( bes d) }
+				\time 2/4
+				c([ bes) fes( ges)]
+			}
+			\new Voice {
+				\override MultiMeasureRest.staff-position = #-8
+				\voiceTwo
+				\time 4/4
+				R1*2
+				\time 2/4
+				R2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+		\time 4/4
+		R1*2
+		\time 3/4
+		R2.*2
+	}
+}
+
+EnglishHorn_mvmt_I_AN = \transpose c' f \relative c''' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	\tag #'Score g4(\f \tag #'part g4(\f^\Solo_mark f~ f8.) a16( g8 f)
+	\tuplet 3/2 { g( f des) } f2 \tuplet 3/2 { des8( f a) }
+	\time 2/4
+	g([ f) b,( cis)]
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\mark #10
+	\time 4/4
+	g'4(\f f~ f8.) a16( g8 f)
+	\tuplet 3/2 { g( f des) } f2 \tuplet 3/2 { des8( f a) }
+	\time 2/4
+	g([ f) b,( cis)]
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM }
+		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM }
+		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
-		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM }
+		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
-		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM }
+		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN }

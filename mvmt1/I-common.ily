@@ -51,4 +51,4 @@ NULL_I_AJ = { \mark #6 \time 4/4 R1*7 }
 NULL_I_AK = { \tempo "Melancolico e sostenuto" \time 4/8 R2*6 \time 3/8 R4.*6 }
 NULL_I_AL = { \mark #7 \tempo "Andante e molto sostenuto" \time 4/4 R1*8 \time 7/8 R1*7/8 }
 NULL_I_AM = { \mark #8 \tempo "Mosso" \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1*3 \time 5/4 r2 \tempo "Più animato" r2 r4 \time 6/4 R1*6/4 }
-NULL_I_AN = { \mark #9 \tempo "Allegro" \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 \mark #10 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 3/4 R2.*2 }
+NULL_I_AN = { \mark #9 \tempo "Allegro" \time 4/4 \tag #'Score \slashedGrace s8 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 \mark #10 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 3/4 R2.*2 }

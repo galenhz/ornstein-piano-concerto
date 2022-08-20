@@ -134,7 +134,7 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 	>>
 	\new Staff = "Staff_Tympani_I" \with { instrumentName = "Tympani I" shortInstrumentName = "Tym. I" } \keepWithTag #'Score \Tympani_I_mvmt_I
 	\new Staff = "Staff_Tympani_II" \with { instrumentName = "Tympani II" shortInstrumentName = "Tym. II" } \keepWithTag #'Score \Tympani_II_mvmt_I
-	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
+	\new PianoStaff \with { instrumentName = "Piano Solo" shortInstrumentName = "Pn." } <<
 		\new Staff = "solo_upper" \solo_upper_I_limited
 		\new Dynamics \solo_dynamics_I_limited
 		\new Staff = "solo_lower" \solo_lower_I_limited
@@ -150,6 +150,7 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 		>>
 		\new StaffGroup = "StaffGroup_viola" \with { instrumentName = "Viola" shortInstrumentName = "Va." \RemoveAllEmptyStaves } <<
 			\new Staff = "Staff_viola" \keepWithTag #'Score \Viola_mvmt_I
+			\new Staff = "Staff_viola_divisi_II" \keepWithTag #'Score \Viola_divisi_II_mvmt_I
 		>>
 		\new StaffGroup = "StaffGroup_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." \RemoveAllEmptyStaves } <<
 			\new Staff = "Staff_cello" \keepWithTag #'Score \Cello_mvmt_I

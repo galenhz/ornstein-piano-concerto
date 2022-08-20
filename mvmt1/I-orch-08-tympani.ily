@@ -56,7 +56,7 @@ Tympani_I_mvmt_I_AE = \relative c {
 	\time 4/4
 	R1*3
 	\tempo "più agitato"
-	ees2:32\p\< r2\!_"rit."
+	ees2:32\p\< r2\!_\markup \italic "rit."
 }
 
 Tympani_II_mvmt_I_AE = \relative c {
@@ -64,7 +64,7 @@ Tympani_II_mvmt_I_AE = \relative c {
 	\time 4/4
 	R1*3
 	\tempo "più agitato"
-	r2 d2:32_\mf\<_"rit."
+	r2 d2:32_\mf\<_\markup \italic "rit."
 }
 
 %%% Section AF = mm. 25-28
@@ -231,9 +231,12 @@ Tympani_II_mvmt_I_AM = \relative c {
 	R1*6/4
 }
 
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+%%% Tacet
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
-		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM }
+		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
-		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM }
+		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN }

@@ -241,7 +241,6 @@ Recording is straight triplets. Allowing the discrepancy to stand for now, but m
 this in PR as well.
 (I-orch-06-horns, I-piano-reduction)
 
-
 m. 91: Clarinet I/I lack starting dynamic, III/IV has p. Nothing in score. Giving dynamic
 to all. #DYNAMICS
 (I-orch-03-clarinets)
@@ -266,6 +265,19 @@ in 95, bassoons/horns only in 96, and nobody in 97. Violin II is missing in part
 adding at least the ^ in 95. For now, leaving everything else as score and parts have it.
 (I-orch-*)
 
+m. 100: Clarinets III/IV started life as P, got corrected hard in both score and parts to FF.
+The re-entry of clarinets at m. 106 has not been changed from P. Sticking with original for now
+but in practice, I can see why that would have to be changed. #DYNAMICS
+(I-orch-03-clarinets)
+
 m. 101: The piano reduction ends the bar with d-flat; the english horn solo it's following has 
 d-natural in both score and part. Adjusting reduction to match.
 (I-piano-reduction)
+
+m. 103-105: There are tremolos in the Violin II and Viola in the score. They are completely
+absent from the parts; just rests, as though they were never there.
+(I-orch-09-violins-viola)
+
+m. 103-105: The clarinet melody is marked as "Solo I" in the score...but it's in both the I
+and II parts. Really unsure about this one. Going with parts for now.
+(I-orch-03-clarinets)

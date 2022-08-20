@@ -198,7 +198,7 @@ Violin_I_mvmt_I_AE = \relative c'' {
 	<< \new Voice { \voiceOne fis4^\Div_mark } \new Voice { \voiceTwo fis,4\p } >> r4 r2
 	R1*2
 	\tempo "più agitato"
-	g'8\p^\Unis_mark r8 r4 r2_"rit."
+	g'8\p^\Unis_mark r8 r4 r2_\markup \italic "rit."
 }
 
 Violin_II_mvmt_I_AE = \relative c'' {
@@ -207,7 +207,7 @@ Violin_II_mvmt_I_AE = \relative c'' {
 	<< \new Voice { \voiceOne cis4^\Div_mark } \new Voice { \voiceTwo cis,4\p } >> r4 r2
 	R1*2
 	\tempo "più agitato"
-	cis'8\p^\Unis_mark r8 r4 r2_"rit."
+	cis'8\p^\Unis_mark r8 r4 r2_\markup \italic "rit."
 }
 
 % Need to start this divsi in m. 24 for score only.
@@ -218,7 +218,7 @@ Violin_II_divisi_II_mvmt_I_AE = \relative c'' {
 		\time 4/4
 		R1*3
 		\tempo "più agitato"
-		cis8\p^\Unis_mark r8 r4 r2_"rit."
+		cis8\p^\Unis_mark r8 r4 r2_\markup \italic "rit."
 	}
 }
 
@@ -228,7 +228,7 @@ Viola_mvmt_I_AE = \relative c {
 	fis4\p r4 r2_"senza sord."
 	R1*2
 	\tempo "più agitato"
-	g'8\p r8 r4 r2_"rit."
+	g'8\p r8 r4 r2_\markup \italic "rit."
 }
 
 %%% Section AF = mm. 25-28
@@ -650,7 +650,7 @@ Violin_I_mvmt_I_AM = \relative c' {
 	\time 5/4
 	\tuplet 5/4 { g'8:32\f\<^\Unis_mark f8:32 g8:32 bes8:32 c8:32\! } \tempo "Più animato" r2 r4
 	\time 6/4
-	\tuplet 5/4 { g8:32\f\< f8:32 g8:32 bes8:32 c8:32\! } r2 r2
+	\tuplet 5/4 { g8:32\f\< f8:32 g8:32 bes8:32 c8:32\! } r2 r2_\markup \italic "rit."
 }
 
 Violin_II_mvmt_I_AM = \relative c' {
@@ -671,9 +671,7 @@ Violin_II_mvmt_I_AM = \relative c' {
 			gis4 c2.-^
 			\repeat unfold 2 { gis4 c2. }
 			\time 5/4
-			\tuplet 5/4 { d,4:32 d4:32 g8:32 } \tempo "Più animato" r2 r4
-			\time 6/4
-			\tuplet 5/4 { d4:32 d4:32 g8:32 } r2 r2
+			\tuplet 5/4 { d,4:32 d4:32 g8:32 }
 		}
 		\new Voice {
 			\voiceTwo
@@ -691,13 +689,29 @@ Violin_II_mvmt_I_AM = \relative c' {
 			\time 5/4
 			\override TupletBracket.bracket-visibility = ##f
 			\override TupletNumber.stencil = ##f
-			\tuplet 5/4 { bes,4:32\f\< bes4:32 e8:32\! } r2 r4
-			\time 6/4
-			\tuplet 5/4 { bes4:32\f\< bes4:32 e8:32\! } r2 r2
+			\tuplet 5/4 { bes,4:32\f\< bes4:32 e8:32\! }
 			\revert TupletBracket.bracket-visibility
 			\revert TupletNumber.stencil
 		}
 	>>
+	\tempo "Più animato" r2 r4
+	<<
+		\new Voice {
+			\voiceOne
+			\time 6/4
+			\tuplet 5/4 { d4:32 d4:32 g8:32 }
+		}
+		\new Voice {
+			\voiceTwo
+			\time 6/4
+			\override TupletBracket.bracket-visibility = ##f
+			\override TupletNumber.stencil = ##f
+			\tuplet 5/4 { bes,4:32\f\< bes4:32 e8:32\! }
+			\revert TupletBracket.bracket-visibility
+			\revert TupletNumber.stencil
+		}
+	>>
+	r2 r2_\markup \italic "rit."
 }
 
 %%% FIXME: Leave viola as one staff in score. But break out in part?
@@ -722,20 +736,97 @@ Viola_mvmt_I_AM = \relative c {
 	\clef alto
 	\tuplet 5/4 { g,8:32\f\<^\Unis_mark f8:32 g8:32 bes8:32 c8:32\! } \tempo "Più animato" r2 r4
 	\time 6/4
-	\tuplet 5/4 { g8:32\f\< f8:32 g8:32 bes8:32 c8:32\! } r2 r2
+	\tuplet 5/4 { g8:32\f\< f8:32 g8:32 bes8:32 c8:32\! } r2 r2_\markup \italic "rit."
+}
+
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+
+Violin_II_mvmt_I_AN = \relative c' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	fis8\pp^\Unis_mark_\Pz_mark r8 r4 fis8 r8 r4
+	fis8 r8 r4 fis8 r8 r4
+	\time 2/4
+	fis8 r8 r4
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\mark #10
+	\time 4/4
+	fis8\p r8 r4 fis8 r8 r4
+	fis8 r8 r4 fis8 r8 r4
+	\time 2/4
+	fis8 r8 r4
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
+Viola_mvmt_I_AN = \relative c' {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	\tuplet 5/4 { fis16\pp cis cis cis cis } \tuplet 5/4 { fis, cis' cis cis cis }
+	\repeat unfold 3 { \tuplet 5/4 { fis16 cis cis cis cis } \tuplet 5/4 { fis, cis' cis cis cis } }
+	\time 2/4
+	\tuplet 5/4 { fis16 cis cis cis cis } \tuplet 5/4 { fis, cis' cis cis cis }
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\mark #10
+	\time 4/4
+	\repeat unfold 4 { \tuplet 5/4 { fis16 cis cis cis cis } \tuplet 5/4 { fis, cis' cis cis cis } }
+	\time 2/4
+	\tuplet 5/4 { fis16 cis cis cis cis } \tuplet 5/4 { fis, cis' cis cis cis }
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
+}
+
+Viola_divisi_II_mvmt_I_AN = \relative c {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	\tuplet 5/4 { cis16\pp fis fis fis fis } \tuplet 5/4 { cis' fis, fis fis fis }
+	\repeat unfold 3 { \tuplet 5/4 { cis16 fis fis fis fis } \tuplet 5/4 { cis' fis, fis fis fis } }
+	\time 2/4
+	\tuplet 5/4 { cis16 fis fis fis fis } \tuplet 5/4 { cis' fis, fis fis fis }
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\mark #10
+	\time 4/4
+	\repeat unfold 4 { \tuplet 5/4 { cis16 fis fis fis fis } \tuplet 5/4 { cis' fis, fis fis fis } }
+	\time 2/4
+	\tuplet 5/4 { cis16 fis fis fis fis } \tuplet 5/4 { cis' fis, fis fis fis }
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.*2
 }
 
 %%% Final assembly
 
 Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF \Violin_I_mvmt_I_AG
-		\Violin_I_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_I_mvmt_I_AK \Violin_I_mvmt_I_AL \Violin_I_mvmt_I_AM }
+		\Violin_I_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_I_mvmt_I_AK \Violin_I_mvmt_I_AL \Violin_I_mvmt_I_AM \NULL_I_AN }
 Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
-		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM }
+		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN }
 
 Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF \Violin_II_mvmt_I_AG
-		\Violin_II_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_II_mvmt_I_AK \Violin_II_mvmt_I_AL \Violin_II_mvmt_I_AM }
+		\Violin_II_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_II_mvmt_I_AK \Violin_II_mvmt_I_AL \Violin_II_mvmt_I_AM \Violin_II_mvmt_I_AN }
 Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_divisi_II_mvmt_I_AE
-		\Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM }
+		\Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN }
 
 Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF \Viola_mvmt_I_AG \Viola_mvmt_I_AH
-		\Viola_mvmt_I_AI \Viola_mvmt_I_AJ \Viola_mvmt_I_AK \NULL_I_AL \Viola_mvmt_I_AM }
+		\Viola_mvmt_I_AI \Viola_mvmt_I_AJ \Viola_mvmt_I_AK \NULL_I_AL \Viola_mvmt_I_AM \Viola_mvmt_I_AN }
+Viola_divisi_II_mvmt_I = { \clef alto \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
+		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Viola_divisi_II_mvmt_I_AN }

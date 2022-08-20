@@ -16,7 +16,7 @@ instrumentName = "Cello"
 \score {
 	\new StaffGroup <<
 		\new Staff \compressMMRests \keepWithTag #'Part { \markLengthOn \Cello_mvmt_I }
-		\new Staff \compressMMRests \keepWithTag #'Part \Cello_divisi_II_mvmt_I
+		\new Staff \with { \RemoveAllEmptyStaves } \compressMMRests \keepWithTag #'Part \Cello_divisi_II_mvmt_I
 	>>
 	\layout {
 	\context {
@@ -24,7 +24,6 @@ instrumentName = "Cello"
 			markFormatter = #format-mark-circle-numbers 
 			\numericTimeSignature
 	}
-	\context { \Staff \RemoveAllEmptyStaves }
   }
 }
 

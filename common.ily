@@ -11,6 +11,9 @@ Soli_mark = \markup "Soli"
 
 Unis_mark = \markup "unis."
 Div_mark = \markup "div."
+DivIII_mark = \markup "div. a 3"
+Pz_mark = \markup \italic "pizz."
+Arco_mark = \markup \italic "arco"
 
 %% Two marks used in the piano parts.
 LH_mark = \markup { \fontsize #-4 { "L.H." } }

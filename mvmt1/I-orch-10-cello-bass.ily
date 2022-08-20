@@ -492,7 +492,6 @@ Bass_mvmt_I_AL = \relative c' {
 %%% Section AM = mm. 91-99 (Rehersal 8)
 
 %%% If I'm going to do divisi part breakup in AN, start the part breakup here.
-%%% FIXME: Add final crescendo to last bar once I've got AN plugged in.
 
 Cello_mvmt_I_AM = \relative c, {
 	\mark #8
@@ -529,7 +528,7 @@ Cello_mvmt_I_AM = \relative c, {
 			\override TupletNumber.stencil = ##f
 			\tuplet 5/4 { e,2:32\f\< c8\! } \tempo "Più animato" f4\ff e ees
 			\time 6/4
-			\tuplet 5/4 { e2:32\f\< c8\! }f4\ff e ees d
+			\tuplet 5/4 { e2:32\f\< c8\! }f4\ff\< e ees_\markup \italic "rit." d\!
 			\revert TupletBracket.bracket-visibility
 			\revert TupletNumber.stencil
 		}
@@ -569,15 +568,103 @@ Bass_mvmt_I_AM = \relative c' {
 	\time 5/4
 	\tuplet 5/4 { bes,8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } \tempo "Più animato" f4\ff e ees
 	\time 6/4
-	\tuplet 5/4 { bes'8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } f4\ff e ees d
+	\tuplet 5/4 { bes'8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } f4\ff\< e ees_\markup \italic "rit." d\!
+}
+
+%%% Section AN - mm. 100-112 (Rehersal 9/10)
+
+Cello_mvmt_I_AN = \relative c {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	\tuplet 6/4 { <cis fis cis'>16\pp^\DivIII_mark q q q q q }
+		\repeat unfold 7 { \tuplet 6/4 { <cis fis cis'>16 q q q q q } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 6/4 { <cis fis cis'>16 q q q q q } }
+	\time 4/4
+	\tuplet 5/4 { cis(\mp^\Unis_mark gis) gis gis gis} \tuplet 5/4 { gis gis gis gis gis }
+		\tuplet 5/4 { gis gis gis gis gis } \tuplet 5/4 { d( gis) gis gis gis }
+	\tuplet 5/4 { cis( gis) gis gis gis} \tuplet 5/4 { gis gis gis gis gis }
+		\tuplet 5/4 { gis gis gis gis gis } \tuplet 5/4 { d( gis) gis gis gis }
+	\time 2/4
+	\tuplet 3/2 { \tuplet 5/4 { cis([ gis) gis gis gis] }  \tuplet 5/4 { gis[ gis gis gis gis] } \tuplet 5/4 { d([ gis) gis gis gis] } }
+	\mark #10
+	\time 4/4
+	\tuplet 6/4 { <cis fis cis'>16\p^\DivIII_mark q q q q q }
+		\repeat unfold 7 { \tuplet 6/4 { <cis fis cis'>16 q q q q q } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 6/4 { <cis fis cis'>16 q q q q q } }
+	\time 4/4
+	fis,2\mf^\Unis_mark fis
+	e fis
+	\time 3/4
+	cis8 r8 r2
+	R2.
+}
+
+Bass_mvmt_I_AN = \relative c, {
+	\mark #9
+	\tempo "Allegro"
+	\time 4/4
+	\tag #'Score \slashedGrace s8
+	cis8\pp r8
+	<<
+		\new Voice {
+			\voiceOne
+			fis'8^\Div_mark r8 r4 fis8 r8
+			r4 fis8 r8 r4 fis8 r8
+			\time 2/4
+			r4 fis8 r8
+			\time 4/4
+			cis'8^\Pz_mark r8 r4 r4 gis8 r8
+			cis8 r8 r4 r4 gis8 r8
+			\time 2/4
+			\tuplet 3/2 { cis8 r8 r4 gis8 r8 }
+			\mark #10
+			\time 4/4
+			r4 fis8^\Arco_mark r8 r4 fis8 r8
+			r4 fis8 r8 r4 fis8 r8
+			\time 2/4
+			r4 fis8 r8
+		}
+		\new Voice {
+			\voiceTwo
+			fis,8 r8 r4 fis8 r8
+			r4 fis8 r8 r4 fis8 r8
+			\time 2/4
+			r4 fis8 r8
+			\time 4/4
+			gis'8\mp r8 r4 r4 d8 r8
+			gis8 r8 r4 r4 d8 r8
+			\time 2/4
+			\override TupletBracket.bracket-visibility = ##f
+			\override TupletNumber.stencil = ##f
+			\tuplet 3/2 { gis8 r8 r4 d8 r8 }
+			\revert TupletBracket.bracket-visibility
+			\revert TupletNumber.stencil
+			\mark #10
+			\time 4/4
+			r4\p fis,8 r8 r4 fis8 r8
+			r4 fis8 r8 r4 fis8 r8
+			\time 2/4
+			r4 fis8 r8
+		}
+	>>
+	\time 4/4
+	fis2\mf^\Unis_mark fis
+	e fis
+	\time 3/4
+	cis8 r8 r2
+	R2.
 }
 
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
-		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM }
+		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM \Cello_mvmt_I_AN }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
-		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM }
+		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
-		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM }
+		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN }
