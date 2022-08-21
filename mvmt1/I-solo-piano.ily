@@ -784,7 +784,7 @@ solo_upper_I_AM = \relative c''' {
 
 solo_dynamics_I_AM = {
 	% mm. 91-99 - Rehersal 8
-	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.\ff s1 s2^\markup { rit. }
+	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.\ff s1 s2^\markup \italic "rit."
 }
 
 solo_lower_I_AM = \relative c'' {
@@ -912,13 +912,10 @@ solo_upper_I_AO = \relative c, {
 	\mark #11
 	\time 4/4
 	\tempo "slower"
-	%% WORKAROUND: Too many notes, so we shrink 'em to fit on the page. A better solution may be possible.
-	%%             This magnification factor is (barely) good enough to squeeze one bar per line on
-	%%             US Letter. It's not quite enough for A4.
-	%%             The smarter play might be to combine this with % repeats, which I intentionally haven't
-	%%             been using.
+	%% WORKAROUND: Too many notes, so we shrink 'em to fit on the page and use % repeats to keep things
+	%%	           sane. A better solution may be possible.
 	\magnifyMusic 0.63 {
-		\repeat unfold 6 {
+		\repeat percent 6 {
 			\tuplet 18/16 { \change Staff = "solo_lower" d64 a' f'
 				\change Staff = "solo_upper" a bes cis d f
 				\change Staff = "solo_lower" f, a bes cis d
@@ -930,8 +927,10 @@ solo_upper_I_AO = \relative c, {
 				\change Staff = "solo_upper" f' d cis bes a
 				\change Staff = "solo_lower" f a,
 			}
+			\change Staff = "solo_upper"
 		}
-		\repeat unfold 2 {
+		%%% Just plow through the time signature changes. Redux has us covered.
+		\repeat percent 3 {
 			\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
 				\change Staff = "solo_upper" cis f a bes cis
 				\change Staff = "solo_lower" a, cis f
@@ -943,21 +942,10 @@ solo_upper_I_AO = \relative c, {
 				\change Staff = "solo_upper" cis' bes a f cis
 				\change Staff = "solo_lower" a cis,
 			}
-		}
-		\time 2/4
-		\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
-			\change Staff = "solo_upper" cis f a bes cis
-			\change Staff = "solo_lower" a, cis f
-			\change Staff = "solo_upper" a bes cis f
-		}
-		\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
-			\change Staff = "solo_upper" f cis bes a
-			\change Staff = "solo_lower" \clef bass f cis a
-			\change Staff = "solo_upper" cis' bes a f cis
-			\change Staff = "solo_lower" a cis,
+			\change Staff = "solo_upper"
 		}
 		\time 4/4
-		\repeat unfold 2 {
+		\repeat percent 2 {
 			\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
 				\change Staff = "solo_upper" a bes cis d f
 				\change Staff = "solo_lower" f, a bes cis d
@@ -969,8 +957,9 @@ solo_upper_I_AO = \relative c, {
 				\change Staff = "solo_upper" f' d cis bes a
 				\change Staff = "solo_lower" f a,
 			}
+			\change Staff = "solo_upper"
 		}
-		\repeat unfold 2 {
+		\repeat percent 3 {
 			\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
 				\change Staff = "solo_upper" cis f a bes cis
 				\change Staff = "solo_lower" a, cis f
@@ -982,23 +971,12 @@ solo_upper_I_AO = \relative c, {
 				\change Staff = "solo_upper" cis' bes a f cis
 				\change Staff = "solo_lower" a cis,
 			}
-		}
-		\time 2/4
-		\tuplet 15/16 { \change Staff = "solo_lower" f, cis' a'
-			\change Staff = "solo_upper" cis f a bes cis
-			\change Staff = "solo_lower" a,-\markup { \italic cresc. } cis f
-			\change Staff = "solo_upper" a bes cis f
-		}
-		\tuplet 15/16 { \change Staff = "solo_lower" \clef treble gis
-			\change Staff = "solo_upper" f cis bes a
-			\change Staff = "solo_lower" \clef bass f cis a
-			\change Staff = "solo_upper" cis' bes a f cis
-			\change Staff = "solo_lower" a cis,
+			\change Staff = "solo_upper"
 		}
 	% m. 121 - Rehersal 12
-	\mark #12
-	\time 4/4
-		\repeat unfold 2 {
+		\mark #12
+		\time 4/4
+		\repeat percent 2 {
 			\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
 				\change Staff = "solo_upper" a bes cis d f
 				\change Staff = "solo_lower" f, a bes cis d
@@ -1010,9 +988,9 @@ solo_upper_I_AO = \relative c, {
 				\change Staff = "solo_upper" f' d cis bes a
 				\change Staff = "solo_lower" f a,
 			}
+			\change Staff = "solo_upper"
 		}
 	} %magnifyMusic end
-	\change Staff = "solo_upper"
 }
 
 solo_dynamics_I_AO = {
@@ -1026,16 +1004,16 @@ solo_lower_I_AO = {
 	% mm. 113-120 - Rehersal 11
 	\time 4/4
 	\clef bass
-	s1 s1 s1 s1
-	\time 2/4
-	s2
+	%%% A clever trick to generate mirrored RepeatSlash marks in the lower staff.
+	%%% Thanks to Jean Abou Samra from the lilypond user list.
+	\repeat percent 6 { \repeat unfold 32 { s64 } }
+	\repeat percent 3 { \repeat unfold 32 { s64 } }
 	\time 4/4
-	s1 s1
-	\time 2/4
-	s2
+	\repeat percent 2 { \repeat unfold 32 { s64 } }
+	\repeat percent 3 { \repeat unfold 32 { s64 } }
 	% mm. 121 - Rehersal 12
 	\time 4/4
-	s1
+	\repeat percent 2 { \repeat unfold 32 { s64 } }
 }
 
 %%% This is as far as I've gotten
@@ -2419,18 +2397,18 @@ solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upp
 		\solo_upper_I_AO \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
-		\solo_upper_I_AM \solo_upper_I_AN }
+		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
 		\solo_lower_I_AO \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
-		\solo_lower_I_AM \solo_lower_I_AN }
+		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO }
