@@ -871,8 +871,9 @@ redux_upper_I_AO = \relative c {
 	r4 r4 \repeat unfold 2 { \tuplet 3/2 { r16 <f d' f> <f d' f>8 <f d' f> } }
 	<<
 		\new Voice {
-			%% FIXME: How to get parenthesis on arbitrary musical phrases?
-			\voiceTwo \repeat unfold 4 { \tuplet 3/2 { r16 <d' f> <d f>8 <d f> } }
+			%% WORKAROUND: Can't get parenthesis on arbitrary musical phrases. Do individual notes.
+			\voiceTwo \repeat unfold 3 { \tuplet 3/2 { r16 <d' f> <d f>8 <d f> } }
+				\tuplet 3/2 { r16 \parenthesize <d f> \parenthesize <d f>8 \parenthesize <d f> }
 			\repeat unfold 4 { \tuplet 3/2 { r16 <d f> <d f>8 <d f> } }
 			\repeat unfold 3 { \tuplet 3/2 { r16 <a cis> <a cis>8 <a cis> } } r4
 			\time 2/4
