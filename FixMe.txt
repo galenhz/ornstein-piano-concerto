@@ -36,7 +36,13 @@ no obvious reason. I may have found a novel way to break it. (also, only use ott
 m. 98-99: Piano reduction. Quarter rests too high. Switch it so that voiceOne is tranparent
 and voiceTwo is printed?
 
-m. 106: Bassoon III. Part prints fine. Score has the tuplet bracket end too soon. Lilypond bug?
+m. 105: Bassoon III. Part prints fine. Score has the tuplet bracket end too soon. Lilypond bug?
 
-Fermata bar: add mark to previous bar and hack it to print at end,
+mm. 116-117 and 119-120: Flute I, missing/broken bracket on first figure. Also, nothing I can
+do seems to persuade partcombine to put the stems down, which would make this less ugly.
+
+m. 118 and 121: Clarinet III is missing tuplet bracket in score. Seems to be a problem similar
+to the one in m. 58, above.
+
+m. 225: Fermata bar: add mark to previous bar and hack it to print at end,
 put number mark in tempo mark next bar?

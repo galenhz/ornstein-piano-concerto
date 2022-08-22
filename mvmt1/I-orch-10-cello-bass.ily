@@ -573,6 +573,8 @@ Bass_mvmt_I_AM = \relative c' {
 
 %%% Section AN - mm. 100-112 (Rehersal 9/10)
 
+%%% Keeping these simple figures unified in one staff for now, but perhaps break out parts later?
+
 Cello_mvmt_I_AN = \relative c {
 	\mark #9
 	\tempo "Allegro"
@@ -659,12 +661,60 @@ Bass_mvmt_I_AN = \relative c, {
 	R2.
 }
 
+%%% Section AO = mm. 113-121 (Rehersal 11/12)
+
+Cello_mvmt_I_AO = \relative c, {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	r2 \tuplet 3/2 { r16\pp^\Div_mark <d a'> q8-. q-. } \tuplet 3/2 { r16 <d a'> q8-. q-. }
+	\repeat unfold 3 { \tuplet 3/2 { r16 <d a'> q8-. q-. } }
+		\repeat unfold 5 { \tuplet 3/2 { r16 <a' f'> q8-. q-. } }
+	<cis a'>1~\p
+	\time 2/4
+	q2
+	\time 4/4
+	\tuplet 3/2 { r16\p <a f'> q8-. q-. } \tuplet 3/2 { r16 <a f'> q8-. q-. }
+		\tuplet 3/2 { r16_\markup \italic "cresc." <a f'> q8-. q-. } \tuplet 3/2 { r16 <a f'> q8-. q-. }
+	<cis a'>1~\mf
+	\time 2/4
+	q2_\markup \italic "cresc."
+	\mark #12
+	\time 4/4
+		\tuplet 3/2 { r16\mf <a f'> q8-. q-. }
+		\repeat unfold 2 { \tuplet 3/2 { r16 <a f'> q8-. q-. } }
+		\tuplet 3/2 { r16_\markup \italic "dim." <a f'> q8-. q-. }
+}
+
+Bass_mvmt_I_AO = \relative c {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	R1
+	r2 r4 \tuplet 3/2 { r16\pp d16 d8-. d-. }
+	\repeat unfold 4 { \tuplet 3/2 { r16 d16 d8-. d-. } }
+	f1~\p
+	\time 2/4
+	f2
+	\time 4/4
+	\tuplet 3/2 { r16\p d16 d8-. d-. } \tuplet 3/2 { r16 d16 d8-. d-. }
+		\tuplet 3/2 { r16_\markup \italic "cresc." d16 d8-. d-. } \tuplet 3/2 { r16 d16 d8-. d-. }
+	f1~\mf
+	\time 2/4
+	f2_\markup \italic "cresc."
+	\mark #12
+	\time 4/4
+	\tuplet 3/2 { r16\mf d16 d8-. d-. }
+		\repeat unfold 2 { \tuplet 3/2 { r16 d16 d8-. d-. } }
+		\tuplet 3/2 { r16_\markup \italic "dim." d16 d8-. d-. }
+}
+
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
-		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM \Cello_mvmt_I_AN }
+		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM \Cello_mvmt_I_AN \Cello_mvmt_I_AO }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
-		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN }
+		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
-		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN }
+		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN \Bass_mvmt_I_AO }

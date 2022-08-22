@@ -195,6 +195,9 @@ state for now. As for the slurs, clarinets and cellos have them, and the viola h
 They make musical sense. Adding them to everybody. #DYNAMICS
 (I-orch-03-clarinets, I-orch-04-bassoons, I-orch-09-violins-viola, I-orch-10-cello-bass)
 
+m. 55: "Moderato" evolved to "Meno mosso". This has been changed in some parts. #TEMPO
+(I-common)
+
 mm. 55-58: Solo piano right hand PR has inconsistent handling of the ottavas between
 measures 55 and 57. Same notes, just different cutoff point. Score does it like 55 both times
 (although amusingly the actual ottava line is missing). My repeat structure copies 55's
@@ -234,6 +237,10 @@ m. 70-73: The score and parts ask Tympani I (a-e) to field a b-flat here, which 
 seems to have balked at; they scratched out the "e-flat to b-flat" directive from the
 copyist.
 (I-orch-08-tympani)
+
+m. 82: "Andante con moto" became "Andante e molto sostenuto". This is changed in the score
+and some parts. #TEMPO
+(I-common)
 
 m. 84 and 86: The horn parts and score indicate a simple triplet on the first beat, but it looks
 like there might have been white-out involved there. The PR plays a X8 X8 R16 X16 on both beats.
@@ -280,4 +287,14 @@ absent from the parts; just rests, as though they were never there.
 
 m. 103-105: The clarinet melody is marked as "Solo I" in the score...but it's in both the I
 and II parts. Really unsure about this one. Going with parts for now.
+(I-orch-03-clarinets)
+
+m. 113-121: The dynamics in this section are actually pretty consistent. Only need to adjust
+a few oddities. Violin II seems to be lacking things everyone else has; adding them. Cello
+has a decrescendo in m. 117 in the part which matches nothing anywhere else; removing. Bass
+missing a crescendo in m. 118. There's a "dim" in the score in m. 121, and is in all wind/brass
+parts, but not the strings, so adding it there. #DYNAMICS
+(I-orch-*)
+
+m. 116 and 119: Change Clarinet I's slurring to match everybody else playing the same line.
 (I-orch-03-clarinets)

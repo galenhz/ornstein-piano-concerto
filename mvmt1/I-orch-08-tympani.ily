@@ -234,9 +234,50 @@ Tympani_II_mvmt_I_AM = \relative c {
 %%% Section AN - mm. 100-112 (Rehersal 9/10)
 %%% Tacet
 
+%%% Section AO = mm. 113-121 (Rehersal 11/12)
+
+Tympani_I_mvmt_I_AO = \relative c, {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	R1*3
+	\tuplet 3/2 { r16\pp f f8 f } \repeat unfold 3 { \tuplet 3/2 { r16 f f8 f } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 3/2 { r16 f f8 f } }
+	\time 4/4
+	R1
+	\tuplet 3/2 { r16\mp f f8 f } \repeat unfold 3 { \tuplet 3/2 { r16 f f8 f } }
+	\time 2/4
+	\tuplet 3/2 { r16 f f8 f } \tuplet 3/2 { r16_\markup \italic "cresc." f f8 f }
+	\mark #12
+	\time 4/4
+	R1
+}
+
+Tympani_II_mvmt_I_AO = \relative c {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	r2 \tuplet 3/2 { r16\pp d d8 d } \repeat unfold 9 { \tuplet 3/2 { r16 d d8 d } }
+	\tuplet 3/2 { r16\pp cis cis8 cis } \repeat unfold 3 { \tuplet 3/2 { r16 cis cis8 cis } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8 cis } }
+	\time 4/4
+	\tuplet 3/2 { r16\pp d d8 d } \tuplet 3/2 { r16 d d8 d }
+		\tuplet 3/2 { r16_\markup \italic "cresc." d d8 d } \tuplet 3/2 { r16 d d8 d }
+	\tuplet 3/2 { r16\mp cis cis8 cis } \repeat unfold 3 { \tuplet 3/2 { r16 cis cis8 cis } }
+	\time 2/4
+	\tuplet 3/2 { r16 cis cis8 cis } \tuplet 3/2 { r16_\markup \italic "cresc." cis cis8 cis }
+	\mark #12
+	\time 4/4
+	\tuplet 3/2 { r16\f d d8 d } \tuplet 3/2 { r16 d d8 d }
+		\tuplet 3/2 { r16 d d8 d }  \tuplet 3/2 { r16_\markup \italic "dim." d d8 d }
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
-		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN }
+		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN \Tympani_I_mvmt_I_AO }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
-		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN }
+		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN
+		\Tympani_II_mvmt_I_AO }

@@ -592,7 +592,7 @@ EnglishHorn_mvmt_I_AN = \transpose c' f \relative c''' {
 	\tempo "Allegro"
 	\time 4/4
 	\tag #'Score \slashedGrace s8
-	\tag #'Score g4(\f \tag #'part g4(\f^\Solo_mark f~ f8.) a16( g8 f)
+	\tag #'Score g4(\f \tag #'Part g4(\f^\Solo_mark f~ f8.) a16( g8 f)
 	\tuplet 3/2 { g( f des) } f2 \tuplet 3/2 { des8( f a) }
 	\time 2/4
 	g([ f) b,( cis)]
@@ -612,15 +612,140 @@ EnglishHorn_mvmt_I_AN = \transpose c' f \relative c''' {
 	R2.*2
 }
 
+%%% Section AO = mm. 113-121 (Rehersal 11/12)
+
+%%% FIXME: add clarinet cues in m. 113?
+
+Oboe_I_II_mvmt_I_AO = \relative c'' {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	R1
+	gis4\mp a2~ a8[ bes32( cis d es)]
+	d8( cis bes a) \grace { a16 cis } bes8 a4( fis8)
+	R1
+	\time 2/4
+	R2
+	\time 4/4
+	d'4\mf cis~ cis8._\markup \italic "cresc." cis32( ees) d16( cis bes a)
+	g8 r8 r4 r2
+	\time 2/4
+	R2
+	\mark #12
+	\time 4/4
+	d'4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
+}
+
+Oboe_III_mvmt_I_AO = \relative c'' {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	R1
+	\tag #'Score R1*2
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				gis4^"I/II Ob." a2~ a8[ bes32( cis d es)]
+				d8( cis bes a) \grace { a16 cis } bes8 a4( fis8)
+			}
+			\new Voice {
+				\voiceTwo
+				\override MultiMeasureRest.staff-position = #-8
+				R1*2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	\tuplet 3/2 { r16\p cis' cis8-. cis-. } \repeat unfold 3 { \tuplet 3/2 { r16 cis cis8-. cis-. } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8-. cis-. } }
+	\time 4/4
+	d4\mf cis~ cis8._\markup \italic "cresc." cis32( ees) d16( cis bes a)
+	\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8-. cis-. } }
+	\time 2/4
+	\tuplet 3/2 { r16 cis cis8-. cis-. } \tuplet 3/2 { r16_\markup \italic "cresc." cis cis8-. cis-. }
+	\mark #12
+	\time 4/4
+	d4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
+}
+
+Oboe_IV_mvmt_I_AO = \relative c'' {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	R1
+	\tag #'Score R1*2
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				gis4^"I/II Ob." a2~ a8[ bes32( cis d es)]
+				d8( cis bes a) \grace { a16 cis } bes8 a4( fis8)
+			}
+			\new Voice {
+				\voiceTwo
+				\override MultiMeasureRest.staff-position = #-8
+				R1*2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+	}
+	\tuplet 3/2 { r16\p cis cis8-. cis-. } \repeat unfold 3 { \tuplet 3/2 { r16 cis cis8-. cis-. } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 3/2 { r16 cis cis8-. cis-. } }
+	\time 4/4
+	d'4\mf cis~ cis8._\markup \italic "cresc." cis32( ees) d16( cis bes a)
+	\repeat unfold 4 { \tuplet 3/2 { r16 cis, cis8-. cis-. } }
+	\time 2/4
+	\tuplet 3/2 { r16 cis cis8-. cis-. } \tuplet 3/2 { r16_\markup \italic "cresc." cis cis8-. cis-. }
+	\mark #12
+	\time 4/4
+	d'4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
+}
+
+EnglishHorn_mvmt_I_AO = \transpose c' f \relative c'' {
+	\mark #11
+	\tempo "slower"
+	\time 4/4
+	R1
+	\tag #'Score R1*2
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				dis4^"I/II Ob." e2~ e8[ f32( gis a bes)]
+				a8( gis f e) \grace { e16 gis } f8 e4( cis8)
+			}
+			\new Voice {
+				\voiceTwo
+				R1*2
+			}
+		>>
+	}
+	\tuplet 3/2 { r16\p e e8-. e-. } \repeat unfold 3 { \tuplet 3/2 { r16 e e8-. e-. } }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 3/2 { r16 e e8-. e-. } }
+	\time 4/4
+	R1
+	\tuplet 3/2 { r16\mf e e8-. e-. } \repeat unfold 3 { \tuplet 3/2 { r16 e e8-. e-. } }
+	\time 2/4
+	\tuplet 3/2 { r16 e e8-. e-. } \tuplet 3/2 { r16_\markup \italic "cresc." e e8-. e-. }
+	\mark #12
+	\time 4/4
+	R1
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN }
+		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
+		\Oboe_I_II_mvmt_I_AO }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
-		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN }
+		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
+		\Oboe_I_II_mvmt_I_AO }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
-		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN }
+		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
+		\Oboe_III_mvmt_I_AO }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
-		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN }
+		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
+		\EnglishHorn_mvmt_I_AO }

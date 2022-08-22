@@ -995,7 +995,7 @@ solo_upper_I_AO = \relative c, {
 
 solo_dynamics_I_AO = {
 	% mm. 113-120 - Rehersal 11
-	s1 s1 s1 s1 s2 s1 s1 s2
+	s1 s1 s1 s1 s2 s1 s1 s2-\markup \italic "cresc."
 	% m. 121 - Rehersal 12
 	s1
 }
