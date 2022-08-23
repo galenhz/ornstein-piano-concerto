@@ -298,3 +298,11 @@ parts, but not the strings, so adding it there. #DYNAMICS
 
 m. 116 and 119: Change Clarinet I's slurring to match everybody else playing the same line.
 (I-orch-03-clarinets)
+
+m. 122: Clarinet I has a sFz in the part which looks like copyist's work but isn't in the
+score. #DYNAMICS
+(I-orch-03-clarinets)
+
+m. 122-123: Dynamics in flutes and Clarinets are kind of odd. The score shows some of it
+but parts apply it differently. This requires looking at. #DYNAMICS
+(I-orch-01-flutes, I-orch-03-clarinets)

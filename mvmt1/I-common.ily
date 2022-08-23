@@ -16,8 +16,8 @@
 % AL = mm. 82-90   (Rehersal 7)
 % AM = mm. 91-99   (Rehersal 8)
 % AN - mm. 100-112 (Rehersal 9/10)
-% AO = mm. 113-121 (Rehersal 11/12)
-% AP = mm. 122-125
+% AO = mm. 113-120 (Rehersal 11)
+% AP = mm. 121-125 (Rehersal 12)
 % AQ = mm. 126-133 (Rehersal 13)
 % AR = mm. 134-141
 % AS = mm. 142-146 (Rehersal 14)
@@ -56,4 +56,5 @@ NULL_I_AK = { \tempo "Melancolico e sostenuto" \time 4/8 R2*6 \time 3/8 R4.*6 }
 NULL_I_AL = { \mark #7 \tempo "Andante e molto sostenuto" \time 4/4 R1*8 \time 7/8 R1*7/8 }
 NULL_I_AM = { \mark #8 \tempo "Mosso" \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1*3 \time 5/4 r2 \tempo "Più animato" r2 r4 \time 6/4 R1*6/4 }
 NULL_I_AN = { \mark #9 \tempo "Allegro" \time 4/4 \tag #'Score \slashedGrace s8 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 \mark #10 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 3/4 R2.*2 }
-NULL_I_AO = { \mark #11 \tempo "slower" \time 4/4 R1*4 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 \mark #12 \time 4/4 R1 }
+NULL_I_AO = { \mark #11 \tempo "slower" \time 4/4 R1*4 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 }
+NULL_I_AP = { \mark #12 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 }

@@ -1,5 +1,5 @@
 # Leo Ornstein - Piano Concerto (S824)
-This is a fully typset version of Leo Ornstein's Piano Concerto, written in the early 1920s and not (as far as I know)
+This is a fully typeset version of Leo Ornstein's Piano Concerto, written in the early 1920s and not (as far as I know)
 published at the time. A manuscript score and set of parts was uploaded to IMSLP with the approval of the composer's son.
 
 https://imslp.org/wiki/Piano_Concerto%2C_SO_824_(Ornstein%2C_Leo)

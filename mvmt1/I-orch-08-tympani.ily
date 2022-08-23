@@ -249,9 +249,6 @@ Tympani_I_mvmt_I_AO = \relative c, {
 	\tuplet 3/2 { r16\mp f f8 f } \repeat unfold 3 { \tuplet 3/2 { r16 f f8 f } }
 	\time 2/4
 	\tuplet 3/2 { r16 f f8 f } \tuplet 3/2 { r16_\markup \italic "cresc." f f8 f }
-	\mark #12
-	\time 4/4
-	R1
 }
 
 Tympani_II_mvmt_I_AO = \relative c {
@@ -268,16 +265,27 @@ Tympani_II_mvmt_I_AO = \relative c {
 	\tuplet 3/2 { r16\mp cis cis8 cis } \repeat unfold 3 { \tuplet 3/2 { r16 cis cis8 cis } }
 	\time 2/4
 	\tuplet 3/2 { r16 cis cis8 cis } \tuplet 3/2 { r16_\markup \italic "cresc." cis cis8 cis }
+}
+
+%%% Section AP = mm. 121-125 (Rehersal 12)
+
+Tympani_II_mvmt_I_AP = \relative c {
 	\mark #12
 	\time 4/4
 	\tuplet 3/2 { r16\f d d8 d } \tuplet 3/2 { r16 d d8 d }
 		\tuplet 3/2 { r16 d d8 d }  \tuplet 3/2 { r16_\markup \italic "dim." d d8 d }
+	R1
+	\time 2/4
+	R2
+	\time 4/4
+	R1*2
 }
 
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
-		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN \Tympani_I_mvmt_I_AO }
+		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN \Tympani_I_mvmt_I_AO
+		\NULL_I_AP }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
 		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN
-		\Tympani_II_mvmt_I_AO }
+		\Tympani_II_mvmt_I_AO \Tympani_II_mvmt_I_AP }

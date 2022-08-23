@@ -589,7 +589,33 @@ Flute_other_mvmt_I_AN = \relative c''' {
 
 %%% Section AO = mm. 113-121 (Rehersal 11/12)
 
-%%% FIXME: Flute I looks bad in score. Also could probably use cues.
+%%% FIXME: Flute I looks bad in score. Also could probably use cues in I/III/IV.
+
+% Just flute cues.
+Picc_Flute_II_mvmt_I_AO = \relative c'' {
+	\tag #'Score \NULL_I_AO
+	\tag #'Part {
+		\mark #11
+		\tempo "slower"
+		\time 4/4
+		R1*4
+		\time 2/4
+		R2
+		\time 4/4
+		<<
+			\new CueVoice {
+				d4^"III/IV Fl." cis~ cis8. cis32( ees) d16( c bes a)
+				g8 r8 r4 r2
+			}
+			\new Voice {
+				\voiceTwo
+				R1*2
+			}
+		>>
+		\time 2/4
+		R2
+	}
+}
 
 Flute_I_mvmt_I_AO = \relative c'''  {
 	\mark #11
@@ -606,9 +632,6 @@ Flute_I_mvmt_I_AO = \relative c'''  {
 		\tuplet 11/8 { cis cis g' f cis cis d cis c a c }
 	\time 2/4
 	\tuplet 11/8 { cis cis g' f cis cis d cis c a c }
-	\mark #12
-	\time 4/4
-	R1
 }
 
 Flute_III_IV_mvmt_I_AO = \relative c'' {
@@ -623,21 +646,90 @@ Flute_III_IV_mvmt_I_AO = \relative c'' {
 	g8 r8 r4 r2
 	\time 2/4
 	R2
+}
+
+%%% Section AP = mm. 121-125 (Rehersal 12)
+
+Picc_mvmt_I_AP = \relative c'' {
 	\mark #12
 	\time 4/4
-	d'4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
+	\tag #'Score R1
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				d4^"III/IV Fl." cis~ cis8. cis32( ees) d16( c bes a)
+			}
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+		>>
+	}
+	r2 \afterGrace a'4_\markup { \dynamic mf \italic "dim." }^\trill^\markup { \natural } { aes16 g }  \afterGrace fis4^\trill^\markup { \natural } { g16 gis }
+	\time 2/4
+	a4 r4
+	\time 4/4
+	R1*2
+}
+
+Flute_I_mvmt_I_AP = \relative c''' {
+	\mark #12
+	\time 4/4
+	R1
+	\partCombineApart
+	r2 \afterGrace a4_\markup { \dynamic mf \italic "dim." }^\trill^\markup { \natural } { aes16 g } \afterGrace fis4^\trill^\markup { \natural } { g16 gis }
+	\time 2/4
+	a4 r4
+	\partCombineAutomatic
+	\time 4/4
+	R1*2
+}
+Flute_II_mvmt_I_AP = \relative c''' {
+	\mark #12
+	\time 4/4
+	R1
+	\tuplet 5/4 { fis32(\f\> d ees c a } fis8) \tuplet 5/4 { fis'32( d ees c a } fis8)\! r2
+	\time 2/4
+	\tuplet 5/4 { fis'32(_\markup \italic "dim." d ees c a } fis8) \tuplet 5/4 { fis'32( d ees c a } fis8)
+	\time 4/4
+	R1*2
+}
+
+Flute_III_mvmt_I_AP = \relative c'' {
+	\mark #12
+	\time 4/4
+	d4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
+	\afterGrace a'4\f\>^\trill^\markup { \natural } { aes16 g }  \afterGrace fis4^\trill^\markup { \natural } { g16 gis } a4\! r4
+	\time 2/4
+	\afterGrace a4^\trill^\markup { \natural } { aes16 g }  \afterGrace fis4^\trill^\markup { \natural } { e16 ees }
+	\time 4/4
+	d8 r8 r4 r2
+	R1
+}
+
+Flute_IV_mvmt_I_AP = \relative c'' {
+	\mark #12
+	\time 4/4
+	d4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
+	r2 \tuplet 5/4 { fis''32(\f\> d ees c a } fis8) \tuplet 5/4 { fis'32( d ees c a } fis8)\!
+	\time 2/4
+	R2
+	\time 4/4
+	R1*2
 }
 
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_I_mvmt_I_AL \NULL_I_AM \Picc_mvmt_I_AN \NULL_I_AO }
+		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_I_mvmt_I_AL \NULL_I_AM \Picc_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO \Picc_mvmt_I_AP }
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL \NULL_I_AM \Flute_I_mvmt_I_AN \Flute_I_mvmt_I_AO }
+		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL \NULL_I_AM \Flute_I_mvmt_I_AN \Flute_I_mvmt_I_AO \Flute_I_mvmt_I_AP }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \NULL_I_AO }
+		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO
+		\Flute_II_mvmt_I_AP }
 Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG
 		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_III_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN
-		\Flute_III_IV_mvmt_I_AO }
+		\Flute_III_IV_mvmt_I_AO \Flute_III_mvmt_I_AP }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Flute_III_IV_mvmt_I_AO }
+		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Flute_III_IV_mvmt_I_AO
+		\Flute_IV_mvmt_I_AP }

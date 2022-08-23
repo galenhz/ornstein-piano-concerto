@@ -905,9 +905,12 @@ solo_lower_I_AN = \relative c, {
 	s4
 }
 
-%%% Section AO = mm. 113-121 (Rehersal 11/12)
+%%% Section AO = mm. 113-120 (Rehersal 11)
+%%% Section AP = mm. 121-125 (Rehersal 12)
 
-solo_upper_I_AO = \relative c, {
+%%% Combining these sections so that we can keep the magnifyMusic section together.
+
+solo_upper_I_AO_AP = \relative c, {
 	% mm. 113-120 - Rehersal 11
 	\mark #11
 	\time 4/4
@@ -991,36 +994,8 @@ solo_upper_I_AO = \relative c, {
 			\change Staff = "solo_upper"
 		}
 	} %magnifyMusic end
-}
-
-solo_dynamics_I_AO = {
-	% mm. 113-120 - Rehersal 11
-	s1 s1 s1 s1 s2 s1 s1 s2-\markup \italic "cresc."
-	% m. 121 - Rehersal 12
-	s1
-}
-
-solo_lower_I_AO = {
-	% mm. 113-120 - Rehersal 11
-	\time 4/4
-	\clef bass
-	%%% A clever trick to generate mirrored RepeatSlash marks in the lower staff.
-	%%% Thanks to Jean Abou Samra from the lilypond user list.
-	\repeat percent 6 { \repeat unfold 32 { s64 } }
-	\repeat percent 3 { \repeat unfold 32 { s64 } }
-	\time 4/4
-	\repeat percent 2 { \repeat unfold 32 { s64 } }
-	\repeat percent 3 { \repeat unfold 32 { s64 } }
-	% mm. 121 - Rehersal 12
-	\time 4/4
-	\repeat percent 2 { \repeat unfold 32 { s64 } }
-}
-
-%%% This is as far as I've gotten
-
-solo_upper_I_remain = \relative c' {
 	% mm. 122-125
-	\repeat unfold 4 { \tuplet 9/8 { r32 c fis b c c fis b c } }
+	\repeat unfold 4 { \tuplet 9/8 { r32 c' fis b c c fis b c } }
 	\time 2/4
 	\repeat unfold 2 { \tuplet 9/8 { r32 c,, fis b c c fis b c } }
 	\time 4/4
@@ -1045,11 +1020,63 @@ solo_upper_I_remain = \relative c' {
 			\change Staff = "solo_upper" g gis a cis bes }
 		\tuplet 10/8 { \change Staff = "solo_lower" \clef bass b,, c dis e f
 			\change Staff = "solo_upper" \clef bass g gis a cis bes }
+}
+
+solo_dynamics_I_AO_AP = {
+	% mm. 113-120 - Rehersal 11
+	s1 s1 s1 s1 s2 s1 s1 s2-\markup \italic "cresc."
+	% m.. 121-125 - Rehersal 12
+	s1 s2 s2-\markup { dim. } s2 s4 s8. s16-\markup { \italic {piu e piu animato} } s2 s1
+}
+
+solo_lower_I_AO_AP = \relative c' {
+	% mm. 113-120 - Rehersal 11
+	\time 4/4
+	\clef bass
+	%%% A clever trick to generate mirrored RepeatSlash marks in the lower staff.
+	%%% Thanks to Jean Abou Samra from the lilypond user list.
+	\repeat percent 6 { \repeat unfold 32 { s64 } }
+	\repeat percent 3 { \repeat unfold 32 { s64 } }
+	\time 4/4
+	\repeat percent 2 { \repeat unfold 32 { s64 } }
+	\repeat percent 3 { \repeat unfold 32 { s64 } }
+	% mm. 121-125 - Rehersal 12
+	\time 4/4
+	\repeat percent 2 { \repeat unfold 32 { s64 } }
+	<<
+		\new Voice {
+			\voiceOne
+			b4 a~ a8~ a32 fis a b c16 b a fis
+			\time 2/4
+			a2
+		}
+		\new Voice {
+			\voiceThree \tieDown
+			<cis, fis>1~
+			\time 2/4
+			<cis fis>2 \tieNeutral
+		}
+		\new Voice {
+			\voiceTwo
+			\slashedGrace <fis,, fis'>8~ <fis fis'>1~
+			\time 2/4
+			\stemDown <fis fis'>2 \stemNeutral
+		}
+	>>
+	\time 4/4
+	<d'' fis bes d>1
+	\clef treble <b' fis' g b>8 r8 s2.
+}
+
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c {
 	% mm. 126-133 - Rehersal 13
 	\mark #13
 	\tempo Vivo
 	\time 7/8
-	<c, fis>8[ <e g> <c fis> <e g> <e ais> <g b> <ais d>]
+	<c fis>8[ <e g> <c fis> <e g> <e ais> <g b> <ais d>]
 	\time 9/8
 	<bes cis>[ <g b> <bes cis> <g b> <e bes> <g b> <e bes> <e g> <c fis>]
 	\time 7/8
@@ -1812,8 +1839,6 @@ solo_upper_I_remain = \relative c' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 122-125
-	s2 s2-\markup { dim. } s2 s4 s8. s16-\markup { \italic {piu e piu animato} } s2 s1
 	% mm. 126-133 - Rehersal 13
 	s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
 	% mm. 134-141
@@ -1884,36 +1909,12 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c' {
-	% mm. 122-125
-	<<
-		\new Voice {
-			\voiceOne
-			b4 a~ a8~ a32 fis a b c16 b a fis
-			\time 2/4
-			a2
-		}
-		\new Voice {
-			\voiceThree \tieDown
-			<cis, fis>1~
-			\time 2/4
-			<cis fis>2 \tieNeutral
-		}
-		\new Voice {
-			\voiceTwo
-			\slashedGrace <fis,, fis'>8~ <fis fis'>1~
-			\time 2/4
-			\stemDown <fis fis'>2 \stemNeutral
-		}
-	>>
-	\time 4/4
-	<d'' fis bes d>1
-	\clef treble <b' fis' g b>8 r8 s2.
+solo_lower_I_remain = \relative c, {
 	% mm. 126-133 - Rehersal 13
 	% Cheat. Leave time signatures out of bass and just repeat the phrase
 	\time 7/8
 	\override Beam.breakable = ##t
-	\repeat unfold 5 { <ais,, e'>8[ <dis ais'> <ais e'> <dis ais'> <cis g'> <fis cis'>] }
+	\repeat unfold 5 { <ais e'>8[ <dis ais'> <ais e'> <dis ais'> <cis g'> <fis cis'>] }
 	\repeat unfold 4 { <a, dis>[ a' <a, dis> a' <ees a> ees'] }
 	<a,, dis>[ a' <a, dis> a' <ees ees'>]
 	\revert Beam.breakable
@@ -2394,21 +2395,21 @@ solo_lower_I_remain = \relative c' {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
-		\solo_upper_I_AO \solo_upper_I_remain }
+		\solo_upper_I_AO_AP \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
-		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO }
+		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO \solo_dynamics_I_remain }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
-		\solo_lower_I_AO \solo_lower_I_remain }
+		\solo_lower_I_AO_AP \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
-		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO }
+		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP }

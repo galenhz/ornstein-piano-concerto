@@ -631,9 +631,6 @@ Oboe_I_II_mvmt_I_AO = \relative c'' {
 	g8 r8 r4 r2
 	\time 2/4
 	R2
-	\mark #12
-	\time 4/4
-	d'4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
 }
 
 Oboe_III_mvmt_I_AO = \relative c'' {
@@ -664,9 +661,6 @@ Oboe_III_mvmt_I_AO = \relative c'' {
 	\repeat unfold 4 { \tuplet 3/2 { r16 cis cis8-. cis-. } }
 	\time 2/4
 	\tuplet 3/2 { r16 cis cis8-. cis-. } \tuplet 3/2 { r16_\markup \italic "cresc." cis cis8-. cis-. }
-	\mark #12
-	\time 4/4
-	d4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
 }
 
 Oboe_IV_mvmt_I_AO = \relative c'' {
@@ -697,9 +691,6 @@ Oboe_IV_mvmt_I_AO = \relative c'' {
 	\repeat unfold 4 { \tuplet 3/2 { r16 cis, cis8-. cis-. } }
 	\time 2/4
 	\tuplet 3/2 { r16 cis cis8-. cis-. } \tuplet 3/2 { r16_\markup \italic "cresc." cis cis8-. cis-. }
-	\mark #12
-	\time 4/4
-	d'4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
 }
 
 EnglishHorn_mvmt_I_AO = \transpose c' f \relative c'' {
@@ -728,24 +719,34 @@ EnglishHorn_mvmt_I_AO = \transpose c' f \relative c'' {
 	\tuplet 3/2 { r16\mf e e8-. e-. } \repeat unfold 3 { \tuplet 3/2 { r16 e e8-. e-. } }
 	\time 2/4
 	\tuplet 3/2 { r16 e e8-. e-. } \tuplet 3/2 { r16_\markup \italic "cresc." e e8-. e-. }
+}
+
+%%% Section AP = mm. 121-125 (Rehersal 12)
+
+Oboe_all_mvmt_I_AP = \relative c'' {
 	\mark #12
 	\time 4/4
+	d'4\ff cis~ cis8. cis32( ees) d16(_\markup \italic "dim." c bes a)
 	R1
+	\time 2/4
+	R2
+	\time 4/4
+	R1*2
 }
 
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_I_II_mvmt_I_AO }
+		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_I_II_mvmt_I_AO }
+		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
 		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_III_mvmt_I_AO }
+		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
 		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
-		\EnglishHorn_mvmt_I_AO }
+		\EnglishHorn_mvmt_I_AO \NULL_I_AP }
