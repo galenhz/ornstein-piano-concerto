@@ -306,3 +306,16 @@ score. #DYNAMICS
 m. 122-123: Dynamics in flutes and Clarinets are kind of odd. The score shows some of it
 but parts apply it differently. This requires looking at. #DYNAMICS
 (I-orch-01-flutes, I-orch-03-clarinets)
+
+m. 134-141: The cello part contains more slurs than are found in the viola part, or the score
+(which matches the viola part). Specifically it slurs the second and third notes in the first
+bars of the phrase (134 and 138), plus a slur on the triplet in the last bar. They look like
+they *could* be copyist's work but I have doubts. I can certainly believe the composer wanted
+the last triplet to be bowed rather than slurred, for a more forceful effect. Making cello
+match viola/score for now.
+(I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+m. 141: Flute I part and score clearly show grace notes leading into 142. Flute IV score
+seems to show something similar, but Flute IV part has them written in explicit rhythm,
+and then crossed out. Keeping it, but making them grace notes in parallel with I.
+(I-orch-01-flutes)

@@ -743,20 +743,90 @@ Flute_I_mvmt_I_AQ = \relative c'' {
 	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
 }
 
+%%% Section AR = mm. 134-141
+
+Picc_mvmt_I_AR = \relative c'' {
+	\time 2/4
+	R2*2
+	\tuplet 10/8 { fis16([\ff g fis g bes a gis a gis g)] }
+	\tuplet 10/8 { fis16([ g fis g bes a gis a gis g)] }
+	R2*2
+	\tuplet 10/8 { fis16([ g fis g bes a gis a gis g)] }
+	\tuplet 10/8 { fis16([ g fis g bes a_\markup \italic "dim. e rit." gis a gis g)] }
+}
+
+Flute_I_mvmt_I_AR = \relative c'' {
+	\time 2/4
+	fis8 r8 r4
+	\revert Beam.breakable
+	R2
+	\partCombineChords
+	\tuplet 10/8 { fis'16([\ff g fis g bes a gis a gis g)] }
+	\tuplet 10/8 { fis16([ g fis g bes a gis a gis g]) }
+	\partCombineAutomatic
+	R2*2
+	\partCombineChords
+	\tuplet 10/8 { fis16([ g fis g bes a gis a gis g)] }
+	\partCombineAutomatic
+	\tag #'Score \override TupletBracket.bracket-visibility = ##f
+	\tag #'Score \override TupletNumber.stencil = ##f
+	<<
+		{ \tuplet 10/8 { fis16([ g fis g bes \tag #'Score a \tag #'Part a_\markup \italic "dim. e rit." gis)] r8. } }
+		{ s4 s8. \afterGrace s16 { a,,16( bes cis fis) } }
+	>>
+	\tag #'Score \revert TupletBracket.bracket-visibility
+	\tag #'Score \revert TupletNumber.stencil
+}
+
+Flute_II_mvmt_I_AR = \relative c''' {
+	\time 2/4
+	\tuplet 11/8 { a16(\ff bes a bes cis d fis f e ees d) }
+	\tuplet 11/8 { a16( bes a bes cis d fis f e ees d) }
+	\repeat unfold 2 { \tuplet 10/8 { d([ ees d ees fis f e f e ees)] } }
+	\repeat unfold 2 { \tuplet 11/8 { a,16( bes a bes cis d fis f e ees d) } }
+	\tuplet 10/8 { d([ ees d ees fis f e f e ees)] }
+	\tuplet 10/8 { d([ ees d ees fis f_\markup \italic "dim. e rit." e f e ees)] }
+}
+
+Flute_III_mvmt_I_AR = \relative c''' {
+	\time 2/4
+	R2*2
+	\tuplet 10/8 { d16([\ff ees d ees fis f e f e ees)] }
+	\tuplet 10/8 { d16([ ees d ees fis f e f e ees)] }
+	R2*2
+	\tuplet 10/8 { d16([ ees d ees fis f e f e ees)] }
+	\tuplet 10/8 { d16([ ees d ees fis f_\markup \italic "dim. e rit." e f e ees)] }
+}
+
+Flute_IV_mvmt_I_AR = \relative c''' {
+	\time 2/4
+	\tuplet 11/8 { a16(\ff bes a bes cis d fis f e ees d) }
+	\tuplet 11/8 { a16( bes a bes cis d fis f e ees d) }
+	R2*2
+	\repeat unfold 2 { \tuplet 11/8 { a16( bes a bes cis d fis f e ees d) } }
+	R2
+	%%\afterGrace R2 { fis,,16 g cis }
+	<<
+		{ R2 }
+		{ s4 s8._\markup \italic "dim. e rit." \afterGrace s16 { fis,,16([ g cis)] } }
+	>>
+}
+
+
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_I_mvmt_I_AL \NULL_I_AM \Picc_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO \Picc_mvmt_I_AP
-		\NULL_I_AQ }
+		\NULL_I_AQ \Picc_mvmt_I_AR}
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL \NULL_I_AM \Flute_I_mvmt_I_AN \Flute_I_mvmt_I_AO \Flute_I_mvmt_I_AP
-		\Flute_I_mvmt_I_AQ }
+		\Flute_I_mvmt_I_AQ \Flute_I_mvmt_I_AR }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO
-		\Flute_II_mvmt_I_AP \NULL_I_AQ }
+		\Flute_II_mvmt_I_AP \NULL_I_AQ \Flute_II_mvmt_I_AR }
 Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG
 		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_III_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN
-		\Flute_III_IV_mvmt_I_AO \Flute_III_mvmt_I_AP \NULL_I_AQ }
+		\Flute_III_IV_mvmt_I_AO \Flute_III_mvmt_I_AP \NULL_I_AQ \Flute_III_mvmt_I_AR }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Flute_III_IV_mvmt_I_AO
-		\Flute_IV_mvmt_I_AP \NULL_I_AQ }
+		\Flute_IV_mvmt_I_AP \NULL_I_AQ \Flute_IV_mvmt_I_AR }

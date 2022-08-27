@@ -653,8 +653,9 @@ Bassoon_all_mvmt_I_AO = \relative c'' {
 %%% Tacet
 
 %%% Section AQ = mm. 126-133 (Rehersal 13)
+%%% Section AR = mm. 134-141
 
-Bassoon_I_II_mvmt_I_AQ = \relative c, {
+Bassoon_I_II_mvmt_I_AQ_AR = \relative c, {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
@@ -674,9 +675,14 @@ Bassoon_I_II_mvmt_I_AQ = \relative c, {
 	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
 	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	%% m. 134
+	\time 2/4
+	fis r8 r4
+	\revert Beam.breakable
+	R2*7
 }
 
-Bassoon_III_mvmt_I_AQ = \relative c, {
+Bassoon_III_mvmt_I_AQ_AR = \relative c, {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
@@ -697,9 +703,14 @@ Bassoon_III_mvmt_I_AQ = \relative c, {
 	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
 	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	%% m. 134
+	\time 2/4
+	fis r8 r4
+	\revert Beam.breakable
+	R2*7
 }
 
-Bassoon_IV_mvmt_I_AQ = \relative c {
+Bassoon_IV_mvmt_I_AQ_AR = \relative c {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
@@ -720,21 +731,27 @@ Bassoon_IV_mvmt_I_AQ = \relative c {
 	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
 	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	%% m. 134
+	\time 2/4
+	fis r8 r4
+	\revert Beam.breakable
+	R2*7
 }
 
 %%% Final assembly
 
 Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
 		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ \Bassoon_I_mvmt_I_AK_AL \Bassoon_I_mvmt_I_AM \Bassoon_I_mvmt_I_AN
-		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ }
+		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR }
 Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
 		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_II_mvmt_I_AM \Bassoon_II_mvmt_I_AN
-		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ }
+		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR }
 Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_III_mvmt_I_AM \Bassoon_III_mvmt_I_AN
-		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_III_mvmt_I_AQ }
+		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_III_mvmt_I_AQ_AR }
 Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_IV_mvmt_I_AM \NULL_I_AN \Bassoon_all_mvmt_I_AO
-		\NULL_I_AP \Bassoon_IV_mvmt_I_AQ }
+		\NULL_I_AP \Bassoon_IV_mvmt_I_AQ_AR }
 Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF \NULL_I_AG
-		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Contrabassoon_mvmt_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ }
+		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Contrabassoon_mvmt_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ
+		\NULL_I_AR }

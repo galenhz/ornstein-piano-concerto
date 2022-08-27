@@ -44,5 +44,10 @@ do seems to persuade partcombine to put the stems down, which would make this le
 m. 118 and 121: Clarinet III is missing tuplet bracket in score. Seems to be a problem similar
 to the one in m. 58, above.
 
+m. 134-141: Piano reduction needs markings showing right hand is optional.
+
+m. 141: Grace notes at end of bar for flutes should be outside the bracket, but tricky to do.
+Also, partcombine is not honoring the manual bar marks for flute II in the score. Part is fine.
+
 m. 225: Fermata bar: add mark to previous bar and hack it to print at end,
 put number mark in tempo mark next bar?
