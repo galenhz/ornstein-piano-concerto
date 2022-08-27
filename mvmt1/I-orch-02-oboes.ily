@@ -734,19 +734,66 @@ Oboe_all_mvmt_I_AP = \relative c'' {
 	R1*2
 }
 
+%%% Section AQ = mm. 126-133 (Rehersal 13)
+
+Oboe_I_II_mvmt_I_AQ = \relative c' {
+	\mark #13
+	\time 7/8
+	\tempo "Vivo"
+	\override Beam.breakable = ##t
+	r4_\markup { \dynamic mp \italic "staccato sempre" } e8[ fis e fis g
+	\time 9/8
+	ais b] d[ cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8
+	\time 7/8
+	g16 r32 ais g8 fis16 r32 g fis8 e] fis[\mf g
+	\time 8/8
+	ais_\markup { \italic "più animato e più" \dynamic f } b c dis e] g[ fis16 r32 g fis8
+	\time 6/8
+	e16 r32 fis e8 dis16 r32 e dis8 c16 r32 dis c8
+	\time 8/8
+	b] dis[\f e fis g b ais16 r32 b ais8
+	\time 6/8
+	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
+	\time 8/8
+	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+}
+
+Oboe_III_mvmt_I_AQ = \relative c' {
+	\mark #13
+	\time 7/8
+	\tempo "Vivo"
+	\override Beam.breakable = ##t
+	\time 7/8
+	R1*7/8
+	\time 9/8
+	R1*9/8
+	\time 7/8
+	r2_\markup \italic "staccato sempre" r8 fis[\mf g
+	\time 8/8
+	ais_\markup { \italic "più animato e più" \dynamic f } b c dis e] g[ fis16 r32 g fis8
+	\time 6/8
+	e16 r32 fis e8 dis16 r32 e dis8 c16 r32 dis c8
+	\time 8/8
+	b] dis[\f e fis g b ais16 r32 b ais8
+	\time 6/8
+	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
+	\time 8/8
+	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP }
+		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP }
+		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
 		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP }
+		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_III_mvmt_I_AQ }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
-		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP }
+		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP \NULL_I_AQ }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
 		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
-		\EnglishHorn_mvmt_I_AO \NULL_I_AP }
+		\EnglishHorn_mvmt_I_AO \NULL_I_AP \NULL_I_AQ }

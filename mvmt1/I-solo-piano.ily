@@ -1068,10 +1068,9 @@ solo_lower_I_AO_AP = \relative c' {
 	\clef treble <b' fis' g b>8 r8 s2.
 }
 
+%%% Section AQ = mm. 126-133 (Rehersal 13)
 
-%%% This is as far as I've gotten
-
-solo_upper_I_remain = \relative c {
+solo_upper_I_AQ = \relative c {
 	% mm. 126-133 - Rehersal 13
 	\mark #13
 	\tempo Vivo
@@ -1091,6 +1090,28 @@ solo_upper_I_remain = \relative c {
 	<a dis>[ <c e> <c fis> <ees g> <g b> <fis ais>]
 	\time 8/8
 	<g b>[ <fis ais> <e g> <fis ais> <e g> <dis fis> <c g'> <dis fis>]
+}
+
+solo_dynamics_I_AQ = {
+	% mm. 126-133 - Rehersal 13
+	s2-\markup { \dynamic p \italic "e staccato" } s4. s1 s8 s2 s4. s1-\markup { \italic "più animato e più" \dynamic f }
+	s2. s1 s2.-\markup { \italic "sempre più" \dynamic f } s1
+}
+
+solo_lower_I_AQ = \relative c, {
+	% mm. 126-133 - Rehersal 13
+	% Cheat. Leave time signatures out of bass and just repeat the phrase
+	\time 7/8
+	\override Beam.breakable = ##t
+	\repeat unfold 5 { <ais e'>8[ <dis ais'> <ais e'> <dis ais'> <cis g'> <fis cis'>] }
+	\repeat unfold 4 { <a, dis>[ a' <a, dis> a' <ees a> ees'] }
+	<a,, dis>[ a' <a, dis> a' <ees ees'>]
+	\revert Beam.breakable
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c'' {
 	% mm. 134-141
 	\time 2/4
 	\repeat unfold 2 {
@@ -1292,11 +1313,11 @@ solo_upper_I_remain = \relative c {
 			\voiceOne
 			r8 d''[ gis a gis16 fis f8 d a']
 			\time 4/8
-			gis16[ fis f8 d \slashedGrace { gis8 } fis]
+			gis16[ fis f8 d \slashedGrace { gis8 } \afterGrace fis] { \tuplet 3/2 { fis16 fis, fis, } }
 		}
 		\new Voice {
 			\voiceTwo
-			r8 d,,[ gis a gis16 fis f8 d a']
+			r8 d[ gis a gis16 fis f8 d a']
 			\time 4/8
 			gis16[ fis f8 d \slashedGrace { gis8 } fis]
 		}
@@ -1839,8 +1860,6 @@ solo_upper_I_remain = \relative c {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 126-133 - Rehersal 13
-	s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
 	% mm. 134-141
 	s2*8
 	% mm. 142-146 - Rehersal 14
@@ -1909,22 +1928,14 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c, {
-	% mm. 126-133 - Rehersal 13
-	% Cheat. Leave time signatures out of bass and just repeat the phrase
-	\time 7/8
-	\override Beam.breakable = ##t
-	\repeat unfold 5 { <ais e'>8[ <dis ais'> <ais e'> <dis ais'> <cis g'> <fis cis'>] }
-	\repeat unfold 4 { <a, dis>[ a' <a, dis> a' <ees a> ees'] }
-	<a,, dis>[ a' <a, dis> a' <ees ees'>]
-	\revert Beam.breakable
+solo_lower_I_remain = \relative c {
 	% mm. 134-141
 	\time 2/4
 	<<
 		\new Voice {
 			\voiceOne
 			\repeat unfold 2 {
-				r8 <d' g bes d>4 <d g bes d>8~
+				r8 <d g bes d>4 <d g bes d>8~
 				<d g bes d> <d g bes d>4 <d g bes d>8
 				r8 <fis bes d fis>4 <fis bes d fis>8~
 				<fis bes d fis> <fis bes d fis>4 <fis bes d fis>8
@@ -2395,21 +2406,21 @@ solo_lower_I_remain = \relative c, {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
-		\solo_upper_I_AO_AP \solo_upper_I_remain }
+		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
-		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP }
+		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_remain }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
-		\solo_lower_I_AO_AP \solo_lower_I_remain }
+		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
-		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP }
+		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ }

@@ -988,9 +988,9 @@ redux_lower_I_AP = \relative c {
 	r1 r1
 }
 
-%%% This is as far as I've gotten
+%%% Section AQ = mm. 126-133 (Rehersal 13)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_AQ = \relative c' {
 	% mm. 126-133 - Rehersal 13
 	\mark #13
 	\tempo Vivo
@@ -1012,6 +1012,40 @@ redux_upper_I_remain = \relative c' {
 	\time 8/8
 	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
 	\revert Beam.breakable
+}
+
+redux_dynamics_I_AQ = {
+    % mm. 126-133 - Rehersal 13
+    s2 s4. s1 s8 s2 s4. s1-\markup { \italic "più animato e più" \dynamic f }
+	s2. s1 s2.-\markup { \italic "sempre più" \dynamic f } s1
+}
+
+redux_lower_I_AQ = \relative c {
+	% mm. 126-133 - Rehersal 13
+    \time 7/8
+	\override Beam.breakable = ##t
+	\clef bass
+        r4 e8[ fis e fis g
+        \time 9/8
+        ais b] d[ cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8]
+        \time 7/8
+        g16[ r32 ais g8 fis16 r32 g fis8 e fis g
+        \time 8/8
+        ais b c dis e] g[ fis16 r32 g fis8
+        \time 6/8
+        e16 r32 fis e8 dis16 r32 e dis8 c16 r32 dis c8
+        \time 8/8
+        b] dis[ e fis g b ais16 r32 b ais8]
+        \time 6/8
+        \clef treble g16[ r32 ais g8 fis16 r32 g fis8 e] dis[
+        \time 8/8
+        e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	\revert Beam.breakable
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c'' {
 	% mm. 134-141
 	% FIXME: Add markings for "optional"
 	\time 2/4
@@ -1620,8 +1654,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-    % mm. 126-133 - Rehersal 13
-    s2 s4. s1 s8 s2 s4. s1 s2. s1 s2. s1
     % mm. 134-141
     s2*8
     % mm. 142-146 - Rehersal 14
@@ -1679,27 +1711,7 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c {
-	% mm. 126-133 - Rehersal 13
-    \time 7/8
-	\override Beam.breakable = ##t
-	\clef bass
-        r4 e8[ fis e fis g
-        \time 9/8
-        ais b] d[ cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8]
-        \time 7/8
-        g16[ r32 ais g8 fis16 r32 g fis8 e fis g
-        \time 8/8
-        ais b c dis e] g[ fis16 r32 g fis8
-        \time 6/8
-        e16 r32 fis e8 dis16 r32 e dis8 c16 r32 dis c8
-        \time 8/8
-        b] dis[ e fis g b ais16 r32 b ais8]
-        \time 6/8
-        \clef treble g16[ r32 ais g8 fis16 r32 g fis8 e] dis[
-        \time 8/8
-        e fis g b ais16 r32 b ais8 g16 r32 ais g8]
-	\revert Beam.breakable
+redux_lower_I_remain = \relative c' {
 	% mm. 134-141
 	\time 2/4
 	\clef bass fis8 <d, g bes d>[ <d d'> <e e'>]
@@ -2249,11 +2261,11 @@ redux_lower_I_remain = \relative c {
 
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
-		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_remain }
+		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
-		\redux_dynamics_I_AP \redux_dynamics_I_remain }
+		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
-		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_remain }
+		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_remain }

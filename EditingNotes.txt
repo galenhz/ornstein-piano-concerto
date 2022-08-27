@@ -248,11 +248,11 @@ Recording is straight triplets. Allowing the discrepancy to stand for now, but m
 this in PR as well.
 (I-orch-06-horns, I-piano-reduction)
 
-m. 91: Clarinet I/I lack starting dynamic, III/IV has p. Nothing in score. Giving dynamic
+m. 91: Clarinet I/II lack starting dynamic, III/IV has p. Nothing in score. Giving dynamic
 to all. #DYNAMICS
 (I-orch-03-clarinets)
 
-m. 93: Clarinets lack dynamics in this bar that appear to be in score, plus basoons. Adding
+m. 93: Clarinets lack dynamics in this bar that appear to be in score, plus bassoons. Adding
 them in. #DYNAMICS
 (I-orch-03-clarinets)
 
