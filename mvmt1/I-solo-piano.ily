@@ -1109,9 +1109,9 @@ solo_lower_I_AQ = \relative c, {
 	\revert Beam.breakable
 }
 
-%%% This is as far as I've gotten
+%%% Section AR = mm. 134-141
 
-solo_upper_I_remain = \relative c'' {
+solo_upper_I_AR = \relative c'' {
 	% mm. 134-141
 	\time 2/4
 	\repeat unfold 2 {
@@ -1120,13 +1120,47 @@ solo_upper_I_remain = \relative c'' {
 		\repeat unfold 2 { \tuplet 10/8 { <bes d>[ <cis ees> <bes d> <cis ees> <d fis>
 			<ees g> <fis bes> <ees g> <d fis> <cis ees>] } }
 	}
+}
+
+solo_dynamics_I_AR = {
+	% mm. 134-141
+	s2*8
+}
+
+solo_lower_I_AR = \relative c {
+	% mm. 134-141
+	\time 2/4
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				r8 <d g bes d>4 <d g bes d>8~
+				<d g bes d> <d g bes d>4 <d g bes d>8
+				r8 <fis bes d fis>4 <fis bes d fis>8~
+				<fis bes d fis> <fis bes d fis>4 <fis bes d fis>8
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				<g,, g'>2~ <g g'>
+				<bes bes'>~ <bes bes'>
+			}
+		}
+	>>
+}
+
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c' {
 	% mm. 142-146 - Rehersal 14
 	\mark #14
 	\tempo "Meno mosso"
 	\time 6/4
 	%% FIXME: First tuplet in m. 142 and 144 is broken!
 	r4 \change Staff = "solo_lower" \clef treble
-		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
+		\tuplet 5/4 { <fis cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
 	\change Staff = "solo_lower"
 		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" \ottava #1 fis' cis' fis g }
 		fis8 \ottava #0 r4 r4 r4
@@ -1860,8 +1894,6 @@ solo_upper_I_remain = \relative c'' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 134-141
-	s2*8
 	% mm. 142-146 - Rehersal 14
 	s4 \once \override DynamicText.X-offset = #-4.0 s4-\pp s1 s1 s4 s1 s2 s1 s1
 	% mm. 147-154 - Rehersal 15
@@ -1929,26 +1961,6 @@ solo_dynamics_I_remain = {
 }
 
 solo_lower_I_remain = \relative c {
-	% mm. 134-141
-	\time 2/4
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 2 {
-				r8 <d g bes d>4 <d g bes d>8~
-				<d g bes d> <d g bes d>4 <d g bes d>8
-				r8 <fis bes d fis>4 <fis bes d fis>8~
-				<fis bes d fis> <fis bes d fis>4 <fis bes d fis>8
-			}
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 2 {
-				<g,, g'>2~ <g g'>
-				<bes bes'>~ <bes bes'>
-			}
-		}
-	>>
 	% mm. 142-146 - Rehersal 14
 	\time 6/4
 	r4 s2 r4 r4 r4
@@ -1961,7 +1973,7 @@ solo_lower_I_remain = \relative c {
 	% mm. 147-154 - Rehersal 15
 	\time 5/4
 	\clef bass
-	<ees' b'>8 <f,, f'>
+	<ees b'>8 <f,, f'>
 		\repeat unfold 2 { \tuplet 6/4 { r8 <f'' ees'> <b g'> \clef treble <ees aes>
 			\clef bass <b g'> <f ees'> } }
 	\time 7/4
@@ -2406,21 +2418,21 @@ solo_lower_I_remain = \relative c {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
-		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_remain }
+		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
-		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ }
+		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_remain }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
-		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_remain }
+		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
-		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ }
+		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR }
