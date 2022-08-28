@@ -1085,17 +1085,17 @@ redux_upper_I_AS = \relative c''' {
 	<<
 		\new Voice {
 			\voiceOne
-			a8 bis cis4~ \tuplet 3/2 { cis16 c dis } \tuplet 3/2 { c bes c }
-				\tuplet 3/2 { bes a bes } \tuplet 3/2 { a gis a }
-				\tuplet 3/2 { aes fis aes } \tuplet 3/2 { ges f ges }
-				\tuplet 3/2 {f ees f } ees d
+			a8 bis cis4~ \tuplet 3/2 8 { cis16 c \beamCutR des \beamCutL c bes c
+				bes a \beamCutR bes \beamCutL a gis a
+				aes fis \beamCutR aes \beamCutL ges f ges
+				f ees \beamCutR f } \beamCutL ees d
 			\time 5/4
 			b'4. d8 fis2.
 			\time 6/4
-			a,8 bis cis4~ \tuplet 3/2 { cis16 c dis } \tuplet 3/2 { c bes c }
-				\tuplet 3/2 { bes a bes } \tuplet 3/2 { a gis a }
-				\tuplet 3/2 { aes fis aes } \tuplet 3/2 { ges f ges }
-				\tuplet 3/2 {f ees f } ees d
+			a,8 bis cis4~ \tuplet 3/2 8 { cis16 c \beamCutR des \beamCutL c bes c
+				bes a \beamCutR bes \beamCutL a gis a
+				aes fis \beamCutR aes \beamCutL ges f ges
+				f ees \beamCutR f } \beamCutL ees d
 			\time 4/4
 			\repeat unfold 2 { d2 des4~ des8[ \tuplet 3/2 { c16 a des] } }
 		}
@@ -1103,16 +1103,16 @@ redux_upper_I_AS = \relative c''' {
 			\voiceTwo
 			fis4~ \tuplet 3/2 { fis8 e f } gis4~ gis8 fis~ fis2
 			\time 5/4
-			d8 dis fis f~ \tuplet 3/2 { f16 ees f } \tuplet 3/2 { ees d ees }
-				\tuplet 3/2 { d des d } \tuplet 3/2 { des c des }
-				\tuplet 3/2 { c bes c } bes a
+			d8 dis fis f~ \tuplet 3/2 8 { f16 ees \beamCutR f \beamCutL ees d ees
+				d des \beamCutR d \beamCutL des c des
+				c bes \beamCutR c } \beamCutL bes a
 			\time 6/4
 			fis'4~ \tuplet 3/2 { fis8 e f } gis4~ gis8 fis~ fis2
 			\time 4/4
 			\repeat unfold 2 { \tuplet 3/2 { e,8 f gis }
-				\tuplet 3/2 { b16 bes b } \tuplet 3/2 { bes aes bes }
-				\tuplet 3/2 { aes g aes } \tuplet 3/2 { g fis g }
-				\tuplet 3/2 { ges f ges } \tuplet 3/2 { f e f }
+				\tuplet 3/2 8 { b16 bes \beamCutR b \beamCutL bes aes bes
+				aes g \beamCutR aes \beamCutL g fis g
+				ges f \beamCutR ges \beamCutL f e f }
 			}
 		}
 	>>
