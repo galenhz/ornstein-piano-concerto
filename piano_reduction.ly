@@ -8,7 +8,9 @@
 \include "mvmt1/I-piano-reduction.ily"
 
 
-#(set-default-paper-size "letter")
+\paper {
+	#(set-paper-size "b4")
+}
 
 \header {
 	title = "Piano Concerto"

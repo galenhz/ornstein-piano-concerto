@@ -1157,7 +1157,8 @@ solo_upper_I_AS = \relative c' {
 	\mark #14
 	\tempo "Meno mosso"
 	\time 6/4
-	%% FIXME: First tuplet in m. 142 and 144 is broken!
+	%% Fixed: First tuplet in m. 142 and 144 is broken with paper size set to a4/letter.
+	%%        It just needs more room. Can't use that as the PR default any more.
 	r4 \change Staff = "solo_lower" \clef treble
 		\tuplet 5/4 { <fis cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
 	\change Staff = "solo_lower"
