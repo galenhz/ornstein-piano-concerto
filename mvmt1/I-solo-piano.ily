@@ -1150,10 +1150,9 @@ solo_lower_I_AR = \relative c {
 	>>
 }
 
+%%% Section AS = mm. 142-146 (Rehersal 14)
 
-%%% This is as far as I've gotten
-
-solo_upper_I_remain = \relative c' {
+solo_upper_I_AS = \relative c' {
 	% mm. 142-146 - Rehersal 14
 	\mark #14
 	\tempo "Meno mosso"
@@ -1178,6 +1177,28 @@ solo_upper_I_remain = \relative c' {
 		fis8 \ottava #0 r4 r4 r4
 	\time 4/4
 	R1*2
+}
+
+solo_dynamics_I_AS = {
+	% mm. 142-146 - Rehersal 14
+	s4 \once \override DynamicText.X-offset = #-4.0 s4-\pp s1 s1 s4 s1 s2 s1 s1
+}
+
+solo_lower_I_AS = {
+	% mm. 142-146 - Rehersal 14
+	\time 6/4
+	r4 s2 r4 r4 r4
+	\time 5/4
+	r4 s2 r4 r4
+	\time 6/4
+	r4 s2 r4 r4 r4
+	\time 4/4
+	R1*2
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c''' {
 	% mm. 147-154 - Rehersal 15
 	\mark #15
 	\tempo "cantabile"
@@ -1185,7 +1206,7 @@ solo_upper_I_remain = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
-			e,2~ e8 d~ d4~ d8 cis16 bes
+			e2~ e8 d~ d4~ d8 cis16 bes
 			\time 7/4
 			\tuplet 3/2 { a fis f } \tuplet 3/2 { fis a bes } cis1~ cis4 c8 des
 			\time 5/4
@@ -1894,8 +1915,6 @@ solo_upper_I_remain = \relative c' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 142-146 - Rehersal 14
-	s4 \once \override DynamicText.X-offset = #-4.0 s4-\pp s1 s1 s4 s1 s2 s1 s1
 	% mm. 147-154 - Rehersal 15
 	s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.-\markup { \italic {molto rit.} }
 	% mm. 155-164 - Rehersal 16
@@ -1961,15 +1980,6 @@ solo_dynamics_I_remain = {
 }
 
 solo_lower_I_remain = \relative c {
-	% mm. 142-146 - Rehersal 14
-	\time 6/4
-	r4 s2 r4 r4 r4
-	\time 5/4
-	r4 s2 r4 r4
-	\time 6/4
-	r4 s2 r4 r4 r4
-	\time 4/4
-	R1*2
 	% mm. 147-154 - Rehersal 15
 	\time 5/4
 	\clef bass
@@ -2418,21 +2428,22 @@ solo_lower_I_remain = \relative c {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
-		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_remain }
+		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
-		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR }
+		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_remain }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
+		\solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
-		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_remain }
+		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
-		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR }
+		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS }
