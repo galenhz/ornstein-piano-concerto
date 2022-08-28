@@ -319,3 +319,23 @@ m. 141: Flute I part and score clearly show grace notes leading into 142. Flute 
 seems to show something similar, but Flute IV part has them written in explicit rhythm,
 and then crossed out. Keeping it, but making them grace notes in parallel with I.
 (I-orch-01-flutes)
+
+m. 142-146: Viola/Cello slur wierdness continues. Cello parts have slurs on the 5/4 tuplets,
+viola parts don't, but score seems to show slurs for the viola that aren't in the part?
+Adding slurs to the viola here.
+(I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+m. 142-146: The descending triplet figure is inconsistently barred in the flute and bassoon
+parts where it occurs. Score has Flute I grouped into 6 in 142, Flute II continuous in 143,
+Flute I grouped in 6 again in 144, and bassoon first grouped then continuous in 145-146.
+The parts have flute I always grouped, flute II continuous, and Bassoon I grouped.
+The PR reduction carries these lines as well, but is also inconsistent: 142-143 is continuous,
+144-146 grouped. For simple reasons of aesthetics these should be the same, since they're
+all the same basic musical material. Using 6-note groupings.
+(I-orch-01-flutes, I-orch-04-bassoons, I-piano-reduction)
+
+m. 142 and 144: Flute IV has slurs at 142 in the part which look like copyist work, but
+seem only pencilled in at that point on the score. (Perhaps it's just weakly scanned.)
+Parallel passage at 144 for flute II has no slurs. It makes musical sense that either
+both or neither should have them. Making it both.
+(I-orch-01-flutes)

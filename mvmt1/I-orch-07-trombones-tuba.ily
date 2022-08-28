@@ -470,17 +470,20 @@ Tuba_mvmt_I_AM = \relative c, {
 %%% Section AR = mm. 134-141
 %%% Tacet
 
+%%% Section AS = mm. 142-146 (Rehersal 14)
+%%% Tacet (cues?)
+
 %%% Final assembly
 
 Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF \NULL_I_AG
 		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_I_mvmt_I_AL \Trombone_I_mvmt_I_AM
-		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR }
+		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS }
 Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF \NULL_I_AG
 		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_II_mvmt_I_AL \Trombone_II_mvmt_I_AM
-		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR }
+		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS }
 Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF_AG
 		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_III_mvmt_I_AL \NULL_I_AM
-		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR }
+		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS }
 Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF_AG \Tuba_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Tuba_mvmt_I_AL \Tuba_mvmt_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ
-		\NULL_I_AR }
+		\NULL_I_AR \NULL_I_AS }

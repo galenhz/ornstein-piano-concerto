@@ -90,7 +90,7 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 				\partCombine \keepWithTag #'Score \Bassoon_III_mvmt_I \keepWithTag #'Score \Bassoon_IV_mvmt_I
 			}
 		>>
-		\new Staff = "Staff_Contrabassooon" \with { instrumentName = "Contrabassoon" shortInstrumentName = "Cbsn." } \Contrabassoon_mvmt_I
+		\new Staff = "Staff_Contrabassooon" \with { instrumentName = "Contrabassoon" shortInstrumentName = "Cbsn." } \keepWithTag #'Score \Contrabassoon_mvmt_I
 	>>
 	\new StaffGroup = "StaffGroup_brass" <<
 		\new StaffGroup = "StaffGroup_brass_trumpet" \with { instrumentName = "4 Trumpets in C" shortInstrumentName = "Tpt.     " }  <<
