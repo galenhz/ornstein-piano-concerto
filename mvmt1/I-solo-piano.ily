@@ -1294,9 +1294,9 @@ solo_lower_I_AT = \relative c {
 	>>
 }
 
-%%% This is as far as I've gotten
+%%% Section AU = mm. 155-164 (Rehersal 16)
 
-solo_upper_I_remain = \relative c' {
+solo_upper_I_AU = \relative c' {
 	% mm. 155-164 - Rehersal 16
 	\mark #16
 	\tempo "Andantino"
@@ -1315,6 +1315,30 @@ solo_upper_I_remain = \relative c' {
 			s4 b,8 b32 f' b cis b2
 		}
 	>>
+}
+
+solo_dynamics_I_AU = {
+	% mm. 155-164 - Rehersal 16
+	s8 s4.\p s2 s2 s2 s2 s2 s2 s2 s2 s2-\markup { \italic {poco rit.} }
+}
+
+solo_lower_I_AU = \relative c {
+	% mm. 155-164 - Rehersal 16
+	\repeat unfold 2 {
+		r4 \clef bass <b f' b>4
+		\clef treble <b' f' b>2
+	}
+	\repeat unfold 2 {
+		r4 \clef bass <d, aes' d>4
+		\clef treble <d' aes' d>2
+	}
+	r4 \clef bass <b, f' b>4
+	\clef treble <b' f' b>2
+}
+
+%%% Section AV = mm. 165-169
+
+solo_upper_I_AV = {
 	% mm. 165-169
 	\time 7/8
 	\override Beam.breakable = ##t
@@ -1326,11 +1350,51 @@ solo_upper_I_remain = \relative c' {
 	s2.
 	\time 8/8
 	s1
+}
+
+solo_dynamics_I_AV = {
+	% mm. 165-169
+	s2 s4. s4. s4. s4. s4. s4. s4. s2. s1
+}
+
+solo_lower_I_AV = \relative c {
+	% mm. 165-169
+	% FIXME: Still need to figure out note clusters and half-broken beams
+	\time 7/8
+	\clef bass
+	\override Beam.breakable = ##t
+	\repeat unfold 2 {
+		\tuplet 3/2 { r16 cis[ g' } \tuplet 3/2 { <bes c> \change Staff = "solo_upper" cis g' }
+		\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <bes c> g cis,] }
+		\tuplet 3/2 { r16 g'[ c } \tuplet 3/2 { <cis fis> \change Staff = "solo_upper" g' cis }
+		\tuplet 3/2 { <fis g> cis g } \tuplet 3/2 { \change Staff = "solo_lower" <cis, fis> c g] }
+	}
+	% \time 9/8 % ...this is actually the second 9/8 bar
+	\clef treble
+	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
+	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
+	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
+	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
+	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
+	\tuplet 3/2 { <dis e> bes e, } \tuplet 3/2 { \change Staff = "solo_lower" <bes ees> a e] }
+	% ...and a partial repeat of all the above
+	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
+	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
+	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
+	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
+	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
+	\tuplet 3/2 { <dis e> bes e,] }
+	\change Staff = "solo_lower"
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c'' {
 	% mm. 170-174 - Rehersal 17
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	<b, b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
+	<b b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
 	\time 6/8
 	<b b'>[ <e e'>16 q <g g'> <e e'> <a a'>8 <g g'> <e e'>]
 	\time 9/8 \ottava #1
@@ -1959,10 +2023,6 @@ solo_upper_I_remain = \relative c' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 155-164 - Rehersal 16
-	s8 s4.\p s2 s2 s2 s2 s2 s2 s2 s2 s2-\markup { \italic {poco rit.} }
-	% mm. 165-169
-	s2 s4. s4. s4. s4. s4. s4. s4. s2. s1
 	% mm. 170-174 - Rehersal 17
 	s2 s4. s2. s4.*3 s2 s4. s4.
 	% mm. 175-181
@@ -2022,48 +2082,10 @@ solo_dynamics_I_remain = {
 }
 
 solo_lower_I_remain = \relative c {
-	% mm. 155-164 - Rehersal 16
-	\repeat unfold 2 {
-		r4 \clef bass <b f' b>4
-		\clef treble <b' f' b>2
-	}
-	\repeat unfold 2 {
-		r4 \clef bass <d, aes' d>4
-		\clef treble <d' aes' d>2
-	}
-	r4 \clef bass <b, f' b>4
-	\clef treble <b' f' b>2
-	% mm. 165-169
-	% FIXME: Still need to figure out note clusters and half-broken beams
-	\time 7/8
-	\clef bass
-	\override Beam.breakable = ##t
-	\repeat unfold 2 {
-		\tuplet 3/2 { r16 cis,[ g' } \tuplet 3/2 { <bes c> \change Staff = "solo_upper" cis g' }
-		\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <bes c> g cis,] }
-		\tuplet 3/2 { r16 g'[ c } \tuplet 3/2 { <cis fis> \change Staff = "solo_upper" g' cis }
-		\tuplet 3/2 { <fis g> cis g } \tuplet 3/2 { \change Staff = "solo_lower" <cis, fis> c g] }
-	}
-	\time 9/8 % ...this is actually the second 9/8 bar
-	\clef treble
-	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
-	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
-	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
-	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
-	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
-	\tuplet 3/2 { <dis e> bes e, } \tuplet 3/2 { \change Staff = "solo_lower" <bes ees> a e] }
-	% ...and a partial repeat of all the above
-	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
-	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
-	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
-	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
-	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
-	\tuplet 3/2 { <dis e> bes e,] }
-	\change Staff = "solo_lower"
 	% mm. 170-174 - Rehersal 17
 	\time 7/8
 	\clef bass
-	<b,, b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
+	<b b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
 	\time 6/8
 	<b b'>[ <e e'>16 q <g g'> <e e'> <a a'>8 <g g'> <e e'>]
 	\time 9/8 \clef treble
@@ -2435,7 +2457,8 @@ solo_lower_I_remain = \relative c {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
-		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_remain }
+		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV
+		\solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
 		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS
@@ -2444,7 +2467,7 @@ solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
-		\solo_dynamics_I_AT \solo_dynamics_I_remain }
+		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
@@ -2452,7 +2475,8 @@ solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dyn
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
-		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_remain }
+		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV
+		\solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
 		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS

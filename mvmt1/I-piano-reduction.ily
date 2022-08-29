@@ -1180,9 +1180,9 @@ redux_lower_I_AT = \relative c,, {
 	\ottava #0
 }
 
-%%% This is as far as I've gotten
+%%% Section AU = mm. 155-164 (Rehersal 16)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_AU = \relative c' {
 	% mm. 155-164 - Rehersal 16
 	\mark #16
 	\tempo "Andantino"
@@ -1198,9 +1198,28 @@ redux_upper_I_remain = \relative c' {
 	b8. g16 \tuplet 3/2 { g8 bes cis }
 	b2~
 	b2
+}
+
+redux_dynamics_I_AU = {
+    % mm. 155-164 - Rehersal 16
+    s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
+}
+
+redux_lower_I_AU = \relative c, {
+	% mm. 155-164 - Rehersal 16
+	\time 2/4
+	\repeat unfold 4 { \tuplet 3/2 { d8 <aes' f'> g } \tuplet 3/2 { <aes f'> f e } }
+	\repeat unfold 4 { \tuplet 3/2 { d <b' f'> ais } \tuplet 3/2 { <b f'> aes g } }
+	\tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> f e }
+		\tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> e d }
+}
+
+%%% Section AV = mm. 165-169
+
+redux_upper_I_AV = \relative c {
 	% mm. 165-169
 	\time 7/8
-	des,8[ g16 g bes8 g c bes g]
+	des8[ g16 g bes8 g c bes g]
 	\time 9/8
 	des[ g16 g bes g c8 c bes g] bes[ c]
 	\clef treble
@@ -1210,11 +1229,35 @@ redux_upper_I_remain = \relative c' {
 	g bes c des4 des8[
 	\time 8/8
 	ees des fes des c des c bes]
+}
+
+redux_dynamics_I_AV = {
+	% mm. 165-169
+	s2 s4. s1 s8 s1 s8 s2. s1
+}
+
+redux_lower_I_AV = \relative c,, {
+	% mm. 165-169
+	\time 7/8
+	<des des'>8[ <g g'> <bes bes'> <g g'> <c c'> <bes bes'> <g g'>]
+	\time 9/8
+	<des des'>[ <g g'> <bes bes'> <c c'> <c c'> <bes bes'> <g g'>] <bes bes'>[ <c c'>]
+	<des des'>4 <des des'>8[ <ees ees'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
+	\time 6/8
+	\override Beam.breakable = ##t
+	<g g'> <bes bes'> <c c'> <des des'>4 <des des'>8[
+	\time 8/8
+	<ees ees'> <des des'> <fes fes'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c {
 	% mm. 170-174 - Rehersal 17
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\repeat unfold 6 { \clef bass <b, fis'>8 \clef treble <b' e b'>[ <c e c'> <cis e cis'> <d e d'>]}
+	\repeat unfold 6 { \clef bass <b fis'>8 \clef treble <b' e b'>[ <c e c'> <cis e cis'> <d e d'>]}
 	gis,8[ d']
 	\revert Beam.breakable
 	% mm. 175-181
@@ -1731,10 +1774,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-    % mm. 155-164 - Rehersal 16
-    s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
-	% mm. 165-169
-	s2 s4. s1 s8 s1 s8 s2. s1
 	% mm. 170-174 - Rehersal 17
 	s2 s4. s2. s4.*3 s2 s4. s4.
 	% mm. 175-181
@@ -1783,26 +1822,9 @@ redux_dynamics_I_remain = {
 }
 
 redux_lower_I_remain = \relative c,, {
-	% mm. 155-164 - Rehersal 16
-	\time 2/4
-	\repeat unfold 4 { \tuplet 3/2 { d'8 <aes' f'> g } \tuplet 3/2 { <aes f'> f e } }
-	\repeat unfold 4 { \tuplet 3/2 { d <b' f'> ais } \tuplet 3/2 { <b f'> aes g } }
-	\tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> f e }
-		\tuplet 3/2 { d <aes' f'> g } \tuplet 3/2 { <aes f'> e d }
-	% mm. 165-169
-	\time 7/8
-	<des, des'>8[ <g g'> <bes bes'> <g g'> <c c'> <bes bes'> <g g'>]
-	\time 9/8
-	<des des'>[ <g g'> <bes bes'> <c c'> <c c'> <bes bes'> <g g'>] <bes bes'>[ <c c'>]
-	<des des'>4 <des des'>8[ <ees ees'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
-	\time 6/8
-	\override Beam.breakable = ##t
-	<g g'> <bes bes'> <c c'> <des des'>4 <des des'>8[
-	\time 8/8
-	<ees ees'> <des des'> <fes fes'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
 	% mm. 170-174 - Rehersal 17
 	\time 7/8
-	\repeat unfold 6 { <e, e'>8 <b'' e g>[ <c e g> <cis e g> <d e g>] }
+	\repeat unfold 6 { <e e'>8 <b'' e g>[ <c e g> <cis e g> <d e g>] }
 	<gis,, gis'>8[ <d' d'>]
 	\revert Beam.breakable
 	% mm. 175-181
@@ -2295,13 +2317,13 @@ redux_lower_I_remain = \relative c,, {
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
 		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_AR
-		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_remain }
+		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
 		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_AR \redux_dynamics_I_AS \redux_dynamics_I_AT
-		\redux_dynamics_I_remain }
+		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
-		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_remain }
+		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_remain }
