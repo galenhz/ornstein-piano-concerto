@@ -1197,22 +1197,22 @@ solo_lower_I_AS = {
 	R1*2
 }
 
-%%% This is as far as I've gotten
+%%% Section AT = mm. 147-154 (Rehersal 15)
 
-solo_upper_I_remain = \relative c''' {
+solo_upper_I_AT = \relative c''' {
 	% mm. 147-154 - Rehersal 15
 	\mark #15
-	\tempo "cantabile"
+	\tempo "quasi improvisata"
 	\time 5/4
 	<<
 		\new Voice {
 			\voiceOne
 			e2~ e8 d~ d4~ d8 cis16 bes
 			\time 7/4
-			\tuplet 3/2 { a fis f } \tuplet 3/2 { fis a bes } cis1~ cis4 c8 des
+			\tuplet 3/2 8 { a fis \beamCutR f \beamCutL fis a bes } cis1~ cis4 c8 des
 			\time 5/4
 			e2~ e8 d~ d4~ d8 cis16 bes
-			\tuplet 3/2 { a fis f } \tuplet 3/2 { fis a bes } cis2.~ cis8 b,16[ c]
+			\tuplet 3/2 8 { a fis \beamCutR f \beamCutL fis a bes } cis2.~ cis8 b,16[ c]
 			\time 3/4
 			ees2~ ees8 \tuplet 3/2 { d16 a bes }
 			cis2~ cis8 b16 c
@@ -1222,38 +1222,81 @@ solo_upper_I_remain = \relative c''' {
 		}
 		\new Voice {
 			\voiceTwo
-			\tuplet 3/2 { r8 g' aes } \tuplet 3/2 { c16 bes c }
-				\tuplet 3/2 { bes a bes } \tuplet 3/2 { a gis a }
-				\tuplet 3/2 { gis fis gis } \tuplet 3/2 { fis f fis }
-				\tuplet 3/2 { f ees f } ees8 d
+			\tuplet 3/2 { r8 g' aes } \tuplet 3/2 8 { c16 bes \beamCutR c \beamCutL bes a bes
+				a gis \beamCutR a \beamCutL gis fis gis
+				fis f \beamCutR fis \beamCutL f ees f } ees8 d
 			\time 7/4
-			r4 \tuplet 3/2 { r8 c cis } \tuplet 3/2 { fes16 ees fes }
-				\tuplet 3/2 { ees des ees } \tuplet 3/2 { des c des }
-				\tuplet 3/2 { c bes c } \tuplet 3/2 { bes a bes }
-				\tuplet 3/2 { a gis a } \tuplet 3/2 { gis fis gis }
-				\tuplet 3/2 { fis eis fis } f8 ees
+			r4 \tuplet 3/2 { r8 c cis } \tuplet 3/2 8 { fes16 ees \beamCutR fes \beamCutL ees des ees
+				des c \beamCutR des \beamCutL c bes c
+				bes a \beamCutR bes \beamCutL a gis a
+				gis fis \beamCutR gis \beamCutL fis eis fis } f8 ees
 			\time 5/4
-			\tuplet 3/2 { r8 g' aes } \tuplet 3/2 { c16 bes c }
-				\tuplet 3/2 { bes a bes } \tuplet 3/2 { a gis a }
-				\tuplet 3/2 { gis fis gis } \tuplet 3/2 { fis f fis }
-				\tuplet 3/2 { f ees f } ees8 d
-			r4 \tuplet 3/2 { r8 a bes } \tuplet 3/2 { des16 c des }
-				\tuplet 3/2 { c bes c } \tuplet 3/2 { bes a bes }
-				\tuplet 3/2 { a gis a } gis8 ges
+			\tuplet 3/2 { r8 g' aes } \tuplet 3/2 8 { c16 bes \beamCutR c \beamCutL bes a bes
+				a gis \beamCutR a \beamCutL gis fis gis
+				fis f \beamCutR fis \beamCutL f ees f } ees8 d
+			r4 \tuplet 3/2 { r8 a bes } \tuplet 3/2 8 { des16 c \beamCutR des \beamCutL c bes c
+				bes a \beamCutR bes \beamCutL a gis a } gis8 ges
 			\time 3/4
-			\tuplet 3/2 { r16 fes[ geses] } \tuplet 3/2 { aes[ ges aes }
-				\tuplet 3/2 { ges f ges] } \tuplet 3/2 { f[ ees f] } ees d r8
-			\tuplet 3/2 { r16 d[ ees] } \tuplet 3/2 { ges[ f ges }
-				\tuplet 3/2 { f ees f] } \tuplet 3/2 { ees[ d ees] } d des r8
-			\tuplet 3/2 { r16 fes[ geses] } \tuplet 3/2 { aes[ ges aes }
-				\tuplet 3/2 { ges f ges] } \tuplet 3/2 { f[ ees f] } ees d r8
+			\tuplet 3/2 { r16 fes[ geses] }
+				\tuplet 3/2 8 { aes[ ges \beamCutR aes \beamCutL ges f ges] f[ ees f] } ees d r8
+			\tuplet 3/2 { r16 d[ ees] }
+				\tuplet 3/2 8 { ges[ f \beamCutR ges \beamCutL f ees f] ees[ d ees] } d des r8
+			\tuplet 3/2 { r16 fes[ geses] }
+				\tuplet 3/2 8 { aes[ ges \beamCutR aes \beamCutL ges f ges] f[ ees f] } ees d r8
 			\time 7/8
-			\tuplet 3/2 { r16 bis[ cis } \tuplet 3/2 { e dis e] }
-				\tuplet 3/2 { dis[ cis dis } des c]
-				\tuplet 3/2 { e[ dis e } \tuplet 3/2 { dis cis dis } des c]
-
+			\tuplet 3/2 8 { r16 bis[ \beamCutR cis \beamCutL e dis e]
+				dis[ cis \beamCutR dis } \beamCutL des c]
+				\tuplet 3/2 8 { e[ dis \beamCutR e \beamCutL dis cis \beamCutR dis } \beamCutL des c]
 		}
 	>>
+}
+
+solo_dynamics_I_AT = {
+	% mm. 147-154 - Rehersal 15
+	s1-"cantabile" s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.-\markup { \italic {molto rit.} }
+}
+
+solo_lower_I_AT = \relative c {
+	% mm. 147-154 - Rehersal 15
+	\time 5/4
+	\clef bass
+	<ees b'>8 <f,, f'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <f'' ees'>[ <b g'> \clef treble <ees aes>
+			\clef bass <b g'> <f ees'>] } }
+	\time 7/4
+	<c b'>8 <ees,, ees'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <c'' b'>[ <g' ees'> <b f'> <g ees'> <c, b'>] } }
+		\tuplet 3/2 { r8 <c b'> <g' ees'> } <b f'>4
+	\time 5/4
+	<ees, b'>8 <f,, f'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <f'' ees'>[ <b g'> \clef treble <ees aes>
+			\clef bass <b g'> <f ees'>] } }
+	<c b'>8 <ees,, ees'>
+		\repeat unfold 2 { \tuplet 6/4 { r8 <c'' b'>[ <g' ees'> <b f'> <g ees'> <c, b'>] } }
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			r8 f r f r f
+			r a r a r a
+			r f r f r f
+			\time 7/8
+			r <d gis d'> r <d gis d'> r <d gis d'> r
+		}
+		\new Voice {
+			\voiceTwo
+			<d, aes'>2.
+			<f d'>
+			<d aes'>
+			\time 7/8
+			<bes bes'>~ <bes bes'>8
+		}
+	>>
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c' {
 	% mm. 155-164 - Rehersal 16
 	\mark #16
 	\tempo "Andantino"
@@ -1916,8 +1959,6 @@ solo_upper_I_remain = \relative c''' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 147-154 - Rehersal 15
-	s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.-\markup { \italic {molto rit.} }
 	% mm. 155-164 - Rehersal 16
 	s8 s4.\p s2 s2 s2 s2 s2 s2 s2 s2 s2-\markup { \italic {poco rit.} }
 	% mm. 165-169
@@ -1981,44 +2022,9 @@ solo_dynamics_I_remain = {
 }
 
 solo_lower_I_remain = \relative c {
-	% mm. 147-154 - Rehersal 15
-	\time 5/4
-	\clef bass
-	<ees b'>8 <f,, f'>
-		\repeat unfold 2 { \tuplet 6/4 { r8 <f'' ees'> <b g'> \clef treble <ees aes>
-			\clef bass <b g'> <f ees'> } }
-	\time 7/4
-	<c b'>8 <ees,, ees'>
-		\repeat unfold 2 { \tuplet 6/4 { r8 <c'' b'> <g' ees'> <b f'> <g ees'> <c, b'> } }
-		\tuplet 3/2 { r8 <c b'> <g' ees'> } <b f'>4
-	\time 5/4
-	<ees, b'>8 <f,, f'>
-		\repeat unfold 2 { \tuplet 6/4 { r8 <f'' ees'> <b g'> \clef treble <ees aes>
-			\clef bass <b g'> <f ees'> } }
-	<c b'>8 <ees,, ees'>
-		\repeat unfold 2 { \tuplet 6/4 { r8 <c'' b'> <g' ees'> <b f'> <g ees'> <c, b'> } }
-	\time 3/4
-	<<
-		\new Voice {
-			\voiceOne
-			r8 f r f r f
-			r a r a r a
-			r f r f r f
-			\time 7/8
-			r <d gis d'> r <d gis d'> r <d gis d'> r
-		}
-		\new Voice {
-			\voiceTwo
-			<d, aes'>2.
-			<f d'>
-			<d aes'>
-			\time 7/8
-			<bes bes'>~ <bes bes'>8
-		}
-	>>
 	% mm. 155-164 - Rehersal 16
 	\repeat unfold 2 {
-		r4 \clef bass <b' f' b>4
+		r4 \clef bass <b f' b>4
 		\clef treble <b' f' b>2
 	}
 	\repeat unfold 2 {
@@ -2429,22 +2435,25 @@ solo_lower_I_remain = \relative c {
 
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
-		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_remain }
+		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
-		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS }
+		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS
+		\solo_upper_I_AT }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
-		\solo_dynamics_I_remain }
+		\solo_dynamics_I_AT \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
-		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS }
+		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
+		\solo_dynamics_I_AT }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
-		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_remain }
+		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
-		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS }
+		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS
+		\solo_lower_I_AT }

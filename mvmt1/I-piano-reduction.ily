@@ -1141,12 +1141,12 @@ redux_lower_I_AS = \relative c'' {
 		\tuplet 3/2 { a cis, fis,~ } fis4. }
 }
 
-%%% This is as far as I've gotten
+%%% Section AT = mm. 147-154 (Rehersal 15)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_AT = {
 	% mm. 147-154 - Rehersal 15
 	\mark #15
-	\tempo "cantabile"
+	\tempo "quasi improvisata"
 	\time 5/4
 	R1*5/4
 	\time 7/4
@@ -1157,6 +1157,32 @@ redux_upper_I_remain = \relative c' {
 	r2. r2. r2.
 	\time 7/8
 	r2. r8
+}
+
+redux_dynamics_I_AT = {
+    % mm. 147-154 - Rehersal 15
+    s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.
+}
+
+redux_lower_I_AT = \relative c,, {
+	% mm. 147-154 - Rehersal 15
+	\time 5/4
+	R1*5/4
+	\time 7/4
+	R1*7/4
+	\time 5/4
+	R1*5/4*2
+	\time 3/4
+	d2. d d
+	\time 7/8
+	\ottava #-1
+	bes2.~ bes8
+	\ottava #0
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 155-164 - Rehersal 16
 	\mark #16
 	\tempo "Andantino"
@@ -1705,8 +1731,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-    % mm. 147-154 - Rehersal 15
-    s1 s4 s1 s2. s1 s4 s1 s4 s2. s2. s2. s2 s4.
     % mm. 155-164 - Rehersal 16
     s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
 	% mm. 165-169
@@ -1759,19 +1783,6 @@ redux_dynamics_I_remain = {
 }
 
 redux_lower_I_remain = \relative c,, {
-	% mm. 147-154 - Rehersal 15
-	\time 5/4
-	R1*5/4
-	\time 7/4
-	R1*7/4
-	\time 5/4
-	R1*5/4*2
-	\time 3/4
-	d2. d d
-	\time 7/8
-	\ottava #-1
-	bes2.~ bes8
-	\ottava #0
 	% mm. 155-164 - Rehersal 16
 	\time 2/4
 	\repeat unfold 4 { \tuplet 3/2 { d'8 <aes' f'> g } \tuplet 3/2 { <aes f'> f e } }
@@ -2284,12 +2295,13 @@ redux_lower_I_remain = \relative c,, {
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
 		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_AR
-		\redux_upper_I_AS \redux_upper_I_remain }
+		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
-		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_AR \redux_dynamics_I_AS \redux_dynamics_I_remain }
+		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_AR \redux_dynamics_I_AS \redux_dynamics_I_AT
+		\redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
-		\redux_lower_I_AS \redux_lower_I_remain }
+		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_remain }

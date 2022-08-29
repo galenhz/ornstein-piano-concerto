@@ -61,3 +61,4 @@ NULL_I_AP = { \mark #12 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 }
 NULL_I_AQ = { \mark #13 \tempo "Vivo" \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 8/8 R1 \time 6/8 R2. \time 8/8 R1 \time 6/8 R2. \time 8/8 R1 }
 NULL_I_AR = { \time 2/4 R2*8 }
 NULL_I_AS = { \mark #14 \tempo "Meno mosso" \time 6/4 R1*6/4 \time 5/4 R1*5/4 \time 6/4 R1*6/4 \time 4/4 R1*2 }
+NULL_I_AT = { \mark #15 \tempo "quasi improvisata" \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 5/4 R1*5/4*2 \time 3/4 R2.*3 \time 7/8 R1*7/8 }
