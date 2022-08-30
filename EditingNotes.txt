@@ -339,3 +339,8 @@ seem only pencilled in at that point on the score. (Perhaps it's just weakly sca
 Parallel passage at 144 for flute II has no slurs. It makes musical sense that either
 both or neither should have them. Making it both.
 (I-orch-01-flutes)
+
+m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
+It could be code for "let this ring as long as feasable rather than just cut off at the
+bar line." Making it a dotted half to fit the bar, but this might be worth reverting.
+(I-solo-piano)

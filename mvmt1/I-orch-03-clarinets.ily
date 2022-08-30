@@ -901,7 +901,7 @@ Clarinet_I_II_mvmt_I_AQ_AR = \transpose c' bes \relative c' {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r4_\markup { \dynamic mp \italic "staccato sempre" } fis8[ gis fis gis a
 	\time 9/8
 	bis cis] e[ dis16 r32 e dis8 cis16 r32 dis cis8 bis16 r32 cis bis8
@@ -916,10 +916,10 @@ Clarinet_I_II_mvmt_I_AQ_AR = \transpose c' bes \relative c' {
 	\time 6/8
 	a16_\markup { \italic "sempre più" \dynamic f } r32 bis a8 gis16 r32 a gis8 fis] eis[
 	\time 8/8
-	fis gis a cis bis16 r32 cis bis8 a16 r32 bis a8]
+	fis gis a cis bis16 r32 cis bis8 a16 r32 bis a8
 	\time 2/4
-	gis r8 r4
-	\revert Beam.breakable
+	gis] r8 r4
+	\revert Staff.Beam.breakable
 	R2*7
 }
 

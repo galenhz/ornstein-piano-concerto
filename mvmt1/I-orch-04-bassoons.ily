@@ -659,7 +659,7 @@ Bassoon_I_II_mvmt_I_AQ_AR = \relative c, {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r4_\markup { \dynamic mp \italic "staccato sempre" } e8[ fis e fis g
 	\time 9/8
 	ais b] d[ cis16 r32 d cis8 b16 r32 cis b8 ais16 r32 b ais8
@@ -674,11 +674,11 @@ Bassoon_I_II_mvmt_I_AQ_AR = \relative c, {
 	\time 6/8
 	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
-	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	e fis g b ais16 r32 b ais8 g16 r32 ais g8
 	%% m. 134
 	\time 2/4
-	fis r8 r4
-	\revert Beam.breakable
+	fis] r8 r4
+	\revert Staff.Beam.breakable
 	R2*7
 }
 
@@ -686,7 +686,7 @@ Bassoon_III_mvmt_I_AQ_AR = \relative c, {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	\time 7/8
 	R1*7/8
 	\time 9/8
@@ -702,11 +702,11 @@ Bassoon_III_mvmt_I_AQ_AR = \relative c, {
 	\time 6/8
 	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
-	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	e fis g b ais16 r32 b ais8 g16 r32 ais g8
 	%% m. 134
 	\time 2/4
-	fis r8 r4
-	\revert Beam.breakable
+	fis] r8 r4
+	\revert Staff.Beam.breakable
 	R2*7
 }
 
@@ -714,7 +714,7 @@ Bassoon_IV_mvmt_I_AQ_AR = \relative c {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	\time 7/8
 	R1*7/8
 	\time 9/8
@@ -730,11 +730,11 @@ Bassoon_IV_mvmt_I_AQ_AR = \relative c {
 	\time 6/8
 	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
-	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	e fis g b ais16 r32 b ais8 g16 r32 ais g8
 	%% m. 134
 	\time 2/4
-	fis r8 r4
-	\revert Beam.breakable
+	fis] r8 r4
+	\revert Staff.Beam.breakable
 	R2*7
 }
 

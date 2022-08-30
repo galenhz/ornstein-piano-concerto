@@ -1612,7 +1612,7 @@ redux_upper_I_remain = \relative c {
 	% mm. 265-271 - Rehersal 29
 	\mark #29
 	\time 6/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r16 <g, b ees>[ \tuplet 3/2 { \beamCutL <b ees fis> <b ees g> <b ees bes'> } <b ees b'>8 <b ees bes'>16 \beamCutR <b ees g> \tuplet 3/2 { \beamCutL <b ees bes'> <b ees g> <b ees fis>] } r16 <f' a cis>[
 	\time 5/8
 	\tuplet 3/2 { \beamCutL <a cis e> <a cis f> <a cis gis'> } <a cis a'>8 <a cis gis'>16 \beamCutR <a cis f> \tuplet 3/2 { \beamCutL <a cis gis> <a cis f> \beamCutR <a cis e> } \tuplet 3/2 { \beamCutL <a cis f> <a cis e> <a cis>] }
@@ -1662,7 +1662,7 @@ redux_upper_I_remain = \relative c {
 	a bes a16 g fis8]
 	\time 6/8
 	r8 fis[ a g16 \beamCutR fis \beamCutL g fis ees8]
-	\revert Beam.breakable
+	\revert Staff.Beam.breakable
 	% mm. 281-284 - Rehersal 31
 	\time 4/4
 	\mark #31

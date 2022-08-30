@@ -724,7 +724,7 @@ Flute_I_mvmt_I_AQ = \relative c'' {
 	\mark #13
 	\time 7/8
 	\tempo "Vivo"
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	\time 7/8
 	R1*7/8
 	\time 9/8
@@ -740,7 +740,7 @@ Flute_I_mvmt_I_AQ = \relative c'' {
 	\time 6/8
 	g16_\markup { \italic "sempre più" \dynamic f } r32 ais g8 fis16 r32 g fis8 e] dis[
 	\time 8/8
-	e fis g b ais16 r32 b ais8 g16 r32 ais g8]
+	e fis g b ais16 r32 b ais8 g16 r32 ais g8
 }
 
 %%% Section AR = mm. 134-141
@@ -757,8 +757,8 @@ Picc_mvmt_I_AR = \relative c'' {
 
 Flute_I_mvmt_I_AR = \relative c'' {
 	\time 2/4
-	fis8 r8 r4
-	\revert Beam.breakable
+	fis8] r8 r4
+	\revert Staff.Beam.breakable
 	R2
 	\partCombineChords
 	\tuplet 10/8 { fis'16([\ff g fis g bes a gis a gis g)] }

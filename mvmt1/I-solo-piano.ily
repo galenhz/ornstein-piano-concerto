@@ -2298,22 +2298,37 @@ solo_lower_I_remain = \relative c {
 	\time 6/8
 	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
 	\time 9/8
-	\override Beam.breakable = ##t
-	% FIXME: Workaround for what seems to be a lilypond bug. Having voices here causes m. 270 to be run off the page. Score is now incorrect.
-	%<<
-	%	\new Voice {
-	%		\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] }
-	%	}
-	%	\new Voice {
-	%		\voiceTwo
-	%		\repeat unfold 7 { r4 <c,, c'>4 }
-	%	}
-	%>>
-	\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> <c, c'>8 <d'' fis bes c d>] }
-	\revert Beam.breakable
+	\override Staff.Beam.breakable = ##t
+	% Fixed: Beam breakability has to be set at staff level, and I can't just repeat roughshod over barlines.
+	<<
+		\new Voice {
+			\voiceOne
+			r16 <fis, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
+				r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] r16 <fis,, fis'>[ |
+			\time 6/8
+			<a a'> <bes bes'> r8 <d' fis bes c d>] r16 <fis,, fis'>[ <a a'> <bes bes'> r8 |
+			\time 9/8
+			<d' fis bes c d>] r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
+				r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] |
+			\time 4/8
+			r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
+		}
+		\new Voice {
+			\voiceTwo
+			r4 <c,, c'>4 r <c c'> r8 |
+			\time 6/8
+			r8 <c c'>4 r4  <c c'>8~ |
+			\time 9/8
+			<c c'>8 r4 <c c'> r <c c'> |
+			\time 4/8
+			r4 <c c'>4
+		}
+	>>
+	%\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> <c, c'>8 <d'' fis bes c d>] }
+	\revert Staff.Beam.breakable
 	% mm. 272-280 - Rehersal 30
 	\time 6/8
-	\stemDown <ees,, ees'>2. \stemNeutral
+	\stemDown <ees ees'>2. \stemNeutral
 	\time 4/8
 	s2
 	\time 6/8 s2. \time 4/8 s2 \time 6/8 s2. \time 4/8 s2 \time 6/8 s2. \time 4/8 s2
