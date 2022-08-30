@@ -649,24 +649,27 @@ Horn_IV_mvmt_I_AR = \transpose c' f \relative c' {
 %%% Section AT = mm. 147-154 (Rehersal 15)
 %%% Tacet
 
+%%% Section AU = mm. 155-164 (Rehersal 16)
+%%% Tacet
+
 %%% Final assembly
 
 Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_I_mvmt_I_AL \Horn_I_mvmt_I_AM \NULL_I_AN \Horn_I_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_I_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT }
+		\NULL_I_AT \NULL_I_AU }
 Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_II_mvmt_I_AL \Horn_II_mvmt_I_AM \NULL_I_AN \Horn_II_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_II_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT }
+		\NULL_I_AT \NULL_I_AU }
 Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_III_mvmt_I_AF \NULL_I_AG \Horn_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_III_mvmt_I_AL \Horn_III_mvmt_I_AM \NULL_I_AN \Horn_III_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_III_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT }
+		\NULL_I_AT \NULL_I_AU }
 Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_IV_mvmt_I_AF \NULL_I_AG \Horn_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_IV_mvmt_I_AL \Horn_IV_mvmt_I_AM \NULL_I_AN \Horn_IV_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_IV_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT }
+		\NULL_I_AT \NULL_I_AU }
 Horn_V_mvmt_I = { \NULL_I_AA \Horn_V_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
 		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS
-		\NULL_I_AT }
+		\NULL_I_AT \NULL_I_AU }
 Horn_VI_mvmt_I = { \NULL_I_AA \Horn_VI_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
-		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT }
+		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU }
 Horn_VII_mvmt_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
-		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT }
+		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU }
