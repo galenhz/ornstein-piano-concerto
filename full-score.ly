@@ -21,6 +21,10 @@
 \paper {
 	#(set-paper-size "a3")
 	system-separator-markup = \slashSeparator
+	top-margin = 0.5\in
+	bottom-margin = 0.5\in
+	left-margin = 0.75\in
+	right-margin = 0.75\in
 }
 
 \header {
@@ -140,21 +144,21 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 		\new Staff = "solo_lower" \solo_lower_I_limited
 	>>
 	\new StaffGroup = "StaffGroup_strings" <<
-		\new StaffGroup = "StaffGroup_violinI" \with { instrumentName = "Violin I" shortInstrumentName = "Vn. I" \RemoveAllEmptyStaves } <<
+		\new StaffGroup = "StaffGroup_violinI" \with { instrumentName = "Violin I" shortInstrumentName = "Vn. I" } <<
 			\new Staff = "Staff_violinI" \keepWithTag #'Score \Violin_I_mvmt_I
-			\new Staff = "Staff_violinI_divisi_II" \keepWithTag #'Score \Violin_I_divisi_II_mvmt_I
+			\new Staff = "Staff_violinI_divisi_II" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Violin_I_divisi_II_mvmt_I
 		>>
-		\new StaffGroup = "StaffGroup_violinII" \with { instrumentName = "Violin II" shortInstrumentName = "Vn. II" \RemoveAllEmptyStaves } <<
+		\new StaffGroup = "StaffGroup_violinII" \with { instrumentName = "Violin II" shortInstrumentName = "Vn. II" } <<
 			\new Staff = "Staff_violinII" \keepWithTag #'Score \Violin_II_mvmt_I
-			\new Staff = "Staff_violinII_divisi_II" \keepWithTag #'Score \Violin_II_divisi_II_mvmt_I
+			\new Staff = "Staff_violinII_divisi_II" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Violin_II_divisi_II_mvmt_I
 		>>
-		\new StaffGroup = "StaffGroup_viola" \with { instrumentName = "Viola" shortInstrumentName = "Va." \RemoveAllEmptyStaves } <<
+		\new StaffGroup = "StaffGroup_viola" \with { instrumentName = "Viola" shortInstrumentName = "Va." } <<
 			\new Staff = "Staff_viola" \keepWithTag #'Score \Viola_mvmt_I
-			\new Staff = "Staff_viola_divisi_II" \keepWithTag #'Score \Viola_divisi_II_mvmt_I
+			\new Staff = "Staff_viola_divisi_II" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Viola_divisi_II_mvmt_I
 		>>
-		\new StaffGroup = "StaffGroup_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." \RemoveAllEmptyStaves } <<
+		\new StaffGroup = "StaffGroup_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." } <<
 			\new Staff = "Staff_cello" \keepWithTag #'Score \Cello_mvmt_I
-			\new Staff = "Staff_cello_divisi_III" \keepWithTag #'Score \Cello_divisi_II_mvmt_I
+			\new Staff = "Staff_cello_divisi_III" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Cello_divisi_II_mvmt_I
 		>>
 		\new Staff = "Staff_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } \keepWithTag #'Score \Bass_mvmt_I
 	>>

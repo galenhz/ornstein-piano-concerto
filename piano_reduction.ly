@@ -10,6 +10,10 @@
 
 \paper {
 	#(set-paper-size "b4")
+	top-margin = 0.5\in
+	bottom-margin = 0.5\in
+	left-margin = 0.75\in
+	right-margin = 0.75\in
 }
 
 \header {
