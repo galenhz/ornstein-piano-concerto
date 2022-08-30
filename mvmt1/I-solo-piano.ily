@@ -1359,31 +1359,31 @@ solo_dynamics_I_AV = {
 
 solo_lower_I_AV = \relative c {
 	% mm. 165-169
-	% FIXME: Still need to figure out note clusters and half-broken beams
+	% FIXME: Still need to figure out note clusters.
 	\time 7/8
 	\clef bass
 	\override Beam.breakable = ##t
 	\repeat unfold 2 {
-		\tuplet 3/2 { r16 cis[ g' } \tuplet 3/2 { <bes c> \change Staff = "solo_upper" cis g' }
-		\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <bes c> g cis,] }
-		\tuplet 3/2 { r16 g'[ c } \tuplet 3/2 { <cis fis> \change Staff = "solo_upper" g' cis }
-		\tuplet 3/2 { <fis g> cis g } \tuplet 3/2 { \change Staff = "solo_lower" <cis, fis> c g] }
+		\tuplet 3/2 8 { r16 cis[ \beamCutR g' \beamCutL <bes c> \change Staff = "solo_upper" cis \beamCutR g'
+			\beamCutL <c cis> g \beamCutR cis, \change Staff = "solo_lower" \beamCutL <bes c> g cis,] }
+		\tuplet 3/2 8 { r16 g'[ \beamCutR c \beamCutL <cis fis> \change Staff = "solo_upper" g' \beamCutR cis
+			\beamCutL <fis g> cis \beamCutR g \change Staff = "solo_lower" \beamCutL <cis, fis> c g] }
 	}
-	% \time 9/8 % ...this is actually the second 9/8 bar
+	% \time 9/8 ...this is actually the second 9/8 bar
 	\clef treble
-	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
-	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
-	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
-	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
-	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
-	\tuplet 3/2 { <dis e> bes e, } \tuplet 3/2 { \change Staff = "solo_lower" <bes ees> a e] }
+	\tuplet 3/2 8 { r16 bes[ \beamCutR dis \beamCutL <e a> \change Staff = "solo_upper" bes' \beamCutR e
+		\beamCutL <a bes> e \beamCutR bes \change Staff = "solo_lower" \beamCutL <e, a> dis bes] }
+	\tuplet 3/2 8 { r16 cis[ \beamCutR fis \beamCutL <g c> \change Staff = "solo_upper" cis \beamCutR g'
+		\beamCutL <c cis> g \beamCutR cis, \change Staff = "solo_lower" \beamCutL <g c> fis cis] }
+	\tuplet 3/2 8 { r16 e[ \beamCutR a \beamCutL <bes ees> \change Staff = "solo_upper" e \beamCutR bes'
+		\beamCutL <dis e> bes \beamCutR e, \change Staff = "solo_lower" \beamCutL <bes ees> a e] }
 	% ...and a partial repeat of all the above
-	\tuplet 3/2 { r16 bes[ dis } \tuplet 3/2 { <e a> \change Staff = "solo_upper" bes' e }
-	\tuplet 3/2 { <a bes> e bes } \tuplet 3/2 { \change Staff = "solo_lower" <e, a> dis bes] }
-	\tuplet 3/2 { r16 cis[ fis } \tuplet 3/2 { <g c> \change Staff = "solo_upper" cis g' }
-	\tuplet 3/2 { <c cis> g cis, } \tuplet 3/2 { \change Staff = "solo_lower" <g c> fis cis] }
-	\tuplet 3/2 { r16 e[ a } \tuplet 3/2 { <bes ees> \change Staff = "solo_upper" e bes' }
-	\tuplet 3/2 { <dis e> bes e,] }
+	\tuplet 3/2 8 { r16 bes[ \beamCutR dis \beamCutL <e a> \change Staff = "solo_upper" bes' \beamCutR e
+		\beamCutL <a bes> e \beamCutR bes \change Staff = "solo_lower" \beamCutL <e, a> dis bes] }
+	\tuplet 3/2 8 { r16 cis[ \beamCutR fis \beamCutL <g c> \change Staff = "solo_upper" cis \beamCutR g'
+		\beamCutL <c cis> g \beamCutR cis, \change Staff = "solo_lower" \beamCutL <g c> fis cis] }
+	\tuplet 3/2 8 { r16 e[ \beamCutR a \beamCutL <bes ees> \change Staff = "solo_upper" e \beamCutR bes'
+		\beamCutL <dis e> bes e,] }
 	\change Staff = "solo_lower"
 }
 
