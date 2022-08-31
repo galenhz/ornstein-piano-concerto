@@ -112,7 +112,7 @@ Bassoon_I_mvmt_I_AD_AE = \relative c'' {
 	R1*2
 	\clef bass
 	\tempo "più agitato"
-	ees,,,2\p d_"rit."
+	ees,,,2\p d_\markup \italic "rit."
 }
 
 Bassoon_II_mvmt_I_AD_AE = \relative c' {
