@@ -797,7 +797,6 @@ Bassoon_cues_mvmt_I_AS = \relative c' {
 
 %%% Section AT = mm. 147-154 (Rehersal 15)
 
-%%% FIXME: move the rit. to the middle of the bar (after lilypond upgrade?)
 Contrabassoon_mvmt_I_AT = \relative c, {
 	\mark #15
 	\tempo "quasi improvisata"
@@ -812,26 +811,113 @@ Contrabassoon_mvmt_I_AT = \relative c, {
 	f2.
 	d2.
 	\time 7/8
-	bes2.~_\markup \italic "molto rit." bes8
+	<<
+		{ bes2.~ bes8 }
+		{ s2 s4_\markup \italic "molto rit." }
+	>>
 }
 
 %%% Section AU = mm. 155-164 (Rehersal 16)
 %%% Tacet
 
+%% Cues only
+Bassoon_I_Contra_mvmt_I_AU = \relative c' {
+	\tag #'Score \NULL_I_AU
+	\tag #'Part {
+		\mark #16
+		\tempo "Andantino"
+		\time 2/4
+		R2*6
+		<<
+			\new CueVoice {
+				b4^"I Cl." b4~
+				b8. g16 \tuplet 3/2 { g8( bes cis }
+				b2)~
+				b2_\markup \italic "poco rit."
+			}
+			\new Voice {
+				\voiceTwo
+				R2*4
+			}
+		>>
+	}
+}
+
+%%% Section AV = mm. 165-169
+
+Bassoon_I_mvmt_I_AV = \relative c {
+	\partCombineSoloI
+	\override Staff.Beam.breakable = ##t
+	\time 7/8
+	des8[_\markup \italic "Più animato e cresc." g16 g bes8 g c( bes g)]
+	\time 9/8
+	des8[ g16 \beamCutR g \beamCutL bes g c8 c( bes g)] bes[ c]
+	des4 des8[ ees des c des c bes]
+	\time 6/8
+	g[ bes c] des4\< des8[
+	\time 8/8
+	ees des fes( des) c des( c bes])\!
+	\revert Staff.Beam.breakable
+	\partCombineAutomatic
+}
+
+Bassoon_III_mvmt_I_AV = \relative c {
+	%%\partCombineSoloI
+	\override Staff.Beam.breakable = ##t
+	\time 7/8
+	\tag #'Score { R1*7/8 \time 9/8 r4 r4 r8 r8 r8 }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				des8[^"I Bsn."_\markup \italic "Più animato e cresc." g16 g bes8 g c( bes g)]
+				\time 9/8
+				des8[ g16 \beamCutR g \beamCutL bes g c8 c( bes g)]
+			}
+			\new Voice {
+				\voiceTwo
+				R1*7/8
+				\time 9/8
+				r4 r4 r8 r8 r8
+			}
+		>>
+	}
+	bes,[ c]
+	des4 des8[ ees des c des c bes]
+	\time 6/8
+	g[ bes c] des4\< des8[
+	\time 8/8
+	ees des fes( des) c des( c bes])\!
+	\revert Staff.Beam.breakable
+	%%\partCombineAutomatic
+}
+
+Contrabassoon_mvmt_I_AV = \relative c {
+	\time 7/8
+	des8[_\markup \italic "Più animato e cresc." g16 g bes8 g c( bes g)]
+	\time 9/8
+	des8[ g bes c c( bes g)] r4
+	R1*9/8
+	\time 6/8
+	R2.
+	\time 8/8
+	R1
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
 		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ \Bassoon_I_mvmt_I_AK_AL \Bassoon_I_mvmt_I_AM \Bassoon_I_mvmt_I_AN
-		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_I_mvmt_I_AS \NULL_I_AT \NULL_I_AU }
+		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_I_mvmt_I_AS \NULL_I_AT \Bassoon_I_Contra_mvmt_I_AU
+		\Bassoon_I_mvmt_I_AV }
 Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
 		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_II_mvmt_I_AM \Bassoon_II_mvmt_I_AN
-		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU }
+		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV }
 Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_III_mvmt_I_AM \Bassoon_III_mvmt_I_AN
-		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_III_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU }
+		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_III_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Bassoon_III_mvmt_I_AV }
 Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_IV_mvmt_I_AM \NULL_I_AN \Bassoon_all_mvmt_I_AO
-		\NULL_I_AP \Bassoon_IV_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU }
+		\NULL_I_AP \Bassoon_IV_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV }
 Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF \NULL_I_AG
 		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Contrabassoon_mvmt_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ
-		\NULL_I_AR \Bassoon_cues_mvmt_I_AS \Contrabassoon_mvmt_I_AT \NULL_I_AU }
+		\NULL_I_AR \Bassoon_cues_mvmt_I_AS \Contrabassoon_mvmt_I_AT \Bassoon_I_Contra_mvmt_I_AU \Contrabassoon_mvmt_I_AV }

@@ -50,7 +50,7 @@ m. 141: Grace notes at end of bar for flutes should be outside the bracket, but 
 Also, partcombine is not honoring the manual bar marks for flute II in the score. Part is fine.
 
 m. 165-169: Solo piano has staves too close together to handle the cross-staff figures. Need
-to force it to open up.
+to force it to open up. (Score is fine.)
 
 m. 225: Fermata bar: add mark to previous bar and hack it to print at end,
 put number mark in tempo mark next bar?

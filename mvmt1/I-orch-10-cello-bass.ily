@@ -837,15 +837,45 @@ Bass_mvmt_I_AU = \relative c {
 	d4_\markup \italic "poco rit." r4
 }
 
+%%% Section AV = mm. 165-169
+
+Cello_mvmt_I_AV = \relative c {
+	\override Beam.breakable = ##t
+	\time 7/8
+	des8[^\Unis_mark_\markup \italic "Più animato e cresc." g16 g bes8 g c( bes g)]
+	\time 9/8
+	des8[ g16 \beamCutR g \beamCutL bes g c8 c( bes g)] bes,[ c]
+	des4 des8[ ees des c des c bes]
+	\time 6/8
+	g[ bes c] des4\< des8[
+	\time 8/8
+	ees des fes( des) c des( c bes])\!
+	\revert Beam.breakable
+}
+
+Bass_mvmt_I_AV = \relative c, {
+	\override Beam.breakable = ##t
+	\time 7/8
+	<des des'>8[^\Div_mark_\markup \italic "Più animato e cresc." <g g'> <bes bes'> <g g'> <c c'>( <bes bes'> <g g'>)]
+	\time 9/8
+	<des des'>[ <g g'> <bes bes'> <c c'> <c c'>( <bes bes'> <g g'>)] bes[^\Unis_mark c]
+	des4 des8[ ees des c des c bes]
+	\time 6/8
+	g[ bes c] des4\< des8[
+	\time 8/8
+	ees des fes( des) c des( c bes])\!
+	\revert Beam.breakable
+}
+
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
 		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM \Cello_mvmt_I_AN \Cello_mvmt_I_AO \Cello_mvmt_I_AP
-		\NULL_I_AQ \Cello_mvmt_I_AR \Cello_mvmt_I_AS \NULL_I_AT \Cello_mvmt_I_AU }
+		\NULL_I_AQ \Cello_mvmt_I_AR \Cello_mvmt_I_AS \NULL_I_AT \Cello_mvmt_I_AU \Cello_mvmt_I_AV }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
 		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR
-		\Cello_divisi_II_mvmt_I_AS \NULL_I_AT \Cello_divisi_II_mvmt_I_AU }
+		\Cello_divisi_II_mvmt_I_AS \NULL_I_AT \Cello_divisi_II_mvmt_I_AU \NULL_I_AV }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
 		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN \Bass_mvmt_I_AO \Bass_mvmt_I_AP
-		\NULL_I_AQ \NULL_I_AR \Bass_mvmt_I_AS \NULL_I_AT \Bass_mvmt_I_AU }
+		\NULL_I_AQ \NULL_I_AR \Bass_mvmt_I_AS \NULL_I_AT \Bass_mvmt_I_AU \Bass_mvmt_I_AV }

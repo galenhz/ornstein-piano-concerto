@@ -1202,7 +1202,7 @@ redux_upper_I_AU = \relative c' {
 
 redux_dynamics_I_AU = {
     % mm. 155-164 - Rehersal 16
-    s2 s2 s2 s2 s2 s2 s2 s2 s2 s2
+    s2 s2 s2 s2 s2 s2 s2 s2 s2 s2-\markup { \italic {poco rit.} }
 }
 
 redux_lower_I_AU = \relative c, {
@@ -1233,7 +1233,7 @@ redux_upper_I_AV = \relative c {
 
 redux_dynamics_I_AV = {
 	% mm. 165-169
-	s2 s4. s1 s8 s1 s8 s2. s1
+	s2-\markup \italic "Più animato e cresc." s4. s1 s8 s1 s8 s2. s1
 }
 
 redux_lower_I_AV = \relative c,, {

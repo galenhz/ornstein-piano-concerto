@@ -344,6 +344,23 @@ m. 155-164: Clarinet I has slurs in part that look like copyist, but pencilled i
 Keeping for now.
 (I-orch-03-clarinets)
 
+m. 165-169: Slurs for the orchestra line aren't evenly distributed, but if you assume
+that everbody gets everbody's slurs, it sounds a lot like what I hear in the recording.
+One gotcha, though, is the slur that starts in 169 on the third eighth note. Does it cover
+two notes or three? Violin I, Basses say two. Violin II, Violas, Cellos don't have it.
+Clarinet I has a three-note slur pencilled in, as do Bassoons I and III. Recording has...
+three? Leaving at two for now but need to think about this some more.
+(I-orch-*)
+
+m. 168-169: Score and parts show a single 14/8 measure here, which was apparantly broken
+up later into 6/8 and 8/8. PR reflects that.
+(I-orch-*)
+
+m. 168: The parts have various versions of "piu animato" and "poco/piu a poco/piu crescendo".
+The score just has "piu animato e crescendo". (PR has nothing.) Using score version
+universally.
+(I-orch-*)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.
