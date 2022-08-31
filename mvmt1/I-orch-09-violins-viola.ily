@@ -648,7 +648,7 @@ Violin_I_mvmt_I_AM = \relative c' {
 	\tuplet 3/2 { <b b'>8:32\!\< <c c'>8:32 <ees ees'>8:32~ } <ees ees'>2\!\f <g g'>8-- <gis gis'>--
 	\tuplet 3/2 { <b, b'>8:32\< <c c'>8:32 <dis dis'>8:32 } <e e'>2\!\f <ees ees'>8( <c c'>)
 	\time 5/4
-	\tuplet 5/4 { g'8:32\f\<^\Unis_mark f8:32 g8:32 bes8:32 c8:32\! } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { g'8:32\f\<^\Unis_mark f8:32 g8:32 bes8:32 c8:32\! } r2 r4
 	\time 6/4
 	\tuplet 5/4 { g8:32\f\< f8:32 g8:32 bes8:32 c8:32\! } r2 r2_\markup \italic "rit."
 }
@@ -694,7 +694,7 @@ Violin_II_mvmt_I_AM = \relative c' {
 			\revert TupletNumber.stencil
 		}
 	>>
-	\tempo "Più animato" r2 r4
+	r2 r4
 	<<
 		\new Voice {
 			\voiceOne
@@ -734,7 +734,7 @@ Viola_mvmt_I_AM = \relative c {
 	\tuplet 3/2 { <b, b'>8:32\< <c c'>8:32 <dis dis'>8:32 } <e e'>2\!\f r4
 	\time 5/4
 	\clef alto
-	\tuplet 5/4 { g,8:32\f\<^\Unis_mark f8:32 g8:32 bes8:32 c8:32\! } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { g,8:32\f\<^\Unis_mark f8:32 g8:32 bes8:32 c8:32\! } r2 r4
 	\time 6/4
 	\tuplet 5/4 { g8:32\f\< f8:32 g8:32 bes8:32 c8:32\! } r2 r2_\markup \italic "rit."
 }

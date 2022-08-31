@@ -463,7 +463,7 @@ Bassoon_I_mvmt_I_AM = \relative c' {
 	f4\< e'2.-^\!
 	f,4\< a2.\!
 	\time 5/4
-	\tuplet 5/4 { \tag #'Score bes,8( \tag #'Part bes8(\f c bes g fis) } \tempo "Più animato" f4(\ff e ees)
+	\tuplet 5/4 { \tag #'Score bes,8( \tag #'Part bes8(\f c bes g fis) } f4(\ff^\markup \italic "Più animato" e ees)
 	\time 6/4
 	\tuplet 5/4 { \tag #'Score bes'8( \tag #'Part bes8(\f c bes g fis) } f4( e ees_\markup \italic "rit." d)
 }
@@ -486,7 +486,7 @@ Bassoon_II_mvmt_I_AM = \relative c {
 	aes4\< a'2.\!
 	aes,4\< cis2.\!
 	\time 5/4
-	\tuplet 5/4 { \tag #'Score bes,8\f \tag #'Part bes8(\f c bes g' \tag #'Score fis \tag #'Part fis) } \tempo "Più animato" f4(\ff e ees)
+	\tuplet 5/4 { \tag #'Score bes,8\f \tag #'Part bes8(\f c bes g' \tag #'Score fis \tag #'Part fis) } f4(\ff^\markup \italic "Più animato" e ees)
 	\time 6/4
 	\tuplet 5/4 { \tag #'Score bes8\f \tag #'Part bes8(\f c bes g' \tag #'Score fis \tag #'Part fis) } f4( e ees_\markup \italic "rit." d)
 }
@@ -509,7 +509,7 @@ Bassoon_III_mvmt_I_AM = \relative c' {
 	d4\< cis'2.-^\!
 	d,4\< f2.\!
 	\time 5/4
-	r2 \tempo "Più animato" r2 r4
+	R1*5/4
 	\time 6/4
 	R1*6/4
 }
@@ -530,7 +530,7 @@ Bassoon_IV_mvmt_I_AM = \relative c' {
 	d4\< f2.\!
 	d4\< f2.\!
 	\time 5/4
-	r2 \tempo "Più animato" r2 r4
+	R1*5/4
 	\time 6/4
 	R1*6/4
 }
@@ -549,7 +549,7 @@ Contrabassoon_mvmt_I_AM = \relative c {
 	\time 4/4
 	R1*3
 	\time 5/4
-	\tuplet 5/4 { e2(\ff c8) } \tempo "Più animato" f,4( e ees)
+	\tuplet 5/4 { e2(\ff c8) } f,4(^\markup \italic "Più animato" e ees)
 	\time 6/4
 	\tuplet 5/4 { e'2( c8) } f,4( e ees_\markup \italic "rit." d)
 }

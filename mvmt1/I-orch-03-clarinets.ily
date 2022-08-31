@@ -559,7 +559,7 @@ Clarinet_I_mvmt_I_AM = \transpose c' bes \relative c'' {
 	R1*2
 	ais4\ff d2.
 	\time 5/4
-	\tuplet 5/4 { a,8(\f g a c d) } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { a,8(\f g a c d) } r2 r4
 	\time 6/4
 	\tuplet 5/4 { a8(\ff g a c d) } r2 r2_\markup \italic "rit."
 }
@@ -579,7 +579,7 @@ Clarinet_II_mvmt_I_AM = \transpose c' bes \relative c' {
 	R1*2
 	fis4\ff ais2.
 	\time 5/4
-	r2 \tempo "Più animato" r2 r4
+	R1*5/4
 	\time 6/4
 	R1*6/4
 }
@@ -598,7 +598,7 @@ Clarinet_III_mvmt_I_AM = \transpose c' bes \relative c' {
 	\time 4/4
 	R1*3
 	\time 5/4
-	\tuplet 5/4 { e4\f e a8 } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { e4\f e a8 } r2 r4
 	\time 6/4
 	\tuplet 5/4 { e4\ff e a8} r2 r2_\markup \italic "rit."
 }
@@ -617,7 +617,7 @@ Clarinet_IV_mvmt_I_AM = \transpose c' bes \relative c' {
 	\time 4/4
 	R1*3
 	\time 5/4
-	\tuplet 5/4 { c4\f c fis8 } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { c4\f c fis8 } r2 r4
 	\time 6/4
 	\tuplet 5/4 { c4\ff c fis8 } r2 r2_\markup \italic "rit."
 }

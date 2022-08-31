@@ -207,7 +207,7 @@ Tympani_I_mvmt_I_AM = \relative c {
 	\time 4/4
 	R1*3
 	\time 5/4
-	r2 \tempo "Più animato" r2.
+	R1*5/4
 	\time 6/4
 	R1*6/4
 }
@@ -226,7 +226,7 @@ Tympani_II_mvmt_I_AM = \relative c {
 	\time 4/4
 	R1*3
 	\time 5/4
-	r2 \tempo "Più animato" r2.
+	R1*5/4
 	\time 6/4
 	R1*6/4
 }

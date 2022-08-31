@@ -431,7 +431,7 @@ Horn_I_mvmt_I_AM = \transpose c' f \relative c'' {
 	\tuplet 3/2 { fis8 r8 bes~-^ } bes2 r4
 	fis\< b2\! r4
 	\time 5/4
-	\tuplet 5/4 { d8( c d f g) } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { d8( c d f g) } r2 r4
 	\time 6/4
 	\tuplet 5/4 { d8( c d f g) } r2 r2
 }
@@ -450,7 +450,7 @@ Horn_II_mvmt_I_AM = \transpose c' f \relative c' {
 	\time 4/4
 	R1*3
 	\time 5/4
-	\tuplet 5/4 { d8( c d f g) } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { d8( c d f g) } r2 r4
 	\time 6/4
 	\tuplet 5/4 { d8( c d f g) } r2 r2
 }
@@ -472,7 +472,7 @@ Horn_III_mvmt_I_AM = \transpose c' f \relative c'' {
 	dis4\< g2.\!
 	\time 5/4
 	\clef bass
-	\tuplet 5/4 { f,,,8( g f d cis) } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { f,,,8( g f d cis) } r2 r4
 	\time 6/4
 	\tuplet 5/4 { f8( g f d cis) } r2 r2
 	\clef treble
@@ -495,7 +495,7 @@ Horn_IV_mvmt_I_AM = \transpose c' f \relative c' {
 	b4\< dis2.\!
 	\time 5/4
 	\clef bass
-	\tuplet 5/4 { f,,,8( g f d cis) } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { f,,,8( g f d cis) } r2 r4
 	\time 6/4
 	\tuplet 5/4 { f8( g f d cis) } r2 r2
 	\clef treble

@@ -512,7 +512,7 @@ Cello_mvmt_I_AM = \relative c, {
 			f4 e'2.
 			f,4 a2.
 			\time 5/4
-			\tuplet 5/4 { bes,8:32 c8:32 bes8:32 g8:32 fis8:32 } \tempo "Più animato" f4 e ees
+			\tuplet 5/4 { bes,8:32 c8:32 bes8:32 g8:32 fis8:32 } f4^\markup \italic "Più animato" e ees
 			\time 6/4
 			\tuplet 5/4 { bes'8:32 c8:32 bes8:32 g8:32 fis8:32 } f4 e ees d
 		}
@@ -526,7 +526,7 @@ Cello_mvmt_I_AM = \relative c, {
 			\time 5/4
 			\override TupletBracket.bracket-visibility = ##f
 			\override TupletNumber.stencil = ##f
-			\tuplet 5/4 { e,2:32\f\< c8\! } \tempo "Più animato" f4\ff e ees
+			\tuplet 5/4 { e,2:32\f\< c8\! } f4\ff e ees
 			\time 6/4
 			\tuplet 5/4 { e2:32\f\< c8\! }f4\ff\< e ees_\markup \italic "rit." d\!
 			\revert TupletBracket.bracket-visibility
@@ -566,7 +566,7 @@ Bass_mvmt_I_AM = \relative c' {
 	d4\< f2.\!\f
 	d4\< f2.\!\f
 	\time 5/4
-	\tuplet 5/4 { bes,8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } \tempo "Più animato" f4\ff e ees
+	\tuplet 5/4 { bes,8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } f4\ff^\markup \italic "Più animato" e ees
 	\time 6/4
 	\tuplet 5/4 { bes'8:32\f\< c8:32 bes8:32 g8:32 fis8:32\! } f4\ff\< e ees_\markup \italic "rit." d\!
 }

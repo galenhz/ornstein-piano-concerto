@@ -761,7 +761,7 @@ solo_upper_I_AM = \relative c''' {
 		\ottava #0 \revert Staff.OttavaBracket.transparent
 		\change Staff = "solo_upper" r4 \ottava #0
 	\time 5/4
-	r4 r4 \tempo "Più animato"
+	r4 r4
 		<<
 			\new Voice {
 				\voiceOne <e,, e'>8 <g g'> <bes bes'>4
@@ -784,7 +784,7 @@ solo_upper_I_AM = \relative c''' {
 
 solo_dynamics_I_AM = {
 	% mm. 91-99 - Rehersal 8
-	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.\ff s1 s2^\markup \italic "rit."
+	s1 s4 s2\ff s1 s1 s2. s1 s1 s1 s1 s2 s2.-\markup { \dynamic ff \italic "Più animato" } s1 s2^\markup \italic "rit."
 }
 
 solo_lower_I_AM = \relative c'' {

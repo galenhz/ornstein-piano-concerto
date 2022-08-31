@@ -411,7 +411,7 @@ Trombone_I_mvmt_I_AM = \relative c' {
 	\time 4/4
 	R1*3
 	\time 5/4
-	\tuplet 5/4 { d4\mf d( g8) } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { d4\mf d( g8) } r2 r4
 	\time 6/4
 	\tuplet 5/4 { d4 d( g8) } r2 r2
 }
@@ -430,7 +430,7 @@ Trombone_II_mvmt_I_AM = \relative c' {
 	\time 4/4
 	R1*3
 	\time 5/4
-	\tuplet 5/4 { bes4\mf bes( e8) } \tempo "Più animato" r2 r4
+	\tuplet 5/4 { bes4\mf bes( e8) } r2 r4
 	\time 6/4
 	\tuplet 5/4 { bes4 bes( e8) } r2 r2
 }
@@ -449,7 +449,7 @@ Tuba_mvmt_I_AM = \relative c, {
 	\time 4/4
 	R1*3
 	\time 5/4
-	\tuplet 5/4 { e2(\mf c8) } \tempo "Più animato" f4( e ees)
+	\tuplet 5/4 { e2(\mf c8) } f4(^\markup \italic "Più animato" e ees)
 	\time 6/4
 	\tuplet 5/4 { e2( c8) } f4( e ees_\markup \italic "rit." d)
 }
