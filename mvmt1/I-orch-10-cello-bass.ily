@@ -305,7 +305,7 @@ Cello_mvmt_I_AI = \relative c {
 		<fis fis'>2.~\! <fis fis'>4\< <g g'>8 <gis gis'>4~ <gis gis'>16 <cis cis'>
 		<bes bes'>2.~\! <bes bes'>4\> <a a'>8 <gis gis'>[( <d d'>) r16 <ees ees'>]
 		<fis fis'>2.~\! \tuplet 2/3 { <fis fis'>8 <g g'>\< } <gis gis'>4~ <gis gis'>16 <d' d'>
-		<f f'>2.~\! <f f'>4\< <e e'>8~ <e e'>8. <ees ees'>16( <d d'> <f f'>)
+		<f f'>2.~\! <f f'>4\> <e e'>8~ <e e'>8. <ees ees'>16( <d d'> <f f'>)
 		<d d'>2.~\! <d d'>4 <cis cis'>8~ <cis cis'>8. <bes bes'> 16( <c c'> <d d'>)
 		<f f'>2.~ <f f'>4 <e e'>8~ <e e'>8. <ees ees'>16( <d d'> <f f'>)
 		<d d'>2.~ <d d'>4 <cis cis'>8~ <cis cis'>8. <c c'>16( <b b'> <d d'>)
