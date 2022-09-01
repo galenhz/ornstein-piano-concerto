@@ -4,7 +4,6 @@
 %%% Section AB - mm. 5-12
 
 redux_upper_I_AA_AB = \relative c' {
-	\set Staff.midiInstrument = #"electric piano 1"
 	\clef treble
 	\time 3/4
 	\tempo "Moderato assai"
@@ -193,7 +192,6 @@ redux_lower_I_AC = {
 redux_upper_I_AD = \relative c' {
 	% m. 16
 	\time 10/8
-	\tempo "con moto"
 	<a d g>8[ <b e a>] <b e a>4 <a d g> <c fis b> <b e a>
 	% m. 17
 	\time 11/8

@@ -132,7 +132,6 @@ solo_lower_I_AC = \relative c, {
 solo_upper_I_AD = \relative c' {
 	% m. 16
 	\time 10/8
-	\tempo "con moto"
 	r8 <e e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>]
 	% m. 17
 	\time 11/8
