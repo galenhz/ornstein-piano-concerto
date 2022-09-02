@@ -1386,29 +1386,58 @@ solo_lower_I_AV = \relative c {
 	\change Staff = "solo_lower"
 }
 
-%%% This is as far as I've gotten
+%%% Section AW = mm. 170-174 (Rehersal 17)
 
-solo_upper_I_remain = \relative c'' {
+solo_upper_I_AW = \relative c'' {
 	% mm. 170-174 - Rehersal 17
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
 	<b b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
 	\time 6/8
-	<b b'>[ <e e'>16 q <g g'> <e e'> <a a'>8 <g g'> <e e'>]
+	<b b'>[ <e e'>16 \beamCutR q \beamCutL <g g'> <e e'> <a a'>8 <g g'> <e e'>]
 	\time 9/8 \ottava #1
-	<g g'>[ <a a'> <bes bes'> q16 q <c c'>8 <bes bes'>16 <a a'> <bes bes'> <a a'> <g g'>
-		<e e'> <g g'> <a a'>]
+	<g g'>[ <a a'> <bes bes'> q16 q <c c'>8 <bes bes'>16 \beamCutR <a a'> \beamCutL <bes bes'> \beamCutR <a a'> \beamCutL <g g'>
+		\beamCutR <e e'> \beamCutL <g g'> <a a'>]
 	\time 7/8
-	<bes bes'>8[ q16 q <c c'> <bes bes'> <cis cis'>8 <bes bes'>16 <a a'> <bes bes'> <a a'>
-		<g g'> <e e'>]
+	<bes bes'>8[ q16 \beamCutR q \beamCutL <c c'> <bes bes'> <cis cis'>8 <bes bes'>16 \beamCutR <a a'> \beamCutL <bes bes'> \beamCutR <a a'>
+		\beamCutL <g g'> <e e'>]
 	\time 3/8
-	<g g'>[ <a a'> <bes bes'> <c c'> <cis cis'> <e e'>
+	<g g'>[ \beamCutR <a a'> \beamCutL <bes bes'> \beamCutR <c c'> \beamCutL <cis cis'> <e e'>
+}
+
+solo_dynamics_I_AW = {
+	% mm. 170-174 - Rehersal 17
+	s2 s4. s2. s4.*3 s2 s4. s4.
+}
+
+solo_lower_I_AW = \relative c {
+	% mm. 170-174 - Rehersal 17
+	\time 7/8
+	\clef bass
+	<b b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
+	\time 6/8
+	<b b'>[ <e e'>16 \beamCutR q \beamCutL <g g'> <e e'> <a a'>8 <g g'> <e e'>]
+	\time 9/8 \clef treble
+	<g g'>[ <a a'> <bes bes'> q16 q <c c'>8 <bes bes'>16 \beamCutR<a a'> \beamCutL <bes bes'> \beamCutR <a a'> \beamCutL <g g'>
+		\beamCutR <e e'> \beamCutL <g g'> <a a'>]
+	\time 7/8
+	<bes bes'>8[ q16 \beamCutR q \beamCutL <c c'> <bes bes'> <cis cis'>8 <bes bes'>16 \beamCutR <a a'> \beamCutL <bes bes'> \beamCutR <a a'>
+		\beamCutL <g g'> <e e'>]
+	\time 3/8
+	<g g'>[ \beamCutR <a a'> \beamCutL <bes bes'> \beamCutR <c c'> \beamCutL <cis cis'> <e e'>
+}
+
+%%% Section AX = mm. 175-181
+
+solo_upper_I_AX = \relative c''' {
 	% mm. 175 - 181
 	\time 6/8
-	% FIXME: Do we want to write the first chord the same as the rest? b-sharp, not c?
-	%        Gets rid of annoying note cluster...
-	<fis c' cis e fis>8] \revert Beam.breakable
+	% EDIT: The first chord has a "c and c-sharp" note cluster as written in the PR.
+	%       All of the slashed graces that follow in this section have "b-sharp and
+	%       c-sharp" clusters. Since I can't (yet) replicate the split-stem trick
+	%       the copyist used in the PR, change the first c to b-sharp.
+	<fis bis cis e fis>8] \revert Beam.breakable
 		\ottava #0
 		\slashedGrace { <bis, cis e>8 } <fis fis'>->[
 			\repeat unfold 3 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
@@ -1438,6 +1467,49 @@ solo_upper_I_remain = \relative c'' {
 	\slashedGrace { <bis cis e>8 } <fis fis'>->[
 		\repeat unfold 4 { \slashedGrace { <bis cis e>8 } <fis fis'>-> }
 		\slashedGrace { <bis cis e>8 } <fis fis'>->]
+}
+
+solo_dynamics_I_AX = {
+	% mm. 175-181
+	s8 s4\ff s4. s2 s8 s2. s2. s4. s2. s2 s8 s2.
+}
+
+solo_lower_I_AX = \relative c' {
+	% mm. 175 - 181
+	\time 6/8
+	<fis c' fis>8] \revert Beam.breakable
+	\slashedGrace { <fis a c>8 } cis'->[
+		\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
+	\time 5/8
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
+	\time 6/8
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
+	\time 9/8
+	\slashedGrace { <a, cis>8 } ees'->[
+		\repeat unfold 7 { \slashedGrace { <a, cis>8 } ees'-> }
+		\slashedGrace { <a, cis>8 } ees'->]
+	\time 6/8
+	\slashedGrace { <fis a c>8 } cis'->[
+		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
+	\time 5/8
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
+	\time 6/8
+	\slashedGrace { <fis, a c>8 } cis'->[
+		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
+		\slashedGrace { <fis, a c>8 } cis'->]
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c'' {
 	% mm. 182-185
 	<<
 		\new Voice {
@@ -2022,10 +2094,6 @@ solo_upper_I_remain = \relative c'' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 170-174 - Rehersal 17
-	s2 s4. s2. s4.*3 s2 s4. s4.
-	% mm. 175-181
-	s8 s4\ff s4. s2 s8 s2. s2. s4. s2. s2 s8 s2.
 	% mm. 182-185
 	s2. s2 s8 s2. s2 s8
 	% mm. 186-187 - Rehersal 18
@@ -2081,53 +2149,9 @@ solo_dynamics_I_remain = {
 }
 
 solo_lower_I_remain = \relative c {
-	% mm. 170-174 - Rehersal 17
-	\time 7/8
-	\clef bass
-	<b b'>8[ <e e'>16 q <g g'>8 <e e'> <a a'> <g g'> <e e'>]
-	\time 6/8
-	<b b'>[ <e e'>16 q <g g'> <e e'> <a a'>8 <g g'> <e e'>]
-	\time 9/8 \clef treble
-	<g g'>[ <a a'> <bes bes'> q16 q <c c'>8 <bes bes'>16 <a a'> <bes bes'> <a a'> <g g'>
-		<e e'> <g g'> <a a'>]
-	\time 7/8
-	<bes bes'>8[ q16 q <c c'> <bes bes'> <cis cis'>8 <bes bes'>16 <a a'> <bes bes'> <a a'>
-		<g g'> <e e'>]
-	\time 3/8
-	<g g'>[ <a a'> <bes bes'> <c c'> <cis cis'> <e e'>
-        % mm. 175 - 181
-        \time 6/8
-        <fis c' fis>8] \revert Beam.breakable
-		\slashedGrace { <fis a c>8 } cis'->[
-			\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
-			\slashedGrace { <fis, a c>8 } cis'->]
-	\time 5/8
-	\slashedGrace { <fis, a c>8 } cis'->[
-		\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
-		\slashedGrace { <fis, a c>8 } cis'->]
-	\time 6/8
-	\slashedGrace { <fis, a c>8 } cis'->[
-		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
-		\slashedGrace { <fis, a c>8 } cis'->]
-	\time 9/8
-	\slashedGrace { <a, cis>8 } ees'->[
-		\repeat unfold 7 { \slashedGrace { <a, cis>8 } ees'-> }
-		\slashedGrace { <a, cis>8 } ees'->]
-	\time 6/8
-	\slashedGrace { <fis a c>8 } cis'->[
-		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
-		\slashedGrace { <fis, a c>8 } cis'->]
-	\time 5/8
-	\slashedGrace { <fis, a c>8 } cis'->[
-		\repeat unfold 3 { \slashedGrace { <fis, a c>8 } cis'-> }
-		\slashedGrace { <fis, a c>8 } cis'->]
-	\time 6/8
-	\slashedGrace { <fis, a c>8 } cis'->[
-		\repeat unfold 4 { \slashedGrace { <fis, a c>8 } cis'-> }
-		\slashedGrace { <fis, a c>8 } cis'->]
 	% mm. 182-185
 	\clef bass
-	<d,, d'>2.
+	<d d'>2.
 	\time 5/8
 	<ees ees'>2 <e e'>8
 	\time 6/8
@@ -2472,26 +2496,26 @@ solo_lower_I_remain = \relative c {
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
 		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV
-		\solo_upper_I_remain }
+		\solo_upper_I_AW \solo_upper_I_AX \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
 		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS
-		\solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV }
+		\solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV \solo_upper_I_AW \solo_upper_I_AX }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
-		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_remain }
+		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_AW \solo_dynamics_I_AX \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
-		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV }
+		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_AW \solo_dynamics_I_AX }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
 		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV
-		\solo_lower_I_remain }
+		\solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
 		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS
-		\solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV }
+		\solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV \solo_lower_I_AW \solo_lower_I_AX }

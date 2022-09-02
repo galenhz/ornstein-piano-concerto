@@ -25,14 +25,15 @@
 % AU = mm. 155-164 (Rehersal 16)
 % AV = mm. 165-169
 % AW = mm. 170-174 (Rehersal 17)
-% AX = mm. 175-187 (Rehersal ~18)
-% AY = mm. 188-193
-% AZ = mm. 194-201 (Rehersal 19)
-% BA = mm. 202-207 (Rehersal 20)
-% BB = mm. 208-215 (Rehersal 21/22)
-% BC = mm. 216-225 (Rehersal 23)
-% BD = mm. 226-232 (Rehersal 24)
-% BE = mm. 233-235 (?)
+% AX = mm. 175-181
+% AY = mm. 182-187 (Rehersal ~18)
+% AZ = mm. 188-193
+% BA = mm. 194-201 (Rehersal 19)
+% BB = mm. 202-207 (Rehersal 20)
+% BC = mm. 208-215 (Rehersal 21/22)
+% BD = mm. 216-225 (Rehersal 23)
+% BE = mm. 226-232 (Rehersal 24)
+% BF = mm. 233-235 (?)
 
 
 %% EDIT: The PR has "con moto" at m. 5. The parts have "moderato con moto" at m. 16.
@@ -69,3 +70,4 @@ NULL_I_AT = { \mark #15 \tempo "quasi improvisata" \time 5/4 R1*5/4 \time 7/4 R1
 NULL_I_AU = { \mark #16 \tempo "Andantino" \time 2/4 R2*10 }
 NULL_I_AV = { \time 7/8 R1*7/8 \time 9/8 R1*9/8*2 \time 6/8 R2. \time 8/8 R1 }
 NULL_I_AW = { \mark #17 \tempo "Allegro - con forza e marcato" \time 7/8 R1*7/8 \time 6/8 R2. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 3/8 R4. }
+NULL_I_AX = { \time 6/8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 \time 9/8 \tag #'Score \slashedGrace s8 R1*9/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 }

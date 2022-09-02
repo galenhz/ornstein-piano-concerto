@@ -1248,9 +1248,9 @@ redux_lower_I_AV = \relative c,, {
 	<ees ees'> <des des'> <fes fes'> <des des'> <c c'> <des des'> <c c'> <bes bes'>]
 }
 
-%%% This is as far as I've gotten
+%%% Section AW = mm. 170-174 (Rehersal 17)
 
-redux_upper_I_remain = \relative c {
+redux_upper_I_AW = \relative c {
 	% mm. 170-174 - Rehersal 17
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
@@ -1258,23 +1258,97 @@ redux_upper_I_remain = \relative c {
 	\repeat unfold 6 { \clef bass <b fis'>8 \clef treble <b' e b'>[ <c e c'> <cis e cis'> <d e d'>]}
 	gis,8[ d']
 	\revert Beam.breakable
+}
+
+redux_dynamics_I_AW = {
+	% mm. 170-174 - Rehersal 17
+	s2 s4. s2. s4.*3 s2 s4. s4.
+}
+
+redux_lower_I_AW = \relative c,, {
+	% mm. 170-174 - Rehersal 17
+	\time 7/8
+	\repeat unfold 6 { <e e'>8 <b'' e g>[ <c e g> <cis e g> <d e g>] }
+	<gis,, gis'>8[ <d' d'>]
+	\revert Beam.breakable
+}
+
+%%% Section AX = mm. 175-181
+
+% Insert dummy slashed grace notes to match solo piano.
+redux_upper_I_AX = \relative c' {
 	% mm. 175-181
 	\time 6/8
 	r8 <c c'>[ <f f'> <fis fis'> <gis gis'>8. q16]
-	%%\time 5/8
-	<b b'>8[ <a a'>16 <gis gis'> <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
-	%%\time 6/8
-	<f f'>[ <d d'> <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
-	%%\time 9/8
-	r8 a[ ees' des16 c des c a ees' des c des c a8]
-	%%\time 6/8
+	\time 5/8 \slashedGrace s8
+	<b b'>8[ <a a'>16 \beamCutR <gis gis'> \beamCutL <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
+	\time 6/8 \slashedGrace s8
+	<f f'>16[ \beamCutR <d d'> \beamCutL <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
+	\time 9/8 \slashedGrace s8
+	r8 a[ ees' des16 \beamCutR c \beamCutL des \beamCutR c \beamCutL a \beamCutR ees' \beamCutL des \beamCutR c \beamCutL des c a8]
+	\time 6/8 \slashedGrace s8
 	r8 <c, c'>[ <f f'> <fis fis'> <gis gis'>8. q16]
-	%%\time 5/8
-	<b b'>8[ <a a'>16 <gis gis'> <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
-	%%\time 6/8
-	<f f'>[ <d d'> <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
+	\time 5/8 \slashedGrace s8
+	<b b'>8[ <a a'>16 \beamCutR <gis gis'> \beamCutL <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
+	\time 6/8 \slashedGrace s8
+	<f f'>16[ \beamCutR <d d'> \beamCutL <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
+}
+
+redux_dynamics_I_AX = {
+	% mm. 175-181
+	s2. s2 s8 s2. s2. s4. s2. s2 s8 s2.
+}
+
+redux_lower_I_AX = \relative c, {
+	% mm. 175-181
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceTwo
+			<a ees' a>1*3/4
+		}
+		\new Voice {
+			\voiceOne
+			r8 <cis' fis a c>[ q q q q]
+		}
+	>>
+	%\time 5/8
+	q[ q q q q]
+	%\time 6/8
+	q[ q q q q q]
+	%\time 9/8
+	<<
+		\new Voice {
+			\voiceTwo
+			<bes, fis' cis'>1
+		}
+		\new Voice {
+			\voiceFour
+			r8 <cis' fis a c>[ q q q q q q q]
+		}
+	>>
+	%\time 6/8
+	<<
+		\new Voice {
+			\voiceTwo
+			<a, ees' a>1*3/4
+		}
+		\new Voice {
+			\voiceOne
+			r8 <cis' fis a c>[ q q q q]
+		}
+	>>
+	%\time 5/8
+	q[ q q q q]
+	%\time 6/8
+	q[ q q q q q]
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 182-185
-	<gis, d' f gis>8[ q q q q q]
+	<gis d' f gis>8[ q q q q q]
 	\time 5/8
 	<g bes ees>[ q q q q]
 	\time 6/8
@@ -1772,10 +1846,6 @@ redux_upper_I_remain = \relative c {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 170-174 - Rehersal 17
-	s2 s4. s2. s4.*3 s2 s4. s4.
-	% mm. 175-181
-	s2. s2 s8 s2. s2. s4. s2. s2 s8 s2.
 	% mm. 182-185
 	s2. s2 s8 s2. s2 s8
 	% mm. 186-187 - Rehersal 18
@@ -1819,56 +1889,9 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c,, {
-	% mm. 170-174 - Rehersal 17
-	\time 7/8
-	\repeat unfold 6 { <e e'>8 <b'' e g>[ <c e g> <cis e g> <d e g>] }
-	<gis,, gis'>8[ <d' d'>]
-	\revert Beam.breakable
-	% mm. 175-181
-	\time 6/8
-	<<
-		\new Voice {
-			\voiceTwo
-			<a ees' a>1*3/4
-		}
-		\new Voice {
-			\voiceOne
-			r8 <cis' fis a c>[ q q q q]
-		}
-	>>
-	%\time 5/8
-	q[ q q q q]
-	%\time 6/8
-	q[ q q q q q]
-	%\time 9/8
-	<<
-		\new Voice {
-			\voiceTwo
-			<bes, fis' cis'>1
-		}
-		\new Voice {
-			\voiceFour
-			r8 <cis' fis a c>[ q q q q q q q]
-		}
-	>>
-	%\time 6/8
-	<<
-		\new Voice {
-			\voiceTwo
-			<a, ees' a>1*3/4
-		}
-		\new Voice {
-			\voiceOne
-			r8 <cis' fis a c>[ q q q q]
-		}
-	>>
-	%\time 5/8
-	q[ q q q q]
-	%\time 6/8
-	q[ q q q q q]
+redux_lower_I_remain = \relative c, {
 	% mm. 182-185
-	<d, a' f'>8[ q q q q q]
+	<d a' f'>8[ q q q q q]
 	\time 5/8
 	<ees bes' fes'>[ q q q q]
 	\time 6/8
@@ -2315,13 +2338,15 @@ redux_lower_I_remain = \relative c,, {
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
 		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_AR
-		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_remain }
+		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
+		\redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
 		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_AR \redux_dynamics_I_AS \redux_dynamics_I_AT
-		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_remain }
+		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
-		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_remain }
+		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
+		\redux_lower_I_remain }

@@ -361,6 +361,12 @@ The score just has "piu animato e crescendo". (PR has nothing.) Using score vers
 universally.
 (I-orch-*)
 
+m. 176: The first chord in the solo piano upper voice has a "c and c-sharp" note cluster as
+written in the PR. All of the slashed graces that follow in this section have "b-sharp and
+c-sharp" clusters. Since I can't (yet) replicate the split-stem trick the copyist used in the
+PR, change the first c to b-sharp.
+(I-solo-piano)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.
