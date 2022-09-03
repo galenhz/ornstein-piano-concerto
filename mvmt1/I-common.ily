@@ -46,6 +46,8 @@
 %%       m. 55: "Moderato" evolved to "Meno mosso". This has been changed in some parts.
 %%       m. 82: "Andante con moto" became "Andante e molto sostenuto". This is changed
 %%       in the score and some parts.
+%%       m. 170: Score just has "Allegro" with the "con forza" added to the various
+%%       parts. PR folded it into a single tempo directive.
 
 NULL_I_AA = { \tempo "Moderato assai" \time 3/4 R2.*3 r2.\fermata }
 NULL_I_AB = { \tempo "con moto" R2.*5 \time 4/4 R1 \time 3/4 R2. \time 4/4 R1 }

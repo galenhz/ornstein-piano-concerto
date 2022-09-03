@@ -361,6 +361,16 @@ The score just has "piu animato e crescendo". (PR has nothing.) Using score vers
 universally.
 (I-orch-*)
 
+m. 170: The score just has "Allegro" with the "con forza" added to the various parts. PR folded
+it into a single tempo directive. Going with that. #TEMPO
+(I-common)
+
+m. 170-174: Viola part seems to have been rewritten at some point. The four-note figure was
+changed from an ascending one to just playing e repeatedly. Score looks like whiteout may
+have been applied for the same end, and the piano reduction matches that pattern. They also
+lack the downbow marks that are in the other string parts: adding those.
+(I-orch-09-violins-viola)
+
 m. 176: The first chord in the solo piano upper voice has a "c and c-sharp" note cluster as
 written in the PR. All of the slashed graces that follow in this section have "b-sharp and
 c-sharp" clusters. Since I can't (yet) replicate the split-stem trick the copyist used in the

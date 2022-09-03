@@ -711,9 +711,9 @@ solo_lower_I_AL = \relative c, {
 
 %%% Section AM = mm. 91-99 (Rehersal 8)
 
-%%% I initially overrode lilypond and had it create tuplet brackets for the solo piano
-%%% here, to match the PR. As I've worked on this I've changed my mind about the importance
-%%% of that. Commenting out the code. May revisit later.
+%% I initially overrode lilypond and had it create tuplet brackets for the solo piano
+%% here, to match the PR. As I've worked on this I've changed my mind about the importance
+%% of that. Commenting out the code. May revisit later.
 
 solo_upper_I_AM = \relative c''' {
 	% mm. 91-99 - Rehersal 8
@@ -1765,6 +1765,7 @@ solo_upper_I_remain = \relative c'' {
 		\change Staff = "solo_upper"  \tuplet 9/8 { r32 fis cis' g cis, \change Staff = "solo_lower" \clef bass fis,, cis' g cis, } \change Staff = "solo_upper"
 	\time 6/8
 	\tempo "Piu mosso"
+	% FIXME: First chord split into two voices in PR.
 	% QUESTION: Almost certainly a missing treble clef change in PR for m. 237
 	% QUESTION: And the last nonuplet is missing a note? an Octuplet?
 	<d' ges cis ges'>8 r8 r8 r4.

@@ -429,17 +429,20 @@ Trumpet_other_mvmt_I_AR = { \Trumpet_cues_mvmt_I_AR \relative c'' {
 %%% Section AV = mm. 165-169
 %%% Tacet
 
+%%% Section AW = mm. 170-174 (Rehersal 17)
+%%% Tacet
+
 %%% Final assembly
 
 Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG \Trumpet_I_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_I_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT
-		\NULL_I_AU \NULL_I_AV }
+		\NULL_I_AU \NULL_I_AV \NULL_I_AW }
 Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG \Trumpet_II_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT \NULL_I_AU \NULL_I_AV }
+		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
 Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG \Trumpet_III_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT \NULL_I_AU \NULL_I_AV }
+		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
 Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG \Trumpet_IV_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT \NULL_I_AU \NULL_I_AV }
+		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
