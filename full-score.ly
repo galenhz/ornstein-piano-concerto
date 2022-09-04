@@ -19,6 +19,7 @@
 	bottom-margin = 0.5\in
 	left-margin = 0.75\in
 	right-margin = 0.75\in
+	scoreTitleMarkup = \customScoreTitleMarkup
 }
 #(set-global-staff-size 14)
 
@@ -63,6 +64,7 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 \include "mvmt1/I-solo-piano.ily"
 
 \score {
+  \header { movement = "I." }
   <<
 	\new StaffGroup = "StaffGroup_winds" <<
 		\new Staff = "Piccolo" \with { instrumentName = "Piccolo" shortInstrumentName = "Picc." } \keepWithTag #'Score \Picc_mvmt_I
@@ -154,9 +156,9 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 	\new Staff = "Staff_Tympani_I" \with { instrumentName = "Tympani I" shortInstrumentName = "Tym. I" } \keepWithTag #'Score \Tympani_I_mvmt_I
 	\new Staff = "Staff_Tympani_II" \with { instrumentName = "Tympani II" shortInstrumentName = "Tym. II" } \keepWithTag #'Score \Tympani_II_mvmt_I
 	\new PianoStaff \with { instrumentName = "Piano Solo" shortInstrumentName = "Pn." } <<
-		\new Staff = "solo_upper" \solo_upper_I_limited
-		\new Dynamics \solo_dynamics_I_limited
-		\new Staff = "solo_lower" \solo_lower_I_limited
+		\new Staff = "solo_upper" \keepWithTag #'Score \solo_upper_I_limited
+		\new Dynamics \keepWithTag #'Score \solo_dynamics_I_limited
+		\new Staff = "solo_lower" \keepWithTag #'Score \solo_lower_I_limited
 	>>
 	\new StaffGroup = "StaffGroup_strings" <<
 		\new StaffGroup = "StaffGroup_violinI" \with { instrumentName = "Violin I" shortInstrumentName = "Vn. I" } <<

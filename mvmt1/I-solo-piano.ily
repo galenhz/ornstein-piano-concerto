@@ -1164,30 +1164,31 @@ solo_lower_I_AR = \relative c {
 
 %%% Section AS = mm. 142-146 (Rehersal 14)
 
-solo_upper_I_AS = \relative c' {
-	% mm. 142-146 - Rehersal 14
-	\mark #14
-	\tempo "Meno mosso"
-	\time 6/4
-	%% Fixed: First tuplet in m. 142 and 144 is broken with paper size set to a4/letter.
-	%%        It just needs more room. Can't use that as the PR default any more.
+%% WORKAROUND: This figure as written breaks when the paper size is set to 9x12. I could
+%%             fix this by moving to european B4, but 9x12 is a standard american size
+%%             which would be easier to get printed. Shrink for the piano reduction.
+solo_upper_I_AS_fragment = \relative c' {
 	r4 \change Staff = "solo_lower" \clef treble
 		\tuplet 5/4 { <fis cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
 	\change Staff = "solo_lower"
 		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" \ottava #1 fis' cis' fis g }
 		fis8 \ottava #0 r4 r4 r4
+}
+
+solo_upper_I_AS = \relative c' {
+	% mm. 142-146 - Rehersal 14
+	\mark #14
+	\tempo "Meno mosso"
+	\time 6/4
+	\tag #'PR { \magnifyMusic 0.8 \solo_upper_I_AS_fragment } \tag #'Score \solo_upper_I_AS_fragment
 	\time 5/4
 	r4 \change Staff = "solo_lower"
-		\tuplet 5/4 { <d,,, aes'>32 \change Staff = "solo_upper" d' aes' d ees } d8
+		\tuplet 5/4 { <d aes'>32 \change Staff = "solo_upper" d' aes' d ees } d8
 	\change Staff = "solo_lower"
 		\tuplet 5/4 { <d, aes'>32 \change Staff = "solo_upper" \ottava #1 d' aes' d ees } d8
 		\ottava #0 r4 r4
 	\time 6/4
-	r4 \change Staff = "solo_lower"
-		\tuplet 5/4 { <fis,,, cis'>32 \change Staff = "solo_upper" fis' cis' fis g } fis8
-	\change Staff = "solo_lower"
-		\tuplet 5/4 { <fis, cis'>32 \change Staff = "solo_upper" \ottava #1 fis' cis' fis g }
-		fis8 \ottava #0 r4 r4 r4
+	\tag #'PR { \magnifyMusic 0.8 \solo_upper_I_AS_fragment } \tag #'Score \solo_upper_I_AS_fragment
 	\time 4/4
 	R1*2
 }

@@ -9,15 +9,14 @@
 
 \include "common.ily"
 
-%% "arch a" paper size is 9"x12", a standard size for U.S. music. Right now
-%% it's just a bit too narrow to get everything to lay out right. Work still
-%% needs to be done.
+%% "arch a" paper size is 9"x12", a standard size for U.S. music.
 \paper {
 	#(set-paper-size "arch a")
 	top-margin = 0.5\in
 	bottom-margin = 0.5\in
 	left-margin = 0.75\in
 	right-margin = 0.75\in
+	%%scoreTitleMarkup = \customScoreTitleMarkup
 }
 
 \header {
@@ -33,11 +32,12 @@
 \include "mvmt1/I-piano-reduction.ily"
 
 \score {
+	\header { movement = "I." }
   <<
 	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
-		\new Staff = "solo_upper" { \accidentalStyle forget \solo_upper_I }
-		\new Dynamics \solo_dynamics_I
-		\new Staff = "solo_lower" { \accidentalStyle forget \solo_lower_I }
+		\new Staff = "solo_upper" \keepWithTag #'PR { \accidentalStyle forget \solo_upper_I }
+		\new Dynamics \keepWithTag #'PR \solo_dynamics_I
+		\new Staff = "solo_lower" \keepWithTag #'PR { \accidentalStyle forget \solo_lower_I }
 	>>
 	\new PianoStaff \with { instrumentName = "Orchestra" } <<
 		\new Staff = "redux_upper" { \accidentalStyle forget \redux_upper_I }
