@@ -1,35 +1,31 @@
+%%% Leo Ornstein - Piano Concerto (S824)
+%%%
+%%% Musical material Copyright (c) 2015 Poon Hill Press
+%%% License: Performance Restricted Attribution-NonCommercial-NoDerivs 3.0
+%%% The full text can be found in the LICENSE file with this code. It can be
+%%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
 \version "2.22.2"
 
 \include "common.ily"
 
-\include "mvmt1/I-common.ily"
-
-\include "mvmt1/I-orch-01-flutes.ily"
-\include "mvmt1/I-orch-02-oboes.ily"
-\include "mvmt1/I-orch-03-clarinets.ily"
-\include "mvmt1/I-orch-04-bassoons.ily"
-\include "mvmt1/I-orch-05-trumpets.ily"
-\include "mvmt1/I-orch-06-horns.ily"
-\include "mvmt1/I-orch-07-trombones-tuba.ily"
-\include "mvmt1/I-orch-08-tympani.ily"
-\include "mvmt1/I-orch-09-violins-viola.ily"
-\include "mvmt1/I-orch-10-cello-bass.ily"
-
-\include "mvmt1/I-solo-piano.ily"
-
+%% 11x17 paper with reasonable margins. Could also be done in A3. Wouldn't
+%% want to try anything much smaller; global staff size is already 5mm, and
+%% 4mm is pretty much the practical limit.
 \paper {
-	#(set-paper-size "a3")
+	#(set-paper-size "11x17")
 	system-separator-markup = \slashSeparator
 	top-margin = 0.5\in
 	bottom-margin = 0.5\in
 	left-margin = 0.75\in
 	right-margin = 0.75\in
 }
+#(set-global-staff-size 14)
 
 \header {
-	title = "Piano Concerto"
-	composer = "Leo Ornstein"
+	title = \hdrTitle
+	composer = \hdrComposer
+	copyright = \hdrCopyright
 }
 
 %% Some defines for putting together the full score. I like the way the written full score
@@ -47,6 +43,24 @@ iNameRight = \override InstrumentName.self-alignment-X = #RIGHT
 setSoloTextI_II = { \set Staff.soloText = #"Solo I" \set Staff.soloIIText = #"Solo II" }
 setSoloTextIII_IV = { \set Staff.soloText = #"Solo III" \set Staff.soloIIText = #"Solo IV" }
 setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"Solo VI" }
+
+
+%%% First movement
+
+\include "mvmt1/I-common.ily"
+
+\include "mvmt1/I-orch-01-flutes.ily"
+\include "mvmt1/I-orch-02-oboes.ily"
+\include "mvmt1/I-orch-03-clarinets.ily"
+\include "mvmt1/I-orch-04-bassoons.ily"
+\include "mvmt1/I-orch-05-trumpets.ily"
+\include "mvmt1/I-orch-06-horns.ily"
+\include "mvmt1/I-orch-07-trombones-tuba.ily"
+\include "mvmt1/I-orch-08-tympani.ily"
+\include "mvmt1/I-orch-09-violins-viola.ily"
+\include "mvmt1/I-orch-10-cello-bass.ily"
+
+\include "mvmt1/I-solo-piano.ily"
 
 \score {
   <<
@@ -120,6 +134,7 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 				\setSoloTextV_VI
 				\partCombine \transpose f c' \keepWithTag #'Score \Horn_V_mvmt_I \transpose f c' \keepWithTag #'Score \Horn_VI_mvmt_I
 			}
+			%%% Note: Horn VIII is tacet in this movement.
 			\new Staff = "Staff_HornVII_VIII" \with { \iNameRight instrumentName = \iNameColumnVII_VIII shortInstrumentName = "VII" } {
 				\transpose f c' \keepWithTag #'Score \Horn_VII_mvmt_I
 			}
@@ -164,7 +179,6 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 	>>
   >>
   \layout {
-		#(layout-set-staff-size 14)
 		short-indent = 1\cm
 		\context { \Staff \RemoveEmptyStaves }
 		\context { \Score markFormatter = #format-mark-circle-numbers  \numericTimeSignature }

@@ -1,15 +1,19 @@
-%% Initial test for the Ornstein Piano Concerto
+%%% Leo Ornstein - Piano Concerto (S824)
+%%%
+%%% Musical material Copyright (c) 2015 Poon Hill Press
+%%% License: Performance Restricted Attribution-NonCommercial-NoDerivs 3.0
+%%% The full text can be found in the LICENSE file with this code. It can be
+%%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
 \version "2.22.2"
 
 \include "common.ily"
 
-\include "mvmt1/I-solo-piano.ily"
-\include "mvmt1/I-piano-reduction.ily"
-
-
+%% "arch a" paper size is 9"x12", a standard size for U.S. music. Right now
+%% it's just a bit too narrow to get everything to lay out right. Work still
+%% needs to be done.
 \paper {
-	#(set-paper-size "b4")
+	#(set-paper-size "arch a")
 	top-margin = 0.5\in
 	bottom-margin = 0.5\in
 	left-margin = 0.75\in
@@ -17,9 +21,16 @@
 }
 
 \header {
-	title = "Piano Concerto"
-	composer = "Leo Ornstein"
+	title = \hdrTitle
+	composer = \hdrComposer
+	copyright = \hdrCopyright
 }
+
+%%% First movement
+
+\include "mvmt1/I-common.ily"
+\include "mvmt1/I-solo-piano.ily"
+\include "mvmt1/I-piano-reduction.ily"
 
 \score {
   <<
@@ -41,6 +52,5 @@
 		markFormatter = #format-mark-circle-numbers
 	}
   }
-  \midi { \tempo 4 = 96 }
 }
 
