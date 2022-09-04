@@ -313,11 +313,32 @@ Tympani_I_mvmt_I_AR = \relative c {
 %%% Section AW = mm. 170-174 (Rehersal 17)
 %%% Tacet
 
+%%% Section AX = mm. 175-181
+
+Tympani_I_mvmt_I_AX = \relative c {
+	\time 6/8
+	a8[\mp a a a a a]
+	\time 5/8 \tag #'Score \slashedGrace s8
+	a[ a a a a]
+	\time 6/8 \tag #'Score \slashedGrace s8
+	a[ a a a a a]
+	\time 9/8 \tag #'Score \slashedGrace s8
+	R1*9/8
+	\time 6/8 \tag #'Score \slashedGrace s8
+	a[ a a a a a]
+	\time 5/8 \tag #'Score \slashedGrace s8
+	a[ a a a a]
+	\time 6/8 \tag #'Score \slashedGrace s8
+	a[ a a a a a]
+}
+
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
 		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN \Tympani_I_mvmt_I_AO
-		\NULL_I_AP \NULL_I_AQ \Tympani_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
+		\NULL_I_AP \NULL_I_AQ \Tympani_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Tympani_I_mvmt_I_AX }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
 		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN
-		\Tympani_II_mvmt_I_AO \Tympani_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
+		\Tympani_II_mvmt_I_AO \Tympani_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
+		\NULL_I_AX }

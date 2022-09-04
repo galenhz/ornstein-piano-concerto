@@ -365,17 +365,29 @@ m. 170: The score just has "Allegro" with the "con forza" added to the various p
 it into a single tempo directive. Going with that. #TEMPO
 (I-common)
 
+m. 170-174: Some parts have the time signatures scratched out and replaced by a 5/8 time which
+matches the repeating orchestra pattern. PR maintains the original pattern, so I'm keeping it.
+(I-orch-*)
+
 m. 170-174: Viola part seems to have been rewritten at some point. The four-note figure was
 changed from an ascending one to just playing e repeatedly. Score looks like whiteout may
 have been applied for the same end, and the piano reduction matches that pattern. They also
 lack the downbow marks that are in the other string parts: adding those.
 (I-orch-09-violins-viola)
 
-m. 176: The first chord in the solo piano upper voice has a "c and c-sharp" note cluster as
+m. 175: The first chord in the solo piano upper voice has a "c and c-sharp" note cluster as
 written in the PR. All of the slashed graces that follow in this section have "b-sharp and
 c-sharp" clusters. Since I can't (yet) replicate the split-stem trick the copyist used in the
 PR, change the first c to b-sharp.
 (I-solo-piano)
+
+m. 175-181: Articulation in the orchestra unison line is odd. The Trumpet and Bass Clarinet
+show slurs on the 16th figures. Oboes had them but scratched them out, and had a slur
+on the opening two notes almost nobody else has. The score has some slurs, most consistently for
+the horns. Parts show staccato and ^ accents for many instruments, but they're not in the
+score at all. Can't tell if they're copyist work or not.
+The recording seems to have the slurs on the 16th notes. Going with that as a reasonable base.
+(I-orch-*)
 
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the

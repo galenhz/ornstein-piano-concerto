@@ -805,22 +805,111 @@ Oboe_III_mvmt_I_AQ_AR = \relative c' {
 %%% Tacet
 
 %%% Section AW = mm. 170-174 (Rehersal 17)
-%%% Tacet
+%%% Tacet (need cues)
+
+%%% Section AX = mm. 175-181
+
+Oboe_I_II_mvmt_I_AX = \relative c'' {
+	\time 6/8
+	r8 c[\fff f fis gis8. gis16]
+	\time 5/8 \tag #'Score \slashedGrace s8
+	b8[ a16( \beamCutR gis) \beamCutL a( gis) fis8 gis16( fis])
+	\time 6/8 \tag #'Score \slashedGrace s8
+	f16[( \beamCutR d) \beamCutL f( fis) gis8 b a16( gis) fis8]
+	\time 9/8 \tag #'Score \slashedGrace s8
+	a,8[ a a a a a a a a]
+	\time 6/8 \tag #'Score \slashedGrace s8
+	r8 c[ f fis gis8. gis16]
+	\time 5/8 \tag #'Score \slashedGrace s8
+	b8[ a16( \beamCutR gis) \beamCutL a( gis) fis8 gis16( fis])
+	\time 6/8 \tag #'Score \slashedGrace s8
+	f16[( \beamCutR d) \beamCutL f( fis) gis8 b a16( gis) fis8]
+}
+
+Oboe_III_IV_mvmt_I_AX = \relative c'' {
+	\tag #'Score { \time 6/8 R2. \time 5/8 \slashedGrace s8 R1*5/8 \time 6/8 \slashedGrace s8 R2. }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\time 6/8
+				r8 c[^"I+II Ob." f fis gis8. gis16]
+				\time 5/8
+				b8[ a16( \beamCutR gis) \beamCutL a( gis) fis8 gis16( fis])
+				\time 6/8
+				f16[( \beamCutR d) \beamCutL f( fis) gis8 b a16( gis) fis8]
+			}
+			\new Voice {
+				\voiceTwo
+				\time 6/8
+				R2.
+				\time 5/8
+				R1*5/8
+				\time 6/8
+				R2.
+			}
+		>>
+	}
+	\time 9/8
+	\slashedGrace f,8( ges)[\fff \repeat unfold 7 { \slashedGrace f8( ges) } \slashedGrace f8( ges)]
+	\time 6/8 \tag #'Score \slashedGrace s8
+	R2.
+	\time 5/8 \tag #'Score \slashedGrace s8
+	R1*5/8
+	\time 6/8 \tag #'Score \slashedGrace s8
+	R2.
+}
+
+EnglishHorn_mvmt_I_AX = \transpose c' f \relative c''' {
+	\tag #'Score { \time 6/8 R2. \time 5/8 \slashedGrace s8 R1*5/8 \time 6/8 \slashedGrace s8 R2. }
+	\tag #'Part {
+		<<
+			\new CueVoice {
+				\time 6/8
+				\ottava #1 r8 g[^"I+II Ob." c cis dis8. dis16]
+				\time 5/8
+				fis8[ e16( \beamCutR dis) \beamCutL e( dis) cis8 dis16( cis)]
+				\time 6/8
+				c16([ \beamCutR a) \beamCutL c( cis) dis8 fis e16( dis) cis8] \ottava #0
+			}
+			\new Voice {
+				\voiceTwo
+				\time 6/8
+				R2.
+				\time 5/8
+				R1*5/8
+				\time 6/8
+				R2.
+			}
+		>>
+	}
+	\time 9/8
+	\stemUp \slashedGrace a,8( bes)[\fff \repeat unfold 7 { \slashedGrace a8( bes) } \slashedGrace a8( bes)] \stemNeutral
+	\time 6/8 \tag #'Score \slashedGrace s8
+	R2.
+	\time 5/8 \tag #'Score \slashedGrace s8
+	R1*5/8
+	\time 6/8 \tag #'Score \slashedGrace s8
+	R2.
+}
 
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
+		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
+		\Oboe_I_II_mvmt_I_AX }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
+		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
+		\Oboe_I_II_mvmt_I_AX }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
 		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
-		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_III_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
+		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_III_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
+		\Oboe_III_IV_mvmt_I_AX }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP \NULL_I_AQ
-		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
+		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Oboe_III_IV_mvmt_I_AX }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
 		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
-		\EnglishHorn_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW }
+		\EnglishHorn_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
+		\EnglishHorn_mvmt_I_AX }

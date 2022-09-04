@@ -62,7 +62,8 @@ NULL_I_AJ = { \mark #6 \time 4/4 R1*7 }
 NULL_I_AK = { \tempo "Melancolico e sostenuto" \time 4/8 R2*6 \time 3/8 R4.*6 }
 NULL_I_AL = { \mark #7 \tempo "Andante e molto sostenuto" \time 4/4 R1*8 \time 7/8 R1*7/8 }
 NULL_I_AM = { \mark #8 \tempo "Mosso" \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1*3 \time 5/4 R1*5/4 \time 6/4 R1*6/4 }
-NULL_I_AN = { \mark #9 \tempo "Allegro" \time 4/4 \tag #'Score \slashedGrace s8 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 \mark #10 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 3/4 R2.*2 }
+NULL_I_AN = { \mark #9 \tempo "Allegro" \time 4/4 \tag #'Score \slashedGrace s8 R1*2
+	\time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 \mark #10 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 \time 3/4 R2.*2 }
 NULL_I_AO = { \mark #11 \tempo "slower" \time 4/4 R1*4 \time 2/4 R2 \time 4/4 R1*2 \time 2/4 R2 }
 NULL_I_AP = { \mark #12 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1*2 }
 NULL_I_AQ = { \mark #13 \tempo "Vivo" \time 7/8 R1*7/8 \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 8/8 R1 \time 6/8 R2. \time 8/8 R1 \time 6/8 R2. \time 8/8 R1 }
@@ -72,4 +73,7 @@ NULL_I_AT = { \mark #15 \tempo "quasi improvisata" \time 5/4 R1*5/4 \time 7/4 R1
 NULL_I_AU = { \mark #16 \tempo "Andantino" \time 2/4 R2*10 }
 NULL_I_AV = { \time 7/8 R1*7/8 \time 9/8 R1*9/8*2 \time 6/8 R2. \time 8/8 R1 }
 NULL_I_AW = { \mark #17 \tempo "Allegro - con forza e marcato" \time 7/8 R1*7/8 \time 6/8 R2. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 3/8 R4. }
-NULL_I_AX = { \time 6/8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 \time 9/8 \tag #'Score \slashedGrace s8 R1*9/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 }
+NULL_I_AX = { \time 6/8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8
+	\time 9/8 \tag #'Score \slashedGrace s8 R1*9/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8
+	\time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 }
+NULL_I_AY = { R2. \time 5/8 R1*5/8 \time 6/8 R2. \time 5/8 R1*5/8 \mark #18 \time 8/8 R1 \time 4/8 R2 }
