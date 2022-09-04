@@ -398,7 +398,6 @@ Picc_I_mvmt_I_AL = \relative c''' {
 	R1*7/8
 }
 
-%%% Flute I and II get ottava'd because all those ledger lines make layout bad and give me a headache.
 %%% Suppress slurs in the score where PartCombiner makes them undrawable.
 %%% FIXME: PartCombine is breaking on I/II in a really wierd way.
 
@@ -406,13 +405,13 @@ Flute_I_mvmt_I_AL = \relative c'''' {
 	\mark #7
 	\tempo "Andante e molto sostenuto"
 	\time 4/4
-	\ottava #1 \tuplet 3/2 { r8 \tag #'Score c( \tag #'Part c(\p a,) } \ottava #0 r4 r2
-	\repeat unfold 2 { r4 \ottava #1 \tuplet 3/2 { r8 c'( a,) } \ottava #0 r2 }
-	r4 \ottava #1 \tuplet 3/2 { r8 c'( bes) } \ottava #0 r2
-	r4 \ottava #1 \tuplet 3/2 { r8 c( a,) } \ottava #0 r2
-	r4 \ottava #1 \tuplet 3/2 { r8 c'( bes) } \ottava #0 r2
-	r4 \ottava #1 \tuplet 3/2 { r8 c( a,) } \ottava #0 r2
-	\ottava #1 \tuplet 3/2 { r8 g'( bes) } \ottava #0 r4 r2
+	\tuplet 3/2 { r8 \tag #'Score c( \tag #'Part c(\p a,) } r4 r2
+	\repeat unfold 2 { r4 \tuplet 3/2 { r8 c'( a,) } r2 }
+	r4 \tuplet 3/2 { r8 c'( bes) } r2
+	r4 \tuplet 3/2 { r8 c( a,) } r2
+	r4 \tuplet 3/2 { r8 c'( bes) } r2
+	r4 \tuplet 3/2 { r8 c( a,) } r2
+	\tuplet 3/2 { r8 g'( bes) }r4 r2
 	\time 7/8
 	R1*7/8
 }
@@ -421,13 +420,13 @@ Flute_II_mvmt_I_AL = \relative c'''' {
 	\mark #7
 	\tempo "Andante e molto sostenuto"
 	\time 4/4
-	\ottava #1 \tuplet 3/2 { r8 g(\p fis) } \ottava #0 r4 r2
-	\repeat unfold 2 { r4 \ottava #1 \tuplet 3/2 { r8 g( fis) } \ottava #0 r2 }
+	\tuplet 3/2 { r8 g(\p fis) } r4 r2
+	\repeat unfold 2 { r4 \tuplet 3/2 { r8 g( fis) } r2 }
 	R1
-	r4 \ottava #1 \tuplet 3/2 { r8 g( fis) } \ottava #0 r2
+	r4 \tuplet 3/2 { r8 g( fis) } r2
 	R1
-	r4 \ottava #1 \tuplet 3/2 { r8 g( fis) } \ottava #0 r2
-	\ottava #1 \tuplet 3/2 { r8 \tag #'Part { g( d) } \tag #'Score { g d } } \ottava #0 r4 r2
+	r4 \tuplet 3/2 { r8 g( fis) } r2
+	\tuplet 3/2 { r8 \tag #'Part { g( d) } \tag #'Score { g d } } r4 r2
 	\time 7/8
 	R1*7/8
 }
