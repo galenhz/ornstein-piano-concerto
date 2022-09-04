@@ -38,6 +38,13 @@ and voiceTwo is printed?
 
 m. 105: Bassoon III. Part prints fine. Score has the tuplet bracket end too soon. Lilypond bug?
 
+m. 105: Bass line in this measure has rests too low because of the way I had to construct the
+tuplet. Bump them back up to the center.
+
+m. 113-121: Solo piano. Have to force stems up, because if the stems converge in the middle like
+in the PR, lilypond does not put enough space between the staves for things to work. I prefer
+the PR version. Look into prying apart the staves.
+
 mm. 116-117 and 119-120: Flute I, missing/broken bracket on first figure. Also, nothing I can
 do seems to persuade partcombine to put the stems down, which would make this less ugly.
 

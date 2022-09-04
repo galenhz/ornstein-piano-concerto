@@ -915,9 +915,13 @@ solo_upper_I_AO_AP = \relative c, {
 	\time 4/4
 	\tempo "slower"
 	%% WORKAROUND: Too many notes, so we shrink 'em to fit on the page and use % repeats to keep things
-	%%	           sane. A better solution may be possible.
+	%%	           sane. A better solution may be possible. Also have to force StemUp because lilypond
+	%%             won't expand the staff distance enough when you try to mix stems like the PR. I
+	%%             think the PR version looks cooler, honestly, but nothing I have tried has worked
+	%%             to force lilypond to push more space between the staves.
 	\magnifyMusic 0.63 {
 		\repeat percent 6 {
+			\stemUp
 			\tuplet 18/16 { \change Staff = "solo_lower" d64 a' f'
 				\change Staff = "solo_upper" a bes cis d f
 				\change Staff = "solo_lower" f, a bes cis d
@@ -930,9 +934,11 @@ solo_upper_I_AO_AP = \relative c, {
 				\change Staff = "solo_lower" f a,
 			}
 			\change Staff = "solo_upper"
+			\stemNeutral
 		}
 		%%% Just plow through the time signature changes. Redux has us covered.
 		\repeat percent 3 {
+			\stemUp
 			\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
 				\change Staff = "solo_upper" cis f a bes cis
 				\change Staff = "solo_lower" a, cis f
@@ -945,9 +951,11 @@ solo_upper_I_AO_AP = \relative c, {
 				\change Staff = "solo_lower" a cis,
 			}
 			\change Staff = "solo_upper"
+			\stemNeutral
 		}
 		\time 4/4
 		\repeat percent 2 {
+			\stemUp
 			\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
 				\change Staff = "solo_upper" a bes cis d f
 				\change Staff = "solo_lower" f, a bes cis d
@@ -960,8 +968,10 @@ solo_upper_I_AO_AP = \relative c, {
 				\change Staff = "solo_lower" f a,
 			}
 			\change Staff = "solo_upper"
+			\stemNeutral
 		}
 		\repeat percent 3 {
+			\stemUp
 			\tuplet 15/16 { \change Staff = "solo_lower" f cis' a'
 				\change Staff = "solo_upper" cis f a bes cis
 				\change Staff = "solo_lower" a, cis f
@@ -974,11 +984,13 @@ solo_upper_I_AO_AP = \relative c, {
 				\change Staff = "solo_lower" a cis,
 			}
 			\change Staff = "solo_upper"
+			\stemNeutral
 		}
 	% m. 121 - Rehersal 12
 		\mark #12
 		\time 4/4
 		\repeat percent 2 {
+			\stemUp
 			\tuplet 18/16 { \change Staff = "solo_lower" d,64 a' f'
 				\change Staff = "solo_upper" a bes cis d f
 				\change Staff = "solo_lower" f, a bes cis d
@@ -991,6 +1003,7 @@ solo_upper_I_AO_AP = \relative c, {
 				\change Staff = "solo_lower" f a,
 			}
 			\change Staff = "solo_upper"
+			\stemNeutral
 		}
 	} %magnifyMusic end
 	% mm. 122-125
