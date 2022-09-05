@@ -534,10 +534,14 @@ Flute_I_mvmt_I_AN = \relative c'' {
 		>>
 	}
 	\time 4/4
+	\partCombineSoloI
+	\stemDown
 	\tuplet 3/2 { cis'32(\ff dis fis } gis8.~) gis2 cis,4
 	dis \tuplet 3/2 { cis32( dis fis } gis8.~ gis4 cis,)
 	\time 2/4
 	\tuplet 3/2 { cis32( dis fis } gis8.~) gis4
+	\stemNeutral
+	\partCombineAutomatic
 	\mark #10
 	\time 4/4
 	R1*2
@@ -985,6 +989,7 @@ Flute_III_mvmt_I_AZ = \relative c''' {
 		r8 \tuplet 5/4 { r32 aes'[( g aes e] } b16)_\markup { \italic {rit.} } r16 r8
 	\partCombineAutomatic
 }
+
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_I_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
