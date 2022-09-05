@@ -895,24 +895,27 @@ EnglishHorn_mvmt_I_AX = \transpose c' f \relative c''' {
 %%% Section AY = mm. 182-187 (Rehersal ~18)
 %%% Tacet
 
+%%% Section AZ = mm. 188-193
+%%% Tacet
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
-		\Oboe_I_II_mvmt_I_AX \NULL_I_AY }
+		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
-		\Oboe_I_II_mvmt_I_AX \NULL_I_AY }
+		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
 		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_III_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
-		\Oboe_III_IV_mvmt_I_AX \NULL_I_AY }
+		\Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP \NULL_I_AQ
-		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Oboe_III_IV_mvmt_I_AX \NULL_I_AY }
+		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
 		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
 		\EnglishHorn_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
-		\EnglishHorn_mvmt_I_AX \NULL_I_AY }
+		\EnglishHorn_mvmt_I_AX \NULL_I_AY \NULL_I_AZ }
