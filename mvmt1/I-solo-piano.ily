@@ -1602,27 +1602,27 @@ solo_upper_I_AZ = \relative c {
 	% mm. 188-193
 	\tempo "Meno mosso; fluido"
 	\time 4/4
-	\tuplet 3/2 { r16 f \beamCutR b \beamCutL <e f> f b }
-		\tuplet 3/2 { <e f> b \beamCutR f \beamCutL <e f> b f~ }
-	\repeat unfold 2 { \tuplet 3/2 { f f \beamCutR b \beamCutL <e f> f b }
-		\tuplet 3/2 { <e f> b \beamCutR f \beamCutL <e f> b f~ } }
-	\tuplet 3/2 { f f \beamCutR b \beamCutL <e f> f b }
-		\tuplet 3/2 { <e f> b \beamCutR f \beamCutL <e f> b f }
-	\tuplet 3/2 { r16 cis' \beamCutR fis \beamCutL <bis cis> cis fis }
-		\tuplet 3/2 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis~ }
-	\repeat unfold 2 { \tuplet 3/2 { cis cis \beamCutR fis \beamCutL <bis cis> cis fis  }
-		\tuplet 3/2 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis~ } }
-	\tuplet 3/2 { cis cis \beamCutR fis \beamCutL <bis cis> cis fis }
-		\tuplet 3/2 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis }
-	\tuplet 3/2 { r16 fisis \beamCutR cis' \beamCutL <fis g> fisis cis' }
-		\tuplet 3/2 { <fis g> cis \beamCutR fisis, \beamCutL <fis g> cis fisis,~ }
-	\tuplet 3/2 { fisis fisis \beamCutR cis' \beamCutL <fis g> fisis cis' }
-		\tuplet 3/2 { <fis g> cis \beamCutR fisis, \beamCutL <fis g> cis fisis, }
+	\tuplet 3/2 8 { r16 f \beamCutR b \beamCutL <e f> f b }
+		\tuplet 3/2 8 { <e f> b \beamCutR f \beamCutL <e f> b f~ }
+	\repeat unfold 2 { \tuplet 3/2 8 { f f \beamCutR b \beamCutL <e f> f b }
+		\tuplet 3/2 8 { <e f> b \beamCutR f \beamCutL <e f> b f~ } }
+	\tuplet 3/2 8 { f f \beamCutR b \beamCutL <e f> f b }
+		\tuplet 3/2 8 { <e f> b \beamCutR f \beamCutL <e f> b f }
+	\tuplet 3/2 8 { r16 cis' \beamCutR fis \beamCutL <bis cis> cis fis }
+		\tuplet 3/2 8 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis~ }
+	\repeat unfold 2 { \tuplet 3/2 8 { cis cis \beamCutR fis \beamCutL <bis cis> cis fis  }
+		\tuplet 3/2 8 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis~ } }
+	\tuplet 3/2 8 { cis cis \beamCutR fis \beamCutL <bis cis> cis fis }
+		\tuplet 3/2 8 { <bis cis> fis \beamCutR cis \beamCutL <bis cis> fis cis }
+	\tuplet 3/2 8 { r16 fisis \beamCutR cis' \beamCutL <fis g> fisis cis' }
+		\tuplet 3/2 8 { <fis g> cis \beamCutR fisis, \beamCutL <fis g> cis fisis,~ }
+	\tuplet 3/2 8 { fisis fisis \beamCutR cis' \beamCutL <fis g> fisis cis' }
+		\tuplet 3/2 8 { <fis g> cis \beamCutR fisis, \beamCutL <fis g> cis fisis, }
 	% FIXME: Don't like the layout for the "des d" cluster. Can I get lilypond to do a split end like the PR?
-	\tuplet 3/2 { r16 d \beamCutR aes' \beamCutL <des d> d aes' }
-		\tuplet 3/2 { <des d> aes \beamCutR d, \beamCutL <des d> aes d, }
-	\tuplet 3/2 { r16 b \beamCutR e \beamCutL <bes' ces> b e }
-		\tuplet 3/2 { <bes' ces> e, \beamCutR b \beamCutL <bes ces> e, b }
+	\tuplet 3/2 8 { r16 d \beamCutR aes' \beamCutL <des d> d aes' }
+		\tuplet 3/2 8 { <des d> aes \beamCutR d, \beamCutL <des d> aes d, }
+	\tuplet 3/2 8 { r16 b \beamCutR e \beamCutL <bes' ces> b e }
+		\tuplet 3/2 8 { <bes' ces> e, \beamCutR b \beamCutL <bes ces> e, b }
 }
 
 solo_dynamics_I_AZ = {
@@ -1632,29 +1632,28 @@ solo_dynamics_I_AZ = {
 
 solo_lower_I_AZ = \relative c, {
 	% mm. 188-193
-	% QUESTION: This is just a (near) copy of the right-hand part, but with some inconsistent clef changes. Should I
-	%           bother trying to mimic the PR? For now I'll do the clef changes in 192/3, but not the inconsistent one in 190.
+	% EDIT: m. 190, leaving out clef transitions. It seems readable without them.
 	\time 4/4
-	\tuplet 3/2 { r16 f \beamCutR b \beamCutL e f b }
-		\tuplet 3/2 { e b \beamCutR f \beamCutL e b f~ }
-	\repeat unfold 2 { \tuplet 3/2 { f f \beamCutR b \beamCutL e f b }
-		\tuplet 3/2 { e b \beamCutR f \beamCutL e b f~ } }
-	\tuplet 3/2 { f f \beamCutR b \beamCutL e f b }
-		\tuplet 3/2 { e b \beamCutR f \beamCutL e b f }
-	\tuplet 3/2 { r16 cis' \beamCutR fis \beamCutL bis cis fis }
-		\tuplet 3/2 { bis fis \beamCutR cis \beamCutL bis fis cis~ }
-	\repeat unfold 2 { \tuplet 3/2 { cis cis \beamCutR fis \beamCutL bis cis fis  }
-		\tuplet 3/2 { bis fis \beamCutR cis \beamCutL bis fis cis~ } }
-	\tuplet 3/2 { cis cis \beamCutR fis \beamCutL bis cis fis }
-		\tuplet 3/2 { bis fis \beamCutR cis \beamCutL bis fis cis }
-	\tuplet 3/2 { r16 fisis \clef treble \beamCutR cis' \beamCutL fis fisis cis' }
-		\tuplet 3/2 { fis cis \beamCutR fisis, \beamCutL fis cis \clef bass fisis,~ }
-	\tuplet 3/2 { fisis fisis \clef treble \beamCutR cis' \beamCutL fis fisis cis' }
-		\tuplet 3/2 { fis cis \beamCutR fisis, \beamCutL fis cis \clef bass fisis, }
-	\tuplet 3/2 { r16 d \beamCutR aes' \clef treble \beamCutL des d aes' }
-		\tuplet 3/2 { des aes \beamCutR d, \beamCutL des \clef bass aes d, }
-	\tuplet 3/2 { r16 b \beamCutR e \beamCutL bes' b \clef treble e }
-		\tuplet 3/2 { bes' e, \clef bass \beamCutR b \beamCutL bes e, b }
+	\tuplet 3/2 8 { r16 f \beamCutR b \beamCutL e f b }
+		\tuplet 3/2 8 { e b \beamCutR f \beamCutL e b f~ }
+	\repeat unfold 2 { \tuplet 3/2 8 { f f \beamCutR b \beamCutL e f b }
+		\tuplet 3/2 8 { e b \beamCutR f \beamCutL e b f~ } }
+	\tuplet 3/2 8 { f f \beamCutR b \beamCutL e f b }
+		\tuplet 3/2 8 { e b \beamCutR f \beamCutL e b f }
+	\tuplet 3/2 8 { r16 cis' \beamCutR fis \beamCutL bis cis fis }
+		\tuplet 3/2 8 { bis fis \beamCutR cis \beamCutL bis fis cis~ }
+	\repeat unfold 2 { \tuplet 3/2 8 { cis cis \beamCutR fis \beamCutL bis cis fis  }
+		\tuplet 3/2 8 { bis fis \beamCutR cis \beamCutL bis fis cis~ } }
+	\tuplet 3/2 8 { cis cis \beamCutR fis \beamCutL bis cis fis }
+		\tuplet 3/2 8 { bis fis \beamCutR cis \beamCutL bis fis cis }
+	\tuplet 3/2 8 { r16 fisis \clef treble \beamCutR cis' \beamCutL fis fisis cis' }
+		\tuplet 3/2 8 { fis cis \beamCutR fisis, \beamCutL fis cis \clef bass fisis,~ }
+	\tuplet 3/2 8 { fisis fisis \clef treble \beamCutR cis' \beamCutL fis fisis cis' }
+		\tuplet 3/2 8 { fis cis \beamCutR fisis, \beamCutL fis cis \clef bass fisis, }
+	\tuplet 3/2 8 { r16 d \beamCutR aes' \clef treble \beamCutL des d aes' }
+		\tuplet 3/2 8 { des aes \beamCutR d, \beamCutL des \clef bass aes d, }
+	\tuplet 3/2 8 { r16 b \beamCutR e \beamCutL bes' b \clef treble e }
+		\tuplet 3/2 8 { bes' e, \clef bass \beamCutR b \beamCutL bes e, b }
 }
 
 %%% This is as far as I've gotten

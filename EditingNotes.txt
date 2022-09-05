@@ -402,6 +402,15 @@ probably adjust the reduction.
 m. 186-187: Violas and Basses have a bogus b-flat instead of b in parts. Score seems right
 (I-orch-09-violins-viola, I-orch-10-cello-bass)
 
+m. 190: Solo piano lower hand has a clef transition that happens in the first half of the
+measure, and not in the second. It really should be both or neither. Neither for now.
+(I-solo-piano)
+
+m. 193: Viola part has g-f-aes on beat three. All other instruments have g-e-aes. Score
+is iffy, but it's pretty clear that the line is supposed to be unison. Making viola
+match everybody else.
+(I-orch-09-violins-viola)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.
