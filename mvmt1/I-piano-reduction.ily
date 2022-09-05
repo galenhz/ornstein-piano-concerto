@@ -88,7 +88,7 @@ redux_dynamics_I_AA_AB = {
 	% mm. 1-4
 	s2.\f s2. s2. s2.
 	% mm. 5-12
-	s2. s2. s2. s2. s2. s1 s2. s4\< s2 s4\!
+	s2. s2. s2. s2. s2. s1 s2. s4\< s2 s8 s8\!
 
 }
 
@@ -1344,9 +1344,9 @@ redux_lower_I_AX = \relative c, {
 	q[ q q q q q]
 }
 
-%%% This is as far as I've gotten
+%%% Section AY = mm. 182-187 (Rehersal ~18)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_AY = \relative c' {
 	% mm. 182-185
 	<gis d' f gis>8[ q q q q q]
 	\time 5/8
@@ -1361,6 +1361,34 @@ redux_upper_I_remain = \relative c' {
 	<f b d f>1~
 	\time 4/8
 	<f b d f>2
+}
+
+redux_dynamics_I_AY = {
+	% mm. 182-185
+	s2. s2 s8 s2. s2 s8
+	% mm. 186-187 - Rehersal 18
+	s1 s2
+}
+
+redux_lower_I_AY = \relative c, {
+	% mm. 182-185
+	<d a' f'>8[ q q q q q]
+	\time 5/8
+	<ees bes' fes'>[ q q q q]
+	\time 6/8
+	<d a' f'>[ q q q q q ]
+	\time 5/8
+	<ees bes' fes'>[ q q q q]
+	% mm. 186-187 - Rehersal 18
+	\time 8/8
+	<b e b'>1~
+	\time 4/8
+	<b e b'>2
+}
+
+%%% Section AZ = mm. 188-193
+
+redux_upper_I_AZ = \relative c' {
 	% mm. 188-193
 	\tempo "Meno mosso; fluido"
 	\time 4/4
@@ -1373,6 +1401,33 @@ redux_upper_I_remain = \relative c' {
 	e8[ dis16 r32 fis] f4. ees8 \tuplet 3/2 { d b bes }
 	\clef bass
 	a8[ gis16 r32 c] b8 gis g[ e16 r32 aes] g8 e
+}
+
+redux_dynamics_I_AZ = {
+	% mm. 188-193
+	s1*5 s2. s4-\markup { \italic {rit.} }
+}
+
+redux_lower_I_AZ = \relative c, {
+	% mm. 188-193
+	\time 4/4
+	\repeat tremolo 4 { a32 a' } \repeat tremolo 4 { gis, gis' } \repeat tremolo 2 { gis, gis' }
+		\repeat tremolo 2 { a, a' } \tuplet 3/2 { gis,16[ gis'] fis,[ fis'] f,[ f'] }
+	\repeat tremolo 8 { d,32 d' } \repeat tremolo 2 { d, d' } \repeat tremolo 2 { f, f' }
+		\repeat tremolo 2 { fis, fis' } \repeat tremolo 2 { a, a' }
+	\repeat tremolo 4 { cis, cis' } \repeat tremolo 4 { c, c' } \repeat tremolo 2 { c, c' }
+		\repeat tremolo 2 { cis, cis' } \tuplet 3/2 { c,16[ c'] bes,[ bes'] a,[ a'] }
+	\repeat tremolo 8 { fis,32 fis' } \repeat tremolo 2 { fis, fis' } \repeat tremolo 2 { a, a' }
+		\repeat tremolo 2 { c, c' } \repeat tremolo 2 { cis, cis' }
+	\repeat tremolo 2 { e, e' } dis,[ dis' fis, fis'] \repeat tremolo 6 { f, f' }
+		\repeat tremolo 2 { ees, ees' } \tuplet 3/2 { d,16[ d'] b,[ b'] bes,[ bes'] }
+	\repeat tremolo 2 { a,32 a' } gis,[ gis' a, a'] \repeat tremolo 2 { b, b' } \repeat tremolo 2 { gis, gis' }
+		\repeat tremolo 2 { g, g' } e,[ e' aes, aes'] \repeat tremolo 2 { g, g' } \repeat tremolo 2 { e, e' }
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 194-201 - Rehersal 19
 	% Fixed: Need empty grace notes here to match left hand
 	\time 6/8
@@ -1382,7 +1437,7 @@ redux_upper_I_remain = \relative c' {
 		<<
 			\new Voice {
 				\voiceOne
-				fis' f \tuplet 3/2 { e16 ees fis } d g gis8 cis,16 a'
+				fis8 f \tuplet 3/2 { e16 ees fis } d g gis8 cis,16 a'
 			}
 			\new Voice {
 				\voiceTwo
@@ -1846,12 +1901,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 182-185
-	s2. s2 s8 s2. s2 s8
-	% mm. 186-187 - Rehersal 18
-	s1 s2
-	% mm. 188-193
-	s1*5 s2. s4-\markup { \italic {rit.} }
 	% mm. 194-201 - Rehersal 19
 	s2.*7 s4. s4.-\markup { \italic {rit.} }
 	% mm. 202-207 - Rehersal 20
@@ -1890,33 +1939,6 @@ redux_dynamics_I_remain = {
 }
 
 redux_lower_I_remain = \relative c, {
-	% mm. 182-185
-	<d a' f'>8[ q q q q q]
-	\time 5/8
-	<ees bes' fes'>[ q q q q]
-	\time 6/8
-	<d a' f'>[ q q q q q ]
-	\time 5/8
-	<ees bes' fes'>[ q q q q]
-	% mm. 186-187 - Rehersal 18
-	\time 8/8
-	<b e b'>1~
-	\time 4/8
-	<b e b'>2
-	% mm. 188-193
-	\time 4/4
-	\repeat tremolo 4 { a32 a' } \repeat tremolo 4 { gis, gis' } \repeat tremolo 2 { gis, gis' }
-		\repeat tremolo 2 { a, a' } \tuplet 3/2 { gis,16[ gis'] fis,[ fis'] f,[ f'] }
-	\repeat tremolo 8 { d,32 d' } \repeat tremolo 2 { d, d' } \repeat tremolo 2 { f, f' }
-		\repeat tremolo 2 { fis, fis' } \repeat tremolo 2 { a, a' }
-	\repeat tremolo 4 { cis, cis' } \repeat tremolo 4 { c, c' } \repeat tremolo 2 { c, c' }
-		\repeat tremolo 2 { cis, cis' } \tuplet 3/2 { c,16[ c'] bes,[ bes'] a,[ a'] }
-	\repeat tremolo 8 { fis,32 fis' } \repeat tremolo 2 { fis, fis' } \repeat tremolo 2 { a, a' }
-		\repeat tremolo 2 { c, c' } \repeat tremolo 2 { cis, cis' }
-	\repeat tremolo 2 { e, e' } dis,[ dis' fis, fis'] \repeat tremolo 6 { f, f' }
-		\repeat tremolo 2 { ees, ees' } \tuplet 3/2 { d,16[ d'] b,[ b'] bes,[ bes'] }
-	\repeat tremolo 2 { a,32 a' } gis,[ gis' a, a'] \repeat tremolo 2 { b, b' } \repeat tremolo 2 { gis, gis' }
-		\repeat tremolo 2 { g, g' } e,[ e' aes, aes'] \repeat tremolo 2 { g, g' } \repeat tremolo 2 { e, e' }
 	% mm. 194-201 - Rehersal 19
 	\time 6/8
 	\repeat unfold 2 {
@@ -2339,14 +2361,15 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
 		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_AR
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
-		\redux_upper_I_remain }
+		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
 		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_AR \redux_dynamics_I_AS \redux_dynamics_I_AT
-		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_remain }
+		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_AY
+		\redux_dynamics_I_AZ \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
 		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
-		\redux_lower_I_remain }
+		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_remain }

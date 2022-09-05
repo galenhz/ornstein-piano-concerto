@@ -77,3 +77,6 @@ NULL_I_AX = { \time 6/8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8 \t
 	\time 9/8 \tag #'Score \slashedGrace s8 R1*9/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8
 	\time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 }
 NULL_I_AY = { R2. \time 5/8 R1*5/8 \time 6/8 R2. \time 5/8 R1*5/8 \mark #18 \time 8/8 R1 \time 4/8 R2 }
+NULL_I_AZ = { \tempo "Meno mosso; fluido" \time 4/4 R1*6 }
+NULL_I_BA = { \mark #19 \time 6/8 R2.*8 }
+NULL_I_BB = { \mark #20 \tempo "Andantino (meno)" R2.*6 }
