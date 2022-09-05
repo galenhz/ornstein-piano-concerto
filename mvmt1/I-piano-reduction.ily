@@ -1425,9 +1425,9 @@ redux_lower_I_AZ = \relative c, {
 		\repeat tremolo 2 { g, g' } e,[ e' aes, aes'] \repeat tremolo 2 { g, g' } \repeat tremolo 2 { e, e' }
 }
 
-%%% This is as far as I've gotten
+%%% Section BA = mm. 194-201 (Rehersal 19)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_BA = \relative c' {
 	% mm. 194-201 - Rehersal 19
 	% Fixed: Need empty grace notes here to match left hand
 	\time 6/8
@@ -1459,6 +1459,50 @@ redux_upper_I_remain = \relative c' {
 			cis4.~ cis4 a8
 		}
 	>>
+}
+
+redux_dynamics_I_BA = {
+	% mm. 194-201 - Rehersal 19
+	s2.*7 s4. s4.-\markup { \italic {rit.} }
+}
+
+redux_lower_I_BA = \relative c, {
+	% mm. 194-201 - Rehersal 19
+	\time 6/8
+	\repeat unfold 2 {
+		% Fixed: Explicitly place rests so things look nice.
+		<<
+			\new Voice {
+				\voiceOne
+				\repeat unfold 2 { \tuplet 3/2 { r16 ees a, } \tuplet 3/2 { ees'8 \set stemLeftBeamCount = #2 \beamCutR a,16 } \beamCutL ees' a, }
+				<aes' f'>8   d8\rest d8\rest d4.\rest
+			}
+			\new Voice {
+				\voiceTwo
+				\acciaccatura ees,,8 <ees bis'' ees>2.
+				\acciaccatura <e e'>8 <e e'>8   s8 s8 s4.
+			}
+		>>
+	}
+	R2.
+	<<
+		\new Voice {
+			\voiceOne
+			cis'''8 c \tuplet 3/2 { b16 bes g } bes8. b16 c cis
+		}
+		\new Voice {
+			\voiceTwo
+			% WORKAROUND: Tweak the layout of the PR; add an extra cis so the tie goes through.
+			\tuplet 3/2 { r16 cis,~ <cis g>~ } <cis g>4~ <cis g>4.
+		}
+	>>
+	<d gis d'>2.
+	<ees, a ees'>4.~ <ees a ees'>4 <a, a'>8
+}
+
+%%% Section BB = mm. 202-207 (Rehersal 20)
+
+redux_upper_I_BB = \relative c' {
 	% mm. 202-207 - Rehersal 20
 	\tempo "Andantino (meno)"
 	\mark #20
@@ -1476,6 +1520,26 @@ redux_upper_I_remain = \relative c' {
 			\repeat unfold 2 { <d g>4. <g cis> }
 		}
 	>>
+}
+
+redux_dynamics_I_BB = {
+	% mm. 202-207 - Rehersal 20
+	s2.*6
+}
+
+redux_lower_I_BB = \relative c, {
+	% mm. 202-207 - Rehersal 20
+	\repeat unfold 2 {
+		<g g'>4 <g g'>8~ <g g'>4 <g g'>8
+		<bes f' bes>4 <bes f' bes>8~ <bes f' bes> <a a'> <aes aes'>
+	}
+	<g g'>4. <ees ees'>
+	<g g'> <ees ees'>
+}
+
+%%% Section BC = mm. 208-215 (Rehersal 21/22)
+
+redux_upper_I_BC = \relative c' {
 	% mm. 208-211 - Rehersal 21
 	\tempo "Moderato"
 	\time 4/4
@@ -1525,9 +1589,69 @@ redux_upper_I_remain = \relative c' {
 			<a c> <e' g> \tuplet 3/2 { r8 <f a>4 } <a cis>
 		}
 	>>
+}
+
+redux_dynamics_I_BC = {
+	% mm. 208-211 - Rehersal 21
+	s1 s1 s2. s1 s1 s2.
+	% mm. 212-215 - Rehersal 22
+	s1*4
+}
+
+redux_lower_I_BC = \relative c {
+	% mm. 208-211 - Rehersal 21
+	\tempo "Moderato"
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			r4 aes8 d \tuplet 6/4 { ees16 e f e ees d } \tuplet 5/4 { aes d ees e f }
+		}
+		\new Voice {
+			\voiceTwo
+			<d,, d'>1
+		}
+	>>
+	\time 7/4
+	<f' b g'>1~ <f b g'>2.
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			r4 aes8 d \tuplet 6/4 { ees16 e f e ees d } \tuplet 5/4 { aes d ees e f }
+		}
+		\new Voice {
+			\voiceTwo
+			d,1
+		}
+	>>
+	\time 7/4
+	<f g' b>1~ <f g' b>2.
+	% mm. 212-215 - Rehersal 22
+	\time 4/4
+	\repeat unfold 3 { <g des' bes'>4 \acciaccatura <bes fis' d'>8 <bes fis' d'>2. }
+	%% FIXME: Any way to get the parentheses to cover the whole chord, not just the note heads?
+	<<
+		\new Voice {
+			\voiceOne
+			\magnifyMusic 0.63 {
+			    \override Score.SpacingSpanner.spacing-increment = #(* 1.2 0.63)
+				\parenthesize <f' g b f'>4 \parenthesize <b, a' ees' g> \parenthesize <ees b' g'> \parenthesize <g b ees f>
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			<cis,, cis'>4 <f, f'> <a a'> <cis cis'>
+		}
+	>>
+}
+
+%%% Section BD = mm. 216-225 (Rehersal 23)
+
+redux_upper_I_BD = \relative c''' {
 	% mm. 216-225 - Rehersal 23
 	\time 3/4
-	\tempo "Poco piu Lento"
+	\tempo "Poco più Lento"
 	\mark #23
 	%% FIXME: Lilypond misplacing 8th rests in bars 217 and 219
 	<<
@@ -1543,7 +1667,7 @@ redux_upper_I_remain = \relative c' {
 			}
 		}
 	>>
-	\tempo "Piu agitato e crescendo"
+	\tempo "Più agitato e crescendo"
 	<<
 		\new Voice {
 			\voiceOne
@@ -1579,6 +1703,40 @@ redux_upper_I_remain = \relative c' {
 	>>
 	\ottava #0
 	\bar "||" %%% \mark \markup { \musicglyph "scripts.ufermata" }
+}
+
+redux_dynamics_I_BD = {
+	% mm. 216-225 - Rehersal 23
+	% Can't use center dynamics channel in m. 223 due to staff crossing
+	s2.*7 s2*2 s2.
+}
+
+redux_lower_I_BD = \relative c' {
+	% mm. 216-225 - Rehersal 23
+	\time 3/4
+	s2.*7
+	\time 2/4
+	s2
+	\clef treble
+	<<
+		\new Voice {
+			\voiceOne
+			<des f a bes>4 <f a bes cis>
+			\time 3/4
+			<des f a bes> <f a bes cis> <a cis e f>
+		}
+		\new Voice {
+			\voiceTwo
+			f,2
+			\time 3/4
+			f2.
+		}
+	>>
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c'' {
 	% mm. 226-232 - Rehersal 24
 	% FIXME: Gotta combine bar fermata and rehersal mark.
 	% FIXME: What's going on with the rhythms in the inner voice? Check full score.
@@ -1589,7 +1747,7 @@ redux_upper_I_remain = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
-			\repeat unfold 3 { r4 \slashedGrace b,8 <c c'>4 \slashedGrace b'8 <c c'>4 }
+			\repeat unfold 3 { r4 \slashedGrace b8 <c c'>4 \slashedGrace b'8 <c c'>4 }
 			r4 \slashedGrace f,8 <fis fis'>4 \slashedGrace f'8 <fis fis'>4
 			r4 \slashedGrace b,,8 <c c'>4 \slashedGrace b'8 <c c'>4
 			r4 \slashedGrace f,8 <fis fis'>4 \slashedGrace f'8 <fis fis'>4
@@ -1901,17 +2059,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 194-201 - Rehersal 19
-	s2.*7 s4. s4.-\markup { \italic {rit.} }
-	% mm. 202-207 - Rehersal 20
-	s2.*6
-	% mm. 208-211 - Rehersal 21
-	s1 s1 s2. s1 s1 s2.
-	% mm. 212-215 - Rehersal 22
-	s1*4
-	% mm. 216-225 - Rehersal 23
-	% Can't use center dynamics channel in m. 223 due to staff crossing
-	s2.*7 s2*2 s2.
 	% mm. 226-232 - Rehersal 24
 	s2.*7
 	% mm. 233-239 - Rehersal 25
@@ -1938,113 +2085,7 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c, {
-	% mm. 194-201 - Rehersal 19
-	\time 6/8
-	\repeat unfold 2 {
-		% FIXME: Blech. I tried to keep the rests out of the voices structure so they got centered nicely, but
-		%        doing that breaks things; lilypond extends the redux lower voice out forever with empty bars.
-		%        I don't like that. It indicates something's stuck open which should be closed, and could cause
-		%        subtle bugs down the line. Do this for now. Figure out a real fix later.
-		<<
-			\new Voice {
-				\voiceOne
-				\repeat unfold 2 { \tuplet 3/2 { r16 ees a, } \tuplet 3/2 { ees'8 \set stemLeftBeamCount = #2 \beamCutR a,16 } \beamCutL ees' a, }
-				<aes' f'>8   r8 r8 r4.
-			}
-			\new Voice {
-				\voiceTwo
-				\acciaccatura ees,8 <ees bis'' ees>2.
-				\acciaccatura <e e'>8 <e e'>8   s8 s8 s4.
-			}
-		>>
-	}
-	R2.
-	<<
-		\new Voice {
-			\voiceOne
-			cis'''8 c \tuplet 3/2 { b16 bes g } bes8. b16 c cis
-		}
-		\new Voice {
-			\voiceTwo
-			% WORKAROUND: Tweak the layout of the PR; add an extra cis so the tie goes through.
-			\tuplet 3/2 { r16 cis,~ <cis g>~ } <cis g>4~ <cis g>4.
-		}
-	>>
-	<d gis d'>2.
-	<ees, a ees'>4.~ <ees a ees'>4 <a, a'>8
-	% mm. 202-207 - Rehersal 20
-	\repeat unfold 2 {
-		<g g'>4 <g g'>8~ <g g'>4 <g g'>8
-		<bes f' bes>4 <bes f' bes>8~ <bes f' bes> <a a'> <aes aes'>
-	}
-	<g g'>4. <ees ees'>
-	<g g'> <ees ees'>
-	% mm. 208-211 - Rehersal 21
-	\tempo "Moderato"
-	\time 4/4
-	<<
-		\new Voice {
-			\voiceOne
-			r4 aes'8 d \tuplet 6/4 { ees16 e f e ees d } \tuplet 5/4 { aes d ees e f }
-		}
-		\new Voice {
-			\voiceTwo
-			<d,, d'>1
-		}
-	>>
-	\time 7/4
-	<f' b g'>1~ <f b g'>2.
-	\time 4/4
-	<<
-		\new Voice {
-			\voiceOne
-			r4 aes8 d \tuplet 6/4 { ees16 e f e ees d } \tuplet 5/4 { aes d ees e f }
-		}
-		\new Voice {
-			\voiceTwo
-			d,1
-		}
-	>>
-	\time 7/4
-	<f g' b>1~ <f g' b>2.
-	% mm. 212-215 - Rehersal 22
-	\time 4/4
-	\repeat unfold 3 { <g des' bes'>4 \acciaccatura <bes fis' d'>8 <bes fis' d'>2. }
-	%% FIXME: Any way to get the parentheses to cover the whole chord, not just the note heads?
-	<<
-		\new Voice {
-			\voiceOne
-			\magnifyMusic 0.63 {
-			    \override Score.SpacingSpanner.spacing-increment = #(* 1.2 0.63)
-				\parenthesize <f' g b f'>4 \parenthesize <b, a' ees' g> \parenthesize <ees b' g'> \parenthesize <g b ees f>
-			}
-		}
-		\new Voice {
-			\voiceTwo
-			<cis,, cis'>4 <f, f'> <a a'> <cis cis'>
-		}
-	>>
-	% mm. 216-225 - Rehersal 23
-	\time 3/4
-	s2.*7
-	\time 2/4
-	s2
-	\clef treble
-	<<
-		\new Voice {
-			\voiceOne
-			<des'' f a bes>4 <f a bes cis>
-			\time 3/4
-			<des f a bes> <f a bes cis> <a cis e f>
-		}
-		\new Voice {
-			\voiceTwo
-			f,2
-			\time 3/4
-			f2.
-		}
-	>>
+redux_lower_I_remain = \relative c' {
 	% mm. 226-232 - Rehersal 24
 	\time 6/8
 	\clef bass
@@ -2361,15 +2402,18 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AG \redux_upper_I_AH \redux_upper_I_AI \redux_upper_I_AJ \redux_upper_I_AK \redux_upper_I_AL
 		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_AR
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
-		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_remain }
+		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
+		\redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
 		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_AR \redux_dynamics_I_AS \redux_dynamics_I_AT
 		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_AY
-		\redux_dynamics_I_AZ \redux_dynamics_I_remain }
+		\redux_dynamics_I_AZ \redux_dynamics_I_BA \redux_dynamics_I_BB \redux_dynamics_I_BC \redux_dynamics_I_BD
+		\redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
 		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
-		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_remain }
+		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_BA \redux_lower_I_BB \redux_lower_I_BC \redux_lower_I_BD
+		\redux_lower_I_remain }

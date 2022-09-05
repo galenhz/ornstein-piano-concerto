@@ -80,3 +80,5 @@ NULL_I_AY = { R2. \time 5/8 R1*5/8 \time 6/8 R2. \time 5/8 R1*5/8 \mark #18 \tim
 NULL_I_AZ = { \tempo "Meno mosso; fluido" \time 4/4 R1*6 }
 NULL_I_BA = { \mark #19 \time 6/8 R2.*8 }
 NULL_I_BB = { \mark #20 \tempo "Andantino (meno)" R2.*6 }
+NULL_I_BC = { \mark #21 \tempo "Moderato" \time 4/4 R1 \time 7/4 R1*7/4 \time 4/1 R1 \time 7/4 R1*7/4 \mark #22 \time 4/4 R1*4 }
+NULL_I_BD = { \mark #23 \tempo "Poco più Lento" \time 3/4 R2.*4 \tempo "Più agitato e crescendo" R2.*3 \time 2/4 R2*2 \time 3/4 R2. }

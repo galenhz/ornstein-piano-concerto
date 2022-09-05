@@ -1656,25 +1656,25 @@ solo_lower_I_AZ = \relative c, {
 		\tuplet 3/2 8 { bes' e, \clef bass \beamCutR b \beamCutL bes e, b }
 }
 
-%%% This is as far as I've gotten
+%%% Section BA = mm. 194-201 (Rehersal 19)
 
-solo_upper_I_remain = \relative c'' {
+solo_upper_I_BA = \relative c'' {
 	% mm. 194-201 - Rehersal 19
 	% WORKAROUND: Add silent grace notes to four bars to match the piano reduction.
 	\mark #19
 	\time 6/8
-	\grace s8 R2.
+	\tag #'PR \grace s8 R2.
 	<<
 		\new Voice {
 			\voiceOne
-			\grace s8 g16 ais b8 d~ d16 ees fis4
+			\tag #'PR \grace s8 g16 ais b8 d~ d16 ees fis4
 		}
 		\new Voice {
 			\voiceTwo
 			<b,, e>4. <g' cis>
 		}
 	>>
-	\grace s8 R2.
+	\tag #'PR \grace s8 R2.
 	<<
 		\new Voice {
 			\voiceOne
@@ -1683,7 +1683,7 @@ solo_upper_I_remain = \relative c'' {
 		}
 		\new Voice {
 			\voiceTwo
-			\grace s8 <b, e>2.
+			\tag #'PR \grace s8 <b, e>2.
 			<c' e>
 		}
 	>>
@@ -1701,15 +1701,101 @@ solo_upper_I_remain = \relative c'' {
 	r16 <f bes cis e f>16[ \tuplet 3/2 { \beamCutL <fis fis'> <a a'> \beamCutR <bis bis'> }
 		\beamCutL <a a'> \beamCutR <fis fis'> \beamCutL <f f'> \beamCutR <d d'>
 		\beamCutL <f f'> <fis fis'> <a a'>8]
+}
+
+solo_dynamics_I_BA = {
+	% mm. 194-201 - Rehersal 19
+	s2.*7 s4. s4.-\markup { \italic {rit.} }
+}
+
+solo_lower_I_BA = \relative c {
+	% mm. 194-201 - Rehersal 19
+	% WORKAROUND: Add silent grace notes to four bars to match the piano reduction.
+	\time 6/8
+	\tag #'PR \grace s8 R2.
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { \tuplet 8/6 { r16 f b bes e b bes f } }
+		}
+		\new Voice {
+			\voiceTwo
+			\tag #'PR \grace s8 <d, aes' f'>2.
+		}
+	>>
+	\tag #'PR \grace s8 R2.
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { \tuplet 8/6 { r16 f' b bes e b bes f } }
+		}
+		\new Voice {
+			\voiceTwo
+			\tag #'PR \grace s8 <d, aes' f'>2.
+		}
+	>>
+	e16 b' gis' gis d' bes e d bes gis gis d
+	<cis, gis' cis>8 r8 r8 r4.
+	e16 b' gis' gis d' bes e d bes gis gis d
+	\tuplet 3/2 { r16 ees,[ a] } \tuplet 3/2 { ees'[ a, ees'] }
+		\tuplet 3/2 { a[ ees \beamCutR a } \tuplet 3/2 { \beamCutL ees' a, \beamCutR ees' }
+		\tuplet 3/2 { \beamCutL a ees \beamCutR a, } \tuplet 3/2 { \beamCutL ees' a, ees] }
+}
+
+%%% Section BB = mm. 202-207 (Rehersal 20)
+
+solo_upper_I_BB = \relative c'' {
 	% mm. 202-207 - Rehersal 20
 	\tempo "Andantino (meno)"
 	\mark #20
-	\repeat unfold 2 { r16 <a, d> <cis ees> <d fis> <cis ees> <a d> }
+	\repeat unfold 2 { r16 <a d> <cis ees> <d fis> <cis ees> <a d> }
 	\repeat unfold 2 { r16 <bes f'> <d fis> <f a> <d fis> <bes f> }
 	\repeat unfold 2 { r16 <d a'> <gis bes> <a cis> <gis bes> <d a> }
 	\repeat unfold 2 { r16 <bes f'> <d fis> <f a> <d fis> <bes f> }
 	\repeat unfold 2 { r16 <g d'> <cis ees> <d fis> <cis ees> <g d>
 		r16 <g b> <bes c> <b ees> <bes c> <g b> }
+}
+
+solo_dynamics_I_BB = {
+	% mm. 202-207 - Rehersal 20
+	s2.-\markup { \dynamic p espressivo } s2.*5
+}
+
+solo_lower_I_BB = \relative c'' {
+	% mm. 202-207 - Rehersal 20
+	\clef treble
+	<<
+		\new Voice {
+			\voiceOne
+			g4 fis8~ fis8. g16 \tuplet 3/2 { fis f d }
+			f4.~ f8 fis g
+			a4 gis8~ gis16 \beamCutR a \beamCutL ais \beamCutR g \tuplet 3/2 { \beamCutL fis f d }
+			f4.~ f16 fis f8 d16 cis
+		}
+		\new Voice {
+			\voiceTwo
+			<cis d>2.
+			<aes bes>
+			<cis d>
+			<aes bes>
+		}
+	>>
+	\clef bass
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { cis4. c4~ c16 bes }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { <d, g>8 g,4 <des' g>8 ees,4 }
+		}
+	>>
+}
+
+%%% Section BC = mm. 208-215 (Rehersal 21/22)
+
+solo_upper_I_BC = \relative c'''' {
 	% mm. 208-211 - Rehersal 21
 	\tempo "Moderato"
 	\mark #21
@@ -1720,7 +1806,7 @@ solo_upper_I_remain = \relative c'' {
 		r4 \ottava #1 <<
 			\new Voice {
 				\voiceOne
-				a''1 s2
+				a1 s2
 			}
 			\new Voice {
 				\voiceTwo
@@ -1732,8 +1818,6 @@ solo_upper_I_remain = \relative c'' {
 	% mm. 212-215 - Rehersal 22
 	\time 4/4
 	\mark #22
-	%% FIXME: If I don't want to force tuplet brackets here, then maybe don't use them in the parallel passage
-	%%        at mm. 95?
 	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
 		bes8 cis64 e f \change Staff = "solo_upper" a bes cis e f \stemUp aes8 \stemNeutral
 		\tuplet 9/8 { f64[ e cis bes a \change Staff = "solo_lower" f e cis bes] }
@@ -1746,22 +1830,51 @@ solo_upper_I_remain = \relative c'' {
 		\change Staff = "solo_upper" \ottava #0
 		\tuplet 9/8 { f'64[ e cis bes a \change Staff = "solo_lower" f e cis bes] }
 		\change Staff = "solo_upper" r8
-	%% QUESTION: Ottava in m. 214 missing in PR, but in the full score. Pretty obvious it should be there, in parallel
-	%%           with the passage at m. 95. So 214 is a clone of 212.
+	%% EDIT: Ottava in m. 214 missing in PR, but in the full score. Pretty obvious
+	%%       it should be there, so it matches 212.
 	r4 \ottava #1 \change Staff = "solo_lower" \override Staff.OttavaBracket.transparent = ##t \ottava #1
 		bes'8 cis64 e f \change Staff = "solo_upper" a bes cis e f \stemUp aes8 \stemNeutral
 		\tuplet 9/8 { f64[ e cis bes a \change Staff = "solo_lower" f e cis bes] }
 		\ottava #0 \revert Staff.OttavaBracket.transparent
 		\change Staff = "solo_upper" \ottava #0 r4
 	R1
+}
+
+solo_dynamics_I_BC = {
+	% mm. 208-211 - Rehersal 21
+	s1 s1-\markup { \dynamic ff } s2. s1 s1 s2.
+	% mm. 212-215 - Rehersal 22
+	s1*4
+}
+
+solo_lower_I_BC = \relative c'' {
+	% mm. 208-211 - Rehersal 21
+	\repeat unfold 2 {
+		\time 4/4
+		R1
+		\time 7/4
+		\clef treble
+		r4 <ees a>4~ <ees a>8 <des g>16. <ees a>32 <des g>8 <ces f>16. <des g>32 <ces f>8 <g des'> <des' g> <ees a>~ <ees a>4
+	}
+	% mm. 212-215 - Rehersal 22
+	\time 4/4
+	r4 s2 r4
+	r4 s2 s8 r8
+	r4 s2 r4
+	R1
+}
+
+%%% Section BD = mm. 216-225 (Rehersal 23)
+
+solo_upper_I_BD = \relative c'' {
 	% mm. 216-225 - Rehersal 23
 	\time 3/4
-	\tempo "Poco piu Lento"
+	\tempo "Poco più Lento"
 	\mark #23
 	<<
 		\new Voice {
 			\voiceOne
-			r8 des, e4. des8
+			r8 des e4. des8
 			r8 fis16 g bes2
 			r8 des,8 e4. des8
 			r8 fis16 g bes8 cis4 d8
@@ -1774,8 +1887,7 @@ solo_upper_I_remain = \relative c'' {
 			}
 		}
 	>>
-	\tempo "Piu agitato e crescendo"
-	%% QUESTION: Odd that the "double voices" in the right hand here are only in every other measure. Check full score.
+	\tempo "Più agitato e crescendo"
 	\ottava #1
 	<<
 		\new Voice {
@@ -1803,6 +1915,35 @@ solo_upper_I_remain = \relative c'' {
 	>>
 	\ottava #0
 	\bar "||" %%% \mark \markup { \musicglyph "scripts.ufermata" }
+}
+
+solo_dynamics_I_BD = {
+	% mm. 216-225 - Rehersal 23
+	s2.*7 s2-\markup { \italic {"molto "} \dynamic ff \italic {" e rall."} } s2 s2.
+}
+
+solo_lower_I_BD = \relative c, {
+	% mm. 216-225 - Rehersal 23
+	\time 3/4
+	\clef bass
+	\repeat unfold 2 {
+		<dis a' g'>2.
+		<g d' bes'>
+	}
+	\clef treble
+	\repeat unfold 3 { \tuplet 6/4 { r32 d'' a' fis bes a } cis8 }
+	\repeat unfold 3 { \tuplet 6/4 { r32 f, bes a cis bes } e8 }
+	\repeat unfold 3 { \tuplet 6/4 { r32 d, a' fis bes a } cis8 }
+	\time 2/4
+	\repeat unfold 2 { \tuplet 6/4 { r32 f, bes a cis bes } e8 }
+	\repeat unfold 2 { \tuplet 6/4 { r32 dis, a' f bes a } cis8 }
+	\time 3/4
+	\tuplet 6/4 { r32 dis, a' f bes a } cis8 \tuplet 6/4 { r32 f, bes a cis bes } e8 \tuplet 6/4 { r32 a, e' cis f e } <a cis e f>8
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c'''' {
 	% mm. 226-232 - Rehersal 24
 	% FIXME: Gotta combine bar fermata and rehersal mark. Very tricky. Note that if we break on this measure, the fermata has
 	%        to go before the break, and the mark afterwards.
@@ -2174,16 +2315,6 @@ solo_upper_I_remain = \relative c'' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 194-201 - Rehersal 19
-	s2.*7 s4. s4.-\markup { \italic {rit.} }
-	% mm. 202-207 - Rehersal 20
-	s2.-\markup { \dynamic p espressivo } s2.*5
-	% mm. 208-211 - Rehersal 21
-	s1 s1-\markup { \dynamic ff } s2. s1 s1 s2.
-	% mm. 212-215 - Rehersal 22
-	s1*4
-	% mm. 216-225 - Rehersal 23
-	s2.*7 s2-\markup { \italic {"molto "} \dynamic ff \italic {" e rall."} } s2 s2.
 	% mm. 226-232 - Rehersal 24
 	s2.*7
 	% mm. 233-239 - Rehersal 25
@@ -2222,97 +2353,7 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c {
-	% mm. 194-201 - Rehersal 19
-	% WORKAROUND: Add silent grace notes to four bars to match the piano reduction.
-	\time 6/8
-	\grace s8 R2.
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 2 { \tuplet 8/6 { r16 f b bes e b bes f } }
-		}
-		\new Voice {
-			\voiceTwo
-			\grace s8 <d, aes' f'>2.
-		}
-	>>
-	\grace s8 R2.
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 2 { \tuplet 8/6 { r16 f' b bes e b bes f } }
-		}
-		\new Voice {
-			\voiceTwo
-			\grace s8 <d, aes' f'>2.
-		}
-	>>
-	e16 b' gis' gis d' bes e d bes gis gis d
-	<cis, gis' cis>8 r8 r8 r4.
-	e16 b' gis' gis d' bes e d bes gis gis d
-	\tuplet 3/2 { r16 ees,[ a] } \tuplet 3/2 { ees'[ a, ees'] }
-		\tuplet 3/2 { a[ ees \beamCutR a } \tuplet 3/2 { \beamCutL ees' a, \beamCutR ees' }
-		\tuplet 3/2 { \beamCutL a ees \beamCutR a, } \tuplet 3/2 { \beamCutL ees' a, ees] }
-	% mm. 202-207 - Rehersal 20
-	\clef treble
-	<<
-		\new Voice {
-			\voiceOne
-			g'4 fis8~ fis8. g16 \tuplet 3/2 { fis f d }
-			f4.~ f8 fis g
-			a4 gis8~ gis16 \beamCutR a \beamCutL ais \beamCutR g \tuplet 3/2 { \beamCutL fis f d }
-			f4.~ f16 fis f8 d16 cis
-		}
-		\new Voice {
-			\voiceTwo
-			<cis d>2.
-			<aes bes>
-			<cis d>
-			<aes bes>
-		}
-	>>
-	\clef bass
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 2 { cis4. c4~ c16 bes }
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 2 { <d, g>8 g,4 <des' g>8 ees,4 }
-		}
-	>>
-	% mm. 208-211 - Rehersal 21
-	\repeat unfold 2 {
-		\time 4/4
-		R1
-		\time 7/4
-		\clef treble
-		r4 <ees''' a>4~ <ees a>8 <des g>16. <ees a>32 <des g>8 <ces f>16. <des g>32 <ces f>8 <g des'> <des' g> <ees a>~ <ees a>4
-	}
-	% mm. 212-215 - Rehersal 22
-	\time 4/4
-	r4 s2 r4
-	r4 s2 s8 r8
-	r4 s2 r4
-	R1
-	% mm. 216-225 - Rehersal 23
-	\time 3/4
-	\clef bass
-	\repeat unfold 2 {
-		<dis,,, a' g'>2.
-		<g d' bes'>
-	}
-	\clef treble
-	\repeat unfold 3 { \tuplet 6/4 { r32 d'' a' fis bes a } cis8 }
-	\repeat unfold 3 { \tuplet 6/4 { r32 f, bes a cis bes } e8 }
-	\repeat unfold 3 { \tuplet 6/4 { r32 d, a' fis bes a } cis8 }
-	\time 2/4
-	\repeat unfold 2 { \tuplet 6/4 { r32 f, bes a cis bes } e8 }
-	\repeat unfold 2 { \tuplet 6/4 { r32 dis, a' f bes a } cis8 }
-	\time 3/4
-	\tuplet 6/4 { r32 dis, a' f bes a } cis8 \tuplet 6/4 { r32 f, bes a cis bes } e8 \tuplet 6/4 { r32 a, e' cis f e } <a cis e f>8
+solo_lower_I_remain = \relative c, {
 	% mm. 226-232 - Rehersal 24
 	\time 6/8
 	\repeat unfold 7 { r8 s2 r8 }
@@ -2320,7 +2361,7 @@ solo_lower_I_remain = \relative c {
 	\time 4/4
 	s1*3
 	\time 6/8
-	<f,,, b ges'>8 r8 r8 r4.
+	<f b ges'>8 r8 r8 r4.
 	\clef treble
 	r8 s8 s8 s8 s8 a'64[ cis d f a cis d f]
 	R2.
@@ -2532,29 +2573,32 @@ solo_lower_I_remain = \relative c {
 solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF \solo_upper_I_AG
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
 		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV
-		\solo_upper_I_AW \solo_upper_I_AX \solo_upper_I_AY \solo_upper_I_AZ \solo_upper_I_remain }
+		\solo_upper_I_AW \solo_upper_I_AX \solo_upper_I_AY \solo_upper_I_AZ \solo_upper_I_BA \solo_upper_I_BB \solo_upper_I_BC
+		\solo_upper_I_BD \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
 		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS
 		\solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV \solo_upper_I_AW \solo_upper_I_AX \solo_upper_I_AY
-		\solo_upper_I_AZ }
+		\solo_upper_I_AZ \solo_upper_I_BA }
 
 solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
 		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_AW \solo_dynamics_I_AX \solo_dynamics_I_AY
-		\solo_dynamics_I_AZ \solo_dynamics_I_remain }
+		\solo_dynamics_I_AZ \solo_dynamics_I_BA \solo_dynamics_I_BB \solo_dynamics_I_BC \solo_dynamics_I_BD \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
 		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_AW \solo_dynamics_I_AX \solo_dynamics_I_AY
-		\solo_dynamics_I_AZ }
+		\solo_dynamics_I_AZ \solo_dynamics_I_BA }
 
 solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF \solo_lower_I_AG
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
 		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV
-		\solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_AY \solo_lower_I_AZ \solo_lower_I_remain }
+		\solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_AY \solo_lower_I_AZ \solo_lower_I_BA \solo_lower_I_BB \solo_lower_I_BC
+		\solo_lower_I_BD \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
 		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS
-		\solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV \solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_AY \solo_lower_I_AZ }
+		\solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV \solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_AY \solo_lower_I_AZ
+		\solo_lower_I_BA }
