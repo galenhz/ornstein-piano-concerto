@@ -605,48 +605,58 @@ Cello_mvmt_I_AN = \relative c {
 	R2.
 }
 
-%% Keep recreating voices so I don't get doubled rests. Required hack in m. 105
-%% means rests are uncentered; FIXME later.
+%% I had a clever idea which didn't work here; creating and recreating voices
+%% seems to leave things stuck, and the line continuing indefinitely after it
+%% runs out of music. Need to revert, and move rests up to center them.
 
 Bass_mvmt_I_AN = \relative c, {
 	\mark #9
 	\tempo "Allegro"
 	\time 4/4
 	\tag #'Score \slashedGrace s8
-	cis8\pp r8 << \new Voice { \voiceOne fis'8^\Div_mark }\new Voice { \voiceTwo fis,8 } >>
-		r8 r4 << \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8
-	r4 << \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8 r4
-		<< \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8
-	\time 2/4
-	r4 << \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8
-	\time 4/4
-	<< \new Voice { \voiceOne cis''8^\Pz_mark } \new Voice { \voiceTwo gis8\mp } >> r8 r4
-		r4 << \new Voice { \voiceOne gis8 } \new Voice { \voiceTwo d8 } >> r8
-	<< \new Voice { \voiceOne cis'8 } \new Voice { \voiceTwo gis8 } >> r8 r4
-		r4 << \new Voice { \voiceOne gis8 } \new Voice { \voiceTwo d8 } >> r8
-	\time 2/4
+	cis8\pp r8
 	<<
 		\new Voice {
 			\voiceOne
-			\tuplet 3/2 { cis'8 s8 s4 gis8 s8 }
+			fis'8^\Div_mark s8 s4 fis8 s8
+			s4 fis8 s8 s4 fis8 s8
+			\time 2/4
+			s4 fis8 s8
+			\time 4/4
+			cis'8^\Pz_mark s8 s4 s4 gis8 s8
+			cis8 s8 s4 s4 gis8 s8
+			\time 2/4
+			\tuplet 3/2 { cis8 s8 s4 gis8 s8 }
+			\mark #10
+			\time 4/4
+			s4 fis8^\Arco_mark s8 s4 fis8 s8
+			s4 fis8 s8 s4 fis8 s8
+			\time 2/4
+			s4 fis8 s8
 		}
 		\new Voice {
 			\voiceTwo
+			fis,8 d'8\rest d4\rest fis,8 d'8\rest
+			d4\rest fis,8 d'8\rest d4\rest fis,8 d'8\rest
+			\time 2/4
+			d4\rest fis,8 d'8\rest
+			\time 4/4
+			gis8\mp d8\rest d4\rest d4\rest d8 d8\rest
+			gis8 d8\rest d4\rest d4\rest d8 d8\rest
+			\time 2/4
 			\override TupletBracket.bracket-visibility = ##f
 			\override TupletNumber.stencil = ##f
-			\tuplet 3/2 { gis8 r8 r4 d8 r8 }
+			\tuplet 3/2 { gis8 d8\rest d4\rest d8 d8\rest }
 			\revert TupletBracket.bracket-visibility
 			\revert TupletNumber.stencil
+			\mark #10
+			\time 4/4
+			d4\rest\p fis,8 d'8\rest d4\rest fis,8 d'8\rest
+			d4\rest fis,8 d'8\rest d4\rest fis,8 d'8\rest
+			\time 2/4
+			d4\rest fis,8 d'8\rest
 		}
 	>>
-	\mark #10
-	\time 4/4
-	r4 << \new Voice { \voiceOne fis8^\Arco_mark }\new Voice { \voiceTwo fis,8\p } >> r8
-		r4 << \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8
-	r4 << \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8 r4
-		<< \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8
-	\time 2/4
-	r4 << \new Voice { \voiceOne fis'8 }\new Voice { \voiceTwo fis,8 } >> r8
 	\time 4/4
 	fis2\mf^\Unis_mark fis
 	e fis

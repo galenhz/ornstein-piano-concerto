@@ -671,7 +671,9 @@ Violin_II_mvmt_I_AM = \relative c' {
 			gis4 c2.-^
 			\repeat unfold 2 { gis4 c2. }
 			\time 5/4
-			\tuplet 5/4 { d,4:32 d4:32 g8:32 }
+			\tuplet 5/4 { d,4:32 d4:32 g8:32 } s2 s4
+			\time 6/4
+			\tuplet 5/4 { d4:32 d4:32 g8:32 } s2 s2
 		}
 		\new Voice {
 			\voiceTwo
@@ -689,29 +691,13 @@ Violin_II_mvmt_I_AM = \relative c' {
 			\time 5/4
 			\override TupletBracket.bracket-visibility = ##f
 			\override TupletNumber.stencil = ##f
-			\tuplet 5/4 { bes,4:32\f\< bes4:32 e8:32\! }
+			\tuplet 5/4 { bes,4:32\f\< bes4:32 e8:32\! } b'2\rest b4\rest
+			\time 6/4
+			\tuplet 5/4 { bes,4:32\f\< bes4:32 e8:32\! } b'2\rest b2\rest_\markup \italic "rit."
 			\revert TupletBracket.bracket-visibility
 			\revert TupletNumber.stencil
 		}
 	>>
-	r2 r4
-	<<
-		\new Voice {
-			\voiceOne
-			\time 6/4
-			\tuplet 5/4 { d4:32 d4:32 g8:32 }
-		}
-		\new Voice {
-			\voiceTwo
-			\time 6/4
-			\override TupletBracket.bracket-visibility = ##f
-			\override TupletNumber.stencil = ##f
-			\tuplet 5/4 { bes,4:32\f\< bes4:32 e8:32\! }
-			\revert TupletBracket.bracket-visibility
-			\revert TupletNumber.stencil
-		}
-	>>
-	r2 r2_\markup \italic "rit."
 }
 
 %%% FIXME: Leave viola as one staff in score. But break out in part?
