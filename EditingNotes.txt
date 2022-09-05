@@ -394,6 +394,14 @@ groups of four, cello part in four groups of two (with nothing in score). Not su
 Changing cello to match violin for now.
 (I-orch-09-violins-viola, I-orch-10-cello-bass)
 
+m. 183 and 185: PR has the reduction just play the same chord 5 times. This doesn't
+match the orchestra, which changes on the final 8th note of the 5/8 bars. I should
+probably adjust the reduction.
+(I-piano-reduction)
+
+m. 186-187: Violas and Basses have a bogus b-flat instead of b in parts. Score seems right
+(I-orch-09-violins-viola, I-orch-10-cello-bass)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.

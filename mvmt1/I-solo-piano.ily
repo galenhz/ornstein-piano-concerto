@@ -1576,7 +1576,7 @@ solo_dynamics_I_AY = {
 	% mm. 182-185
 	s2. s2 s8 s2. s2 s8
 	% mm. 186-187 - Rehersal 18
-	s1 s2
+	s1-\markup \italic "molto dim. e rit." s2
 }
 
 solo_lower_I_AY = \relative c {
