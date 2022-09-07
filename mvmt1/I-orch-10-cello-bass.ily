@@ -1041,17 +1041,81 @@ Bass_mvmt_I_AZ = \relative c {
 	a8:32\< gis16:32 c16:32\! b8:32\> gis8:32\! g8:32\< e16:32 aes16:32\! g8:32\>_\markup { \italic {rit.} } e8:32\!
 }
 
+%%% Section BA = mm. 194-201 (Rehersal 19)
+
+Cello_mvmt_I_BA = \relative c {
+	\mark #19
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				bes2.:32
+				f'8 s8 s8 s4.
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2{
+				ees,2.:32
+				aes8 d8\rest d8\rest d4.\rest
+			}
+		}
+		\new Voice {
+			\voiceFour
+			\override DynamicLineSpanner.staff-padding = #6
+			\tag #'Part \override Hairpin.minimum-length = #6
+			\repeat unfold 2 {
+				s8^\Div_mark\pp\< s8 s8 s8\!\> s8 s8
+				s2.\pp\!
+			}
+			\tag #'Part \revert Hairpin.minimum-length
+			\revert DynamicLineSpanner.staff-padding
+		}
+	>>
+	R2.
+	\tuplet 3/2 { r16^\Unis_mark cis8~ } cis4~ cis4.
+	d2.\pp
+	a4.~\mf a4_\markup { \italic {rit.} } a8
+}
+
+Bass_mvmt_I_BA = \relative c {
+	\mark #19
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				\tuplet 3/2 8 { r16 ees-.\< a,-. ees'8-. \set stemLeftBeamCount = #2 \beamCutR a,16-. }  \beamCutL ees'-. a,-.\!
+					ees'-.\> a,8-. \set stemLeftBeamCount = #2 \beamCutR a16-. \beamCutL ees'-. a,-.\!
+				d8 d8\rest d8\rest d4.\rest
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			ees,2.\pp^\Div_mark
+			d8\pp s8 s8 s4.
+			ees2.\pp
+			d8\pp s8 s8 s4.
+		}
+	>>
+	R2.
+	\tuplet 3/2 { r16^\Unis_mark cis''\> g~ } g4~\!\< g4.\!
+	e2.\pp
+	ees4.\mf ~ees4_\markup { \italic {rit.} } a,8
+}
+
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
 		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM \Cello_mvmt_I_AN \Cello_mvmt_I_AO \Cello_mvmt_I_AP
 		\NULL_I_AQ \Cello_mvmt_I_AR \Cello_mvmt_I_AS \NULL_I_AT \Cello_mvmt_I_AU \Cello_mvmt_I_AV \Cello_mvmt_I_AW \Cello_mvmt_I_AX
-		\Cello_mvmt_I_AY \Cello_mvmt_I_AZ }
+		\Cello_mvmt_I_AY \Cello_mvmt_I_AZ \Cello_mvmt_I_BA }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
 		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR
-		\Cello_divisi_II_mvmt_I_AS \NULL_I_AT \Cello_divisi_II_mvmt_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ }
+		\Cello_divisi_II_mvmt_I_AS \NULL_I_AT \Cello_divisi_II_mvmt_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
 		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN \Bass_mvmt_I_AO \Bass_mvmt_I_AP
 		\NULL_I_AQ \NULL_I_AR \Bass_mvmt_I_AS \NULL_I_AT \Bass_mvmt_I_AU \Bass_mvmt_I_AV \Bass_mvmt_I_AW \Bass_mvmt_I_AX \Bass_mvmt_I_AY
-		\Bass_mvmt_I_AZ }
+		\Bass_mvmt_I_AZ \Bass_mvmt_I_BA }

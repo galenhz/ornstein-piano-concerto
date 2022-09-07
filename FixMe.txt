@@ -61,3 +61,7 @@ to force it to open up. Score too.
 
 m. 225: Fermata bar: add mark to previous bar and hack it to print at end,
 put number mark in tempo mark next bar?
+
+m. 233-235: In solo piano, lilypond strugges with tuplet bracket placing. Needs hand-tuning.
+
+m. 236: Solo piano has an ugly too-short stem in the right hand.

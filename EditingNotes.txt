@@ -12,6 +12,9 @@ parts, to differentiate between what was originally written by the copyist
 and what was a bit of markup by the performer. The score is often lacking
 any clues. Edits related to this are marked #DYNAMICS.
 
+Anything marked #UNDECIDED is something that I haven't made up my mind on,
+and need to look at later. Eventually these should vanish.
+
 The string divisi sections are complicated. I generally want to use a rule of
 "what's in the score and in the part match up", but sometimes it clearly makes
 more sense to compress the divisi, as in the MS full score, but write them in
@@ -30,14 +33,14 @@ The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
 "con moto" at m. 16 which might have been scratched out. #TEMPO
 (I-common)
 
-m. 6: Flutes I/II have an odd crescendo difference. #DYNAMICS
+m. 6: Flutes I/II have an odd crescendo difference. #DYNAMICS #UNDECIDED
 (I-orch-01-flutes)
 
 m. 6: Clarinet II has hairpins I lacks. Give them to I as well. #DYNAMICS
 (I-orch-03-clarinets)
 
 m. 6: Horns III and IV have different dynamics in part (mf and f), but same in score.
-#DYNAMICS
+Going with MF in score. #DYNAMICS
 (I-orch-06-horns)
 
 m. 7: Clarinet II has a decrescendo that I lacks, and is in the score. Give it to I as well.
@@ -59,8 +62,7 @@ that for now, but willing to reconsider.
 (I-orch-02-oboes)
 
 m. 12: Piccolo FFF in part, F in score. FFF could be copyist. Sticking with score,
-as I have for measure 10.
-#DYNAMICS
+as I have for measure 10. #DYNAMICS
 (I-orch-01-flutes)
 
 m. 12: Oboes I/I FF in score, FFF in part, but FFF could be copyist. Sticking with FFF
@@ -77,11 +79,11 @@ Seems official to me. #DYNAMICS
 (I-orch-01-flutes)
 
 m. 19: put the "pocu piu/rit" in every part? Some parts have it under the rest.
-Some don't.
+Some don't. #UNDECIDED
 (I-common)
 
 mm. 21-23: Solo piano, 2PR, same notes but different transition points for
-clefs. Bad idea? Regularize like FS to match MM 21?
+clefs. Bad idea? Regularize like FS to match MM 21? #UNDECIDED
 (I-solo-piano)
 
 m. 21 and 23: Clarinet and oboe solos have mf in score and (originally) parts, but
@@ -105,7 +107,7 @@ Adding them to all string parts. #DYNAMICS
 mm. 25-28: And for that matter, note the flute and oboe are both playing into
 those same string parts...the flute has hairpins, and the oboe does not. Flute
 hairpins aren't quite aligned with the string ones, either. Either both should
-have them or neither. Thinking it over.
+have them or neither. Thinking it over. #UNDECIDED
 (I-orch-01-flutes, I-orch-02-oboes)
 
 m. 27: Viola slurring different from all their neighbors. Adjusting to match.
@@ -125,7 +127,7 @@ score doesn't. Sticking with score for now.
 
 mm. 29-38: There are a bunch of crescendo/decrescendo bits in all the string parts
 which aren't in the score. I can't tell yet if these are from the copyist or were
-added by players. #DYNAMICS
+added by players. #DYNAMICS #UNDECIDED
 (I-orch-09-violins-viola I-orch-10-cello-bass)
 
 m. 35: Solo piano lower staff; unconvinced the bottom a-sharp on the second beat
@@ -163,7 +165,7 @@ what I think is a reasonable way. #DYNAMICS
 m. 44: Clarinets get a > on their final note of the phrase; oboes do not. Score hasn't
 had the > for several measures, despite them being in the parts, so can't use it as a
 tiebreaker. Bassoons have them too. Tympani doesn't, though. Viola part is missing the
-articulations entirely. Should make this consistent, but in what direction?
+articulations entirely. Should make this consistent, but in what direction? #UNDECIDED
 (I-orch-*)
 
 m. 45: Placement of the "cresc." is a bit odd. PR places it squarely in beat 3; the score
@@ -182,7 +184,7 @@ line. I think this was an error by the copyist. Using the score pattern.
 (I-orch-10-cello-bass)
 
 m. 53: The parts which have a FFF on beat 1 omit it on beat 3, except for Tympani.
-Perhaps make tympani consistent with everbody else here?
+Perhaps make tympani consistent with everbody else here? #UNDECIDED
 (I-orch-08-tympani)
 
 mm. 55-62: The orchestra parts, playing in unison, don't have consistent handling of either
@@ -205,10 +207,10 @@ handling in both cases, but 57's seems a little easier on the eye.
 (I-solo-piano)
 
 m. 58: The score and piano reduction use a "duplet" figure on the third beat, but most
-of the parts just print that as a pair of dotted eighth notes.
+of the parts just print that as a pair of dotted eighth notes. Harmonizing on duplets.
 (I-orch-03-clarinets, I-orch-09-violins-viola, I-orch-10-cello-bass)
 
-m. 58: PR doesn't repeat the "stuttering beams" that are in m. 56. Score does.
+m. 58: PR doesn't repeat the "broken beams" that are in m. 56. Score does.
 I don't see any reason not to.
 (I-solo-piano)
 
@@ -216,26 +218,27 @@ m. 60: The solo piano in the PR doesn't have the continuing ties in the left han
 but it's clearly there in the score. Fixed.
 (I-solo-piano)
 
-mm. 60-62: Again, the ottava is handled differently in PR, same in score.
+mm. 60-62: Like 55-58, the ottava is handled differently in PR, same in score.
 (I-solo-piano)
 
 mm. 60-62: The hairpins stop here in score and parts. Speculation: should I continue
 adding them according to the pattern? Next mark is the "piu dim" in 63. #DYNAMICS
+#UNDECIDED
 (I-orch-03-clarinets, I-orch-09-violins-viola, I-orch-10-cello-bass)
 
 m. 63: Beat 2, the clarinet part has broken bars, and so do score lower strings, but
 lower string parts don't. It's pretty much free for me, so I'll do it.
 Also...do I want to add slurs to the second beat for low strings, matching clarinets?
-Listen to the recording, see if I can hear slurring.
+Listen to the recording, see if I can hear slurring. #UNDECIDED
 (I-orch-09-violins-viola, I-orch-10-cello-bass)
 
 m. 64-69: Dynamics all over the place. I've copied various hairpins from parts. Needs
-attention. #DYNAMICS
+attention. #DYNAMICS #UNDECIDED
 (I-orch-09-violins-viola, I-orch-10-cello-bass)
 
 m. 70-73: The score and parts ask Tympani I (a-e) to field a b-flat here, which the player
 seems to have balked at; they scratched out the "e-flat to b-flat" directive from the
-copyist.
+copyist. Sticking with score.
 (I-orch-08-tympani)
 
 m. 82: "Andante con moto" became "Andante e molto sostenuto". This is changed in the score
@@ -281,8 +284,9 @@ m. 101: The piano reduction ends the bar with d-flat; the english horn solo it's
 d-natural in both score and part. Adjusting reduction to match.
 (I-piano-reduction)
 
-m. 103-105: There are tremolos in the Violin II and Viola in the score. They are completely
-absent from the parts; just rests, as though they were never there.
+m. 103-105: There are tremolos in the Violin I (II?) and Viola in the score. They are completely
+absent from the parts; just rests, as though they were never there. Leaving them out for now,
+but... #UNDECIDED
 (I-orch-09-violins-viola)
 
 m. 103-105: The clarinet melody is marked as "Solo I" in the score...but it's in both the I
@@ -304,7 +308,7 @@ score. #DYNAMICS
 (I-orch-03-clarinets)
 
 m. 122-123: Dynamics in flutes and Clarinets are kind of odd. The score shows some of it
-but parts apply it differently. This requires looking at. #DYNAMICS
+but parts apply it differently. This requires looking at. #DYNAMICS #UNDECIDED
 (I-orch-01-flutes, I-orch-03-clarinets)
 
 m. 134-141: The cello part contains more slurs than are found in the viola part, or the score
@@ -396,7 +400,7 @@ Changing cello to match violin for now.
 
 m. 183 and 185: PR has the reduction just play the same chord 5 times. This doesn't
 match the orchestra, which changes on the final 8th note of the 5/8 bars. I should
-probably adjust the reduction.
+probably adjust the reduction. #UNDECIDED
 (I-piano-reduction)
 
 m. 186-187: Violas and Basses have a bogus b-flat instead of b in parts. Score seems right
@@ -410,6 +414,34 @@ m. 193: Viola part has g-f-aes on beat three. All other instruments have g-e-aes
 is iffy, but it's pretty clear that the line is supposed to be unison. Making viola
 match everybody else.
 (I-orch-09-violins-viola)
+
+m. 194 and 196: PR reduction left hand and bass score/part don't have matching rhythms
+in the second half of these bars. This time it might make sense to change the PR to
+match the orchestra. #UNDECIDED
+(I-piano-reduction, I-orch-10-cello-bass)
+
+m. 194-197: First violin and clarinet have different slurring patterns. Violin part
+has pencilled in slurs more like clarinet. Score shows violin matching it's part, but
+one extra slur (16ths in beat 4) in the part. Leaving things as copyist has them for
+now.
+(I-orch-03-clarinets, I-orch-09-violins-viola)
+
+m. 194-197: The string parts have hairpins in these measures (except viola, which tends
+to miss a lot of this stuff) which aren't in other parts (clarinet, tympani, etc.). The
+score has a marked-in version of these written over the string section...not sure by
+who. These are compelling enough that I'm adding them to the other parts which play in these
+bars. #DYNAMICS
+(I-orch-*)
+
+m. 199: The bass part has hairpins in this bar which aren't found in any other part, but are
+written into the score above the string section, much like the hairpins mentioned in the
+previous entry. Interestingly, these are inverted "><" compared to the earlier ones.
+Not 100% sure what to do with this one. #DYNAMICS #UNDECIDED
+(I-orch-*)
+
+m. 214: Solo piano PR is missing an ottava notation which is in the parallel passage
+at m. 212. The score has it, so it's definitely supposed to be there.
+(I-solo-piano)
 
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the

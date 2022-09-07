@@ -33,7 +33,21 @@
 % BC = mm. 208-215 (Rehersal 21/22)
 % BD = mm. 216-225 (Rehersal 23)
 % BE = mm. 226-232 (Rehersal 24)
-% BF = mm. 233-235 (?)
+% BF = mm. 233-239 (Rehersal 25)
+% BG = mm. 240-243 (Rehersal 26)
+% BH = mm. 244-252 (Rehersal ~27)
+% BI = mm. 253-258
+% BJ = mm. 259-264 (Rehersal 28)
+% BK = mm. 265-271 (Rehersal 29)
+% BL = mm. 272-280 (Rehersal 30)
+% BM = mm. 281-290 (Rehersal 31/32)
+% BN = mm. 291-300 (Rehersal 33)
+% BO = mm. 301-303 (Rehersal 34)
+% BP = mm. 304-308 (Rehersal 35)
+% BQ = mm. 309-312 (Rehersal 36)
+% BR = mm. 313-315
+% BS = mm. 316-327 (Reherasl 37)
+% BT = mm. 328-331
 
 
 %% EDIT: The PR has "con moto" at m. 5. The parts have "moderato con moto" at m. 16.
