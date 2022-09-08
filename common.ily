@@ -16,6 +16,14 @@ hdrComposer = \markup \smallCaps "Leo Ornstein"
 hdrCopyright = \markup \concat { "Copyright " \char ##x00a9 "2015 Poon Hill Press. Licensed under Performance Restricted Attribution-NonCommercial-NoDerivs 3.0" }
 hdrVersion = \markup \concat { "S824" \char ##x2014 "Preliminary" }
 
+%% Some custom markup for movements and for footers.
+
+customScoreTitleMarkup = \markup { \column {
+  \fill-line {
+    { \huge \bold \fromproperty #'header:movement }
+  }
+} }
+
 %% Musical shortcuts.
 
 %% A common pattern in the score is a sort of "semi-broken beaming" where

@@ -16,7 +16,7 @@
 	bottom-margin = 0.5\in
 	left-margin = 0.75\in
 	right-margin = 0.75\in
-	%%scoreTitleMarkup = \customScoreTitleMarkup
+	scoreTitleMarkup = \customScoreTitleMarkup
 }
 
 \header {
