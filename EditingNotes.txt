@@ -439,6 +439,23 @@ previous entry. Interestingly, these are inverted "><" compared to the earlier o
 Not 100% sure what to do with this one. #DYNAMICS #UNDECIDED
 (I-orch-*)
 
+m. 202-207: The Mystery of Violin II's missing D drone. The part is simple; a single
+Violin II line alternating between b-flat and c-sharp. The score, on the other hand,
+has a d combined (apparantly as a double-stop) with all of these notes throughout this
+passage. The entire Violin I section is whited out in the score, which may mean the
+added notes were moved from Violin I into Violin II, to decrease the number
+of strings playing without losing the note. The problem with this theory is that the
+Violin I part has no white-out; it just has written rests, as though there were
+never anything there...and the Violin II part doesn't have the Ds at all. Perhaps
+the parts were written at different times, but they look like they came from the
+same group. #UNDECIDED
+(I-orch-09-violins-viola)
+
+m. 202-207: Flute I part has a penciled in slur over the repeated phrase. Similar
+penciled in slur in the score. Clarinet I has a similar slur in the score when it joins
+in, but nothing in the part. Should I add it? #UNDECIDED
+(I-orch-01-flutes, I-orch-03-clarinets)
+
 m. 214: Solo piano PR is missing an ottava notation which is in the parallel passage
 at m. 212. The score has it, so it's definitely supposed to be there.
 (I-solo-piano)
