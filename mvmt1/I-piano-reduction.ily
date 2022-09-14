@@ -1769,7 +1769,7 @@ redux_upper_I_remain = \relative c'' {
 			g4.~ g8~ g[ fis]
 			bes4.~ bes8~ bes bes16[ c]
 			g4.~ g8~ g[ fis]
-			bes4.~ bes8~ bes16 bes[ bes c]
+			bes4.~ bes8~ bes16 bes[ bes d]
 			\autoBeamOn
 		}
 	>>
