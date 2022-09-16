@@ -556,10 +556,10 @@ Trumpet_II_III_cues_mvmt_I_BC = \relative c'' {
 				R1*7/4
 			}
 		>>
+		\mark #22
+		\time 4/4
+		R1*4
 	}
-	\mark #22
-	\time 4/4
-	R1*4
 }
 
 %%% Final assembly
