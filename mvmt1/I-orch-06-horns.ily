@@ -950,28 +950,113 @@ Horn_V_VI_VII_mvmt_I_BA = \transpose c' f \relative c' {
 %%% Section BB = mm. 202-207 (Rehersal 20)
 %%% Tacet
 
+%%% Section BC = mm. 208-215 (Rehersal 21/22)
+
+Horn_I_mvmt_I_BC = \transpose c' f \relative c'' {
+	\mark #21
+	\tempo "Moderato"
+	\time 4/4
+	fis2.\p\< f4
+	\time 7/4
+	e1~\!\ff e2.
+	\time 4/4
+	fis2. f4
+	\time 7/4
+	e1~ e2.
+	\mark #22
+	\time 4/4
+	b4 e2 r4
+	\tuplet 3/2 { b8 r8 ees~ } ees2 r4
+	b4 e2 r4
+	\partCombineChords
+	c\f d\< fis bes\!
+	\partCombineAutomatic
+}
+
+% EDIT: Should Horn II double Horn I mm. 212-214?
+
+Horn_II_mvmt_I_BC = \transpose c' f \relative c'' {
+	\mark #21
+	\tempo "Moderato"
+	\time 4/4
+	bes2.\p\< a4
+	\time 7/4
+	gis1~\!\ff gis2.
+	\time 4/4
+	bes2. a4
+	\time 7/4
+	gis1~ gis2.
+	\mark #22
+	\time 4/4
+	R1*3
+	c,4\f e\< fis fis\!
+}
+
+Horn_III_mvmt_I_BC = \transpose c' f \relative c'' {
+	\mark #21
+	\tempo "Moderato"
+	\time 4/4
+	fis2.\p\< f4
+	\time 7/4
+	e1~\!\ff e2.
+	\time 4/4
+	fis2. f4
+	\time 7/4
+	e1~ e2.
+	\mark #22
+	\time 4/4
+	gis4 gis2.
+	gis4 gis2.
+	gis4 gis2.
+	\partCombineChords
+	fis,4\f bes\< d c\!
+	\partCombineAutomatic
+}
+
+Horn_IV_mvmt_I_BC = \transpose c' f \relative c'' {
+	\mark #21
+	\tempo "Moderato"
+	\time 4/4
+	d2.\p\< cis4
+	\time 7/4
+	c1~\!\ff c2.
+	\time 4/4
+	d2. cis4
+	\time 7/4
+	c1~ c2.
+	\mark #22
+	\time 4/4
+	e4 gis2.
+	e4 gis2.
+	e4 gis2.
+	d,,4\f fis\< bes d\!
+}
+
 %%% Final assembly
 
 Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_I_mvmt_I_AL \Horn_I_mvmt_I_AM \NULL_I_AN \Horn_I_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_I_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_I_mvmt_I_AV \Horn_I_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_I_mvmt_I_BA
-		\NULL_I_BB }
+		\NULL_I_BB \Horn_I_mvmt_I_BC }
 Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_II_mvmt_I_AL \Horn_II_mvmt_I_AM \NULL_I_AN \Horn_II_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_II_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_II_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_II_mvmt_I_BA
-		\NULL_I_BB }
+		\NULL_I_BB \Horn_II_mvmt_I_BC }
 Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_III_mvmt_I_AF \NULL_I_AG \Horn_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_III_mvmt_I_AL \Horn_III_mvmt_I_AM \NULL_I_AN \Horn_III_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_III_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_III_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_III_mvmt_I_BA \NULL_I_BB }
+		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_III_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_III_mvmt_I_BA \NULL_I_BB
+		\Horn_III_mvmt_I_BC }
 Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_IV_mvmt_I_AF \NULL_I_AG \Horn_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_IV_mvmt_I_AL \Horn_IV_mvmt_I_AM \NULL_I_AN \Horn_IV_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_IV_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_IV_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_IV_mvmt_I_BA \NULL_I_BB }
+		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_IV_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_IV_mvmt_I_BA \NULL_I_BB
+		\Horn_IV_mvmt_I_BC }
 Horn_V_mvmt_I = { \NULL_I_AA \Horn_V_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
 		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS
-		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_V_mvmt_I_AW \Horn_V_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_VII_mvmt_I_BA \NULL_I_BB }
+		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_V_mvmt_I_AW \Horn_V_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_VII_mvmt_I_BA \NULL_I_BB
+		\NULL_I_BC }
 Horn_VI_mvmt_I = { \NULL_I_AA \Horn_VI_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
 		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV
-		\Horn_VI_mvmt_I_AW \Horn_VI_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_VII_mvmt_I_BA \NULL_I_BB }
+		\Horn_VI_mvmt_I_AW \Horn_VI_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_VII_mvmt_I_BA \NULL_I_BB \NULL_I_BC }
 Horn_VII_mvmt_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
 		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV
-		\Horn_VII_mvmt_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_VII_mvmt_I_BA \NULL_I_BB }
+		\Horn_VII_mvmt_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_VII_mvmt_I_BA \NULL_I_BB \NULL_I_BC }

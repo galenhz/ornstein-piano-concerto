@@ -456,6 +456,27 @@ penciled in slur in the score. Clarinet I has a similar slur in the score when i
 in, but nothing in the part. Should I add it? #UNDECIDED
 (I-orch-01-flutes, I-orch-03-clarinets)
 
+m. 212-215: Dynamics (especially in strings) are wierd. Need rectification. #DYNAMICS
+#UNDECIDED
+(I-orch-*)
+
+m. 212-214: Score shows stems both up and down on horn I/II line, indicating the horns
+should be playing in unison, but the Horn I/II part shows this as Horn I alone. Going
+with part.
+(I-orch-06-horns)
+
+m. 213: Bassoon III and IV parts show the same notes here. Score shows bassoon III
+and IV have different values on the dotted half note. Going with score here.
+(I-orch-04-bassoons)
+
+m. 213: Viola b-flat combines a tremolo 8th with a tie to the half note. Lilypond can't
+seem to time this right (it inserts an extra triplet 8th) and it doesn't make sense
+anyway. Violin I doesn't have it in part, although the score shows it for both. It
+really needs to be one or the other, physically speaking. Right now leaving it without
+the tie, but it might make more sense to leave the tremolo off the last triplet note
+instead.
+(I-orch-09-violins-viola)
+
 m. 214: Solo piano PR is missing an ottava notation which is in the parallel passage
 at m. 212. The score has it, so it's definitely supposed to be there.
 (I-solo-piano)
