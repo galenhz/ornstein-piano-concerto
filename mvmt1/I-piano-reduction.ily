@@ -1683,7 +1683,7 @@ redux_upper_I_BD = \relative c''' {
 			\change Staff = "redux_lower" <f,, cis' f>8 \change Staff = "redux_upper" <a'' cis e gis> r <a cis e gis>[ r <a cis e gis>]
 			\change Staff = "redux_lower" <a,,, bes'>8 \change Staff = "redux_upper" <d'' fis a bes d> r <d fis a bes d>[ r <d fis a bes d>]
 			\time 2/4
-			\change Staff = "redux_lower" <f,, cis' f>8_\markup { \lower #4 { \italic {"molto "} \dynamic ff \italic {" e rall."} } } \change Staff = "redux_upper" <f'' a cis e f> r <f a cis e f>
+			\change Staff = "redux_lower" <f,, cis' f>8 \change Staff = "redux_upper" <f'' a cis e f> r <f a cis e f>
 		}
 	>>
 	\ottava #1
@@ -1702,13 +1702,12 @@ redux_upper_I_BD = \relative c''' {
 		}
 	>>
 	\ottava #0
-	\bar "||" %%% \mark \markup { \musicglyph "scripts.ufermata" }
+	\bar "||" \Mvmt_I_Fermata_On_Bar
 }
 
 redux_dynamics_I_BD = {
 	% mm. 216-225 - Rehersal 23
-	% Can't use center dynamics channel in m. 223 due to staff crossing
-	s2.*7 s2*2 s2.
+	s2.*7 s2 s2-\markup { \italic "molto" \dynamic ff \italic "e rall." } s2.
 }
 
 redux_lower_I_BD = \relative c' {
@@ -1722,7 +1721,7 @@ redux_lower_I_BD = \relative c' {
 		\new Voice {
 			\voiceOne
 			<des f a bes>4 <f a bes cis>
-			\time 3/4
+			\time 3/4 \noBreak
 			<des f a bes> <f a bes cis> <a cis e f>
 		}
 		\new Voice {
@@ -1732,6 +1731,8 @@ redux_lower_I_BD = \relative c' {
 			f2.
 		}
 	>>
+	\clef bass
+	\bar "||" \Mvmt_I_Fermata_On_Bar
 }
 
 %%% This is as far as I've gotten
