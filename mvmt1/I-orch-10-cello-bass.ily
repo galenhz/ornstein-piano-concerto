@@ -818,7 +818,7 @@ Cello_mvmt_I_AU = \relative c {
 
 Cello_divisi_II_mvmt_I_AU = \relative c {
 	\time 2/4
-	\tuplet 3/2 8 { r8\p aes( g) aes( f e) }
+	\tuplet 3/2 4 { r8\p aes( g) aes( f e) }
 	\repeat unfold 8 { \tuplet 3/2 4 { r8 aes( g) aes( f e) } }
 	\tuplet 3/2 8 { r8_\markup \italic "poco rit." aes( g) aes( f e) }
 }
