@@ -63,6 +63,16 @@
 %%       m. 170: Score just has "Allegro" with the "con forza" added to the various
 %%       parts. PR folded it into a single tempo directive.
 
+Mvmt_I_Fermata_On_Bar = {
+	\once \override Score.TimeSignature.stencil = ##f
+	\cadenzaOn
+	\time 1/16
+	\noBreak
+	\mark \markup { \musicglyph "scripts.ufermata" }
+	s16 \bar ""
+	\cadenzaOff
+}
+
 NULL_I_AA = { \tempo "Moderato assai" \time 3/4 R2.*3 r2.\fermata }
 NULL_I_AB = { \tempo "con moto" R2.*5 \time 4/4 R1 \time 3/4 R2. \time 4/4 R1 }
 NULL_I_AC = { \mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2 \time 3/4 R2. }
@@ -95,4 +105,5 @@ NULL_I_AZ = { \tempo "Meno mosso; fluido" \time 4/4 R1*6 }
 NULL_I_BA = { \mark #19 \time 6/8 R2.*8 }
 NULL_I_BB = { \mark #20 \tempo "Andantino (meno)" R2.*6 }
 NULL_I_BC = { \mark #21 \tempo "Moderato" \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1 \time 7/4 R1*7/4 \mark #22 \time 4/4 R1*4 }
-NULL_I_BD = { \mark #23 \tempo "Poco più Lento" \time 3/4 R2.*4 \tempo "Più agitato e crescendo" R2.*3 \time 2/4 R2*2 \time 3/4 R2. }
+NULL_I_BD = { \mark #23 \tempo "Poco più Lento" \time 3/4 R2.*4 \tempo "Più agitato e crescendo" R2.*3 \time 2/4 R2*2 \time 3/4 R2.
+	\bar "||" \Mvmt_I_Fermata_On_Bar }
