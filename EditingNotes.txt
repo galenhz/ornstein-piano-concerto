@@ -481,6 +481,34 @@ m. 214: Solo piano PR is missing an ottava notation which is in the parallel pas
 at m. 212. The score has it, so it's definitely supposed to be there.
 (I-solo-piano)
 
+m. 215: The strings have crescendo text, the winds/brass have hairpins. Really should
+be one or the other. #UNDECIDED
+(I-orch-*)
+
+m. 216-219: Violin II bottom divisi alternates between bars of b and bars of b-flat in
+the score. The part has one bar of b and three of b-flat. The score matches what the
+piano reduction does, so going with that.
+(I-orch-09-violins-viola)
+
+m. 224-225: Violin II part has -- marks in the part and the score. Violin I has them
+in the score but not in the part. Cellos have in both. Adding them to Violin I.
+(I-orch-09-violins-viola)
+
+m. 224-225: Trombones I/II...why bother with tenor clef? Seems pointless. Switch
+to bass? #UNDECIDED
+(I-orch-07-trombones-tuba)
+
+m. 225: Trumpet I has slurs written into the score but not in the part. Adding them.
+May revisit.
+(I-orch-05-trumpets)
+
+m. 216-225: Cello part goes pizzicato in 217, but never goes back to arco, even though
+it definitely needs to by 224 at the very latest, and probably in 221 for the dotted
+half. The score simply never has them go to pizzicato at all! (The marking in the part
+seems to be hand-written.) I'm splitting the difference here; we'll go with pizzicato
+on the "strums", but switch to arco for the long notes and in 224.
+(I-orch-10-cello-bass)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.

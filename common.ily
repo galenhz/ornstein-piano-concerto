@@ -37,6 +37,7 @@ Soli_mark = \markup "Soli"
 Unis_mark = \markup "unis."
 Div_mark = \markup "div."
 DivIII_mark = \markup "div. in 3"
+DivIV_mark = \markup "div. in 4"
 Pz_mark = \markup \italic "pizz."
 Arco_mark = \markup \italic "arco"
 

@@ -1793,7 +1793,7 @@ redux_upper_I_remain = \relative c'' {
 		}
 	>>
 	\time 6/8
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	% WORKAROUND: Add extra notes to let ties go through, as I did in m. 199 in the left hand.
 	<<
 		\new Voice {

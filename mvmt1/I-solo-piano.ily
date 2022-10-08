@@ -1985,7 +1985,7 @@ solo_upper_I_remain = \relative c'''' {
 	\ottava #1 \tuplet 9/8 {r32 f' b g c, \ottava #0 \change Staff = "solo_lower" fis, bes g cis, }
 		\change Staff = "solo_upper"  \tuplet 9/8 { r32 fis cis' g cis, \change Staff = "solo_lower" \clef bass fis,, cis' g cis, } \change Staff = "solo_upper"
 	\time 6/8
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	% FIXME: First chord split into two voices in PR.
 	% QUESTION: Almost certainly a missing treble clef change in PR for m. 237
 	% QUESTION: And the last nonuplet is missing a note? an Octuplet?

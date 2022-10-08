@@ -59,8 +59,8 @@ Also, partcombine is not honoring the manual bar marks for flute II in the score
 m. 165-169: Solo piano has staves too close together to handle the cross-staff figures. Need
 to force it to open up. Score too.
 
-m. 225: Fermata bar: add mark to previous bar and hack it to print at end,
-put number mark in tempo mark next bar?
+m. 224-225: Clarinets I and II combine badly in the score. Need to figure out a way to bring that
+r32 into line.
 
 m. 233-235: In solo piano, lilypond strugges with tuplet bracket placing. Needs hand-tuning.
 
