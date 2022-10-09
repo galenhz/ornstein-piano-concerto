@@ -1946,7 +1946,8 @@ solo_lower_I_BD = \relative c, {
 %%% Section BE = mm. 226-232 (Rehersal 24)
 
 solo_upper_I_BE = \relative c'''' {
-	\time 6/8
+	\time 3/4
+	\set Staff.timeSignatureFraction = 6/8
 	\tempo "Andantino"
 	\mark #24
 	\repeat unfold 3 { r8 \ottava #1 \tuplet 7/4 { c32[ b fis c \ottava #0 \change Staff = "solo_lower" fis, c b] }
@@ -1969,6 +1970,7 @@ solo_upper_I_BE = \relative c'''' {
 		\change Staff = "solo_upper" \tuplet 6/4 { c'[ b fis c \change Staff = "solo_lower" fis, c] }
 		\tuplet 7/4 { b[ c fis \change Staff = "solo_upper" c' fis b c] }
 		\change Staff = "solo_lower" \tuplet 7/4 { b,[ c fis \change Staff = "solo_upper" \ottava #1 c' fis b c] } \ottava #0 r8
+	\unset Staff.timeSignatureFraction
 }
 
 solo_dynamics_I_BE = {
@@ -1978,8 +1980,10 @@ solo_dynamics_I_BE = {
 
 solo_lower_I_BE = \relative c, {
 	% mm. 226-232 - Rehersal 24
-	\time 6/8
+	\time 3/4
+	\set Staff.timeSignatureFraction = 6/8
 	\repeat unfold 7 { r8 s2 r8 }
+	\unset Staff.timeSignatureFraction
 }
 
 %%% Section BF = mm. 233-239 (Rehersal 25)
