@@ -1708,6 +1708,7 @@ redux_upper_I_BD = \relative c''' {
 redux_dynamics_I_BD = {
 	% mm. 216-225 - Rehersal 23
 	s2.*7 s2 s2-\markup { \italic "molto" \dynamic ff \italic "e rall." } s2.
+	s16
 }
 
 redux_lower_I_BD = \relative c' {
@@ -1735,11 +1736,10 @@ redux_lower_I_BD = \relative c' {
 	\bar "||" \Mvmt_I_Fermata_On_Bar
 }
 
-%%% This is as far as I've gotten
+%%% Section BE = mm. 226-232 (Rehersal 24)
 
-redux_upper_I_remain = \relative c'' {
+redux_upper_I_BE = \relative c'' {
 	% mm. 226-232 - Rehersal 24
-	% FIXME: Gotta combine bar fermata and rehersal mark.
 	% FIXME: What's going on with the rhythms in the inner voice? Check full score.
 	% FIXME: Push ties out of the way.
 	\time 6/8
@@ -1774,14 +1774,52 @@ redux_upper_I_remain = \relative c'' {
 			\autoBeamOn
 		}
 	>>
-	% mm. 233-239 - Rehersal 25
-	\time 4/4
-	\mark #25
-	% FIXME: Can't tie across voices in m. 233.
+}
+
+redux_dynamics_I_BE = {
+	% mm. 226-232 - Rehersal 24
+	s2.*7
+}
+
+redux_lower_I_BE = \relative c' {
+	% mm. 226-232 - Rehersal 24
+	\time 6/8
+	\clef bass
 	<<
 		\new Voice {
 			\voiceOne
-			<e, g b>32 r r16 cis' fis~ g bes8 cis16 d cis8.~ cis8 bes
+			<g b>2.
+			<g b e>
+			<g b>
+			<b ees>
+			<b ees g>
+			<b ees>
+			<b ees g>
+		}
+		\new Voice {
+			\voiceTwo
+			<a,, ees' b'>2.
+			<c g' e'>
+			<a ees' b'>
+			<dis a' g'>
+			<a ees' b'>
+			<dis a' g'>
+			<a ees' b'>
+		}
+	>>
+}
+
+%%% Section BF = mm. 233-239 (Rehersal 25)
+
+redux_upper_I_BF = \relative c' {
+	% mm. 233-239 - Rehersal 25
+	\time 4/4
+	\mark #25
+	% FIXME: Can't tie across voices in m. 233, so cheat with laissez vibrer. But tweak is not working.
+	<<
+		\new Voice {
+			\voiceOne
+			<e g b>32 r r16 cis' fis \tweak X-extent #'(0 . 4) \laissezVibrer g bes8 cis16 d cis8.~ cis8 bes
 			\tuplet 3/2 { fis g bes~ } bes cis d cis4 bes8
 			\repeat unfold 2 { \tuplet 6/4 { cis[ f d cis bes g] } }
 		}
@@ -1811,13 +1849,47 @@ redux_upper_I_remain = \relative c'' {
 			s2.
 		}
 	>>
-	% mm. 240-247 - Rehersal 26
+}
+
+redux_dynamics_I_BF = {
+	% mm. 233-239 - Rehersal 25
+	s1*3 s2.*4
+}
+
+redux_lower_I_BF = \relative c' {
+	% mm. 233-239 - Rehersal 25
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			b4~ b16 bes bes d b8 bes~ \tuplet 3/2 { bes g bes }
+			b bes g4~ g8 fis \tuplet 3/2 { ees fis g }
+			b bes g fis ees fis g bes
+		}
+		\new Voice {
+			\voiceTwo
+			<cis, fis>4~ <cis fis>2.
+			r4 r8 <cis fis>8~ <a, ees' cis' fis>2~
+			<a ees' cis' fis>1
+		}
+	>>
+	\time 6/8
+	\tuplet 8/6 { ges''16 b, f b ges b, ges' b, } \tuplet 8/6 { f b ges' b, ges' b f b }
+	<g f' a>2.
+	\tuplet 8/6 { ges'16 b, f b ges b, ges' b, } \tuplet 8/6 { f b ges' b, ges' b f b }
+	<gis d' bes'>2.
+}
+
+%%% Section BG = mm. 240-243 (Rehersal 26)
+
+redux_upper_I_BG = \relative c''' {
+	% mm. 240-243 - Rehersal 26
 	\tempo "Animato"
 	\mark #26
 	<<
 		\new Voice {
 			\voiceOne
-			ees''8 d \tuplet 3/2 { des16 c e } b bes a8 aes16 g
+			ees8 d \tuplet 3/2 { des16 c e } b bes a8 aes16 g
 			fis8 f \tuplet 3/2 { e16 ees g } d des c8 b16 bes
 			ees'8 d \tuplet 3/2 { des16 c e } b bes a8 aes16 g
 			fis8[ f e32 d c b] bes[ cis a \beamCutR aes \beamCutL g fis f \beamCutR e \beamCutL ees16 d32 des]
@@ -1830,6 +1902,25 @@ redux_upper_I_remain = \relative c'' {
 			\tuplet 3/2 { fis'16 ges, bes } s4 s4.
 		}
 	>>
+}
+
+redux_dynamics_I_BG = {
+	% mm. 240-243 - Rehersal 26
+	s2.*4
+}
+
+redux_lower_I_BG = \relative c' {
+	% mm. 240-247 - Rehersal 26
+	\repeat unfold 2 {
+		\tuplet 8/6 { c16 f, b, f' c f, c' f, } \tuplet 8/6 { b, f' c' f, c' f b, f' }
+		\tuplet 8/6 { ees' aes, d, aes' ees aes, ees' aes, } \tuplet 8/6 { d, aes' ees' aes, ees' aes d, aes' }
+	}
+}
+
+%%% Section BH = mm. 244-252 (Rehersal ~27)
+
+redux_upper_I_BH = \relative c' {
+	% mm. 244-247
 	\tempo "Meno"
 	% QUESTION: Rhythmic error in m. 244 compared to m. 246.
 	% FIXME:    It also looks like the copyist gave up on the voiced stuff the second time round. Ties there are
@@ -1838,7 +1929,7 @@ redux_upper_I_remain = \relative c'' {
 	<<
 		\new Voice {
 			\voiceOne
-			<b, e g b>4 <bes ees bes'>16 <aes aes'> <a cis f a>4.~
+			<b e g b>4 <bes ees bes'>16 <aes aes'> <a cis f a>4.~
 			<a cis f a>4.~ <a cis f a>4 s8
 			<cis f a cis>4 <c e c'>16 <a a'> <a cis f a>4.
 			s2.
@@ -1874,10 +1965,46 @@ redux_upper_I_remain = \relative c'' {
 			s8 cis, bes'
 		}
 	>>
+}
+
+redux_dynamics_I_BH = {
+	% mm. 244-252
+	s2.*8 s8 s4-\markup { \italic {rit.} }
+}
+
+redux_lower_I_BH = \relative c' {
+	% mm. 244-247
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				r4 r8 \tuplet 3/2 { r16 gis \beamCutR cis } \tuplet 3/2 { \beamCutL e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e cis }
+				\tuplet 3/2 { e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e \beamCutR cis } \tuplet 3/2 { \beamCutL e cis e } \tuplet 3/2 { cis e cis } r8 r8
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			<c,, g' e'>4. <ees a f'>4.~
+			<ees a f'>4.~ <ees a f'>4 s8
+			<a, ees' a>4. <ees' a ees'>
+			s2.
+		}
+	>>
+	% mm. 248-252 - Rehersal 27
+	<g f' a>4 <g d' fis>8 <cis, g' f'>4 <e a cis>8
+	<g des' f>4 <fis c' e>8 <f b ees> <e bes' d> <ees a des>
+	\repeat unfold 2 { <c g' c>4. <g' cis g'> }
+	\time 3/8
+	<g cis g'>
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c {
 	% mm. 253-258
 	\time 6/8
 	\clef bass
-	<ees,,, g b>8 <d gis bes> \tuplet 3/2 { <des f a>16 <c e gis> <e gis b> } <c e gis>8. <des f a>16 <d fis ais> <ees g b>
+	<ees g b>8 <d gis bes> \tuplet 3/2 { <des f a>16 <c e gis> <e gis b> } <c e gis>8. <des f a>16 <d fis ais> <ees g b>
 	\time 2/8
 	r8 \clef treble \tuplet 3/2 { r16 <bes' d fis> <bes d fis> }
 	\tuplet 3/2 { <bes d a'>[ <bes d fis> r32 <bes d fis>] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
@@ -2060,14 +2187,6 @@ redux_upper_I_remain = \relative c'' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 226-232 - Rehersal 24
-	s2.*7
-	% mm. 233-239 - Rehersal 25
-	s1*3 s2.*4
-	% mm. 240-247 - Rehersal 26
-	s2.*8
-	% mm. 248-252 - Rehersal 27
-	s2.*4 s8 s4-\markup { \italic {rit.} }
 	% mm. 253-258
 	s2.-\markup { \dynamic p \italic {subito} } s4*5
 	% mm. 259-264 - Rehersal 28
@@ -2086,83 +2205,10 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c' {
-	% mm. 226-232 - Rehersal 24
-	\time 6/8
-	\clef bass
-	<<
-		\new Voice {
-			\voiceOne
-			<g b>2.
-			<g b e>
-			<g b>
-			<b ees>
-			<b ees g>
-			<b ees>
-			<b ees g>
-		}
-		\new Voice {
-			\voiceTwo
-			<a,, ees' b'>2.
-			<c g' e'>
-			<a ees' b'>
-			<dis a' g'>
-			<a ees' b'>
-			<dis a' g'>
-			<a ees' b'>
-		}
-	>>
-	% mm. 233-239 - Rehersal 25
-	\time 4/4
-	<<
-		\new Voice {
-			\voiceOne
-			b''4~ b16 bes bes d b8 bes~ \tuplet 3/2 { bes g bes }
-			b bes g4~ g8 fis \tuplet 3/2 { ees fis g }
-			b bes g fis ees fis g bes
-		}
-		\new Voice {
-			\voiceTwo
-			<cis, fis>4~ <cis fis>2.
-			r4 r8 <cis fis>8~ <a, ees' cis' fis>2~
-			<a ees' cis' fis>1
-		}
-	>>
-	\time 6/8
-	\tuplet 8/6 { ges''16 b, f b ges b, ges' b, } \tuplet 8/6 { f b ges' b, ges' b f b }
-	<g f' a>2.
-	\tuplet 8/6 { ges'16 b, f b ges b, ges' b, } \tuplet 8/6 { f b ges' b, ges' b f b }
-	<gis d' bes'>2.
-	% mm. 240-247 - Rehersal 26
-	\repeat unfold 2 {
-		\tuplet 8/6 { c'16 f, b, f' c f, c' f, } \tuplet 8/6 { b, f' c' f, c' f b, f' }
-		\tuplet 8/6 { ees' aes, d, aes' ees aes, ees' aes, } \tuplet 8/6 { d, aes' ees' aes, ees' aes d, aes' }
-	}
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 2 {
-				r4 r8 \tuplet 3/2 { r16 gis \beamCutR cis } \tuplet 3/2 { \beamCutL e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e cis }
-				\tuplet 3/2 { e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e \beamCutR cis } \tuplet 3/2 { \beamCutL e cis e } \tuplet 3/2 { cis e cis } r8 r8
-			}
-		}
-		\new Voice {
-			\voiceTwo
-			<c,, g' e'>4. <ees a f'>4.~
-			<ees a f'>4.~ <ees a f'>4 s8
-			<a, ees' a>4. <ees' a ees'>
-			s2.
-		}
-	>>
-	% mm. 248-252 - Rehersal 27
-	<g f' a>4 <g d' fis>8 <cis, g' f'>4 <e a cis>8
-	<g des' f>4 <fis c' e>8 <f b ees> <e bes' d> <ees a des>
-	\repeat unfold 2 { <c g' c>4. <g' cis g'> }
-	\time 3/8
-	<g cis g'>
+redux_lower_I_remain = \relative c,, {
 	% mm. 253-258
 	\time 6/8
-	<c,, c'>4. <fis fis'>
+	<c c'>4. <fis fis'>
 	\time 2/8
 	<<
 		\new Voice {
@@ -2396,7 +2442,6 @@ redux_lower_I_remain = \relative c' {
 	\bar "|."
 }
 
-
 %%% Final assembly
 
 redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redux_upper_I_AE \redux_upper_I_AF 
@@ -2404,17 +2449,17 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_AR
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
 		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
-		\redux_upper_I_remain }
+		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
 		\redux_dynamics_I_AP \redux_dynamics_I_AQ \redux_dynamics_I_AR \redux_dynamics_I_AS \redux_dynamics_I_AT
 		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_AY
 		\redux_dynamics_I_AZ \redux_dynamics_I_BA \redux_dynamics_I_BB \redux_dynamics_I_BC \redux_dynamics_I_BD
-		\redux_dynamics_I_remain }
+		\redux_dynamics_I_BE \redux_dynamics_I_BF \redux_dynamics_I_BG \redux_dynamics_I_BH \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
 		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
 		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_BA \redux_lower_I_BB \redux_lower_I_BC \redux_lower_I_BD
-		\redux_lower_I_remain }
+		\redux_lower_I_BE \redux_lower_I_BF \redux_lower_I_BG \redux_lower_I_BH \redux_lower_I_remain }

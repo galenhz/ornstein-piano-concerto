@@ -62,6 +62,9 @@ to force it to open up. Score too.
 m. 224-225: Clarinets I and II combine badly in the score. Need to figure out a way to bring that
 r32 into line.
 
+m. 233: Trying to use LV as a cheat rather than tie across voices in PR, but tweak is not working.
+
 m. 233-235: In solo piano, lilypond strugges with tuplet bracket placing. Needs hand-tuning.
 
-m. 236: Solo piano has an ugly too-short stem in the right hand.
+m. 244 and 246: Solo piano, push staves apart a bit to allow the bracket to be on the opposite
+side from the slur?

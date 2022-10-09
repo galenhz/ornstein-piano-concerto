@@ -509,6 +509,20 @@ seems to be hand-written.) I'm splitting the difference here; we'll go with pizz
 on the "strums", but switch to arco for the long notes and in 224.
 (I-orch-10-cello-bass)
 
+m. 237: Solo piano in PR missing a treble clef transition in left hand.
+(I-solo-piano)
+
+m. 242: Solo piano bass clef transition in PR in bar 242 clearly a mistake, based on
+shared pattern between bars 241 and 243.
+(I-solo-piano)
+
+mm. 245 and 247: Solo piano in PR breaks up the 16ths at the end of 247 but not 245.
+Score breaks it up in both. Following the score.
+(I-solo-piano)
+
+m. 248: The ottava ends a beat too early in the PR.
+(I-solo-piano)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.

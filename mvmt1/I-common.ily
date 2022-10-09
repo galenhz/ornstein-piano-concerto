@@ -111,3 +111,5 @@ NULL_I_BD = { \mark #23 \tempo "Poco più Lento" \time 3/4 R2.*4 \tempo "Più ag
 	\bar "||" \Mvmt_I_Fermata_On_Bar }
 NULL_I_BE = { \mark #24 \tempo "Andantino" \time 6/8 R2.*7 }
 NULL_I_BF = { \mark #25 \time 4/4 R1*3 \tempo "Più mosso" \time 6/8 R2.*4 }
+NULL_I_BG = { \mark #26 \tempo "Animato" R2.*4 }
+NULL_I_BH = { \tempo "Meno" R2.*4 \mark #27 R2.*4 \time 3/8 R4. }
