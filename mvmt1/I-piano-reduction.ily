@@ -1740,9 +1740,8 @@ redux_lower_I_BD = \relative c' {
 
 redux_upper_I_BE = \relative c'' {
 	% mm. 226-232 - Rehersal 24
-	% FIXME: What's going on with the rhythms in the inner voice? Check full score.
 	% FIXME: Push ties out of the way.
-	\time 6/8
+	\time 3/4
 	\tempo "Andantino"
 	\mark #24
 	<<
@@ -1783,7 +1782,7 @@ redux_dynamics_I_BE = {
 
 redux_lower_I_BE = \relative c' {
 	% mm. 226-232 - Rehersal 24
-	\time 6/8
+	\time 3/4
 	\clef bass
 	<<
 		\new Voice {
@@ -1910,7 +1909,7 @@ redux_dynamics_I_BG = {
 }
 
 redux_lower_I_BG = \relative c' {
-	% mm. 240-247 - Rehersal 26
+	% mm. 240-243 - Rehersal 26
 	\repeat unfold 2 {
 		\tuplet 8/6 { c16 f, b, f' c f, c' f, } \tuplet 8/6 { b, f' c' f, c' f b, f' }
 		\tuplet 8/6 { ees' aes, d, aes' ees aes, ees' aes, } \tuplet 8/6 { d, aes' ees' aes, ees' aes d, aes' }
@@ -1919,32 +1918,44 @@ redux_lower_I_BG = \relative c' {
 
 %%% Section BH = mm. 244-252 (Rehersal ~27)
 
-redux_upper_I_BH = \relative c' {
+redux_middle_I_BH = \relative c'' {
 	% mm. 244-247
-	\tempo "Meno"
-	% QUESTION: Rhythmic error in m. 244 compared to m. 246.
-	% FIXME:    It also looks like the copyist gave up on the voiced stuff the second time round. Ties there are
-	%           super ugly. Maybe back-patch instead of trying to make ties work?
-	%			You know what would really solve this? A third staff in the middle for the triplets!
+	\once \omit Staff.TimeSignature
 	<<
 		\new Voice {
 			\voiceOne
-			<b e g b>4 <bes ees bes'>16 <aes aes'> <a cis f a>4.~
-			<a cis f a>4.~ <a cis f a>4 s8
-			<cis f a cis>4 <c e c'>16 <a a'> <a cis f a>4.
-			s2.
+			\repeat unfold 2 {
+				b4\rest b8\rest \tuplet 3/2 { b16\rest e, \beamCutR f } \tuplet 3/2 { \beamCutL gis f \beamCutR a } \tuplet 3/2 { \beamCutL f gis f }
+				\tuplet 3/2 { a f \beamCutR gis } \tuplet 3/2 { \beamCutL f a \beamCutR f } \tuplet 3/2 { \beamCutL gis f a } \tuplet 3/2 { f gis f } b8\rest b8\rest
+			}
 		}
 		\new Voice {
 			\voiceTwo
 			\repeat unfold 2 {
-				r4 r8 \tuplet 3/2 { r16 e' \beamCutR f } \tuplet 3/2 { \beamCutL gis f \beamCutR a } \tuplet 3/2 { \beamCutL f gis f }
-				\tuplet 3/2 { a f \beamCutR gis } \tuplet 3/2 { \beamCutL f a \beamCutR f } \tuplet 3/2 { \beamCutL gis f a } \tuplet 3/2 { f gis f } r8 r8
+				s4 s8 \tuplet 3/2 { s16 gis, \beamCutR cis } \tuplet 3/2 { \beamCutL e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e cis }
+				\tuplet 3/2 { e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e \beamCutR cis } \tuplet 3/2 { \beamCutL e cis e } \tuplet 3/2 { cis e cis } s8 s8
 			}
 		}
 	>>
+}
+
+redux_upper_I_BH = \relative c' {
+	% mm. 244-247
+	\tempo "Meno"
+	% EDIT: Rhythmic error in m. 244 compared to m. 246.
+	% FIXME: Frustratingly close to being right. The new staff appears at the bottom. Want it in the middle.
+	<<
+		\new Voice {
+			<b e g b>4 <bes ees bes'>16 <aes aes'> <a cis f a>4.~
+			<a cis f a>4.~ <a cis f a>4 r8
+			<cis f a cis>4 <c e c'>16 <a a'> <a cis f a>4.~
+			<a cis f a>4.~ <a cis f a>4 r8
+		}
+		\new Staff \redux_middle_I_BH
+	>>
+	\break
 	% mm. 248-252 - Rehersal 27
 	\mark #27
-	% QUESTION: I think I understand the correction in m. 248. Should sanity check against orchestra.
 	<ees g b ees>4 <d fis bes d>8 <des f a des>4 <c e gis c>8
 	<b ees b'>4 <bes d bes'>8 <a des a'> <aes c aes'> <g b g'>
 	<<
@@ -1972,24 +1983,12 @@ redux_dynamics_I_BH = {
 	s2.*8 s8 s4-\markup { \italic {rit.} }
 }
 
-redux_lower_I_BH = \relative c' {
+redux_lower_I_BH = \relative c, {
 	% mm. 244-247
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 2 {
-				r4 r8 \tuplet 3/2 { r16 gis \beamCutR cis } \tuplet 3/2 { \beamCutL e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e cis }
-				\tuplet 3/2 { e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e \beamCutR cis } \tuplet 3/2 { \beamCutL e cis e } \tuplet 3/2 { cis e cis } r8 r8
-			}
-		}
-		\new Voice {
-			\voiceTwo
-			<c,, g' e'>4. <ees a f'>4.~
-			<ees a f'>4.~ <ees a f'>4 s8
-			<a, ees' a>4. <ees' a ees'>
-			s2.
-		}
-	>>
+	<c g' e'>4. <ees a f'>4.~
+	<ees a f'>4.~ <ees a f'>4 r8
+	<a, ees' a>4. <ees' a ees'>~
+	<ees a ees'>4.~ <ees a ees'>4 r8
 	% mm. 248-252 - Rehersal 27
 	<g f' a>4 <g d' fis>8 <cis, g' f'>4 <e a cis>8
 	<g des' f>4 <fis c' e>8 <f b ees> <e bes' d> <ees a des>
@@ -2450,6 +2449,10 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
 		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
 		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_remain }
+%%redux_middle_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
+%%		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS
+%%		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC
+%%		\NULL_I_BD \NULL_I_BE \NULL_I_BF \NULL_I_BG \redux_middle_I_BH }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO

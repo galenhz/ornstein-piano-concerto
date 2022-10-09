@@ -68,3 +68,6 @@ m. 233-235: In solo piano, lilypond strugges with tuplet bracket placing. Needs 
 
 m. 244 and 246: Solo piano, push staves apart a bit to allow the bracket to be on the opposite
 side from the slur?
+
+m. 244-247: Piano reduction creates what should be the middle staff at the bottom. Need to figure
+out if I can force placement; if not, may have to move the bass line to the new staff instead.
