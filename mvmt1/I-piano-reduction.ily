@@ -1932,8 +1932,12 @@ redux_middle_I_BH = \relative c'' {
 		\new Voice {
 			\voiceTwo
 			\repeat unfold 2 {
+				\override TupletBracket.transparent = ##t
+				\override TupletNumber.transparent = ##t
 				s4 s8 \tuplet 3/2 { s16 gis, \beamCutR cis } \tuplet 3/2 { \beamCutL e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e cis }
 				\tuplet 3/2 { e cis \beamCutR e } \tuplet 3/2 { \beamCutL cis e \beamCutR cis } \tuplet 3/2 { \beamCutL e cis e } \tuplet 3/2 { cis e cis } s8 s8
+				\revert TupletBracket.transparent
+				\revert TupletNumber.transparent
 			}
 		}
 	>>
@@ -1951,7 +1955,7 @@ redux_upper_I_BH = \relative c' {
 			<cis f a cis>4 <c e c'>16 <a a'> <a cis f a>4.~
 			<a cis f a>4.~ <a cis f a>4 r8
 		}
-		\new Staff \redux_middle_I_BH
+		\new Staff \with { alignAboveContext = "redux_lower" } \redux_middle_I_BH
 	>>
 	\break
 	% mm. 248-252 - Rehersal 27
