@@ -2453,10 +2453,6 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
 		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
 		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_remain }
-%%redux_middle_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
-%%		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS
-%%		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC
-%%		\NULL_I_BD \NULL_I_BE \NULL_I_BF \NULL_I_BG \redux_middle_I_BH }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO

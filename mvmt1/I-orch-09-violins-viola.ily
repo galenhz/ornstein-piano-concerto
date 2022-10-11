@@ -1656,32 +1656,102 @@ Viola_mvmt_I_BE = \relative c {
 	b
 }
 
+%%% Section BF = mm. 233-239 (Rehersal 25)
+
+Violin_I_mvmt_I_BF = \relative c'' {
+	\mark #25
+	\time 4/4
+	R1*3
+	\tempo "Più mosso"
+	\time 6/8
+	cis8(\f c) \tuplet 3/2 { b16( bes d) } a8(\< aes) g16( fis)\!
+	<< \new Voice { \voiceTwo f?2.\ff } \new Voice { \voiceOne cis'2.^\Div_mark } >>
+	fis8(\f^\Unis_mark f) \tuplet 3/2 { e16( ees g) } d8(\< des) c16( b)\!
+	<bes e>2.\ff
+}
+
+Violin_II_mvmt_I_BF = \relative c'' {
+	\mark #25
+	\time 4/4
+	R1*3
+	\tempo "Più mosso"
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne
+			\tuplet 3/2 { cis16(^\Div_mark d, ges~) } ges4 \tuplet 3/2 { a16( b, d~) } d4
+			a'2.
+			\tuplet 3/2 { fis'16( fis, b~) } b4 \tuplet 3/2 { d16( d, fis)~ } fis4
+			<d d'>2.
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 { cis'16(\f d,~ d~) } d4 \tuplet 3/2 { a'16( b,~ b~) } b4
+			a2.\ff
+			\tuplet 3/2 { fis''16(\f fis,~ fis~) } fis4 \tuplet 3/2 { d'16( d,~ d~) } d4
+			fis2.\ff
+		}
+		\new Voice {
+			s4. s4\< s16 s16\!
+			s2.
+			s4. s4\< s16 s16\!
+			s2.
+		}
+	>>
+}
+
+Viola_mvmt_I_BF = \relative c' {
+	\mark #25
+	\time 4/4
+	R1*3
+	\tempo "Più mosso"
+	\time 6/8
+	ges32\f f ges \beamCutR f \beamCutL ges32 f ges \beamCutR f \beamCutL ges32 f ges f
+		ges32 f ges \beamCutR f \beamCutL ges32\< f ges \beamCutR f \beamCutL ges32 f ges f\!
+	cis''2.\ff
+	ges,32\f f ges \beamCutR f \beamCutL ges32 f ges \beamCutR f \beamCutL ges32 f ges f
+		ges32 f ges \beamCutR f \beamCutL ges32\< f ges \beamCutR f \beamCutL ges32 f ges f\!
+	bes2.\ff
+}
+
+Viola_divisi_II_mvmt_I_BF = \relative c' {
+	\mark #25
+	\time 4/4
+	R1*3
+	\tempo "Più mosso"
+	\time 6/8
+	ges4.:32 ges4.:32
+	cis2.
+	ges4.:32 ges4.:32
+	bes2.
+}
+
 %%% Final assembly
 
 Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF \Violin_I_mvmt_I_AG
 		\Violin_I_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_I_mvmt_I_AK \Violin_I_mvmt_I_AL \Violin_I_mvmt_I_AM \NULL_I_AN
 		\Violin_I_mvmt_I_AO \Violin_I_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \Violin_I_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Violin_I_mvmt_I_AV
 		\Violin_I_mvmt_I_AW \Violin_I_mvmt_I_AX \Violin_I_mvmt_I_AY \NULL_I_AZ \Violin_I_mvmt_I_BA \NULL_I_BB \Violin_I_mvmt_I_BC
-		\Violin_I_mvmt_I_BD \Violin_I_mvmt_I_BE }
+		\Violin_I_mvmt_I_BD \Violin_I_mvmt_I_BE \Violin_I_mvmt_I_BF }
 Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \Violin_I_divisi_II_mvmt_I_AS \NULL_I_AT
-		\NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE }
+		\NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF }
 
 Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF \Violin_II_mvmt_I_AG
 		\Violin_II_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_II_mvmt_I_AK \Violin_II_mvmt_I_AL \Violin_II_mvmt_I_AM \Violin_II_mvmt_I_AN
 		\Violin_II_mvmt_I_AO \Violin_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \Violin_II_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Violin_II_mvmt_I_AV
 		\Violin_II_mvmt_I_AW \Violin_II_mvmt_I_AX \Violin_II_mvmt_I_AY \NULL_I_AZ \Violin_II_mvmt_I_BA \Violin_II_mvmt_I_BB \Violin_II_mvmt_I_BC
-		\Violin_II_mvmt_I_BD \Violin_II_mvmt_I_BE }
+		\Violin_II_mvmt_I_BD \Violin_II_mvmt_I_BE \Violin_II_mvmt_I_BF }
 Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_divisi_II_mvmt_I_AE
 		\Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP
 		\NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB
-		\NULL_I_BC \NULL_I_BD \NULL_I_BE }
+		\NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF }
 
 Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF \Viola_mvmt_I_AG \Viola_mvmt_I_AH
 		\Viola_mvmt_I_AI \Viola_mvmt_I_AJ \Viola_mvmt_I_AK \NULL_I_AL \Viola_mvmt_I_AM \Viola_mvmt_I_AN \Viola_mvmt_I_AO \Viola_mvmt_I_AP
 		\NULL_I_AQ \Viola_mvmt_I_AR \Viola_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Viola_mvmt_I_AV \Viola_mvmt_I_AW \Viola_mvmt_I_AX \Viola_mvmt_I_AY
-		\Viola_mvmt_I_AZ \Viola_mvmt_I_BA \Viola_mvmt_I_BB \Viola_mvmt_I_BC \Viola_mvmt_I_BD \Viola_mvmt_I_BE }
+		\Viola_mvmt_I_AZ \Viola_mvmt_I_BA \Viola_mvmt_I_BB \Viola_mvmt_I_BC \Viola_mvmt_I_BD \Viola_mvmt_I_BE \Viola_mvmt_I_BF }
 Viola_divisi_II_mvmt_I = { \clef alto \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Viola_divisi_II_mvmt_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \Viola_divisi_II_mvmt_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \Viola_divisi_II_mvmt_I_BD
-		\NULL_I_BE }
+		\NULL_I_BE \Viola_divisi_II_mvmt_I_BF }

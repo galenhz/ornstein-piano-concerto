@@ -1110,26 +1110,100 @@ Oboe_IV_mvmt_I_BD = \relative c' {
 %%% Section BE = mm. 226-232 (Rehersal 24)
 %%% Tacet
 
+%%% Section BF = mm. 233-239 (Rehersal 25)
+
+Oboe_cues_mvmt_I_BF = \relative c''' {
+	\mark #25
+	\time 4/4
+	R1*2
+	\tag #'Score R1
+	\tag #'Part <<
+		\new CueVoice {
+			\tuplet 6/4 { cis8([^"I+II Fl." f d cis bes g)] } \tuplet 7/4 { cis( fis f d cis bes g) }
+		}
+		\new Voice {
+			\voiceTwo
+			R1
+		}
+	>>
+}
+
+Oboe_I_mvmt_I_BF = \relative c''' {
+	\Oboe_cues_mvmt_I_BF
+	\tempo "Più mosso"
+	\time 6/8
+	ges4\mf\< f8~ f e ees
+	des2.\!\ff
+	aes'4\mf\< g8~ g fis f
+	e2.\ff
+}
+
+Oboe_more_cues_mvmt_I_BF = \relative c''' {
+	\tempo "Più mosso"
+	\time 6/8
+	\tag #'Score R2.
+	\tag #'Part <<
+		\new CueVoice {
+			ges4^"I Ob." f8~ f e ees
+		}
+		\new Voice {
+			\voiceTwo
+			R2.
+		}
+	>>
+}
+
+Oboe_II_mvmt_I_BF = \relative c'' {
+	\Oboe_cues_mvmt_I_BF
+	\Oboe_more_cues_mvmt_I_BF
+	f2.\ff
+	R2.*2
+}
+
+Oboe_III_mvmt_I_BF = \relative c'' {
+	\Oboe_cues_mvmt_I_BF
+	\Oboe_more_cues_mvmt_I_BF
+	a2.\ff
+	R2.*2
+}
+
+Oboe_IV_mvmt_I_BF = \relative c' {
+	\Oboe_cues_mvmt_I_BF
+	\Oboe_more_cues_mvmt_I_BF
+	cis2.\ff
+	R2.*2
+}
+
+% Cues only.
+EnglishHorn_mvmt_I_BF = {
+	\Oboe_cues_mvmt_I_BF
+	\Oboe_more_cues_mvmt_I_BF
+	R2.*3
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
-		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_I_mvmt_I_BA \NULL_I_BB \Oboe_I_mvmt_I_BC \Oboe_I_mvmt_I_BD \NULL_I_BE }
+		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_I_mvmt_I_BA \NULL_I_BB \Oboe_I_mvmt_I_BC \Oboe_I_mvmt_I_BD \NULL_I_BE
+		\Oboe_I_mvmt_I_BF }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
-		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_II_mvmt_I_BA \NULL_I_BB \Oboe_II_mvmt_I_BC \Oboe_II_mvmt_I_BD \NULL_I_BE }
+		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_II_mvmt_I_BA \NULL_I_BB \Oboe_II_mvmt_I_BC \Oboe_II_mvmt_I_BD \NULL_I_BE
+		\Oboe_II_mvmt_I_BF }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
 		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_III_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_III_mvmt_I_BC \Oboe_III_mvmt_I_BD
-		\NULL_I_BE }
+		\NULL_I_BE \Oboe_III_mvmt_I_BF }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP \NULL_I_AQ
 		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ
-		\Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_IV_mvmt_I_BC \Oboe_IV_mvmt_I_BD \NULL_I_BE }
+		\Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_IV_mvmt_I_BC \Oboe_IV_mvmt_I_BD \NULL_I_BE \Oboe_IV_mvmt_I_BF }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
 		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
 		\EnglishHorn_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
-		\EnglishHorn_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \EnglishHorn_mvmt_I_BA \NULL_I_BB \EnglishHorn_mvmt_I_BC \NULL_I_BD \NULL_I_BE }
+		\EnglishHorn_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \EnglishHorn_mvmt_I_BA \NULL_I_BB \EnglishHorn_mvmt_I_BC \NULL_I_BD \NULL_I_BE
+		\EnglishHorn_mvmt_I_BF }

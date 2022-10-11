@@ -66,6 +66,9 @@ m. 233: Trying to use LV as a cheat rather than tie across voices in PR, but twe
 
 m. 233-235: In solo piano, lilypond strugges with tuplet bracket placing. Needs hand-tuning.
 
+m. 236: Oboes I/II awkward in score. Forcing "Solo I" breaks the crescendo. Find better solution.
+(Probably involves ending crescendo in bar.) Bassoons III/IV also a bit off in 236 and 238.
+
 m. 244 and 246: Solo piano, push staves apart a bit to allow the bracket to be on the opposite
 side from the slur?
 
