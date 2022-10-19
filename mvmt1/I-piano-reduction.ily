@@ -1815,12 +1815,16 @@ redux_upper_I_BF = \relative c' {
 	\time 4/4
 	\mark #25
 	% FIXME: Can't tie across voices in m. 233, so cheat with laissez vibrer. But tweak is not working.
+	% EDIT: Piano reduction deviates from the orchestra in m. 235. Change to match actual flute part.
 	<<
 		\new Voice {
 			\voiceOne
 			<e g b>32 r r16 cis' fis \tweak X-extent #'(0 . 4) \laissezVibrer g bes8 cis16 d cis8.~ cis8 bes
 			\tuplet 3/2 { fis g bes~ } bes cis d cis4 bes8
-			\repeat unfold 2 { \tuplet 6/4 { cis[ f d cis bes g] } }
+			%% This is what the piano reduction has:
+			%%\repeat unfold 2 { \tuplet 6/4 { cis[ f d cis bes g] } }
+			%% Here is what the flute actually does:
+			\tuplet 6/4 { cis[ f d cis bes g] } \tuplet 7/4 { cis fis f d cis bes g }
 		}
 		\new Voice {
 			\voiceTwo
@@ -1947,7 +1951,6 @@ redux_upper_I_BH = \relative c' {
 	% mm. 244-247
 	\tempo "Meno"
 	% EDIT: Rhythmic error in m. 244 compared to m. 246.
-	% FIXME: Frustratingly close to being right. The new staff appears at the bottom. Want it in the middle.
 	<<
 		\new Voice {
 			<b e g b>4 <bes ees bes'>16 <aes aes'> <a cis f a>4.~
