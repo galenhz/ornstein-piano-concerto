@@ -521,6 +521,12 @@ more sense to change this to a half note, to fit the 3/4 beat pattern. I wonder 
 is an artifact of an earlier draft where the entire orchestra was in 6/8. #UNDECIDED
 (I-orch-06-horns, I-piano-reduction)
 
+m. 235: The piano reduction is playing the flute notes in the right hand, but it doesn't
+actually match the flute part. The second half of the bar just repeats itself in the
+reduction, the flute changes to a septuplet with one extra note (f#). Adjusting the
+piano reduction to do what the orchestra does.
+(I-piano-reduction)
+
 m. 236-239: String dynamics are a mix of bits missing from various parts and scores.
 Brought them into a consistent shape. #DYNAMICS
 (I-orch-09-violins-viola)
@@ -529,12 +535,16 @@ m. 236: Bass clarinet tremolo is written incorrectly in the part and score. Dott
 instead of dotted quarters. Fixed.
 (I-orch-03-clarinets)
 
-m. 236-239: Trombone I/II flips in and out of tenor clef, but like 224-225, why bother?
+mm. 236-243: Trombone I/II flips in and out of tenor clef, but like 224-225, why bother?
 Commenting out clef changes. #UNDECIDED
 (I-orch-07-trombones-tuba)
 
 m. 237: Solo piano in PR missing a treble clef transition in left hand.
 (I-solo-piano)
+
+mm. 240-243: Dynamics all over the place. Copied stuff from parts, but need to do a
+complete review. #DYNAMICS #UNDECIDED
+(I-orch-*)
 
 m. 242: Solo piano bass clef transition in PR in bar 242 clearly a mistake, based on
 shared pattern between bars 241 and 243.

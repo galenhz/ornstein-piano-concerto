@@ -612,21 +612,62 @@ Trumpet_IV_mvmt_I_BD = \relative c' {
 %%% Section BF = mm. 233-239 (Rehersal 25)
 %%% Tacet
 
+%%% Section BG = mm. 240-243 (Rehersal 26)
+
+% Trumpet I/II part has oboe cues, III/IV has some random held notes in horns.
+% Oboe part more distinctive.
+Trumpet_all_cues_mvmt_I_BG = \relative c''' {
+	\mark #26
+	\tempo "Animato"
+	\tag #'Score R2.*2
+	\tag #'Part <<
+		\new CueVoice {
+			c4_"I+II Ob." b8~ b bes d
+			fis,8_"III+IV Ob." f \tuplet 3/2 { e16( ees g) } d( des) c8 b16( bes)
+		}
+		\new Voice {
+			\voiceTwo
+			R2.*2
+		}
+	>>
+	R2.
+}
+
+Trumpet_I_mvmt_I_BG = \relative c'' {
+	\Trumpet_all_cues_mvmt_I_BG
+	fis8( f) e16( g) d8( des bes)
+}
+
+Trumpet_II_mvmt_I_BG = \relative c' {
+	\Trumpet_all_cues_mvmt_I_BG
+	fis16 fis fis fis fis fis bes bes bes bes bes bes
+}
+
+Trumpet_III_mvmt_I_BG = \relative c'' {
+	\Trumpet_all_cues_mvmt_I_BG
+	bes16\ff bes bes bes bes bes fis' fis fis fis fis fis
+}
+
+Trumpet_IV_mvmt_I_BG = \relative c' {
+	\Trumpet_all_cues_mvmt_I_BG
+	d16\ff d d d d d fis fis fis fis fis fis
+}
+
 %%% Final assembly
 
 Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG \Trumpet_I_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_I_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT
 		\NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_I_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_I_mvmt_I_BC \Trumpet_I_mvmt_I_BD
-		\NULL_I_BE \NULL_I_BF }
+		\NULL_I_BE \NULL_I_BF \Trumpet_I_mvmt_I_BG }
 Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG \Trumpet_II_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_II_III_cues_mvmt_I_BC
-		\NULL_I_BD \NULL_I_BE \NULL_I_BF }
+		\NULL_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_II_mvmt_I_BG }
 Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG \Trumpet_III_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_II_III_cues_mvmt_I_BC
-		\Trumpet_III_mvmt_I_BD \NULL_I_BE \NULL_I_BF }
+		\Trumpet_III_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_III_mvmt_I_BG }
 Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG \Trumpet_IV_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_IV_mvmt_I_BC
-		\Trumpet_IV_mvmt_I_BD \NULL_I_BE \NULL_I_BF }
+		\Trumpet_IV_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_IV_mvmt_I_BG }
