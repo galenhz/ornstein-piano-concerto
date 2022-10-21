@@ -558,6 +558,10 @@ mm. 245 and 247: Solo piano in PR breaks up the 16ths at the end of 247 but not 
 Score breaks it up in both. Following the score.
 (I-solo-piano)
 
+m. 246: Viola has no slurs over the tremolos and no accents, although it has both in
+244. The score agrees, but honestly it makes sense just to make 246 match 244.
+(I-orch-09-violins-viola)
+
 m. 248: The ottava ends a beat too early in the PR. Score seems correct.
 (I-solo-piano)
 

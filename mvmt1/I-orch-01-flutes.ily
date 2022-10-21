@@ -916,25 +916,25 @@ Flutes_all_oboe_cues_mvmt_I_AX = \relative c'' {
 % Cues only
 Picc_mvmt_I_AX = \relative c'' {
 	\Flutes_all_oboe_cues_mvmt_I_AX
-	\time 9/8 \tag #'Score \slashedGrace s8
+	\time 9/8 \tag #'Score \grace s8
 	R1*9/8
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
-	\time 5/8 \tag #'Score \slashedGrace s8
+	\time 5/8 \tag #'Score \grace s8
 	R1*5/8
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
 }
 
 Flute_I_II_mvmt_I_AX = \relative c'' {
 	\Flutes_all_oboe_cues_mvmt_I_AX
-	\time 9/8 \tag #'Score \slashedGrace s8
+	\time 9/8 \tag #'Score \grace s8
 	ees8[\fff ees ees ees ees ees ees ees ees]
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
-	\time 5/8 \tag #'Score \slashedGrace s8
+	\time 5/8 \tag #'Score \grace s8
 	R1*5/8
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
 }
 
@@ -942,11 +942,11 @@ Flute_III_IV_mvmt_I_AX = \relative c'' {
 	\Flutes_all_oboe_cues_mvmt_I_AX
 	\time 9/8
 	\stemUp \slashedGrace a8( bes)[\fff \repeat unfold 7 { \slashedGrace a8( bes) } \slashedGrace a8( bes)] \stemNeutral
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
-	\time 5/8 \tag #'Score \slashedGrace s8
+	\time 5/8 \tag #'Score \grace s8
 	R1*5/8
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
 }
 
@@ -1318,29 +1318,84 @@ Flute_III_IV_mvmt_I_BG = \relative c'' {
 	ees'4.\fff fis\fff
 }
 
+%%% Section BH = mm. 244-252 (Rehersal ~27)
+
+Picc_mvmt_I_BH = \relative c''' {
+	\tempo "Meno"
+	R2.*4
+	\mark #27
+	R2.*2
+	r4. r8 cis8\ff bes'
+	r4. r8 cis,8\ff bes'
+	\time 3/8
+	r8 cis,8\ff bes'
+}
+
+Flute_I_mvmt_I_BH = \relative c'''' {
+	\tempo "Meno"
+	r4. aes4.~\ff
+	aes~ aes8~ aes16 r16 r8
+	r4. a4.~
+	a~ a8~ a16 r16 r8
+	\mark #27
+	ees,4 d8 des4 c8
+	b4 r8 r4.
+	r4. r8 cis'\ff bes'
+	r4. r8 cis, bes'
+	\time 3/8
+	r8_\markup { \dynamic fff \italic "rit." } cis, bes'
+}
+
+Flute_II_mvmt_I_BH = \relative c''' {
+	\tempo "Meno"
+	r4. f4.~\ff
+	f4.~ f8~ f16 r16 r8
+	r4. f4.~\ff
+	f4.~ f8~ f16 r16 r8
+	\mark #27
+	b,,4 bes8 a4 gis8
+	b4 r8 r4.
+	r4. r8 cis'\ff bes'
+	r4. r8 cis, bes'
+	\time 3/8
+	r8_\markup { \dynamic fff \italic "rit." } cis, bes'
+}
+
+Flute_III_mvmt_I_BH = \relative c''' {
+	\tempo "Meno"
+	r4. des4.~\ff
+	des4. des8~ des16 r16 r8
+	r4. des4.~
+	des4.~ des8~ des16 r16 r8
+	\mark #27
+	R2.*4
+	\time 3/8
+	R4.
+}
+
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_mvmt_I_AL \NULL_I_AM \Picc_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO \Picc_mvmt_I_AP
 		\NULL_I_AQ \Picc_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Picc_mvmt_I_AX \NULL_I_AY \Picc_mvmt_I_AZ
-		\NULL_I_BA \Flute_All_Cues_mvmt_I_BB \NULL_I_BC \Picc_mvmt_I_BD \Picc_mvmt_I_BE \NULL_I_BF \Picc_mvmt_I_BG }
+		\NULL_I_BA \Flute_All_Cues_mvmt_I_BB \NULL_I_BC \Picc_mvmt_I_BD \Picc_mvmt_I_BE \NULL_I_BF \Picc_mvmt_I_BG \Picc_mvmt_I_BH }
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL \NULL_I_AM \Flute_I_mvmt_I_AN \Flute_I_mvmt_I_AO \Flute_I_mvmt_I_AP
 		\Flute_I_mvmt_I_AQ \Flute_I_mvmt_I_AR \Flute_I_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Flute_I_II_mvmt_I_AX
 		\NULL_I_AY \Flute_I_mvmt_I_AZ \Flute_I_mvmt_I_BA \Flute_I_mvmt_I_BB \Flute_I_mvmt_I_BC \Flute_I_mvmt_I_BD \Flute_I_mvmt_I_BE
-		\Flute_I_mvmt_I_BF \Flute_I_II_mvmt_I_BG }
+		\Flute_I_mvmt_I_BF \Flute_I_II_mvmt_I_BG \Flute_I_mvmt_I_BH }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO
 		\Flute_II_mvmt_I_AP \NULL_I_AQ \Flute_II_mvmt_I_AR \Flute_II_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Flute_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Flute_II_mvmt_I_BA \Flute_All_Cues_mvmt_I_BB \Flute_II_mvmt_I_BC
-		\Flute_II_mvmt_I_BD \Flute_II_mvmt_I_BE \Flute_II_mvmt_I_BF \Flute_I_II_mvmt_I_BG }
+		\Flute_II_mvmt_I_BD \Flute_II_mvmt_I_BE \Flute_II_mvmt_I_BF \Flute_I_II_mvmt_I_BG \Flute_II_mvmt_I_BH }
 Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG
 		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_III_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN
 		\Flute_III_IV_mvmt_I_AO \Flute_III_mvmt_I_AP \NULL_I_AQ \Flute_III_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV
 		\NULL_I_AW \Flute_III_IV_mvmt_I_AX \NULL_I_AY \Flute_III_mvmt_I_AZ \NULL_I_BA \Flute_All_Cues_mvmt_I_BB \Flute_III_IV_mvmt_I_BC
-		\Flute_III_mvmt_I_BD \NULL_I_BE \Flute_III_mvmt_I_BF \Flute_III_IV_mvmt_I_BG }
+		\Flute_III_mvmt_I_BD \NULL_I_BE \Flute_III_mvmt_I_BF \Flute_III_IV_mvmt_I_BG \Flute_III_mvmt_I_BH }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Flute_III_IV_mvmt_I_AO
 		\Flute_IV_mvmt_I_AP \NULL_I_AQ \Flute_IV_mvmt_I_AR \Flute_IV_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Flute_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \Flute_All_Cues_mvmt_I_BB \Flute_III_IV_mvmt_I_BC
-		\Flute_IV_mvmt_I_BD \NULL_I_BE \Flute_IV_mvmt_I_BF \Flute_III_IV_mvmt_I_BG }
+		\Flute_IV_mvmt_I_BD \NULL_I_BE \Flute_IV_mvmt_I_BF \Flute_III_IV_mvmt_I_BG \NULL_I_BH }

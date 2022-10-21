@@ -812,22 +812,22 @@ Oboe_III_mvmt_I_AQ_AR = \relative c' {
 Oboe_I_II_mvmt_I_AX = \relative c'' {
 	\time 6/8
 	r8 c[\fff f fis gis8. gis16]
-	\time 5/8 \tag #'Score \slashedGrace s8
+	\time 5/8 \tag #'Score \grace s8
 	b8[ a16( \beamCutR gis) \beamCutL a( gis) fis8 gis16( fis])
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	f16[( \beamCutR d) \beamCutL f( fis) gis8 b a16( gis) fis8]
-	\time 9/8 \tag #'Score \slashedGrace s8
+	\time 9/8 \tag #'Score \grace s8
 	a,8[ a a a a a a a a]
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	r8 c[ f fis gis8. gis16]
-	\time 5/8 \tag #'Score \slashedGrace s8
+	\time 5/8 \tag #'Score \grace s8
 	b8[ a16( \beamCutR gis) \beamCutL a( gis) fis8 gis16( fis])
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	f16[( \beamCutR d) \beamCutL f( fis) gis8 b a16( gis) fis8]
 }
 
 Oboe_III_IV_mvmt_I_AX = \relative c'' {
-	\tag #'Score { \time 6/8 R2. \time 5/8 \slashedGrace s8 R1*5/8 \time 6/8 \slashedGrace s8 R2. }
+	\tag #'Score { \time 6/8 R2. \time 5/8 \grace s8 R1*5/8 \time 6/8 \grace s8 R2. }
 	\tag #'Part {
 		<<
 			\new CueVoice {
@@ -851,16 +851,16 @@ Oboe_III_IV_mvmt_I_AX = \relative c'' {
 	}
 	\time 9/8
 	\slashedGrace f,8( ges)[\fff \repeat unfold 7 { \slashedGrace f8( ges) } \slashedGrace f8( ges)]
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
-	\time 5/8 \tag #'Score \slashedGrace s8
+	\time 5/8 \tag #'Score \grace s8
 	R1*5/8
-	\time 6/8 \tag #'Score \slashedGrace s8
+	\time 6/8 \tag #'Score \grace s8
 	R2.
 }
 
 EnglishHorn_mvmt_I_AX = \transpose c' f \relative c''' {
-	\tag #'Score { \time 6/8 R2. \time 5/8 \slashedGrace s8 R1*5/8 \time 6/8 \slashedGrace s8 R2. }
+	\tag #'Score { \time 6/8 R2. \time 5/8 \grace s8 R1*5/8 \time 6/8 \grace s8 R2. }
 	\tag #'Part {
 		<<
 			\new CueVoice {
@@ -1174,9 +1174,25 @@ Oboe_IV_mvmt_I_BF = \relative c' {
 	R2.*2
 }
 
-% Cues only.
-EnglishHorn_mvmt_I_BF = {
-	\Oboe_cues_mvmt_I_BF
+% Cues only. Copy out the first so I can slip an ottava in there.
+% Leaving off the transpose means I can copy the part in C, and the
+% EH part will be transposed natively.
+EnglishHorn_mvmt_I_BF = \relative c''' {
+	\mark #25
+	\time 4/4
+	R1*2
+	\tag #'Score R1
+	\tag #'Part <<
+		\new CueVoice {
+			\ottava #1
+			\tuplet 6/4 { cis8([^"I+II Fl." f d cis bes g)] } \tuplet 7/4 { cis( fis f d cis bes g) }
+			\ottava #0
+		}
+		\new Voice {
+			\voiceTwo
+			R1
+		}
+	>>
 	\Oboe_more_cues_mvmt_I_BF
 	R2.*3
 }
@@ -1219,29 +1235,78 @@ Oboe_IV_mvmt_I_BG = \relative c'' {
 	fis4.\fff cis'\fff
 }
 
+%%% Section BH = mm. 244-252 (Rehersal ~27)
+
+Oboe_I_mvmt_I_BH = \relative c' {
+	\tempo "Meno"
+	\override Staff.Beam.breakable = ##t
+	r4. \tuplet 3/2 8 { r16\ff e16([ \beamCutR f) \beamCutL gis( f \beamCutR a) \beamCutL f( gis \beamCutR f)
+	\beamCutL a( f \beamCutR gis) \beamCutL f( a \beamCutR f) \beamCutL gis( f \beamCutR a) \beamCutL f( gis f)] } r8 r8
+	r4. \tuplet 3/2 8 { r16 e16([ \beamCutR f) \beamCutL gis( f \beamCutR a) \beamCutL f( gis \beamCutR f)
+	\beamCutL a( f \beamCutR gis) \beamCutL f( a \beamCutR f) \beamCutL gis( f \beamCutR a) \beamCutL f( gis f)] } r8 r8
+	\revert Staff.Beam.breakable
+	\mark #27
+	g4 fis8 f4 e8
+	ees4 r8 r4.
+	r4. r8 cis'\ff bes'
+	r4. r8 cis, bes'
+	\time 3/8
+	r8\fff cis, bes'
+}
+
+Oboe_II_mvmt_I_BH = \relative c' {
+	\tempo "Meno"
+	R2.*4
+	\mark #27
+	ees4 d8 des4 c8
+	ees4 r8 r4.
+	r4. r8 cis'\ff bes'
+	r4. r8 cis, bes'
+	\time 3/8
+	r8\fff cis, bes'
+}
+
+EnglishHorn_mvmt_I_BH = \transpose c' f \relative c' {
+	\tempo "Meno"
+	\override Staff.Beam.breakable = ##t
+	r4. \tuplet 3/2 8 { r16\ff dis16([ \beamCutR gis) \beamCutL b( gis \beamCutR b) \beamCutL gis( b \beamCutR gis)
+	\beamCutL b( gis \beamCutR b) \beamCutL gis( a \beamCutR gis) \beamCutL b( gis \beamCutR b) \beamCutL gis( b gis)] } r8 r8
+	r4. \tuplet 3/2 8 { r16 dis16([ \beamCutR gis) \beamCutL b( gis \beamCutR b) \beamCutL gis( b \beamCutR gis)
+	\beamCutL b( gis \beamCutR b) \beamCutL gis( a \beamCutR gis) \beamCutL b( gis \beamCutR b) \beamCutL gis( b gis)] } r8 r8
+	\revert Staff.Beam.breakable
+	\mark #27
+	R2.
+	fis4 f8 e ees d
+	r8 bes' e r4.
+	r8 bes e r4.
+	\time 3/8
+	R4.
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_I_mvmt_I_BA \NULL_I_BB \Oboe_I_mvmt_I_BC \Oboe_I_mvmt_I_BD \NULL_I_BE
-		\Oboe_I_mvmt_I_BF \Oboe_I_mvmt_I_BG }
+		\Oboe_I_mvmt_I_BF \Oboe_I_mvmt_I_BG \Oboe_I_mvmt_I_BH }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_II_mvmt_I_BA \NULL_I_BB \Oboe_II_mvmt_I_BC \Oboe_II_mvmt_I_BD \NULL_I_BE
-		\Oboe_II_mvmt_I_BF \Oboe_II_mvmt_I_BG }
+		\Oboe_II_mvmt_I_BF \Oboe_II_mvmt_I_BG \Oboe_II_mvmt_I_BH }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
 		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_III_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_III_mvmt_I_BC \Oboe_III_mvmt_I_BD
-		\NULL_I_BE \Oboe_III_mvmt_I_BF \Oboe_III_mvmt_I_BG }
+		\NULL_I_BE \Oboe_III_mvmt_I_BF \Oboe_III_mvmt_I_BG \NULL_I_BH }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP \NULL_I_AQ
 		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ
-		\Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_IV_mvmt_I_BC \Oboe_IV_mvmt_I_BD \NULL_I_BE \Oboe_IV_mvmt_I_BF \Oboe_IV_mvmt_I_BG }
+		\Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_IV_mvmt_I_BC \Oboe_IV_mvmt_I_BD \NULL_I_BE \Oboe_IV_mvmt_I_BF \Oboe_IV_mvmt_I_BG
+		\NULL_I_BH }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
 		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
 		\EnglishHorn_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\EnglishHorn_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \EnglishHorn_mvmt_I_BA \NULL_I_BB \EnglishHorn_mvmt_I_BC \NULL_I_BD \NULL_I_BE
-		\EnglishHorn_mvmt_I_BF \NULL_I_BG }
+		\EnglishHorn_mvmt_I_BF \NULL_I_BG \EnglishHorn_mvmt_I_BH }

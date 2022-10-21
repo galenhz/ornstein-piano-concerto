@@ -36,19 +36,17 @@
 % BF = mm. 233-239 (Rehersal 25)
 % BG = mm. 240-243 (Rehersal 26)
 % BH = mm. 244-252 (Rehersal ~27)
-% BI = mm. 253-258
-% BJ = mm. 259-264 (Rehersal 28)
-% BK = mm. 265-271 (Rehersal 29)
-% BL = mm. 272-280 (Rehersal 30)
-% BM = mm. 281-290 (Rehersal 31/32)
-% BN = mm. 291-300 (Rehersal 33)
-% BO = mm. 301-303 (Rehersal 34)
-% BP = mm. 304-308 (Rehersal 35)
-% BQ = mm. 309-312 (Rehersal 36)
-% BR = mm. 313-315
-% BS = mm. 316-327 (Reherasl 37)
-% BT = mm. 328-331
-
+% BI = mm. 253-264 (Rehersal ~28)
+% BJ = mm. 265-271 (Rehersal 29)
+% BK = mm. 272-280 (Rehersal 30)
+% BL = mm. 281-290 (Rehersal 31/32)
+% BM = mm. 291-300 (Rehersal 33)
+% BN = mm. 301-303 (Rehersal 34)
+% BO = mm. 304-308 (Rehersal 35)
+% BP = mm. 309-312 (Rehersal 36)
+% BQ = mm. 313-315
+% BR = mm. 316-327 (Rehersal 37)
+% BS = mm. 328-331
 
 %% EDIT: The PR has "con moto" at m. 5. The parts have "moderato con moto" at m. 16.
 %%       The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
@@ -99,9 +97,9 @@ NULL_I_AT = { \mark #15 \tempo "quasi improvisata" \time 5/4 R1*5/4 \time 7/4 R1
 NULL_I_AU = { \mark #16 \tempo "Andantino" \time 2/4 R2*10 }
 NULL_I_AV = { \time 7/8 R1*7/8 \time 9/8 R1*9/8*2 \time 6/8 R2. \time 8/8 R1 }
 NULL_I_AW = { \mark #17 \tempo "Allegro - con forza e marcato" \time 7/8 R1*7/8 \time 6/8 R2. \time 9/8 R1*9/8 \time 7/8 R1*7/8 \time 3/8 R4. }
-NULL_I_AX = { \time 6/8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8
-	\time 9/8 \tag #'Score \slashedGrace s8 R1*9/8 \time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 \time 5/8 \tag #'Score \slashedGrace s8 R1*5/8
-	\time 6/8 \tag #'Score \slashedGrace s8 R1*6/8 }
+NULL_I_AX = { \time 6/8 R1*6/8 \time 5/8 \tag #'Score \grace s8 R1*5/8 \time 6/8 \tag #'Score \grace s8 R1*6/8
+	\time 9/8 \tag #'Score \grace s8 R1*9/8 \time 6/8 \tag #'Score \grace s8 R1*6/8 \time 5/8 \tag #'Score \grace s8 R1*5/8
+	\time 6/8 \tag #'Score \grace s8 R1*6/8 }
 NULL_I_AY = { R2. \time 5/8 R1*5/8 \time 6/8 R2. \time 5/8 R1*5/8 \mark #18 \time 8/8 R1 \time 4/8 R2 }
 NULL_I_AZ = { \tempo "Meno mosso; fluido" \time 4/4 R1*6 }
 NULL_I_BA = { \mark #19 \time 6/8 R2.*8 }

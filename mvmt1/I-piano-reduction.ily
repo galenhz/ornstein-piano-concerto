@@ -1275,22 +1275,22 @@ redux_lower_I_AW = \relative c,, {
 
 %%% Section AX = mm. 175-181
 
-% Insert dummy slashed grace notes to match solo piano.
+% Insert dummy grace notes to match solo piano.
 redux_upper_I_AX = \relative c' {
 	% mm. 175-181
 	\time 6/8
 	r8 <c c'>[ <f f'> <fis fis'> <gis gis'>8. q16]
-	\time 5/8 \slashedGrace s8
+	\time 5/8 \grace s8
 	<b b'>8[ <a a'>16 \beamCutR <gis gis'> \beamCutL <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
-	\time 6/8 \slashedGrace s8
+	\time 6/8 \grace s8
 	<f f'>16[ \beamCutR <d d'> \beamCutL <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
-	\time 9/8 \slashedGrace s8
+	\time 9/8 \grace s8
 	r8 a[ ees' des16 \beamCutR c \beamCutL des \beamCutR c \beamCutL a \beamCutR ees' \beamCutL des \beamCutR c \beamCutL des c a8]
-	\time 6/8 \slashedGrace s8
+	\time 6/8 \grace s8
 	r8 <c, c'>[ <f f'> <fis fis'> <gis gis'>8. q16]
-	\time 5/8 \slashedGrace s8
+	\time 5/8 \grace s8
 	<b b'>8[ <a a'>16 \beamCutR <gis gis'> \beamCutL <a a'> <gis gis'> <fis fis'>8 <gis gis'>16 <fis fis'>]
-	\time 6/8 \slashedGrace s8
+	\time 6/8 \grace s8
 	<f f'>16[ \beamCutR <d d'> \beamCutL <f f'> <fis fis'> <gis gis'>8 <b b'> <a a'>16 <gis gis'> <fis fis'>8]
 }
 
@@ -1320,11 +1320,11 @@ redux_lower_I_AX = \relative c, {
 	<<
 		\new Voice {
 			\voiceTwo
-			<bes, fis' cis'>1
+			<bis, fis' cis'>1
 		}
 		\new Voice {
 			\voiceFour
-			r8 <cis' fis a c>[ q q q q q q q]
+			a''8\rest <cis, fis a c>[ q q q q q q q]
 		}
 	>>
 	%\time 6/8
