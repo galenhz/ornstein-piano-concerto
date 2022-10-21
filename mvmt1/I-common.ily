@@ -111,3 +111,4 @@ NULL_I_BE = { \mark #24 \tempo "Andantino" \time 3/4 R2.*7 }
 NULL_I_BF = { \mark #25 \time 4/4 R1*3 \tempo "Più mosso" \time 6/8 R2.*4 }
 NULL_I_BG = { \mark #26 \tempo "Animato" R2.*4 }
 NULL_I_BH = { \tempo "Meno" R2.*4 \mark #27 R2.*4 \time 3/8 R4. }
+NULL_I_BI = { \time 6/8 R2. \time 2/8 R4*5 \mark #28 \tempo "Sempre agitato" \time 6/8 R2. \time 2/8 R4*5 }

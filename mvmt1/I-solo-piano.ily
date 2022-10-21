@@ -2114,9 +2114,9 @@ solo_lower_I_BH = \relative c' {
 	r16 <g, g'> <b b'> <ees ees'> <fis fis'> <bes bes'>
 }
 
-%%% This is as far as I've gotten
+%%% Section BI = mm. 253-264 (Rehersal ~28)
 
-solo_upper_I_remain = \relative c'' {
+solo_upper_I_BI = \relative c'' {
 	% mm. 253-258
 	\time 6/8
 	\tuplet 3/2 { <c c'>16[ <fis, fis'> r32 <fis fis'>] } \tuplet 3/2 { <fis fis'>16 <c' c'> <fis fis'> }
@@ -2133,10 +2133,31 @@ solo_upper_I_remain = \relative c'' {
 		\tuplet 3/2 { <g g'>[ <fis fis'> <c c'>] } <fis fis'>8~
 	\time 2/4
 	<fis fis'>4~ <fis fis'>4~ <fis fis'>4~ <fis fis'>4~ <fis fis'>8 r8
+}
+
+solo_dynamics_I_BI = {
+	% mm. 253-258
+	s2.-\markup { \dynamic p \italic {subito} } s4*5
+	% mm. 259-264 - Rehersal 28
+	s2. s4*5
+}
+
+solo_lower_I_BI = \relative c, {
+	% mm. 253-258
+	% mm. 259-264 - Rehersal 28
+	\clef bass
+	\time 6/8
+	% EDIT: 16ths in PR but really should be 32nds
+	\repeat unfold 16 { \tuplet 5/4 { c32[ fis c' fis, \beamCutR c' } \tuplet 5/4 { \beamCutL fis c fis, c' fis,] } }
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c'' {
 	% mm. 265-271 - Rehersal 29
 	\mark #29
 	\time 6/8
-	\tuplet 3/2 { <a, a'>16[ <ees' ees'> r32 <f f'>] } \tuplet 3/2 { <f f'>8 <f f'>16 }
+	\tuplet 3/2 { <a a'>16[ <ees' ees'> r32 <f f'>] } \tuplet 3/2 { <f f'>8 <f f'>16 }
 		\tuplet 3/2 { <b b'>[ <f f'> <ees ees'>] } \tuplet 3/2 { <f f'>8 <ees ees'>16 }
 		\tuplet 3/2 { <a, a'>[ <ees' ees'> r32 <f f'>] } \tuplet 3/2 { <f f'>8 <ees ees'>16 }
 	\time 5/8
@@ -2403,10 +2424,6 @@ solo_upper_I_remain = \relative c'' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 253-258
-	s2.-\markup { \dynamic p \italic {subito} } s4*5
-	% mm. 259-264 - Rehersal 28
-	s2. s4*5
 	% mm. 265-271 - Rehersal 29
 	s2. s4.-\markup { \dynamic f } s4 s2. s2.-\markup { \dynamic fff } s4. s2. s2. s4. s2
 	% mm. 272-280 - Rehersal 30
@@ -2434,14 +2451,8 @@ solo_dynamics_I_remain = {
 }
 
 solo_lower_I_remain = \relative c, {
-	% mm. 253-258
-	% mm. 259-264 - Rehersal 28
-	\clef bass
-	\time 6/8
-	% QUESTION: 16ths in PR but really should be 32nds
-	\repeat unfold 16 { \tuplet 5/4 { c32[ fis c' fis, \beamCutR c' } \tuplet 5/4 { \beamCutL fis c fis, c' fis,] } }
 	% mm. 265-271 - Rehersal 29
-	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
+	\repeat unfold 3 { \tuplet 5/4 { ees32[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
 	\time 5/8
 	\repeat unfold 2 { \tuplet 5/4 { a,32[ ees' a ees \beamCutR a } \tuplet 5/4 { \beamCutL ees' a, ees a ees] } }
 		\tuplet 5/4 { a,[ ees' a ees a] }
@@ -2624,7 +2635,7 @@ solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upp
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
 		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV
 		\solo_upper_I_AW \solo_upper_I_AX \solo_upper_I_AY \solo_upper_I_AZ \solo_upper_I_BA \solo_upper_I_BB \solo_upper_I_BC
-		\solo_upper_I_BD \solo_upper_I_BE \solo_upper_I_BF \solo_upper_I_BG \solo_upper_I_BH \solo_upper_I_remain }
+		\solo_upper_I_BD \solo_upper_I_BE \solo_upper_I_BF \solo_upper_I_BG \solo_upper_I_BH \solo_upper_I_BI \solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
 		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS
@@ -2637,7 +2648,7 @@ solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
 		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_AW \solo_dynamics_I_AX \solo_dynamics_I_AY
 		\solo_dynamics_I_AZ \solo_dynamics_I_BA \solo_dynamics_I_BB \solo_dynamics_I_BC \solo_dynamics_I_BD \solo_dynamics_I_BE
-		\solo_dynamics_I_BF \solo_dynamics_I_BG \solo_dynamics_I_BH \solo_dynamics_I_remain }
+		\solo_dynamics_I_BF \solo_dynamics_I_BG \solo_dynamics_I_BH \solo_dynamics_I_BI \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
@@ -2649,7 +2660,7 @@ solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_low
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
 		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV
 		\solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_AY \solo_lower_I_AZ \solo_lower_I_BA \solo_lower_I_BB \solo_lower_I_BC
-		\solo_lower_I_BD \solo_lower_I_BE \solo_lower_I_BF \solo_lower_I_BG \solo_lower_I_BH \solo_lower_I_remain }
+		\solo_lower_I_BD \solo_lower_I_BE \solo_lower_I_BF \solo_lower_I_BG \solo_lower_I_BH \solo_lower_I_BI \solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
 		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS
