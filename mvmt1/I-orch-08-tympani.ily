@@ -436,15 +436,30 @@ Tympani_II_mvmt_I_BH = \relative c, {
 	R4.
 }
 
+%%% Section BI = mm. 253-264 (Rehersal ~28)
+
+Tympani_II_mvmt_I_BI = \relative c {
+	\time 6/8
+	c4.:32\pp fis,4.:32
+	\time 2/8
+	\repeat unfold 5 { c'4:32 }
+	\mark #28
+	\tempo "Sempre agitato"
+	\time 6/8
+	c4.:32 fis,4.:32
+	\time 2/8
+	\repeat unfold 5 { c'4:32 }
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
 		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN \Tympani_I_mvmt_I_AO
 		\NULL_I_AP \NULL_I_AQ \Tympani_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Tympani_I_mvmt_I_AX \NULL_I_AY
 		\NULL_I_AZ \Tympani_I_mvmt_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \Tympani_I_mvmt_I_BF \Tympani_I_mvmt_I_BG
-		\Tympani_I_mvmt_I_BH }
+		\Tympani_I_mvmt_I_BH \NULL_I_BI }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
 		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN
 		\Tympani_II_mvmt_I_AO \Tympani_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Tympani_II_mvmt_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \Tympani_II_mvmt_I_BG
-		\Tympani_II_mvmt_I_BH }
+		\Tympani_II_mvmt_I_BH \Tympani_II_mvmt_I_BI }

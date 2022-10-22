@@ -572,6 +572,13 @@ that is the top staff would still have those deep-dipping notes, which would eat
 vertical space. #UNDECIDED
 (I-piano-reduction)
 
+mm. 253-264: Once again, revisit the dynamics here. I think this makes more sense
+than other parts of the score; I can combine the score and parts into something coherent
+at least. I like the accents/dynamics in the oboes and horn parts, so I'm keeping them.
+The more I work, the more I think I'm going to have to end up compromising by putting
+in some of the more beter pencil stuff, just to have something there. #DYNAMICS #UNDECIDED
+(I-orch-*)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.

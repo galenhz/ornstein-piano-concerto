@@ -1283,30 +1283,128 @@ EnglishHorn_mvmt_I_BH = \transpose c' f \relative c' {
 	R4.
 }
 
+%%% Section BI = mm. 253-264 (Rehersal ~28)
+
+Oboe_I_mvmt_I_BI = \relative c' {
+	\time 6/8
+	R2.
+	\time 2/8
+	r8 \tuplet 3/2 8 { r16 fis\mp fis
+	a-^[ fis r32 fis32] fis16 a bes
+	cis-^[ bes r32 a32] a8 a16
+	bes-^ a g a-^ g fis
+	ees fis8-^~ } fis8
+	\mark #28
+	\tempo "Sempre agitato"
+	\time 6/8
+	R2.
+	\time 2/8
+	r8 \tuplet 3/2 8 { r16 bes\f bes
+	cis-^[ bes r32 bes32] bes16 cis d
+	f-^[ d r32 des] des8 des16
+	% EDIT: Score has the b as c-flat to avoid ugly note clash.
+	d?-^ cis \tag #'Score ces \tag #'Part b cis-^ b bes
+	g bes8-^~ } bes8
+}
+
+Oboe_II_mvmt_I_BI = \relative c' {
+	\time 6/8
+	R2.
+	\time 2/8
+	r8 \tuplet 3/2 8 { r16 d\mp d
+	d-^[ d r32 d32] d16 fis fis
+	fis-^[ fis r32 fis32] fis8 fis16
+	fis-^ fis fis d-^ d d
+	d d8-^~ } d8
+	\mark #28
+	\tempo "Sempre agitato"
+	\time 6/8
+	R2.
+	\time 2/8
+	r8 \tuplet 3/2 8 { r16 fis\f fis
+	% EDIT: B-naturals in part, but copyist missed that it was flat earlier in I. Fixed.
+	fis-^[ fis r32 fis32] fis16 bes bes
+	bes-^[ bes r32 bes] bes8 bes16
+	% EDIT: third note in part/score has a unnecessary flat...maybe the middle note should be b-natural?
+	%       PR does not agree, has all b-flats. Leaving as is.
+	bes-^ bes bes fis-^ fis fis
+	fis fis8-^~ } fis8
+}
+
+Oboe_III_IV_Cues_mvmt_I_BI = \relative c'' {
+	\tag #'Score \NULL_I_BI
+	\tag #'Part {
+		\time 6/8
+		R2.
+		\time 2/8
+		R4*5
+		\mark #28
+		\tempo "Sempre agitato"
+		\time 6/8
+		R2.
+		\time 2/8
+		<<
+			\new CueVoice {
+				\voiceOne
+				r8 \tuplet 3/2 8 { r16_"I Ob." bes bes
+				cis-^[ bes r32 bes32] bes16 cis d
+				f-^[ d r32 des] des8 des16
+				d?-^ cis b cis-^ b bes
+				g bes8-^~ } bes8
+			}
+			\new Voice {
+				\voiceTwo
+				R4*5
+			}
+		>>
+	}
+}
+
+EnglishHorn_mvmt_I_BI = \transpose c' f \relative c' {
+	\time 6/8
+	R2.
+	\time 2/8
+	r8 \tuplet 3/2 8 { r16 f\mp f
+	f-^[ f r32 f32] f16 a a
+	a-^[ a r32 a32] a8 a16
+	a-^ a a f-^ f f
+	f f8-^~ } f8
+	\mark #28
+	\tempo "Sempre agitato"
+	\time 6/8
+	R2.
+	\time 2/8
+	r8 \tuplet 3/2 8 { r16 a\f a
+	a-^[ a r32 a] a16 cis cis
+	cis-^[ cis r32 cis] cis8 cis16
+	cis-^ cis cis a-^ a a
+	a a8-^~ } a8
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_I = { \NULL_I_AA \Oboe_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Oboe_I_mvmt_I_AE \Oboe_I_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Oboe_I_mvmt_I_AK \Oboe_I_mvmt_I_AL \Oboe_I_mvmt_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_I_mvmt_I_BA \NULL_I_BB \Oboe_I_mvmt_I_BC \Oboe_I_mvmt_I_BD \NULL_I_BE
-		\Oboe_I_mvmt_I_BF \Oboe_I_mvmt_I_BG \Oboe_I_mvmt_I_BH }
+		\Oboe_I_mvmt_I_BF \Oboe_I_mvmt_I_BG \Oboe_I_mvmt_I_BH \Oboe_I_mvmt_I_BI }
 Oboe_II_mvmt_I = { \NULL_I_AA \Oboe_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_II_mvmt_I_AF \Oboe_I_II_mvmt_I_AG
 		\Oboe_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_II_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_I_II_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_I_II_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Oboe_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_II_mvmt_I_BA \NULL_I_BB \Oboe_II_mvmt_I_BC \Oboe_II_mvmt_I_BD \NULL_I_BE
-		\Oboe_II_mvmt_I_BF \Oboe_II_mvmt_I_BG \Oboe_II_mvmt_I_BH }
+		\Oboe_II_mvmt_I_BF \Oboe_II_mvmt_I_BG \Oboe_II_mvmt_I_BH \Oboe_II_mvmt_I_BI }
 Oboe_III_mvmt_I = { \NULL_I_AA \Oboe_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_III_mvmt_I_AF \NULL_I_AG
 		\Oboe_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \Oboe_III_mvmt_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN
 		\Oboe_III_mvmt_I_AO \Oboe_all_mvmt_I_AP \Oboe_III_mvmt_I_AQ_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_III_mvmt_I_BC \Oboe_III_mvmt_I_BD
-		\NULL_I_BE \Oboe_III_mvmt_I_BF \Oboe_III_mvmt_I_BG \NULL_I_BH }
+		\NULL_I_BE \Oboe_III_mvmt_I_BF \Oboe_III_mvmt_I_BG \NULL_I_BH \Oboe_III_IV_Cues_mvmt_I_BI }
 Oboe_IV_mvmt_I = { \NULL_I_AA \Oboe_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Oboe_IV_mvmt_I_AF \NULL_I_AG \Oboe_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Oboe_all_mvmt_I_AN \Oboe_IV_mvmt_I_AO \Oboe_all_mvmt_I_AP \NULL_I_AQ
 		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Oboe_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ
 		\Oboe_III_IV_mvmt_I_BA \NULL_I_BB \Oboe_IV_mvmt_I_BC \Oboe_IV_mvmt_I_BD \NULL_I_BE \Oboe_IV_mvmt_I_BF \Oboe_IV_mvmt_I_BG
-		\NULL_I_BH }
+		\NULL_I_BH \Oboe_III_IV_Cues_mvmt_I_BI }
 EnglishHorn_mvmt_I = { \NULL_I_AA \EnglishHorn_mvmt_I_AB \NULL_I_AC \EnglishHorn_mvmt_I_AD_AE \EnglishHorn_mvmt_I_AF \NULL_I_AG
 		\EnglishHorn_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \EnglishHorn_mvmt_I_AM \EnglishHorn_mvmt_I_AN
 		\EnglishHorn_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\EnglishHorn_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \EnglishHorn_mvmt_I_BA \NULL_I_BB \EnglishHorn_mvmt_I_BC \NULL_I_BD \NULL_I_BE
-		\EnglishHorn_mvmt_I_BF \NULL_I_BG \EnglishHorn_mvmt_I_BH }
+		\EnglishHorn_mvmt_I_BF \NULL_I_BG \EnglishHorn_mvmt_I_BH \EnglishHorn_mvmt_I_BI }
