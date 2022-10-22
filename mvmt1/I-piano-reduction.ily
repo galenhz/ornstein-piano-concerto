@@ -2069,9 +2069,9 @@ redux_lower_I_BI = \relative c,, {
 	>>
 }
 
-%%% This is as far as I've gotten
+%%% Section BJ = mm. 265-271 (Rehersal 29)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_BJ = \relative c' {
 	% mm. 265-271 - Rehersal 29
 	\mark #29
 	\time 6/8
@@ -2105,6 +2105,47 @@ redux_upper_I_remain = \relative c' {
 			<a a'>8[ <bes bes'> <a a'>16 <g g'> <a a'>8]
 		}
 	>>
+}
+
+redux_dynamics_I_BJ = {
+	% mm. 265-271 - Rehersal 29
+	s2. s4. s4 s2. s2. s4. s2. s2. s4. s2
+}
+
+redux_lower_I_BJ = \relative c, {
+	% mm. 265-271 - Rehersal 29
+	\time 6/8
+	<a a'>2.
+	\time 5/8
+	<ees ees'>4.~ <ees ees'>4
+	\time 6/8
+	<a a'>2.
+	<<
+		\new Voice {
+			\voiceTwo
+			\time 9/8
+			<c, c'>2 <c' c'>4 <c, c'>4.~
+			\time 6/8
+			<c c'>8 <c' c'>4 <c, c'>4.~
+			\time 9/8
+			<c c'>8 <c' c'>4 <c, c'>2 <c' c'>4
+			\time 4/8
+			<c, c'>2
+		}
+		\new Voice {
+			% QUESTION: m. 270. Is the second hit a quarter note or half note? Missing a rest if quarter.
+			\voiceOne
+			r4 <fis'' bes d>2 r4 <fis bes d>8~
+			<fis bes d>4. r4 <fis bes d>8~
+			<fis bes d>4. r4 <fis bes d>4 r4
+			r4 <fis bes d>
+		}
+	>>
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 272-280 - Rehersal 30
 	\mark #30
 	\time 6/8
@@ -2237,8 +2278,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 265-271 - Rehersal 29
-	s2. s4. s4 s2. s2. s4. s2. s2. s4. s2
 	% mm. 272-280 - Rehersal 30
 	s2. s2 s2. s2 s2. s2 s2. s2 s2.
 	% mm. 281-284 - Rehersal 31
@@ -2251,35 +2290,7 @@ redux_dynamics_I_remain = {
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c, {
-	% mm. 265-271 - Rehersal 29
-	\time 6/8
-	<a a'>2.
-	\time 5/8
-	<ees ees'>4.~ <ees ees'>4
-	\time 6/8
-	<a a'>2.
-	<<
-		\new Voice {
-			\voiceTwo
-			\time 9/8
-			<c, c'>2 <c' c'>4 <c, c'>4.~
-			\time 6/8
-			<c c'>8 <c' c'>4 <c, c'>4.~
-			\time 9/8
-			<c c'>8 <c' c'>4 <c, c'>2 <c' c'>4
-			\time 4/8
-			<c, c'>2
-		}
-		\new Voice {
-			% QUESTION: m. 270. Is the second hit a quarter note or half note? Missing a rest if quarter.
-			\voiceOne
-			r4 <fis'' bes d>2 r4 <fis bes d>8~
-			<fis bes d>4. r4 <fis bes d>8~
-			<fis bes d>4. r4 <fis bes d>4 r4
-			r4 <fis bes d>
-		}
-	>>
+redux_lower_I_remain = \relative c {
 	% mm. 272-280 - Rehersal 30
 	<<
 		\new Voice {
@@ -2466,7 +2477,8 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AM \redux_upper_I_AN \redux_upper_I_AO \redux_upper_I_AP \redux_upper_I_AQ \redux_upper_I_AR
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
 		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
-		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_BI \redux_upper_I_remain }
+		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_BI \redux_upper_I_BJ
+		\redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
@@ -2474,10 +2486,11 @@ redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamic
 		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_AY
 		\redux_dynamics_I_AZ \redux_dynamics_I_BA \redux_dynamics_I_BB \redux_dynamics_I_BC \redux_dynamics_I_BD
 		\redux_dynamics_I_BE \redux_dynamics_I_BF \redux_dynamics_I_BG \redux_dynamics_I_BH \redux_dynamics_I_BI
-		\redux_dynamics_I_remain }
+		\redux_dynamics_I_BJ \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
 		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
 		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_BA \redux_lower_I_BB \redux_lower_I_BC \redux_lower_I_BD
-		\redux_lower_I_BE \redux_lower_I_BF \redux_lower_I_BG \redux_lower_I_BH \redux_lower_I_BI \redux_lower_I_remain }
+		\redux_lower_I_BE \redux_lower_I_BF \redux_lower_I_BG \redux_lower_I_BH \redux_lower_I_BI \redux_lower_I_BJ
+		\redux_lower_I_remain }

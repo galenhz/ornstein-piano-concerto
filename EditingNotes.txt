@@ -579,6 +579,10 @@ The more I work, the more I think I'm going to have to end up compromising by pu
 in some of the more beter pencil stuff, just to have something there. #DYNAMICS #UNDECIDED
 (I-orch-*)
 
+m. 270: Solo piano has f natural in beat 8 of the right hand in PR, but score says f#,
+and the repetition of the pattern points to f#. Corrected.
+(I-solo-piano)
+
 m. 272: Solo piano in PR has whole note opening in bass...in a 6/8 bar. Same in score.
 It could be code for "let this ring as long as feasable rather than just cut off at the
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.

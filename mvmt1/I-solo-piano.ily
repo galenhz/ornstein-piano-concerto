@@ -2151,9 +2151,9 @@ solo_lower_I_BI = \relative c, {
 	\repeat unfold 16 { \tuplet 5/4 { c32[ fis c' fis, \beamCutR c' } \tuplet 5/4 { \beamCutL fis c fis, c' fis,] } }
 }
 
-%%% This is as far as I've gotten
+%%% Section BJ = mm. 265-271 (Rehersal 29)
 
-solo_upper_I_remain = \relative c'' {
+solo_upper_I_BJ = \relative c'' {
 	% mm. 265-271 - Rehersal 29
 	\mark #29
 	\time 6/8
@@ -2173,16 +2173,65 @@ solo_upper_I_remain = \relative c'' {
 	\time 6/8
 	<d fis bes>16[ \beamCutR <d fis g> \beamCutL <d fis bes> <d fis b> <d fis cis'>8] <d fis e'>[ <d fis d'>16 <d fis cis'> <d fis b>8]
 	\time 9/8
-	% QUESTION: PR has f natural on the 8th beat of this measure. Pretty sure repition from last measture shows it should be f#.
+	% EDIT: PR has f natural on the 8th beat of this measure. Score says f#. Repitition from last measure point towards score.
 	<d fis bes>16[ \beamCutR <d fis g> \beamCutL <d fis bes> <d fis b> <d fis cis'>8. <d fis cis'>16]
 		<d fis e'>8[ <d fis d'>16 \beamCutR <d fis cis'> \beamCutL <d fis d'> <d fis cis'> <d fis b>8 <d fis cis'>16 <d fis b>]
 	\time 4/8
 	<d fis bes> \beamCutR <d fis g> \beamCutL <d fis bes> <d fis b> <d fis cis'>8 <d fis e'>16 <d fis cis'>
+}
+
+solo_dynamics_I_BJ = {
+	% mm. 265-271 - Rehersal 29
+	s2. s4.-\markup { \dynamic f } s4 s2. s2.-\markup { \dynamic fff } s4. s2. s2. s4. s2
+}
+
+solo_lower_I_BJ = \relative c, {
+	% mm. 265-271 - Rehersal 29
+	\repeat unfold 3 { \tuplet 5/4 { ees32[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
+	\time 5/8
+	\repeat unfold 2 { \tuplet 5/4 { a,32[ ees' a ees \beamCutR a } \tuplet 5/4 { \beamCutL ees' a, ees a ees] } }
+		\tuplet 5/4 { a,[ ees' a ees a] }
+	\time 6/8
+	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
+	\time 9/8
+	\override Staff.Beam.breakable = ##t
+	% Fixed: Beam breakability has to be set at staff level, and I can't just repeat roughshod over barlines.
+	<<
+		\new Voice {
+			\voiceOne
+			r16 <fis, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
+				r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] r16 <fis,, fis'>[ |
+			\time 6/8
+			<a a'> <bes bes'> r8 <d' fis bes c d>] r16 <fis,, fis'>[ <a a'> <bes bes'> r8 |
+			\time 9/8
+			<d' fis bes c d>] r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
+				r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] |
+			\time 4/8
+			r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
+		}
+		\new Voice {
+			\voiceTwo
+			r4 <c,, c'>4 r <c c'> r8 |
+			\time 6/8
+			r8 <c c'>4 r4  <c c'>8~ |
+			\time 9/8
+			<c c'>8 r4 <c c'> r <c c'> |
+			\time 4/8
+			r4 <c c'>4
+		}
+	>>
+	%\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> <c, c'>8 <d'' fis bes c d>] }
+	\revert Staff.Beam.breakable
+}
+
+%%% This is as far as I've gotten
+
+solo_upper_I_remain = \relative c''' {
 	% mm. 272-280 - Rehersal 30
 	\mark #30
 	\time 6/8
 	\repeat unfold 11 {
-		\tuplet 3/2 { <d' fis>16[ \change Staff = "solo_lower"  \clef treble <g, cis> <g cis>] }
+		\tuplet 3/2 { <d fis>16[ \change Staff = "solo_lower"  \clef treble <g, cis> <g cis>] }
 		\tuplet 3/2 { \change Staff = "solo_upper" <d' f>[ \change Staff = "solo_lower" <g, cis> <g cis>] }
 		\tuplet 3/2 { \change Staff = "solo_upper" <d' e>[ \change Staff = "solo_lower" <g, cis> <g cis>] }
 		\tuplet 3/2 { \change Staff = "solo_upper" <d' ees>[ \change Staff = "solo_lower" <g, cis> <g cis>] } \change Staff = "solo_upper"
@@ -2424,8 +2473,6 @@ solo_upper_I_remain = \relative c'' {
 }
 
 solo_dynamics_I_remain = {
-	% mm. 265-271 - Rehersal 29
-	s2. s4.-\markup { \dynamic f } s4 s2. s2.-\markup { \dynamic fff } s4. s2. s2. s4. s2
 	% mm. 272-280 - Rehersal 30
 	s2. s2 s2. s2 s2. s2 s2. s2 s2.
 	% mm. 281-284 - Rehersal 31
@@ -2450,43 +2497,7 @@ solo_dynamics_I_remain = {
 	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c, {
-	% mm. 265-271 - Rehersal 29
-	\repeat unfold 3 { \tuplet 5/4 { ees32[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
-	\time 5/8
-	\repeat unfold 2 { \tuplet 5/4 { a,32[ ees' a ees \beamCutR a } \tuplet 5/4 { \beamCutL ees' a, ees a ees] } }
-		\tuplet 5/4 { a,[ ees' a ees a] }
-	\time 6/8
-	\repeat unfold 3 { \tuplet 5/4 { ees[ a ees' a, \beamCutR ees'  } \tuplet 5/4 { \beamCutL a ees a, ees' a,] } }
-	\time 9/8
-	\override Staff.Beam.breakable = ##t
-	% Fixed: Beam breakability has to be set at staff level, and I can't just repeat roughshod over barlines.
-	<<
-		\new Voice {
-			\voiceOne
-			r16 <fis, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
-				r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] r16 <fis,, fis'>[ |
-			\time 6/8
-			<a a'> <bes bes'> r8 <d' fis bes c d>] r16 <fis,, fis'>[ <a a'> <bes bes'> r8 |
-			\time 9/8
-			<d' fis bes c d>] r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
-				r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>] |
-			\time 4/8
-			r16 <fis,, fis'>[ <a a'> <bes bes'> r8 <d' fis bes c d>]
-		}
-		\new Voice {
-			\voiceTwo
-			r4 <c,, c'>4 r <c c'> r8 |
-			\time 6/8
-			r8 <c c'>4 r4  <c c'>8~ |
-			\time 9/8
-			<c c'>8 r4 <c c'> r <c c'> |
-			\time 4/8
-			r4 <c c'>4
-		}
-	>>
-	%\repeat unfold 7 { r16 <fis, fis'>[ <a a'> <bes bes'> <c, c'>8 <d'' fis bes c d>] }
-	\revert Staff.Beam.breakable
+solo_lower_I_remain = \relative c,, {
 	% mm. 272-280 - Rehersal 30
 	\time 6/8
 	\stemDown <ees ees'>2. \stemNeutral
@@ -2635,7 +2646,8 @@ solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upp
 		\solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL \solo_upper_I_AM \solo_upper_I_AN
 		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV
 		\solo_upper_I_AW \solo_upper_I_AX \solo_upper_I_AY \solo_upper_I_AZ \solo_upper_I_BA \solo_upper_I_BB \solo_upper_I_BC
-		\solo_upper_I_BD \solo_upper_I_BE \solo_upper_I_BF \solo_upper_I_BG \solo_upper_I_BH \solo_upper_I_BI \solo_upper_I_remain }
+		\solo_upper_I_BD \solo_upper_I_BE \solo_upper_I_BF \solo_upper_I_BG \solo_upper_I_BH \solo_upper_I_BI \solo_upper_I_BJ
+		\solo_upper_I_remain }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
 		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS
@@ -2648,7 +2660,7 @@ solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
 		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_AW \solo_dynamics_I_AX \solo_dynamics_I_AY
 		\solo_dynamics_I_AZ \solo_dynamics_I_BA \solo_dynamics_I_BB \solo_dynamics_I_BC \solo_dynamics_I_BD \solo_dynamics_I_BE
-		\solo_dynamics_I_BF \solo_dynamics_I_BG \solo_dynamics_I_BH \solo_dynamics_I_BI \solo_dynamics_I_remain }
+		\solo_dynamics_I_BF \solo_dynamics_I_BG \solo_dynamics_I_BH \solo_dynamics_I_BI \solo_dynamics_I_BJ \solo_dynamics_I_remain }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
@@ -2660,7 +2672,8 @@ solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_low
 		\solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL \solo_lower_I_AM \solo_lower_I_AN
 		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV
 		\solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_AY \solo_lower_I_AZ \solo_lower_I_BA \solo_lower_I_BB \solo_lower_I_BC
-		\solo_lower_I_BD \solo_lower_I_BE \solo_lower_I_BF \solo_lower_I_BG \solo_lower_I_BH \solo_lower_I_BI \solo_lower_I_remain }
+		\solo_lower_I_BD \solo_lower_I_BE \solo_lower_I_BF \solo_lower_I_BG \solo_lower_I_BH \solo_lower_I_BI \solo_lower_I_BJ
+		\solo_lower_I_remain }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
 		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS
