@@ -650,10 +650,33 @@ Horn_IV_mvmt_I_AR = \transpose c' f \relative c' {
 %%% Tacet
 
 %%% Section AU = mm. 155-164 (Rehersal 16)
-%%% Tacet
+%%% Cues only
 
-%% Cues only
-Horn_I_mvmt_I_AU = \transpose c' f \relative c'' {
+Horn_I_cues_mvmt_I_AU = \transpose c' f \relative c' {
+	\mark #16
+	\tempo "Andantino"
+	\time 2/4
+	\tag #'Score R2*10
+	\tag #'Part <<
+		\new CueVoice {
+			fis2~^"I Cl."
+			fis8. fis32 fis \tuplet 3/2 { gis8( fis dis }
+			fis4) fis4~
+			fis8[ dis( fis gis]
+			a2)~
+			\tuplet 3/2 4 { a8( gis fis gis fis f }
+			fis4) fis~
+			fis8. d16 \tuplet 3/2 { d8( f gis }
+			fis2)~
+			fis2
+		}
+		\new Voice {
+			\voiceTwo
+			\override MultiMeasureRest.staff-position = #-10
+			R2*10
+			\revert MultiMeasureRest.staff-position
+		}
+	>>
 }
 
 %%% Section AV = mm. 165-169
@@ -703,7 +726,7 @@ Horn_I_mvmt_I_AW = \transpose c' f \relative c'' {
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r8 fis[-.\f g-. gis-. a]-. r8 fis[-.
 	\time 6/8
 	g-. gis-. a]-. r8 fis[-. g-.
@@ -713,14 +736,14 @@ Horn_I_mvmt_I_AW = \transpose c' f \relative c'' {
 	g-. gis-. a]-. r8 fis[-. g-. gis-.
 	\time 3/8
 	a]-. r8 r8
-	\revert Beam.breakable
+	\revert Staff.Beam.breakable
 }
 
 Horn_II_mvmt_I_AW = \transpose c' f \relative c'' {
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r8 b-.[\f b-. b-. b-.] r8 b-.[
 	\time 6/8
 	b-. b-. b-.] r8 b-.[ b-.
@@ -730,13 +753,14 @@ Horn_II_mvmt_I_AW = \transpose c' f \relative c'' {
 	b-. b-. b-.] r8 b-.[ b-. b-.
 	\time 3/8
 	b-.] r8 r8
+	\revert Staff.Beam.breakable
 }
 
 Horn_III_mvmt_I_AW = \transpose c' f \relative c' {
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r8 d-.[\f d-. d-. d-.] r8 d-.[
 	\time 6/8
 	d-. d-. d-.] r8 d-.[ d-.
@@ -746,13 +770,14 @@ Horn_III_mvmt_I_AW = \transpose c' f \relative c' {
 	d-. d-. d-.] r8 d-.[ d-. d-.
 	\time 3/8
 	d-.] r8 r8
+	\revert Staff.Beam.breakable
 }
 
 Horn_IV_mvmt_I_AW = \transpose c' f \relative c' {
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r8 b-.[\f b-. b-. b-.] r8 b-.[
 	\time 6/8
 	b-. b-. b-.] r8 b-.[ b-.
@@ -762,13 +787,14 @@ Horn_IV_mvmt_I_AW = \transpose c' f \relative c' {
 	b-. b-. b-.] r8 b-.[ b-. b-.
 	\time 3/8
 	b-.] r8 r8
+	\revert Staff.Beam.breakable
 }
 
 Horn_V_mvmt_I_AW = \transpose c' f \relative c'' {
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r8 d-.[\f d-. d-. d-.] r8 d-.[
 	\time 6/8
 	d-. d-. d-.] r8 d-.[ d-.
@@ -778,13 +804,14 @@ Horn_V_mvmt_I_AW = \transpose c' f \relative c'' {
 	d-. d-. d-.] r8 d-.[ d-. d-.
 	\time 3/8
 	d-.] r8 r8
+	\revert Staff.Beam.breakable
 }
 
 Horn_VI_mvmt_I_AW = \transpose c' f \relative c' {
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r8 fis-.[\f g-. gis-. a-.] r8 fis-.[
 	\time 6/8
 	g-. gis-. a]-. r8 fis[-. g-.
@@ -794,7 +821,7 @@ Horn_VI_mvmt_I_AW = \transpose c' f \relative c' {
 	g-. gis-. a]-. r8 fis[-. g-. gis-.
 	\time 3/8
 	a]-. r8 r8
-	\revert Beam.breakable
+	\revert Staff.Beam.breakable
 }
 
 % And horn VII appears at last!
@@ -802,7 +829,7 @@ Horn_VII_mvmt_I_AW = \transpose c' f \relative c {
 	\mark #17
 	\tempo "Allegro - con forza e marcato"
 	\time 7/8
-	\override Beam.breakable = ##t
+	\override Staff.Beam.breakable = ##t
 	r8 fis-.[\f g-. gis-. a-.] r8 fis-.[
 	\time 6/8
 	g-. gis-. a]-. r8 fis[-. g-.
@@ -812,7 +839,7 @@ Horn_VII_mvmt_I_AW = \transpose c' f \relative c {
 	g-. gis-. a]-. r8 fis[-. g-. gis-.
 	\time 3/8
 	a]-. r8 r8
-	\revert Beam.breakable
+	\revert Staff.Beam.breakable
 }
 
 %%% Section AX = mm. 175-181
@@ -1387,7 +1414,7 @@ Horn_III_mvmt_I_BJ = \transpose c' f \relative c' {
 
 Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_I_mvmt_I_AL \Horn_I_mvmt_I_AM \NULL_I_AN \Horn_I_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_I_mvmt_I_AR \NULL_I_AS
-		\NULL_I_AT \NULL_I_AU \Horn_I_mvmt_I_AV \Horn_I_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_I_mvmt_I_BA
+		\NULL_I_AT \Horn_I_cues_mvmt_I_AU \Horn_I_mvmt_I_AV \Horn_I_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_I_mvmt_I_BA
 		\NULL_I_BB \Horn_I_mvmt_I_BC \Horn_I_mvmt_I_BD \Horn_I_mvmt_I_BE \Horn_I_mvmt_I_BF \Horn_I_mvmt_I_BG \Horn_I_mvmt_I_BH \Horn_I_mvmt_I_BI
 		\Horn_I_mvmt_I_BJ }
 Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
