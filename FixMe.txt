@@ -84,3 +84,6 @@ m. 268-271: Bassoon III/IV slurs should go up farther, possibly in score, defini
 
 m. 270: The part combine on Trumpets I/II and III/IV in the score breaks the second set of barred
 notes for some reason. Parts look fine.
+
+m. 281-290: Solo piano is suffering multiple problems. Dynamic mark smushed, tuplet numbers not in
+good places.

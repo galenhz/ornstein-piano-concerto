@@ -2097,12 +2097,12 @@ redux_upper_I_BJ = \relative c' {
 			\voiceTwo
 			<fis, fis'>8[ <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'>] <fis fis'>[ <ees ees'>
 			\time 6/8
-			% FIXME: Have to break barring here because the following 9/8 is being run right off the page. See solo piano lower comment. Can revert to sanity when bug is fixed.
-			<fis fis'>16 <g g'> <a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8] <ees ees'>
+			% Fixed: Staff beam breakable fix in solo piano works here too.
+			<fis fis'>16 <g g'> <a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8] <ees ees'>[
 			\time 9/8
-			<fis fis'> <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'> <fis fis'>16[ \beamCutR <ees ees'> \beamCutL <fis fis'> <g g'>]
+			<fis fis'> <g g'> <a a'> <bes bes'> <a a'>16 <g g'> <a a'>8 <g g'>] <fis fis'>16[ \beamCutR <ees ees'> \beamCutL <fis fis'> <g g'>
 			\time 4/8
-			<a a'>8[ <bes bes'> <a a'>16 <g g'> <a a'>8]
+			<a a'>8 <bes bes'> <a a'>16 <g g'> <a a'>8]
 		}
 	>>
 }
@@ -2133,19 +2133,18 @@ redux_lower_I_BJ = \relative c, {
 			<c, c'>2
 		}
 		\new Voice {
-			% QUESTION: m. 270. Is the second hit a quarter note or half note? Missing a rest if quarter.
 			\voiceOne
 			r4 <fis'' bes d>2 r4 <fis bes d>8~
 			<fis bes d>4. r4 <fis bes d>8~
-			<fis bes d>4. r4 <fis bes d>4 r4
+			<fis bes d>4. r4 <fis bes d>2
 			r4 <fis bes d>
 		}
 	>>
 }
 
-%%% This is as far as I've gotten
+%%% Section BK = mm. 272-280 (Rehersal 30)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_BK = \relative c' {
 	% mm. 272-280 - Rehersal 30
 	\mark #30
 	\time 6/8
@@ -2167,11 +2166,50 @@ redux_upper_I_remain = \relative c' {
 	\time 6/8
 	r8 fis[ a g16 \beamCutR fis \beamCutL g fis ees8]
 	\revert Staff.Beam.breakable
+}
+
+redux_dynamics_I_BK = {
+	% mm. 272-280 - Rehersal 30
+	s2. s2 s2. s2 s2. s2 s2. s2 s2.
+}
+
+redux_lower_I_BK = \relative c {
+	% mm. 272-280 - Rehersal 30
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 {
+				\time 6/8
+				r8 ees[ a ees bes'16 a ees8]
+				\time 4/8
+				r16 ees[ \beamCutL a \beamCutR ees \beamCutL bes' a ees8]
+			}
+			\time 6/8
+			r8 ees[ a ees bes'16 a ees8]
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 4 {
+				\time 6/8
+				<a,, a'>2.
+				\time 4/8
+				<ees ees'>2
+			}
+			\time 6/8
+			<a a'>2.
+		}
+	>>
+}
+
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c''' {
 	% mm. 281-284 - Rehersal 31
 	\time 4/4
 	\mark #31
 	\tempo "Doppio Lento"
-	\repeat unfold 4 { <a' cis>16 <d, g> <a' c> <d, g> <a' b> <d, g> <a' bes> <d, g> }
+	\repeat unfold 4 { <a cis>16 <d, g> <a' c> <d, g> <a' b> <d, g> <a' bes> <d, g> }
 	\repeat unfold 2 { <d' fis> <g, cis> <d' f> <g, cis> <d' e> <g, cis> <d' ees> <g, cis> }
 	\repeat unfold 2 { <a cis> <ees g> <a c> <ees g> <a b> <ees g> <a bes> <ees g> }
 	% mm. 285-290 - Rehersal 32
@@ -2278,8 +2316,6 @@ redux_upper_I_remain = \relative c' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 272-280 - Rehersal 30
-	s2. s2 s2. s2 s2. s2 s2. s2 s2.
 	% mm. 281-284 - Rehersal 31
 	s1*4
 	% mm. 285-290 - Rehersal 32
@@ -2291,37 +2327,12 @@ redux_dynamics_I_remain = {
 }
 
 redux_lower_I_remain = \relative c {
-	% mm. 272-280 - Rehersal 30
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 4 {
-				\time 6/8
-				r8 ees[ a ees bes'16 a ees8]
-				\time 4/8
-				r16 ees[ \beamCutL a \beamCutR ees \beamCutL bes' a ees8]
-			}
-			\time 6/8
-			r8 ees[ a ees bes'16 a ees8]
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 4 {
-				\time 6/8
-				<a,, a'>2.
-				\time 4/8
-				<ees ees'>2
-			}
-			\time 6/8
-			<a a'>2.
-		}
-	>>
 	% mm. 281-284 - Rehersal 31
 	\time 4/4
 	<<
 		\new Voice {
 			\voiceOne
-			r4 <ees'' bes' ees>8~ <fis bes fis'> <g g'>4 <g g'>
+			r4 <ees bes' ees>8~ <fis bes fis'> <g g'>4 <g g'>
 			r8 <fis cis' fis>8~ <a cis a'>2.
 			r8 <g bes g'> <cis d cis'> <bes bes'> <bes bes'>4 <g g'>
 			\tuplet 3/2 { r8 <g g'> <a a'> } <a a'>2.
@@ -2478,7 +2489,7 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
 		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
 		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_BI \redux_upper_I_BJ
-		\redux_upper_I_remain }
+		\redux_upper_I_BK \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
@@ -2486,11 +2497,11 @@ redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamic
 		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_AY
 		\redux_dynamics_I_AZ \redux_dynamics_I_BA \redux_dynamics_I_BB \redux_dynamics_I_BC \redux_dynamics_I_BD
 		\redux_dynamics_I_BE \redux_dynamics_I_BF \redux_dynamics_I_BG \redux_dynamics_I_BH \redux_dynamics_I_BI
-		\redux_dynamics_I_BJ \redux_dynamics_I_remain }
+		\redux_dynamics_I_BJ \redux_dynamics_I_BK \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
 		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
 		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_BA \redux_lower_I_BB \redux_lower_I_BC \redux_lower_I_BD
 		\redux_lower_I_BE \redux_lower_I_BF \redux_lower_I_BG \redux_lower_I_BH \redux_lower_I_BI \redux_lower_I_BJ
-		\redux_lower_I_remain }
+		\redux_lower_I_BK \redux_lower_I_remain }
