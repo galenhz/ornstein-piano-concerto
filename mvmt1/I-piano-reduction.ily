@@ -1653,7 +1653,6 @@ redux_upper_I_BD = \relative c''' {
 	\time 3/4
 	\tempo "Poco più Lento"
 	\mark #23
-	%% FIXME: Lilypond misplacing 8th rests in bars 217 and 219
 	<<
 		\new Voice {
 			\voiceOne
@@ -1663,7 +1662,8 @@ redux_upper_I_BD = \relative c''' {
 		\new Voice {
 			\repeat unfold 2 {
 				\change Staff = "redux_lower" <ees,,, g a ces>8 \change Staff = "redux_upper" <g' b ces e> r <g b ces ees>[ r <g b ces ees>]
-				\change Staff = "redux_lower" <g,, d' bes'> \change Staff = "redux_upper" <d'' fis a bes d> r <d fis a bes d>[ r <d fis a bes d>]
+				\change Staff = "redux_lower" <g,, d' bes'> \change Staff = "redux_upper" <d'' fis a bes d>
+					\stemDown b'\rest <d, fis a bes d>[ b'\rest <d, fis a bes d>] \stemNeutral
 			}
 		}
 	>>
@@ -1679,11 +1679,11 @@ redux_upper_I_BD = \relative c''' {
 		}
 		\new Voice {
 			\voiceTwo
-			\change Staff = "redux_lower" <a,,,,, bes'>8 \change Staff = "redux_upper" <d'' fis a bes d> r <d fis a bes d>[ r <d fis a bes d>]
-			\change Staff = "redux_lower" <f,, cis' f>8 \change Staff = "redux_upper" <a'' cis e gis> r <a cis e gis>[ r <a cis e gis>]
-			\change Staff = "redux_lower" <a,,, bes'>8 \change Staff = "redux_upper" <d'' fis a bes d> r <d fis a bes d>[ r <d fis a bes d>]
+			\change Staff = "redux_lower" <a,,,,, bes'>8 \change Staff = "redux_upper" <d'' fis a bes d> b'\rest <d, fis a bes d>[ b'\rest <d, fis a bes d>]
+			\change Staff = "redux_lower" <f,, cis' f>8 \change Staff = "redux_upper" <a'' cis e gis> b\rest <a cis e gis>[ b\rest <a cis e gis>]
+			\change Staff = "redux_lower" <a,,, bes'>8 \change Staff = "redux_upper" <d'' fis a bes d> b'\rest <d, fis a bes d>[ b'\rest <d, fis a bes d>]
 			\time 2/4
-			\change Staff = "redux_lower" <f,, cis' f>8 \change Staff = "redux_upper" <f'' a cis e f> r <f a cis e f>
+			\change Staff = "redux_lower" <f,, cis' f>8 \change Staff = "redux_upper" <f'' a cis e f> b\rest <f a cis e f>
 		}
 	>>
 	\ottava #1
