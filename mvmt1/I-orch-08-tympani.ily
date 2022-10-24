@@ -451,15 +451,55 @@ Tympani_II_mvmt_I_BI = \relative c {
 	\repeat unfold 5 { c'4:32 }
 }
 
+%%% Section BJ = mm. 265-271 (Rehersal 29)
+
+Tympani_I_mvmt_I_BJ = \relative c {
+	\mark #29
+	\time 6/8
+	a2.:32\mf
+	\time 5/8
+	ees'4.:32 ees4:32
+	\time 6/8
+	a,2.:32
+	\time 9/8
+	R1*9/8
+	\time 6/8
+	R2.
+	\time 9/8
+	R1*9/8
+	\time 4/8
+	R2
+}
+
+Tympani_II_mvmt_I_BJ = \relative c, {
+	\mark #29
+	\time 6/8
+	R2.
+	\time 5/8
+	R1*5/8
+	\time 6/8
+	R2.
+	\time 9/8
+	\override Staff.Beam.breakable = ##t
+	r16\f fis[ fis fis] c'8\sfz r8 r16 fis,[ fis fis] c'8\sfz r8 r16 fis,[
+	\time 6/8
+	fis fis] c'8\sfz r8 r16 fis,[ fis fis] c'8\sfz
+	\time 9/8
+	r8 r16 fis,[ fis fis] c'8\sfz r8 r16 fis,[ fis fis] c'8\sfz r8
+	\time 4/8
+	r16 fis,[ fis fis] c'8\sfz r8
+	\revert Staff.Beam.breakable
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
 		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN \Tympani_I_mvmt_I_AO
 		\NULL_I_AP \NULL_I_AQ \Tympani_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Tympani_I_mvmt_I_AX \NULL_I_AY
 		\NULL_I_AZ \Tympani_I_mvmt_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \Tympani_I_mvmt_I_BF \Tympani_I_mvmt_I_BG
-		\Tympani_I_mvmt_I_BH \NULL_I_BI }
+		\Tympani_I_mvmt_I_BH \NULL_I_BI \Tympani_I_mvmt_I_BJ }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
 		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN
 		\Tympani_II_mvmt_I_AO \Tympani_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Tympani_II_mvmt_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \Tympani_II_mvmt_I_BG
-		\Tympani_II_mvmt_I_BH \Tympani_II_mvmt_I_BI }
+		\Tympani_II_mvmt_I_BH \Tympani_II_mvmt_I_BI \Tympani_II_mvmt_I_BJ }

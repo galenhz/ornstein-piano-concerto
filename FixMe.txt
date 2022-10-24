@@ -79,3 +79,8 @@ side from the slur?
 
 m. 244-247: Piano reduction creates what should be the middle staff at the bottom. Need to figure
 out if I can force placement; if not, may have to move the bass line to the new staff instead.
+
+m. 268-271: Bassoon III/IV slurs should go up farther, possibly in score, definitely in parts.
+
+m. 270: The part combine on Trumpets I/II and III/IV in the score breaks the second set of barred
+notes for some reason. Parts look fine.
