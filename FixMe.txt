@@ -62,6 +62,8 @@ to force it to open up. Score too.
 m. 224-225: Clarinets I and II combine badly in the score. Need to figure out a way to bring that
 r32 into line.
 
+m. 226-232: In piano reduction, tweak the ties so they don't clutter things up.
+
 m. 233: Trying to use LV as a cheat rather than tie across voices in PR, but tweak is not working.
 
 m. 233-235: In solo piano, lilypond strugges with tuplet bracket placing. Needs hand-tuning.
@@ -84,6 +86,8 @@ m. 268-271: Bassoon III/IV slurs should go up farther, possibly in score, defini
 
 m. 270: The part combine on Trumpets I/II and III/IV in the score breaks the second set of barred
 notes for some reason. Parts look fine.
+
+m. 272-280: Part combiner not producing great results for Trombone III/Tuba.
 
 m. 281-290: Solo piano is suffering multiple problems. Dynamic mark smushed, tuplet numbers not in
 good places.

@@ -786,21 +786,47 @@ Trumpet_IV_mvmt_I_BJ = \relative c'' {
 	fis[ \beamCutR fis \beamCutL fis fis fis8 fis16 fis]
 }
 
+%%% Section BK = mm. 272-280 (Rehersal 30)
+
+Trumpet_III_IV_mvmt_I_BK = \relative c' {
+	\mark #30
+	\time 6/8
+	\override Staff.Beam.breakable = ##t
+	r8_\markup { \dynamic ff \italic "molto marcato" } ees[ fis g a8.-^ a16]
+	\time 4/8
+	c8-^[ bes16( \beamCutR a) \beamCutL bes( a) g8-^
+	\time 6/8
+	a16( \beamCutR g) \beamCutL fis-^( \beamCutR ees) \beamCutL fis( g) a8-^ c-^ bes16( a)
+	\time 4/8
+	g8]-^ r8 ees[ fis
+	\time 6/8
+	g a8.-^ a16] c8-^[ bes16( \beamCutR a) \beamCutL bes( a)
+	\time 4/8
+	g8-^ a16( \beamCutR g) \beamCutL fis-^( \beamCutR ees) \beamCutL fis( g)
+	\time 6/8
+	a8-^ c-^ bes16( a) g8]-^ r4
+	\time 4/8
+	R2
+	\time 6/8
+	R2.
+}
+
 %%% Final assembly
 
 Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG \Trumpet_I_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_I_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT
 		\NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_I_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_I_mvmt_I_BC \Trumpet_I_mvmt_I_BD
-		\NULL_I_BE \NULL_I_BF \Trumpet_I_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_I_mvmt_I_BJ }
+		\NULL_I_BE \NULL_I_BF \Trumpet_I_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_I_mvmt_I_BJ \NULL_I_BK }
 Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG \Trumpet_II_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_II_III_cues_mvmt_I_BC
-		\NULL_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_II_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_II_mvmt_I_BJ }
+		\NULL_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_II_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_II_mvmt_I_BJ \NULL_I_BK }
 Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG \Trumpet_III_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_II_III_cues_mvmt_I_BC
-		\Trumpet_III_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_III_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_III_mvmt_I_BJ }
+		\Trumpet_III_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_III_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_III_mvmt_I_BJ
+		\Trumpet_III_IV_mvmt_I_BK }
 Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG \Trumpet_IV_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_IV_mvmt_I_BC
-		\Trumpet_IV_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_IV_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_IV_mvmt_I_BJ }
+		\Trumpet_IV_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_IV_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_IV_mvmt_I_BJ \Trumpet_III_IV_mvmt_I_BK }

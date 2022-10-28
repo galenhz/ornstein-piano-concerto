@@ -516,7 +516,7 @@ orchestra piano is in 6/8 along with the solo, but since they're playing a rhyth
 3/4 pattern, it makes sense for them to match the full score.
 (I-piano-reduction)
 
-m. 226-232: The solo horn part (and it's transcription in the orchestra reduction) is
+m. 226-232: The solo horn part (and its transcription in the orchestra reduction) is
 written in an odd way; a dotted quarter tied to an eighth note, as though the part was
 in 6/8...even though it's clearly in 3/4 like the rest of the orchestra. It might make
 more sense to change this to a half note, to fit the 3/4 beat pattern. I wonder if this
@@ -590,3 +590,46 @@ It could be code for "let this ring as long as feasable rather than just cut off
 bar line." Making it a dotted half to fit the bar, but this might be worth reverting.
 #UNDECIDED
 (I-solo-piano)
+
+m. 272-280: Just as a note, this entire section started life as three bars: 2 17/8
+bars and a 6/8 bar. This is still reflected in the parts and score, which were scribbled
+with corrections.
+
+m. 272-280: The parts for the main orchestral melodic line have accents which aren't
+in the score, but I believe they are worth including, like the ones in 253-264. The
+patterns do not always line up within the parts. Here is the melodic pattern,
+and how various parts accent it.
+
+X = scratched out in part, () = clearly written by performer not copyist
+Melody:    r8 eis fis g a8. a16 | c8 bes16 a bes a g8 | a16 g fis ees fis g a8 c bes16 a | g
+Oboe 3/4:               ^       | ^                ^  |                     ^  ^
+Horn 1/2:               ^       | ^                X  |       ^             ^  ^ (^)       ^
+Horn 3/4:               ^       | ^                ^  |       ^             ^  ^           ^
+Tpt 3/4:                ^       | ^                ^  |       ^             ^  ^           ^
+
+The "consensus" version would look like this:
+
+Consensus:              ^         ^                ^          ^             ^  ^           ^
+
+Also, slurs. Unlike the accents, these are pencilled into the score. Quick comparison chart here:
+
+S = Score only, P = Part only, nothing = both, X = in score but scratched out in part
+Melody:    r8 eis fis g a8. a16 | c8 bes16 a bes a g8 | a16 g fis ees fis g a8 c bes16 a | g
+Oboe 3/4:                             S(   ) S(  )      S(  ) S(   )  S(  )        S(  )
+Horn 1/2:     P(   )    X(   )        X(   ) X(  )      X(  ) X(   )  X(  )        X(  )
+Horn 3/4:     P(   )     (   )         (   )  (  )      S(  ) S(   )  S(  )        S(  )
+Tpt 3/4:      P(   )    S(   )        X(   ) X(  )      X(  ) X(   )  X(  )        X(  )
+
+Audio:                                 (   )  (  )       (  )  (   )   (  )         (  )
+
+"Audio" represents what I seem to be hearing on the recording. For now, I'm going with that.
+#UNDECIDED
+(I-orch-*)
+
+m. 272-280: Beam the Violin I and II parts more like the score. Violin II is written out in
+score throughout, part switches quickly to tremolo. Going full tremolo, like Violin I.
+(I-orch-09-violins-viola)
+
+m. 279: Horns V/VI beamed slightly differently in part than in score. Trombone parts match score.
+Adjusting horns.
+(I-orch-06-horns)

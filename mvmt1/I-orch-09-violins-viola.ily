@@ -1940,7 +1940,7 @@ Violin_I_mvmt_I_BJ = \relative c'' {
 	\time 9/8
 	fis g a bes a16 g a8 g] fis16[ \beamCutR ees \beamCutL fis g
 	\time 4/8
-	a8 bes a16 g a8]
+	a8 bes a16 g a8] \glissando
 	\revert Staff.Beam.breakable
 }
 
@@ -1988,34 +1988,151 @@ Viola_mvmt_I_BJ = \relative c' {
 	a8 bes a16 g a8]
 	\revert Staff.Beam.breakable
 }
+
+%%% Section BK = mm. 272-280 (Rehersal 30)
+
+Violin_I_mvmt_I_BK = \relative c''' {
+	\mark #30
+	\override Staff.Beam.breakable = ##t
+	\repeat unfold 2 {
+		\time 6/8
+		d16:32[ \beamCutR a,16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL d'16:32 \beamCutR a,16:32 \beamCutL bes16:32 a16:32]
+			d'16:32[ \beamCutR a,16:32 \beamCutL d16:32 \beamCutR a16:32
+		\time 4/8
+		\beamCutL d'16:32 \beamCutR a,16:32 \beamCutL bes16:32 a16:32]
+			d'16:32[ \beamCutR a,16:32 \beamCutL d16:32 \beamCutR a16:32
+		\time 6/8
+		\beamCutL d'16:32 \beamCutR a,16:32 \beamCutL bes16:32 a16:32]
+			d'16:32[ \beamCutR a,16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL d'16:32 \beamCutR a,16:32 \beamCutL bes16:32 a16:32]
+		\time 4/8
+		d'16:32[ \beamCutR a,16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL d'16:32 \beamCutR a,16:32 \beamCutL bes16:32 a16:32]
+	}
+	\time 6/8
+	d'16:32[ \beamCutR a,16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL d'16:32 \beamCutR a,16:32 \beamCutL bes16:32 a16:32]
+		d'16:32[ \beamCutR a,16:32 \beamCutL d16:32 a16:32]
+	\revert Staff.Beam.breakable
+}
+
+Violin_I_divisi_II_mvmt_I_BK = \relative c'' {
+	\mark #30
+	\override Staff.Beam.breakable = ##t
+	\repeat unfold 2 {
+		\time 6/8
+		d16:32[ \beamCutR a16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL cis16:32 \beamCutR a16:32 \beamCutL bes16:32 a16:32]
+			d16:32[ \beamCutR a16:32 \beamCutL d16:32 \beamCutR a16:32
+		\time 4/8
+		\beamCutL cis16:32 \beamCutR a16:32 \beamCutL bes16:32 a16:32]
+			d16:32[ \beamCutR a16:32 \beamCutL d16:32 \beamCutR a16:32
+		\time 6/8
+		\beamCutL cis16:32 \beamCutR a16:32 \beamCutL bes16:32 a16:32]
+			d16:32[ \beamCutR a16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL cis16:32 \beamCutR a16:32 \beamCutL bes16:32 a16:32]
+		\time 4/8
+		d16:32[ \beamCutR a16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL cis16:32 \beamCutR a16:32 \beamCutL bes16:32 a16:32]
+	}
+	\time 6/8
+	d16:32[ \beamCutR a16:32 \beamCutL d16:32 \beamCutR a16:32 \beamCutL cis16:32 \beamCutR a16:32 \beamCutL bes16:32 a16:32]
+		d16:32[ \beamCutR a16:32 \beamCutL d16:32 a16:32]
+	\revert Staff.Beam.breakable
+}
+
+Violin_II_mvmt_I_BK = \relative c'' {
+	\mark #30
+	\override Staff.Beam.breakable = ##t
+	\repeat unfold 2 {
+		\time 6/8
+		bes16:32[ \beamCutR ees,16:32 \beamCutL bes'16:32 \beamCutR ees,16:32 \beamCutL bes'16:32 \beamCutR ees,16:32 \beamCutL bes'16:32 ees,16:32]
+			bes'16:32[ \beamCutR ees,16:32 \beamCutL bes'16:32 \beamCutR ees,16:32
+		\time 4/8
+		\beamCutL bes'16:32 \beamCutR ees,16:32 \beamCutL bes'16:32 ees,16:32]
+			bes'16:32[ \beamCutR ees,16:32 \beamCutL bes'16:32 \beamCutR ees,16:32
+		\time 6/8
+		\beamCutL bes'16:32 \beamCutR ees,16:32 \beamCutL bes'16:32 ees,16:32]
+			bes'16:32[ \beamCutR ees,16:32 \beamCutL bes'16:32 \beamCutR ees,16:32 bes'16:32 \beamCutR ees,16:32 \beamCutL bes'16:32 ees,16:32]
+		\time 4/8
+		bes'16:32[ \beamCutR ees,16:32 \beamCutL bes'16:32 \beamCutR ees,16:32 bes'16:32 \beamCutR ees,16:32 \beamCutL bes'16:32 ees,16:32]
+	}
+	\time 6/8
+	bes'16:32[ \beamCutR ees,16:32 \beamCutL bes'16:32 \beamCutR ees,16:32 bes'16:32 \beamCutR ees,16:32 \beamCutL bes'16:32 ees,16:32]
+		bes'16:32[ \beamCutR ees,16:32 \beamCutL bes'16:32 ees,16:32]
+	\revert Staff.Beam.breakable
+}
+
+Viola_mvmt_I_BK = \relative c' {
+	\mark #30
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne
+			c8\rest^\Div_mark ees8~ ees2~
+			\time 4/8
+			ees2~
+			\time 6/8
+			ees2.~
+			\time 4/8
+			ees8 c8\rest ees4~
+			\time 6/8
+			ees2.~
+			\time 4/8
+			ees2~
+			\time 6/8
+			ees4.~ ees8 c8\rest
+		}
+		\new Voice {
+			\voiceTwo
+			s8 <ees, g>8~ q2~
+			\time 4/8
+			q2~
+			\time 6/8
+			q2.~
+			\time 4/8
+			q8 s8 <ees g>4~
+			\time 6/8
+			q2.~
+			\time 4/8
+			q2~
+			\time 6/8
+			q4.~ q8 s8
+		}
+	>>
+	\override Staff.Beam.breakable = ##t
+	fis'8[^\Unis_mark
+	\time 4/8
+	a bes a16( g) fis8]
+	\time 6/8
+	r8 fis[ a g16( \beamCutR fis) \beamCutL g( fis) ees8]
+	\revert Staff.Beam.breakable
+}
+
 %%% Final assembly
 
 Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_I_mvmt_I_AE \Violin_I_mvmt_I_AF \Violin_I_mvmt_I_AG
 		\Violin_I_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_I_mvmt_I_AK \Violin_I_mvmt_I_AL \Violin_I_mvmt_I_AM \NULL_I_AN
 		\Violin_I_mvmt_I_AO \Violin_I_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \Violin_I_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Violin_I_mvmt_I_AV
 		\Violin_I_mvmt_I_AW \Violin_I_mvmt_I_AX \Violin_I_mvmt_I_AY \NULL_I_AZ \Violin_I_mvmt_I_BA \NULL_I_BB \Violin_I_mvmt_I_BC
-		\Violin_I_mvmt_I_BD \Violin_I_mvmt_I_BE \Violin_I_mvmt_I_BF \Violin_I_mvmt_I_BG \Violin_I_mvmt_I_BH \NULL_I_BI \Violin_I_mvmt_I_BJ }
+		\Violin_I_mvmt_I_BD \Violin_I_mvmt_I_BE \Violin_I_mvmt_I_BF \Violin_I_mvmt_I_BG \Violin_I_mvmt_I_BH \NULL_I_BI \Violin_I_mvmt_I_BJ
+		\Violin_I_mvmt_I_BK }
 Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \Violin_I_divisi_II_mvmt_I_AS \NULL_I_AT
 		\NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF
-		\Violin_I_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ }
+		\Violin_I_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ \Violin_I_divisi_II_mvmt_I_BK }
 
 Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_I_AD \Violin_II_mvmt_I_AE \Violin_II_mvmt_I_AF \Violin_II_mvmt_I_AG
 		\Violin_II_mvmt_I_AH \NULL_I_AI \Violin_I_II_mvmt_I_AJ \Violin_II_mvmt_I_AK \Violin_II_mvmt_I_AL \Violin_II_mvmt_I_AM \Violin_II_mvmt_I_AN
 		\Violin_II_mvmt_I_AO \Violin_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \Violin_II_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Violin_II_mvmt_I_AV
 		\Violin_II_mvmt_I_AW \Violin_II_mvmt_I_AX \Violin_II_mvmt_I_AY \NULL_I_AZ \Violin_II_mvmt_I_BA \Violin_II_mvmt_I_BB \Violin_II_mvmt_I_BC
-		\Violin_II_mvmt_I_BD \Violin_II_mvmt_I_BE \Violin_II_mvmt_I_BF \Violin_II_mvmt_I_BG \Violin_II_mvmt_I_BH \NULL_I_BI \Violin_II_mvmt_I_BJ }
+		\Violin_II_mvmt_I_BD \Violin_II_mvmt_I_BE \Violin_II_mvmt_I_BF \Violin_II_mvmt_I_BG \Violin_II_mvmt_I_BH \NULL_I_BI \Violin_II_mvmt_I_BJ
+		\Violin_II_mvmt_I_BK }
 Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_divisi_II_mvmt_I_AE
 		\Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP
 		\NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB
-		\NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \Violin_II_divisi_II_mvmt_I_BG \Violin_II_divisi_II_mvmt_I_BH \NULL_I_BI \NULL_I_BJ }
+		\NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \Violin_II_divisi_II_mvmt_I_BG \Violin_II_divisi_II_mvmt_I_BH \NULL_I_BI \NULL_I_BJ \NULL_I_BK }
 
 Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF \Viola_mvmt_I_AG \Viola_mvmt_I_AH
 		\Viola_mvmt_I_AI \Viola_mvmt_I_AJ \Viola_mvmt_I_AK \NULL_I_AL \Viola_mvmt_I_AM \Viola_mvmt_I_AN \Viola_mvmt_I_AO \Viola_mvmt_I_AP
 		\NULL_I_AQ \Viola_mvmt_I_AR \Viola_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Viola_mvmt_I_AV \Viola_mvmt_I_AW \Viola_mvmt_I_AX \Viola_mvmt_I_AY
 		\Viola_mvmt_I_AZ \Viola_mvmt_I_BA \Viola_mvmt_I_BB \Viola_mvmt_I_BC \Viola_mvmt_I_BD \Viola_mvmt_I_BE \Viola_mvmt_I_BF \Viola_mvmt_I_BG
-		\Viola_mvmt_I_BH \NULL_I_BI \Viola_mvmt_I_BJ }
+		\Viola_mvmt_I_BH \NULL_I_BI \Viola_mvmt_I_BJ \Viola_mvmt_I_BK }
 Viola_divisi_II_mvmt_I = { \clef alto \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \Viola_divisi_II_mvmt_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \Viola_divisi_II_mvmt_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \Viola_divisi_II_mvmt_I_BD
-		\NULL_I_BE \Viola_divisi_II_mvmt_I_BF \Viola_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ }
+		\NULL_I_BE \Viola_divisi_II_mvmt_I_BF \Viola_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ \NULL_I_BK }

@@ -1470,33 +1470,146 @@ Flute_III_IV_mvmt_I_BJ = \relative c'' {
 	bes[ \beamCutR g \beamCutL bes b cis8-^ e16-^ cis]
 }
 
+%%% Section BK = mm. 272-280 (Rehersal 30)
+
+Flute_I_mvmt_I_BK = \relative c''' {
+	\mark #30
+	\override Staff.Beam.breakable = ##t
+	\time 6/8
+	r4 r4 \tuplet 3/2 8 { fis16-.[\ff fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+	\time 4/8
+	\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] } fis-. r16 r8
+	\time 6/8
+	r4 \tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+		\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] }
+	\time 4/8
+	fis-. r16 r8 r4
+	\time 6/8
+	\tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+		\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] } fis-. r16 r8
+	\time 4/8
+	r4 \tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+	\time 6/8
+	\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] } fis-. r16 r8 r4
+	\time 4/8
+	\tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+		\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] }
+	\time 6/8
+	fis-. r16 r8 r4 \tuplet 3/2 8 { fis16-.[\ff fis-. \beamCutR fis-. \beamCutL f-. e-. ees-.] }
+	\revert Staff.Beam.breakable
+}
+
+Flute_II_mvmt_I_BK = \relative c''' {
+	\mark #30
+	\override Staff.Beam.breakable = ##t
+	\time 6/8
+	r4 r4 \tuplet 3/2 8 { d16-.[\ff d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+	\time 4/8
+	\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] } d-. r16 r8
+	\time 6/8
+	r4 \tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+		\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] }
+	\time 4/8
+	d-. r16 r8 r4
+	\time 6/8
+	\tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+		\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] } d-. r16 r8
+	\time 4/8
+	r4  \tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+	\time 6/8
+	\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] } d-. r16 r8 r4
+	\time 4/8
+	\tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+		\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] }
+	\time 6/8
+	d-. r16 r8 r4 \tuplet 3/2 8 { d16-.[\ff d-. \beamCutR d-. \beamCutL d-. d-. d-.] }
+	\revert Staff.Beam.breakable
+}
+
+Flute_III_mvmt_I_BK = \relative c''' {
+	\mark #30
+	\override Staff.Beam.breakable = ##t
+	\time 6/8
+	\tuplet 3/2 8 { fis16-.[\ff fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+		\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] } fis-. r16 r8
+	\time 4/8
+	r4 \tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+	\time 6/8
+	\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] } fis-. r16 r8 r4
+	\time 4/8
+	\tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+		\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] }
+	\time 6/8
+	fis-. r16 r8 r4 \tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+	\time 4/8
+	\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] } fis-. r16 r8
+	\time 6/8
+	r4 \tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+		\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] }
+	\time 4/8
+	fis-. r16 r8 r4
+	\time 6/8
+	\tuplet 3/2 8 { fis16-.[ fis-. \beamCutR fis-. \beamCutL f-. f-. \beamCutR f-.
+		\beamCutL e-. e-. \beamCutR e-. \beamCutL ees-. ees-. ees-.] } fis-. r16 r8
+	\revert Staff.Beam.breakable
+}
+
+Flute_IV_mvmt_I_BK = \relative c''' {
+	\mark #30
+	\override Staff.Beam.breakable = ##t
+	\time 6/8
+	\tuplet 3/2 8 { d16-.[\ff d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+		\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] } d-. r16 r8
+	\time 4/8
+	r4 \tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+	\time 6/8
+	\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] } d-. r16 r8 r4
+	\time 4/8
+	\tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+		\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] }
+	\time 6/8
+	d-. r16 r8 r4 \tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+	\time 4/8
+	\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] } d-. r16 r8
+	\time 6/8
+	r4 \tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+		\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] }
+	\time 4/8
+	d-. r16 r8 r4
+	\time 6/8
+	\tuplet 3/2 8 { d16-.[ d-. \beamCutR d-. \beamCutL d-. d-. \beamCutR d-.
+		\beamCutL d-. d-. \beamCutR d-. \beamCutL d-. d-. d-.] } d-. r16 r8
+	\revert Staff.Beam.breakable
+}
+
 %%% Final assembly
 
 Picc_mvmt_I = { \NULL_I_AA \Picc_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Picc_mvmt_I_AF \NULL_I_AG \Picc_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Picc_mvmt_I_AL \NULL_I_AM \Picc_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO \Picc_mvmt_I_AP
 		\NULL_I_AQ \Picc_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Picc_mvmt_I_AX \NULL_I_AY \Picc_mvmt_I_AZ
 		\NULL_I_BA \Flute_All_Cues_mvmt_I_BB \NULL_I_BC \Picc_mvmt_I_BD \Picc_mvmt_I_BE \NULL_I_BF \Picc_mvmt_I_BG \Picc_mvmt_I_BH
-		\Flute_All_Cues_mvmt_I_BI \Flute_I_II_Picc_mvmt_I_BJ }
+		\Flute_All_Cues_mvmt_I_BI \Flute_I_II_Picc_mvmt_I_BJ \NULL_I_BK }
 Flute_I_mvmt_I = { \NULL_I_AA \Flute_I_mvmt_I_AB \NULL_I_AC \Flute_I_mvmt_I_AD_AE \Flute_I_mvmt_I_AF \NULL_I_AG \Flute_I_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_I_mvmt_I_AK \Flute_I_mvmt_I_AL \NULL_I_AM \Flute_I_mvmt_I_AN \Flute_I_mvmt_I_AO \Flute_I_mvmt_I_AP
 		\Flute_I_mvmt_I_AQ \Flute_I_mvmt_I_AR \Flute_I_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Flute_I_II_mvmt_I_AX
 		\NULL_I_AY \Flute_I_mvmt_I_AZ \Flute_I_mvmt_I_BA \Flute_I_mvmt_I_BB \Flute_I_mvmt_I_BC \Flute_I_mvmt_I_BD \Flute_I_mvmt_I_BE
-		\Flute_I_mvmt_I_BF \Flute_I_II_mvmt_I_BG \Flute_I_mvmt_I_BH \Flute_All_Cues_mvmt_I_BI \Flute_I_II_Picc_mvmt_I_BJ }
+		\Flute_I_mvmt_I_BF \Flute_I_II_mvmt_I_BG \Flute_I_mvmt_I_BH \Flute_All_Cues_mvmt_I_BI \Flute_I_II_Picc_mvmt_I_BJ
+		\Flute_I_mvmt_I_BK }
 Flute_II_mvmt_I = { \NULL_I_AA \Flute_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_II_mvmt_I_AF \NULL_I_AG \Flute_II_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_II_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Picc_Flute_II_mvmt_I_AO
 		\Flute_II_mvmt_I_AP \NULL_I_AQ \Flute_II_mvmt_I_AR \Flute_II_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Flute_I_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Flute_II_mvmt_I_BA \Flute_All_Cues_mvmt_I_BB \Flute_II_mvmt_I_BC
 		\Flute_II_mvmt_I_BD \Flute_II_mvmt_I_BE \Flute_II_mvmt_I_BF \Flute_I_II_mvmt_I_BG \Flute_II_mvmt_I_BH \Flute_All_Cues_mvmt_I_BI
-		\Flute_I_II_Picc_mvmt_I_BJ }
+		\Flute_I_II_Picc_mvmt_I_BJ \Flute_II_mvmt_I_BK }
 Flute_III_mvmt_I = { \NULL_I_AA \Flute_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Flute_III_mvmt_I_AE \Flute_III_mvmt_I_AF \NULL_I_AG
 		\Flute_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_III_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN
 		\Flute_III_IV_mvmt_I_AO \Flute_III_mvmt_I_AP \NULL_I_AQ \Flute_III_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV
 		\NULL_I_AW \Flute_III_IV_mvmt_I_AX \NULL_I_AY \Flute_III_mvmt_I_AZ \NULL_I_BA \Flute_All_Cues_mvmt_I_BB \Flute_III_IV_mvmt_I_BC
 		\Flute_III_mvmt_I_BD \NULL_I_BE \Flute_III_mvmt_I_BF \Flute_III_IV_mvmt_I_BG \Flute_III_mvmt_I_BH \Flute_All_Cues_mvmt_I_BI
-		\Flute_III_IV_mvmt_I_BJ }
+		\Flute_III_IV_mvmt_I_BJ \Flute_III_mvmt_I_BK }
 Flute_IV_mvmt_I = { \NULL_I_AA \Flute_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Flute_IV_mvmt_I_AF \NULL_I_AG \Flute_IV_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Flute_All_Cues_mvmt_I_AK \Flute_IV_mvmt_I_AL \NULL_I_AM \Flute_other_mvmt_I_AN \Flute_III_IV_mvmt_I_AO
 		\Flute_IV_mvmt_I_AP \NULL_I_AQ \Flute_IV_mvmt_I_AR \Flute_IV_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Flute_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \Flute_All_Cues_mvmt_I_BB \Flute_III_IV_mvmt_I_BC
 		\Flute_IV_mvmt_I_BD \NULL_I_BE \Flute_IV_mvmt_I_BF \Flute_III_IV_mvmt_I_BG \NULL_I_BH \Flute_All_Cues_mvmt_I_BI
-		\Flute_III_IV_mvmt_I_BJ }
+		\Flute_III_IV_mvmt_I_BJ \Flute_IV_mvmt_I_BK }
