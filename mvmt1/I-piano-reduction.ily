@@ -2201,10 +2201,9 @@ redux_lower_I_BK = \relative c {
 	>>
 }
 
+%%% Section BL = mm. 281-290 (Rehersal 31/32)
 
-%%% This is as far as I've gotten
-
-redux_upper_I_remain = \relative c''' {
+redux_upper_I_BL = \relative c''' {
 	% mm. 281-284 - Rehersal 31
 	\time 4/4
 	\mark #31
@@ -2218,10 +2217,85 @@ redux_upper_I_remain = \relative c''' {
 	\repeat unfold 4 { <d' fis> <g, cis> <d' f> <g, cis> <d' e> <g, cis> <d' ees> <g, cis> }
 	\time 3/4
 	\repeat unfold 3 { <d' fis> <fis, cis'> <d' f> <fis, cis'> <d' e> <fis, cis'> <d' ees> <fis, cis'> }
+}
+
+redux_dynamics_I_BL = {
+	% mm. 281-284 - Rehersal 31
+	s1*4
+	% mm. 285-290 - Rehersal 32
+	s2*4 s2.*2
+}
+
+redux_lower_I_BL = \relative c {
+	% mm. 281-284 - Rehersal 31
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			r4 <ees bes' ees>8~ <fis bes fis'> <g g'>4 <g g'>
+			r8 <fis cis' fis>8~ <a cis a'>2.
+			r8 <g bes g'> <cis d cis'> <bes bes'> <bes bes'>4 <g g'>
+			\tuplet 3/2 { r8 <g g'> <a a'> } <a a'>2.
+		}
+		\new Voice {
+			\voiceFour
+			s2 d2
+			s1
+			s1
+			\tuplet 3/2 { s8 cis4~ } cis2.
+		}
+		\new Voice {
+			\voiceTwo
+			<g,, g'>1
+			<ees ees'>
+			<g g'>
+			<ees ees'>
+		}
+	>>
+	% mm. 285-291 - Rehersal 32
+	\time 2/4
+	<<
+		\new Voice {
+			\voiceOne \stemDown
+			r8 <bes''' cis e bes'>~ <c e c'> <bes bes'>
+			r8 <a cis ees a>~ \tuplet 3/2 { <bes c ees bes'> <a a'> <fis fis'> }
+			r8 <bes cis e bes'>~ <cis e cis'> <bes bes'>
+			r8 <a cis e a>~ \tuplet 3/2 { <bes cis e bes'> <a a'> <f f'> } \stemNeutral
+		}
+		\new Voice {
+			\voiceTwo
+			<a,, a'>2
+			<ees ees'>
+			<a a'>
+			<ees ees'>
+		}
+	>>
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			r8 <fis'' fis'>8 <g g'>4 <fis fis'>8 <ees ees'>
+			r8 <fis fis'>8 <g g'>2
+		}
+		\new Voice {
+			\voiceFour
+			\repeat unfold 2 { s8 <a c>~ <a c>2 }
+		}
+		\new Voice {
+			\voiceTwo
+			<d,,, d'>2.
+			<a a'>
+		}
+	>>
+}
+
+%%% This is as far as I've gotten
+
+redux_upper_I_remain = \relative c' {
 	% mm. 291-296 - Rehersal 33
 	\mark #33
 	\time 4/8
-	\tuplet 3/2 { <bes,, d a'>16[ <bes d fis> r32 <bes d fis>] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
+	\tuplet 3/2 { <bes d a'>16[ <bes d fis> r32 <bes d fis>] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
 		\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d fis a>] } \tuplet 3/2 { <d fis a>8 <d fis a>16 }
 	\tuplet 3/2 { <d fis bes>[ <d fis a> <d fis g>] } \tuplet 3/2 { <bes d a'> <bes d g> <bes d fis> }
 		\tuplet 3/2 { <bes d ees>[ <bes d fis>8~] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
@@ -2316,81 +2390,16 @@ redux_upper_I_remain = \relative c''' {
 }
 
 redux_dynamics_I_remain = {
-	% mm. 281-284 - Rehersal 31
-	s1*4
-	% mm. 285-290 - Rehersal 32
-	s2*4 s2.*2
 	% mm. 291-296 - Rehersal 33
 	s2*6
 	% mm. 297-300
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c {
-	% mm. 281-284 - Rehersal 31
-	\time 4/4
-	<<
-		\new Voice {
-			\voiceOne
-			r4 <ees bes' ees>8~ <fis bes fis'> <g g'>4 <g g'>
-			r8 <fis cis' fis>8~ <a cis a'>2.
-			r8 <g bes g'> <cis d cis'> <bes bes'> <bes bes'>4 <g g'>
-			\tuplet 3/2 { r8 <g g'> <a a'> } <a a'>2.
-		}
-		\new Voice {
-			\voiceFour
-			s2 d2
-			s1
-			s1
-			\tuplet 3/2 { s8 cis4~ } cis2.
-		}
-		\new Voice {
-			\voiceTwo
-			<g,, g'>1
-			<ees ees'>
-			<g g'>
-			<ees ees'>
-		}
-	>>
-	% mm. 285-291 - Rehersal 32
-	\time 2/4
-	% QUESTION: I am really unsure of those chords in voice one.
-	<<
-		\new Voice {
-			\voiceOne \stemDown
-			r8 <bes''' c cis e bes'>~ <c e c'> <bes bes'>
-			r8 <a cis ees a>~ \tuplet 3/2 { <bes c ees bes'> <a a'> <fis fis'> }
-			r8 <bes cis e bes'>~ <cis e cis'> <bes bes'>
-			r8 <a cis e a>~ \tuplet 3/2 { <bes cis e bes'> <a a'> <f f'> } \stemNeutral
-		}
-		\new Voice {
-			\voiceTwo
-			<a,, a'>2
-			<ees ees'>
-			<a a'>
-			<ees ees'>
-		}
-	>>
-	\time 3/4
-	<<
-		\new Voice {
-			\voiceOne
-			r8 <fis'' fis'>8 <g g'>4 <fis fis'>8 <ees ees'>
-			r8 <fis fis'>8 <g g'>2
-		}
-		\new Voice {
-			\voiceFour
-			\repeat unfold 2 { s8 <a c>~ <a c>2 }
-		}
-		\new Voice {
-			\voiceTwo
-			<d,,, d'>2.
-			<a a'>
-		}
-	>>
+redux_lower_I_remain = \relative c, {
 	% mm. 291-206 - Rehersal 33
 	\time 4/8
-	\repeat unfold 3 { \tuplet 3/2 { <c' c'>16[ fis r32 <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
+	\repeat unfold 3 { \tuplet 3/2 { <c c'>16[ fis r32 <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
 		\tuplet 3/2 { <c c'>16[ f16. <c c'>32] } \tuplet 3/2 { <c c'>8 <c c'>16 }
 	\repeat unfold 2 { \tuplet 3/2 { <c c'>16[ fis r32 <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
 	\repeat unfold 2 { \tuplet 3/2 { <c c'>16[ f16. <c c'>32] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
@@ -2489,7 +2498,7 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
 		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
 		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_BI \redux_upper_I_BJ
-		\redux_upper_I_BK \redux_upper_I_remain }
+		\redux_upper_I_BK \redux_upper_I_BL \redux_upper_I_remain }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
@@ -2497,11 +2506,11 @@ redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamic
 		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_AY
 		\redux_dynamics_I_AZ \redux_dynamics_I_BA \redux_dynamics_I_BB \redux_dynamics_I_BC \redux_dynamics_I_BD
 		\redux_dynamics_I_BE \redux_dynamics_I_BF \redux_dynamics_I_BG \redux_dynamics_I_BH \redux_dynamics_I_BI
-		\redux_dynamics_I_BJ \redux_dynamics_I_BK \redux_dynamics_I_remain }
+		\redux_dynamics_I_BJ \redux_dynamics_I_BK \redux_dynamics_I_BL \redux_dynamics_I_remain }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
 		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
 		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_BA \redux_lower_I_BB \redux_lower_I_BC \redux_lower_I_BD
 		\redux_lower_I_BE \redux_lower_I_BF \redux_lower_I_BG \redux_lower_I_BH \redux_lower_I_BI \redux_lower_I_BJ
-		\redux_lower_I_BK \redux_lower_I_remain }
+		\redux_lower_I_BK \redux_lower_I_BL \redux_lower_I_remain }

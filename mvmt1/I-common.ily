@@ -116,3 +116,4 @@ NULL_I_BH = { \tempo "Meno" R2.*4 \mark #27 R2.*4 \time 3/8 R4. }
 NULL_I_BI = { \time 6/8 R2. \time 2/8 R4*5 \mark #28 \tempo "Sempre agitato" \time 6/8 R2. \time 2/8 R4*5 }
 NULL_I_BJ = { \mark #29 \time 6/8 R2. \time 5/8 R1*5/8 \time 6/8 R2. \time 9/8 R1*9/8 \time 6/8 R2. \time 9/8 R1*9/8 \time 4/8 R2 }
 NULL_I_BK = { \mark #30 \repeat unfold 4 { \time 6/8 R2. \time 4/8 R2 } \time 6/8 R2. }
+NULL_I_BL = { \mark #31 \tempo "Doppio Lento" \time 4/4 R1*4 \mark #32 \time 2/4 R2*4 \time 3/4 R2.*2 }
