@@ -633,3 +633,27 @@ score throughout, part switches quickly to tremolo. Going full tremolo, like Vio
 m. 279: Horns V/VI beamed slightly differently in part than in score. Trombone parts match score.
 Adjusting horns.
 (I-orch-06-horns)
+
+mm. 281-290: Flute articulations are mismatched beween score/part. Review later. #UNDECIDED
+(I-orch-01-flutes)
+
+mm. 281-290: Trumpets III/IV follow the melody line, but they aren't slurred in the parts like the
+other instruments. Sticking with the way the strings do it for now, but should revisit. #UNDECIDED
+(I-orch-05-trumpets)
+
+mm. 281-290: Trombones in score don't match the part very well. Trombone II in score plays first
+half of first bar an octave below Trombone I before moving to the held g, but in the part it's
+just a g whole note. Trombone III is the opposite: the part shows it playing the first half of the
+first bar like I, but the score just shows a g whole note. In practice, what that means is we get
+the expected results with different players. To keep things cleaner, I'm going with the score.
+(I-orch-07-trombones-tuba)
+
+mm. 281-290: Beam strings consistently like score. Use broken beams in violin I, group II/Va/Vcl
+like score.
+(I-orch-09-violins-viola, I-orch-10-cello-bass)
+
+mm. 283-284: Oboe III/IV parts incorrectly written as tuplets. Going with score.
+(I-orch-02-oboes)
+
+m. 290: "molto dim" in score and some parts, should proabably make it universal. #UNIMPLEMENTED
+(I-orch-*)

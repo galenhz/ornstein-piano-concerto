@@ -811,22 +811,82 @@ Trumpet_III_IV_mvmt_I_BK = \relative c' {
 	R2.
 }
 
+%%% Section BL = mm. 281-290 (Rehersal 31/32)
+
+Trumpet_I_mvmt_I_BL = \relative c'' {
+	\mark #31
+	\tempo "Doppio Lento"
+	\time 4/4
+	r4 bes\f bes2
+	r8 a8( cis2.)
+	d1
+	\tuplet 3/2 { r8 a4~ } a2.
+	\mark #32
+	\time 2/4
+	\repeat unfold 2 {
+		r8 e'4.
+		r8 ees4.
+	}
+	\time 3/4
+	r8 d a2
+	r8 c a2
+}
+
+Trumpet_II_mvmt_I_BL = \relative c' {
+	\mark #31
+	\tempo "Doppio Lento"
+	\time 4/4
+	r4 fis\f g2
+	r8 fis8~ fis2.
+	bes1
+	\tuplet 3/2 { r8 ees,4~ } ees2.
+	\mark #32
+	\time 2/4
+	\repeat unfold 4 {
+		r8 cis'4.
+	}
+	\time 3/4
+	r8 c8 g4 fis8( g)
+	R2.
+}
+
+% Melody. Slurring is different here than in strings. Just clone strings for now.
+Trumpet_III_IV_mvmt_I_BL = \relative c' {
+	\mark #31
+	\tempo "Doppio Lento"
+	\time 4/4
+	r4 ees8(\f fis) g4 g
+	r8 fis a2.
+	r8 g cis( bes) bes4 g
+	\tuplet 3/2 { r8 g( a) } a2.
+	\mark #32
+	\time 2/4
+	\repeat unfold 2 {
+		r8 bes[ c( bes)]
+		r8 a \tuplet 3/2 { bes( a fis) }
+	}
+	\time 3/4
+	r8 fis g4 fis8( ees)
+	r8 fis g2
+}
+
 %%% Final assembly
 
 Trumpet_I_mvmt_I = { \Trumpet_I_mvmt_I_AA \Trumpet_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_I_mvmt_I_AF \NULL_I_AG \Trumpet_I_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_I_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT
 		\NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_I_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_I_mvmt_I_BC \Trumpet_I_mvmt_I_BD
-		\NULL_I_BE \NULL_I_BF \Trumpet_I_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_I_mvmt_I_BJ \NULL_I_BK }
+		\NULL_I_BE \NULL_I_BF \Trumpet_I_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_I_mvmt_I_BJ \NULL_I_BK \Trumpet_I_mvmt_I_BL }
 Trumpet_II_mvmt_I = { \NULL_I_AA \Trumpet_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_II_mvmt_I_AF \NULL_I_AG \Trumpet_II_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_II_III_cues_mvmt_I_BC
-		\NULL_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_II_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_II_mvmt_I_BJ \NULL_I_BK }
+		\NULL_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_II_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_II_mvmt_I_BJ \NULL_I_BK \Trumpet_II_mvmt_I_BL }
 Trumpet_III_mvmt_I = { \NULL_I_AA \Trumpet_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_III_mvmt_I_AF \NULL_I_AG \Trumpet_III_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_II_III_cues_mvmt_I_BC
 		\Trumpet_III_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_III_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_III_mvmt_I_BJ
-		\Trumpet_III_IV_mvmt_I_BK }
+		\Trumpet_III_IV_mvmt_I_BK \Trumpet_III_IV_mvmt_I_BL }
 Trumpet_IV_mvmt_I = { \NULL_I_AA \Trumpet_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trumpet_IV_mvmt_I_AF \NULL_I_AG \Trumpet_IV_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \Trumpet_II_III_IV_mvmt_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \Trumpet_other_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Trumpet_other_cues_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Trumpet_IV_mvmt_I_BC
-		\Trumpet_IV_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_IV_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_IV_mvmt_I_BJ \Trumpet_III_IV_mvmt_I_BK }
+		\Trumpet_IV_mvmt_I_BD \NULL_I_BE \NULL_I_BF \Trumpet_IV_mvmt_I_BG_BH \Trumpet_All_Cues_mvmt_I_BI \Trumpet_IV_mvmt_I_BJ \Trumpet_III_IV_mvmt_I_BK
+		\Trumpet_III_IV_mvmt_I_BL }
