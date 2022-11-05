@@ -6,11 +6,17 @@ composer's son.
 
 https://imslp.org/wiki/Piano_Concerto%2C_SO_824_(Ornstein%2C_Leo)
 
-This is a work in progress, and will not be complete for some time. The
-material can be hard to interpret and is sometimes contradictory. My goal is
-to create a defensible performing edition of the score, rather than a full
-critical edition; the decisions I make as I progress are being recorded in
-this repository as well.
+My goal is to create a defensible performing edition of the score, rather than
+a full critical edition, which would require a great deal more information and
+time than I have.
+
+The materials I have access to are a scans of a well-inked piano reduction,
+plus a full score and set of parts, which seem to have been worked over by many
+hands. It is not always easy to tell what was written in by performers as
+opposed to the original author/copyist, and given the composer's sparseness
+with expressive markings, it's probable that some of them should be considered
+offical. I have tried to excercise my best judgement throughout, and document
+my decisions.
 
 ## License
 The musical material is licensed under IMSLP's "Performance Restricted
