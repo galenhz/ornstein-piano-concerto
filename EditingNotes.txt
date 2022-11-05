@@ -657,3 +657,6 @@ mm. 283-284: Oboe III/IV parts incorrectly written as tuplets. Going with score.
 
 m. 290: "molto dim" in score and some parts, should proabably make it universal. #UNIMPLEMENTED
 (I-orch-*)
+
+mm. 309-311: Solo piano; same questions about clef transitions as mm. 21-23.
+(I-solo-piano)

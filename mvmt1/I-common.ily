@@ -43,10 +43,9 @@
 % BM = mm. 291-300 (Rehersal 33)
 % BN = mm. 301-303 (Rehersal 34)
 % BO = mm. 304-308 (Rehersal 35)
-% BP = mm. 309-312 (Rehersal 36)
-% BQ = mm. 313-315
-% BR = mm. 316-327 (Rehersal 37)
-% BS = mm. 328-331
+% BP = mm. 309-315 (Rehersal 36)
+% BQ = mm. 316-327 (Rehersal 37)
+% BR = mm. 328-331
 
 %% EDIT: The PR has "con moto" at m. 5. The parts have "moderato con moto" at m. 16.
 %%       The score has what *might* be a scribbled "con moto" at m. 5, and a stronger
@@ -117,3 +116,9 @@ NULL_I_BI = { \time 6/8 R2. \time 2/8 R4*5 \mark #28 \tempo "Sempre agitato" \ti
 NULL_I_BJ = { \mark #29 \time 6/8 R2. \time 5/8 R1*5/8 \time 6/8 R2. \time 9/8 R1*9/8 \time 6/8 R2. \time 9/8 R1*9/8 \time 4/8 R2 }
 NULL_I_BK = { \mark #30 \repeat unfold 4 { \time 6/8 R2. \time 4/8 R2 } \time 6/8 R2. }
 NULL_I_BL = { \mark #31 \tempo "Doppio Lento" \time 4/4 R1*4 \mark #32 \time 2/4 R2*4 \time 3/4 R2.*2 }
+NULL_I_BM = { \mark #33 \time 4/8 R2*3 \tempo "Stringendo sempre e cresc." R2*3 \tempo "Stretto" R2*2 \tempo "Molto Agitato" R2*2 }
+NULL_I_BN = { \mark #34 \tempo "Tempo I" \time 6/8 R2.*3 }
+NULL_I_BO = { \mark #35 \time 10/8 R1*10/8 \time 11/8 R1*11/8 \time 10/8 R1*10/8*3 }
+NULL_I_BP = { \mark #36 \time 4/4 R1*4 \tempo "Meno" \time 8/8 R1*2 \time 4/8 R2 }
+NULL_I_BQ = { \mark #37 \tempo "Mosso" \time 2/4 R2*12 }
+NULL_I_BR = { \tempo "Calmato" \time 4/4 R1*2 \time 3/4 R2.*2 }

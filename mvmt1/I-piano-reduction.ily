@@ -2289,9 +2289,9 @@ redux_lower_I_BL = \relative c {
 	>>
 }
 
-%%% This is as far as I've gotten
+%%% Section BM = mm. 291-300 (Rehersal 33)
 
-redux_upper_I_remain = \relative c' {
+redux_upper_I_BM = \relative c' {
 	% mm. 291-296 - Rehersal 33
 	\mark #33
 	\time 4/8
@@ -2301,7 +2301,7 @@ redux_upper_I_remain = \relative c' {
 		\tuplet 3/2 { <bes d ees>[ <bes d fis>8~] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
 	\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d fis bes>] } \tuplet 3/2 { <d fis bes>16 <f bes cis> <fis bes d> }
 		\tuplet 3/2 { <fis bes f'>[ <fis bes d> r32 <fis bes cis>] } \tuplet 3/2 { <fis bes cis>8 <fis bes cis>16 }
-	\tempo "Stringendo sempre e. cresc"
+	\tempo "Stringendo sempre e cresc."
 	\tuplet 3/2 { <fis bes d>[ <fis bes des> <fis bes cis>] } \tuplet 3/2 { <d fis cis'> <d fis b> <d fis bes> }
 		\tuplet 3/2 { <d fis g>[ <d fis bes>8]~ } \tuplet 3/2 { <d fis bes>16 <fis bes cis> <fis b d> }
 	\tuplet 3/2 { <a cis e>[ <a cis f> r32 <a cis gis'>] } \tuplet 3/2 { <a cis gis'>8 <a cis gis'>16 }
@@ -2318,85 +2318,16 @@ redux_upper_I_remain = \relative c' {
 	\repeat unfold 2 { \tuplet 3/2 { r16 <fis bes cis>[ <fis bes d>] } \ottava #1 \tuplet 3/2 { <d' fis cis'> <d fis bes> <d fis a> } \ottava #0 }
 	\tuplet 3/2 { r16 <fis, bes cis>[ <fis bes d>] } \ottava #1
 		\repeat unfold 3 { \tuplet 3/2 { <d' fis cis'>[ <d fis bes> <d fis a>] } } \ottava #0
-	% mm. 301-303 - Rehersal 34
-	\time 6/8
-	\tempo "Tempo I"
-	\mark #34
-	R2.*3
-	% mm. 304-308 - Rehersal 35
-	\time 10/8
-	\mark #35
-	<a,, d g>8[ <b e a>] <b e a>4 <a d g> <c fis b> <b e a>
-	\time 11/8
-	<a d g>8[ <b e a>] <b e a>4 <a d g> <fis b e> <b e a> <a d g>8
-	\time 10/8
-	<a d g>8[ <b e a>] <b e a>4 <a d g> <c fis b> <b e a>
-	<a d g> <fis b e> <b e a> <e a d> <b e a>
-	<a d g> <f bes ees> <bes ees aes> <ees gis cis> <f bes ees>
-	% mm. 309-315 - Rehersal 36
-	\time 4/4
-	\mark #36
-	<ges c f>8 r8 r4 a'8[ aes~ aes16 g fis a]
-	fis2 d8[ cis~ cis16 c b d]
-	b2 a'8[ aes~ aes16 g fis a]
-	<c, fis c'>8 r8 r4 r2
-	\time 8/8
-	\tempo "Meno"
-	\repeat unfold 2 {
-		\repeat tremolo 2 { <b, g'>32 <c f> } \repeat tremolo 4 { <b' g'> <c f> } \repeat tremolo 2 { <b, g'> <c f> }
-			\repeat tremolo 2 { <d bes'> <e aes> } \repeat tremolo 4 { <d' bes'> <e aes> } \repeat tremolo 2 { <d, bes'> <e aes> }
-	}
-	\time 4/8
-	\repeat tremolo 2 { <b g'>32 <c f> } \repeat tremolo 4 { <b' g'> <c f> } \repeat tremolo 2 { <b, g'> <cis f> }
-	% mm. 316-327 - Rehersal 37
-	\mark #37
-	\time 2/4
-	\tempo "Mosso"
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 4 { ges'2~ ges2 a4 g }
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 4 { \repeat tremolo 8 { f32 cis } \repeat tremolo 8 { f32 cis }
-				\repeat tremolo 4 { g' e } \repeat tremolo 4 { f d }
-			}
-		}
-	>>
-	% mm. 328-331
-	\time 4/4
-	\tempo "Calmato"
-	% WORKAROUND: Add silent grace note to bar 328 to match the solo piano.
-	<<
-		\new Voice {
-			\voiceOne
-			\grace s8 cis'1
-			cis
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 2 {
-				% Not bothering with the staff change here.
-				g8 fis~ fis16 f e aes \tuplet 5/4 { ees[ d des a a] } \tuplet 3/2 { aes8 g fis }
-			}
-		}
-	>>
-	\time 3/4
-	% QUESTION: Rhythm in bar 330 only makes sense if the first three 8ths are a triplet. Orchestra parts confirm this.
-	\tuplet 3/2 { r8 <cis' fis> <cis fis>~ } <cis fis>[ <cis fis>]~ <cis fis>[ <cis fis>]~
-	<cis fis>2.
-	\bar "|."
 }
 
-redux_dynamics_I_remain = {
+redux_dynamics_I_BM = {
 	% mm. 291-296 - Rehersal 33
 	s2*6
 	% mm. 297-300
 	s2*3 s2-\markup { \italic {rit.} }
 }
 
-redux_lower_I_remain = \relative c, {
+redux_lower_I_BM = \relative c, {
 	% mm. 291-206 - Rehersal 33
 	\time 4/8
 	\repeat unfold 3 { \tuplet 3/2 { <c c'>16[ fis r32 <c c'>] } \tuplet 3/2 { <c c'>8 <c c'>16 } }
@@ -2409,14 +2340,45 @@ redux_lower_I_remain = \relative c, {
 	\repeat unfold 2 { \tuplet 3/2 { <fis, c'>16[ fis' <fis, c'>] } \tuplet 3/2 { fis'[ <fis, c'> fis'] }
 		\tuplet 3/2 { <a, ees'>[ a' <a, ees'>] } \tuplet 3/2 { a'[ <a, ees'> a'] } }
 	\repeat unfold 4 { \tuplet 3/2 { <c,, c'>[ fis <c c'>] } \tuplet 3/2 { fis[ <c c'> fis] } }
+}
+
+%%% Section BN = mm. 301-303 (Rehersal 34)
+
+redux_upper_I_BN = {
+	% mm. 301-303 - Rehersal 34
+	\time 6/8
+	\tempo "Tempo I"
+	\mark #34
+	R2.*3
+}
+
+redux_lower_I_BN = {
 	% mm. 301-303 - Rehersal 34
 	\time 6/8
 	R2.*3
+}
+
+%%% Section BO = mm. 304-308 (Rehersal 35)
+
+redux_upper_I_BO = \relative c' {
+	% mm. 304-308 - Rehersal 35
+	\time 10/8
+	\mark #35
+	<a d g>8[ <b e a>] <b e a>4 <a d g> <c fis b> <b e a>
+	\time 11/8
+	<a d g>8[ <b e a>] <b e a>4 <a d g> <fis b e> <b e a> <a d g>8
+	\time 10/8
+	<a d g>8[ <b e a>] <b e a>4 <a d g> <c fis b> <b e a>
+	<a d g> <fis b e> <b e a> <e a d> <b e a>
+	<a d g> <f bes ees> <bes ees aes> <ees gis cis> <f bes ees>
+}
+
+redux_lower_I_BO = \relative c {
 	% mm. 304-308 - Rehersal 35
 	\time 10/8
 	<<
 		\new Voice {
-			\voiceOne e''8[ fis] fis4 e g fis
+			\voiceOne e8[ fis] fis4 e g fis
 		}
 		\new Voice {
 			\voiceTwo <c, g'>2. <e b'>2
@@ -2442,6 +2404,29 @@ redux_lower_I_remain = \relative c, {
 	>>
 	e'4 d fis g fis
 	e ees2. <des bes'>4
+}
+
+%%% Section BP = mm. 309-315 (Rehersal 36)
+
+redux_upper_I_BP = \relative c'' {
+	% mm. 309-315 - Rehersal 36
+	\time 4/4
+	\mark #36
+	<ges c f>8 r8 r4 a'8[ aes~ aes16 g fis a]
+	fis2 d8[ cis~ cis16 c b d]
+	b2 a'8[ aes~ aes16 g fis a]
+	<c, fis c'>8 r8 r4 r2
+	\time 8/8
+	\tempo "Meno"
+	\repeat unfold 2 {
+		\repeat tremolo 2 { <b, g'>32 <c f> } \repeat tremolo 4 { <b' g'> <c f> } \repeat tremolo 2 { <b, g'> <c f> }
+			\repeat tremolo 2 { <d bes'> <e aes> } \repeat tremolo 4 { <d' bes'> <e aes> } \repeat tremolo 2 { <d, bes'> <e aes> }
+	}
+	\time 4/8
+	\repeat tremolo 2 { <b g'>32 <c f> } \repeat tremolo 4 { <b' g'> <c f> } \repeat tremolo 2 { <b, g'> <cis f> }
+}
+
+redux_lower_I_BP = \relative c {
 	% mm. 309-316 - Rehersal 36
 	<fis b>8 r8 r4 b,8 fis' d' fis
 	\repeat unfold 2 { \clef treble d' fis, d \clef bass fis, b, fis' d' fis }
@@ -2462,23 +2447,78 @@ redux_lower_I_remain = \relative c, {
 			cis,2
 		}
 	>>
+}
+
+%%% Section BQ = mm. 316-327 (Rehersal 37)
+
+redux_upper_I_BQ = \relative c'' {
+	% mm. 316-327 - Rehersal 37
+	\mark #37
+	\time 2/4
+	\tempo "Mosso"
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 { ges2~ ges2 a4 g }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 4 { \repeat tremolo 8 { f32 cis } \repeat tremolo 8 { f32 cis }
+				\repeat tremolo 4 { g' e } \repeat tremolo 4 { f d }
+			}
+		}
+	>>
+}
+
+redux_lower_I_BQ = \relative c,, {
 	% mm. 316-327 - Rehersal 37
 	\time 2/4
 	\repeat unfold 4 {
-		<fis, fis'>32[ cis''] a' cis, a' cis, a' cis, \repeat tremolo 4 { a' cis, }
+		<fis fis'>32[ cis''] a' cis, a' cis, a' cis, \repeat tremolo 4 { a' cis, }
 		\repeat tremolo 8 { a' cis, }
 		a e' c' e, c' e, c' e,
 			g, d' b' d, b' d, b' d,
 	}
+}
+
+%%% Section BR = mm. 328-331
+
+redux_upper_I_BR = \relative c'' {
+	% mm. 328-331
+	\time 4/4
+	\tempo "Calmato"
+	% WORKAROUND: Add silent grace note to bar 328 to match the solo piano.
+	<<
+		\new Voice {
+			\voiceOne
+			\grace s8 cis1
+			cis
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				% Not bothering with the staff change here.
+				g8 fis~ fis16 f e aes \tuplet 5/4 { ees[ d des a a] } \tuplet 3/2 { aes8 g fis }
+			}
+		}
+	>>
+	\time 3/4
+	% EDIT: Rhythm in bar 330 only makes sense if the first three 8ths are a triplet. Orchestra parts confirm this.
+	\tuplet 3/2 { r8 <cis' fis> <cis fis>~ } <cis fis>[ <cis fis>]~ <cis fis>[ <cis fis>]~
+	<cis fis>2.
+	\bar "|."
+}
+
+redux_lower_I_BR = \relative c,, {
 	% mm. 328-331
 	\time 4/4
 	% WORKAROUND: Add silent grace note to bar 328 to match the solo piano.
-	\grace s8 \repeat unfold 2 { \tuplet 7/4 { <fis,, f'>4 cis'' a' cis, a ees a, } }
+	\grace s8 \repeat unfold 2 { \tuplet 7/4 { <fis fis'>4 cis'' a' cis, a ees a, } }
 	\time 3/4
 	<<
 		\new Voice {
 			\voiceTwo
-			% QUESTION: Error in PR. Bottom note should be f# as well
+			% EDIT: Error in PR. Bottom note should be f# as well
 			<fis fis'>2.~ <fis fis'>
 		}
 		\new Voice {
@@ -2498,7 +2538,8 @@ redux_upper_I = { \redux_upper_I_AA_AB \redux_upper_I_AC \redux_upper_I_AD \redu
 		\redux_upper_I_AS \redux_upper_I_AT \redux_upper_I_AU \redux_upper_I_AV \redux_upper_I_AW \redux_upper_I_AX
 		\redux_upper_I_AY \redux_upper_I_AZ \redux_upper_I_BA \redux_upper_I_BB \redux_upper_I_BC \redux_upper_I_BD
 		\redux_upper_I_BE \redux_upper_I_BF \redux_upper_I_BG \redux_upper_I_BH \redux_upper_I_BI \redux_upper_I_BJ
-		\redux_upper_I_BK \redux_upper_I_BL \redux_upper_I_remain }
+		\redux_upper_I_BK \redux_upper_I_BL \redux_upper_I_BM \redux_upper_I_BN \redux_upper_I_BO \redux_upper_I_BP
+		\redux_upper_I_BQ \redux_upper_I_BR }
 redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamics_I_AD \redux_dynamics_I_AE
 		\redux_dynamics_I_AF \redux_dynamics_I_AG \redux_dynamics_I_AH \redux_dynamics_I_AI \redux_dynamics_I_AJ
 		\redux_dynamics_I_AK \redux_dynamics_I_AL \redux_dynamics_I_AM \redux_dynamics_I_AN \redux_dynamics_I_AO
@@ -2506,11 +2547,12 @@ redux_dynamics_I = { \redux_dynamics_I_AA_AB \redux_dynamics_I_AC \redux_dynamic
 		\redux_dynamics_I_AU \redux_dynamics_I_AV \redux_dynamics_I_AW \redux_dynamics_I_AX \redux_dynamics_I_AY
 		\redux_dynamics_I_AZ \redux_dynamics_I_BA \redux_dynamics_I_BB \redux_dynamics_I_BC \redux_dynamics_I_BD
 		\redux_dynamics_I_BE \redux_dynamics_I_BF \redux_dynamics_I_BG \redux_dynamics_I_BH \redux_dynamics_I_BI
-		\redux_dynamics_I_BJ \redux_dynamics_I_BK \redux_dynamics_I_BL \redux_dynamics_I_remain }
+		\redux_dynamics_I_BJ \redux_dynamics_I_BK \redux_dynamics_I_BL \redux_dynamics_I_BM }
 redux_lower_I = { \redux_lower_I_AA_AB \redux_lower_I_AC \redux_lower_I_AD \redux_lower_I_AE \redux_lower_I_AF
 		\redux_lower_I_AG \redux_lower_I_AH \redux_lower_I_AI \redux_lower_I_AJ \redux_lower_I_AK \redux_lower_I_AL
 		\redux_lower_I_AM \redux_lower_I_AN \redux_lower_I_AO \redux_lower_I_AP \redux_lower_I_AQ \redux_lower_I_AR
 		\redux_lower_I_AS \redux_lower_I_AT \redux_lower_I_AU \redux_lower_I_AV \redux_lower_I_AW \redux_lower_I_AX
 		\redux_lower_I_AY \redux_lower_I_AZ \redux_lower_I_BA \redux_lower_I_BB \redux_lower_I_BC \redux_lower_I_BD
 		\redux_lower_I_BE \redux_lower_I_BF \redux_lower_I_BG \redux_lower_I_BH \redux_lower_I_BI \redux_lower_I_BJ
-		\redux_lower_I_BK \redux_lower_I_BL \redux_lower_I_remain }
+		\redux_lower_I_BK \redux_lower_I_BL \redux_lower_I_BM \redux_lower_I_BN \redux_lower_I_BO \redux_lower_I_BP
+		\redux_lower_I_BQ \redux_lower_I_BR }

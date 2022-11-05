@@ -2365,16 +2365,16 @@ solo_lower_I_BL = {
 	s2.*2
 }
 
+%%% Section BM = mm. 291-300 (Rehersal 33)
 
-%%% This is as far as I've gotten
-
-solo_upper_I_remain = \relative c' {
+solo_upper_I_BM = \relative c' {
 	% mm. 291-296 - Rehersal 33
 	\mark #33
 	\time 4/8
 	\repeat unfold 2 {
 		\tuplet 3/2 { <fis bes d fis>16[ <g g'> r32 <gis gis'> } \tuplet 3/2 { <gis gis'>8 <a a'>16] }
 			\tuplet 3/2 { <bes d fis bes>[ <b b'> r32 <c c'> } \tuplet 3/2 { <c c'>8 <cis cis'>16] }
+			%\tempo "Stringendo sempre e cresc."
 		\tuplet 3/2 { <e a e'>[ <ees ees'> r32 <d d'> } \tuplet 3/2 { <d d'>8 <cis cis'>16] }
 			\tuplet 3/2 { <fis a fis'>[ <f f'> r32 <e e'> } \tuplet 3/2 { <e e'>8 <ees ees'>16] }
 	}
@@ -2393,150 +2393,16 @@ solo_upper_I_remain = \relative c' {
 	\repeat unfold 2 { \tuplet 3/2 { r16 <fis' c' fis>[ <f f'>] } \tuplet 3/2 { <f f'>8 <d d'>16 } }
 	\tuplet 3/2 { r16 <fis a fis'>[ <fis fis'>] }
 		\repeat unfold 3 { \tuplet 3/2 { <d d'>[ <fis a fis'> <f f'>] } }
-	% mm. 301-303 - Rehersal 34
-	% Copied from rehersal 1.
-	\time 6/8
-	\tempo "Tempo I"
-	\mark #34
-	\tuplet 4/3 { <b, e gis b>8
-			<bes ees g bes>~ <bes ees g bes>16
-			<a a'> <gis gis'> <b b'> }
-	<gis cis e gis>8~ <gis cis e gis>16 <a a'> <bes bes'> <b b'>
-	\tuplet 4/3 { <c f a c>16. <b e gis b>32 <b e gis b>8~ <b e gis b>16
-			<bes ees g bes> <a a'> <c c'> }
-	\tuplet 4/3 { <a d fis a>8 <aes des f aes>~ <aes des f aes>16
-			<g g'> <fis fis'> <a a'> }
-	<fis b dis fis>8 <f b d f>4
-	\ottava #0
-	\stemUp <c fis a c>8
-	<d gis b d> <ees a c ees> \stemNeutral
-	% mm. 304-308 - Rehersal 35
-	\mark #35
-	\time 10/8
-	\stemUp r8 <e, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
-	\time 11/8
-	\ottava #1 r8 <g g'>[ <c c'> <d d'> <fis fis'> <g g'> <g, g'> <c c'> <d d'> <fis fis'> <g g'>] \ottava #0
-	\time 10/8
-	\stemUp r8 <e,, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
-	\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
-	\change Staff = "solo_lower" <e,, a>[ bes' \change Staff = "solo_upper" des ees ges aes bes cis ees aes]
-	% mm. 309-316 - Rehersal 36
-	\time 4/4
-	\mark #36
-	<<
-		\new Voice {
-			\voiceOne
-			\ottava #1
-			f'8[ e~ e16 ees d f] d8 des4 c8
-			\ottava #0
-			b8 c4 des8~ des d ees e
-			\ottava #1
-			f8[ e~ e16 ees d f] d8 des4 c8
-			\ottava #0
-			fis8 f~ f16 e ees fis ees8 f g a
-		}
-		\new Voice {
-			\voiceTwo
-			c,8 b4 bes8 \tuplet 3/2 { bes[ a aes] } \tuplet 3/2 { g[ ges f] }
-			fis8 f~ f16 e ees fis d8 des4 c8
-			c'8 b4 bes8 \tuplet 3/2 { bes[ a aes] } \tuplet 3/2 { g[ ges f] }
-			\tuplet 3/2 { c'8 b bes } c16 cis c bes <d, g c>8 <e a d> <g b ees> <a cis f>
-		}
-	>>
-	\time 8/8
-	\tempo "Meno"
-	\ottava #1
-	<b g' b>8[ <bes ges' bes>~ <bes ges' bes> \slashedGrace <a f' a> \tuplet 3/2 { <a f' a>16 <aes fes' aes> <b g' b>] }
-		<aes fes' aes>4. \tuplet 3/2 { <b g' b>16 <c aes' c> <cis a' cis> }
-	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \beamCutR <g ees' g> \beamCutL <ges eeses' ges> <f des' f>]
-		\tuplet 3/2 { <e c' e>[ <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>]~ <e c' e>[ \beamCutR <ees ces' ees> \tuplet 3/2 { \beamCutL <d bes' d> <b g' b> <d bes' d>] }
-	\time 4/8
-	\tuplet 3/2 { <e c' e>[ <f bes' f> \beamCutR <gis e' gis> } \beamCutL <f bes' f> <e c' e>]
-		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \beamCutR <b g' b> } \tuplet 3/2 { \beamCutL <a f' a> <bes gis' bes> <cis a' cis>] }
-	\ottava #0
-	% mm. 316-327 - Rehersal 37
-	\mark #37
-	\time 2/4
-	\tempo "Mosso"
-	\ottava #1
-	<<
-		\new Voice {
-			\voiceOne
-			\repeat unfold 2 { <f, g>2
-				<des e>
-				<a b>
-			}
-			<c e>2
-			\ottava #0
-			<bis cis>
-			<fis gis>
-			\ottava #1
-			<c' e>
-			\ottava #0
-			<bis cis>
-			<fis gis>
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 2 {
-				<c' c'>8 <b b'>~ <b b'>16 <bes bes'> <a a'> <c c'>
-				<a a'>8 <aes aes'>4 <g g'>8
-				\tuplet 3/2 { <e e'>4 <g g'> <aes aes'> }
-			}
-			\repeat unfold 2 {
-				<a a'>8 <aes aes'>~ <aes aes'>16 <g g'> <fis fis'> <a a'>
-				<fis fis'>8 <f f'>4 <e e'>8
-				\tuplet 3/2 { <cis cis'>4 <e e'> <f f'> }
-			}
-		}
-	>>
-	% mm. 328-331
-	\time 4/4
-	\tempo "Calmato"
-	% WORKAROUND: Silent grace note to match left hand.
-	<<
-		\new Voice {
-			\voiceOne
-			\grace s8
-			% Supress the upper tuplet information. It just gets in the way of the ottava.
-			\omit TupletBracket \omit TupletNumber
-			\repeat unfold 2 { \tuplet 5/4 { <fis fis'>4 <g g'> \ottava #1 <cis cis'> <d d'> <gis gis'> \ottava #0 } }
-			\undo \omit TupletBracket \undo \omit TupletNumber
-		}
-		\new Voice {
-			\voiceTwo
-			\repeat unfold 2 { \tuplet 5/4 { fis,, g cis d gis } }
-		}
-	>>
-	\time 3/4
-	% QUESTION: These have to be tuples for the rhythm to work, but not printed as such. Added.
-	\omit TupletBracket
-	\change Staff = "solo_lower" \clef treble \tuplet 6/4 { r32 <cis,, fis a c>[ \change Staff = "solo_upper" fis' cis' fis g] } fis8
-	\change Staff = "solo_lower" \clef treble \tuplet 6/4 { r32 <cis, fis a c>[ \change Staff = "solo_upper" \ottava #1 fis' cis' fis g] } fis8
-	\undo \omit TupletBracket
-	\ottava #0 r4
-	R2.
-	\bar "|."
 }
 
-solo_dynamics_I_remain = {
+solo_dynamics_I_BM = {
 	% mm. 291-296 - Rehersal 33
 	s2*6
 	% mm. 297-300
 	s2*2 s2-\ff s2-\markup { \italic {rit.} }
-	% mm. 301-303 - Rehersal 34
-	s2.*3
-	% mm. 304-308 - Rehersal 35
-	s1 s4 s1 s4 s8 s1 s4 s1 s4 s1 s4
-	% mm. 309-315 - Rehersal 36
-	s1*4 s1*2 s2
-	% mm. 316-327 - Rehersal 37
-	s2*12
-	% mm. 328-331
-	s1*2 s2.\pp s2.
 }
 
-solo_lower_I_remain = \relative c,, {
+solo_lower_I_BM = \relative c,, {
 	% mm. 291-296 - Rehersal 33
 	\time 4/8
 	\clef bass
@@ -2558,12 +2424,43 @@ solo_lower_I_remain = \relative c,, {
 		\clef treble
 		\tuplet 5/4 { fis,[ c' fis c fis] } \tuplet 5/4 { c[ fis c' fis, c'] }
 		\tuplet 6/4 { fis, c' fis c fis c' }
+}
+
+
+%%% Section BN = mm. 301-303 (Rehersal 34)
+
+solo_upper_I_BN = \relative c''' {
+	% mm. 301-303 - Rehersal 34
+	% Copied from rehersal 1.
+	\time 6/8
+	\tempo "Tempo I"
+	\mark #34
+	\tuplet 4/3 { <b e gis b>8
+			<bes ees g bes>~ <bes ees g bes>16
+			<a a'> <gis gis'> <b b'> }
+	<gis cis e gis>8~ <gis cis e gis>16 <a a'> <bes bes'> <b b'>
+	\tuplet 4/3 { <c f a c>16. <b e gis b>32 <b e gis b>8~ <b e gis b>16
+			<bes ees g bes> <a a'> <c c'> }
+	\tuplet 4/3 { <a d fis a>8 <aes des f aes>~ <aes des f aes>16
+			<g g'> <fis fis'> <a a'> }
+	<fis b dis fis>8 <f b d f>4
+	\ottava #0
+	\stemUp <c fis a c>8
+	<d gis b d> <ees a c ees> \stemNeutral
+}
+
+solo_dynamics_I_BN = {
+	% mm. 301-303 - Rehersal 34
+	s2.*3
+}
+
+solo_lower_I_BN = \relative c,, {
 	% mm. 301-303 - Rehersal 34
 	% Copied from rehersal 1.
 	\time 6/8
 	\clef bass
 	\tuplet 18/12 {
-		\stemUp <fis,,,,, fis'>32 \stemDown cis''[ fis bes c cis
+		\stemUp <fis fis'>32 \stemDown cis''[ fis bes c cis
 		\clef treble
 		fis bes c bes c bes fis
 		\clef bass
@@ -2608,20 +2505,89 @@ solo_lower_I_remain = \relative c,, {
 		\ottava #1 ees'] \ottava #0 \change Staff = "solo_lower"
 	}
 	\stemNeutral
+}
+
+%%% Section BO = mm. 304-308 (Rehersal 35)
+
+solo_upper_I_BO = \relative c' {
+	% mm. 304-308 - Rehersal 35
+	\mark #35
+	\time 10/8
+	\stemUp r8 <e e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
+	\time 11/8
+	\ottava #1 r8 <g g'>[ <c c'> <d d'> <fis fis'> <g g'> <g, g'> <c c'> <d d'> <fis fis'> <g g'>] \ottava #0
+	\time 10/8
+	\stemUp r8 <e,, e'>[ <fis fis'> <b b'> <c c'> <e e'> <fis fis'> <g g'> <b b'> <c c'>] \stemNeutral
+	\change Staff = "solo_lower" <e,,, a>[ b' \change Staff = "solo_upper" d e g a d e g a]
+	\change Staff = "solo_lower" <e,, a>[ bes' \change Staff = "solo_upper" des ees ges aes bes cis ees aes]
+}
+
+solo_dynamics_I_BO = {
+	% mm. 304-308 - Rehersal 35
+	s1 s4 s1 s4 s8 s1 s4 s1 s4 s1 s4
+}
+
+solo_lower_I_BO = \relative c {
 	% mm. 304-308 - Rehersal 35
 	\time 10/8
-	r8 e,,,,[ fis b c \change Staff = "solo_upper" e fis g b c] \change Staff = "solo_lower"
+	r8 e[ fis b c \change Staff = "solo_upper" e fis g b c] \change Staff = "solo_lower"
 	\time 11/8
 	\clef treble r8 g[ c d fis g g, c d fis g]
 	\time 10/8
 	\clef bass r8 e,,[ fis b c \change Staff = "solo_upper" e fis g b c] \change Staff = "solo_lower"
 	\stemDown <e,,, a d>2~ <e a d>8 \stemNeutral <b e a>4 <a d g>~ <a d g>8
 	\stemDown <e' a d>4~ <e a d>8 \stemNeutral <c f bes>2 <bes ees aes>4~ <bes ees aes>8
-	% mm. 309-316 - Rehersal 36
+}
+
+%%% Section BP = mm. 309-315 (Rehersal 36)
+
+solo_upper_I_BP = \relative c''' {
+	% mm. 309-315 - Rehersal 36
 	\time 4/4
-	% FIXME: Perhaps regularize the clef transitions instead of mimicing PR? Same question as mm. 21-23.
-	% QUESTION: Also, are the opening Ds in measure 310 wrong? Should they be Bs?
-	<b, b'>16 f'''[ b ees \clef treble f fis b ees] f[ ees b fis f ees \clef bass b fis]
+	\mark #36
+	<<
+		\new Voice {
+			\voiceOne
+			\ottava #1
+			f8[ e~ e16 ees d f] d8 des4 c8
+			\ottava #0
+			b8 c4 des8~ des d ees e
+			\ottava #1
+			f8[ e~ e16 ees d f] d8 des4 c8
+			\ottava #0
+			fis8 f~ f16 e ees fis ees8 f g a
+		}
+		\new Voice {
+			\voiceTwo
+			c,8 b4 bes8 \tuplet 3/2 { bes[ a aes] } \tuplet 3/2 { g[ ges f] }
+			fis8 f~ f16 e ees fis d8 des4 c8
+			c'8 b4 bes8 \tuplet 3/2 { bes[ a aes] } \tuplet 3/2 { g[ ges f] }
+			\tuplet 3/2 { c'8 b bes } c16 cis c bes <d, g c>8 <e a d> <g b ees> <a cis f>
+		}
+	>>
+	\time 8/8
+	\tempo "Meno"
+	\ottava #1
+	<b g' b>8[ <bes ges' bes>~ <bes ges' bes> \slashedGrace <a f' a> \tuplet 3/2 { <a f' a>16 <aes fes' aes> <b g' b>] }
+		<aes fes' aes>4. \tuplet 3/2 { <b g' b>16 <c aes' c> <cis a' cis> }
+	<e c' e>[ <f des' f> <aes fes' aes>8]~ <aes fes' aes>16[ \beamCutR <g ees' g> \beamCutL <ges eeses' ges> <f des' f>]
+		\tuplet 3/2 { <e c' e>[ <f des' f> \beamCutR <gis e' gis> } \beamCutL <f des' f> <e c' e>]~ <e c' e>[ \beamCutR <ees ces' ees> \tuplet 3/2 { \beamCutL <d bes' d> <b g' b> <d bes' d>] }
+	\time 4/8
+	\tuplet 3/2 { <e c' e>[ <f bes' f> \beamCutR <gis e' gis> } \beamCutL <f bes' f> <e c' e>]
+		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \beamCutR <b g' b> } \tuplet 3/2 { \beamCutL <a f' a> <bes gis' bes> <cis a' cis>] }
+	\ottava #0
+}
+
+solo_dynamics_I_BP = {
+	% mm. 309-315 - Rehersal 36
+	s1*4 s1*2 s2
+}
+
+solo_lower_I_BP = \relative c,, {
+	% mm. 309-315 - Rehersal 36
+	\time 4/4
+	% EDIT: Perhaps regularize the clef transitions instead of mimicing PR? Same question as mm. 21-23.
+	<b b'>16 f'''[ b ees \clef treble f fis b ees] f[ ees b fis f ees \clef bass b fis]
 	<d, d'> f'[ b \clef treble ees f fis b ees] f[ ees b fis f ees \clef bass b fis]
 	<b,, b'> f''[ b \clef treble ees f fis b ees] f[ ees b fis f ees \clef bass b fis]
 	\tuplet 15/8 { <aes,, aes'> d'[ aes' ees' d, aes' \clef treble ees' d aes' ees' aes, d, ees \clef bass aes, d,] }
@@ -2635,12 +2601,61 @@ solo_lower_I_remain = \relative c,, {
 	\time 4/8
 	\tuplet 3/2 { <e c' e>[ <f bes' f> \beamCutR <gis e' gis> } \beamCutL <f bes' f> <e c' e>]
 		\tuplet 3/2 { <g ees' g>[ <gis e' gis> \beamCutR <b g' b> } \tuplet 3/2 { \beamCutL <a f' a> <bes gis' bes> <cis a' cis>] }
+}
+
+%%% Section BQ = mm. 316-327 (Rehersal 37)
+
+solo_upper_I_BQ = \relative c''' {
+	% mm. 316-327 - Rehersal 37
+	\mark #37
+	\time 2/4
+	\tempo "Mosso"
+	\ottava #1
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 { <f g>2
+				<des e>
+				<a b>
+			}
+			<c e>2
+			\ottava #0
+			<bis cis>
+			<fis gis>
+			\ottava #1
+			<c' e>
+			\ottava #0
+			<bis cis>
+			<fis gis>
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				<c' c'>8 <b b'>~ <b b'>16 <bes bes'> <a a'> <c c'>
+				<a a'>8 <aes aes'>4 <g g'>8
+				\tuplet 3/2 { <e e'>4 <g g'> <aes aes'> }
+			}
+			\repeat unfold 2 {
+				<a a'>8 <aes aes'>~ <aes aes'>16 <g g'> <fis fis'> <a a'>
+				<fis fis'>8 <f f'>4 <e e'>8
+				\tuplet 3/2 { <cis cis'>4 <e e'> <f f'> }
+			}
+		}
+	>>
+}
+
+solo_dynamics_I_BQ = {
+	% mm. 316-327 - Rehersal 37
+	s2*12
+}
+
+solo_lower_I_BQ =  \relative c, {
 	% mm. 316-327 - Rehersal 37
 	\time 2/4
-	% QUESTION: PR missing transition to bass clef. It's pretty obvious it should be there, and it's in the full score.
+	% EDIT: PR missing transition to bass clef. It's pretty obvious it should be there, and it's in the full score.
 	\clef bass
 	\repeat unfold 4 {
-		\tuplet 3/2 { fis,,,4 <cis' a> \clef treble <cis' fis> }
+		\tuplet 3/2 { fis4 <cis' a> \clef treble <cis' fis> }
 		\tuplet 3/2 { <a' c des> <cis, fis> \clef bass <cis, a'> }
 		<<
 			\new Voice {
@@ -2653,10 +2668,50 @@ solo_lower_I_remain = \relative c,, {
 			}
 		>>
 	}
+}
+
+%%% Section BR = mm. 328-331
+
+solo_upper_I_BR = \relative c'' {
 	% mm. 328-331
 	\time 4/4
-	% QUESTION: PR missing tied notse in 329 (they're in the full score)
-	\slashedGrace <fis cis'> <fis cis'>1~
+	\tempo "Calmato"
+	% WORKAROUND: Silent grace note to match left hand.
+	<<
+		\new Voice {
+			\voiceOne
+			\grace s8
+			% Supress the upper tuplet information. It just gets in the way of the ottava.
+			\omit TupletBracket \omit TupletNumber
+			\repeat unfold 2 { \tuplet 5/4 { <fis fis'>4 <g g'> \ottava #1 <cis cis'> <d d'> <gis gis'> \ottava #0 } }
+			\undo \omit TupletBracket \undo \omit TupletNumber
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { \tuplet 5/4 { fis,, g cis d gis } }
+		}
+	>>
+	\time 3/4
+	% QUESTION: These have to be tuples for the rhythm to work, but not printed as such. Added.
+	\omit TupletBracket
+	\change Staff = "solo_lower" \clef treble \tuplet 6/4 { r32 <cis,, fis a c>[ \change Staff = "solo_upper" fis' cis' fis g] } fis8
+	\change Staff = "solo_lower" \clef treble \tuplet 6/4 { r32 <cis, fis a c>[ \change Staff = "solo_upper" \ottava #1 fis' cis' fis g] } fis8
+	\undo \omit TupletBracket
+	\ottava #0 r4
+	R2.
+	\bar "|."
+}
+
+solo_dynamics_I_BR = {
+	% mm. 328-331
+	s1*2 s2.\pp s2.
+}
+
+solo_lower_I_BR = \relative c, {
+	% mm. 328-331
+	\time 4/4
+	% EDIT: PR missing tied notes in 329 (they're in the full score)
+	\slashedGrace <fis cis'>8 <fis cis'>1~
 	<fis cis'>
 	\time 3/4
 	s2 r4 R2.
@@ -2670,7 +2725,8 @@ solo_upper_I = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upp
 		\solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS \solo_upper_I_AT \solo_upper_I_AU \solo_upper_I_AV
 		\solo_upper_I_AW \solo_upper_I_AX \solo_upper_I_AY \solo_upper_I_AZ \solo_upper_I_BA \solo_upper_I_BB \solo_upper_I_BC
 		\solo_upper_I_BD \solo_upper_I_BE \solo_upper_I_BF \solo_upper_I_BG \solo_upper_I_BH \solo_upper_I_BI \solo_upper_I_BJ
-		\solo_upper_I_BK \solo_upper_I_BL \solo_upper_I_remain }
+		\solo_upper_I_BK \solo_upper_I_BL \solo_upper_I_BM \solo_upper_I_BN \solo_upper_I_BO \solo_upper_I_BP \solo_upper_I_BQ
+		\solo_upper_I_BR }
 solo_upper_I_limited = { \solo_upper_I_AA_AB \solo_upper_I_AC \solo_upper_I_AD \solo_upper_I_AE \solo_upper_I_AF
 		\solo_upper_I_AG \solo_upper_I_AH \solo_upper_I_AI \solo_upper_I_AJ \solo_upper_I_AK \solo_upper_I_AL
 		\solo_upper_I_AM \solo_upper_I_AN \solo_upper_I_AO_AP \solo_upper_I_AQ \solo_upper_I_AR \solo_upper_I_AS
@@ -2685,7 +2741,8 @@ solo_dynamics_I = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_
 		\solo_dynamics_I_AT \solo_dynamics_I_AU \solo_dynamics_I_AV \solo_dynamics_I_AW \solo_dynamics_I_AX \solo_dynamics_I_AY
 		\solo_dynamics_I_AZ \solo_dynamics_I_BA \solo_dynamics_I_BB \solo_dynamics_I_BC \solo_dynamics_I_BD \solo_dynamics_I_BE
 		\solo_dynamics_I_BF \solo_dynamics_I_BG \solo_dynamics_I_BH \solo_dynamics_I_BI \solo_dynamics_I_BJ \solo_dynamics_I_BK
-		\solo_dynamics_I_BL \solo_dynamics_I_remain }
+		\solo_dynamics_I_BL \solo_dynamics_I_BM \solo_dynamics_I_BN \solo_dynamics_I_BO \solo_dynamics_I_BP \solo_dynamics_I_BQ
+		\solo_dynamics_I_BR }
 solo_dynamics_I_limited = { \solo_dynamics_I_AA_AB \solo_dynamics_I_AC \solo_dynamics_I_AD \solo_dynamics_I_AE \solo_dynamics_I_AF
 		\solo_dynamics_I_AG \solo_dynamics_I_AH \solo_dynamics_I_AI \solo_dynamics_I_AJ \solo_dynamics_I_AK \solo_dynamics_I_AL
 		\solo_dynamics_I_AM \solo_dynamics_I_AN \solo_dynamics_I_AO_AP \solo_dynamics_I_AQ \solo_dynamics_I_AR \solo_dynamics_I_AS
@@ -2699,7 +2756,8 @@ solo_lower_I = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_low
 		\solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS \solo_lower_I_AT \solo_lower_I_AU \solo_lower_I_AV
 		\solo_lower_I_AW \solo_lower_I_AX \solo_lower_I_AY \solo_lower_I_AZ \solo_lower_I_BA \solo_lower_I_BB \solo_lower_I_BC
 		\solo_lower_I_BD \solo_lower_I_BE \solo_lower_I_BF \solo_lower_I_BG \solo_lower_I_BH \solo_lower_I_BI \solo_lower_I_BJ
-		\solo_lower_I_BK \solo_lower_I_BL \solo_lower_I_remain }
+		\solo_lower_I_BK \solo_lower_I_BL \solo_lower_I_BM \solo_lower_I_BN \solo_lower_I_BO \solo_lower_I_BP
+		\solo_lower_I_BQ \solo_lower_I_BR }
 solo_lower_I_limited = { \solo_lower_I_AA_AB \solo_lower_I_AC \solo_lower_I_AD \solo_lower_I_AE \solo_lower_I_AF
 		\solo_lower_I_AG \solo_lower_I_AH \solo_lower_I_AI \solo_lower_I_AJ \solo_lower_I_AK \solo_lower_I_AL
 		\solo_lower_I_AM \solo_lower_I_AN \solo_lower_I_AO_AP \solo_lower_I_AQ \solo_lower_I_AR \solo_lower_I_AS
