@@ -1920,6 +1920,107 @@ BassClarinet_mvmt_I_BL = \transpose c' bes \relative c''' {
 	}
 }
 
+%%% Section BM = mm. 291-300 (Rehersal 33)
+
+Clarinet_I_mvmt_I_BM = \transpose c' bes \relative c'' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*2
+	\tuplet 3/2 8 {
+		gis16[\mf gis r32 gis] gis8[ gis16] gis16[ gis r32 gis] gis8[ gis16]
+		\tempo "Stringendo sempre e cresc."
+		gis16[ gis r32 gis] gis8[ gis16] gis16[ gis r32 gis] r16 dis'\fff e
+		fis-^[ g r32 ais] ais8[ ais16] b-^[ a gis] a-^[ gis g]
+		fis-^[ g r32 ais] ais16[ b c] dis-^[ d c] d-^[ c b]
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 e,[ e] e8-^ e16 r16 fis fis fis-^[ fis fis] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 e[ e] e-^[ e e] }
+		r16_\markup \italic "rit." e[ e] e-^[ e e] e-^[ e e] e-^[ e-^ e-^]
+	}
+}
+
+Clarinet_II_mvmt_I_BM = \transpose c' bes \relative c' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r8 c16\mf }
+	\tuplet 3/2 8 {
+		c16[ c r32 c] c8[ c16] c16[ c r32 c] c8[ c16]
+		\tempo "Stringendo sempre e cresc."
+		c16[ c r32 c] c8[ c16] c16[ c r32 c] r16 dis'\fff e
+		fis-^[ g r32 ais] ais8[ ais16] b-^[ a gis] a-^[ gis g]
+		fis-^[ g r32 ais] ais16[ b c] dis-^[ d c] d-^[ c b]
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 dis,[ dis] dis8-^ dis16 r16 g g g-^[ g g] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 dis[ dis] dis-^[ dis dis] }
+		r16_\markup \italic "rit." dis[ dis] dis-^[ dis dis] dis-^[ dis dis] dis-^[ dis-^ dis-^]
+	}
+}
+
+Clarinet_III_mvmt_I_BM = \transpose c' bes \relative c' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r8 e16 }
+	\tuplet 3/2 8 {
+		\repeat unfold 2 { e-^[ e r32 e] e8[ e16] }
+		\tempo "Stringendo sempre e cresc."
+		\repeat unfold 2 { e-^[ e r32 e] e8[ e16] }
+		\repeat unfold 2 { b''-^[ b r32 b] b8[ b16] c-^[ c r32 c] c8[ c16] }
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 dis, e g8-^[ fis16] r16 dis e ais-^[ g fis] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 dis e dis'-^[ c b] }
+		r16_\markup \italic "rit." dis, e dis'-^[ c b] dis-^[ c b] dis-^[ c-^ b-^]
+	}
+}
+
+Clarinet_IV_mvmt_I_BM = \transpose c' bes \relative c' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r8 gis16 }
+	\tuplet 3/2 8 {
+		\repeat unfold 2 { gis-^[ gis r32 gis] gis8[ gis16] }
+		\tempo "Stringendo sempre e cresc."
+		\repeat unfold 2 { gis-^[ gis r32 gis] gis8[ gis16] }
+		\repeat unfold 2 { fis''-^[ fis r32 fis] fis8[ fis16] gis-^[ gis r32 gis] gis8[ gis16] }
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 dis e g8-^[ fis16] r16 dis e ais-^[ g fis] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 dis e dis'-^[ c b] }
+		r16_\markup \italic "rit." dis, e dis'-^[ c b] dis-^[ c b] dis-^[ c-^ b-^]
+	}
+}
+
+% FIXME: EH cues in first bar at least
+BassClarinet_mvmt_I_BM = \transpose c' bes, \relative c'' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r16\mf b c }
+	\tuplet 3/2 8 {
+		dis-^[ c r32 c] c16[ dis e] g-^[ e r32 dis] dis8 dis16
+		\tempo "Stringendo sempre e cresc."
+		e-^[ ees des] dis-^[ cis c] a[ c8-^] e, e16
+	}
+	\repeat unfold 2 { r4 \tuplet 3/2 8 { e16-^[ e r32 e] e8[ e16] } }
+	\tuplet 3/2 8 {
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 d[ d] d8-^[ d16] r16 f[ f] f-^[ f f] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 d[ d] d-^[ d d] }
+		r16_\markup \italic "rit." d[ d] d-^[ d d] d-^[ d d] d-^[ d-^ d-^]
+	}
+}
+
 %%% Final assembly
 
 Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \Clarinet_I_mvmt_I_AD \Clarinet_I_mvmt_I_AE \Clarinet_I_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG
@@ -1927,26 +2028,27 @@ Clarinet_I_mvmt_I = { \NULL_I_AA \Clarinet_I_mvmt_I_AB \NULL_I_AC \Clarinet_I_mv
 		\Clarinet_I_mvmt_I_AO \Clarinet_I_mvmt_I_AP \Clarinet_I_II_mvmt_I_AQ_AR \Clarinet_I_mvmt_I_AS \NULL_I_AT \Clarinet_I_mvmt_I_AU
 		\Clarinet_I_mvmt_I_AV \NULL_I_AW \Clarinet_I_II_mvmt_I_AX \Clarinet_I_mvmt_I_AY \NULL_I_AZ \Clarinet_I_mvmt_I_BA \Clarinet_I_mvmt_I_BB
 		\Clarinet_I_mvmt_I_BC \Clarinet_I_mvmt_I_BD \Clarinet_I_mvmt_I_BE \Clarinet_I_mvmt_I_BF \Clarinet_I_mvmt_I_BG \Clarinet_I_mvmt_I_BH
-		\Clarinet_I_mvmt_I_BI \Clarinet_I_II_C_mvmt_I_BJ \Clarinet_I_mvmt_I_BK \Clarinet_I_mvmt_I_BL }
+		\Clarinet_I_mvmt_I_BI \Clarinet_I_II_C_mvmt_I_BJ \Clarinet_I_mvmt_I_BK \Clarinet_I_mvmt_I_BL \Clarinet_I_mvmt_I_BM }
 Clarinet_II_mvmt_I = { \NULL_I_AA \Clarinet_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Clarinet_II_mvmt_I_AF \Clarinet_I_II_mvmt_I_AG \Clarinet_II_mvmt_I_AH
 		\NULL_I_AI \NULL_I_AJ \Clarinet_other_mvmt_I_AK \Clarinet_II_mvmt_I_AL \Clarinet_II_mvmt_I_AM \Clarinet_I_II_mvmt_I_AN \Clarinet_II_mvmt_I_AO
 		\Clarinet_II_mvmt_I_AP \Clarinet_I_II_mvmt_I_AQ_AR \Clarinet_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Clarinet_I_II_mvmt_I_AX
 		\NULL_I_AY \NULL_I_AZ \Clarinet_II_mvmt_I_BA \NULL_I_BB \Clarinet_II_mvmt_I_BC \Clarinet_II_mvmt_I_BD \Clarinet_II_mvmt_I_BE \Clarinet_II_mvmt_I_BF
-		\Clarinet_II_mvmt_I_BG \Clarinet_II_mvmt_I_BH \Clarinet_II_mvmt_I_BI \Clarinet_I_II_C_mvmt_I_BJ \Clarinet_II_mvmt_I_BK \Clarinet_II_mvmt_I_BL }
+		\Clarinet_II_mvmt_I_BG \Clarinet_II_mvmt_I_BH \Clarinet_II_mvmt_I_BI \Clarinet_I_II_C_mvmt_I_BJ \Clarinet_II_mvmt_I_BK \Clarinet_II_mvmt_I_BL
+		\Clarinet_II_mvmt_I_BM }
 Clarinet_III_mvmt_I = { \NULL_I_AA \Clarinet_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_III_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
 		\Clarinet_III_mvmt_I_AH \Clarinet_I_III_mvmt_I_AI_AJ \Clarinet_other_mvmt_I_AK \Clarinet_III_mvmt_I_AL \Clarinet_III_mvmt_I_AM \Clarinet_III_mvmt_I_AN
 		\Clarinet_III_mvmt_I_AO \Clarinet_III_mvmt_I_AP \NULL_I_AQ \Clarinet_III_IV_mvmt_I_AR \Clarinet_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV
 		\NULL_I_AW \Clarinet_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Clarinet_III_mvmt_I_BA \NULL_I_BB \Clarinet_III_IV_mvmt_I_BC \Clarinet_III_IV_mvmt_I_BD
 		\Clarinet_III_mvmt_I_BE \Clarinet_III_mvmt_I_BF \Clarinet_III_mvmt_I_BG \Clarinet_III_mvmt_I_BH \NULL_I_BI \Clarinet_III_IV_C_mvmt_I_BJ
-		\Clarinet_III_mvmt_I_BK \Clarinet_III_mvmt_I_BL }
+		\Clarinet_III_mvmt_I_BK \Clarinet_III_mvmt_I_BL \Clarinet_III_mvmt_I_BM }
 Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Clarinet_III_IV_mvmt_I_AE \Clarinet_IV_mvmt_I_AF \Clarinet_III_IV_mvmt_I_AG
 		\Clarinet_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Clarinet_other_mvmt_I_AK \Clarinet_IV_mvmt_I_AL \Clarinet_IV_mvmt_I_AM \Clarinet_IV_mvmt_I_AN
 		\Clarinet_IV_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Clarinet_III_IV_mvmt_I_AR \Clarinet_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Clarinet_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Clarinet_IV_mvmt_I_BA \NULL_I_BB \Clarinet_III_IV_mvmt_I_BC \Clarinet_III_IV_mvmt_I_BD
 		\NULL_I_BE \Clarinet_IV_mvmt_I_BF \Clarinet_IV_mvmt_I_BG \NULL_I_BH \NULL_I_BI \Clarinet_III_IV_C_mvmt_I_BJ \Clarinet_IV_mvmt_I_BK
-		\Clarinet_IV_mvmt_I_BL }
+		\Clarinet_IV_mvmt_I_BL \Clarinet_IV_mvmt_I_BM }
 BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \BassClarinet_mvmt_I_AK \NULL_I_AL \NULL_I_AM \BassClarinet_mvmt_I_AN \BassClarinet_mvmt_I_AO \NULL_I_AP \BassClarinet_mvmt_I_AQ_AR
 		\BassClarinet_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \BassClarinet_mvmt_I_AX \BassClarinet_mvmt_I_AY \NULL_I_AZ
 		\BassClarinet_mvmt_I_BA \NULL_I_BB \BassClarinet_mvmt_I_BC \NULL_I_BD \NULL_I_BE \BassClarinet_mvmt_I_BF \BassClarinet_mvmt_I_BG
-		\BassClarinet_mvmt_I_BH \NULL_I_BI \NULL_I_BJ \NULL_I_BK \BassClarinet_mvmt_I_BL }
+		\BassClarinet_mvmt_I_BH \NULL_I_BI \NULL_I_BJ \NULL_I_BK \BassClarinet_mvmt_I_BL \BassClarinet_mvmt_I_BM }

@@ -9,7 +9,7 @@ redux_upper_I_AA_AB = \relative c' {
 	\tempo "Moderato assai"
 	% mm. 1-4
 	fis4 c'4. a8~
-	% EDIT: Rhythm doesn't match orcestral version. Just leaving it alone.
+	% EDIT: Rhythm doesn't match orchestral version. Just leaving it alone.
 	a fis \tuplet 3/2 { f d gis } b8. es16
 	c2.~ c2.\fermata
 	% m. 5
@@ -93,7 +93,6 @@ redux_dynamics_I_AA_AB = {
 }
 
 redux_lower_I_AA_AB = \relative c, {
-	\set Staff.midiInstrument = #"electric piano 1"
 	\clef bass
 	\time 3/4
 	% mm. 1-4

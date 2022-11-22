@@ -1705,21 +1705,132 @@ Bass_mvmt_I_BL = \relative c' {
 	>>
 }
 
+%%% Section BM = mm. 291-300 (Rehersal 33)
+
+Cello_divisi_I_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	\tuplet 3/2 8 { \tag #'Score d16[^\Div_mark \tag #'Part d16[\pp d r32 d32] d8-.[ d16] }
+	\repeat unfold 5 {
+		\tuplet 3/2 8 { d16[ d r32 d32] d8-.[ d16] }
+	}
+	\tempo "Stringendo sempre e cresc."
+	\repeat unfold 2 { \tuplet 3/2 8 { d16[ d r32 d32] d8-.[ d16] } }
+	\repeat unfold 2 {
+		\tuplet 3/2 8 { f16[ f r32 f32] f8-.[ f16] d16[ d r32 d32] d8-.[ d16] }
+	}
+	\tempo "Stretto"
+	\tuplet 3/2 8 { \tag #'Score fis,16[ \tag #'Part fis16[\ff fis fis] fis[ fis fis] a[ a a] a[ a a] }
+	\tuplet 3/2 8 { fis16[ fis fis] fis[ fis fis] a[ a a] a[ a a] }
+	\tempo "Molto Agitato"
+	\repeat unfold 8 { \tuplet 3/2 { c,[ c c] } }
+}
+
+Cello_divisi_II_separate_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	\tuplet 3/2 8 { c16[\pp fis, r32 c'32] c8-.[ c16] }
+	\repeat unfold 7 {
+		\tuplet 3/2 8 { c16[ fis, r32 c'32] c8-.[ c16] }
+	}
+	\repeat unfold 2 {
+		\tuplet 3/2 8 { ees16[ ees r32 ees32] ees8-.[ ees16] c16[ fis, r32 c'32] c8-.[ c16] }
+	}
+	\tempo "Stretto"
+	\tuplet 3/2 8 { c,16[\ff c c] c[ c c] ees[ ees ees] ees ees ees] }
+	\tuplet 3/2 8 { c16[ c c] c[ c c] ees[ ees ees] ees ees ees] }
+	\tempo "Molto Agitato"
+	\repeat unfold 8 { \tuplet 3/2 { c[ c c] } }
+}
+
+Cello_mvmt_I_BM = {
+	\tag #'Score <<
+		\new Voice {
+			\voiceOne
+			\Cello_divisi_I_mvmt_I_BM
+		}
+		\new Voice {
+			\voiceTwo
+			\Cello_divisi_II_separate_mvmt_I_BM
+		}
+	>>
+	\tag #'Part \Cello_divisi_I_mvmt_I_BM
+}
+
+Cello_divisi_II_mvmt_I_BM = { \tag #'Score \NULL_I_BM \tag #'Part \Cello_divisi_II_separate_mvmt_I_BM }
+
+% FIXME: revisit splitting part at least with a divisi staff.
+Bass_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	\stemDown
+	\tuplet 3/2 8 { c16[\pp fis r32 c32] c8[ c16] }
+	\repeat unfold 3 {
+		\tuplet 3/2 8 { c16[ fis r32 c32] c8[ c16] }
+	}
+	\stemNeutral
+	<<
+		\new Voice {
+			\voiceOne
+			\tuplet 3/2 8 { fis16[^\Div_mark fis, r32 fis'32] fis8[ fis16]
+				fis16[ fis, r32 fis'32] fis8[ fis16] }
+			\tempo "Stringendo sempre e cresc."
+			\repeat unfold 2 {
+				\tuplet 3/2 8 { fis16[ fis, r32 fis'32] fis8[ fis16] }
+			}
+			\repeat unfold 2 {
+				\tuplet 3/2 8 { a16[ ees r32 a32] a8[ a16] c,16[ fis r32 c32] c8[ c16] }
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 4 {
+				\tuplet 3/2 8 { c16[ fis, r32 c'32] c8[ c16] }
+			}
+			\repeat unfold 2 {
+				\tuplet 3/2 8 { a16[ ees' r32 a,32] a8[ a16] c16[ fis r32 c32] c8[ c16] }
+			}
+		}
+	>>
+	\tempo "Stretto"
+	\tuplet 3/2 8 { fis,16[\ff^\Unis_mark c' fis,] c'[ fis, c'] a[ ees' a,] ees'[ a, ees']
+		fis,16[ c' fis,] c'[ fis, c'] a[ ees' a,] ees'[ a, ees'] }
+	\tempo "Molto Agitato"
+	<<
+		\new Voice {
+			\voiceOne
+			\tuplet 3/2 8 { fis,16[^\Div_mark fis fis] }
+			\repeat unfold 7 {
+				\tuplet 3/2 8 { fis16[ fis fis] }
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 8 { c16[\ff fis c] fis[ c fis] c16[ fis c] fis[ c fis] }
+			\tuplet 3/2 8 { c16[_\markup \italic "rit." fis c] fis[ c fis] c16[ fis c] fis[ c fis] }
+		}
+	>>
+}
+
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
 		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM \Cello_mvmt_I_AN \Cello_mvmt_I_AO \Cello_mvmt_I_AP
 		\NULL_I_AQ \Cello_mvmt_I_AR \Cello_mvmt_I_AS \NULL_I_AT \Cello_mvmt_I_AU \Cello_mvmt_I_AV \Cello_mvmt_I_AW \Cello_mvmt_I_AX
 		\Cello_mvmt_I_AY \Cello_mvmt_I_AZ \Cello_mvmt_I_BA \Cello_mvmt_I_BB \Cello_mvmt_I_BC \Cello_mvmt_I_BD \Cello_mvmt_I_BE
-		\Cello_mvmt_I_BF \Cello_mvmt_I_BG \Cello_mvmt_I_BH \Cello_mvmt_I_BI \Cello_mvmt_I_BJ \Cello_mvmt_I_BK \Cello_mvmt_I_BL }
+		\Cello_mvmt_I_BF \Cello_mvmt_I_BG \Cello_mvmt_I_BH \Cello_mvmt_I_BI \Cello_mvmt_I_BJ \Cello_mvmt_I_BK \Cello_mvmt_I_BL
+		\Cello_mvmt_I_BM }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
 		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR
 		\Cello_divisi_II_mvmt_I_AS \NULL_I_AT \Cello_divisi_II_mvmt_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA
 		\NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \Cello_divisi_II_mvmt_I_BF \Cello_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI
-		\Cello_divisi_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL }
+		\Cello_divisi_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL \Cello_divisi_II_mvmt_I_BM }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
 		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN \Bass_mvmt_I_AO \Bass_mvmt_I_AP
 		\NULL_I_AQ \NULL_I_AR \Bass_mvmt_I_AS \NULL_I_AT \Bass_mvmt_I_AU \Bass_mvmt_I_AV \Bass_mvmt_I_AW \Bass_mvmt_I_AX \Bass_mvmt_I_AY
 		\Bass_mvmt_I_AZ \Bass_mvmt_I_BA \Bass_mvmt_I_BB \Bass_mvmt_I_BC \Bass_mvmt_I_BD \Bass_mvmt_I_BE \Bass_mvmt_I_BF \Bass_mvmt_I_BG
-		\Bass_mvmt_I_BH \Bass_mvmt_I_BI \Bass_mvmt_I_BJ \Bass_mvmt_I_BK \Bass_mvmt_I_BL }
+		\Bass_mvmt_I_BH \Bass_mvmt_I_BI \Bass_mvmt_I_BJ \Bass_mvmt_I_BK \Bass_mvmt_I_BL \Bass_mvmt_I_BM }

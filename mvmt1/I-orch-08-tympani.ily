@@ -512,15 +512,50 @@ Tympani_I_mvmt_I_BK = \relative c {
 %%% Section BL = mm. 281-290 (Rehersal 31/32)
 %%% Tacet
 
+%%% Section BM = mm. 291-300 (Rehersal 33)
+
+Tympani_I_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*3
+	\tempo "Stringendo sempre e cresc."
+	R2
+	\tuplet 3/2 8 { a16\mf ees' r a,8 a16 } r4
+	\tuplet 3/2 8 { a16 ees' r a,8 a16 } r4
+	\tempo "Stretto"
+	\repeat unfold 2 { r4 \tuplet 3/2 8 { a16[ ees' a,] ees'[ a, ees'] } }
+	\tempo "Molto Agitato"
+	R2*2
+}
+
+Tympani_II_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	c8\p \tuplet 3/2 { c8[ c16] }
+		\repeat unfold 3 { c8 \tuplet 3/2 { c8[ c16] } }
+	\tuplet 3/2 8 { c16 fis, r c'8 c16 c fis, r c'8 c16 }
+	\tempo "Stringendo sempre e cresc."
+	\tuplet 3/2 8 { c16 fis, r c'8 c16 c fis, r c'8 c16 }
+	r4 \tuplet 3/2 8 { c16\mf fis, r c'8 c16 }
+	r4 \tuplet 3/2 8 { c16 fis, r c'8 c16 }
+	\tempo "Stretto"
+	\repeat unfold 2 { \tuplet 3/2 8 { c16[ fis, c'] fis,[ c' fis,] } r4 }
+	\tempo "Molto Agitato"
+	\repeat unfold 4 { \tuplet 3/2 { <fis c'>16[ q q16] } }
+	\tuplet 3/2 8 { q16[_\markup \italic "rit." q q] q[ q q] q[ q q] q[ q q] }
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
 		\Tympani_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_I_mvmt_I_AK \NULL_I_AL \Tympani_I_mvmt_I_AM \NULL_I_AN \Tympani_I_mvmt_I_AO
 		\NULL_I_AP \NULL_I_AQ \Tympani_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Tympani_I_mvmt_I_AX \NULL_I_AY
 		\NULL_I_AZ \Tympani_I_mvmt_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \Tympani_I_mvmt_I_BF \Tympani_I_mvmt_I_BG
-		\Tympani_I_mvmt_I_BH \NULL_I_BI \Tympani_I_mvmt_I_BJ \Tympani_I_mvmt_I_BK \NULL_I_BL }
+		\Tympani_I_mvmt_I_BH \NULL_I_BI \Tympani_I_mvmt_I_BJ \Tympani_I_mvmt_I_BK \NULL_I_BL \Tympani_I_mvmt_I_BM }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
 		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN
 		\Tympani_II_mvmt_I_AO \Tympani_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Tympani_II_mvmt_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \Tympani_II_mvmt_I_BG
-		\Tympani_II_mvmt_I_BH \Tympani_II_mvmt_I_BI \Tympani_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL }
+		\Tympani_II_mvmt_I_BH \Tympani_II_mvmt_I_BI \Tympani_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL \Tympani_II_mvmt_I_BM }

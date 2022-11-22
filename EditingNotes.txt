@@ -655,8 +655,55 @@ like score.
 mm. 283-284: Oboe III/IV parts incorrectly written as tuplets. Going with score.
 (I-orch-02-oboes)
 
-m. 290: "molto dim" in score and some parts, should proabably make it universal. #UNIMPLEMENTED
+m. 290: "molto dim" in score and some parts, make it universal. Exact placement is debatable,
+going with second beat to match score. Not implemented yet; holding out for upgrade to
+newer lilypond for the new "after" trick. #UNIMPLEMENTED
 (I-orch-*)
+
+m. 291: The score and parts have "meno allegro"; this never made it into the PR. #TEMPO
+(I-orch-*)
+
+m. 291-296: Violin I has an accent/dot structure in these bars which isn't in the score. See if
+other parts have it. Cello has staccato dots but not accents. Flutes have dots.
+
+m. 294: Oboe I/II copyist reworked the first beat of this bar. Score is as follows: "d des ces
+cis b bes", parts have "d cis b cis b bes". Oboe III matches the score. Going with score.
+(I-orch-02-oboes)
+
+m. 294: English Horn fourth beat has a nonsensical rhythm in both score and part. Even if it's
+not a triplet, the X8 R16 X16 pattern doesn't fit. Furthermore, it's the only instrument which
+even *has* a rhythmic pattern like that. I'm going on the assumption that it's supposed to
+be different, and align vertically with the rest of the score. X16 R16 X16 it is.
+(I-orch-02-oboes)
+
+m. 294: Bassoon I/II in the score split into two notes on the last beat, and the II part seems
+to have been written this way, but at some point the d was scratched out and replaced with b-flats
+like Bassoon I. Right now following parts, but should review this one. #UNDECIDED
+(I-orch-04-bassoons)
+
+m. 295-296: Trumpet I/II part shows only II playing for these bars, but the score has an "a 2"
+written in; it may be a later addition, since the stems on those notes are pointed down, like
+you'd expect for solo II. Trumpet III/IV part is the same way, but the score does not have "a 2"
+and there are written rests to represent III. Will go with parts for now but should review.
+#UNDECIDED
+(I-orch-05-trumpets)
+
+m. 297-300: Flutes have slurs not in any other part, but in score. Trumpets have similiar slurs
+in parts, but not score. Remove? Adjust flutes to work like trumpets? #UNDECIDED
+(I-orch-01-flutes, I-orch-05-trumpets)
+
+m. 300: Violin I has three accents on the last three notes. Score backs the rest of the accents
+but not those. Many wind parts have the same accents, but lower strings and tympani don't. Just
+going part-by-part for now but will probably want to figure this out when I go over the rest of this
+section later. #UNDECIDED
+(I-orch-*)
+
+m. 300: Trumpet III/IV part has an accent structure that doesn't match anybody else. Adjusting to
+match I/II.
+(I-orch-05-trumpets)
+
+m. 303: Some of the parts have this measure as 3/4, like the original passage in m. 15. The score
+changed it to 6/8, and PR agrees.
 
 mm. 309-311: Solo piano; same questions about clef transitions as mm. 21-23.
 (I-solo-piano)

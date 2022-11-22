@@ -1724,6 +1724,92 @@ Bassoon_All_cues_mvmt_I_BL = \relative c' {
 	}
 }
 
+%%% Section BM = mm. 291-300 (Rehersal 33)
+
+%%% EDIT: Bassoon II in score has one difference from part, but part seems adjusted. Not sure about this.
+Bassoon_I_II_mvmt_I_BM = \relative c' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r16\mf a bes }
+	\tuplet 3/2 8 {
+		cis-^[( bes) r32 bes] bes16[ cis d] f-^[( d) r32 cis] cis8[ cis16]
+		\tempo "Stringendo sempre e cresc."
+		d-^[ des ces] cis-^[ b bes] g[ bes8-^] bes8[ bes16]
+	}
+	\clef tenor
+	\repeat unfold 2 { \tuplet 3/2 8 { a'16-^[ a r32 a] a8[ a16] } r4 }
+	\tempo "Stretto"
+	\tuplet 3/2 8 {
+		\repeat unfold 2 { r16 cis,[ d] f8-^[ e16] r16 cis[ d] gis-^[ f e] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 cis[ d] cis'-^[ bes a] }
+		r16_\markup \italic "rit." cis,[ d] cis'-^[ bes a] cis-^[ bes a] cis-^[ bes-^ a-^]
+	}
+}
+
+Bassoon_III_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r8\mf d16 }
+	\tuplet 3/2 8 {
+		\repeat unfold 2 { d8. d8[ d16] }
+		\tempo "Stringendo sempre e cresc."
+		d8. d8[ d16] d8. r16 cis d
+		e[ f r32 gis] gis8[ gis16] a[ gis fis] gis[ fis f]
+		e[ f r32 gis] gis16[ a bes] cis[ c bes] c[ bes a]
+		\tempo "Stretto"
+		\repeat unfold 2 { fis,8[ fis16] fis8[ fis16] a8[ a16] a8[ a16] }
+		\tempo "Molto Agitato"
+		\repeat unfold 4 { c,8[ c16] }
+		c8[_\markup \italic "rit." c16] c8[ c16] c8[ c16] c[ c c]
+	}
+}
+
+Bassoon_IV_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r8\mf c16 }
+	\tuplet 3/2 8 {
+		\repeat unfold 2 { c fis, r16 c'8[ c16] }
+		\tempo "Stringendo sempre e cresc."
+		c fis, r16 c'8[ c16] c fis, r16 r16 cis' d
+		e[ f r32 gis] gis8[ gis16] a[ gis fis] gis[ fis f]
+		e[ f r32 gis] gis16[ a bes] cis[ c bes] c[ bes a]
+		\tempo "Stretto"
+		\repeat unfold 2 { c,,8[ c16] c8[ c16] ees8[ ees16] ees8[ ees16] }
+		\tempo "Molto Agitato"
+		\repeat unfold 4 { c8[ c16] }
+		c8[_\markup \italic "rit." c16] c8[ c16] c8[ c16] c[ c c]
+	}
+}
+
+Contrabassoon_mvmt_I_BM = \relative c {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	r4 r8 \tuplet 3/2 { r8\mf c16 }
+	\tuplet 3/2 8 {
+		c16[ fis,] r16 c'8. c16[ fis,] r16 c'8.
+		\tempo "Stringendo sempre e cresc."
+		c16[ fis,] r16 c'8. c16[ fis,] r16 c'8[ c16]
+		\repeat unfold 2 { a[ ees' r32 a,] a8[ a16] c[ fis r32 c] c8[ c16] }
+	}
+	\tempo "Stretto"
+	R2*2
+	\tuplet 3/2 8 {
+		\tempo "Molto Agitato"
+		\repeat unfold 4 { fis,8[ fis16] }
+		fis8[_\markup \italic "rit." fis16] fis8[ fis16] fis8[ fis16] fis[ fis fis]
+	}
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
@@ -1731,28 +1817,28 @@ Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mv
 		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_I_mvmt_I_AS \NULL_I_AT \Bassoon_I_Contra_mvmt_I_AU
 		\Bassoon_I_mvmt_I_AV \NULL_I_AW \Bassoon_I_II_mvmt_I_AX \Bassoon_I_mvmt_I_AY \NULL_I_AZ \Bassoon_I_mvmt_I_BA \NULL_I_BB
 		\Bassoon_I_mvmt_I_BC \Bassoon_I_mvmt_I_BD \NULL_I_BE \Bassoon_I_mvmt_I_BF \Bassoon_I_mvmt_I_BG \Bassoon_I_mvmt_I_BH
-		\Bassoon_I_mvmt_I_BI \Bassoon_I_mvmt_I_BJ \Bassoon_I_II_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL }
+		\Bassoon_I_mvmt_I_BI \Bassoon_I_mvmt_I_BJ \Bassoon_I_II_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL \Bassoon_I_II_mvmt_I_BM }
 Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
 		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_II_mvmt_I_AM \Bassoon_II_mvmt_I_AN
 		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Bassoon_I_II_mvmt_I_AX \Bassoon_II_mvmt_I_AY \NULL_I_AZ \Bassoon_II_mvmt_I_BA \NULL_I_BB \Bassoon_II_mvmt_I_BC \Bassoon_II_mvmt_I_BD
 		\NULL_I_BE \Bassoon_II_mvmt_I_BF \Bassoon_II_mvmt_I_BG \Bassoon_II_mvmt_I_BH \Bassoon_II_mvmt_I_BI \Bassoon_II_mvmt_I_BJ
-		\Bassoon_I_II_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL }
+		\Bassoon_I_II_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL \Bassoon_I_II_mvmt_I_BM }
 Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_III_mvmt_I_AM \Bassoon_III_mvmt_I_AN
 		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_III_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Bassoon_III_mvmt_I_AV
 		\NULL_I_AW \Bassoon_III_IV_mvmt_I_AX \Bassoon_III_mvmt_I_AY \NULL_I_AZ \Bassoon_III_mvmt_I_BA \NULL_I_BB \Bassoon_III_mvmt_I_BC
 		\Bassoon_III_mvmt_I_BD \NULL_I_BE \Bassoon_III_mvmt_I_BF \Bassoon_III_mvmt_I_BG \Bassoon_III_mvmt_I_BH \Bassoon_III_mvmt_I_BI
-		\Bassoon_III_mvmt_I_BJ \Bassoon_III_IV_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL }
+		\Bassoon_III_mvmt_I_BJ \Bassoon_III_IV_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL \Bassoon_III_mvmt_I_BM }
 Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_IV_mvmt_I_AM \NULL_I_AN \Bassoon_all_mvmt_I_AO
 		\NULL_I_AP \Bassoon_IV_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Bassoon_III_IV_mvmt_I_AX
 		\Bassoon_IV_mvmt_I_AY \NULL_I_AZ \Bassoon_IV_mvmt_I_BA \NULL_I_BB \Bassoon_IV_mvmt_I_BC \Bassoon_IV_mvmt_I_BD \NULL_I_BE
 		\Bassoon_IV_mvmt_I_BF \Bassoon_IV_mvmt_I_BG \NULL_I_BH \Bassoon_IV_mvmt_I_BI \Bassoon_IV_mvmt_I_BJ \Bassoon_III_IV_mvmt_I_BK
-		\Bassoon_All_cues_mvmt_I_BL }
+		\Bassoon_All_cues_mvmt_I_BL \Bassoon_IV_mvmt_I_BM }
 Contrabassoon_mvmt_I = { \clef bass \NULL_I_AA \Contrabassoon_mvmt_I_AB \NULL_I_AC \Contrabassoon_mvmt_I_AD_AE \Contrabassoon_mvmt_I_AF \NULL_I_AG
 		\Contrabassoon_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Contrabassoon_mvmt_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ
 		\NULL_I_AR \Bassoon_cues_mvmt_I_AS \Contrabassoon_mvmt_I_AT \Bassoon_I_Contra_mvmt_I_AU \Contrabassoon_mvmt_I_AV \NULL_I_AW
 		\Contrabassoon_mvmt_I_AX \Contrabassoon_mvmt_I_AY \NULL_I_AZ \Contrabassoon_mvmt_I_BA \NULL_I_BB \Contrabassoon_mvmt_I_BC
 		\Contrabassoon_mvmt_I_BD \NULL_I_BE \Contrabassoon_mvmt_I_BF \Contrabassoon_mvmt_I_BG \NULL_I_BH \NULL_I_BI \Contrabassoon_mvmt_I_BJ
-		\NULL_I_BK \Bassoon_All_cues_mvmt_I_BL }
+		\NULL_I_BK \Bassoon_All_cues_mvmt_I_BL \Contrabassoon_mvmt_I_BM }

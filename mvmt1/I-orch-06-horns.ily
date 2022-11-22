@@ -1389,6 +1389,7 @@ Horn_II_mvmt_I_BJ = \transpose c' f \relative c' {
 	r4 f2 r4 f8~
 	\time 6/8
 	f4. r4 f8~
+	\time 9/8
 	f4. r4 f2
 	\time 4/8
 	r4 f
@@ -1571,37 +1572,150 @@ Horn_IV_mvmt_I_BL = \transpose c' f \relative c' {
 	r4 d2
 }
 
+%%% Section BM = mm. 291-300 (Rehersal 33)
+
+Horn_I_mvmt_I_BM = \transpose c' f \relative c'' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*3
+	\tempo "Stringendo sempre e cresc."
+	r4 r8 \tuplet 3/2 { r16\mf gis a }
+	\tuplet 3/2 8 {
+		b-^[ c r32 dis] dis8[ dis16] e-^[ dis cis] dis-^[ cis c]
+		b-^[ c r32 dis] dis16[ e f] gis-^[ g f] g-^[ f e]
+		\tempo "Stretto"
+		\partCombineApart
+		\repeat unfold 2 { r16 gis,[ a] c8-^[ b16] r16 gis[ a] dis-^[ c b] }
+		\partCombineAutomatic
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 gis[ a] gis'-^[ f e] }
+		\tag #'Score r16 \tag #'Part r16_\markup \italic "rit." gis,[ a] gis'-^[ f e] gis-^[ f e] gis-^[ f-^ e-^]
+	}
+}
+
+Horn_II_mvmt_I_BM = \transpose c' f \relative c'' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*3
+	\tempo "Stringendo sempre e cresc."
+	r4 r8 \tuplet 3/2 { r16\mf gis a }
+	\tuplet 3/2 8 {
+		b-^[ c r32 dis] dis8[ dis16] e-^[ dis cis] dis-^[ cis c]
+		b-^[ c r32 dis] dis16[ e f] gis-^[ g f] g-^[ f e]
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 a,[ a] a8-^[ a16] r16 gis[ gis] gis8-^[ gis16] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 a[ a] a8-^[ a16] }
+	}
+	r16_\markup \italic "rit." a~ a[ a]~ a[ a]~ a[ a]
+}
+
+Horn_III_mvmt_I_BM = \transpose c' f \relative c'' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*3
+	\tempo "Stringendo sempre e cresc."
+	R2
+	\tuplet 3/2 8 {
+		gis16\mf gis r16 gis8-^[ gis16] f f r16 f8-^[ f16]
+		gis16 gis r16 gis8-^[ gis16] f f r16 f8-^[ f16]
+		\tempo "Stretto"
+		r16\f cis' cis cis8-^[ cis16] r16 gis' gis gis8-^[ gis16]
+		r16 cis, cis cis8-^[ cis16] r16 gis' gis gis8-^[ gis16]
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 cis, cis cis8-^[ cis16] }
+	}
+	\tag #'Score r16 \tag #'Part r16_\markup \italic "rit." cis16~ cis[ cis]~ cis[ cis]~ cis[ cis]
+}
+
+Horn_IV_mvmt_I_BM = \transpose c' f \relative c'' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*3
+	\tempo "Stringendo sempre e cresc."
+	R2
+	\tuplet 3/2 8 {
+		c16\mf c r16 c8-^[ c16] cis cis r16 cis8-^[ cis16]
+		c16 c r16 c8-^[ c16] cis cis r16 cis8-^[ cis16]
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 gis[ a] c8-^[ b16] r16 gis[ a] dis-^[ c b] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 gis[ a] gis'-^[ f e] }
+		r16_\markup \italic "rit." gis,[ a] gis'-^[ f e] gis-^[ f e] gis-^[ f-^ e-^]
+	}
+}
+
+Horn_V_mvmt_I_BM = \transpose c' f \relative c' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*3
+	\tempo "Stringendo sempre e cresc."
+	R2
+	\tuplet 3/2 8 {
+		e16\mf e r16 e8[ e16] cis'16 cis r16 cis8-^ cis16
+		e,16 e r16 e8[ e16] cis'16 cis r16 cis8-^ cis16
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 f[ f] f8-^[ f16] r16 e[ e] e8-^[ e16] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 f[ f] f8-^[ f16] }
+	}
+	r16 f16~ f[ f]~ f[ f]~ f[ f]
+}
+
+Horn_VI_mvmt_I_BM = \transpose c' f \relative c' {
+	\mark #33
+	\time 4/8
+	\tag #'Score \grace s8
+	R2*3
+	\tempo "Stringendo sempre e cresc."
+	R2
+	\tuplet 3/2 8 {
+		bes16\mf bes r16 bes8[ bes16] a'16 a r16 a8-^ a16
+		bes,16 bes r16 bes8[ bes16] a'16 a r16 a8-^ a16
+		\tempo "Stretto"
+		\repeat unfold 2 { r16 f[ f] f8-^[ f16] r16 c'[ c] c8-^[ c16] }
+		\tempo "Molto Agitato"
+		\repeat unfold 2 { r16 f,[ f] f8-^[ f16] }
+	}
+	r16 f16~ f[ f]~ f[ f]~ f[ f]
+}
+
 %%% Final assembly
 
 Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_I_mvmt_I_AL \Horn_I_mvmt_I_AM \NULL_I_AN \Horn_I_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_I_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \Horn_I_cues_mvmt_I_AU \Horn_I_mvmt_I_AV \Horn_I_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_I_mvmt_I_BA
 		\NULL_I_BB \Horn_I_mvmt_I_BC \Horn_I_mvmt_I_BD \Horn_I_mvmt_I_BE \Horn_I_mvmt_I_BF \Horn_I_mvmt_I_BG \Horn_I_mvmt_I_BH \Horn_I_mvmt_I_BI
-		\Horn_I_mvmt_I_BJ \Horn_I_mvmt_I_BK \Horn_I_mvmt_I_BL }
+		\Horn_I_mvmt_I_BJ \Horn_I_mvmt_I_BK \Horn_I_mvmt_I_BL \Horn_I_mvmt_I_BM }
 Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_II_mvmt_I_AL \Horn_II_mvmt_I_AM \NULL_I_AN \Horn_II_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_II_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_II_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_II_mvmt_I_BA
 		\NULL_I_BB \Horn_II_mvmt_I_BC \Horn_II_mvmt_I_BD \NULL_I_BE \Horn_II_mvmt_I_BF \Horn_II_mvmt_I_BG \Horn_II_mvmt_I_BH \Horn_II_mvmt_I_BI
-		\Horn_II_mvmt_I_BJ \Horn_II_mvmt_I_BK \Horn_II_mvmt_I_BL }
+		\Horn_II_mvmt_I_BJ \Horn_II_mvmt_I_BK \Horn_II_mvmt_I_BL \Horn_II_mvmt_I_BM }
 Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_III_mvmt_I_AF \NULL_I_AG \Horn_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_III_mvmt_I_AL \Horn_III_mvmt_I_AM \NULL_I_AN \Horn_III_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_III_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_III_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_III_mvmt_I_BA \NULL_I_BB
 		\Horn_III_mvmt_I_BC \Horn_III_mvmt_I_BD \NULL_I_BE \Horn_III_mvmt_I_BF \Horn_III_mvmt_I_BG \Horn_III_mvmt_I_BH \NULL_I_BI \Horn_III_mvmt_I_BJ
-		\Horn_III_mvmt_I_BK \Horn_III_mvmt_I_BL }
+		\Horn_III_mvmt_I_BK \Horn_III_mvmt_I_BL \Horn_III_mvmt_I_BM }
 Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_IV_mvmt_I_AF \NULL_I_AG \Horn_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_IV_mvmt_I_AL \Horn_IV_mvmt_I_AM \NULL_I_AN \Horn_IV_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_IV_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_IV_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_IV_mvmt_I_BA \NULL_I_BB
 		\Horn_IV_mvmt_I_BC \Horn_IV_mvmt_I_BD \NULL_I_BE \Horn_IV_mvmt_I_BF \Horn_IV_mvmt_I_BG \Horn_IV_mvmt_I_BH \Horn_IV_mvmt_I_BI \NULL_I_BJ
-		\Horn_IV_mvmt_I_BK \Horn_IV_mvmt_I_BL }
+		\Horn_IV_mvmt_I_BK \Horn_IV_mvmt_I_BL \Horn_IV_mvmt_I_BM }
 Horn_V_mvmt_I = { \NULL_I_AA \Horn_V_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
 		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_V_mvmt_I_AW \Horn_V_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_mvmt_I_BA \NULL_I_BB
-		\NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \NULL_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ \Horn_V_mvmt_I_BK \NULL_I_BL }
+		\NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \NULL_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ \Horn_V_mvmt_I_BK \NULL_I_BL \Horn_V_mvmt_I_BM }
 Horn_VI_mvmt_I = { \NULL_I_AA \Horn_VI_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
 		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV
 		\Horn_VI_mvmt_I_AW \Horn_VI_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_V_VI_mvmt_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF
-		\NULL_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ \Horn_VI_mvmt_I_BK \NULL_I_BL }
+		\NULL_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ \Horn_VI_mvmt_I_BK \NULL_I_BL \Horn_VI_mvmt_I_BM }
 Horn_VII_mvmt_I = { \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \Horn_All_mvmt_I_AK
 		\NULL_I_AL \NULL_I_AM \NULL_I_AN \Horn_V_VI_VII_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV
 		\Horn_VII_mvmt_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \NULL_I_BG \NULL_I_BH
-		\NULL_I_BI \NULL_I_BJ \NULL_I_BK \NULL_I_BL }
+		\NULL_I_BI \NULL_I_BJ \NULL_I_BK \NULL_I_BL \NULL_I_BM }
