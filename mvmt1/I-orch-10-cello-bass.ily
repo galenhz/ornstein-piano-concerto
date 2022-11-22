@@ -1815,6 +1815,33 @@ Bass_mvmt_I_BM = \relative c {
 	>>
 }
 
+%%% Section BN = mm. 301-303 (Rehersal 34)
+%%% Tacet
+
+%%% Section BO = mm. 304-308 (Rehersal 35)
+
+Cello_mvmt_I_BO = \relative c {
+	\mark #35
+	\time 10/8
+	g2.\mf^\Unis_mark b2
+	\time 11/8
+	g2. e2~ e8
+	\time 10/8
+	g2. b2
+	R1*10/8*2
+}
+
+Bass_mvmt_I_BO = \relative c {
+	\mark #35
+	\time 10/8
+	c2.\mf^\Unis_mark e2
+	\time 11/8
+	c2. a2~ a8
+	\time 10/8
+	c2. e2
+	R1*10/8*2
+}
+
 %%% Final assembly
 
 Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
@@ -1822,15 +1849,15 @@ Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cel
 		\NULL_I_AQ \Cello_mvmt_I_AR \Cello_mvmt_I_AS \NULL_I_AT \Cello_mvmt_I_AU \Cello_mvmt_I_AV \Cello_mvmt_I_AW \Cello_mvmt_I_AX
 		\Cello_mvmt_I_AY \Cello_mvmt_I_AZ \Cello_mvmt_I_BA \Cello_mvmt_I_BB \Cello_mvmt_I_BC \Cello_mvmt_I_BD \Cello_mvmt_I_BE
 		\Cello_mvmt_I_BF \Cello_mvmt_I_BG \Cello_mvmt_I_BH \Cello_mvmt_I_BI \Cello_mvmt_I_BJ \Cello_mvmt_I_BK \Cello_mvmt_I_BL
-		\Cello_mvmt_I_BM }
+		\Cello_mvmt_I_BM \NULL_I_BN \Cello_mvmt_I_BO }
 Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_AD \Cello_divisi_II_mvmt_I_AE \Cello_divisi_II_mvmt_I_AF
 		\NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR
 		\Cello_divisi_II_mvmt_I_AS \NULL_I_AT \Cello_divisi_II_mvmt_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA
 		\NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \Cello_divisi_II_mvmt_I_BF \Cello_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI
-		\Cello_divisi_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL \Cello_divisi_II_mvmt_I_BM }
+		\Cello_divisi_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL \Cello_divisi_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO }
 
 Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
 		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN \Bass_mvmt_I_AO \Bass_mvmt_I_AP
 		\NULL_I_AQ \NULL_I_AR \Bass_mvmt_I_AS \NULL_I_AT \Bass_mvmt_I_AU \Bass_mvmt_I_AV \Bass_mvmt_I_AW \Bass_mvmt_I_AX \Bass_mvmt_I_AY
 		\Bass_mvmt_I_AZ \Bass_mvmt_I_BA \Bass_mvmt_I_BB \Bass_mvmt_I_BC \Bass_mvmt_I_BD \Bass_mvmt_I_BE \Bass_mvmt_I_BF \Bass_mvmt_I_BG
-		\Bass_mvmt_I_BH \Bass_mvmt_I_BI \Bass_mvmt_I_BJ \Bass_mvmt_I_BK \Bass_mvmt_I_BL \Bass_mvmt_I_BM }
+		\Bass_mvmt_I_BH \Bass_mvmt_I_BI \Bass_mvmt_I_BJ \Bass_mvmt_I_BK \Bass_mvmt_I_BL \Bass_mvmt_I_BM \NULL_I_BN \Bass_mvmt_I_BO }

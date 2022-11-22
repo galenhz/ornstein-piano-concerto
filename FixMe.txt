@@ -91,3 +91,5 @@ m. 272-280: Part combiner not producing great results for Trombone III/Tuba.
 
 m. 281-290: Solo piano is suffering multiple problems. Dynamic mark smushed, tuplet numbers not in
 good places.
+
+m. 304 and 306: middle C in solo lower staff in these bars is getting squished in score. Fine in PR.

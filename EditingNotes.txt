@@ -705,5 +705,11 @@ match I/II.
 m. 303: Some of the parts have this measure as 3/4, like the original passage in m. 15. The score
 changed it to 6/8, and PR agrees.
 
+m. 304-308: Violas don't have the "con sord" mark that they have in the parallel passage at
+mm. 16-20. Composer oversight? Leaving it as written for now. Slurs are gone too, but I'm leaving
+them in for copy-paste reasons. And for that matter, the dynamics marked in 16-20 aren't here either.
+Should I copy them in for all parts? #UNDECIDED
+(I-orch-09-violins-viola)
+
 mm. 309-311: Solo piano; same questions about clef transitions as mm. 21-23.
 (I-solo-piano)
