@@ -123,4 +123,4 @@ NULL_I_BN = { \mark #34 \tempo "Tempo I" \time 6/8 R2.*3 }
 NULL_I_BO = { \mark #35 \time 10/8 R1*10/8 \time 11/8 R1*11/8 \time 10/8 R1*10/8*3 }
 NULL_I_BP = { \mark #36 \time 4/4 R1*4 \tempo "Meno" \time 8/8 R1*2 \time 4/8 R2 }
 NULL_I_BQ = { \mark #37 \tempo "Mosso" \time 2/4 R2*12 }
-NULL_I_BR = { \tempo "Calmato" \time 4/4 \tag #'Score \grace s8 R1*2 \time 3/4 R2.*2 }
+NULL_I_BR = { \tempo "Calmato" \time 4/4 \tag #'Score \grace s8 R1*2 \time 3/4 R2.*2 \bar "|." }
