@@ -1058,7 +1058,7 @@ Trombone_I_mvmt_I_BM = \relative c' {
 		\repeat unfold 2 { r16 c[ f] fis[ a bes] }
 		r16_\markup \italic "rit." c,[ f] fis[ a bes] c,[ f fis] a[ bes fis]
 	}
-	%%%\clef bass
+	\clef bass
 }
 
 Trombone_II_mvmt_I_BM = \relative c {
@@ -1078,7 +1078,7 @@ Trombone_II_mvmt_I_BM = \relative c {
 		\repeat unfold 2 { r16 c[ f] fis[ a bes] }
 		r16_\markup \italic "rit." c,[ f] fis[ a bes] c,[ f fis] a[ bes fis]
 	}
-	%%%\tag #'Score \clef bass
+	\tag #'Score \clef bass
 }
 
 Trombone_III_mvmt_I_BM = \relative c {
@@ -1122,6 +1122,47 @@ Tuba_mvmt_I_BM = \relative c, {
 %%% Section BO = mm. 304-308 (Rehersal 35)
 %%% Tacet
 
+%%% Section BP = mm. 309-315 (Rehersal 36)
+
+Trombone_I_II_cues_mvmt_I_BP = \relative c {
+	\tag #'Score \NULL_I_BP
+	\tag #'Part {
+		\mark #36
+		\time 4/4
+		R1*3
+		<<
+			\new CueVoice {
+				\voiceTwo
+				aes2^"III Tbn." g
+			}
+			\new Voice {
+				\voiceOne
+				R1
+			}
+		>>
+		\tempo "Meno"
+		\time 8/8
+		R1*2
+		\time 4/8
+		R2
+	}
+}
+
+% FIXME: Bassoon III/IV cues.
+Trombone_III_mvmt_I_BP = \relative c {
+	\mark #36
+	\time 4/4
+	R1*3
+	aes2\p g
+	\tempo "Meno"
+	\time 8/8
+	R1*2
+	\time 4/8
+	R2
+}
+
+Tuba_mvmt_I_BP = \transpose c' c \Trombone_III_mvmt_I_BP
+
 %%% Final assembly
 
 Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF \NULL_I_AG
@@ -1129,22 +1170,25 @@ Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB_AC \NULL_I_AD 
 		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Trombone_I_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Trombone_I_II_mvmt_I_BC
 		\Trombone_I_mvmt_I_BD \NULL_I_BE \Trombone_I_mvmt_I_BF \Trombone_I_mvmt_I_BG \Trombone_I_mvmt_I_BH \NULL_I_BI
-		\Trombone_I_mvmt_I_BJ \Trombone_I_mvmt_I_BK \Trombone_I_mvmt_I_BL \Trombone_I_mvmt_I_BM \NULL_I_BN \NULL_I_BO }
+		\Trombone_I_mvmt_I_BJ \Trombone_I_mvmt_I_BK \Trombone_I_mvmt_I_BL \Trombone_I_mvmt_I_BM \NULL_I_BN \NULL_I_BO
+		\Trombone_I_II_cues_mvmt_I_BP }
 Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF \NULL_I_AG
 		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_II_mvmt_I_AL \Trombone_II_mvmt_I_AM
 		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Trombone_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Trombone_I_II_mvmt_I_BC
 		\Trombone_II_mvmt_I_BD \NULL_I_BE \Trombone_II_mvmt_I_BF \Trombone_II_mvmt_I_BG \Trombone_II_mvmt_I_BH \NULL_I_BI
-		\Trombone_II_mvmt_I_BJ \Trombone_II_mvmt_I_BK \Trombone_II_mvmt_I_BL \Trombone_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO }
+		\Trombone_II_mvmt_I_BJ \Trombone_II_mvmt_I_BK \Trombone_II_mvmt_I_BL \Trombone_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO
+		\Trombone_I_II_cues_mvmt_I_BP }
 Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF_AG
 		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_III_mvmt_I_AL \NULL_I_AM
 		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Trombone_III_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Trombone_III_mvmt_I_BC
 		\Trombone_III_mvmt_I_BD \NULL_I_BE \Trombone_III_mvmt_I_BF \Trombone_III_mvmt_I_BG \Trombone_III_mvmt_I_BH \NULL_I_BI
-		\Trombone_III_mvmt_I_BJ \Trombone_III_mvmt_I_BK \Trombone_III_mvmt_I_BL \Trombone_III_mvmt_I_BM \NULL_I_BN \NULL_I_BO }
+		\Trombone_III_mvmt_I_BJ \Trombone_III_mvmt_I_BK \Trombone_III_mvmt_I_BL \Trombone_III_mvmt_I_BM \NULL_I_BN \NULL_I_BO
+		\Trombone_III_mvmt_I_BP }
 Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF_AG \Tuba_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Tuba_mvmt_I_AL \Tuba_mvmt_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ
 		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Tuba_mvmt_I_AX \NULL_I_AY \NULL_I_AZ
 		\Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Tuba_mvmt_I_BC \Tuba_mvmt_I_BD \NULL_I_BE \Tuba_I_mvmt_I_BF
 		\Tuba_mvmt_I_BG \Tuba_mvmt_I_BH \NULL_I_BI \Tuba_mvmt_I_BJ \Tuba_mvmt_I_BK \Tuba_mvmt_I_BL \Tuba_mvmt_I_BM
-		\NULL_I_BN \NULL_I_BO }
+		\NULL_I_BN \NULL_I_BO \Tuba_mvmt_I_BP }
