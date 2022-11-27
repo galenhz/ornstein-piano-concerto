@@ -713,3 +713,13 @@ Should I copy them in for all parts? #UNDECIDED
 
 mm. 309-311: Solo piano; same questions about clef transitions as mm. 21-23.
 (I-solo-piano)
+
+mm. 328-320: Bass Clarinet slurs are different in the score and part. Part does the whole phrase as
+one slur. Score slices it up. Recording sounds like part, but it's hard to tell. Leaving this as
+in the part for now. #UNDECIDED
+(I-orch-03-clarinets)
+
+m. 331: Bass cuts out and has a rest in this bar in the part. It looks like the score started that way
+but was edited later to have the bass carry into the last bar like the cello part. Going with the score
+change.
+(I-orch-10-cello-bass)

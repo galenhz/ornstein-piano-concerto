@@ -584,6 +584,21 @@ Tympani_II_mvmt_I_BQ = \relative c, {
 	}
 }
 
+%%% Section BR = mm. 328-331
+
+Tympani_II_mvmt_I_BR = \relative c, {
+	\tempo "Calmato"
+	\time 4/4
+	\tag #'Score \grace s8
+	fis1:32\ppp
+	fis1:32
+	\time 3/4
+	r8 fis r fis r fis~
+	fis2.:32
+	\bar "|."
+}
+
+
 %%% Final assembly
 
 Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \Tympani_I_mvmt_I_AE \Tympani_I_mvmt_I_AF \Tympani_I_mvmt_I_AG
@@ -591,10 +606,10 @@ Tympani_I_mvmt_I = { \clef bass \NULL_I_AA \Tympani_I_mvmt_I_AB_AC \NULL_I_AD \T
 		\NULL_I_AP \NULL_I_AQ \Tympani_I_mvmt_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Tympani_I_mvmt_I_AX \NULL_I_AY
 		\NULL_I_AZ \Tympani_I_mvmt_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \Tympani_I_mvmt_I_BF \Tympani_I_mvmt_I_BG
 		\Tympani_I_mvmt_I_BH \NULL_I_BI \Tympani_I_mvmt_I_BJ \Tympani_I_mvmt_I_BK \NULL_I_BL \Tympani_I_mvmt_I_BM \NULL_I_BN
-		\NULL_I_BO \NULL_I_BP \Tympani_I_mvmt_I_BQ }
+		\NULL_I_BO \NULL_I_BP \Tympani_I_mvmt_I_BQ \NULL_I_BR }
 Tympani_II_mvmt_I = { \clef bass \NULL_I_AA \Tympani_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Tympani_II_mvmt_I_AE \Tympani_II_mvmt_I_AF
 		\Tympani_II_mvmt_I_AG \Tympani_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Tympani_II_mvmt_I_AK \NULL_I_AL \Tympani_II_mvmt_I_AM \NULL_I_AN
 		\Tympani_II_mvmt_I_AO \Tympani_II_mvmt_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \Tympani_II_mvmt_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \Tympani_II_mvmt_I_BG
 		\Tympani_II_mvmt_I_BH \Tympani_II_mvmt_I_BI \Tympani_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL \Tympani_II_mvmt_I_BM \NULL_I_BN
-		\NULL_I_BO \NULL_I_BP \Tympani_II_mvmt_I_BQ }
+		\NULL_I_BO \NULL_I_BP \Tympani_II_mvmt_I_BQ \Tympani_II_mvmt_I_BR }
