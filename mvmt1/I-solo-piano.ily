@@ -1914,7 +1914,10 @@ solo_upper_I_BD = \relative c'' {
 		}
 	>>
 	\ottava #0
-	\bar "||" \Mvmt_I_Fermata_On_Bar
+	%%% This is the fermata-on-bar bit; only solo piano gets it without a tag.
+	\bar "||"
+	\tweak self-alignment-X #CENTER
+	\textEndMark \markup { \musicglyph "scripts.ufermata" }
 }
 
 solo_dynamics_I_BD = {
@@ -1940,7 +1943,7 @@ solo_lower_I_BD = \relative c, {
 	\repeat unfold 2 { \tuplet 6/4 { r32 dis, a' f bes a } cis8 }
 	\time 3/4
 	\tuplet 6/4 { r32 dis, a' f bes a } cis8 \tuplet 6/4 { r32 f, bes a cis bes } e8 \tuplet 6/4 { r32 a, e' cis f e } <a cis e f>8
-	\bar "||" \Mvmt_I_Fermata_On_Bar
+	\bar "||"
 }
 
 %%% Section BE = mm. 226-232 (Rehersal 24)

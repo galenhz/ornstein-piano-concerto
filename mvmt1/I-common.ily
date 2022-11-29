@@ -64,16 +64,15 @@
 %%       m. 291: The score and parts have "meno allegro"; this never made it into the
 %%       PR.
 
-% Need this bit of magic for everyone at the end of section BD.
-
+% Need this bit of magic for everyone at the end of section BD. What's here now
+% replaces a much messier workaround needed for lilypond 2.22.2. Because these
+% textmarks stack instead of deduplicate, only the solo piano gets it without
+% a tag.
 Mvmt_I_Fermata_On_Bar = {
-	\once \override Score.TimeSignature.stencil = ##f
-	\cadenzaOn
-	\time 1/16
-	\noBreak
-	\mark \markup { \musicglyph "scripts.ufermata" }
-	s16 \bar ""
-	\cadenzaOff
+	\tag #'Part {
+		\tweak self-alignment-X #CENTER
+		\textEndMark \markup { \musicglyph "scripts.ufermata" }
+	}
 }
 
 NULL_I_AA = { \tempo "Moderato assai" \time 3/4 R2.*3 r2.\fermata }

@@ -5,7 +5,7 @@
 %%% The full text can be found in the LICENSE file with this code. It can be
 %%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
-\version "2.22.2"
+\version "2.23.82"
 
 \include "common.ily"
 
@@ -183,6 +183,6 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
   \layout {
 		short-indent = 1\cm
 		\context { \Staff \RemoveEmptyStaves }
-		\context { \Score markFormatter = #format-mark-circle-numbers  \numericTimeSignature }
+		\context { \Score rehearsalMarkFormatter = #format-mark-circle-numbers  \numericTimeSignature }
 	}
 }

@@ -1701,7 +1701,7 @@ redux_upper_I_BD = \relative c''' {
 		}
 	>>
 	\ottava #0
-	\bar "||" \Mvmt_I_Fermata_On_Bar
+	\bar "||"
 }
 
 redux_dynamics_I_BD = {
@@ -1732,7 +1732,7 @@ redux_lower_I_BD = \relative c' {
 		}
 	>>
 	\clef bass
-	\bar "||" \Mvmt_I_Fermata_On_Bar
+	\bar "||"
 }
 
 %%% Section BE = mm. 226-232 (Rehersal 24)
