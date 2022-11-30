@@ -917,8 +917,9 @@ solo_upper_I_AO_AP = \relative c, {
 	%% WORKAROUND: Too many notes, so we shrink 'em to fit on the page and use % repeats to keep things
 	%%	           sane. A better solution may be possible. Also have to force StemUp because lilypond
 	%%             won't expand the staff distance enough when you try to mix stems like the PR. I
-	%%             think the PR version looks cooler, honestly, but nothing I have tried has worked
-	%%             to force lilypond to push more space between the staves.
+	%%             think the PR version looks better, and probably encodes information regarding hand
+	%%             switches,  but nothing I have tried has worked to force lilypond to push more space
+	%%             between the staves.
 	\magnifyMusic 0.63 {
 		\repeat percent 6 {
 			\stemUp
@@ -2011,16 +2012,17 @@ solo_upper_I_BF = \relative c''' {
 	% EDIT: Almost certainly a missing treble clef change in PR for m. 237
 	% EDIT: And the last nonuplet is missing a note? an Octuplet?
 	<< \new Voice { \voiceTwo <d' ges cis>8 b'8\rest b\rest b4.\rest } \new Voice { \voiceOne ges'8 s8 s8 s4. } >>
-	% FIXME: I probably need to start the note shrinkage here, rather than in BG (m. 240) below.
 	r8 \ottava #1 \tuplet 9/8 { gis''64[ cis, gis' cis, gis \ottava #0 \change Staff = "solo_lower" f d cis a] } \change Staff = "solo_upper"
 		\repeat unfold 2 { \tuplet 9/8 { gis'[ cis, gis' cis, gis \change Staff = "solo_lower" f d cis a] } \change Staff = "solo_upper" }
 		gis'[ cis, gis' cis, gis \change Staff = "solo_lower" f d cis] \change Staff = "solo_upper"
 		\tuplet 6/4 { gis'32[ cis gis' gis cis gis'] }
 	R2.
-	r8 \ottava #1 \tuplet 10/8 { f'64[ bes, f' bes, f \ottava #0 \change Staff = "solo_lower" e d cis bes gis] } \change Staff = "solo_upper"
-		\repeat unfold 2 { \tuplet 10/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes gis] } \change Staff = "solo_upper" }
-		\tuplet 9/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes] } \change Staff = "solo_upper"
-		\tuplet 6/4 { f'32[ bes f' f bes f'] }
+	\magnifyMusic 0.75 {
+		r8 \ottava #1 \tuplet 10/8 { f'64[ bes, f' bes, f \ottava #0 \change Staff = "solo_lower" e d cis bes gis] } \change Staff = "solo_upper"
+			\repeat unfold 2 { \tuplet 10/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes gis] } \change Staff = "solo_upper" }
+			\tuplet 9/8 { f'[ bes, f' bes, f \change Staff = "solo_lower" e d cis bes] } \change Staff = "solo_upper"
+			\tuplet 6/4 { f'32[ bes f' f bes f'] }
+	}
 }
 
 solo_dynamics_I_BF = {
@@ -2037,7 +2039,7 @@ solo_lower_I_BF =  \relative c, {
 	\clef treble
 	r8 s8 s8 s8 s8 a'64[ cis d f a cis d f]
 	R2.
-	r8 s8 s8 s8 s8 \tuplet 10/8 { gis,,64[ bes cis d e gis bes cis d e] }
+	r8 s8 s8 s8 s8 \magnifyMusic 0.75 { \tuplet 10/8 { gis,,64[ bes cis d e gis bes cis d e] } }
 }
 
 %%% Section BG = mm. 240-243 (Rehersal 26)
@@ -2047,13 +2049,15 @@ solo_upper_I_BG = \relative c'''' {
 	% WORKAROUND: Again, like m. 113, shrink notes.
 	\tempo "Animato"
 	\mark #26
+	R2.
 	\magnifyMusic 0.75 {
-		R2.
 		r8 \ottava #1 \tuplet 9/8 { ees64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
 			\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
 				r8 \tuplet 9/8 { ees''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
 			\tuplet 9/8 { ees'64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
-		R2.
+	}
+	R2.
+	\magnifyMusic 0.75 {
 		r8 \ottava #1 \tuplet 9/8 { ees''''64[ bes ees bes ees, \ottava #0 \change Staff = "solo_lower" d bes a fis] } \change Staff = "solo_upper"
 			\tuplet 15/8 { ees'[ bes ees bes ees, \change Staff = "solo_lower" d bes a fis a bes d \change Staff = "solo_upper" ees bes' ees] }
 			r8 \ottava #1 \tuplet 9/8 { a'64[ cis, a' cis, a \ottava #0 \change Staff = "solo_lower" fis d cis bes] } \change Staff = "solo_upper"

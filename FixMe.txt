@@ -71,16 +71,10 @@ m. 233-235: In solo piano, lilypond strugges with tuplet bracket placing. Needs 
 m. 236: Oboes I/II awkward in score. Forcing "Solo I" breaks the crescendo. Find better solution.
 (Probably involves ending crescendo in bar.) Bassoons III/IV also a bit off in 236 and 238.
 
-m. 237-239: I probably need to start the solo piano shrinkage here, rather than 241, since it's
-running the piano score over the right margin in 239.
-
 m. 240-243: Viola and Cello slurs are too tight on some of the triplets.
 
 m. 244 and 246: Solo piano, push staves apart a bit to allow the bracket to be on the opposite
 side from the slur?
-
-m. 244-247: Piano reduction creates what should be the middle staff at the bottom. Need to figure
-out if I can force placement; if not, may have to move the bass line to the new staff instead.
 
 m. 268-271: Bassoon III/IV slurs should go up farther, possibly in score, definitely in parts.
 

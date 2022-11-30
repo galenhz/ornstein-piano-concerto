@@ -955,7 +955,7 @@ redux_upper_I_AP = \relative c' {
 	\time 2/4
 	\tuplet 9/8 { a32 b a b a b a aes g } s4
 	\time 4/4
-	d1 r1
+	d1 R1
 }
 
 redux_dynamics_I_AP = {
@@ -982,7 +982,7 @@ redux_lower_I_AP = \relative c {
 	s4 \tuplet 9/8 { fis32 g fis g fis fis fis e \change Staff = "redux_upper" ees }
 		\change Staff = "redux_lower"
 	\time 4/4
-	r1 r1
+	R1 R1
 }
 
 %%% Section AQ = mm. 126-133 (Rehersal 13)
