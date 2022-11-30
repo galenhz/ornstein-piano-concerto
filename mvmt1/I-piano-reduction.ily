@@ -1707,7 +1707,6 @@ redux_upper_I_BD = \relative c''' {
 redux_dynamics_I_BD = {
 	% mm. 216-225 - Rehersal 23
 	s2.*7 s2 s2-\markup { \italic "molto" \dynamic ff \italic "e rall." } s2.
-	s16
 }
 
 redux_lower_I_BD = \relative c' {
