@@ -5,7 +5,7 @@
 %%% The full text can be found in the LICENSE file with this code. It can be
 %%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
-\version "2.22.2"
+\version "2.23.82"
 
 \include "common.ily"
 
@@ -40,7 +40,7 @@ instrumentName = "Violin II"
 	\layout {
 	\context {
 		\Score
-			markFormatter = #format-mark-circle-numbers 
+			rehersalMarkFormatter = #format-mark-circle-numbers
 			\numericTimeSignature
 	}
   }
