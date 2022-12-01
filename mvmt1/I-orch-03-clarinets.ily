@@ -89,7 +89,7 @@ Clarinet_IV_mvmt_I_AB = \transpose c' bes \relative c' {
 		\tuplet 6/4 { r16 gis gis gis gis gis } \tuplet 6/4 { b( gis) gis gis gis gis }
 }
 
-BassClarinet_mvmt_I_AB_AC = \transpose c' bes, \relative c'' {
+BassClarinet_mvmt_I_AB = \transpose c' bes, \relative c'' {
 	\tempo "con moto"
 	R2.*5
 	\time 4/4
@@ -97,9 +97,7 @@ BassClarinet_mvmt_I_AB_AC = \transpose c' bes, \relative c'' {
 	\time 3/4
 	R2.
 	\time 4/4
-	c2\ff c2\<
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	c2\ff \after 4. \! c2\<
 }
 
 %%% Section AD = mm. 16-20
@@ -2253,9 +2251,9 @@ Clarinet_IV_mvmt_I = { \NULL_I_AA \Clarinet_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \
 		\Clarinet_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Clarinet_IV_mvmt_I_BA \NULL_I_BB \Clarinet_III_IV_mvmt_I_BC \Clarinet_III_IV_mvmt_I_BD
 		\NULL_I_BE \Clarinet_IV_mvmt_I_BF \Clarinet_IV_mvmt_I_BG \NULL_I_BH \NULL_I_BI \Clarinet_III_IV_C_mvmt_I_BJ \Clarinet_IV_mvmt_I_BK
 		\Clarinet_IV_mvmt_I_BL \Clarinet_IV_mvmt_I_BM \NULL_I_BN \NULL_I_BO \Clarinet_II_IV_cues_mvmt_I_BP \NULL_I_BQ \Clarinet_IV_mvmt_I_BR }
-BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH \NULL_I_AI
-		\NULL_I_AJ \BassClarinet_mvmt_I_AK \NULL_I_AL \NULL_I_AM \BassClarinet_mvmt_I_AN \BassClarinet_mvmt_I_AO \NULL_I_AP \BassClarinet_mvmt_I_AQ_AR
-		\BassClarinet_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \BassClarinet_mvmt_I_AX \BassClarinet_mvmt_I_AY \NULL_I_AZ
-		\BassClarinet_mvmt_I_BA \NULL_I_BB \BassClarinet_mvmt_I_BC \NULL_I_BD \NULL_I_BE \BassClarinet_mvmt_I_BF \BassClarinet_mvmt_I_BG
+BassClarinet_mvmt_I = { \NULL_I_AA \BassClarinet_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \BassClarinet_mvmt_I_AG \BassClarinet_mvmt_I_AH
+		\NULL_I_AI \NULL_I_AJ \BassClarinet_mvmt_I_AK \NULL_I_AL \NULL_I_AM \BassClarinet_mvmt_I_AN \BassClarinet_mvmt_I_AO \NULL_I_AP
+		\BassClarinet_mvmt_I_AQ_AR \BassClarinet_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \BassClarinet_mvmt_I_AX \BassClarinet_mvmt_I_AY
+		\NULL_I_AZ \BassClarinet_mvmt_I_BA \NULL_I_BB \BassClarinet_mvmt_I_BC \NULL_I_BD \NULL_I_BE \BassClarinet_mvmt_I_BF \BassClarinet_mvmt_I_BG
 		\BassClarinet_mvmt_I_BH \NULL_I_BI \NULL_I_BJ \NULL_I_BK \BassClarinet_mvmt_I_BL \BassClarinet_mvmt_I_BM \NULL_I_BN \NULL_I_BO
 		\BassClarinet_cues_mvmt_I_BP \NULL_I_BQ \BassClarinet_mvmt_I_BR }

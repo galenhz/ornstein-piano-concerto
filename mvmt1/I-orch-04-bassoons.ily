@@ -5,11 +5,7 @@
 
 %%% Section AB - mm. 5-12
 
-%% WORKAROUND: m. 12: Had to force partCombineApart to get the crescendo to display and terminate properly.
-%%             Even better, had to continue it past AB, making me have to silence 2's rest and
-%%             manually nudge 1's.
-
-Bassoon_I_mvmt_I_AB_AC = \relative c {
+Bassoon_I_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	d8\ff( cis) c4~ \tuplet 3/2 { c8\< cis( d)\! }
 	fis([ c')] cis([ fis,)] e r8
@@ -22,13 +18,11 @@ Bassoon_I_mvmt_I_AB_AC = \relative c {
 	R2.
 	\time 4/4
 	\partCombineApart
-	a,,2\f cis_\<
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \tag #'Score { \once \override MultiMeasureRest.staff-position = #0 R2.\! }\tag #'Part R2.\! R2. \time 3/4 R2.
+	a,,2\f \after 4. \! cis\<
 	\partCombineAutomatic
 }
 
-Bassoon_II_mvmt_I_AB_AC = \relative c {
+Bassoon_II_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	d8\ff( cis) c4~ \tuplet 3/2 { c8\< cis( d)\! }
 	fis([ c')] cis([ fis,)] e r8
@@ -41,15 +35,12 @@ Bassoon_II_mvmt_I_AB_AC = \relative c {
 	R2.
 	\time 4/4
 	ees,,2 r2
-	%% What an egregious hack. Need to make the first rest "disappear" for the score's sake,
-	%% because of the partCombineApart I did to get the crescendo termination right.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \tag #'Score s2. \tag #'Part R2. R2. \time 3/4 R2.
 }
 
 %% EDIT: m. 11: Add same decrescendo to III/IV as in m. 9? It's not in the parts or the score.
 %% FIXME: Cue notes for 3/4?
 
-Bassoon_III_mvmt_I_AB_AC = \relative c {
+Bassoon_III_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	R2.
 	r2 \tuplet 3/2 { e8\f\> a bes\! }
@@ -60,12 +51,11 @@ Bassoon_III_mvmt_I_AB_AC = \relative c {
 	\time 3/4
 	r8 g( fis f4 e8)
 	\time 4/4
-	ees2 g_\<\! |
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	\tag #'Score { ees2 g }
+	\tag #'Part { ees2 \after 4. \! g\< }
 }
 
-Bassoon_IV_mvmt_I_AB_AC = \relative c' {
+Bassoon_IV_mvmt_I_AB = \relative c' {
 	\tempo "con moto"
 	R2.*4
 	r8 g( fis f4\> e8)\!
@@ -74,9 +64,7 @@ Bassoon_IV_mvmt_I_AB_AC = \relative c' {
 	\time 3/4
 	r8 g( fis f4 e8)
 	\time 4/4
-	ees2 a,_\<\! |
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	ees2 \after 4. \! a,\<
 }
 
 Contrabassoon_mvmt_I_AB = \relative c {
@@ -1962,27 +1950,27 @@ Bassoon_IV_Contra_mvmt_I_BR = \relative c, {
 
 %%% Final assembly
 
-Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
+Bassoon_I_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_I_mvmt_I_AB \NULL_I_AC \Bassoon_I_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
 		\Bassoon_I_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_I_mvmt_I_AJ \Bassoon_I_mvmt_I_AK_AL \Bassoon_I_mvmt_I_AM \Bassoon_I_mvmt_I_AN
 		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_I_mvmt_I_AS \NULL_I_AT \Bassoon_I_Contra_mvmt_I_AU
 		\Bassoon_I_mvmt_I_AV \NULL_I_AW \Bassoon_I_II_mvmt_I_AX \Bassoon_I_mvmt_I_AY \NULL_I_AZ \Bassoon_I_mvmt_I_BA \NULL_I_BB
 		\Bassoon_I_mvmt_I_BC \Bassoon_I_mvmt_I_BD \NULL_I_BE \Bassoon_I_mvmt_I_BF \Bassoon_I_mvmt_I_BG \Bassoon_I_mvmt_I_BH
 		\Bassoon_I_mvmt_I_BI \Bassoon_I_mvmt_I_BJ \Bassoon_I_II_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL \Bassoon_I_II_mvmt_I_BM
 		\NULL_I_BN \NULL_I_BO \Bassoon_I_mvmt_I_BP \NULL_I_BQ \NULL_I_BR }
-Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
+Bassoon_II_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_II_mvmt_I_AB \NULL_I_AC \Bassoon_II_mvmt_I_AD_AE \Bassoon_I_II_mvmt_I_AF \Bassoon_I_II_mvmt_I_AG
 		\Bassoon_II_mvmt_I_AH \Bassoon_I_II_mvmt_I_AI \Bassoon_II_mvmt_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_II_mvmt_I_AM \Bassoon_II_mvmt_I_AN
 		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_I_II_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Bassoon_I_II_mvmt_I_AX \Bassoon_II_mvmt_I_AY \NULL_I_AZ \Bassoon_II_mvmt_I_BA \NULL_I_BB \Bassoon_II_mvmt_I_BC \Bassoon_II_mvmt_I_BD
 		\NULL_I_BE \Bassoon_II_mvmt_I_BF \Bassoon_II_mvmt_I_BG \Bassoon_II_mvmt_I_BH \Bassoon_II_mvmt_I_BI \Bassoon_II_mvmt_I_BJ
 		\Bassoon_I_II_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL \Bassoon_I_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO \NULL_I_BP \NULL_I_BQ \NULL_I_BR }
-Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
+Bassoon_III_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_III_mvmt_I_AB \NULL_I_AC \Bassoon_III_mvmt_I_AD_AE \Bassoon_III_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_III_mvmt_I_AM \Bassoon_III_mvmt_I_AN
 		\Bassoon_all_mvmt_I_AO \NULL_I_AP \Bassoon_III_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \Bassoon_III_mvmt_I_AV
 		\NULL_I_AW \Bassoon_III_IV_mvmt_I_AX \Bassoon_III_mvmt_I_AY \NULL_I_AZ \Bassoon_III_mvmt_I_BA \NULL_I_BB \Bassoon_III_mvmt_I_BC
 		\Bassoon_III_mvmt_I_BD \NULL_I_BE \Bassoon_III_mvmt_I_BF \Bassoon_III_mvmt_I_BG \Bassoon_III_mvmt_I_BH \Bassoon_III_mvmt_I_BI
 		\Bassoon_III_mvmt_I_BJ \Bassoon_III_IV_mvmt_I_BK \Bassoon_All_cues_mvmt_I_BL \Bassoon_III_mvmt_I_BM \NULL_I_BN
 		\Bassoon_III_IV_cues_mvmt_I_BO \Bassoon_III_mvmt_I_BP \Bassoon_III_mvmt_I_BQ \Bassoon_III_mvmt_I_BR }
-Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
+Bassoon_IV_mvmt_I = { \clef bass \NULL_I_AA \Bassoon_IV_mvmt_I_AB \NULL_I_AC \Bassoon_IV_mvmt_I_AD_AE \Bassoon_IV_mvmt_I_AF \Bassoon_III_IV_mvmt_I_AG
 		\Bassoon_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \Bassoon_IV_mvmt_I_AM \NULL_I_AN \Bassoon_all_mvmt_I_AO
 		\NULL_I_AP \Bassoon_IV_mvmt_I_AQ_AR \Bassoon_cues_mvmt_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Bassoon_III_IV_mvmt_I_AX
 		\Bassoon_IV_mvmt_I_AY \NULL_I_AZ \Bassoon_IV_mvmt_I_BA \NULL_I_BB \Bassoon_IV_mvmt_I_BC \Bassoon_IV_mvmt_I_BD \NULL_I_BE

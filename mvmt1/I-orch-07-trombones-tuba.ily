@@ -5,18 +5,12 @@
 
 %%% Section AB - mm. 5-12
 
-
-%% m. 7-8: Decrescendo on I can't be ended at the barline; it breaks the full score layout when I do.
-%% m. 8: Suppress MF for second trombone
-%% FIXME: m. 12: Score doesn't show crescendo for 3/4, and throws a ton of warnings when it tries.
-%%               Supressing it for now.
-
-Trombone_I_mvmt_I_AB_AC = \relative c {
+Trombone_I_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	R2.
 	fis4(\f\> f e)\!
-	a2._\>
-	r8 gis\mf~\! gis2
+	a2.
+	r8 gis\mf~ gis2
 	bes2.
 	\time 4/4
 	a1
@@ -25,27 +19,23 @@ Trombone_I_mvmt_I_AB_AC = \relative c {
 	\time 4/4
 	\partCombineApart
 	ees2 r8 \tag #'Score bes'-- \tag #'Part bes--\< c-- \tag #'Score bes-- \tag #'Part bes--\!
-	%% WORKAROUND: Egregious hack required here, just like in bassoons.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \tag #'Score { \once \override MultiMeasureRest.staff-position = #0 R2. }\tag #'Part R2. R2. \time 3/4 R2.
 	\partCombineAutomatic
 }
 
-Trombone_II_mvmt_I_AB_AC = \relative c {
+Trombone_II_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	R2.*3
-	r8 \tag #'Part d\mf~ \tag #'Score d~ d2
+	r8 d\mf~ d2
 	e2.
 	\time 4/4
 	cis1
 	\time 3/4
 	e2.
 	\time 4/4
-	a,2 cis\<
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \tag #'Score s2.\! \tag #'Part R2.\! R2. \time 3/4 R2.
+	\after 2 \< a,2 \after 4. \! cis
 }
 
-Trombone_III_mvmt_I_AB_AC = \relative c {
+Trombone_III_mvmt_I_AB = \relative c {
 	\tempo "con moto"
 	a4(\mf\< c cis)\!
 	a(\> gis g)\!
@@ -57,12 +47,15 @@ Trombone_III_mvmt_I_AB_AC = \relative c {
 	\time 3/4
 	g2.
 	\time 4/4
-	ees2 \tag #'Part bes''\< \tag #'Score bes
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	\tag #'Score {
+		ees2 bes''
+	}
+	\tag #'Part {
+		ees,,2 \after 4. \! bes''\<
+	}
 }
 
-Tuba_mvmt_I_AB_AC = \relative c, {
+Tuba_mvmt_I_AB = \relative c, {
 	\tempo "con moto"
 	d4(\mf\< f fis)\!
 	d(\> cis c)\!
@@ -74,9 +67,7 @@ Tuba_mvmt_I_AB_AC = \relative c, {
 	\time 3/4
 	c2.
 	\time 4/4
-	ees2 \tag #'Part a,\< \tag #'Score a
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	ees2 \after 4. \! a,\<
 }
 
 %%% Section AD = mm. 16-20
@@ -1221,28 +1212,28 @@ Tuba_I_mvmt_I_BR = \relative c, {
 
 %%% Final assembly
 
-Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF \NULL_I_AG
+Trombone_I_mvmt_I = { \clef bass \NULL_I_AA \Trombone_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Trombone_I_mvmt_I_AF \NULL_I_AG
 		\Trombone_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_I_mvmt_I_AL \Trombone_I_mvmt_I_AM
 		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Trombone_I_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Trombone_I_II_mvmt_I_BC
 		\Trombone_I_mvmt_I_BD \NULL_I_BE \Trombone_I_mvmt_I_BF \Trombone_I_mvmt_I_BG \Trombone_I_mvmt_I_BH \NULL_I_BI
 		\Trombone_I_mvmt_I_BJ \Trombone_I_mvmt_I_BK \Trombone_I_mvmt_I_BL \Trombone_I_mvmt_I_BM \NULL_I_BN \NULL_I_BO
 		\Trombone_I_II_cues_mvmt_I_BP \NULL_I_BQ \Trombone_I_mvmt_I_BR }
-Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF \NULL_I_AG
+Trombone_II_mvmt_I = { \clef bass \NULL_I_AA \Trombone_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Trombone_II_mvmt_I_AF \NULL_I_AG
 		\Trombone_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_II_mvmt_I_AL \Trombone_II_mvmt_I_AM
 		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Trombone_II_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Trombone_I_II_mvmt_I_BC
 		\Trombone_II_mvmt_I_BD \NULL_I_BE \Trombone_II_mvmt_I_BF \Trombone_II_mvmt_I_BG \Trombone_II_mvmt_I_BH \NULL_I_BI
 		\Trombone_II_mvmt_I_BJ \Trombone_II_mvmt_I_BK \Trombone_II_mvmt_I_BL \Trombone_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO
 		\Trombone_I_II_cues_mvmt_I_BP \NULL_I_BQ \Trombone_II_mvmt_I_BR }
-Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF_AG
+Trombone_III_mvmt_I = { \clef bass \NULL_I_AA \Trombone_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Trombone_III_mvmt_I_AF_AG
 		\Trombone_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Trombone_III_mvmt_I_AL \NULL_I_AM
 		\NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW
 		\Trombone_III_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Trombone_III_mvmt_I_BC
 		\Trombone_III_mvmt_I_BD \NULL_I_BE \Trombone_III_mvmt_I_BF \Trombone_III_mvmt_I_BG \Trombone_III_mvmt_I_BH \NULL_I_BI
 		\Trombone_III_mvmt_I_BJ \Trombone_III_mvmt_I_BK \Trombone_III_mvmt_I_BL \Trombone_III_mvmt_I_BM \NULL_I_BN \NULL_I_BO
 		\Trombone_III_mvmt_I_BP \NULL_I_BQ \Trombone_III_mvmt_I_BR }
-Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF_AG \Tuba_mvmt_I_AH \NULL_I_AI
+Tuba_mvmt_I = { \clef bass \NULL_I_AA \Tuba_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Tuba_mvmt_I_AF_AG \Tuba_mvmt_I_AH \NULL_I_AI
 		\NULL_I_AJ \Trombones_Tuba_mvmt_I_AK \Tuba_mvmt_I_AL \Tuba_mvmt_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ
 		\NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \Tuba_mvmt_I_AX \NULL_I_AY \NULL_I_AZ
 		\Trombone_Tuba_cues_mvmt_I_BA \NULL_I_BB \Tuba_mvmt_I_BC \Tuba_mvmt_I_BD \NULL_I_BE \Tuba_I_mvmt_I_BF

@@ -1,10 +1,3 @@
-
-m. 12: Trombone III/Tuba crescendo messes up the score when I try to print it in any way.
-Redacted it entirely from the score for now, although it's in the parts. Need to figure
-out what's wrong. May be more partcombine magic I have to work around with silences.
-
-m. 12: Convoluted hack for cello crescendo termination means the part can't combine rests.
-
 m. 28: Piano reduction. Initial rest placement completely wrong. Changed but still needs work.
 
 m. 29: Piano reduction. mergeDifferentlyHeadedOn only half-working.

@@ -7,28 +7,49 @@
 
 %% FIXME: Dynamic hairpins in m. 11 in both cello and bass?
 
-Cello_mvmt_I_AB_AC = \relative c {
+Cello_mvmt_I_AB = \relative c {
 	\tempo "con moto"
-	<< { f4:32^\Div_mark aes:32 a:32 fis:32 f:32 e:32 } { a,:32\f\< c:32\!\> cis:32\! a:32\< aes:32\!\> g:32\! } >>
+	<<
+		\new Voice {
+			\voiceOne
+			f4:32^\Div_mark aes:32 a:32
+			fis:32 f:32 e:32
+		}
+		\new Voice {
+			\voiceTwo
+			a,:32\f\< c:32\!\> cis:32\!
+			a:32\< aes:32\!\> g:32\!
+		}
+	>>
 	\clef tenor
 	r8^\Unis_mark e''8\ff f gis a\> gis\!~
 	gis d16 r32 gis f4.->\> ( e8)\!
 	\clef bass
 	<<
 		\new Voice {
-			\voiceOne bes2.:32^\Div_mark \time 4/4 a1:32 \time 3/4 bes2.:32 \time 4/4 ees,2:32 cis2:32
-			\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 \override MultiMeasureRest.staff-position = #0 R2.*2 \revert MultiMeasureRest.staff-position
+			\voiceOne
+			bes2.:32^\Div_mark
+			\time 4/4
+			a1:32
+			\time 3/4
+			bes2.:32
+			\time 4/4
+			ees,2:32 cis2:32
 		}
 		\new Voice {
-			\voiceTwo e2.:32\f\> \time 4/4 cis1:32\! \time 3/4 e2.:32\espressivo \time 4/4 a,2:32\ff\< a2:32
-			\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 s2.\! s2.
+			\voiceTwo
+			e2.:32\f\>
+			\time 4/4
+			cis1:32\!
+			\time 3/4
+			e2.:32\espressivo
+			\time 4/4
+			a,2:32\ff\< \after 4. \! a2:32
 		}
 	>>
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\time 3/4 R2.
 }
 
-Bass_mvmt_I_AB_AC  = \relative c {
+Bass_mvmt_I_AB  = \relative c {
 	\tempo "con moto"
 	d4:32\f\< f:32\!\> fis:32\!
 	d:32\< cis:32\!\> c:32\!
@@ -53,9 +74,7 @@ Bass_mvmt_I_AB_AC  = \relative c {
 		}
 	>>
 	\time 4/4
-	ees2:32\ff\<^\Unis_mark a,:32
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	ees2:32\ff\<^\Unis_mark \after 4. \! a,:32
 }
 
 %%% Section AD = mm. 16-20
@@ -1972,7 +1991,7 @@ Bass_mvmt_I_BR = \relative c {
 
 %%% Final assembly
 
-Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
+Cello_mvmt_I = { \clef bass \NULL_I_AA \Cello_mvmt_I_AB \NULL_I_AC \Cello_mvmt_I_AD \Cello_mvmt_I_AE \Cello_mvmt_I_AF \Cello_mvmt_I_AG \Cello_mvmt_I_AH
 		\Cello_mvmt_I_AI \Cello_mvmt_I_AJ \Cello_mvmt_I_AK \Cello_mvmt_I_AL \Cello_mvmt_I_AM \Cello_mvmt_I_AN \Cello_mvmt_I_AO \Cello_mvmt_I_AP
 		\NULL_I_AQ \Cello_mvmt_I_AR \Cello_mvmt_I_AS \NULL_I_AT \Cello_mvmt_I_AU \Cello_mvmt_I_AV \Cello_mvmt_I_AW \Cello_mvmt_I_AX
 		\Cello_mvmt_I_AY \Cello_mvmt_I_AZ \Cello_mvmt_I_BA \Cello_mvmt_I_BB \Cello_mvmt_I_BC \Cello_mvmt_I_BD \Cello_mvmt_I_BE
@@ -1984,7 +2003,7 @@ Cello_divisi_II_mvmt_I = { \clef bass \NULL_I_AA \NULL_I_AB \NULL_I_AC \NULL_I_A
 		\NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \Cello_divisi_II_mvmt_I_BF \Cello_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI
 		\Cello_divisi_II_mvmt_I_BJ \NULL_I_BK \NULL_I_BL \Cello_divisi_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO \NULL_I_BP \NULL_I_BQ \NULL_I_BR }
 
-Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
+Bass_mvmt_I = { \clef bass \NULL_I_AA \Bass_mvmt_I_AB \NULL_I_AC \Bass_mvmt_I_AD \Bass_mvmt_I_AE \Bass_mvmt_I_AF \Bass_mvmt_I_AG \Bass_mvmt_I_AH
 		\Bass_mvmt_I_AI \Bass_mvmt_I_AJ \Bass_mvmt_I_AK \Bass_mvmt_I_AL \Bass_mvmt_I_AM \Bass_mvmt_I_AN \Bass_mvmt_I_AO \Bass_mvmt_I_AP
 		\NULL_I_AQ \NULL_I_AR \Bass_mvmt_I_AS \NULL_I_AT \Bass_mvmt_I_AU \Bass_mvmt_I_AV \Bass_mvmt_I_AW \Bass_mvmt_I_AX \Bass_mvmt_I_AY
 		\Bass_mvmt_I_AZ \Bass_mvmt_I_BA \Bass_mvmt_I_BB \Bass_mvmt_I_BC \Bass_mvmt_I_BD \Bass_mvmt_I_BE \Bass_mvmt_I_BF \Bass_mvmt_I_BG

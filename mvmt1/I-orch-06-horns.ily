@@ -17,9 +17,8 @@ Horn_I_mvmt_I_AA = \transpose c' f \relative c'' {
 
 %% EDIT: m. 6, different dynamics for III/IV in parts, but same in score?
 %% EDIT: m. 12, beat 3, FFF in V/VI not in score, but looks like copyist.
-%% m. 6: Supress 4's dynamics in score.
 
-Horn_I_mvmt_I_AB_AC = \transpose c' f \relative c'' {
+Horn_I_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto" 
 	e4\mf_\< fis4.( gis8)\!
 	r4 r4 f,8( g)
@@ -35,12 +34,15 @@ Horn_I_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 	r4 f,\mf_\< \tuplet 3/2 { b16[( bes g } cis8]\!)
 	\partCombineAutomatic
 	\time 4/4
-	f,2\f bes\<\!
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	\tag #'Part {
+		f,2\f \after 4. \! bes\<
+	}
+	\tag #'Score {
+		f2\f bes
+	}
 }
 
-Horn_II_mvmt_I_AB_AC = \transpose c' f \relative c' {
+Horn_II_mvmt_I_AB = \transpose c' f \relative c' {
 	\tempo "con moto"
 	\tag #'Part e4\mf \tag #'Score e4 r4 r8 gis8
 	r8 a4.\>( bes4)\!
@@ -52,12 +54,10 @@ Horn_II_mvmt_I_AB_AC = \transpose c' f \relative c' {
 	\time 3/4
 	aes2.
 	\time 4/4
-	d,2\f d\<\!
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	d,2\f \after 4. \! d\<
 }
 
-Horn_III_mvmt_I_AB_AC = \transpose c' f \relative c'' {
+Horn_III_mvmt_I_AB = \transpose c' f \relative c'' {
 	\tempo "con moto"
 	a4_\mf_\< c4. c8_\!
 	r2 \tag #'Part f4\>( \tag #'Score f4(
@@ -69,12 +69,15 @@ Horn_III_mvmt_I_AB_AC = \transpose c' f \relative c'' {
 	\time 3/4
 	bes2.\!\<
 	\time 4/4
-	gis2\f\! bes\<\!
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	\tag #'Part {
+		gis2\f\! \after 4. \! bes\<
+	}
+	\tag #'Score {
+		gis2\f bes
+	}
 }
 
-Horn_IV_mvmt_I_AB_AC = \transpose c' f \relative c' {
+Horn_IV_mvmt_I_AB = \transpose c' f \relative c' {
 	\tempo "con moto"
 	\tag #'Part { c4\mf\< ees( e)\! } \tag #'Score { c4 ees( e) }
 	r2 d4\>(
@@ -86,9 +89,7 @@ Horn_IV_mvmt_I_AB_AC = \transpose c' f \relative c' {
 	\time 3/4
 	d2.\!\<
 	\time 4/4
-	f2\f\! d\<\!
-	%% Have to manually put NULL_I_AC here to place a crescendo stop.
-	\mark #1 \tempo "Allegro, ma non troppo" \time 6/8 R2.*2\! \time 3/4 R2.
+	f2\f\! \after 4. \! d\<
 }
 
 Horn_V_mvmt_I_AB = \transpose c' f \relative c'' {
@@ -1967,25 +1968,25 @@ Horn_IV_mvmt_I_BR = \transpose c' f \relative c' {
 
 %%% Final assembly
 
-Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+Horn_I_mvmt_I = { \Horn_I_mvmt_I_AA \Horn_I_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Horn_I_mvmt_I_AF \NULL_I_AG \Horn_I_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_I_mvmt_I_AL \Horn_I_mvmt_I_AM \NULL_I_AN \Horn_I_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_I_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \Horn_I_cues_mvmt_I_AU \Horn_I_mvmt_I_AV \Horn_I_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_I_mvmt_I_BA
 		\NULL_I_BB \Horn_I_mvmt_I_BC \Horn_I_mvmt_I_BD \Horn_I_mvmt_I_BE \Horn_I_mvmt_I_BF \Horn_I_mvmt_I_BG \Horn_I_mvmt_I_BH \Horn_I_mvmt_I_BI
 		\Horn_I_mvmt_I_BJ \Horn_I_mvmt_I_BK \Horn_I_mvmt_I_BL \Horn_I_mvmt_I_BM \NULL_I_BN \Horn_I_mvmt_I_BO \Horn_I_mvmt_I_BP
 		\Horn_I_III_mvmt_I_BQ \Horn_I_mvmt_I_BR }
-Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+Horn_II_mvmt_I = { \NULL_I_AA \Horn_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Horn_II_mvmt_I_AF \NULL_I_AG \Horn_II_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_II_mvmt_I_AL \Horn_II_mvmt_I_AM \NULL_I_AN \Horn_II_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_II_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_II_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_II_mvmt_I_BA
 		\NULL_I_BB \Horn_II_mvmt_I_BC \Horn_II_mvmt_I_BD \NULL_I_BE \Horn_II_mvmt_I_BF \Horn_II_mvmt_I_BG \Horn_II_mvmt_I_BH \Horn_II_mvmt_I_BI
 		\Horn_II_mvmt_I_BJ \Horn_II_mvmt_I_BK \Horn_II_mvmt_I_BL \Horn_II_mvmt_I_BM \NULL_I_BN \Horn_II_mvmt_I_BO \Horn_II_mvmt_I_BP
 		\Horn_II_mvmt_I_BQ \Horn_II_mvmt_I_BR }
-Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_III_mvmt_I_AF \NULL_I_AG \Horn_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+Horn_III_mvmt_I = { \NULL_I_AA \Horn_III_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Horn_III_mvmt_I_AF \NULL_I_AG \Horn_III_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_III_mvmt_I_AL \Horn_III_mvmt_I_AM \NULL_I_AN \Horn_III_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_III_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_III_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_III_mvmt_I_BA \NULL_I_BB
 		\Horn_III_mvmt_I_BC \Horn_III_mvmt_I_BD \NULL_I_BE \Horn_III_mvmt_I_BF \Horn_III_mvmt_I_BG \Horn_III_mvmt_I_BH \NULL_I_BI \Horn_III_mvmt_I_BJ
 		\Horn_III_mvmt_I_BK \Horn_III_mvmt_I_BL \Horn_III_mvmt_I_BM \NULL_I_BN \Horn_III_mvmt_I_BO \Horn_III_mvmt_I_BP \Horn_I_III_mvmt_I_BQ
 		\Horn_III_mvmt_I_BR }
-Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB_AC \NULL_I_AD \NULL_I_AE \Horn_IV_mvmt_I_AF \NULL_I_AG \Horn_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
+Horn_IV_mvmt_I = { \NULL_I_AA \Horn_IV_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \Horn_IV_mvmt_I_AF \NULL_I_AG \Horn_IV_mvmt_I_AH \NULL_I_AI \NULL_I_AJ
 		\Horn_All_mvmt_I_AK \Horn_IV_mvmt_I_AL \Horn_IV_mvmt_I_AM \NULL_I_AN \Horn_IV_mvmt_I_AO \NULL_I_AP \NULL_I_AQ \Horn_IV_mvmt_I_AR \NULL_I_AS
 		\NULL_I_AT \NULL_I_AU \Horn_all_cues_I_AV \Horn_IV_mvmt_I_AW \Horn_I_II_III_IV_mvmt_I_AX \NULL_I_AY \NULL_I_AZ \Horn_IV_mvmt_I_BA \NULL_I_BB
 		\Horn_IV_mvmt_I_BC \Horn_IV_mvmt_I_BD \NULL_I_BE \Horn_IV_mvmt_I_BF \Horn_IV_mvmt_I_BG \Horn_IV_mvmt_I_BH \Horn_IV_mvmt_I_BI \NULL_I_BJ
