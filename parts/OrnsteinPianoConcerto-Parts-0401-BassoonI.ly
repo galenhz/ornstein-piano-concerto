@@ -37,7 +37,7 @@ instrumentName = "Bassoon I"
 	\layout {
 	\context {
 		\Score
-			rehersalMarkFormatter = #format-mark-circle-numbers
+			rehearsalMarkFormatter = #format-mark-circle-numbers
 			\numericTimeSignature
 	}
   }

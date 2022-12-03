@@ -37,7 +37,7 @@ instrumentName = \markup{\concat{"Clarinet IV in B" \flat}}
 	\layout {
 	\context {
 		\Score
-			rehersalMarkFormatter = #format-mark-circle-numbers
+			rehearsalMarkFormatter = #format-mark-circle-numbers
 			\numericTimeSignature
 	}
   }
