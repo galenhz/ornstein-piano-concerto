@@ -1910,7 +1910,7 @@ Horn_IV_mvmt_I_BQ = \transpose c' f \relative c'' {
 	\repeat unfold 3 {
 		gis2~\p
 		gis
-		b4\< a\!
+		b4\> a\!
 	}
 }
 
