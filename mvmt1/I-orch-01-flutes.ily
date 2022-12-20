@@ -1364,7 +1364,7 @@ Flute_II_mvmt_I_BH = \relative c''' {
 Flute_III_mvmt_I_BH = \relative c''' {
 	\tempo "Meno"
 	r4. des4.~\ff
-	des4. des8~ des16 r16 r8
+	des4.~ des8~ des16 r16 r8
 	r4. des4.~
 	des4.~ des8~ des16 r16 r8
 	\mark #27
