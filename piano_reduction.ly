@@ -5,7 +5,7 @@
 %%% The full text can be found in the LICENSE file with this code. It can be
 %%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
-\version "2.23.82"
+\version "2.24.0"
 
 \include "common.ily"
 
@@ -54,3 +54,28 @@
   }
 }
 
+\include "mvmt2/II-solo-piano.ily"
+\include "mvmt2/II-piano-reduction.ily"
+
+\score {
+	\header { movement = "II." }
+  <<
+	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
+		\new Staff = "solo_upper" \keepWithTag #'PR { \accidentalStyle forget \solo_upper_II }
+		\new Dynamics \keepWithTag #'PR \solo_dynamics_II
+		\new Staff = "solo_lower" \keepWithTag #'PR { \accidentalStyle forget \solo_lower_II }
+	>>
+	\new PianoStaff \with { instrumentName = "Orchestra" } <<
+		\new Staff = "redux_upper" { \accidentalStyle forget \redux_upper_II }
+		\new Dynamics \redux_dynamics_II
+		\new Staff = "redux_lower" { \accidentalStyle forget \redux_lower_II }
+	>>
+  >>
+  \layout {
+	\context {
+		\Score
+		\numericTimeSignature
+		rehearsalMarkFormatter = #format-mark-circle-numbers
+	}
+  }
+}

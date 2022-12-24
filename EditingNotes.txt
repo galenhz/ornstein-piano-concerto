@@ -723,3 +723,20 @@ m. 331: Bass cuts out and has a rest in this bar in the part. It looks like the 
 but was edited later to have the bass carry into the last bar like the cello part. Going with the score
 change.
 (I-orch-10-cello-bass)
+
+Movement II
+
+m. 4: Piccolo and flute I have extra slurs in the score that aren't in the part. They match the previous
+phrase, so adding them in.
+(II-orch-01-flutes)
+
+mm. 5-6: Flute I/II, Oboe I/II, Clarinet I/II, Bass Clarinet and Bassoon I have differing articulations
+on the same rhythmic pattern. Score originally had X( X) x pattern on the first two triplets. Flute I/I
+parts replace it with X( X X)-. as do Oboe I/II (the original pattern is scratched out), Clarinet I/II,
+and Bassoon I. Bass Clarinet has the original pattern from the score. And in the score, this modification is
+in the flute part, but not any of the others. Going with the replacement pattern for all.
+(II-orch-01-flutes, II-orch-02-oboes, II-orch-03-clarinets, II-orch-04-bassoons)
+
+m. 7: Several parts have "slower" as the tempo indicator here. Score has something crossed out, replaced by
+handwritten metronome mark. PR has same metronome mark. Going with that. #TEMPO
+(II-*)
