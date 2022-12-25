@@ -5,7 +5,7 @@
 %%% The full text can be found in the LICENSE file with this code. It can be
 %%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
-\version "2.23.82"
+\version "2.24.0"
 
 \include "common.ily"
 
@@ -46,3 +46,21 @@ instrumentName = "Violin II"
   }
 }
 
+%%% Second movement
+
+\include "mvmt2/II-common.ily"
+\include "mvmt2/II-orch-09-violins-viola.ily"
+
+\score {
+	\new StaffGroup <<
+		\new Staff \compressMMRests \keepWithTag #'Part { \markLengthOn \Violin_II_mvmt_II }
+		\new Staff \with { \RemoveAllEmptyStaves } \compressMMRests \keepWithTag #'Part \Violin_II_divisi_II_mvmt_II
+	>>
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

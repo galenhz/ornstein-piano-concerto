@@ -5,7 +5,7 @@
 %%% The full text can be found in the LICENSE file with this code. It can be
 %%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
-\version "2.23.82"
+\version "2.24.0"
 
 \include "common.ily"
 
@@ -34,6 +34,22 @@ instrumentName = "Piccolo"
 
 \score {
 	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Picc_mvmt_I }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}
+
+%%% Second movement
+
+\include "mvmt2/II-common.ily"
+\include "mvmt2/II-orch-01-flutes.ily"
+
+\score {
+	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Picc_mvmt_II }
 	\layout {
 	\context {
 		\Score

@@ -5,7 +5,7 @@
 %%% The full text can be found in the LICENSE file with this code. It can be
 %%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
-\version "2.23.82"
+\version "2.24.0"
 
 \include "common.ily"
 
@@ -34,6 +34,22 @@ instrumentName = "Trumpet IV in C"
 
 \score {
 	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Trumpet_IV_mvmt_I }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}
+
+%%% Second movement
+
+\include "mvmt2/II-common.ily"
+\include "mvmt2/II-orch-05-trumpets.ily"
+
+\score {
+	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Trumpet_IV_mvmt_II }
 	\layout {
 	\context {
 		\Score
