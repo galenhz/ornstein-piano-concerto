@@ -424,10 +424,19 @@ Cello_mvmt_I_AK = \relative c, {
 	>>
 }
 
-Bass_mvmt_I_AK = \relative c, {
+Bass_mvmt_I_AK = \relative c {
 	\time 4/8
 	\tempo "Melancolico e sostenuto"
-	<fis fis'>4.\p r8
+	<<
+		\new Voice {
+			\voiceOne
+			fis4. d8\rest
+		}
+		\new Voice {
+			\voiceTwo
+			fis,4.\p s8
+		}
+	>>
 	R2*3
 	c4.^\Unis_mark ees8
 	c4. ees8
