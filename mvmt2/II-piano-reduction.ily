@@ -13,6 +13,11 @@ redux_upper_II_AA = \relative c' {
 	\tempo "Andante"
 	\time 12/8
 	<<
+		% This bit is broken into three voices because that's how the
+		% music logically works; it requires me to do a wierd voice
+		% switch in the first voice, but it seems to work. I could
+		% combine it into two. Not sure it's worth the effort.
+		% FIXME: First beat of m.2, want the note order reversed (like m. 1)
 		\new Voice {
 			\voiceOne
 			<bes bes'>4 <b b'>8~ q4~ q16. <c c'>32 <ees ees'>2.
@@ -64,8 +69,49 @@ redux_lower_II_AA = \relative c {
 		\repeat unfold 7 { <bis cis fis> <fis bis cis> <bis cis fis> }
 }
 
+%%% Section AB = mm. 7-12 (Rehearsal 38)
+
+redux_middle_II_AB = \relative c' {
+	<e b' c>4 r8 r4.
+	r16 fis64 ees d des c4~ c16 b64 aes g ges f4
+	r16 fis'64 ees d des c4~ c16[ b64 aes g ges] <f f'>8.. \change Staff = "redux_upper" <fis'' fis'>32
+	\change Staff = "redux_middle" r16 fis,64 ees d des c4~ c16 b64 aes g ges f4
+	r16 fis'64[ ees d des] c16[ b64 aes g ges] f4 r16 fis'64[ ees d des] c16[ b64 aes g ges]
+	f4 r16 fis'64 ees d des c16 b64 aes g ges f4
+}
+
+redux_upper_II_AB = \relative c''' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	<<
+		\new Voice {
+			<b e>8 r8 r8 r8 <f, f'>8.. <fis' fis'>32
+			<e e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+			<f f'>4. r8 s4
+			<e' e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+			<f f'>4~ \tuplet 3/2 8 { q16 <d d'> <gis gis'> <cis cis'> <g g'> <fis fis'> } <f f'>4~
+			\tuplet 3/2 8 { q16[ <d d'> <gis gis'>] <cis cis'>[ <g g'> <fis fis'>] } <f f'>8~ q4.
+		}
+		\new Staff = "redux_middle" \with { alignAboveContext = "redux_lower" } \redux_middle_II_AB
+	>>
+}
+
+redux_dynamics_II_AB = {
+	s2.*6
+}
+
+redux_lower_II_AB =\relative c, {
+	<f c' aes'>4 r8 r8 <f f'>8.. <fis' fis'>32
+	<e e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+	<f f'>4. r8 <f f'>8.. <fis' fis'>32
+	<e e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+	<f f'>4~ \tuplet 3/2 8 { q16 <d d'> <gis gis'> <cis cis'> <g g'> <fis fis'> } <f f'>4~
+	\tuplet 3/2 8 { q16[ <d d'> <gis gis'>] <cis cis'>[ <g g'> <fis fis'>] } <f f'>8~ q4.
+}
+
 %%% Final assembly
 
-redux_upper_II = { \redux_upper_II_AA }
-redux_dynamics_II = { \redux_dynamics_II_AA }
-redux_lower_II = { \redux_lower_II_AA }
+redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB }
+redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB }
+redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB }

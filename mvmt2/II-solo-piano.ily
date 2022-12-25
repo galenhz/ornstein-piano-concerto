@@ -36,8 +36,27 @@ solo_lower_II_AA = \relative c, {
 	}
 }
 
+%%% Section AB = mm. 7-12 (Rehearsal 38)
+
+solo_upper_II_AB = \relative c''' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	\repeat unfold 11 { <b c e gis c>8 \ottava #0 <f, b e f> \ottava #1 <b' c e gis c> }
+		<b c e gis c>8 \ottava #0 <f, b e f> r8
+}
+
+solo_dynamics_II_AB = {
+	s2.\ff s2.*5
+}
+
+solo_lower_II_AB = \relative c,, {
+	\repeat unfold 6 { <f f'>8 <c'' aes' b c> <f,, f'> }
+	\repeat unfold 6 { <ees ees'> <c'' aes' b c> <ees,, ees'> }
+}
+
 %%% Final assembly
 
-solo_upper_II = { \solo_upper_II_AA }
-solo_dynamics_II = { \solo_dynamics_II_AA }
-solo_lower_II = { \solo_lower_II_AA }
+solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB }
+solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB }
+solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB }
