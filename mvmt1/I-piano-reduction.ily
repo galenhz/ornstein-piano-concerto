@@ -2013,7 +2013,7 @@ redux_upper_I_BI = \relative c {
 	r8 \clef treble \tuplet 3/2 { r16 <bes' d fis> <bes d fis> }
 	\tuplet 3/2 { <bes d a'>[ <bes d fis> r32 <bes d fis>] } \tuplet 3/2 { <bes d fis>16 <d fis a> <d fis bes> }
 	\tuplet 3/2 { <d fis cis'>[ <d fis bes> r32 <d fis a>] } \tuplet 3/2 { <d fis a>8 <d fis a>16 }
-	\tuplet 3/2 { <d fis bes> <d fis a> <d fis g> } \tuplet 3/2 { <bes d a> <bes d g> <bes d fis> }
+	\tuplet 3/2 { <d fis bes> <d fis a> <d fis g> } \tuplet 3/2 { <bes d a'> <bes d g> <bes d fis> }
 	\tuplet 3/2 { <bes d ees> <bes d fis>8~ } <bes d fis>
 	% mm. 259-264 - Rehersal 28
 	\mark #28

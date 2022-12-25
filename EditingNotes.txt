@@ -740,3 +740,6 @@ in the flute part, but not any of the others. Going with the replacement pattern
 m. 7: Several parts have "slower" as the tempo indicator here. Score has something crossed out, replaced by
 handwritten metronome mark. PR has same metronome mark. Going with that. #TEMPO
 (II-*)
+
+mm. 7-12: Piano reduction again gets a middle staff to avoid congestion.
+(II-piano-reduction)
