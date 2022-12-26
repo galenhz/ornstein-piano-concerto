@@ -51,9 +51,56 @@ Trombone_II_Tuba_cues_mvmt_II_AB = \relative c, {
 	}
 }
 
+%%% Section AC = mm. 13-17 (Rehearsal ~39)
+
+Trombone_I_mvmt_II_AC = \relative c' {
+	R2.
+	\mark #39
+	\time 7/8
+	\clef bass
+	\partCombineChords
+	a2~\pp a4.
+	\time 6/8
+	R2.
+	\time 7/8
+	a2~ a4.
+	\partCombineAutomatic
+	\time 9/8
+	\tag #'Score \grace s8
+	R1*9/8
+}
+
+Trombone_II_mvmt_II_AC = \relative c, {
+	R2.
+	\mark #39
+	\time 7/8
+	f2~\pp f4.
+	\time 6/8
+	R2.
+	\time 7/8
+	f2~ f4.
+	\time 9/8
+	\tag #'Score \grace s8
+	R1*9/8
+}
+
+Trombone_III_mvmt_II_AC = \relative c {
+	R2.
+	\mark #39
+	\time 7/8
+	d2~\pp d4.
+	\time 6/8
+	R2.
+	\time 7/8
+	d2~ d4.
+	\time 9/8
+	\tag #'Score \grace s8
+	R1*9/8
+}
+
 %%% Final assembly
 
-Trombone_I_mvmt_II = { \clef bass \NULL_II_AA \Trombone_I_mvmt_II_AB }
-Trombone_II_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB }
-Trombone_III_mvmt_II = { \clef bass \NULL_II_AA \Trombone_III_mvmt_II_AB }
-Tuba_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB }
+Trombone_I_mvmt_II = { \clef bass \NULL_II_AA \Trombone_I_mvmt_II_AB \Trombone_I_mvmt_II_AC }
+Trombone_II_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \Trombone_II_mvmt_II_AC }
+Trombone_III_mvmt_II = { \clef bass \NULL_II_AA \Trombone_III_mvmt_II_AB \Trombone_III_mvmt_II_AC }
+Tuba_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \NULL_II_AC }

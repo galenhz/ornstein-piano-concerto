@@ -63,9 +63,39 @@ Bass_mvmt_II_AB = \relative c, {
 	\repeat unfold 3 { r16 fis'64(\< ees d des)\! c16 b64(\> aes g ges)\! f4 }
 }
 
+%%% Section AC = mm. 13-17 (Rehearsal ~39)
+
+Cello_mvmt_II_AC = \relative c {
+	bes4.\p bes'
+	\mark #39
+	\time 7/8
+	R1*7/8
+	\time 6/8
+	bes,4. bes'
+	\time 7/8
+	R1*7/8
+	\time 9/8
+	\tag #'Score \grace s8
+	<d, d'>2.~\pp^\Unis_mark q4.
+}
+
+Bass_mvmt_II_AC = \relative c {
+	d4.\p d'
+	\mark #39
+	\time 7/8
+	R1*7/8
+	\time 6/8
+	d,4. d'
+	\time 7/8
+	R1*7/8
+	\time 9/8
+	\tag #'Score \grace s8
+	bes,2.~\pp bes4.
+}
+
 %%% Final assembly
 
-Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB }
-Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB }
+Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC }
+Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC }
 
-Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB }
+Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC }

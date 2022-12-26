@@ -117,13 +117,60 @@ Viola_mvmt_II_AB = \relative c' {
 		\transpose c' c \Violin_Viola_melody_mvmt_II_AB
 }
 
+%%% Section AC = mm. 13-17 (Rehearsal ~39)
+
+Violin_I_mvmt_II_AC = \relative c'' {
+	gis4.\p gis'
+	\mark #39
+	\time 7/8
+	R1*7/8
+	\time 6/8
+	gis,4. gis'
+	\time 7/8
+	R1*7/8
+	\time 9/8
+	\tag #'Score \grace s8
+	d2.~\pp d4.
+}
+
+Violin_II_mvmt_II_AC = \relative c' {
+	d4.\p d'
+	\mark #39
+	\time 7/8
+	R1*7/8
+	\time 6/8
+	d,4. d'
+	\time 7/8
+	R1*7/8
+	\time 9/8
+	\tag #'Score \grace s8
+	<<
+		\new Voice { \voiceOne bes2.~^\Div_mark bes4. }
+		\new Voice { \voiceTwo fis2.~\pp fis4. }
+	>>
+}
+
+Viola_mvmt_II_AC = \relative c {
+	fis4.\p fis'
+	\mark #39
+	\time 7/8
+	R1*7/8
+	\time 6/8
+	fis,4. fis'
+	\time 7/8
+	R1*7/8
+	\time 9/8
+	\tag #'Score \grace s8
+	<gis, d'>2.~^\Unis_mark\pp q4.
+}
+
 %%% Final assembly
 
-Violin_I_mvmt_II = { \Violin_I_mvmt_II_AA \Violin_I_mvmt_II_AB }
-Violin_I_divisi_II_mvmt_II = { \NULL_II_AA \Violin_I_divisi_II_mvmt_II_AB }
+Violin_I_mvmt_II = { \Violin_I_mvmt_II_AA \Violin_I_mvmt_II_AB \Violin_I_mvmt_II_AC }
+Violin_I_divisi_II_mvmt_II = { \NULL_II_AA \Violin_I_divisi_II_mvmt_II_AB \NULL_II_AC }
 
-Violin_II_mvmt_II = { \Violin_II_mvmt_II_AA \Violin_II_mvmt_II_AB }
-Violin_II_divisi_II_mvmt_II = { \Violin_II_divisi_II_mvmt_II_AA \Violin_II_divisi_II_mvmt_II_AB }
+Violin_II_mvmt_II = { \Violin_II_mvmt_II_AA \Violin_II_mvmt_II_AB \Violin_II_mvmt_II_AC }
+Violin_II_divisi_II_mvmt_II = { \Violin_II_divisi_II_mvmt_II_AA \Violin_II_divisi_II_mvmt_II_AB \NULL_II_AC }
 
-Viola_mvmt_II = { \clef alto \Viola_mvmt_II_AA \Viola_mvmt_II_AB }
-Viola_divisi_II_mvmt_II = { \clef alto \NULL_II_AA \NULL_II_AB }
+Viola_mvmt_II = { \clef alto \Viola_mvmt_II_AA \Viola_mvmt_II_AB \Viola_mvmt_II_AC }
+Viola_divisi_II_mvmt_II = { \clef alto \NULL_II_AA \NULL_II_AB \NULL_II_AC }

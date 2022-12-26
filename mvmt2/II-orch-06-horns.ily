@@ -97,11 +97,55 @@ Horn_V_VI_cues_mvmt_I_AB = \transpose c' f \relative c' {
 	}
 }
 
+%%% Section AC = mm. 13-17 (Rehearsal ~39)
+
+Horn_I_mvmt_II_AC = \transpose c' f \relative c'' {
+	R2.
+	\mark #39
+	\time 7/8
+	dis2~\pp dis4.
+	\time 6/8
+	R2.
+	\time 7/8
+	dis2~ dis4.
+	\time 9/8
+	\tag #'Score \grace s8
+	R1*9/8
+}
+
+Horn_III_mvmt_II_AC = \transpose c' f \relative c'' {
+	R2.
+	\mark #39
+	\time 7/8
+	a2~\pp a4.
+	\time 6/8
+	R2.
+	\time 7/8
+	a2~ a4.
+	\time 9/8
+	\tag #'Score \grace s8
+	R1*9/8
+}
+
+Horn_IV_mvmt_II_AC = \transpose c' f \relative c'' {
+	R2.
+	\mark #39
+	\time 7/8
+	c2~\pp c4.
+	\time 6/8
+	R2.
+	\time 7/8
+	c2~ c4.
+	\time 9/8
+	\tag #'Score \grace s8
+	R1*9/8
+}
+
 %%% Final assembly
 
-Horn_I_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_I_mvmt_II_AB }
-Horn_II_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_II_mvmt_II_AB }
-Horn_III_mvmt_II = { \Horn_III_mvmt_II_AA \Horn_III_mvmt_II_AB }
-Horn_IV_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_IV_mvmt_II_AB }
-Horn_V_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB }
-Horn_VI_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB }
+Horn_I_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_I_mvmt_II_AB \Horn_I_mvmt_II_AC }
+Horn_II_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_II_mvmt_II_AB \NULL_II_AC }
+Horn_III_mvmt_II = { \Horn_III_mvmt_II_AA \Horn_III_mvmt_II_AB \Horn_III_mvmt_II_AC }
+Horn_IV_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_IV_mvmt_II_AB \Horn_IV_mvmt_II_AC }
+Horn_V_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB \NULL_II_AC }
+Horn_VI_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB \NULL_II_AC }
