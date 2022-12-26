@@ -34,10 +34,22 @@ Clarinet_II_mvmt_II_AA = \transpose c' bes \relative c''' {
 
 BassClarinet_mvmt_II_AA = \transpose c' c, \Clarinet_II_mvmt_II_AA
 
+%%% Section AB = mm. 7-12 (Rehearsal 38)
+
+Clarinet_I_II_mvmt_II_AB = \transpose c' bes \relative c''' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	fis8\ff r8 r8 r4.
+	R2.*5
+}
+
+BassClarinet_mvmt_II_AB = \transpose c' c, \Clarinet_I_II_mvmt_II_AB
+
 %%% Final assembly
 
-Clarinet_I_mvmt_II = { \Clarinet_I_mvmt_II_AA }
-Clarinet_II_mvmt_II = { \Clarinet_II_mvmt_II_AA }
-Clarinet_III_mvmt_II = { \NULL_II_AA }
-Clarinet_IV_mvmt_II = { \NULL_II_AA }
-BassClarinet_mvmt_II = { \BassClarinet_mvmt_II_AA }
+Clarinet_I_mvmt_II = { \Clarinet_I_mvmt_II_AA \Clarinet_I_II_mvmt_II_AB }
+Clarinet_II_mvmt_II = { \Clarinet_II_mvmt_II_AA \Clarinet_I_II_mvmt_II_AB }
+Clarinet_III_mvmt_II = { \NULL_II_AA \NULL_II_AB }
+Clarinet_IV_mvmt_II = { \NULL_II_AA \NULL_II_AB }
+BassClarinet_mvmt_II = { \BassClarinet_mvmt_II_AA \BassClarinet_mvmt_II_AB }

@@ -230,7 +230,7 @@ setSoloTextV_VI = { \set Staff.soloText = #"Solo V" \set Staff.soloIIText = #"So
 			}
 		>>
 		\new Staff = "EnglishHorn" \with { instrumentName = "English Horn" shortInstrumentName = "E.H." } \transpose f c' \keepWithTag #'Score \EnglishHorn_mvmt_II
-		\new StaffGroup = "StaffGroup_winds_clarinet" \with { instrumentName = \markup { \concat { "Clarinets in B" \flat } } shortInstrumentName = "Cl.     " } <<
+		\new StaffGroup = "StaffGroup_winds_clarinet" \with { instrumentName = \markup { \concat { "Clarinets in B" \flat "   " } } shortInstrumentName = "Cl.     " } <<
 			\new Staff = "Staff_Clarinets_1_2" \with { \iNameRight instrumentName = \iNameColumnI_II shortInstrumentName = \iNameColumnI_II } {
 				\setSoloTextI_II
 				\transpose bes c' \partCombine \keepWithTag #'Score \Clarinet_I_mvmt_II \keepWithTag #'Score \Clarinet_II_mvmt_II

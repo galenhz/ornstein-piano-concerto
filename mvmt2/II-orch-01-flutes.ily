@@ -43,10 +43,57 @@ Flute_II_mvmt_II_AA = \relative c''' {
 		f[( d) d8 \tuplet 3/2 { f16( ges a)] }
 }
 
+Flute_III_IV_cues_mvmt_II_AA = \relative c''' {
+	\tag #'Score \NULL_II_AA
+	\tag #'Part {
+		\tempo "Andante"
+		\time 12/8
+		R1.*4
+		<<
+			\new CueVoice {
+				r4. r4. \tuplet 3/2 8 { a16[(^"I+II Fl." aes \beamCutR aes-.) \beamCutL aes( ges \beamCutR ges-.) } \beamCutL ges( f])
+					f[( d) d8 \tuplet 3/2 { f16( ges a)] }
+				ges2. \tuplet 3/2 8 { a16[( aes \beamCutR aes-.) \beamCutL aes( ges \beamCutR ges-.) } \beamCutL ges( f])
+					f[( d) d8 \tuplet 3/2 { f16( ges a)] }
+			}
+			\new Voice {
+				\voiceTwo
+				R1.*2
+			}
+		>>
+	}
+}
+
+%%% Section AB = mm. 7-12 (Rehearsal 38)
+
+Flute_I_II_mvmt_II_AB = \relative c''' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	c8\ff r8 r8 r4.
+	R2.*5
+}
+
+Flute_III_mvmt_II_AB = \relative c'' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	f8\ff r8 r8 r4.
+	R2.*5
+}
+
+Flute_IV_mvmt_II_AB = \relative c'' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	b8\ff r8 r8 r4.
+	R2.*5
+}
+
 %%% Final construction
 
-Picc_mvmt_II = { \Picc_mvmt_II_AA }
-Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA }
-Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA }
-Flute_III_mvmt_II = { \NULL_II_AA }
-Flute_IV_mvmt_II = { \NULL_II_AA }
+Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB }
+Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB }
+Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB }
+Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB }
+Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB }

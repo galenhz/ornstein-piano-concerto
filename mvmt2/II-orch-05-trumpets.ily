@@ -10,9 +10,32 @@
 %%% Section AA = mm. 1-6
 %%% Tacet
 
+%%% Section AB = mm. 7-12 (Rehearsal 38)
+%%% Tacet, cues only
+
+Trumpet_All_cues_mvmt_II_AB = \relative c' {
+	\tag #'Score \NULL_II_AB
+	\tag #'Part {
+		\mark #38
+		\tempo 8 = 69
+		\time 6/8
+		<<
+			\new CueVoice {
+				\voiceOne
+				<gis f'>4^"I+II Hn." r8 r4.
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+			}
+		>>
+		R2.*5
+	}
+}
+
 %%% Final assembly
 
-Trumpet_I_mvmt_II = { \NULL_II_AA }
-Trumpet_II_mvmt_II = { \NULL_II_AA }
-Trumpet_III_mvmt_II = { \NULL_II_AA }
-Trumpet_IV_mvmt_II = { \NULL_II_AA }
+Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB }
+Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB }
+Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB }
+Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB }

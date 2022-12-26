@@ -18,21 +18,54 @@ Cello_Bass_cues_mvmt_II_AA = \relative c' {
 		R1.*4
 		<<
 			\new CueVoice {
-				\voiceOne
+				\voiceTwo
 				fis8^"Vla." fis, fis'
 					\repeat unfold 7 { fis fis, fis' }
 			}
 			\new Voice {
-				\voiceTwo
+				\voiceFour
 				R1.*2
 			}
 		>>
 	}
 }
 
+%%% Section AB = mm. 7-12 (Rehearsal 38)
+
+Cello_mvmt_II_AB = \relative c {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne c8^\Div_mark d\rest d\rest
+		}
+		\new Voice {
+			\voiceTwo f,8\ff s8 s8
+		}
+	>>
+	%% Cut and paste from the upper strings.
+		r8 f8..\mf^\Unis_mark fis'32
+	e4 ees8~ ees8. \set stemLeftBeamCount = #2 \beamCutR c16 \beamCutL b32( aes g ges)
+	f4. r8 f8.. fis'32
+	e4 ees8~ ees8. \set stemLeftBeamCount = #2 \beamCutR c16 \beamCutL b32( aes g ges)
+	f4~ \tuplet 3/2 8 { f16 d( gis) cis( g fis) } f4~
+	\tuplet 3/2 8 { f16[ d( gis)] cis([ g fis)] } f8~ f4 r8
+}
+
+Bass_mvmt_II_AB = \relative c, {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	f8\ff r8 r8 r4.
+	r16 fis''64(\mf\< ees d des)\! c4\>~ c16\! b64(\> aes g ges)\! f4
+	\repeat unfold 2 { r16 fis'64(\< ees d des)\! c4\>~ c16\! b64(\> aes g ges)\! f4 }
+	\repeat unfold 3 { r16 fis'64(\< ees d des)\! c16 b64(\> aes g ges)\! f4 }
+}
+
 %%% Final assembly
 
-Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA }
-Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA }
+Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB }
+Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB }
 
-Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA }
+Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB }

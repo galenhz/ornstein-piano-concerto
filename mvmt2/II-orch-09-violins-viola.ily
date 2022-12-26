@@ -31,7 +31,7 @@ Violin_II_mvmt_II_AA = \relative c''' {
 
 Violin_II_divisi_II_mvmt_II_AA = \relative c' {
 	R1.*4
-	bis8^\Div_mark\mf bis bis \repeat unfold 21 { bis }
+	bis8\mf bis bis \repeat unfold 21 { bis }
 }
 
 Viola_mvmt_II_AA = \relative c' {
@@ -42,13 +42,88 @@ Viola_mvmt_II_AA = \relative c' {
 		\repeat unfold 7 { fis fis, fis' }
 }
 
+%%% Section AB = mm. 7-12 (Rehearsal 38)
+
+Violin_Viola_melody_mvmt_II_AB = \relative c' {
+		r8 f8..\mf^\Unis_mark fis'32
+	e4 ees8~ ees8. \set stemLeftBeamCount = #2 \beamCutR c16 \beamCutL b32( aes g ges)
+	f4. r8 f8.. fis'32
+	e4 ees8~ ees8. \set stemLeftBeamCount = #2 \beamCutR c16 \beamCutL b32( aes g ges)
+	f4~ \tuplet 3/2 8 { f16 d( gis) cis( g fis) } f4~
+	\tuplet 3/2 8 { f16[ d( gis)] cis([ g fis)] } f8~ f4 r8
+}
+
+Violin_I_mvmt_II_AB = \relative c''' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne e8^\Div_mark s8 s8
+		}
+		\new Voice {
+			\voiceTwo c8\ff b,\rest b\rest
+		}
+	>>
+		\transpose c c' \Violin_Viola_melody_mvmt_II_AB
+}
+
+Violin_I_divisi_II_mvmt_II_AB = \relative c'' {
+	<<
+		\new Voice {
+			\voiceOne f8^\Div_mark s8 s8
+		}
+		\new Voice {
+			\voiceTwo b,8\ff b\rest b\rest
+		}
+	>>
+		s4.
+	R2.*5
+}
+
+Violin_II_mvmt_II_AB = \relative c'' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne e8^\Div_mark s8 s8
+		}
+		\new Voice {
+			\voiceTwo c8\ff b\rest b\rest
+		}
+	>>
+		\Violin_Viola_melody_mvmt_II_AB
+}
+
+Violin_II_divisi_II_mvmt_II_AB = \relative c'' {
+	<<
+		\new Voice {
+			\voiceOne b8^\Div_mark b\rest b\rest
+		}
+		\new Voice {
+			\voiceTwo e,8 s8 s8
+		}
+	>>
+		s4.
+	R2.*5
+}
+
+Viola_mvmt_II_AB = \relative c' {
+	\mark #38
+	\tempo 8 = 69
+	\time 6/8
+	<aes c f?>8\ff^\DivIII_mark r8 r8
+		\transpose c' c \Violin_Viola_melody_mvmt_II_AB
+}
+
 %%% Final assembly
 
-Violin_I_mvmt_II = { \Violin_I_mvmt_II_AA }
-Violin_I_divisi_II_mvmt_II = { \NULL_II_AA }
+Violin_I_mvmt_II = { \Violin_I_mvmt_II_AA \Violin_I_mvmt_II_AB }
+Violin_I_divisi_II_mvmt_II = { \NULL_II_AA \Violin_I_divisi_II_mvmt_II_AB }
 
-Violin_II_mvmt_II = { \Violin_II_mvmt_II_AA }
-Violin_II_divisi_II_mvmt_II = { \Violin_II_divisi_II_mvmt_II_AA }
+Violin_II_mvmt_II = { \Violin_II_mvmt_II_AA \Violin_II_mvmt_II_AB }
+Violin_II_divisi_II_mvmt_II = { \Violin_II_divisi_II_mvmt_II_AA \Violin_II_divisi_II_mvmt_II_AB }
 
-Viola_mvmt_II = { \clef alto \Viola_mvmt_II_AA }
-Viola_divisi_II_mvmt_II = { \NULL_II_AA }
+Viola_mvmt_II = { \clef alto \Viola_mvmt_II_AA \Viola_mvmt_II_AB }
+Viola_divisi_II_mvmt_II = { \clef alto \NULL_II_AA \NULL_II_AB }

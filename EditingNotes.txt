@@ -743,3 +743,11 @@ handwritten metronome mark. PR has same metronome mark. Going with that. #TEMPO
 
 mm. 7-12: Piano reduction again gets a middle staff to avoid congestion.
 (II-piano-reduction)
+
+mm. 8, 10: Piano reduction doesn't bar the way the score and parts do. Adjust? #UHNDECIDED
+(II-piano-reduction)
+
+mm. 8-10: Bass part has dynamics written into score and parts. A bit skeptical about the the > mark under
+the c in the middle of the phrase. Being under the staff, it's probably a one-note decrescendo rather than
+an accent.
+(II-orch-10-cello-bass)
