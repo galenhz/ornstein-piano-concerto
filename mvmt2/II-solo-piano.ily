@@ -114,8 +114,36 @@ solo_lower_II_AC = \relative c,, {
 	>>
 }
 
+%%% Section AD = mm. 18-24
+
+solo_upper_II_AD = \relative c' {
+	\tempo 4 = 69
+	\time 3/4
+	\repeat unfold 3 { <fis fis'>16 <c' cis>8 <fis, fis'>16 }
+	\time 4/4
+	\repeat unfold 4 { <fis fis'>16 <c' cis>8 <fis, fis'>16 }
+	\time 3/4
+	% EDIT: PR keeps forgetting the f-sharp on the third chord, but score shows it's there.
+	\repeat unfold 6 { <fis fis'>16 <c' cis>8 <fis, fis'>16 }
+	\time 4/4
+	\repeat unfold 8 { <f' ees' f>16 <bes c>8 <f ees' f>16 }
+	\time 3/4
+	<f ees' f>16 <bes c>8 <f ees' f>16 <f, ees' f>8 r8 r8 <c' bes' c>8
+}
+
+solo_dynamics_II_AD = {
+	s2. s1 s2.*2 s1*2 s2.
+}
+
+solo_lower_II_AD = \relative c' {
+	\clef treble
+	\repeat unfold 13 { <c cis>16 <fis a>8 <c cis>16 }
+	\repeat unfold 8 { <g c g'>16 ees'8 <g, c g'>16 }
+	<g c g'>16 ees'8 <g, c g'>16 r4 <bes' c>4
+}
+
 %%% Final assembly
 
-solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC }
-solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC }
-solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC }
+solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD }
+solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD }
+solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD }

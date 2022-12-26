@@ -148,8 +148,74 @@ redux_lower_II_AC = \relative c, {
 	\grace s8 bes,2.~ bes4.
 }
 
+%%% Section AD = mm. 18-24
+
+redux_upper_II_AD = \relative c''' {
+	\tempo 4 = 69
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			r4 r4 \tuplet 3/2 { r8 <gis cis> <a d> }
+			\time 4/4
+			<cis fis>4~ \tuplet 3/2 8 { q16 <b e> \beamCutR <cis fis> \beamCutL <fis b> <cis fis> <b e> }
+				<cis fis>4~ q8 <gis cis>16 <a d>
+			\time 3/4
+			<cis fis> <d gis> <c f>8~ q8 <b e>16 <gis cis> <b e>8 <d g>16 <e a>
+			<cis fis>2.
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 7 { <cis,, fis ees'>16 a'8 <cis, fis ees'>16 }
+			\parenthesize <cis fis ees'>16 a'8 <cis, fis ees'>16
+				\repeat unfold 2 { <cis fis ees'>16 a'8 <cis, fis ees'>16 }
+			\parenthesize <cis fis ees'>16 a'8 <cis, fis ees'>16
+				<cis fis ees'>16 a'8 <cis, fis ees'>16
+				<cis fis ees'>16 a'8 \parenthesize <cis, fis ees'>16
+		}
+	>>
+	\time 4/4
+	\parenthesize <c bes' c>16 <ees g>8 <c bes' c>16
+		\repeat unfold 10 { <c bes' c>16 <ees g>8 <c bes' c>16 }
+}
+
+redux_dynamics_II_AD = {
+	s2. s1 s2.*2 s1*2 s2.
+}
+
+redux_lower_II_AD = \relative c, {
+	<fis cis' a'>2.~
+	q1
+	<d a' fis'>2.
+	<<
+		\new Voice {
+			\voiceOne
+			r4 r4 r8 <fis' c'>8~
+			<g c>4~ \tuplet 3/2 8 { q16 <f bes> \beamCutR <g c> \beamCutL <c f> <g c> <f bes> }
+				<g c>4~ q8 <d g>16 <ees aes>
+			<g c> <a d> <fis b>8~ q <f bes> <d g>16 <ees aes> <fis b>8~ q8. <a d>16
+			<g c>2.
+		}
+		\new Voice {
+			\voiceTwo
+			<fis, cis' a'>2.
+			<d g c>1~
+			q1
+			% FIXME: This parenthesize doesn't work?
+			\parenthesize q2.
+		}
+		\new Voice {
+			\voiceThree
+			s2.
+			s1
+			s1
+			s4 r16 <f, f'>16~ q4 <d d'>8
+		}
+	>>
+}
+
 %%% Final assembly
 
-redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC }
-redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC }
-redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC }
+redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD }
+redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD }
+redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD }
