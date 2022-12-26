@@ -751,3 +751,15 @@ mm. 8-10: Bass part has dynamics written into score and parts. A bit skeptical a
 the c in the middle of the phrase. Being under the staff, it's probably a one-note decrescendo rather than
 an accent.
 (II-orch-10-cello-bass)
+
+m. 14: So far I've simply copied the rehersal marks from the orchestral material without changing anything.
+But some of the marks are...not where I would put them. This is a good example; mark 39 msuically belongs
+in measure 13. At some point I need to decide how much deference I should give the materials here. #UNDECIDED
+(II-*)
+
+m. 14, 16: The PR moves the lower staff to treble clef in m. 16 but not 14. There's no difference in the
+musical material. It really should be both measures, or neither. The score does neither. Sticking with that.
+(II-solo-piano)
+
+m. 17: PR moves bottom note from b-flat to d, clearly an error if you check the score.
+(II-piano-reduction)

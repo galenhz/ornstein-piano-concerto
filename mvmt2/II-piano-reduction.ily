@@ -71,6 +71,7 @@ redux_lower_II_AA = \relative c {
 
 %%% Section AB = mm. 7-12 (Rehearsal 38)
 
+% FIXME: Middle staff drops out at an awkward moment. I really need to consider how to handle these.
 redux_middle_II_AB = \relative c' {
 	<e b' c>4 r8 r4.
 	r16 fis64 ees d des c4~ c16 b64 aes g ges f4
@@ -110,8 +111,45 @@ redux_lower_II_AB =\relative c, {
 	\tuplet 3/2 8 { q16[ <d d'> <gis gis'>] <cis cis'>[ <g g'> <fis fis'>] } <f f'>8~ q4.
 }
 
+%%% Section AC = mm. 13-17 (Rehearsal ~39)
+
+redux_upper_II_AC = \relative c {
+	<fis d' gis>4. <fis' d' gis>
+	\mark #39
+	\time 7/8
+	<a, d fis g>2~ q4.
+	\time 6/8
+	<fis d' gis>4. <fis' d' gis>
+	\time 7/8
+	<a, d fis g>2~ q4.
+	\time 9/8
+	<<
+		\new Voice {
+			\voiceTwo
+			\grace s8 <gis d' fis b>2.~ q4.
+		}
+		\new Voice {
+			\voiceOne
+			<fis'' d' g>2.~ q4.
+		}
+	>>
+}
+
+redux_dynamics_II_AC = {
+	s2. s1*7/8 s2. s1*7/8 s1*9/8
+}
+
+redux_lower_II_AC = \relative c, {
+	\repeat unfold 2 {
+		<d bes'>4. <d' bes'>
+		<f, d'>2~ q4.
+	}
+	% EDIT: PR goes from b-flat to d, clearly an error.
+	\grace s8 bes,2.~ bes4.
+}
+
 %%% Final assembly
 
-redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB }
-redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB }
-redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB }
+redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC }
+redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC }
+redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC }

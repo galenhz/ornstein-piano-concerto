@@ -55,8 +55,67 @@ solo_lower_II_AB = \relative c,, {
 	\repeat unfold 6 { <ees ees'> <c'' aes' b c> <ees,, ees'> }
 }
 
+%%% Section AC = mm. 13-17 (Rehearsal ~39)
+
+solo_upper_II_AC = \relative c'''' {
+	<<
+		\new Voice {
+			\voiceOne
+			ges4 s8 s4.
+			\mark #39
+			\time 7/8
+			\tuplet 3/2 { ges,16 f, b' } d2~ d8..[ c32]
+			\time 6/8
+			ges'4 s8 s4.
+			\time 7/8
+			\tuplet 3/2 { ges,16 f, b' } d2~ d8..[ a32]
+			\time 9/8
+			\grace s8 fis2. r4 r8
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				\tuplet 3/2 { f'16 ees d } d8. d16 \tuplet 3/2 { ees16 d c } c8. c16
+				s8 r16. <a, d>32 ees'8..[ <a, d>32] ees'8..[ <a, d>32] ees'8
+			}
+			r8 r16. <a, d>32 ees'8..[ <a, d>32] ees'4~ ees8..[ <a, d>32] ees'8
+		}
+	>>
+}
+
+solo_dynamics_II_AC = {
+	s2. s1*7/8 s2. s1*7/8 s1*9/8
+}
+
+solo_lower_II_AC = \relative c,, {
+	\repeat unfold 2 {
+		<d d'>16 aes'' fis' bes \clef treble d aes' beses aes d, \clef bass bes fis aes,
+		<<
+			\new Voice {
+				\voiceOne
+				r8 r16. \stemDown <d' fis>32 gis8..[ <d fis>32] gis8..[ <d fis>32] gis8 \stemNeutral
+			}
+			\new Voice {
+				\voiceTwo
+				\set tieWaitForNote = ##t f,,16~ d'~ <f, d' a'>2.
+			}
+		>>
+	}
+	% \time 9/8
+	<<
+		\new Voice {
+			\voiceOne
+			r8 r16. <d'' fis>32 gis8..[ <d fis>32] gis4~ gis8..[ <d fis>32] gis8
+		}
+		\new Voice {
+			\voiceTwo
+			\acciaccatura <bes,,, bes'>8 <bes bes' d gis cis>2.~ q4.
+		}
+	>>
+}
+
 %%% Final assembly
 
-solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB }
-solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB }
-solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB }
+solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC }
+solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC }
+solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC }
