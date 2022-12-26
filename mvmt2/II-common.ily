@@ -13,8 +13,15 @@
 % AB = mm. 7-12 (Rehearsal 38)
 % AC = mm. 13-17 (Rehearsal ~39)
 % AD = mm. 18-24
-% AE = mm. 25-?? (Rehearsal 40)
+% AE = mm. 25-31 (Rehearsal 40)
+% AF = mm. 32-39 (Rehearsal 41)
+% AG = mm. 40-45 (Rehearsal 42)
+% AH = mm. 46-55 (Rehearsal 43)
+% AI = mm. 50-55
+% AJ = mm. 56-?? (Rehearsal ~44)
 
 NULL_II_AA = { \tempo "Andante" \time 12/8 R1.*6 }
 NULL_II_AB = { \mark #38 \tempo 8 = 69 \time 6/8 R2.*6 }
 NULL_II_AC = { R2. \mark #39 \time 7/8 R1*7/8 \time 6/8 R2. \time 7/8 R1*7/8 \time 9/8 \tag #'Score \grace s8 R1*9/8 }
+NULL_II_AD = { \tempo 4 = 69 \time 3/4 R2. \time 4/4 R1 \time 3/4 R2.*2 \time 4/4 R1*2 \time 3/4 R2. }
+NULL_II_AE = { \tempo "Doppio" \time 4/4 R1*4 \time 3/2 R1. \time 4/4 R1 \time 5/4 R1*5/4 }
