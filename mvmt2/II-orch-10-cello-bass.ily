@@ -93,9 +93,43 @@ Bass_mvmt_II_AC = \relative c {
 	bes,2.~\pp bes4.
 }
 
+%%% Section AD = mm. 18-24
+
+Cello_mvmt_II_AD = \relative c, {
+	\tempo 4 = 69
+	\time 3/4
+	<fis cis' a'>2.~\pp^\DivIII_mark
+	\time 4/4
+	q1
+	\time 3/4
+	<d a' fis'>2.
+	<fis cis' a'>2.
+	\time 4/4
+	<d g c>1~
+	q1
+	\time 3/4
+	r4 r16 f16~\f^\Unis_mark f4 d8
+}
+
+Bass_mvmt_II_AD = \relative c, {
+	\tempo 4 = 69
+	\time 3/4
+	fis2.~\pp
+	\time 4/4
+	fis1
+	\time 3/4
+	d2.
+	fis2.
+	\time 4/4
+	d1~
+	d1
+	\time 3/4
+	r4 r16 f16~\f f4 d8
+}
+
 %%% Final assembly
 
-Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC }
-Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC }
+Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC \Cello_mvmt_II_AD }
+Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD }
 
-Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC }
+Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC \Bass_mvmt_II_AD }

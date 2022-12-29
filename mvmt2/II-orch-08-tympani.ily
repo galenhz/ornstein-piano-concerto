@@ -60,7 +60,40 @@ Tympani_II_mvmt_II_AC = \relative c {
 	R1*9/8
 }
 
+%%% Section AD = mm. 18-24
+
+Tympani_I_mvmt_II_AD = \relative c {
+	\tempo 4 = 69
+	\time 3/4
+	R2.
+	\time 4/4
+	R1
+	\time 3/4
+	d4 r4 r4
+	R2.
+	\time 4/4
+	d4 r4 r2
+	R1
+	\time 3/4
+	R2.
+}
+
+Tympani_II_mvmt_II_AD = \relative c, {
+	\tempo 4 = 69
+	\time 3/4
+	fis4 r4 r4
+	\time 4/4
+	R1
+	\time 3/4
+	R2.
+	fis4 r4 r4
+	\time 4/4
+	R1*2
+	\time 3/4
+	R2.
+}
+
 %%% Final assembly
 
-Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC }
-Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC }
+Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD }
+Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD }

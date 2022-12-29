@@ -98,9 +98,78 @@ Trombone_III_mvmt_II_AC = \relative c {
 	R1*9/8
 }
 
+%%% Section AD = mm. 18-24
+
+Trombone_all_cues_mvmt_II_AD_partial = \relative c'' {
+	\tempo 4 = 69
+	\time 3/4
+	\tag #'Score R2.
+	\tag #'Part <<
+		\new CueVoice {
+			\cueClef treble
+			ees8.^"I Vn." ees16 ees8. ees16 ees8. ees16
+			\cueClefUnset
+		}
+		\new Voice {
+			\voiceTwo
+			R2.
+		}
+	>>
+	\time 4/4
+	R1
+	\time 3/4
+	R2.*2
+}
+
+Trombone_I_mvmt_II_AD = \relative c {
+	\Trombone_all_cues_mvmt_II_AD_partial
+	\time 4/4
+	c1~\ppp
+	c1
+	\time 3/4
+	c2 r4
+}
+
+Trombone_II_mvmt_II_AD = \relative c {
+	\Trombone_all_cues_mvmt_II_AD_partial
+	\time 4/4
+	g1~\ppp
+	g1
+	\time 3/4
+	g2 r4
+}
+
+Trombone_III_cues_mvmt_II_AD = \relative c, {
+	\Trombone_all_cues_mvmt_II_AD_partial
+	\time 4/4
+	\tag #'Score R1*2
+	\tag #'Part <<
+		\new CueVoice {
+			\voiceTwo
+			d1~_"Tuba"
+			d1
+		}
+		\new Voice {
+			\voiceOne
+			R1*2
+		}
+	>>
+	\time 3/4
+	R2.
+}
+
+Tuba_mvmt_II_AD = \relative c, {
+	\Trombone_all_cues_mvmt_II_AD_partial
+	\time 4/4
+	d1~\ppp
+	d1
+	\time 3/4
+	d2 r4
+}
+
 %%% Final assembly
 
-Trombone_I_mvmt_II = { \clef bass \NULL_II_AA \Trombone_I_mvmt_II_AB \Trombone_I_mvmt_II_AC }
-Trombone_II_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \Trombone_II_mvmt_II_AC }
-Trombone_III_mvmt_II = { \clef bass \NULL_II_AA \Trombone_III_mvmt_II_AB \Trombone_III_mvmt_II_AC }
-Tuba_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \NULL_II_AC }
+Trombone_I_mvmt_II = { \clef bass \NULL_II_AA \Trombone_I_mvmt_II_AB \Trombone_I_mvmt_II_AC \Trombone_I_mvmt_II_AD }
+Trombone_II_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \Trombone_II_mvmt_II_AC \Trombone_II_mvmt_II_AD }
+Trombone_III_mvmt_II = { \clef bass \NULL_II_AA \Trombone_III_mvmt_II_AB \Trombone_III_mvmt_II_AC \Trombone_III_cues_mvmt_II_AD }
+Tuba_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \NULL_II_AC \Tuba_mvmt_II_AD }
