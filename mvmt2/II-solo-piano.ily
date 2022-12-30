@@ -142,8 +142,35 @@ solo_lower_II_AD = \relative c' {
 	<g c g'>16 ees'8 <g, c g'>16 r4 <bes' c>4
 }
 
+%%% Section AE = mm. 25-31 (Rehearsal 40)
+
+solo_upper_II_AE = \relative c' {
+	\mark #40
+	\tempo "Doppio"
+	\repeat unfold 15 {
+		\tuplet 7/4 4 { \stemUp f16[ e' f] \stemDown fis \stemUp f[ e' f] \stemDown fis \stemUp f[ e f,] \stemDown fis \stemUp f[ e] }
+	}
+	\tuplet 7/4 { \stemUp f,16[ e' f] \stemDown fis \stemUp f[ e' f] }
+}
+
+solo_dynamics_II_AE = {
+	s1*4 s1. s1 s1 s4-\markup { rit. }
+}
+
+solo_lower_II_AE = \relative c {
+	% Put the time signature changes here so we can ignore them in upper.
+	\time 4/4
+	R1*4
+	\time 3/2
+	R1.
+	\time 4/4
+	R1
+	\time 5/4
+	R1*5/4
+}
+
 %%% Final assembly
 
-solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD }
-solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD }
-solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD }
+solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE }
+solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE }
+solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE }

@@ -214,8 +214,89 @@ redux_lower_II_AD = \relative c, {
 	>>
 }
 
+%%% Section AE = mm. 25-31 (Rehearsal 40)
+
+redux_upper_II_AE = \relative c' {
+	\mark #40
+	\tempo "Doppio"
+	\time 4/4
+	\stemUp <f a c f>8 \stemNeutral r8 r4 r4 r4
+	<<
+		\new Voice {
+			\voiceOne
+			b4\rest b\rest
+				\tuplet 5/4 2 {
+					<cis, cis'>8 <d d'> <cis cis'> <e e'> <f f'>
+					<cis cis'> <d d'> <cis cis'> <f f'> <fis fis'>
+					<cis cis'>8 <d d'> <cis cis'> <e e'> <f f'>~
+				}
+			<f f'>1
+			\time 3/2
+			\tuplet 5/4 2 {
+				<cis cis'>8 <d d'> <cis cis'> <e e'> <f f'>
+				<cis cis'> <d d'> <cis cis'> <f f'> <fis fis'>
+				<cis cis'>8 <d d'> <cis cis'> <e e'> <f f'>~
+			}
+			\time 4/4
+			q1
+			\time 5/4
+			r4 \tuplet 5/4 2 { <a, a'>8 <bes bes'> <a a'> <c c'> <cis cis'> }
+				r8 <a a'>[ <c c'> <ees ees'>]
+		}
+		\new Voice {
+			%% FIXME: We need some overrides to make the ties disappear under other stuff.
+			\voiceTwo
+			s4 s4 <d g c>2~
+			q1~
+			q8 r8 r4 r4 r4
+			\time 3/2
+			q1.
+			\time 4/4
+			s1
+			\time 5/4
+			r4 <a e' a>1
+		}
+	>>
+}
+
+redux_dynamics_II_AE = {
+	s1*4 s1. s1 s1 s4-\markup { rit. }
+}
+
+redux_lower_II_AE = \relative c {
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			<cis fis>8 s8 s2.
+			r4 r4 \stemDown <d gis cis>2~
+			q1~ \stemNeutral
+			q8 r8 r4 r4 r4
+			\time 3/2
+			q1.
+			\time 4/4
+			s1
+			\time 5/4
+			r4 <bes e bes'>1
+		}
+		\new Voice {
+			\stemDown <cis,, cis'>8 \stemNeutral <d d'>4 <cis cis'>8 <c c'> a'4 <c, c'>8
+			\voiceTwo
+			<cis cis'>8 <d d'>8~ q2.~
+			q1~
+			q8[ <ees ees'> <a a'> <b b'> <a a'> <ees ees'>] <d d'>4~
+			\time 3/2
+			q1.~
+			\time 4/4
+			q8[ <ees ees'> <a a'> <b b'> <a a'> <ees ees'> <d d'> <ees ees'>]
+			\time 5/4
+			<cis cis'>1~ q4
+		}
+	>>
+}
+
 %%% Final assembly
 
-redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD }
-redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD }
-redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD }
+redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE }
+redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE }
+redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE }

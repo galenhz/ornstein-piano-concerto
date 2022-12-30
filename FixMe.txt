@@ -90,3 +90,6 @@ Movement II
 m. 2: Piano reduction, first beat, want to reverse the shift so the cis in on the right, like m. 1.
 
 m. 24: Piano reduction. Left hand parenthesize doesn't work, for no clear reason.
+
+m. 26-27: Piano reduction. Need the ties to disappear under the other notes in the upper staff. Manual
+suggests some overrides to do this, but can't seem to make it work in early testing.
