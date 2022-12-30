@@ -64,9 +64,37 @@ Trumpet_All_cues_mvmt_II_AD = \relative c'' {
 	}
 }
 
+%%% Section AE = mm. 25-31 (Rehearsal 40)
+%%% Tacet, cues only
+
+Trumpet_All_cues_mvmt_II_AE = \relative c'' {
+	\tag #'Score \NULL_II_AE
+	\tag #'Part {
+		\mark #40
+		\tempo "Doppio"
+		\time 4/4
+		R1*4
+		\time 3/2
+		R1.
+		\time 4/4
+		R1
+		\time 5/4
+		<<
+			\new CueVoice {
+				\voiceOne
+				r4 \tuplet 5/4 { a8(^"I Cl." bes a c cis) } r8 a[( c ees])
+			}
+			\new Voice {
+				\voiceTwo
+				R1*5/4
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
-Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD }
-Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD }
-Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD }
-Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD }
+Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }
+Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }
+Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }
+Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }

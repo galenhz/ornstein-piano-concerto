@@ -763,3 +763,6 @@ musical material. It really should be both measures, or neither. The score does 
 
 m. 17: PR moves bottom note from b-flat to d, clearly an error if you check the score.
 (II-piano-reduction)
+
+mm. 25-31: Score originally (and some parts still do) had this section as 4/4, 8/4, 10/4, and 9/4. This was
+reworked into what made it into the PR: 4/4 * 4, 3/2, 4/4, 5/4.

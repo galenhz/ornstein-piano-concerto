@@ -246,7 +246,7 @@ redux_upper_II_AE = \relative c' {
 		\new Voice {
 			%% FIXME: We need some overrides to make the ties disappear under other stuff.
 			\voiceTwo
-			s4 s4 <d g c>2~
+			s4 s4 <d gis cis>2~
 			q1~
 			q8 r8 r4 r4 r4
 			\time 3/2

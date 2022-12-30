@@ -193,10 +193,59 @@ Flute_II_mvmt_II_AD = \relative c''' {
 	R2.
 }
 
+%%% Section AE = mm. 25-31 (Rehearsal 40)
+
+Flute_I_mvmt_II_AE = \relative c'' {
+	\mark #40
+	\tempo "Doppio"
+	\time 4/4
+	R1
+	r2 \tuplet 5/4 2 { cis8(\mf d cis e f)
+	cis( d cis f fis) cis( d cis e f~ }
+	f1)
+	\time 3/2
+	\tuplet 5/4 2 { cis8( d cis e f) cis( d cis f fis) cis( d cis e f~ }
+	\time 4/4
+	f1)
+	\time 5/4
+	R1*5/4
+}
+
+Flute_II_III_IV_cues_mvmt_II_AE = \relative c'' {
+	\tag #'Score \NULL_II_AE
+	\tag #'Part {
+		\mark #40
+		\tempo "Doppio"
+		\time 4/4
+		R1
+		<<
+			\new CueVoice {
+				r2 \tuplet 5/4 2 { cis8(^"I Fl." d cis e f)
+				cis( d cis f fis) cis( d cis e f~ }
+				f1)
+				\time 3/2
+				\tuplet 5/4 2 { cis8( d cis e f) cis( d cis f fis) cis( d cis e f~ }
+				\time 4/4
+				f1)
+			}
+			\new Voice {
+				\voiceTwo
+				R1*3
+				\time 3/2
+				R1.
+				\time 4/4
+				R1
+			}
+		>>
+		\time 5/4
+		R1*5/4
+	}
+}
+
 %%% Final construction
 
-Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD }
-Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD }
-Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD }
-Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD }
-Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD }
+Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE }
+Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE }
+Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE }
+Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE }
+Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE }

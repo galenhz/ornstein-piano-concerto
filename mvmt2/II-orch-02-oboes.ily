@@ -83,10 +83,44 @@ Oboe_IV_mvmt_II_AB = \relative c'' {
 %%% Section AD = mm. 18-24
 %%% Tacet
 
+%%% Section AE = mm. 25-31 (Rehearsal 40)
+%%% Tacet, cues only
+
+Oboes_All_cues_mvmt_II_AE = \relative c'' {
+	\tag #'Score \NULL_II_AE
+	\tag #'Part {
+		\mark #40
+		\tempo "Doppio"
+		\time 4/4
+		R1
+		<<
+			\new CueVoice {
+				r2 \tuplet 5/4 2 { cis8(^"I Fl." d cis e f)
+				cis( d cis f fis) cis( d cis e f~ }
+				f1)
+				\time 3/2
+				\tuplet 5/4 2 { cis8( d cis e f) cis( d cis f fis) cis( d cis e f~ }
+				\time 4/4
+				f1)
+			}
+			\new Voice {
+				\voiceTwo
+				R1*3
+				\time 3/2
+				R1.
+				\time 4/4
+				R1
+			}
+		>>
+		\time 5/4
+		R1*5/4
+	}
+}
+
 %%% Final assembly
 
-Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD }
-Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD }
-Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD }
-Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD }
-EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD }
+Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
+Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
+Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
+Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
+EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }

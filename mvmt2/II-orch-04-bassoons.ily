@@ -193,10 +193,70 @@ Bassoon_III_IV_Contra_cues_mvmt_II_AD = \relative c' {
 	}
 }
 
+%%% Section AE = mm. 25-31 (Rehearsal 40)
+
+Bassoon_I_mvmt_II_AE = \relative c' {
+	\mark #40
+	\tempo "Doppio"
+	\time 4/4
+	c8 r8 r4 r2
+	R1*3
+	\time 3/2
+	R1.
+	\time 4/4
+	R1
+	\time 5/4
+	r4 \tag #'Score e1\p \tag #'Part \after 2. _\markup \italic "rit." e1\p
+}
+
+Bassoon_II_mvmt_II_AE = \relative c' {
+	\mark #40
+	\tempo "Doppio"
+	\time 4/4
+	a8 r8 r4 r2
+	R1*3
+	\time 3/2
+	R1.
+	\time 4/4
+	R1
+	\time 5/4
+	r4 \after 2. _\markup \italic "rit." bes1\p
+}
+
+Bassoon_III_mvmt_II_AE = \relative c {
+	\mark #40
+	\tempo "Doppio"
+	\time 4/4
+	fis8 r8 r4 r2
+	R1*3
+	\time 3/2
+	R1.
+	\time 4/4
+	R1
+	\time 5/4
+	r4 \tag #'Score e1\p \tag #'Part \after 2. _\markup \italic "rit." e1\p
+}
+
+Bassoon_IV_mvmt_II_AE = \relative c {
+	\mark #40
+	\tempo "Doppio"
+	\time 4/4
+	cis8 r8 r4 r2
+	R1*3
+	\time 3/2
+	R1.
+	\time 4/4
+	R1
+	\time 5/4
+	r4 \after 2. _\markup \italic "rit." bes1\p
+}
+
 %%% Final assembly
 
-Bassoon_I_mvmt_II = { \clef bass \Bassoon_I_mvmt_II_AA \Bassoon_I_cues_mvmt_II_AB \NULL_II_AC \Bassoon_I_mvmt_II_AD }
-Bassoon_II_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_II_mvmt_II_AB \NULL_II_AC \Bassoon_II_mvmt_II_AD }
-Bassoon_III_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_III_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD }
-Bassoon_IV_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_IV_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD }
-Contrabassoon_mvmt_II = { \clef bass \NULL_II_AA \Contrabassoon_cues_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD }
+Bassoon_I_mvmt_II = { \clef bass \Bassoon_I_mvmt_II_AA \Bassoon_I_cues_mvmt_II_AB \NULL_II_AC \Bassoon_I_mvmt_II_AD \Bassoon_I_mvmt_II_AE }
+Bassoon_II_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_II_mvmt_II_AB \NULL_II_AC \Bassoon_II_mvmt_II_AD \Bassoon_II_mvmt_II_AE }
+Bassoon_III_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_III_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
+	\Bassoon_III_mvmt_II_AE }
+Bassoon_IV_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_IV_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
+	\Bassoon_IV_mvmt_II_AE }
+Contrabassoon_mvmt_II = { \clef bass \NULL_II_AA \Contrabassoon_cues_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD \NULL_II_AE }
