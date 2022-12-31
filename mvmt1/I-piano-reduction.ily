@@ -1956,7 +1956,7 @@ redux_upper_I_BH = \relative c' {
 			<cis f a cis>4 <c e c'>16 <a a'> <a cis f a>4.~
 			<a cis f a>4.~ <a cis f a>4 r8
 		}
-		\new Staff \with { alignAboveContext = "redux_lower" } \redux_middle_I_BH
+		\new Staff \with { alignAboveContext = "redux_lower" } { \accidentalStyle forget \redux_middle_I_BH }
 	>>
 	\break
 	% mm. 248-252 - Rehersal 27
