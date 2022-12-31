@@ -28,7 +28,7 @@ redux_upper_II_AA = \relative c' {
 		\new Voice {
 			\voiceTwo
 			cis2. s2.
-			cis4
+			\once \override NoteColumn.force-hshift = #1.5 cis4
 		}
 		\new Voice {
 			\voiceOne
