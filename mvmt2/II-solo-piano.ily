@@ -151,6 +151,7 @@ solo_upper_II_AE = \relative c' {
 		\tuplet 7/4 4 { \stemUp f16[ e' f] \stemDown fis \stemUp f[ e' f] \stemDown fis \stemUp f[ e f,] \stemDown fis \stemUp f[ e] }
 	}
 	\tuplet 7/4 { \stemUp f,16[ e' f] \stemDown fis \stemUp f[ e' f] }
+	\stemNeutral
 }
 
 solo_dynamics_II_AE = {
@@ -169,8 +170,101 @@ solo_lower_II_AE = \relative c {
 	R1*5/4
 }
 
+%%% Section AF = mm. 32-39 (Rehearsal 41)
+
+solo_extraI_II_AF =\relative c {
+	\tag #'PR \accidentalStyle forget
+	\time 4/8
+	\clef bass
+	\stemDown \slashedGrace <f bes c f>8 \stemNeutral
+	s2
+	\time 6/8
+	\clef treble
+	r8 <f' a c f>[ <a, c ees gis> <f' a c f> <a, c ees gis> <f' a c f>]
+	\time 4/8
+	s2
+	\time 7/8
+	r8 r8 <f a c f>[ <a, c ees gis> <f' a c f> <a, c ees gis> <f' a c f>]
+	\time 4/8
+	s2
+	\time 6/8
+	r8 <aes c ees aes>[ <a, c ees gis> <aes' c ees aes> <a, c ees gis> <aes' c ees aes>]
+}
+
+solo_extraII_II_AF = \relative c, {
+	\tag #'PR \accidentalStyle forget
+	\time 4/8
+	\clef bass
+	\slashedGrace <ges ges'>8
+	s2
+	\time 6/8
+	r8 <cis' fis a c>[ <fis,, fis'> <cis'' fis a c> <fis,, fis'> <cis'' fis a c>]
+	\time 4/8
+	s2
+	\time 7/8
+	r8 r8 <cis fis a c>[ <fis,, fis'> <cis'' fis a c> <fis,, fis'> <cis'' fis a c>]
+	\time 4/8
+	s2
+	\time 6/8
+	r8 <c fis a c>[ <ees,, ees'> <cis'' fis a c> <ees,, ees'> <cis'' fis a c>]
+}
+
+solo_upper_II_AF = \relative c''' {
+	\mark #41
+	\time 4/8
+	\grace s8
+	\ottava #1
+	<c f g c>4~ \tuplet 3/2 8 { q16 <bes bes'> \beamCutR <c c'> \beamCutL <f bes c f> <c c'> <bes bes'> }
+	\time 6/8
+	<c f g c>2.
+	\time 4/8
+	<dis gis bes dis>16 <e e'> <cis fis gis cis>4.
+	\time 7/8
+	<c f g c>16 <a a'> <c f g c>2~ q8. <ees ees'>16
+	\time 4/8
+	<f bes c f>4~ \tuplet 3/2 8 { q16 <ees ees'> \beamCutR <f f'> \beamCutL <bes ees f bes> <f f'> <ees ees'> }
+	\time 6/8
+	<f bes c f>2.
+	\time 4/8
+	<c c'>16 <ees ees'> <fis b cis fis>4.~
+	\time 5/8
+	\tuplet 7/4 { \repeat unfold 7 { <fis fis'>16 } } <fis fis'>[ <aes aes'> <f f'>8 \tuplet 3/2 { <e e'>16 <cis cis'> <e e'>] }
+}
+
+solo_dynamics_II_AF = {
+	s2 s2. s2  s2. s8  s2 s2. s2  s2 s8
+}
+
+solo_lower_II_AF = \relative c' {
+	\break
+	<<
+		\new Voice {
+			\time 4/8
+			\grace s8
+			<c f g c>4~ \tuplet 3/2 8 { q16 <bes bes'> <c c'> <f bes c f> <c c'> <bes bes'> }
+			\time 6/8
+			<c f g c>2.
+			\time 4/8
+			<dis dis'>16 <e e'> <cis cis'>4.
+			\time 7/8
+			<c c'>16 <a a'> <c c'>2~ q8. <ees ees'>16
+			\time 4/8
+			<f bes c f>4~ \tuplet 3/2 8 { q16 <ees ees'> \beamCutR <f f'> \beamCutL <bes ees f bes> <f f'> <ees ees'> }
+			\time 6/8
+			<f bes c f>2.
+		}
+		\new Staff = "solo_extraI" \with { alignBelowContext = "solo_lower" } \solo_extraI_II_AF
+		\new Staff = "solo_extraII" \with { alignBelowContext = "solo_extraI" } \solo_extraII_II_AF
+	>>
+	\break
+	\time 4/8
+	<c c'>16 <ees ees'> <fis b cis fis>4.~
+	\time 5/8
+	\tuplet 7/4 { \repeat unfold 7 { <fis fis'>16 } } <fis fis'>[ <aes aes'> <f f'>8 \tuplet 3/2 { <e e'>16 <cis cis'> <e e'>] }
+}
+
 %%% Final assembly
 
-solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE }
-solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE }
-solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE }
+solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF }
+solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE \solo_dynamics_II_AF }
+solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF }

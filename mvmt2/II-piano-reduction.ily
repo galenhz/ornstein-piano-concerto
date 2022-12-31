@@ -17,7 +17,6 @@ redux_upper_II_AA = \relative c' {
 		% music logically works; it requires me to do a wierd voice
 		% switch in the first voice, but it seems to work. I could
 		% combine it into two. Not sure it's worth the effort.
-		% FIXME: First beat of m.2, want the note order reversed (like m. 1)
 		\new Voice {
 			\voiceOne
 			<bes bes'>4 <b b'>8~ q4~ q16. <c c'>32 <ees ees'>2.
@@ -71,7 +70,6 @@ redux_lower_II_AA = \relative c {
 
 %%% Section AB = mm. 7-12 (Rehearsal 38)
 
-% FIXME: Middle staff drops out at an awkward moment. I really need to consider how to handle these.
 redux_middle_II_AB = \relative c' {
 	<e b' c>4 r8 r4.
 	r16 fis64 ees d des c4~ c16 b64 aes g ges f4
@@ -85,6 +83,7 @@ redux_upper_II_AB = \relative c''' {
 	\mark #38
 	\tempo 8 = 69
 	\time 6/8
+	\break
 	<<
 		\new Voice {
 			<b e>8 r8 r8 r8 <f, f'>8.. <fis' fis'>32
@@ -94,8 +93,9 @@ redux_upper_II_AB = \relative c''' {
 			<f f'>4~ \tuplet 3/2 8 { q16 <d d'> <gis gis'> <cis cis'> <g g'> <fis fis'> } <f f'>4~
 			\tuplet 3/2 8 { q16[ <d d'> <gis gis'>] <cis cis'>[ <g g'> <fis fis'>] } <f f'>8~ q4.
 		}
-		\new Staff = "redux_middle" \with { alignAboveContext = "redux_lower" } \redux_middle_II_AB
+		\new Staff = "redux_middle" \with { alignAboveContext = "redux_lower" } { \accidentalStyle forget \redux_middle_II_AB }
 	>>
+	\break
 }
 
 redux_dynamics_II_AB = {
@@ -295,8 +295,141 @@ redux_lower_II_AE = \relative c {
 	>>
 }
 
+%%% Section AF = mm. 32-39 (Rehearsal 41)
+
+redux_upper_II_AF = \relative c'' {
+	\mark #41
+	\time 4/8
+	\grace s8
+	<<
+		\new Voice {
+			\voiceOne \stemDown
+			b8\rest <f c' f>8~ q16 \beamCutR <e b' e> \beamCutL <ees bes' ees> <d a' d>
+			\time 6/8
+			<f c' f>2.
+			\time 4/8
+			b8\rest <f c' f>8~ q16 \beamCutR <e b' e> \beamCutL <ees bes' ees> <d a' d>
+			\time 7/8
+			<f c' f>2.~ q8
+			\time 4/8
+			b8\rest <aes ees' aes>~ q16 \beamCutR <g d' g> \beamCutL <fis cis' fis> <f c' f>
+			\time 6/8
+			<aes ees' aes>2 \stemUp <c ees aes>4 \stemDown
+			\time 4/8
+			b8\rest <aes ees' aes>~ q16 \beamCutR <g d' g> \beamCutL <fis cis' fis> <f c' f>
+			\time 5/8
+			% Cheat. No excuse, just a cheat.
+			<aes ees' aes>2 s8
+		}
+		\new Voice {
+			\voiceTwo \stemUp
+			s2
+			\time 6/8
+			r4 <a, c f>4 <f' a c f>
+			\time 4/8
+			s2
+			\time 7/8
+			r4 r8 <a, c f>4 <f' a c f>
+			\time 4/8
+			s2
+			\time 6/8
+			r4 <c ees aes c> \stemDown <cis fis a> \stemUp
+			\time 4/8
+			s2
+			\time 5/8
+			r8 <aes' c ees aes>[ <c, ees aes c> <aes' c ees aes> <g bes cis e g>]
+		}
+	>>
+}
+
+redux_dynamics_II_AF = {
+	s2 s2. s2  s2. s8  s2 s2. s2  s2 s8
+}
+
+redux_lower_II_AF = \relative c' {
+	\time 4/8
+	\grace s8
+	<<
+		\new Voice {
+			\voiceOne
+			r8 <ges c>8~ q16 \beamCutR <f b> \beamCutL <fes bes> <ees a>
+			\time 6/8
+			<ges c>2.
+			\time 4/8
+			r8 <ges c>8~ q16 \beamCutR <f b> \beamCutL <fes bes> <ees a>
+			\time 7/8
+			<ges c>2.~ q8
+			\time 4/8
+			r8 <c f>8~ q16 \beamCutR <b e> \beamCutL <bes ees> <a d>
+			\time 6/8
+			<c f>2 s4
+			\time 4/8
+			r8 <c f>8~ q16 \beamCutR <b e> \beamCutL <bes ees> <a d>
+			\time 5/8
+			<c f>2 s8
+		}
+		\new Voice {
+			\voiceTwo
+			<des,,, des'>2~
+			\time 6/8
+			q2.
+			\time 4/8
+			<des des'>2~
+			\time 7/8
+			q2.~ q8
+			\time 4/8
+			<c c'>2~
+			\time 6/8
+			q2.
+			\time 4/8
+			<c c'>2
+			\time 5/8
+			s2 s8
+		}
+		\new Voice {
+			\voiceThree
+			s2
+			\time 6/8
+			% FIXME: Alleviate crowding by silencing some rests. If I could shift them right,
+			%        I could have separate rests for each voice, like PR. Should I bother?
+			s4 <fis' cis' fis> <fis' cis'>
+			\time 4/8
+			s2
+			\time 7/8
+			s4 r8 <fis, cis' fis>4 <fis' cis'>
+			\time 4/8
+			s2
+			\time 6/8
+			s4 <cis fis a>4 s4
+			\time 4/8
+			s2
+			\time 5/8
+			\stemDown s8 <cis fis a c>[ <ees, cis' fis a> <cis' fis a c> <ees, cis' ees g bes>]
+		}
+		\new Voice {
+			\voiceFour
+			s8 des'4.~
+			\time 6/8
+			\shiftOff des2.
+			\time 4/8
+			s8 des4.~
+			\time 7/8
+			des2.~ des8
+			\time 4/8
+			s8 ges4.~
+			\time 6/8
+			ges2 s4
+			\time 4/8
+			s8 ges4.~
+			\time 5/8
+			ges2 s8
+		}
+	>>
+}
+
 %%% Final assembly
 
-redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE }
-redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE }
-redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE }
+redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF }
+redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
+		\redux_dynamics_II_AF }
+redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF }

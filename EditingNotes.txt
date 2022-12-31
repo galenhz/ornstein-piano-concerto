@@ -739,7 +739,6 @@ in the flute part, but not any of the others. Going with the replacement pattern
 
 m. 7: Several parts have "slower" as the tempo indicator here. Score has something crossed out, replaced by
 handwritten metronome mark. PR has same metronome mark. Going with that. #TEMPO
-(II-*)
 
 mm. 7-12: Piano reduction again gets a middle staff to avoid congestion.
 (II-piano-reduction)
@@ -766,3 +765,9 @@ m. 17: PR moves bottom note from b-flat to d, clearly an error if you check the 
 
 mm. 25-31: Score originally (and some parts still do) had this section as 4/4, 8/4, 10/4, and 9/4. This was
 reworked into what made it into the PR: 4/4 * 4, 3/2, 4/4, 5/4.
+
+mm. 25-31: Solo piano just leaves the lower staff blank instead of inserting rests. This is pretty common, and
+perhaps I should mimic this here and silence the rests in the lower staff. #UNDECIDED
+(II-solo-piano)
+
+m. 32: Score has "Allegro" for tempo; parts and PR do not. Following PR. #TEMPO

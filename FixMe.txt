@@ -91,3 +91,7 @@ m. 24: Piano reduction. Left hand parenthesize doesn't work, for no clear reason
 
 m. 26-27: Piano reduction. Need the ties to disappear under the other notes in the upper staff. Manual
 suggests some overrides to do this, but can't seem to make it work in early testing.
+
+m. 33, 35, 37, 39: Piano reduction. Silencing some of the inner rests in the lower staff to avoid
+crowding. If I could shift rests to the right, could have separate rests for each voice, but is
+it worth the trouble? What I have seems straightforwardly readable enough.
