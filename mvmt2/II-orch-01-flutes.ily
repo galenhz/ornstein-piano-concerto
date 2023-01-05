@@ -242,10 +242,48 @@ Flute_II_III_IV_cues_mvmt_II_AE = \relative c'' {
 	}
 }
 
+%%% Section AF = mm. 32-39 (Rehearsal 41)
+%%% Tacet, cues only
+
+Flute_all_cues_mvmt_II_AF = \relative c'' {
+	\tag #'Score \NULL_II_AF
+	\tag #'Part {
+		\mark #41
+		\time 4/8
+		R2
+		\time 6/8
+		R2.
+		\time 4/8
+		R2
+		\time 7/8
+		R1*7/8
+		\time 4/8
+		R2
+		\time 6/8
+		R2.
+		\time 4/8
+		R2
+		\time 5/8
+		<<
+			\new CueVoice {
+				\voiceOne
+				r8_"I+II+III Ob." <c ees aes>8[( <c, ees gis>) <c' ees aes>( <cis, ees gis>)]
+			}
+			\new Voice {
+				\voiceTwo
+				\once \override MultiMeasureRest.staff-position = #-10 R1*5/8
+			}
+		>>
+	}
+}
+
 %%% Final construction
 
-Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE }
-Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE }
-Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE }
-Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE }
-Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE }
+Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF }
+Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE \Flute_all_cues_mvmt_II_AF }
+Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
+		\Flute_all_cues_mvmt_II_AF }
+Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
+		\Flute_all_cues_mvmt_II_AF }
+Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
+		\Flute_all_cues_mvmt_II_AF }

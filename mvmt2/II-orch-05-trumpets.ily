@@ -92,9 +92,103 @@ Trumpet_All_cues_mvmt_II_AE = \relative c'' {
 	}
 }
 
+%%% Section AF = mm. 32-39 (Rehearsal 41)
+%%% ...first non-tacet section!
+
+Trumpet_all_cues_mvmt_II_AF = \relative c'' {
+	\mark #41
+	\time 4/8
+	\tag #'Score { \grace s8 R2 }
+	\tag #'Part <<
+		\new CueVoice {
+			r8^"I Vn." f8~( f16 \beamCutR e) \beamCutL ees( d)
+		}
+		\new Voice {
+			\voiceTwo
+			R2
+		}
+	>>
+}
+
+Trumpet_I_mvmt_II_AF = \relative c'' {
+	\Trumpet_all_cues_mvmt_II_AF
+	\time 6/8
+	r4 r8 r8 f4\f
+	\time 4/8
+	R2
+	\time 7/8
+	r4 r4 r8 f4
+	\time 4/8
+	R2
+	\time 6/8
+	r4 r8 r8 gis4
+	\time 4/8
+	R2
+	\time 5/8
+	r4 r4 g?8
+}
+
+Trumpet_II_mvmt_II_AF = \relative c'' {
+	\Trumpet_all_cues_mvmt_II_AF
+	\time 6/8
+	r4 r8 r8 a4\f
+	\time 4/8
+	R2
+	\time 7/8
+	r4 r4 r8 a4
+	\time 4/8
+	R2
+	\time 6/8
+	R2.
+	\time 4/8
+	R2
+	\time 5/8
+	R1*5/8
+}
+
+Trumpet_III_mvmt_II_AF = \relative c'' {
+	\Trumpet_all_cues_mvmt_II_AF
+	\time 6/8
+	r4 r8 r8 c4\f
+	\time 4/8
+	R2
+	\time 7/8
+	r4 r4 r8 c4
+	\time 4/8
+	R2
+	\time 6/8
+	r4 r8 r8 ees4
+	\time 4/8
+	R2
+	\time 5/8
+	r4 r4 e?8
+}
+
+Trumpet_IV_mvmt_II_AF = \relative c' {
+	\Trumpet_all_cues_mvmt_II_AF
+	\time 6/8
+	r4 r8 r8 f4\f
+	\time 4/8
+	R2
+	\time 7/8
+	r4 r4 r8 f4
+	\time 4/8
+	R2
+	\time 6/8
+	r4 r8 r8 c'4
+	\time 4/8
+	R2
+	\time 5/8
+	r4 r4 cis8
+}
+
 %%% Final assembly
 
-Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }
-Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }
-Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }
-Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE }
+Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
+		\Trumpet_I_mvmt_II_AF }
+Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
+		\Trumpet_II_mvmt_II_AF }
+Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
+		\Trumpet_III_mvmt_II_AF }
+Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
+		\Trumpet_IV_mvmt_II_AF }

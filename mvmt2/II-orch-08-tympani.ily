@@ -96,7 +96,52 @@ Tympani_II_mvmt_II_AD = \relative c, {
 %%% Section AE = mm. 25-31 (Rehearsal 40)
 %%% Tacet
 
+%%% Section AF = mm. 32-39 (Rehearsal 41)
+
+Tympani_I_mvmt_II_AF = \relative c {
+	\mark #41
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	\time 6/8
+	R2.
+	\time 4/8
+	R2
+	\time 7/8
+	R1*7/8
+	\time 4/8
+	R2
+	\time 6/8
+	r4 ees8\f r ees r
+	\time 4/8
+	R2
+	\time 5/8
+	r4 ees8\mf r ees
+}
+
+Tympani_II_mvmt_II_AF = \relative c, {
+	\mark #41
+	\time 4/8
+	\tag #'Score \grace s8
+	R2
+	\time 6/8
+	R2.
+	\time 4/8
+	R2
+	\time 7/8
+	r4 r8 fis\f r fis r
+	\time 4/8
+	R2
+	\time 6/8
+	R2.
+	\time 4/8
+	R2
+	\time 5/8
+	R1*5/8
+}
+
 %%% Final assembly
 
-Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD \NULL_II_AE }
-Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD \NULL_II_AE }
+Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD \NULL_II_AE \Tympani_I_mvmt_II_AF }
+Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD \NULL_II_AE
+		\Tympani_II_mvmt_II_AF }

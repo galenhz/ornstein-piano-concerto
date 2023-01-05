@@ -259,13 +259,149 @@ Viola_mvmt_II_AE = \relative c {
 	r4 \after 2. _\markup \italic "rit." <e bes'>1\pp
 }
 
+%%% Section AF = mm. 32-39 (Rehearsal 41)
+
+Violin_I_mvmt_II_AF = \relative c'' {
+	\mark #41
+	\time 4/8
+	\tag #'Score \grace s8
+	<<
+		\new Voice {
+			\voiceOne
+			s8^\Div_mark f8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 6/8
+			f2.
+			\time 4/8
+			s8 f8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 7/8
+			f2.~ f8
+			\time 4/8
+			s8 aes8~( aes16 \beamCutR g) \beamCutL fis( f)
+			\time 6/8
+			aes2.
+			\time 4/8
+			s8 aes8~( aes16 \beamCutR g) \beamCutL fis( f)
+			\time 5/8
+			aes2 g8
+		}
+		\new Voice {
+			\voiceTwo
+			b,8\rest c8~( c16 \beamCutR b) \beamCutL bes( a)
+			\time 6/8
+			c2.
+			\time 4/8
+			b8\rest c8~( c16 \beamCutR b) \beamCutL bes( a)
+			\time 7/8
+			c2.~ c8
+			\time 4/8
+			b8\rest ees8~( ees16 \beamCutR d) \beamCutL cis( c)
+			\time 6/8
+			ees2.
+			\time 4/8
+			b8\rest ees8~( ees16 \beamCutR d) \beamCutL cis( c)
+			\time 5/8
+			ees2 e8
+		}
+	>>
+}
+
+Violin_II_mvmt_II_AF = \relative c'' {
+	\mark #41
+	\time 4/8
+	\tag #'Score \grace s8
+	<<
+		\new Voice {
+			\voiceOne
+			b8\rest^\Div_mark c8~( c16 \beamCutR b) \beamCutL bes( a)
+			\time 6/8
+			c2.
+			\time 4/8
+			b8\rest c8~( c16 \beamCutR b) \beamCutL bes( a)
+			\time 7/8
+			c2.~ c8
+			\time 4/8
+			b8\rest ees8~( ees16 \beamCutR d) \beamCutL cis( c)
+			\time 6/8
+			ees2.
+			\time 4/8
+			b8\rest ees8~( ees16 \beamCutR d) \beamCutL cis( c)
+			\time 5/8
+			ees2 e8
+		}
+		\new Voice {
+			\voiceTwo
+			s8 f,8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 6/8
+			f2.
+			\time 4/8
+			s8 f8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 7/8
+			f2.~ f8
+			\time 4/8
+			s8 aes8~( aes16 \beamCutR g) \beamCutL fis( f)
+			\time 6/8
+			aes2.
+			\time 4/8
+			s8 aes8~( aes16 \beamCutR g) \beamCutL fis( f)
+			\time 5/8
+			aes2 bes8
+		}
+	>>
+}
+
+Viola_mvmt_II_AF = \relative c' {
+	\mark #41
+	\time 4/8
+	\tag #'Score \grace s8
+	<<
+		\new Voice {
+			\voiceOne
+			c8\rest c8~(^\Div_mark c16 \beamCutR b) \beamCutL bes( a)
+			\time 6/8
+			c2.
+			\time 4/8
+			c8\rest c8~( c16 \beamCutR b) \beamCutL bes( a)
+			\time 7/8
+			c2.~ c8
+			\time 4/8
+			c8\rest f8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 6/8
+			f2.
+			\time 4/8
+			c8\rest f8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 5/8
+			f2 g8
+		}
+		\new Voice {
+			\voiceTwo
+			s8 ges,8~( ges16 \beamCutR f) \beamCutL ees( des)
+			\time 6/8
+			ges2.
+			\time 4/8
+			s8 ges8~( ges16 \beamCutR f) \beamCutL ees( des)
+			\time 7/8
+			ges2.~ ges8
+			\time 4/8
+			s8 c8~( c16 \beamCutR b) \beamCutL bes( a)
+			\time 6/8
+			c2.
+			\time 4/8
+			s8 c8~( c16 \beamCutR b) \beamCutL bes( a)
+			\time 5/8
+			c2 cis8
+		}
+	>>
+}
+
 %%% Final assembly
 
-Violin_I_mvmt_II = { \Violin_I_mvmt_II_AA \Violin_I_mvmt_II_AB \Violin_I_mvmt_II_AC \Violin_I_mvmt_II_AD \Violin_I_mvmt_II_AE }
-Violin_I_divisi_II_mvmt_II = { \NULL_II_AA \Violin_I_divisi_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE }
+Violin_I_mvmt_II = { \Violin_I_mvmt_II_AA \Violin_I_mvmt_II_AB \Violin_I_mvmt_II_AC \Violin_I_mvmt_II_AD \Violin_I_mvmt_II_AE
+		\Violin_I_mvmt_II_AF }
+Violin_I_divisi_II_mvmt_II = { \NULL_II_AA \Violin_I_divisi_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF }
 
-Violin_II_mvmt_II = { \Violin_II_mvmt_II_AA \Violin_II_mvmt_II_AB \Violin_II_mvmt_II_AC \Violin_II_mvmt_II_AD \Violin_II_mvmt_II_AE }
-Violin_II_divisi_II_mvmt_II = { \Violin_II_divisi_II_mvmt_II_AA \Violin_II_divisi_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE }
+Violin_II_mvmt_II = { \Violin_II_mvmt_II_AA \Violin_II_mvmt_II_AB \Violin_II_mvmt_II_AC \Violin_II_mvmt_II_AD \Violin_II_mvmt_II_AE
+		\Violin_II_mvmt_II_AF }
+Violin_II_divisi_II_mvmt_II = { \Violin_II_divisi_II_mvmt_II_AA \Violin_II_divisi_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF }
 
-Viola_mvmt_II = { \clef alto \Viola_mvmt_II_AA \Viola_mvmt_II_AB \Viola_mvmt_II_AC \Viola_mvmt_II_AD \Viola_mvmt_II_AE }
-Viola_divisi_II_mvmt_II = { \clef alto \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE }
+Viola_mvmt_II = { \clef alto \Viola_mvmt_II_AA \Viola_mvmt_II_AB \Viola_mvmt_II_AC \Viola_mvmt_II_AD \Viola_mvmt_II_AE \Viola_mvmt_II_AF }
+Viola_divisi_II_mvmt_II = { \clef alto \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF }

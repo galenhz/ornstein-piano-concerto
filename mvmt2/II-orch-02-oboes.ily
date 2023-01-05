@@ -117,10 +117,92 @@ Oboes_All_cues_mvmt_II_AE = \relative c'' {
 	}
 }
 
+%%% Section AF = mm. 32-39 (Rehearsal 41)
+
+Oboe_I_II_III_cues_mvmt_II_AF = \relative c'' {
+	\mark #41
+	\time 4/8
+	\tag #'Score { \grace s8 R2 \time 6/8 R2. \time 4/8 R2 \time 7/8 R1*7/8 \time 4/8 R2 \time 6/8 R2. \time 4/8 R2 }
+	\tag #'Part <<
+		\new CueVoice {
+			\voiceOne
+			r8^"I Vn." f8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 6/8
+			f2.
+			\time 4/8
+			r8 f8~( f16 \beamCutR e) \beamCutL ees( d)
+			\time 7/8
+			f2.~ f8
+			\time 4/8
+			r8 aes8~( aes16 \beamCutR g) \beamCutL fis( f)
+			\time 6/8
+			aes2.
+			\time 4/8
+			r8 aes8~( aes16 \beamCutR g) \beamCutL fis( f)
+		}
+		\new Voice {
+			\voiceTwo
+			R2
+			\time 6/8
+			R2.
+			\time 4/8
+			R2
+			\time 7/8
+			R1*7/8
+			\time 4/8
+			R2
+			\time 6/8
+			R2.
+			\time 4/8
+			R2
+		}
+	>>
+}
+
+Oboe_I_mvmt_II_AF = \relative c''' {
+	\Oboe_I_II_III_cues_mvmt_II_AF
+	\time 5/8
+	r8 aes8[(\f gis,) aes'( g,)]
+}
+
+Oboe_II_mvmt_II_AF = \relative c'' {
+	\Oboe_I_II_III_cues_mvmt_II_AF
+	\time 5/8
+	r8 ees8[(\f ees,) ees'( e,)]
+}
+
+Oboe_III_mvmt_II_AF = \relative c'' {
+	\Oboe_I_II_III_cues_mvmt_II_AF
+	\time 5/8
+	r8 c8[(\f c,) c'( cis,)]
+}
+
+Oboe_IV_cues_mvmt_II_AF = \relative c''' {
+	\Oboe_I_II_III_cues_mvmt_II_AF
+	\time 5/8
+	\tag #'Score R1*5/8
+	\tag #'Part <<
+		\new CueVoice {
+			\voiceOne
+			r8^"I Ob." aes8[( gis,) aes'( g,)]
+		}
+		\new Voice {
+			\voiceTwo
+			R1*5/8
+		}
+	>>
+}
+
+EnglishHorn_mvmt_II_AF = \relative c'' {
+	\Oboe_I_II_III_cues_mvmt_II_AF
+	\time 5/8
+	r8 ees8[(\f e,) ees'( f,)]
+}
+
 %%% Final assembly
 
-Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
-Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
-Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
-Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
-EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE }
+Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF }
+Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF }
+Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF }
+Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF }
+EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF }
