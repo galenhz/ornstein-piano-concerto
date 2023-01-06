@@ -771,3 +771,7 @@ perhaps I should mimic this here and silence the rests in the lower staff. #UNDE
 (II-solo-piano)
 
 m. 32: Score has "Allegro" for tempo; parts and PR do not. Following PR. #TEMPO
+
+m. 40: PR has only one 8va section in this bar; score has two. The version with two makes more sense, as it makes
+this symmetrical with m. 41.
+(II-solo-piano)

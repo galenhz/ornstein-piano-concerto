@@ -427,9 +427,68 @@ redux_lower_II_AF = \relative c' {
 	>>
 }
 
+%%% Section AG = mm. 40-45 (Rehearsal 42)
+
+redux_upper_II_AG = \relative c'' {
+	\mark #42
+	\time 4/8
+	r32 g[ <fis' g> cis] \tuplet 3/2 { g'16 <fis' g> cis }
+		r32 c,,[ <b' c> fis] \tuplet 3/2 { c'16 <b' c> fis }
+	r32 g,,[ <fis' g> cis] \tuplet 3/2 { g'16 <fis' g> cis }
+		\change Staff = "redux_lower" \stemUp r32 c,,[ <b' c> fis] \stemNeutral \change Staff = "redux_upper" \tuplet 3/2 { c'16 <b' c> fis }
+	\tempo "Meno"
+	<<
+		\new Voice {
+			\voiceOne
+			gis4~ \tuplet 3/2 8 { gis16 fis \beamCutR gis \beamCutL cis gis fis }
+			gis4~ gis16. \beamCutR dis32 \beamCutL dis16 fis
+			a8~ a16.[ a32 a8 b16 gis]
+			\tuplet 3/2 { g16 e g } bes4 r8
+		}
+		\new Voice {
+			\voiceTwo
+			<a, d>2
+			q
+			s2
+			<aes d>4. bes'16. bes32
+		}
+	>>
+}
+
+redux_dynamics_II_AG = {
+	s2 s4 s8-"rit." s8 s2*4
+}
+
+redux_lower_II_AG = \relative c,, {
+	\time 4/8
+	r4 \tuplet 3/2 { <fis fis'>8 <a a'> <bes bes'> }
+	r4 \stemDown \tuplet 3/2 { <fis fis'>8 <a a'> <bes bes'> } \stemNeutral
+	%\tempo "Meno"
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 { \tuplet 5/4 { a'32 aes g a aes } aes4. }
+		}
+		\new Voice {
+			\voiceTwo
+			<d, f'>2
+			<f f'>
+			<d f'>
+			<f f'>
+		}
+		\new Voice {
+			\voiceThree
+			\repeat unfold 3 { s8 \tuplet 6/4 { r32 f' f f aes f } \tuplet 3/2 { beses16 aes f~ } f8 }
+			s2
+		}
+	>>
+}
+
 %%% Final assembly
 
-redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF }
+redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
+		\redux_upper_II_AG }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
-		\redux_dynamics_II_AF }
-redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF }
+		\redux_dynamics_II_AF \redux_dynamics_II_AG}
+redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
+		\redux_lower_II_AG }

@@ -95,3 +95,6 @@ suggests some overrides to do this, but can't seem to make it work in early test
 m. 33, 35, 37, 39: Piano reduction. Silencing some of the inner rests in the lower staff to avoid
 crowding. If I could shift rests to the right, could have separate rests for each voice, but is
 it worth the trouble? What I have seems straightforwardly readable enough.
+
+m. 40-41: Solo piano. Top staff; PR has the longeer notes on the left, and lilypond defaults to them
+being on the right. Worth fighting to change it?

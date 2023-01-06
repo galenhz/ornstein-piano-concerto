@@ -263,8 +263,54 @@ solo_lower_II_AF = \relative c' {
 	\tuplet 7/4 { \repeat unfold 7 { <fis fis'>16 } } <fis fis'>[ <aes aes'> <f f'>8 \tuplet 3/2 { <e e'>16 <cis cis'> <e e'>] }
 }
 
+%%% Section AG = mm. 40-45 (Rehearsal 42)
+
+solo_upper_II_AG = \relative c'''' {
+	\mark #42
+	\time 4/8
+	<<
+		\new Voice {
+			\voiceOne
+			<g g'>4 <fis fis'>8 <ees, ees'>
+			<g g'>4 <fis fis'>8 <ees, ees'>
+			\tempo "Meno"
+			cis'8 b8\rest b4\rest
+		}
+		\new Voice {
+			\ottava #1 <cis'' d>32 g \ottava #0 \change Staff = "solo_lower" <cis, d> \beamCutR g
+				\change Staff = "solo_upper" \beamCutL <cis d> g \change Staff = "solo_lower" <cis, d> g
+				%% EDIT: Second ottava missing in PR but is in score. Makes things symmetric.
+				\change Staff = "solo_upper" \ottava #1 <b'' c> fis \ottava #0 \change Staff = "solo_lower" <b, c> \beamCutR fis
+				\change Staff = "solo_upper" \beamCutL <a bes> ees \change Staff = "solo_lower" <a, bes> ees
+			\change Staff = "solo_upper" <cis'' d> g \change Staff = "solo_lower" <cis, d> \beamCutR g
+				\change Staff = "solo_upper" \beamCutL <cis d> g \change Staff = "solo_lower" <cis, d> g
+				\change Staff = "solo_upper" <b'' c> fis^\markup \italic "rit." \change Staff = "solo_lower" <b, c> \beamCutR fis
+				\change Staff = "solo_upper" \beamCutL <a bes> ees \change Staff = "solo_lower" <a, bes> ees
+			\change Staff = "solo_upper" \stemDown <a d gis>8 s8 s4 \stemNeutral
+		}
+	>>
+	R2*2
+	r4 \tuplet 3/2 8 { r16 r \ottava #1 <c'' c'> q[ <des des'> <c c'>] }
+}
+
+solo_dynamics_II_AG = {
+	s2*5 s4 s4\ff
+}
+
+solo_lower_II_AG = \relative c, {
+	\time 4/8
+	s2*2
+	\clef bass
+	<d a' f'>8 r8 r4
+	R2*2
+	r4 \clef treble \tuplet 3/2 8 { r16 r <c'' c'> q[ <des des'> <c c'>] }
+}
+
 %%% Final assembly
 
-solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF }
-solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE \solo_dynamics_II_AF }
-solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF }
+solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
+		\solo_upper_II_AG }
+solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
+		\solo_dynamics_II_AF \solo_dynamics_II_AG }
+solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
+		\solo_lower_II_AG }
