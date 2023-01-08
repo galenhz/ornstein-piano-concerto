@@ -284,7 +284,7 @@ solo_upper_II_AG = \relative c'''' {
 				\change Staff = "solo_upper" \beamCutL <a bes> ees \change Staff = "solo_lower" <a, bes> ees
 			\change Staff = "solo_upper" <cis'' d> g \change Staff = "solo_lower" <cis, d> \beamCutR g
 				\change Staff = "solo_upper" \beamCutL <cis d> g \change Staff = "solo_lower" <cis, d> g
-				\change Staff = "solo_upper" <b'' c> fis^\markup \italic "rit." \change Staff = "solo_lower" <b, c> \beamCutR fis
+				\change Staff = "solo_upper" <b'' c> fis \change Staff = "solo_lower" <b, c>_\markup \italic "rit." \beamCutR fis
 				\change Staff = "solo_upper" \beamCutL <a bes> ees \change Staff = "solo_lower" <a, bes> ees
 			\change Staff = "solo_upper" \stemDown <a d gis>8 s8 s4 \stemNeutral
 		}

@@ -277,13 +277,53 @@ Flute_all_cues_mvmt_II_AF = \relative c'' {
 	}
 }
 
+%%% Section AG = mm. 40-45 (Rehearsal 42)
+
+Flute_I_mvmt_II_AG = \relative c''' {
+	\mark #42
+	\time 4/8
+	r8 \partCombineApart \tuplet 3/2 { \tag #'Score g16( \tag #'Part g16(\mf^\Soli_mark g' cis,) } \partCombineAutomatic
+		r8 \partCombineApart \tuplet 3/2 { c,16( c' fis,) } \partCombineAutomatic
+	R2
+	\tempo "Meno"
+	R2*4
+}
+
+Flute_II_mvmt_II_AG = \relative c''' {
+	\mark #42
+	\time 4/8
+	r8 \tuplet 3/2 { \tag #'Score g16(\mf \tag #'Part g16(\mf^\Soli_mark fis' cis) } r8 \tuplet 3/2 { c,16( b' fis) }
+	R2
+	\tempo "Meno"
+	R2*4
+}
+
+Flute_III_mvmt_II_AG = \relative c'' {
+	\mark #42
+	\time 4/8
+	r32 \tag #'Score g( \tag #'Part g(\mf^\Soli_mark g' cis, g'8) r32 c,,( c' fis, c'8)
+	R2
+	\tempo "Meno"
+	R2*4
+}
+
+Flute_IV_mvmt_II_AG = \relative c'' {
+	\mark #42
+	\time 4/8
+	r32 \tag #'Score g(\mf \tag #'Part g(\mf^\Soli_mark fis' cis) r8 r32 c,( b' fis) r8
+	R2
+	\tempo "Meno"
+	R2*4
+}
+
 %%% Final construction
 
-Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF }
-Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE \Flute_all_cues_mvmt_II_AF }
+Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG }
+Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE \Flute_all_cues_mvmt_II_AF
+		\Flute_I_mvmt_II_AG }
 Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF }
+		\Flute_all_cues_mvmt_II_AF \Flute_II_mvmt_II_AG }
 Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF }
+		\Flute_all_cues_mvmt_II_AF \Flute_III_mvmt_II_AG }
 Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF }
+		\Flute_all_cues_mvmt_II_AF \Flute_IV_mvmt_II_AG }

@@ -325,15 +325,59 @@ Contrabassoon_mvmt_II_AF = \relative c {
 	r4 ees4\f ees8
 }
 
+%%% Section AG = mm. 40-45 (Rehearsal 42)
+
+Bassoon_I_mvmt_II_AG = \relative c {
+	\mark #42
+	\time 4/8
+	R2
+	r4 r32 \tag #'Score c( \tag #'Part c(\p \tag #'Score c' \tag #'Part c_\markup \italic "rit." fis, c'8)
+	\tempo "Meno"
+	R2*4
+}
+
+Bassoon_II_mvmt_II_AG = \relative c {
+	\mark #42
+	\time 4/8
+	R2
+	r4 r32 c(\p b'_\markup \italic "rit." fis) r8
+	\tempo "Meno"
+	R2*4
+}
+
+Bassoon_III_mvmt_II_AG = \relative c {
+	\mark #42
+	\time 4/8
+	R2*2
+	\tempo "Meno"
+	\partCombineChords
+	f2\p
+	f2
+	f2
+	f2
+	\partCombineAutomatic
+}
+
+Bassoon_IV_mvmt_II_AG = \relative c, {
+	\mark #42
+	\time 4/8
+	R2*2
+	\tempo "Meno"
+	d2\p
+	f2
+	d2
+	f2
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_II = { \clef bass \Bassoon_I_mvmt_II_AA \Bassoon_I_cues_mvmt_II_AB \NULL_II_AC \Bassoon_I_mvmt_II_AD \Bassoon_I_mvmt_II_AE
-	\Bassoon_I_mvmt_II_AF }
+		\Bassoon_I_mvmt_II_AF \Bassoon_I_mvmt_II_AG }
 Bassoon_II_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_II_mvmt_II_AB \NULL_II_AC \Bassoon_II_mvmt_II_AD \Bassoon_II_mvmt_II_AE
-		\Bassoon_II_mvmt_II_AF }
+		\Bassoon_II_mvmt_II_AF \Bassoon_II_mvmt_II_AG }
 Bassoon_III_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_III_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
-		\Bassoon_III_mvmt_II_AE \Bassoon_III_mvmt_II_AF }
+		\Bassoon_III_mvmt_II_AE \Bassoon_III_mvmt_II_AF \Bassoon_III_mvmt_II_AG }
 Bassoon_IV_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_IV_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
-		\Bassoon_IV_mvmt_II_AE \Bassoon_IV_mvmt_II_AF }
+		\Bassoon_IV_mvmt_II_AE \Bassoon_IV_mvmt_II_AF \Bassoon_IV_mvmt_II_AG }
 Contrabassoon_mvmt_II = { \clef bass \NULL_II_AA \Contrabassoon_cues_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD \NULL_II_AE
-		\Contrabassoon_mvmt_II_AF }
+		\Contrabassoon_mvmt_II_AF \NULL_II_AG }

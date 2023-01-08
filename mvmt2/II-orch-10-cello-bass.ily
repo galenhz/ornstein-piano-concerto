@@ -238,9 +238,36 @@ Bass_mvmt_II_AF = \relative c, {
 	>>
 }
 
+%%% Section AG = mm. 40-45 (Rehearsal 42)
+
+Cello_mvmt_II_AG = \relative c, {
+	\mark #42
+	\time 4/8
+	r4 \tuplet 3/2 { fis8(^\Unis_mark a bes) }
+	r4 \after 16 _\markup \italic "rit." \tuplet 3/2 { fis8( a bes) }
+	\tempo "Meno"
+	r8 \tuplet 6/4 { r32\mf f' f f aes f } \tuplet 3/2 { beses16( aes f~ } f8)
+	\repeat unfold 2 { r8 \tuplet 6/4 { r32 f f f aes f } \tuplet 3/2 { beses16( aes f~ } f8) }
+	R2
+}
+
+Bass_mvmt_II_AG = \relative c {
+	\mark #42
+	\time 4/8
+	bes4^\Unis_mark \tuplet 3/2 { fis8( a bes) }
+	bes4 \after 16 _\markup \italic "rit." \tuplet 3/2 { fis8( a bes) }
+	\tempo "Meno"
+	d2
+	f
+	d
+	f
+}
+
 %%% Final assembly
 
-Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC \Cello_mvmt_II_AD \Cello_mvmt_II_AE \Cello_mvmt_II_AF }
-Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF }
+Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC \Cello_mvmt_II_AD \Cello_mvmt_II_AE \Cello_mvmt_II_AF
+		\Cello_mvmt_II_AG }
+Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG }
 
-Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC \Bass_mvmt_II_AD \Bass_mvmt_II_AE \Bass_mvmt_II_AF }
+Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC \Bass_mvmt_II_AD \Bass_mvmt_II_AE \Bass_mvmt_II_AF
+		\Bass_mvmt_II_AG }

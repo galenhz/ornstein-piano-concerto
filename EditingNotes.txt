@@ -775,3 +775,19 @@ m. 32: Score has "Allegro" for tempo; parts and PR do not. Following PR. #TEMPO
 m. 40: PR has only one 8va section in this bar; score has two. The version with two makes more sense, as it makes
 this symmetrical with m. 41.
 (II-solo-piano)
+
+m. 41: Where does the "rit." belong? Score puts it roughly on the second half of beat 3 for the bassoons, the
+fourth quarter of beat 3 for the solo piano, and the middle of the eigth-note triplets for cello/bass. (Clarinets
+I/II have it in the middle of the triplet, but it could easily go at the start, since it should already have
+started by then.) Bassoon parts put it in the fourth quarter of beat 3. It's missing entirely in the bass part.
+The PR seems to put it on the second half of beat 3 for the reduction, but maybe a 32nd earlier for the solo
+part. Second half of beat 3 it is.
+
+m. 41: The second bassoon part has the middle note of it's figure "corrected" to c, to match the first bassoon.
+The score still has the b, and the parallel passages for flute and clarinet also still have the difference.
+Going with score.
+(I-orch-04-bassoons)
+
+m. 41: The cello part has a quarter note rest in the beginning of this bar, but in the score, the rest has been
+scratched out and replaced with a b-flat, like the basses.
+(I-orch-10-cello-bass)

@@ -182,13 +182,37 @@ Trumpet_IV_mvmt_II_AF = \relative c' {
 	r4 r4 cis8
 }
 
+%%% Section AG = mm. 40-45 (Rehearsal 42)
+
+Trumpet_I_mvmt_II_AG = \relative c'' {
+	\mark #42
+	\time 4/8
+	R2*2
+	\tempo "Meno"
+	\tag #'Score { R2*3 r4 r8 bes16.\f bes32 }
+	\tag #'Part <<
+		\new CueVoice {
+			\voiceOne
+			gis4~^"I Ob." \tuplet 3/2 8 { gis16 fis( \beamCutR gis \beamCutL cis gis fis) }
+			gis4~ gis16. \beamCutR dis32 \beamCutL dis16( fis)
+			a8~[ a16. a32 a8( b16 gis)]
+			\tuplet 3/2 { g( e g) } bes4 s8
+		}
+		\new Voice {
+			\voiceTwo
+			\override MultiMeasureRest.staff-position = #-9 R2*3
+			r8 r4 bes?16.\f^\Solo_mark bes32
+		}
+	>>
+}
+
 %%% Final assembly
 
 Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_I_mvmt_II_AF }
+		\Trumpet_I_mvmt_II_AF \Trumpet_I_mvmt_II_AG }
 Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_II_mvmt_II_AF }
+		\Trumpet_II_mvmt_II_AF \NULL_II_AG }
 Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_III_mvmt_II_AF }
+		\Trumpet_III_mvmt_II_AF \NULL_II_AG }
 Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_IV_mvmt_II_AF }
+		\Trumpet_IV_mvmt_II_AF \NULL_II_AG }

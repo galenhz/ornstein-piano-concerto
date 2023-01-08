@@ -456,7 +456,8 @@ redux_upper_II_AG = \relative c'' {
 }
 
 redux_dynamics_II_AG = {
-	s2 s4 s8-"rit." s8 s2*4
+	%s2 s4 s8-"rit." s8 s2*4
+	s2 s4 s16 s16-"rit." s8 s2*4
 }
 
 redux_lower_II_AG = \relative c,, {

@@ -199,10 +199,28 @@ EnglishHorn_mvmt_II_AF = \relative c'' {
 	r8 ees8[(\f e,) ees'( f,)]
 }
 
+%%% Section AG = mm. 40-45 (Rehearsal 42)
+
+Oboe_I_mvmt_II_AG = \relative c'' {
+	\mark #42
+	\time 4/8
+	R2*2
+	\tempo "Meno"
+	\tag #'Score gis4~\f \tag #'Part gis4~_\markup { \dynamic f \Solo_mark } \tuplet 3/2 8 { gis16 fis( \beamCutR gis \beamCutL cis gis fis) }
+	gis4~ gis16. \beamCutR dis32 \beamCutL dis16( fis)
+	a8~[ a16. a32 a8( b16 gis)]
+	\tuplet 3/2 { g( e g) } bes4 r8
+}
+
 %%% Final assembly
 
-Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF }
-Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF }
-Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF }
-Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF }
-EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF }
+Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF
+		\Oboe_I_mvmt_II_AG }
+Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF
+		\NULL_II_AG }
+Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF
+		\NULL_II_AG }
+Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF
+		\NULL_II_AG }
+EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF
+		\NULL_II_AG }
