@@ -306,11 +306,77 @@ solo_lower_II_AG = \relative c, {
 	r4 \clef treble \tuplet 3/2 8 { r16 r <c'' c'> q[ <des des'> <c c'>] }
 }
 
+%%% Section AH = mm. 46-49 (Rehearsal 43)
+
+% FIXME: Done initial work to make this look good, but not enough. Need to
+%        deal with ties overlapping notes still, and the pp in the dynamics
+%        staff rides too high for some reason.
+
+solo_upper_II_AH = \relative c''' {
+	\mark #43
+	\tempo "Mosso"
+	\time 7/8
+	<<
+		\new Voice {
+			\voiceOne
+			\override TieColumn.tie-configuration = #'((8 . 1) (-3 . -1))
+			<a a'>4.~ q4~ q16 q \tuplet 3/2 { q16 <bes bes'> <a a'> }
+			\override TieColumn.tie-configuration = #'((5 . 1) ( -5 . -1))
+			<fis fis'>4.~ q4. q16. <c' c'>32
+			\override TieColumn.tie-configuration = #'((8 . 1) (-3 . -1))
+			<a a'>4.~ q4~ q16 q \tuplet 3/2 { q16 <bes bes'> <a a'> }
+			\revert TieColumn.tie-configuration
+			\time 6/8
+			\ottava #0
+			<fis fis'>4. <ees ees'>
+		}
+		\new Voice {
+			\voiceTwo
+			r16 <d' ees>[ q8 q] r16 <cis d>[ q8 <c des>] r8
+			r16 <b c>[ q8 q] r16 <bes ces>[ q8 q] r8
+			r16 <d ees>[ q8 q] r16 <cis d>[ q8 <c des>] r8
+			r16 <b c>[ q8 <bes ces>] r16 <a bes>[ q8 <gis a>]
+		}
+	>>
+}
+
+solo_dynamics_II_AH = {
+	s16 s16\pp s4 s2  s1*7/8*2 s2.
+}
+
+solo_lower_II_AH = \relative c' {
+	\time 7/8
+	<<
+		\new Voice {
+			\voiceOne
+			\override TieColumn.tie-configuration = #'((0 . 1) (-10 . -1))
+			<a a'>4.~ q4~ q16 q \tuplet 3/2 { q16 <bes bes'> <a a'> }
+			\clef bass
+			\override TieColumn.tie-configuration = #'((10 . 1) (1 . -1))
+			<fis fis'>4.~ q4. q16. <c' c'>32
+			\clef treble
+			\override TieColumn.tie-configuration = #'((0 . 1) (-10 . -1))
+			<a a'>4.~ q4~ q16 q \tuplet 3/2 { q16 <bes bes'> <a a'> }
+			\revert TieColumn.tie-configuration
+			\time 6/8
+			\clef bass
+			<fis fis'>4. <ees ees'>
+		}
+		\new Voice {
+			\voiceTwo
+			r16 <d' ees>[ q8 q] r16 <cis d>[ q8 <c des>] r8
+			r16 <b c>[ q8 q] r16 <bes ces>[ q8 q] r8
+			r16 <d ees>[ q8 q] r16 <cis d>[ q8 <c des>] r8
+			r16 <b c>[ q8 <bes ces>] r16 <a bes>[ q8 <gis a>]
+		}
+	>>
+}
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
-		\solo_upper_II_AG }
+		\solo_upper_II_AG \solo_upper_II_AH }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
-		\solo_dynamics_II_AF \solo_dynamics_II_AG }
+		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
-		\solo_lower_II_AG }
+		\solo_lower_II_AG \solo_lower_II_AH }

@@ -98,3 +98,6 @@ it worth the trouble? What I have seems straightforwardly readable enough.
 
 m. 40-41: Solo piano. Top staff; PR has the longeer notes on the left, and lilypond defaults to them
 being on the right. Worth fighting to change it?
+
+m. 46-49: Solo piano. Did some work to declutter ties but not enough; need to figure out the best
+way to do this. Also, pp in dynamic track rides way too high for no clear reason.
