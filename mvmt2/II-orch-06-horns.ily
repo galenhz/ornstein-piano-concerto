@@ -264,15 +264,18 @@ Horn_IV_mvmt_II_AF = \transpose c' f \relative c' {
 %%% Section AG = mm. 40-45 (Rehearsal 42)
 %%% Tacet
 
+%%% Section AH = mm. 46-49 (Rehearsal 43)
+%%% Tacet
+
 %%% Final assembly
 
 Horn_I_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_I_mvmt_II_AB \Horn_I_mvmt_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \Horn_I_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
 Horn_II_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \Horn_II_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
 Horn_III_mvmt_II = { \Horn_III_mvmt_II_AA \Horn_III_mvmt_II_AB \Horn_III_mvmt_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \Horn_III_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
 Horn_IV_mvmt_II = { \Horn_I_II_IV_cues_mvmt_II_AA \Horn_IV_mvmt_II_AB \Horn_IV_mvmt_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \Horn_IV_mvmt_II_AF
-		\NULL_II_AG }
-Horn_V_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB \NULL_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \NULL_II_AF \NULL_II_AG }
-Horn_VI_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB \NULL_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \NULL_II_AF \NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
+Horn_V_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB \NULL_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH }
+Horn_VI_mvmt_II = { \NULL_II_AA \Horn_V_VI_cues_mvmt_I_AB \NULL_II_AC \NULL_II_AD \Horn_all_cues_mvmt_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH }

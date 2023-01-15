@@ -143,9 +143,33 @@ Tympani_II_mvmt_II_AF = \relative c, {
 %%% Section AG = mm. 40-45 (Rehearsal 42)
 %%% Tacet
 
+%%% Section AH = mm. 46-49 (Rehearsal 43)
+
+Typmani_I_mvmt_II_AH = \relative c {
+	\mark #43
+	\tempo "Mosso"
+	\time 7/8
+	r16 d[\pp d8 d] r16 d[ d8 d] r8
+	R1*7/8
+	r16 d[ d8 d] r16 d[ d8 d] r8
+	\time 6/8
+	R2.
+}
+
+Typmani_II_mvmt_II_AH = \relative c, {
+	\mark #43
+	\tempo "Mosso"
+	\time 7/8
+	R1*7/8
+	r16 fis[\pp fis8 fis] r16 fis[ fis8 fis] r8
+	R1*7/8
+	\time 6/8
+	r16 fis[ fis8 fis] r16 fis[ fis8 fis]
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD \NULL_II_AE \Tympani_I_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \Typmani_I_mvmt_II_AH }
 Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD \NULL_II_AE
-		\Tympani_II_mvmt_II_AF \NULL_II_AG }
+		\Tympani_II_mvmt_II_AF \NULL_II_AG \Typmani_II_mvmt_II_AH }

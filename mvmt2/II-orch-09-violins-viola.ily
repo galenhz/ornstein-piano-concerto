@@ -396,17 +396,52 @@ Viola_mvmt_II_AF = \relative c' {
 %%% Section AG = mm. 40-45 (Rehearsal 42)
 %%% Tacet
 
+%%% Section AH = mm. 46-49 (Rehearsal 43)
+
+Violin_I_mvmt_II_AH = \relative c' {
+	\mark #43
+	\tempo "Mosso"
+	\time 7/8
+	r16 f[\pp^\Unis_mark f8 f] r16 f[ f8 f] r8
+	r16 fis[ fis8 fis] r16 fis[ fis8 fis] r8
+	r16 f?[ f8 f] r16 f[ f8 f] r8
+	\time 6/8
+	r16 fis[ fis8 fis] r16 fis[ fis8 fis]
+}
+
+Violin_II_mvmt_II_AH = \relative c' {
+	\mark #43
+	\tempo "Mosso"
+	\time 7/8
+	r16 cis[\pp^\Unis_mark cis8 cis] r16 cis[ cis8 cis] r8
+	\repeat unfold 2 { r16 cis[ cis8 cis] r16 cis[ cis8 cis] r8 }
+	\time 6/8
+	r16 cis[ cis8 cis] r16 cis[ cis8 cis]
+}
+
+Viola_mvmt_II_AH = \relative c {
+	\mark #43
+	\tempo "Mosso"
+	\time 7/8
+	r16 f[\pp^\Unis_mark f8 f] r16 f[ f8 f] r8
+	r16 a[ a8 a] r16 a[ a8 a] r8
+	r16 f[ f8 f] r16 f[ f8 f] r8
+	\time 6/8
+	r16 a[ a8 a] r16 a[ a8 a]
+}
+
 %%% Final assembly
 
 Violin_I_mvmt_II = { \Violin_I_mvmt_II_AA \Violin_I_mvmt_II_AB \Violin_I_mvmt_II_AC \Violin_I_mvmt_II_AD \Violin_I_mvmt_II_AE
-		\Violin_I_mvmt_II_AF \NULL_II_AG }
-Violin_I_divisi_II_mvmt_II = { \NULL_II_AA \Violin_I_divisi_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG }
+		\Violin_I_mvmt_II_AF \NULL_II_AG \Violin_I_mvmt_II_AH }
+Violin_I_divisi_II_mvmt_II = { \NULL_II_AA \Violin_I_divisi_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG
+		\NULL_II_AH }
 
 Violin_II_mvmt_II = { \Violin_II_mvmt_II_AA \Violin_II_mvmt_II_AB \Violin_II_mvmt_II_AC \Violin_II_mvmt_II_AD \Violin_II_mvmt_II_AE
-		\Violin_II_mvmt_II_AF \NULL_II_AG }
+		\Violin_II_mvmt_II_AF \NULL_II_AG \Violin_II_mvmt_II_AH }
 Violin_II_divisi_II_mvmt_II = { \Violin_II_divisi_II_mvmt_II_AA \Violin_II_divisi_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
 
 Viola_mvmt_II = { \clef alto \Viola_mvmt_II_AA \Viola_mvmt_II_AB \Viola_mvmt_II_AC \Viola_mvmt_II_AD \Viola_mvmt_II_AE \Viola_mvmt_II_AF
-		\NULL_II_AG }
-Viola_divisi_II_mvmt_II = { \clef alto \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG }
+		\NULL_II_AG \Viola_mvmt_II_AH }
+Viola_divisi_II_mvmt_II = { \clef alto \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH }

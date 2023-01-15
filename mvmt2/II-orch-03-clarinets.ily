@@ -366,15 +366,18 @@ BassClarinet_mvmt_II_AG = \transpose c' bes, \relative c'' {
 	\repeat unfold 3 { \tuplet 5/4 { b32( bes a b bes) } bes8~ bes4 }
 }
 
+%%% Section AH = mm. 46-49 (Rehearsal 43)
+%%% Tacet
+
 %%% Final assembly
 
 Clarinet_I_mvmt_II = { \Clarinet_I_mvmt_II_AA \Clarinet_I_II_mvmt_II_AB \Clarinet_I_mvmt_II_AC \NULL_II_AD \Clarinet_I_mvmt_II_AE
-		\Clarinet_all_cues_mvmt_II_AF \Clarinet_I_mvmt_II_AG }
+		\Clarinet_all_cues_mvmt_II_AF \Clarinet_I_mvmt_II_AG \NULL_II_AH }
 Clarinet_II_mvmt_II = { \Clarinet_II_mvmt_II_AA \Clarinet_I_II_mvmt_II_AB \Clarinet_II_mvmt_II_AC \NULL_II_AD \Clarinet_II_mvmt_II_AE
-		\Clarinet_all_cues_mvmt_II_AF \Clarinet_II_mvmt_II_AG }
+		\Clarinet_all_cues_mvmt_II_AF \Clarinet_II_mvmt_II_AG \NULL_II_AH }
 Clarinet_III_mvmt_II = { \NULL_II_AA \NULL_II_AB \Clarinet_III_mvmt_II_AC \NULL_II_AD \Clarinet_III_mvmt_II_AE \Clarinet_all_cues_mvmt_II_AF
-		\Clarinet_III_mvmt_II_AG }
+		\Clarinet_III_mvmt_II_AG \NULL_II_AH }
 Clarinet_IV_mvmt_II = { \NULL_II_AA \NULL_II_AB \Clarinet_IV_cues_mvmt_II_AC \NULL_II_AD \Clarinet_IV_mvmt_II_AE \Clarinet_all_cues_mvmt_II_AF
-		\Clarinet_IV_mvmt_II_AG }
+		\Clarinet_IV_mvmt_II_AG \NULL_II_AH }
 BassClarinet_mvmt_II = { \BassClarinet_mvmt_II_AA \BassClarinet_mvmt_II_AB \NULL_II_AC \NULL_II_AD \BassClarinet_cues_mvmt_II_AE
-		\BassClarinet_cues_mvmt_II_AF \BassClarinet_mvmt_II_AG }
+		\BassClarinet_cues_mvmt_II_AF \BassClarinet_mvmt_II_AG \NULL_II_AH }

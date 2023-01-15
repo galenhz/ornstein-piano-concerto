@@ -184,6 +184,8 @@ Trumpet_IV_mvmt_II_AF = \relative c' {
 
 %%% Section AG = mm. 40-45 (Rehearsal 42)
 
+% All except trumpet I are finished at this point.
+
 Trumpet_I_mvmt_II_AG = \relative c'' {
 	\mark #42
 	\time 4/8
@@ -206,13 +208,26 @@ Trumpet_I_mvmt_II_AG = \relative c'' {
 	>>
 }
 
+%%% Section AH = mm. 46-49 (Rehearsal 43)
+
+Trumpet_I_mvmt_II_AH = \relative c'' {
+	\mark #43
+	\tempo "Mosso"
+	\time 7/8
+	cis2. c8
+	a2. c8
+	cis2. c8
+	\time 6/8
+	a2.
+}
+
 %%% Final assembly
 
 Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_I_mvmt_II_AF \Trumpet_I_mvmt_II_AG }
+		\Trumpet_I_mvmt_II_AF \Trumpet_I_mvmt_II_AG \Trumpet_I_mvmt_II_AH }
 Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_II_mvmt_II_AF \NULL_II_AG }
+		\Trumpet_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH }
 Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_III_mvmt_II_AF \NULL_II_AG }
+		\Trumpet_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH }
 Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_IV_mvmt_II_AF \NULL_II_AG }
+		\Trumpet_IV_mvmt_II_AF \NULL_II_AG \NULL_II_AH }

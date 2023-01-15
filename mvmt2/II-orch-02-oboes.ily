@@ -209,18 +209,21 @@ Oboe_I_mvmt_II_AG = \relative c'' {
 	\tag #'Score gis4~\f \tag #'Part gis4~_\markup { \dynamic f \Solo_mark } \tuplet 3/2 8 { gis16 fis( \beamCutR gis \beamCutL cis gis fis) }
 	gis4~ gis16. \beamCutR dis32 \beamCutL dis16( fis)
 	a8~[ a16. a32 a8( b16 gis)]
-	\tuplet 3/2 { g( e g) } bes4 r8
+	\tuplet 3/2 { g?( e g) } bes4 r8
 }
+
+%%% Section AH = mm. 46-49 (Rehearsal 43)
+%%% Tacet
 
 %%% Final assembly
 
 Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF
-		\Oboe_I_mvmt_II_AG }
+		\Oboe_I_mvmt_II_AG \NULL_II_AH }
 Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
 Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
 Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }
 EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF
-		\NULL_II_AG }
+		\NULL_II_AG \NULL_II_AH }

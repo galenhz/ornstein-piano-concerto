@@ -786,8 +786,11 @@ part. Second half of beat 3 it is.
 m. 41: The second bassoon part has the middle note of it's figure "corrected" to c, to match the first bassoon.
 The score still has the b, and the parallel passages for flute and clarinet also still have the difference.
 Going with score.
-(I-orch-04-bassoons)
+(II-orch-04-bassoons)
 
 m. 41: The cello part has a quarter note rest in the beginning of this bar, but in the score, the rest has been
 scratched out and replaced with a b-flat, like the basses.
-(I-orch-10-cello-bass)
+(II-orch-10-cello-bass)
+
+mm. 46-49: What to do with trumpet dynamics? Not much in score, hairpins in part. #DYNAMICS #UNDECIDED
+(II-orch-05-trumpets)
