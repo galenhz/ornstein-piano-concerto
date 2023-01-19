@@ -573,7 +573,7 @@ redux_lower_II_AI = \relative c {
 			<d d'>2.
 			<f f'>2.
 			<c fis>2.~
-			q2.
+			q4 r8 r4.
 		}
 	>>
 }
