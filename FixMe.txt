@@ -101,3 +101,9 @@ being on the right. Worth fighting to change it?
 
 m. 46-49: Solo piano. Did some work to declutter ties but not enough; need to figure out the best
 way to do this. Also, pp in dynamic track rides way too high for no clear reason.
+
+m. 50-53: Piano reduction. Like solo piano in 46-49, need to continue work on the ties.
+
+m. 54: Piano reduction. Need to make the inner voices a single chord which crosses staves.
+
+m. 55: Solo piano. ppp rides too high/left.

@@ -372,11 +372,49 @@ solo_lower_II_AH = \relative c' {
 	>>
 }
 
+%%% Section AI = mm. 50-55
+
+solo_upper_II_AI = \relative c''' {
+	\tempo "poco più mosso"
+	\magnifyMusic 0.63 {
+	\tuplet 13/12 4. {
+		a32[ cis, a' cis, \change Staff = "solo_lower" a cis,
+			\change Staff = "solo_upper" a' cis, a' cis, \change Staff = "solo_lower" \clef bass a cis, f,]
+		\repeat unfold 3 {
+			\change Staff = "solo_upper" a'''32[ cis, a' cis, \change Staff = "solo_lower" \clef treble a cis,
+				\change Staff = "solo_upper" a' cis, a' cis, \change Staff = "solo_lower" \clef bass a cis, f,]
+		}
+		\repeat unfold 2 {
+			\change Staff = "solo_upper" f'''32[ a, f' a, \change Staff = "solo_lower" \clef treble f a,
+				\change Staff = "solo_upper" f' a, f' a, \change Staff = "solo_lower" \clef bass f a, d,]
+		}
+		\repeat unfold 2 {
+			\change Staff = "solo_upper" a''''32[ cis, a' cis, \change Staff = "solo_lower" \clef treble a cis,
+				\change Staff = "solo_upper" a' cis, a' cis, \change Staff = "solo_lower" \clef bass a cis, f,]
+		}
+	}
+	}
+	\change Staff = "solo_upper"
+	\repeat unfold 4 { r16 <bes'' a' bes>[ q8 q] }
+}
+
+solo_dynamics_II_AI = {
+	s2.*5 s2.\ppp
+}
+
+solo_lower_II_AI = \relative c, {
+	\clef treble
+	s2.*4
+	\tuplet 3/2 8 { r16 c[ \beamCutR fis \beamCutL c' fis c'] } ees8 \clef treble \grace { fis16 g } fis4.
+	\clef bass
+	\tuplet 3/2 8 { r16 c,,[ \beamCutR fis \beamCutL c' fis c'] } ees8 \clef treble \grace { fis16 g } fis4.
+}
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
-		\solo_upper_II_AG \solo_upper_II_AH }
+		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
-		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH }
+		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
-		\solo_lower_II_AG \solo_lower_II_AH }
+		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI }

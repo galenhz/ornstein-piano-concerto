@@ -35,5 +35,5 @@ NULL_II_AE = { \mark #40 \tempo "Doppio" \time 4/4 R1*4 \time 3/2 R1. \time 4/4 
 NULL_II_AF = { \mark #41 \time 4/8 \tag #'Score \grace s8 R2 \time 6/8 R2. \time 4/8 R2 \time 7/8 R1*7/8 \time 4/8 R2 \time 6/8 R2. \time 4/8 R2 \time 5/8 R1*5/8 }
 NULL_II_AG = { \mark #42 \time 4/8 R2*2 \tempo "Meno" R2*4 }
 NULL_II_AH = { \mark #43 \tempo "Mosso" \time 7/8 R1*7/8*3 \time 6/8 R2. }
-NULL_II_AI = { \tempo "poco piu mosso" R2.*6 }
+NULL_II_AI = { \tempo "poco più mosso" R2.*6 }
 NULL_II_AJ = { R2.*2 \mark #44 R2.*5 \time 8/8 R1*3 }

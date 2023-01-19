@@ -523,11 +523,66 @@ redux_lower_II_AH = \relative c, {
 	\repeat unfold 2 { r16 <fis cis'>[ q8 q8] }
 }
 
+%%% Section AI = mm. 50-55
+
+% FIXME: Like solo piano in AH, need to work on ties some more.
+
+redux_upper_II_AI = \relative c'' {
+	\tempo "poco più mosso"
+	<<
+		\new Voice {
+			\voiceOne
+			\override TieColumn.tie-configuration = #'((10 . 1) (0 . -1))
+			<c c'>4.~ q8~ q16 \beamCutR <bes bes'> \beamCutL <c c'> <d d'>
+			\tuplet 3/2 { <ees ees'> <d d'> <c c'> } q4~ q4~ q16 q
+			\override TieColumn.tie-configuration = #'((13 . 1) (3 . -1))
+			<f f'>4.~ q8. <ees ees'>16 q <d d'>
+			\override TieColumn.tie-configuration = #'((10 . 1) (0 . -1))
+			\tuplet 3/2 { <ees ees'> <d d'> <c c'> } q4~ q8 <a a'> <c c'>
+			\revert TieColumn.tie-configuration
+			<ees ees'>2.~
+			q2.
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 4 { r16 <f g>[ q8 q] }
+			\repeat unfold 2 { r16 <a bes>[ q8 q] }
+			\repeat unfold 2 { r16 <f g>[ q8 q] }
+			a,2.~
+			a2.
+		}
+	>>
+}
+
+redux_dynamics_II_AI = {
+	s2.*6
+}
+
+redux_lower_II_AI = \relative c {
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 8 { r32 cis cis \beamCutR cis \beamCutL \set stemRightBeamCount = #2 cis16 cis8 cis16 }
+			<fis c'>2.~
+			q2.
+		}
+		\new Voice {
+			\voiceTwo
+			<f, f'>2.
+			q2.
+			<d d'>2.
+			<f f'>2.
+			<c fis>2.~
+			q2.
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
-		\redux_upper_II_AG \redux_upper_II_AH }
+		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
-		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH }
+		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
-		\redux_lower_II_AG \redux_lower_II_AH }
+		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI }
