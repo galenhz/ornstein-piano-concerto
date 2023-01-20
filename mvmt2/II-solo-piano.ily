@@ -410,11 +410,48 @@ solo_lower_II_AI = \relative c, {
 	\tuplet 3/2 8 { r16 c,,[ \beamCutR fis \beamCutL c' fis c'] } ees8 \clef treble \grace { fis16 g } fis4.
 }
 
+%%% Section AJ = mm. 56-65 (Rehearsal ~44)
+
+solo_upper_II_AJ = \relative c'' {
+	\repeat unfold 4 { r16 <f f' ges> q8 q }
+	\mark #44
+	r8 \ottava #1 <a c ees fis a> <c c'> <a c ees fis a> <cis cis'> <a c ees fis a>
+	<c c'> <a c ees fis a> <cis cis'> \tuplet 2/3 { <a c ees fis a>8 <c c'> }
+	<a c ees fis a>4. <cis cis'> \ottava #0
+	\repeat unfold 4 { r16 <f, f' ges> q8 q }
+	\time 8/8
+	d,8 \ottava #1 <d'' cis'>[ <des c'> <bes a'> <a gis'> \ottava #0 <ges f'> <f e'> <d cis'>]
+	r8 <bes' a'>[ <a gis'> <ges f'> <f e'> <d cis'> <des c'> <bes a'>]
+	r8 \ottava #1 <d' cis'>[ <des c'> <bes a'> <a gis'> \ottava #0 <ges f'> <f e'> <d cis'>]
+}
+
+solo_dynamics_II_AJ = {
+	s2.*7 s1*3
+}
+
+solo_lower_II_AJ = \relative c, {
+	\clef bass
+	\repeat unfold 2 {
+		\tuplet 7/6 4. { e16[ b' fis' e b' fis' \clef treble b] c[ b fis b, \clef bass e, fis b,] }
+	}
+	r8 \clef treble a''8 <c ees fis> a <cis ees fis> a
+	<c ees fis> a <cis ees fis> \tuplet 2/3 { a <c ees fis> }
+	a4. <cis ees fis>
+	\clef bass
+	\repeat unfold 2 {
+		\tuplet 7/6 4. { e,,,16[ b' fis' e b' fis' \clef treble b] c[ b fis b, \clef bass e, fis b,] }
+	}
+	\time 8/8
+	r8 \clef treble <bes'' fis'>[ <a f'> <ges d'> <f des'> <d bes'> <des a'> <bes fis'>]
+	r8 <fis' d'>[ <f cis'> <d bes'> <cis a'> <bes fis'> <a f'> <fis d'>]
+	r8 <bes' fis'>[ <a f'> <fis d'> <f des'> <d bes'> <des a'> <bes fis'>]
+}
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
-		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI }
+		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
-		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI }
+		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
-		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI }
+		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ }

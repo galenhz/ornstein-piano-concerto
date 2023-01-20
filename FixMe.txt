@@ -107,3 +107,6 @@ m. 50-53: Piano reduction. Like solo piano in 46-49, need to continue work on th
 m. 54: Piano reduction. Need to make the inner voices a single chord which crosses staves.
 
 m. 55: Solo piano. ppp rides too high/left.
+
+m. 63-65: Piano reduction. Ties make this a mess; may need to third staff this one if I can't figure
+out a way to shuffle things around.

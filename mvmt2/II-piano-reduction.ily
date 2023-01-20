@@ -578,11 +578,88 @@ redux_lower_II_AI = \relative c {
 	>>
 }
 
+%%% Section AJ = mm. 56-65 (Rehearsal ~44)
+
+% FIXME: This is a mess in 63-65, and I may have to third staff this one for clarity.
+
+redux_upper_II_AJ = \relative c' {
+	R2.*2
+	\mark #44
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 6 { r16 <ees fis a ees'> q8 q }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 { s16 c c8 c s4. }
+			s16 c c8 c s16 c c8 c
+		}
+	>>
+	\stemUp
+	b'4~ b16. bes32 g4~ g16. bes32
+	b4~ b16. bes32 g4.
+	\stemNeutral
+	\time 8/8
+	<<
+		\new Voice {
+			\voiceOne
+			a'8 fis4 a8 bes a4 fis8~
+			fis1
+			a8 fis4 a8 bes a4 fis8
+		}
+		\new Voice {
+			\voiceTwo
+			<a, d>1~
+			q~
+			q
+		}
+		\new Voice {
+			\voiceFour
+			s1
+			<bes, d>8[ <d fis> <f a> <fis bes>] <a cis>[ <bes d> <des f> <fis a>]
+			s1
+		}
+	>>
+}
+
+redux_dynamics_II_AJ = {
+	s2.*7 s1*3
+}
+
+redux_lower_II_AJ = \relative c' {
+	R2.*2
+	<<
+		\new Voice {
+			\voiceOne
+			a4.~ a8. \set stemLeftBeamCount = #2 \beamCutR b16 \tuplet 3/2 { \beamCutL c b a }
+			a4.~ a4 \grace { gis16 a } gis32 f gis b
+			a2.
+			\repeat unfold 4 { r16 <fis c'> q8 q }
+			\time 8/8
+			<bes, d>8[ <d fis> <fis a> <fis bes>] <bes d>[ <d fis> <fis a> <fis bes>]
+			s1
+			<bes,, d>8[ <d fis> <fis a> <fis bes>] <bes d>[ \change Staff = "redux_upper" \stemDown <d fis> <fis a> <fis bes>]
+		}
+		\new Voice {
+			\voiceTwo
+			<c,, fis c'>2.~
+			q2.~
+			q
+			\repeat unfold 4 { r16 <e b'> q8 q }
+			\time 8/8
+			<ees b'>1~
+			q~
+			q
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
-		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI }
+		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
 		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
-		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI }
+		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ }

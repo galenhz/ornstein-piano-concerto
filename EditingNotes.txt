@@ -797,3 +797,14 @@ mm. 46-49: What to do with trumpet dynamics? Not much in score, hairpins in part
 
 mm. 50-53: Violins/violas have more slurs in score than in the parts; following score.
 (II-orch-09-violins-viola)
+
+mm. 56-57 and 61-62: PR Solo piano left hand plays the same notes in each of these bars, yet every bar seems
+to put the clef transitions in a different place. It's just...wierd. Oh, and the first passage is written with
+eighth notes in the 7-tuplet, and the second with 16th notes. Just the PR though, score is 16ths in both locations.
+The score also keeps a static clef pattern, and I think it's the one that makes most sense. Doing this one like
+the score.
+(II-solo-piano)
+
+m. 59: Solo piano (PR and score) uses quarter notes inside the duplet. Doesn't it make more sense if they're eighths?
+Lilypond math works out better if they are. I'm putting them as eighths for now, but will review. #UNDECIDED
+(II-solo-piano)
