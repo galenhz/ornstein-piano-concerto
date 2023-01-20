@@ -794,3 +794,6 @@ scratched out and replaced with a b-flat, like the basses.
 
 mm. 46-49: What to do with trumpet dynamics? Not much in score, hairpins in part. #DYNAMICS #UNDECIDED
 (II-orch-05-trumpets)
+
+mm. 50-53: Violins/violas have more slurs in score than in the parts; following score.
+(II-orch-09-violins-viola)

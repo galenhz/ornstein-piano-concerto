@@ -215,15 +215,41 @@ Oboe_I_mvmt_II_AG = \relative c'' {
 %%% Section AH = mm. 46-49 (Rehearsal 43)
 %%% Tacet
 
+%%% Section AI = mm. 50-55
+
+Oboe_I_mvmt_II_AI = \relative c''' {
+	\tempo "poco più mosso"
+	r16 g\pp g8 g
+		\repeat unfold 3 { r16 g g8 g }
+	\repeat unfold 2 { r16 bes bes8 bes }
+	\repeat unfold 2 { r16 g g8 g }
+	R2.*2
+}
+
+Oboe_II_mvmt_II_AI = \relative c'' {
+	\tempo "poco più mosso"
+	r16 f\pp f8 f
+		\repeat unfold 3 { r16 f f8 f }
+	\repeat unfold 2 { r16 a a8 a }
+	\repeat unfold 2 { r16 f f8 f }
+	R2.*2
+}
+
+% Oboes III/IV tacet until end after this.
+
+Oboe_III_mvmt_II_AI = \transpose c' c \Oboe_I_mvmt_II_AI
+
+Oboe_IV_mvmt_II_AI = \transpose c' c \Oboe_II_mvmt_II_AI
+
 %%% Final assembly
 
 Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF
-		\Oboe_I_mvmt_II_AG \NULL_II_AH }
+		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI }
 Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH }
+		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI }
 Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH }
+		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI }
 Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH }
+		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI }
 EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH }
+		\NULL_II_AG \NULL_II_AH \NULL_II_AI }

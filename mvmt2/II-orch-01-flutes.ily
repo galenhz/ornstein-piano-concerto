@@ -319,14 +319,34 @@ Flute_IV_mvmt_II_AG = \relative c'' {
 %%% Section AH = mm. 46-49 (Rehearsal 43)
 %%% Tacet
 
+%%% Section AI = mm. 50-55
+
+Flute_I_III_mvmt_II_AI = \relative c''' {
+	\tempo "poco più mosso"
+	r16 g\pp g8 g
+		\repeat unfold 3 { r16 g g8 g }
+	\repeat unfold 2 { r16 bes bes8 bes }
+	\repeat unfold 2 { r16 g g8 g }
+	R2.*2
+}
+
+Flute_II_IV_mvmt_II_AI = \relative c'' {
+	\tempo "poco più mosso"
+	r16 f\pp f8 f
+		\repeat unfold 3 { r16 f f8 f }
+	\repeat unfold 2 { r16 a a8 a }
+	\repeat unfold 2 { r16 f f8 f }
+	R2.*2
+}
+
 %%% Final construction
 
-Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH }
+Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI }
 Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE \Flute_all_cues_mvmt_II_AF
-		\Flute_I_mvmt_II_AG \NULL_II_AH }
+		\Flute_I_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI }
 Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF \Flute_II_mvmt_II_AG \NULL_II_AH }
+		\Flute_all_cues_mvmt_II_AF \Flute_II_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI }
 Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF \Flute_III_mvmt_II_AG \NULL_II_AH }
+		\Flute_all_cues_mvmt_II_AF \Flute_III_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI }
 Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF \Flute_IV_mvmt_II_AG \NULL_II_AH }
+		\Flute_all_cues_mvmt_II_AF \Flute_IV_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI }

@@ -221,13 +221,18 @@ Trumpet_I_mvmt_II_AH = \relative c'' {
 	a2.
 }
 
+% End of trumpet parts for this movement.
+
+%%% Section AI = mm. 50-55
+%%% Tacet
+
 %%% Final assembly
 
 Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_I_mvmt_II_AF \Trumpet_I_mvmt_II_AG \Trumpet_I_mvmt_II_AH }
+		\Trumpet_I_mvmt_II_AF \Trumpet_I_mvmt_II_AG \Trumpet_I_mvmt_II_AH \NULL_II_AI }
 Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH }
+		\Trumpet_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI }
 Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH }
+		\Trumpet_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI }
 Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_IV_mvmt_II_AF \NULL_II_AG \NULL_II_AH }
+		\Trumpet_IV_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI }

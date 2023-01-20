@@ -372,15 +372,39 @@ Bassoon_IV_mvmt_II_AG = \relative c, {
 %%% Section AH = mm. 46-49 (Rehearsal 43)
 %%% Tacet
 
+%%% Section AI = mm. 50-55
+%%% Tacet
+
+Bassoon_I_cues_mvmt_II_AI = \relative c''' {
+	\tag #'Score \NULL_II_AI
+	\tag #'Part <<
+		\new CueVoice {
+			\tempo "poco più mosso"
+			\cueClef treble
+			c4.~^"Vn." c8~ c16 \beamCutR bes( \beamCutL c d)
+			\tuplet 3/2 { ees( d c) } c4~ c4~ c16 c
+			f4.~ f8~ f16 \beamCutR ees \beamCutL ees( d)
+			\tuplet 3/2 { ees( d c) } c4~ c8 a c
+			ees2.~
+			ees2.
+			\cueClefUnset
+		}
+		\new Voice {
+			\voiceTwo
+			R2.*6
+		}
+	>>
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_II = { \clef bass \Bassoon_I_mvmt_II_AA \Bassoon_I_cues_mvmt_II_AB \NULL_II_AC \Bassoon_I_mvmt_II_AD \Bassoon_I_mvmt_II_AE
-		\Bassoon_I_mvmt_II_AF \Bassoon_I_mvmt_II_AG \NULL_II_AH }
+		\Bassoon_I_mvmt_II_AF \Bassoon_I_mvmt_II_AG \NULL_II_AH \Bassoon_I_cues_mvmt_II_AI }
 Bassoon_II_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_II_mvmt_II_AB \NULL_II_AC \Bassoon_II_mvmt_II_AD \Bassoon_II_mvmt_II_AE
-		\Bassoon_II_mvmt_II_AF \Bassoon_II_mvmt_II_AG \NULL_II_AH }
+		\Bassoon_II_mvmt_II_AF \Bassoon_II_mvmt_II_AG \NULL_II_AH \NULL_II_AI }
 Bassoon_III_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_III_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
-		\Bassoon_III_mvmt_II_AE \Bassoon_III_mvmt_II_AF \Bassoon_III_mvmt_II_AG \NULL_II_AH }
+		\Bassoon_III_mvmt_II_AE \Bassoon_III_mvmt_II_AF \Bassoon_III_mvmt_II_AG \NULL_II_AH \NULL_II_AI }
 Bassoon_IV_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_IV_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
-		\Bassoon_IV_mvmt_II_AE \Bassoon_IV_mvmt_II_AF \Bassoon_IV_mvmt_II_AG \NULL_II_AH }
+		\Bassoon_IV_mvmt_II_AE \Bassoon_IV_mvmt_II_AF \Bassoon_IV_mvmt_II_AG \NULL_II_AH \NULL_II_AI }
 Contrabassoon_mvmt_II = { \clef bass \NULL_II_AA \Contrabassoon_cues_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD \NULL_II_AE
-		\Contrabassoon_mvmt_II_AF \NULL_II_AG \NULL_II_AH }
+		\Contrabassoon_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI }

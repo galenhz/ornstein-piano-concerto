@@ -167,9 +167,18 @@ Typmani_II_mvmt_II_AH = \relative c, {
 	r16 fis[ fis8 fis] r16 fis[ fis8 fis]
 }
 
+%%% Section AI = mm. 50-55
+
+Tympani_II_mvmt_II_AI = \relative c {
+	\tempo "poco più mosso"
+	r32 cis\ppp cis \beamCutR cis \beamCutL \set stemRightBeamCount = #2 cis16 cis8 cis16
+		\repeat unfold 7 { r32 cis cis \beamCutR cis \beamCutL \set stemRightBeamCount = #2 cis16 cis8 cis16 }
+	R2.*2
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD \NULL_II_AE \Tympani_I_mvmt_II_AF
-		\NULL_II_AG \Typmani_I_mvmt_II_AH }
+		\NULL_II_AG \Typmani_I_mvmt_II_AH \NULL_II_AI }
 Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD \NULL_II_AE
-		\Tympani_II_mvmt_II_AF \NULL_II_AG \Typmani_II_mvmt_II_AH }
+		\Tympani_II_mvmt_II_AF \NULL_II_AG \Typmani_II_mvmt_II_AH \Tympani_II_mvmt_II_AI }
