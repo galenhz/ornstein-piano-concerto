@@ -37,3 +37,4 @@ NULL_II_AG = { \mark #42 \time 4/8 R2*2 \tempo "Meno" R2*4 }
 NULL_II_AH = { \mark #43 \tempo "Mosso" \time 7/8 R1*7/8*3 \time 6/8 R2. }
 NULL_II_AI = { \tempo "poco più mosso" R2.*6 }
 NULL_II_AJ = { R2.*2 \mark #44 R2.*5 \time 8/8 R1*3 }
+NULL_II_AK = { \mark #45 \time 5/8 R1*5/8*4 \time 6/8 R2.*2 }

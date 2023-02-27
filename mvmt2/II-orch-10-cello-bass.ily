@@ -309,11 +309,64 @@ Bass_mvmt_II_AI = \relative c, {
 	c4\ppp r8 r4.
 }
 
+%%% Section AJ = mm. 56-65 (Rehearsal ~44)
+
+Cello_mvmt_II_AJ = \relative c' {
+	R2.*2
+	\mark #44
+	a4.~\mp a8. \set stemLeftBeamCount = #2 \beamCutR b16 \tuplet 3/2 { \beamCutL c( b a) }
+	a4.~ a4 \acciaccatura { gis16 a } gis32( f gis b)
+	a2.
+	r16^\Unis_mark b, b8 b
+		\repeat unfold 3 { r16 b b8 b }
+	\time 8/8
+	<ees, bes'>1~\pp
+	q1~
+	q1
+}
+
+Cello_divisi_II_mvmt_II_AJ = \relative c {
+	R2.*2
+	\mark #44
+	<<
+		\new Voice {
+			\voiceOne
+			c2.~^\DivIII_mark
+			c2.~
+			c2.
+		}
+		\new Voice {
+			\voiceTwo
+			fis,2.~\p
+			fis2.~
+			fis2.
+		}
+	>>
+	R2.*2
+	\time 8/8
+	R1*3
+}
+
+Bass_mvmt_II_AJ = \relative c {
+	R2.*2
+	\mark #44
+	c2.\p~
+	c2.
+	c2.
+	r16 e\pp e8 e
+		\repeat unfold 3 { r16 e e8 e }
+	\time 8/8
+	ees,1~\pp
+	ees1~
+	ees1
+}
+
 %%% Final assembly
 
 Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC \Cello_mvmt_II_AD \Cello_mvmt_II_AE \Cello_mvmt_II_AF
-		\Cello_mvmt_II_AG \Cello_mvmt_II_AH \Cello_mvmt_II_AI }
-Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI }
+		\Cello_mvmt_II_AG \Cello_mvmt_II_AH \Cello_mvmt_II_AI \Cello_mvmt_II_AJ }
+Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI
+		\Cello_divisi_II_mvmt_II_AJ }
 
 Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC \Bass_mvmt_II_AD \Bass_mvmt_II_AE \Bass_mvmt_II_AF
-		\Bass_mvmt_II_AG \Bass_mvmt_II_AH \Bass_mvmt_II_AI }
+		\Bass_mvmt_II_AG \Bass_mvmt_II_AH \Bass_mvmt_II_AI \Bass_mvmt_II_AJ }

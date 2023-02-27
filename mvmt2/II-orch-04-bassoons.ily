@@ -396,15 +396,72 @@ Bassoon_I_cues_mvmt_II_AI = \relative c''' {
 	>>
 }
 
+%%% Section AJ = mm. 56-65 (Rehearsal ~44)
+
+Bassoon_I_mvmt_II_AJ = \relative c' {
+	R2.*2
+	\mark #44
+	\tag #'Score a4.~\f \tag #'Part a4.~\f^\Solo_mark a8. \set stemLeftBeamCount = #2 \beamCutR b16 \tuplet 3/2 { \beamCutL c( b a) }
+	a4.~ a4 \appoggiatura { gis16 a } gis32( f gis b)
+	a2.
+	R2.*2
+	\time 8/8
+	R1*3
+}
+
+Bassoon_all_cues_mvmt_II_AJ_partial = \relative c' {
+	R2.*2
+	\mark #44
+	\tag #'Score R2.*3
+	\tag #'Part <<
+		\new CueVoice {
+			a4.~^"I Bsn." a8. \set stemLeftBeamCount = #2 \beamCutR b16 \tuplet 3/2 { \beamCutL c( b a) }
+			a4.~ a4 \appoggiatura { gis16 a } gis32( f gis b)
+			a2.
+		}
+		\new Voice {
+			\voiceTwo
+			R2.*3
+		}
+	>>
+	R2.*2
+}
+
+Bassoon_II_Contra_cues_mvmt_II_AJ = {
+	\Bassoon_all_cues_mvmt_II_AJ_partial
+	\time 8/8
+	R1*3
+}
+
+% EDIT: Score gives bassoon III/IV the expected relationship, with III
+%       taking the upper notes. Parts have that reversed, for no obvious
+%       reason. Going with score.
+
+Bassoon_IV_mvmt_II_AJ = \relative c {
+	\Bassoon_all_cues_mvmt_II_AJ_partial
+	\time 8/8
+	bes8([\mf d fis fis] bes[ \clef tenor d fis)] r8 \clef bass
+	R1
+	bes,,8([\mf d fis fis] bes[ \clef tenor d fis)] r8 \clef bass
+}
+
+Bassoon_III_mvmt_II_AJ = \relative c {
+	\Bassoon_all_cues_mvmt_II_AJ_partial
+	\time 8/8
+	d8([\mf fis a bes] d[ \clef tenor fis a)] r8 \clef bass
+	R1
+	d,,8([\mf fis a bes] d[ \clef tenor fis a)] r8 \clef bass
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_II = { \clef bass \Bassoon_I_mvmt_II_AA \Bassoon_I_cues_mvmt_II_AB \NULL_II_AC \Bassoon_I_mvmt_II_AD \Bassoon_I_mvmt_II_AE
-		\Bassoon_I_mvmt_II_AF \Bassoon_I_mvmt_II_AG \NULL_II_AH \Bassoon_I_cues_mvmt_II_AI }
+		\Bassoon_I_mvmt_II_AF \Bassoon_I_mvmt_II_AG \NULL_II_AH \Bassoon_I_cues_mvmt_II_AI \Bassoon_I_mvmt_II_AJ }
 Bassoon_II_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_II_mvmt_II_AB \NULL_II_AC \Bassoon_II_mvmt_II_AD \Bassoon_II_mvmt_II_AE
-		\Bassoon_II_mvmt_II_AF \Bassoon_II_mvmt_II_AG \NULL_II_AH \NULL_II_AI }
+		\Bassoon_II_mvmt_II_AF \Bassoon_II_mvmt_II_AG \NULL_II_AH \NULL_II_AI \Bassoon_II_Contra_cues_mvmt_II_AJ }
 Bassoon_III_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_III_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
-		\Bassoon_III_mvmt_II_AE \Bassoon_III_mvmt_II_AF \Bassoon_III_mvmt_II_AG \NULL_II_AH \NULL_II_AI }
+		\Bassoon_III_mvmt_II_AE \Bassoon_III_mvmt_II_AF \Bassoon_III_mvmt_II_AG \NULL_II_AH \NULL_II_AI \Bassoon_III_mvmt_II_AJ }
 Bassoon_IV_mvmt_II = { \clef bass \Bassoon_II_III_IV_cues_mvmt_II_AA \Bassoon_IV_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD
-		\Bassoon_IV_mvmt_II_AE \Bassoon_IV_mvmt_II_AF \Bassoon_IV_mvmt_II_AG \NULL_II_AH \NULL_II_AI }
+		\Bassoon_IV_mvmt_II_AE \Bassoon_IV_mvmt_II_AF \Bassoon_IV_mvmt_II_AG \NULL_II_AH \NULL_II_AI \Bassoon_IV_mvmt_II_AJ }
 Contrabassoon_mvmt_II = { \clef bass \NULL_II_AA \Contrabassoon_cues_mvmt_II_AB \NULL_II_AC \Bassoon_III_IV_Contra_cues_mvmt_II_AD \NULL_II_AE
-		\Contrabassoon_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI }
+		\Contrabassoon_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \Bassoon_II_Contra_cues_mvmt_II_AJ }

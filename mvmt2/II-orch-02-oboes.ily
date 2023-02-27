@@ -241,15 +241,18 @@ Oboe_III_mvmt_II_AI = \transpose c' c \Oboe_I_mvmt_II_AI
 
 Oboe_IV_mvmt_II_AI = \transpose c' c \Oboe_II_mvmt_II_AI
 
+%%% Section AJ = mm. 56-65 (Rehearsal ~44)
+%%% Tacet
+
 %%% Final assembly
 
 Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF
-		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI }
+		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI \NULL_II_AJ }
 Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI }
+		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI \NULL_II_AJ }
 Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI }
+		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI \NULL_II_AJ }
 Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI }
+		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI \NULL_II_AJ }
 EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \NULL_II_AI }
+		\NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ }

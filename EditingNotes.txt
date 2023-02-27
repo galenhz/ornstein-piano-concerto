@@ -808,3 +808,18 @@ the score.
 m. 59: Solo piano (PR and score) uses quarter notes inside the duplet. Doesn't it make more sense if they're eighths?
 Lilypond math works out better if they are. I'm putting them as eighths for now, but will review. #UNDECIDED
 (II-solo-piano)
+
+mm. 63-65: Violin II and Viola have held notes for these three bars in the score. They're just rests in the parts,
+no sign of correction. Siding with the parts for now. May revisit. #UNDECIDED
+(II-orch-09-violins-viola)
+
+m. 63 and 65: Score has bassoon III/IV parts with the expected relation, III taking the upper part. The parts have
+this reversed, and I can't think of any particular reason why they would be. Going with score.
+(II-orch-04-bassoons)
+
+mm. 63-65: Clarinet I part has no slurs. Clarinet II part and score have 2x and 4x slurs; score was also edited to
+make it a single long slur, but not sure which was first. Going with split for now. #UNDECIDED
+(II-orch-03-clarinets)
+
+m. 64: Flute II part has cis in place of des in the score.
+(II-orch-01-flutes)
