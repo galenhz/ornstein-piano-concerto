@@ -109,6 +109,9 @@ NULL_I_BB = { \mark #20 \tempo "Andantino (meno)" R2.*6 }
 NULL_I_BC = { \mark #21 \tempo "Moderato" \time 4/4 R1 \time 7/4 R1*7/4 \time 4/4 R1 \time 7/4 R1*7/4 \mark #22 \time 4/4 R1*4 }
 NULL_I_BD = { \mark #23 \tempo "Poco più Lento" \time 3/4 R2.*4 \tempo "Più agitato e crescendo" R2.*3 \time 2/4 R2*2 \time 3/4 R2.
 	\bar "||" \Mvmt_I_Fermata_On_Bar }
+% Need this for divisi parts.
+NULL_I_BD_nofermata = { \mark #23 \tempo "Poco più Lento" \time 3/4 R2.*4 \tempo "Più agitato e crescendo" R2.*3 \time 2/4 R2*2 \time 3/4 R2.
+	\bar "||" }
 NULL_I_BE = { \mark #24 \tempo "Andantino" \time 3/4 R2.*7 }
 NULL_I_BF = { \mark #25 \time 4/4 R1*3 \tempo "Più mosso" \time 6/8 R2.*4 }
 NULL_I_BG = { \mark #26 \tempo "Animato" R2.*4 }

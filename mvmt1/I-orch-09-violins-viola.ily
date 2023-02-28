@@ -1612,7 +1612,7 @@ Viola_divisi_II_mvmt_I_BD = \relative c' {
 			des f a
 		}
 	>>
-	\bar "||" \Mvmt_I_Fermata_On_Bar
+	\bar "||" % Divisi part gets no fermata
 }
 
 %%% Section BE = mm. 226-232 (Rehersal 24)
@@ -2773,7 +2773,7 @@ Violin_I_mvmt_I = { \NULL_I_AA \Violin_I_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvmt_
 		\Violin_I_mvmt_I_BQ \Violin_I_mvmt_I_BR }
 Violin_I_divisi_II_mvmt_I = { \NULL_I_AA \Violin_I_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \NULL_I_AE \NULL_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI
 		\NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP \NULL_I_AQ \NULL_I_AR \Violin_I_divisi_II_mvmt_I_AS \NULL_I_AT
-		\NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF
+		\NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB \NULL_I_BC \NULL_I_BD_nofermata \NULL_I_BE \NULL_I_BF
 		\Violin_I_divisi_II_mvmt_I_BG \NULL_I_BH \NULL_I_BI \NULL_I_BJ \Violin_I_divisi_II_mvmt_I_BK \Violin_I_divisi_II_mvmt_I_BL
 		\Violin_I_divisi_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO \NULL_I_BP \Violin_I_divisi_II_mvmt_I_BQ \Violin_I_divisi_II_mvmt_I_BR }
 
@@ -2787,8 +2787,8 @@ Violin_II_mvmt_I = { \NULL_I_AA \Violin_II_mvmt_I_AB \NULL_I_AC \Violin_I_II_mvm
 Violin_II_divisi_II_mvmt_I = { \NULL_I_AA \Violin_II_divisi_II_mvmt_I_AB \NULL_I_AC \NULL_I_AD \Violin_II_divisi_II_mvmt_I_AE
 		\Violin_II_divisi_II_mvmt_I_AF \NULL_I_AG \NULL_I_AH \NULL_I_AI \NULL_I_AJ \NULL_I_AK \NULL_I_AL \NULL_I_AM \NULL_I_AN \NULL_I_AO \NULL_I_AP
 		\NULL_I_AQ \NULL_I_AR \NULL_I_AS \NULL_I_AT \NULL_I_AU \NULL_I_AV \NULL_I_AW \NULL_I_AX \NULL_I_AY \NULL_I_AZ \NULL_I_BA \NULL_I_BB
-		\NULL_I_BC \NULL_I_BD \NULL_I_BE \NULL_I_BF \Violin_II_divisi_II_mvmt_I_BG \Violin_II_divisi_II_mvmt_I_BH \NULL_I_BI \NULL_I_BJ \NULL_I_BK
-		\NULL_I_BL \Violin_II_divisi_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO \NULL_I_BP \NULL_I_BQ \Violin_II_divisi_II_mvmt_I_BR }
+		\NULL_I_BC \NULL_I_BD_nofermata \NULL_I_BE \NULL_I_BF \Violin_II_divisi_II_mvmt_I_BG \Violin_II_divisi_II_mvmt_I_BH \NULL_I_BI \NULL_I_BJ
+		\NULL_I_BK \NULL_I_BL \Violin_II_divisi_II_mvmt_I_BM \NULL_I_BN \NULL_I_BO \NULL_I_BP \NULL_I_BQ \Violin_II_divisi_II_mvmt_I_BR }
 
 Viola_mvmt_I = { \clef alto \NULL_I_AA \Viola_mvmt_I_AB \NULL_I_AC \Viola_mvmt_I_AD \Viola_mvmt_I_AE \Viola_mvmt_I_AF \Viola_mvmt_I_AG \Viola_mvmt_I_AH
 		\Viola_mvmt_I_AI \Viola_mvmt_I_AJ \Viola_mvmt_I_AK \NULL_I_AL \Viola_mvmt_I_AM \Viola_mvmt_I_AN \Viola_mvmt_I_AO \Viola_mvmt_I_AP
