@@ -664,7 +664,7 @@ redux_upper_II_AK = \relative c'' {
 		\new Voice {
 			\voiceOne
 			s8
-				\repeat unfold 3 { <f c'>8[ <f cis'> <a e'> <c g'> <cis aes'>] }
+				\repeat unfold 3 { <f c'>8[ <fis cis'> <a e'> <c g'> <cis aes'>] }
 				<f, c'>[ <f cis'> <a e'> <c g'>]
 			\time 6/8
 			<fis, a ces f>2.~
@@ -672,9 +672,10 @@ redux_upper_II_AK = \relative c'' {
 		}
 		\new Voice {
 			\voiceTwo
-			b,8\rest
-				\repeat unfold 3 { <a des>8[ <bes d> <c fis> <ees a> <f bes>] }
-				<a, des>[ <bes d> <c fis> <ees a>]
+			b,8\rest <a des>8[ <bes d> <c fis> <ees a>
+			<f bes>] <a, des>8[ <bes d> <cis fis> <ees a>
+			<f bes>] <a, des>8[ <bes d> <c fis> <ees a>
+			<f bes>] <a, des>[ <bes d> <cis fis> <ees a>]
 			\time 6/8
 			<c, ees fis a>2.~
 			q2.
