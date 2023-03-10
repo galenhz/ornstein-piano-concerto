@@ -447,11 +447,58 @@ solo_lower_II_AJ = \relative c, {
 	r8 <bes' fis'>[ <a f'> <fis d'> <f des'> <d bes'> <des a'> <bes fis'>]
 }
 
+%%% Section AK = mm. 66-71 (Rehearsal 45)
+
+solo_upper_II_AK = \relative c'' {
+	\mark #45
+	\time 5/8
+	\stemUp
+	% EDIT: PR m. 67 has 4~ 8, score has single 4. PR has 4. in repeated measure 69. Going with 4.
+	\repeat unfold 2 {
+		ees2~ ees8
+		bes4. cis4
+	}
+	\stemNeutral
+	\time 6/8
+	<<
+		\new Voice {
+			\voiceOne
+			<ees, fis a ees'>2.~
+			q2.
+		}
+		\new Voice {
+			\voiceTwo
+			r8 c[ cis fis \change Staff = "solo_lower" \clef treble \stemUp b c] \clef bass
+			\change Staff = "solo_upper" \stemDown c,[ cis] fis b4 c8 \stemNeutral
+		}
+	>>
+}
+
+solo_dynamics_II_AK = {
+	s1*5/8*4 s2.*2
+}
+
+solo_lower_II_AK = \relative c, {
+	\time 5/8
+	\clef bass
+	% Can't do a repeat since I need to push that "cresc." in the first time.
+	r16 d[ \beamCutL a' \beamCutR fis' \beamCutL bes \beamCutR c \change Staff = "solo_upper" \beamCutL ees \beamCutR fis \beamCutL c' a']
+	\change Staff = "solo_lower" f,,, \beamCutR cis' \beamCutL a'_\markup { \italic "cresc." } \change Staff = "solo_upper" \beamCutR des \beamCutL f a
+		\change Staff = "solo_lower" a,, \beamCutR bes' \change Staff = "solo_upper" \beamCutL e g' \change Staff = "solo_lower"
+	r16 d,,,[ \beamCutL a' \beamCutR fis' \beamCutL bes \beamCutR c \change Staff = "solo_upper" \beamCutL ees \beamCutR fis \beamCutL c' a']
+	\change Staff = "solo_lower" f,,, \beamCutR cis' \beamCutL a' \change Staff = "solo_upper" \beamCutR des \beamCutL f a
+		\change Staff = "solo_lower" a,, \beamCutR bes' \change Staff = "solo_upper" \beamCutL e g' \change Staff = "solo_lower"
+	\time 6/8
+	<des,, gis c>2.~
+	q2.
+}
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
-		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ }
+		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
-		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ }
+		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ
+		\solo_dynamics_II_AK }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
-		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ }
+		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK }
