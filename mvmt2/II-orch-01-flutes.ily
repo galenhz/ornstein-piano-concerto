@@ -361,14 +361,65 @@ Flute_II_mvmt_II_AJ = \relative c' {
 	R1
 }
 
+%%% Section AK = mm. 66-71 (Rehearsal 45)
+
+Flute_I_mvmt_II_AK = \relative c''' {
+	\mark #45
+	\time 5/8
+	r8 c[(\mf cis e g
+	aes]) \tag #'Part c,[(_\markup { \italic "cresc." } \tag #'Score c[( cis e g
+	aes]) c,[( cis e g
+	aes]) c,[( cis e g])
+	\time 6/8
+	a2.~\p
+	a2.
+}
+
+Flute_II_mvmt_II_AK = \relative c'' {
+	\mark #45
+	\time 5/8
+	r8 f[(\mf fis a c
+	cis]) f,[(_\markup { \italic "cresc." } fis a c
+	cis]) f,[( fis a c
+	cis]) f,[( fis a c])
+	\time 6/8
+	ees2.~\p
+	ees2.
+}
+
+Flute_III_mvmt_II_AK = \relative c'' {
+	\mark #45
+	\time 5/8
+	r8 des[(\mf d fis a
+	bes]) \tag #'Part des,[(_\markup { \italic "cresc." } \tag #'Score des[( d fis a
+	bes]) des,[( d fis a
+	bes]) des,[( d fis a])
+	\time 6/8
+	c2.~\p
+	c2.
+}
+
+Flute_IV_mvmt_II_AK = \relative c'' {
+	\mark #45
+	\time 5/8
+	r8 a[(\mf bes c ees
+	f]) a,[(_\markup { \italic "cresc." } bes cis e
+	f]) a,[( bes c? ees
+	f]) a,[( bes cis e])
+	\time 6/8
+	fis2.~\p
+	fis2.
+}
+
 %%% Final construction
 
-Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ }
+Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ
+		\NULL_II_AK }
 Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE \Flute_all_cues_mvmt_II_AF
-		\Flute_I_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \Flute_I_mvmt_II_AJ }
+		\Flute_I_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \Flute_I_mvmt_II_AJ \Flute_I_mvmt_II_AK }
 Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF \Flute_II_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \Flute_II_mvmt_II_AJ }
+		\Flute_all_cues_mvmt_II_AF \Flute_II_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \Flute_II_mvmt_II_AJ \Flute_II_mvmt_II_AK }
 Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF \Flute_III_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \NULL_II_AJ }
+		\Flute_all_cues_mvmt_II_AF \Flute_III_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \NULL_II_AJ \Flute_III_mvmt_II_AK }
 Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
-		\Flute_all_cues_mvmt_II_AF \Flute_IV_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \NULL_II_AJ }
+		\Flute_all_cues_mvmt_II_AF \Flute_IV_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \NULL_II_AJ \Flute_IV_mvmt_II_AK }

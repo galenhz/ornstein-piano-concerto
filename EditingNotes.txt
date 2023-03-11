@@ -823,3 +823,6 @@ make it a single long slur, but not sure which was first. Going with split for n
 
 m. 64: Flute II part has cis in place of des in the score.
 (II-orch-01-flutes)
+
+m. 70: Every string part has a p dynamics except Violin I. Adding. #DYNAMICS
+(II-orch-09-violins-viola)

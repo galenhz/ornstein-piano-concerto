@@ -225,15 +225,16 @@ Trumpet_I_mvmt_II_AH = \relative c'' {
 
 %%% Section AI = mm. 50-55
 %%% Section AJ = mm. 56-65 (Rehearsal ~44)
+%%% Section AK = mm. 66-71 (Rehearsal 45)
 %%% Tacet
 
 %%% Final assembly
 
 Trumpet_I_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_I_mvmt_II_AF \Trumpet_I_mvmt_II_AG \Trumpet_I_mvmt_II_AH \NULL_II_AI \NULL_II_AJ }
+		\Trumpet_I_mvmt_II_AF \Trumpet_I_mvmt_II_AG \Trumpet_I_mvmt_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK }
 Trumpet_II_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ }
+		\Trumpet_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK }
 Trumpet_III_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ }
+		\Trumpet_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK }
 Trumpet_IV_mvmt_II = { \NULL_II_AA \Trumpet_All_cues_mvmt_II_AB \NULL_II_AC \Trumpet_All_cues_mvmt_II_AD \Trumpet_All_cues_mvmt_II_AE
-		\Trumpet_IV_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ }
+		\Trumpet_IV_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK }
