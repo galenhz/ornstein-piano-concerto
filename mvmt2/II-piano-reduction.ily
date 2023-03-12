@@ -694,11 +694,59 @@ redux_lower_II_AK = \relative c, {
 	q2.
 }
 
+%%% Section AL = mm. 72-78 (Rehearsal ~46)
+
+redux_upper_II_AL = \NULL_II_AL
+
+redux_dynamics_II_AL = {
+	s1*5/4 s2. s1*5/4 s1*5/8 s1*5/4 s2. s1*5/4
+}
+
+redux_lower_II_AL = \relative c {
+	<<
+		\new Voice {
+			\voiceOne
+			\time 5/4
+			<d fis bes cis>1~ q4~
+			\time 6/8
+			q8 <d fis bes ces> <d fis bes cis> <fis bes cis fis> <d fis bes cis> <d fis bes ces>
+			\time 5/4
+			<d fis bes cis>1~ q4~
+			\time 5/8
+			q8[ <d fis gis> <fis gis b> <fis gis d'> <fis gis e'>]
+			\time 5/4
+			<d fis bes cis>1~ q4
+			\time 3/4
+			<d fis a c>4 <d fis a> <d fis a c>
+			\time 5/4
+			<fis a c ees>1~ q4
+		}
+		\new Voice {
+			\voiceTwo
+			\time 5/4
+			<fis,, fis'>1~ q4~
+			\time 6/8
+			q8 <d d'> <fis fis'> <d d'> <fis fis'> <d d'>
+			\time 5/4
+			<fis fis'>1~ q4~
+			\time 5/8
+			q8[ <d d'> <fis fis'> <d d'> <fis fis'>]
+			\time 5/4
+			<d d'>1~ q4
+			\time 3/4
+			<fis fis'>4 <d d'> <fis fis'>
+			\time 5/4
+			<d d'>1~ q4
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
-		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK }
+		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK \redux_upper_II_AL }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
-		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI \redux_dynamics_II_AK }
+		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI \redux_dynamics_II_AK
+		\redux_dynamics_II_AL }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
-		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK }
+		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK \redux_lower_II_AL }

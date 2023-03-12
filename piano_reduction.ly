@@ -54,6 +54,7 @@
   }
 }
 
+\include "mvmt2/II-common.ily"
 \include "mvmt2/II-solo-piano.ily"
 \include "mvmt2/II-piano-reduction.ily"
 

@@ -20,12 +20,13 @@
 % AI = mm. 50-55
 % AJ = mm. 56-65 (Rehearsal ~44)
 % AK = mm. 66-71 (Rehearsal 45)
-% AL = mm. 72-87 (Rehearsal ~46, ~47)
-% AM = mm. 88-91 (Rehersal 48)
-% AN = mm. 92-99
-% AO = mm. 100-106 (Rehersal 49)
-% AP = mm. 107-110
-% AQ = mm. 111-113 (Rehersal 50)
+% AL = mm. 72-78 (Rehearsal ~46)
+% AM = mm. 79-87 (Rehearsal ~47)
+% AN = mm. 88-91 (Rehearsal 48)
+% AO = mm. 92-99
+% AP = mm. 100-106 (Rehersal 49)
+% AQ = mm. 107-110
+% AR = mm. 111-113 (Rehersal 50)
 
 NULL_II_AA = { \tempo "Andante" \time 12/8 R1.*6 }
 NULL_II_AB = { \mark #38 \tempo 8 = 69 \time 6/8 R2.*6 }
@@ -38,3 +39,5 @@ NULL_II_AH = { \mark #43 \tempo "Mosso" \time 7/8 R1*7/8*3 \time 6/8 R2. }
 NULL_II_AI = { \tempo "poco più mosso" R2.*6 }
 NULL_II_AJ = { R2.*2 \mark #44 R2.*5 \time 8/8 R1*3 }
 NULL_II_AK = { \mark #45 \time 5/8 R1*5/8*4 \time 6/8 R2.*2 }
+NULL_II_AL = { \tempo "Piu mosso" \time 5/4 R1*5/4 \time 6/8 R2. \mark #46 \time 5/4 R1*5/4 \time 5/8 R1*5/8 \time 5/4 R1*5/4 \time 3/4 R2. \time 5/4 R1*5/4 }
+NULL_II_AM = { R1*5/4 \time 6/8 R2. \time 5/4 R1*5/4 \time 5/8 R1*5/8 \time 5/4 R1*5/4 \mark #47 \time 3/4 R2. \time 5/4 R1*5/4 \time 7/4 R1*7/4*2 }

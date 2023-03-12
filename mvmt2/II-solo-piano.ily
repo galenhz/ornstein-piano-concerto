@@ -493,12 +493,69 @@ solo_lower_II_AK = \relative c, {
 	q2.
 }
 
+%%% Section AL = mm. 72-78 (Rehearsal ~46)
+
+solo_upper_II_AL_figure = \relative c' {
+	\override TupletBracket.bracket-visibility = ##t
+	\override TupletBracket.positions = #'(-6 . -6)
+	\tupletDown
+	\tuplet 6/4 4 {
+		\repeat unfold 3 { \change Staff = "solo_lower" <c des c'>16 \change Staff = "solo_upper" <des' c' des> }
+		\repeat unfold 3 { \change Staff = "solo_lower" <b, c b'>16 \change Staff = "solo_upper" <c' b' c> }
+		\repeat unfold 3 { \change Staff = "solo_lower" <bes, ces bes'>16 \change Staff = "solo_upper" <ces' bes' ces> }
+		\repeat unfold 3 { \change Staff = "solo_lower" <a, bes a'>16 \change Staff = "solo_upper" <bes' a' bes> }
+	}
+	\tupletNeutral
+	\revert TupletBracket.positions
+	\revert TupletBracket.bracket-visibility
+}
+
+solo_upper_II_AL = \relative c' {
+	\tempo "Piu mosso"
+	\time 5/4
+	r4 \solo_upper_II_AL_figure
+	\time 6/8
+	R2.
+	\mark #46
+	\time 5/4
+	r4 \solo_upper_II_AL_figure
+	\time 5/8
+	R1*5/8
+	\time 5/4
+	r4 \solo_upper_II_AL_figure
+	\time 3/4
+	R2.
+	\time 5/4
+	r4 \solo_upper_II_AL_figure
+}
+
+solo_dynamics_II_AL = {
+	s1*5/4 s2. s1*5/4 s1*5/8 s1*5/4 s2. s1*5/4
+}
+
+solo_lower_II_AL = {
+	\time 5/4
+	r4 \clef treble s1
+	\time 6/8
+	R2.
+	\time 5/4
+	r4 s1
+	\time 5/8
+	R1*5/8
+	\time 5/4
+	r4 s1
+	\time 3/4
+	R2.
+	\time 5/4
+	r4 s1
+}
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
-		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK }
+		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK \solo_upper_II_AL }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
 		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ
-		\solo_dynamics_II_AK }
+		\solo_dynamics_II_AK \solo_dynamics_II_AL }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
-		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK }
+		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK \solo_lower_II_AL }
