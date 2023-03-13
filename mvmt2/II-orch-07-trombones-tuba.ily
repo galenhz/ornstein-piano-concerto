@@ -341,13 +341,95 @@ Trombone_Tuba_cues_mvmt_II_AK = \relative c {
 	}
 }
 
+%%% Section AL = mm. 72-78 (Rehearsal ~46)
+
+Trombone_I_mvmt_II_AL = \relative c' {
+	\tempo "Piu mosso"
+	\time 5/4
+	\clef tenor
+	cis1~\ff cis4~
+	\time 6/8
+	cis8 b( cis) fis( cis b)
+	\mark #46
+	\time 5/4
+	cis1~ cis4~
+	\time 5/8
+	cis8[ gis( b d e)]
+	\time 5/4
+	cis1~ cis4
+	\time 3/4
+	c?4-> a-> c->
+	\time 5/4
+	ees1~-^ ees4
+}
+
+Trombone_II_mvmt_II_AL = \relative c' {
+	\tempo "Piu mosso"
+	\time 5/4
+	\clef tenor
+	bes1~\ff bes4~
+	\time 6/8
+	bes8 bes bes cis( bes) bes
+	\mark #46
+	\time 5/4
+	bes1~ bes4~
+	\time 5/8
+	bes8 r r gis gis
+	\time 5/4
+	bes1~ bes4
+	\time 3/4
+	a4-> a-> a->
+	\time 5/4
+	c1~-^ c4
+}
+
+Trombone_III_mvmt_II_AL = \relative c {
+	\tempo "Piu mosso"
+	\time 5/4
+	fis1~\ff fis4~
+	\time 6/8
+	fis8 fis fis bes( fis) fis
+	\mark #46
+	\time 5/4
+	fis1~ fis4~
+	\time 5/8
+	fis8[ fis( gis) gis gis]
+	\time 5/4
+	fis1~ fis4
+	\time 3/4
+	fis4-> fis-> fis->
+	\time 5/4
+	a1~-^ a4
+}
+
+Tuba_mvmt_II_AL = \relative c {
+	\tempo "Piu mosso"
+	\time 5/4
+	d1~\ff d4~
+	\time 6/8
+	d8 d d fis( d) d
+	\mark #46
+	\time 5/4
+	d1~ d4~
+	\time 5/8
+	d8[ d( fis) fis fis]
+	\time 5/4
+	d1~ d4
+	\time 3/4
+	d4-> d-> d->
+	\time 5/4
+	fis1~-^ fis4
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_II = { \clef bass \NULL_II_AA \Trombone_I_mvmt_II_AB \Trombone_I_mvmt_II_AC \Trombone_I_mvmt_II_AD \Trombone_Tuba_cues_mvmt_II_AE
-		\Trombone_I_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK }
+		\Trombone_I_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK \Trombone_I_mvmt_II_AL }
 Trombone_II_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \Trombone_II_mvmt_II_AC \Trombone_II_mvmt_II_AD
-		\Trombone_Tuba_cues_mvmt_II_AE \Trombone_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK }
+		\Trombone_Tuba_cues_mvmt_II_AE \Trombone_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK
+		\Trombone_II_mvmt_II_AL }
 Trombone_III_mvmt_II = { \clef bass \NULL_II_AA \Trombone_III_mvmt_II_AB \Trombone_III_mvmt_II_AC \Trombone_III_cues_mvmt_II_AD
-		\Trombone_Tuba_cues_mvmt_II_AE \Trombone_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK }
+		\Trombone_Tuba_cues_mvmt_II_AE \Trombone_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK
+		\Trombone_III_mvmt_II_AL }
 Tuba_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \NULL_II_AC \Tuba_mvmt_II_AD \Trombone_Tuba_cues_mvmt_II_AE
-		\Tuba_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK }
+		\Tuba_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK \Tuba_mvmt_II_AL }

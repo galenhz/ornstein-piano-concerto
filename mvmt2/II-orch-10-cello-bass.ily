@@ -372,12 +372,33 @@ Cello_Bass_mvmt_II_AK = \relative c, {
 	ees2.
 }
 
+%%% Section AL = mm. 72-78 (Rehearsal ~46)
+
+Cello_Bass_mvmt_II_AL = \relative c, {
+	\tempo "Piu mosso"
+	\time 5/4
+	fis1~\f fis4~
+	\time 6/8
+	fis8 d( fis) d( fis d)
+	\mark #46
+	\time 5/4
+	fis1~ fis4~
+	\time 5/8
+	fis8[ d( fis d fis)]
+	\time 5/4
+	d1~ d4
+	\time 3/4
+	fis4-> d-> fis->
+	\time 5/4
+	d1~ d4
+}
+
 %%% Final assembly
 
 Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC \Cello_mvmt_II_AD \Cello_mvmt_II_AE \Cello_mvmt_II_AF
-		\Cello_mvmt_II_AG \Cello_mvmt_II_AH \Cello_mvmt_II_AI \Cello_mvmt_II_AJ \Cello_Bass_mvmt_II_AK }
+		\Cello_mvmt_II_AG \Cello_mvmt_II_AH \Cello_mvmt_II_AI \Cello_mvmt_II_AJ \Cello_Bass_mvmt_II_AK \Cello_Bass_mvmt_II_AL }
 Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI
-		\Cello_divisi_II_mvmt_II_AJ \NULL_II_AK }
+		\Cello_divisi_II_mvmt_II_AJ \NULL_II_AK \NULL_II_AL }
 
 Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC \Bass_mvmt_II_AD \Bass_mvmt_II_AE \Bass_mvmt_II_AF
-		\Bass_mvmt_II_AG \Bass_mvmt_II_AH \Bass_mvmt_II_AI \Bass_mvmt_II_AJ \Cello_Bass_mvmt_II_AK }
+		\Bass_mvmt_II_AG \Bass_mvmt_II_AH \Bass_mvmt_II_AI \Bass_mvmt_II_AJ \Cello_Bass_mvmt_II_AK \Cello_Bass_mvmt_II_AL }

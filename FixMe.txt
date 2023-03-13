@@ -112,3 +112,8 @@ m. 63-65: Piano reduction. Ties make this a mess; may need to third staff this o
 out a way to shuffle things around.
 
 m. 70: Solo piano: don't want to break out a middle staff, but need to do something to make this look better.
+
+m. 73: Trombone I/II part combining is doing something not quite right in the last eighth note. The trombones
+are playing b and bes respectively, but the combination looks like it's only b. The second eighth note is
+better; two accidentals. And the flip between chord and apart voicing looks awkward since it reverses the
+note positions in m. 74. Haven't had much luck finding a good compromise here.
