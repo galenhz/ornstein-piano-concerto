@@ -623,16 +623,59 @@ solo_lower_II_AM = \relative c, {
 	\time 7/4
 	s1*7/4
 	s1 \clef bass <fis a e'>4.~ <d fis a e'>4.
+	\clef treble
+}
+
+%%% Section AN = mm. 88-91 (Rehearsal 48)
+
+solo_upper_II_AN = \relative c' {
+	\tempo "Mosso"
+	\mark #48
+	\time 4/4
+	\override TupletBracket.bracket-visibility = ##t
+	\override TupletBracket.positions = #'(-4 . -4)
+	\tupletDown
+	\repeat unfold 2 {
+		\tuplet 6/4 4 { \change Staff = "solo_lower" r4 <d d'>16 \change Staff = "solo_upper" <d' cis' d>
+			\change Staff = "solo_lower" <fis, fis'> \change Staff = "solo_upper" <g' fis' g>
+			\change Staff = "solo_lower" <d, d'> \change Staff = "solo_upper" <d' cis' d>
+			\change Staff = "solo_lower" <gis, gis'> \change Staff = "solo_upper" <a' gis' a>
+			\change Staff = "solo_lower" <d,, d'> \change Staff = "solo_upper" <d' cis' d>
+			\change Staff = "solo_lower" <fis, fis'> \change Staff = "solo_upper" <g' fis' g>
+			\change Staff = "solo_lower" <d, d'> \change Staff = "solo_upper" <d' cis' d>
+			\change Staff = "solo_lower" <gis, gis'> \change Staff = "solo_upper" <a' gis' a>
+			\change Staff = "solo_lower" <fis, fis'> \change Staff = "solo_upper" <g' fis' g>
+			\change Staff = "solo_lower" <d, d'> \change Staff = "solo_upper" <d' cis' d>
+		}
+		R1
+	}
+	\tupletNeutral
+	\revert TupletBracket.positions
+	\revert TupletBracket.bracket-visibility
+}
+
+solo_dynamics_II_AN = {
+	s1*4
+}
+
+solo_lower_II_AN = {
+	\time 4/4
+	% Fix an issue where the bracket goes on the wrong staff, by having the two staffs swap responsibility for the opening r4.
+	\repeat unfold 2 {
+		\change Staff = "solo_upper" r4 \change Staff = "solo_lower" s2.
+		R1
+	}
+	\clef bass
 }
 
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
 		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK \solo_upper_II_AL
-		\solo_upper_II_AM }
+		\solo_upper_II_AM \solo_upper_II_AN }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
 		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ
-		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM }
+		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM \solo_dynamics_II_AN }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
 		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK \solo_lower_II_AL
-		\solo_lower_II_AM }
+		\solo_lower_II_AM \solo_lower_II_AN }

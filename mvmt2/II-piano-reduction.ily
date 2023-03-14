@@ -807,14 +807,59 @@ redux_lower_II_AM = \relative c' {
 	R1*7/4*2
 }
 
+%%% Section AN = mm. 88-91 (Rehearsal 48)
+
+redux_upper_II_AN = \relative c'' {
+	\tempo "Mosso"
+	\mark #48
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				gis16 a8.~ a2.
+				des16 ees8.~ ees2.
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 2 {
+				<a,, d f>1
+				<des f bes>
+			}
+		}
+	>>
+}
+
+redux_dynamics_II_AN = {
+	s1*4
+}
+
+redux_lower_II_AN = \relative c, {
+	\time 4/4
+	\repeat unfold 2 {
+		<d a' f'>1
+		<<
+			\new Voice {
+				\voiceOne
+				<f f'>2 <ees ees'>2
+			}
+			\new Voice {
+				\voiceTwo
+				bes'1
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
 		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK \redux_upper_II_AL
-		\redux_upper_II_AM }
+		\redux_upper_II_AM \redux_upper_II_AN }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
 		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI \redux_dynamics_II_AK
-		\redux_dynamics_II_AL \redux_dynamics_II_AM }
+		\redux_dynamics_II_AL \redux_dynamics_II_AM \redux_dynamics_II_AN }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
 		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK \redux_lower_II_AL
-		\redux_lower_II_AM }
+		\redux_lower_II_AM \redux_lower_II_AN }

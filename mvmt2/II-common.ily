@@ -41,3 +41,4 @@ NULL_II_AJ = { R2.*2 \mark #44 R2.*5 \time 8/8 R1*3 }
 NULL_II_AK = { \mark #45 \time 5/8 R1*5/8*4 \time 6/8 R2.*2 }
 NULL_II_AL = { \tempo "Piu mosso" \time 5/4 R1*5/4 \time 6/8 R2. \mark #46 \time 5/4 R1*5/4 \time 5/8 R1*5/8 \time 5/4 R1*5/4 \time 3/4 R2. \time 5/4 R1*5/4 }
 NULL_II_AM = { R1*5/4 \time 6/8 R2. \time 5/4 R1*5/4 \time 5/8 R1*5/8 \time 5/4 R1*5/4 \mark #47 \time 3/4 R2. \time 5/4 R1*5/4 \time 7/4 R1*7/4*2 }
+NULL_II_AN = { \tempo "Mosso" \mark #48 \time 4/4 R1*4 }
