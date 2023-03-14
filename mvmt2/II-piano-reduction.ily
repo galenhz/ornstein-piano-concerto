@@ -759,7 +759,7 @@ redux_upper_II_AM = \relative c' {
 	\time 3/4
 	<fis, a c f>4 <fis a c d> <fis a c f>
 	\time 5/4
-	<a c fis g>1~ q4
+	<a c f gis>1~ q4
 	\time 7/4
 	R1*7/4*2
 }
