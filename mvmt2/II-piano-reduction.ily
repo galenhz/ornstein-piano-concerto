@@ -604,9 +604,11 @@ redux_upper_II_AJ = \relative c' {
 	<<
 		\new Voice {
 			\voiceOne
+			\autoBeamOff
 			a'8 fis4 a8 bes a4 fis8~
 			fis1
 			a8 fis4 a8 bes a4 fis8
+			\autoBeamOn
 		}
 		\new Voice {
 			\voiceTwo
@@ -741,12 +743,78 @@ redux_lower_II_AL = \relative c {
 	>>
 }
 
+%%% Section AM = mm. 79-87 (Rehearsal ~47)
+
+redux_upper_II_AM = \relative c' {
+	<cis fis>1~ q4~
+	\time 6/8
+	q8 <cis e> <cis fis> <cis ees fis b> <cis fis> <cis e>
+	\time 5/4
+	<cis fis>1~ q4~
+	\time 5/8
+	q8[ <g bes cis> <bes cis e> <bes cis e g> <bes cis e a>]
+	\time 5/4
+	<cis fis>1~ q4
+	\mark #47
+	\time 3/4
+	<fis, a c f>4 <fis a c d> <fis a c f>
+	\time 5/4
+	<a c fis g>1~ q4
+	\time 7/4
+	R1*7/4*2
+}
+
+redux_dynamics_II_AM = {
+	s1*5/4 s2. s1*5/4 s1*5/8 s1*5/4 s2. s1*5/4 s1*7/4*2
+}
+
+redux_lower_II_AM = \relative c' {
+	<<
+		\new Voice {
+			\voiceOne
+			\autoBeamOff
+			\crossStaff {
+				<g bes>1~ q4~
+				\time 6/8
+				q8 q q s8 q q
+				\time 5/4
+				q1~ q4~
+				\time 5/8
+				q8 q s4.
+				\time 5/4
+				q1~ q4
+			}
+			\autoBeamOn
+		}
+		\new Voice {
+			\voiceTwo
+			a,1~ a4~
+			\time 6/8
+			a8 ees a ees a ees
+			\time 5/4
+			a1~ a4~
+			\time 5/8
+			a8 ees a ees a
+			\time 5/4
+			ees1~ ees4
+		}
+	>>
+	\time 3/4
+	a4 ees a
+	\time 5/4
+	ees1~ ees4
+	\time 7/4
+	R1*7/4*2
+}
+
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
-		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK \redux_upper_II_AL }
+		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK \redux_upper_II_AL
+		\redux_upper_II_AM }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
 		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI \redux_dynamics_II_AK
-		\redux_dynamics_II_AL }
+		\redux_dynamics_II_AL \redux_dynamics_II_AM }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
-		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK \redux_lower_II_AL }
+		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK \redux_lower_II_AL
+		\redux_lower_II_AM }

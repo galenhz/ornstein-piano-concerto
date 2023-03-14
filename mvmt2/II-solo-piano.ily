@@ -550,12 +550,89 @@ solo_lower_II_AL = {
 	r4 s1
 }
 
+%%% Section AM = mm. 79-87 (Rehearsal ~47)
+
+solo_upper_II_AM_figure = \relative c' {
+	\override TupletBracket.bracket-visibility = ##t
+	\override TupletBracket.positions = #'(-6 . -6)
+	\tupletDown
+	\tuplet 6/4 4 {
+		\repeat unfold 3 { \change Staff = "solo_lower" <d ees d'>16 \change Staff = "solo_upper" <ees' d' ees> }
+		\repeat unfold 3 { \change Staff = "solo_lower" <cis, d cis'>16 \change Staff = "solo_upper" <d' cis' d> }
+		\repeat unfold 3 { \change Staff = "solo_lower" <c, des c'>16 \change Staff = "solo_upper" <des' c' des> }
+		\repeat unfold 3 { \change Staff = "solo_lower" <a, bes a'>16 \change Staff = "solo_upper" <bes' a' bes> }
+	}
+	\tupletNeutral
+	\revert TupletBracket.positions
+	\revert TupletBracket.bracket-visibility
+}
+
+solo_upper_II_AM = \relative c' {
+	r4 \solo_upper_II_AM_figure
+	\time 6/8
+	R2.
+	\time 5/4
+	r4 \solo_upper_II_AM_figure
+	\time 5/8
+	R1*5/8
+	\time 5/4
+	r4 \solo_upper_II_AM_figure
+	\mark #47
+	\time 3/4
+	R2.
+	\time 5/4
+	r4 \solo_upper_II_AM_figure
+	\time 7/4
+	\override TupletBracket.bracket-visibility = ##t
+	\override TupletBracket.positions = #'(-6 . -6)
+	\tupletDown
+	\tuplet 6/4 4 {
+		\repeat unfold 3 { \change Staff = "solo_lower" <a bes a'>16 \change Staff = "solo_upper" <g' aes> }
+			\repeat unfold 2 {
+				\repeat unfold 3 { \change Staff = "solo_lower" <a, bes a'>16 \change Staff = "solo_upper" <g' aes> }
+				\repeat unfold 3 { \change Staff = "solo_lower" <a, bes a'>16 \change Staff = "solo_upper" <fis' g aes> }
+				\repeat unfold 3 { \change Staff = "solo_lower" <a, bes a'>16 \change Staff = "solo_upper" <f' g aes> }
+			}
+		\repeat unfold 6 { \change Staff = "solo_lower" <a, bes a'>16 \change Staff = "solo_upper" <d ees> }
+			\repeat unfold 6 { \change Staff = "solo_lower" <a bes a'>16 \change Staff = "solo_upper" <g aes d ees> }
+	}
+	\tupletNeutral
+	\revert TupletBracket.positions
+	\revert TupletBracket.bracket-visibility
+		<g aes d ees>16[ q8 q q16~] q16[ q8 q8 q16]
+}
+
+solo_dynamics_II_AM = {
+	s1*5/4 s2. s1*5/4 s1*5/8 s1*5/4 s2. s1*5/4 s1*7/4 s1 s2.-\markup { \italic "molto rit." }
+}
+
+solo_lower_II_AM = \relative c, {
+	r4 s1
+	\time 6/8
+	R2.
+	\time 5/4
+	r4 s1
+	\time 5/8
+	R1*5/8
+	\time 5/4
+	r4 s1
+	\time 3/4
+	R2.
+	\time 5/4
+	r4 s1
+	\time 7/4
+	s1*7/4
+	s1 \clef bass <fis a e'>4.~ <d fis a e'>4.
+}
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
-		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK \solo_upper_II_AL }
+		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK \solo_upper_II_AL
+		\solo_upper_II_AM }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
 		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ
-		\solo_dynamics_II_AK \solo_dynamics_II_AL }
+		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
-		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK \solo_lower_II_AL }
+		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK \solo_lower_II_AL
+		\solo_lower_II_AM }
