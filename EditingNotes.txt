@@ -826,3 +826,10 @@ m. 64: Flute II part has cis in place of des in the score.
 
 m. 70: Every string part has a p dynamic except Violin I. Adding. #DYNAMICS
 (II-orch-09-violins-viola)
+
+m. 78 and 85: Cellos/Basses missing the -^ that trombones (and later horns) have. These aren't in the
+score, unlike the 3 -> on the 3/4 bars preceding. #UNDECIDED
+(II-orch-10-cello-bass)
+
+m. 79: Trombones are ff in score, fff in parts. Marking to match horns which are also fff. #DYNAMICS
+(II-orch-07-trombones-tuba)

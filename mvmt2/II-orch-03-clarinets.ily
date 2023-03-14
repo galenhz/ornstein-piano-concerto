@@ -452,17 +452,52 @@ Clarinet_IV_mvmt_II_AK = \transpose c' bes \relative c' {
 %%% Section AL = mm. 72-78 (Rehearsal ~46)
 %%% Tacet
 
+%%% Section AM = mm. 79-87 (Rehearsal ~47)
+%%% Tacet, cues only
+
+Clarinet_I_cues_mvmt_II_AM = \relative c {
+	R1*5/4
+	\time 6/8
+	R2.
+	\time 5/4
+	R1*5/4
+	\time 5/8
+	R1*5/8
+	\time 5/4
+	R1*5/4
+	\mark #47
+	\time 3/4
+	\tag #'Score { R2. \time 5/4 R1*5/4 }
+	\tag #'Part <<
+		\new CueVoice {
+			\cueClef bass
+			a4^"III Tbn. + Vc." ees4 a
+			\time 5/4
+			ees1~ ees4
+			\cueClefUnset
+		}
+		\new Voice {
+			\voiceOne
+			R2.
+			\time 5/4
+			R1*5/4
+		}
+	>>
+	\time 7/4
+	R1*7/4*2
+}
+
 %%% Final assembly
 
 Clarinet_I_mvmt_II = { \Clarinet_I_mvmt_II_AA \Clarinet_I_II_mvmt_II_AB \Clarinet_I_mvmt_II_AC \NULL_II_AD \Clarinet_I_mvmt_II_AE
 		\Clarinet_all_cues_mvmt_II_AF \Clarinet_I_mvmt_II_AG \NULL_II_AH \Clarinet_I_III_mvmt_II_AI \Clarinet_I_mvmt_II_AJ
-		\Clarinet_I_mvmt_II_AK \NULL_II_AL }
+		\Clarinet_I_mvmt_II_AK \NULL_II_AL \Clarinet_I_cues_mvmt_II_AM }
 Clarinet_II_mvmt_II = { \Clarinet_II_mvmt_II_AA \Clarinet_I_II_mvmt_II_AB \Clarinet_II_mvmt_II_AC \NULL_II_AD \Clarinet_II_mvmt_II_AE
 		\Clarinet_all_cues_mvmt_II_AF \Clarinet_II_mvmt_II_AG \NULL_II_AH \Clarinet_II_IV_mvmt_II_AI \Clarinet_II_mvmt_II_AJ
-		\Clarinet_II_mvmt_II_AK \NULL_II_AL }
+		\Clarinet_II_mvmt_II_AK \NULL_II_AL \NULL_II_AM }
 Clarinet_III_mvmt_II = { \NULL_II_AA \NULL_II_AB \Clarinet_III_mvmt_II_AC \NULL_II_AD \Clarinet_III_mvmt_II_AE \Clarinet_all_cues_mvmt_II_AF
-		\Clarinet_III_mvmt_II_AG \NULL_II_AH \Clarinet_I_III_mvmt_II_AI \NULL_II_AJ \Clarinet_III_mvmt_II_AK \NULL_II_AL }
+		\Clarinet_III_mvmt_II_AG \NULL_II_AH \Clarinet_I_III_mvmt_II_AI \NULL_II_AJ \Clarinet_III_mvmt_II_AK \NULL_II_AL \NULL_II_AM }
 Clarinet_IV_mvmt_II = { \NULL_II_AA \NULL_II_AB \Clarinet_IV_cues_mvmt_II_AC \NULL_II_AD \Clarinet_IV_mvmt_II_AE \Clarinet_all_cues_mvmt_II_AF
-		\Clarinet_IV_mvmt_II_AG \NULL_II_AH \Clarinet_II_IV_mvmt_II_AI \NULL_II_AJ \Clarinet_IV_mvmt_II_AK \NULL_II_AL }
+		\Clarinet_IV_mvmt_II_AG \NULL_II_AH \Clarinet_II_IV_mvmt_II_AI \NULL_II_AJ \Clarinet_IV_mvmt_II_AK \NULL_II_AL \NULL_II_AM }
 BassClarinet_mvmt_II = { \BassClarinet_mvmt_II_AA \BassClarinet_mvmt_II_AB \NULL_II_AC \NULL_II_AD \BassClarinet_cues_mvmt_II_AE
-		\BassClarinet_cues_mvmt_II_AF \BassClarinet_mvmt_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL }
+		\BassClarinet_cues_mvmt_II_AF \BassClarinet_mvmt_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM }
