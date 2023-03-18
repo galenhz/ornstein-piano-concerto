@@ -862,14 +862,78 @@ redux_dynamics_II_AO = {
 
 redux_lower_II_AO = \NULL_II_AO_nofermata
 
+%%% Section AP = mm. 100-106 (Rehersal 49)
+
+redux_middle_II_AP = \relative c' {
+	% Can't do a repeat here because RH_mark only appears once.
+	\clef treble
+	r16 fis64 ees d des c4~ c16 b64 aes g ges f4
+	\clef bass
+	r32 <b, b'>64^\RH_mark \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>
+		<f f'>32[ <b b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>]
+		<f f'>32[ <b b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>]
+		<f f'>8 r4
+	\clef treble
+	r16 fis''64 ees d des c4~ c16 b64 aes g ges f4
+	\clef bass
+	r32 <b, b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>
+		<f f'>32[ <b b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>]
+		<f f'>32[ <b b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>]
+		<f f'>8 r4
+	\repeat unfold 2 {
+		r32 <b b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>
+			<f f'>32[ <b b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>]
+			<f f'>32[ <b b'>64 \beamCutR q \beamCutL <e e'> <bes bes'> <a a'> <aes aes'>]
+			<f f'>8 r4
+	}
+}
+
+redux_upper_II_AP = \relative c' {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	r4. r4. r8 <f f'>8.. <fis' fis'>32
+	\time 6/8
+	\break
+	<<
+		\new Voice {
+			<e e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+			<f f'>4. r8 <f f'>8.. <fis' fis'>32
+			<e e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+			\repeat unfold 2 {
+				<f f'>4. \tuplet 8/6 { r16 <d d'> <gis gis'> <cis cis'> <fis fis'> <c c'> <g g'> <fis fis'> }
+			}
+			<f f'>4. r4.
+		}
+		\new Staff = "redux_middle" \with { alignAboveContext = "redux_lower" } { \accidentalStyle forget \redux_middle_II_AP }
+	>>
+}
+
+redux_dynamics_II_AP = {
+	s1*9/8 s2.*6
+}
+
+redux_lower_II_AP = \relative c, {
+	\time 9/8
+	r4. r4. r8 <f f'>8.. <fis' fis'>32
+	\time 6/8
+	<e e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+	<f f'>4. r8 <f f'>8.. <fis' fis'>32
+	<e e'>4 <ees ees'>8~ q8. <c c'>16 <b b'>32 <aes aes'> <g g'> <ges ges'>
+	\repeat unfold 2 {
+		<f f'>4. \tuplet 8/6 { r16 <d d'> <gis gis'> <cis cis'> <fis fis'> <c c'> <g g'> <fis fis'> }
+	}
+	<f f'>4. r32 <d d'>64[ \beamCutR q \beamCutL <gis gis'> <cis, cis'> q <b b'>] \tuplet 3/2 { <bes bes'>8[ <g g'> <ges ges'>] }
+}
+
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
 		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK \redux_upper_II_AL
-		\redux_upper_II_AM \redux_upper_II_AN \redux_upper_II_AO }
+		\redux_upper_II_AM \redux_upper_II_AN \redux_upper_II_AO \redux_upper_II_AP }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
 		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI \redux_dynamics_II_AK
-		\redux_dynamics_II_AL \redux_dynamics_II_AM \redux_dynamics_II_AN \redux_dynamics_II_AO }
+		\redux_dynamics_II_AL \redux_dynamics_II_AM \redux_dynamics_II_AN \redux_dynamics_II_AO \redux_dynamics_II_AP }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
 		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK \redux_lower_II_AL
-		\redux_lower_II_AM \redux_lower_II_AN \redux_lower_II_AO }
+		\redux_lower_II_AM \redux_lower_II_AN \redux_lower_II_AO \redux_lower_II_AP }

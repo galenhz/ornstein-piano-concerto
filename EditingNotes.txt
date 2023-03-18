@@ -833,3 +833,6 @@ score, unlike the 3 -> on the 3/4 bars preceding. #UNDECIDED
 
 m. 79: Trombones are ff in score, fff in parts. Marking to match horns which are also fff. #DYNAMICS
 (II-orch-07-trombones-tuba)
+
+mm. 101-106: Middle staff breakout for PR, just like in parallel passage earlier.
+(II-piano-reduction)

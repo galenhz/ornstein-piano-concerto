@@ -756,19 +756,53 @@ solo_lower_II_AO = \relative c {
 			\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" d'
 		}
 	}
+	\change Staff = "solo_lower"
 	\bar "||"
 }
 
+%%% Section AP = mm. 100-106 (Rehersal 49)
 
+solo_upper_II_AP = \relative c''' {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	\clef treble
+	\ottava #1 <b c e gis c>8 \ottava #0 <f, b e f> \ottava #1 <b' c e gis c>8
+		q \ottava #0 <f, b e f> \ottava #1 <b' c e gis c>
+		q \ottava #0 <f, b e f> \ottava #1 <b' c e gis c>
+	\time 6/8
+	q \repeat unfold 11 { \ottava #0 <f, b e f> \ottava #1 <b' c e gis c> q }
+		\ottava #0 <f, b e f> r8
+}
+
+solo_dynamics_II_AP = {
+	s1*9/8\p s2.*6
+}
+
+solo_lower_II_AP = \relative c,, {
+	\repeat unfold 7 {
+		<f f'>8 <c'' aes' b c> <f,, f'>
+	}
+	\repeat unfold 3 {
+		<ees ees'> <c'' aes' b c> <ees,, ees'>
+	}
+	\repeat unfold 3 {
+		<d d'> <c'' aes' b c> <d,, d'>
+	}
+	\repeat unfold 2 {
+		<cis cis'> <c'' aes' b c> <cis,, cis'>
+	}
+}
 
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
 		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK \solo_upper_II_AL
-		\solo_upper_II_AM \solo_upper_II_AN \solo_upper_II_AO }
+		\solo_upper_II_AM \solo_upper_II_AN \solo_upper_II_AO \solo_upper_II_AP }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
 		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ
-		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM \solo_dynamics_II_AN \solo_dynamics_II_AO }
+		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM \solo_dynamics_II_AN \solo_dynamics_II_AO
+		\solo_dynamics_II_AP }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
 		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK \solo_lower_II_AL
-		\solo_lower_II_AM \solo_lower_II_AN \solo_lower_II_AO }
+		\solo_lower_II_AM \solo_lower_II_AN \solo_lower_II_AO \solo_lower_II_AP }
