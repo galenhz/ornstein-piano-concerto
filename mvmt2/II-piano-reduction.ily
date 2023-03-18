@@ -852,14 +852,24 @@ redux_lower_II_AN = \relative c, {
 	}
 }
 
+%%% Section AO = mm. 92-99
+
+redux_upper_II_AO = \NULL_II_AO_nofermata
+
+redux_dynamics_II_AO = {
+	s1 s2*3 s2.*4
+}
+
+redux_lower_II_AO = \NULL_II_AO_nofermata
+
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
 		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK \redux_upper_II_AL
-		\redux_upper_II_AM \redux_upper_II_AN }
+		\redux_upper_II_AM \redux_upper_II_AN \redux_upper_II_AO }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
 		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI \redux_dynamics_II_AK
-		\redux_dynamics_II_AL \redux_dynamics_II_AM \redux_dynamics_II_AN }
+		\redux_dynamics_II_AL \redux_dynamics_II_AM \redux_dynamics_II_AN \redux_dynamics_II_AO }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
 		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK \redux_lower_II_AL
-		\redux_lower_II_AM \redux_lower_II_AN }
+		\redux_lower_II_AM \redux_lower_II_AN \redux_lower_II_AO }

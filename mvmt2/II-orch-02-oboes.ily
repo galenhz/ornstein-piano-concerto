@@ -276,15 +276,19 @@ Oboe_I_mvmt_II_AK = \relative c''' {
 %%% Section AN = mm. 88-91 (Rehearsal 48)
 %%% Tacet
 
+%%% Section AO = mm. 92-99
+%%% Tacet
+
+
 %%% Final assembly
 
 Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF
-		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI \NULL_II_AJ \Oboe_I_mvmt_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN }
+		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI \NULL_II_AJ \Oboe_I_mvmt_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
 Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN }
+		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
 Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN }
+		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
 Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN }
+		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
 EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN }
+		\NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }

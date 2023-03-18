@@ -191,10 +191,13 @@ Tympani_II_mvmt_II_AI = \relative c {
 %%% Section AN = mm. 88-91 (Rehearsal 48)
 %%% Tacet
 
+%%% Section AO = mm. 92-99
+%%% Tacet
+
 %%% Final assembly
 
 Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD \NULL_II_AE \Tympani_I_mvmt_II_AF
-		\NULL_II_AG \Typmani_I_mvmt_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN }
+		\NULL_II_AG \Typmani_I_mvmt_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
 Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD \NULL_II_AE
 		\Tympani_II_mvmt_II_AF \NULL_II_AG \Typmani_II_mvmt_II_AH \Tympani_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM
-		\NULL_II_AN }
+		\NULL_II_AN \NULL_II_AO }

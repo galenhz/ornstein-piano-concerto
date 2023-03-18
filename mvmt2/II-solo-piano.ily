@@ -668,14 +668,107 @@ solo_lower_II_AN = {
 	\clef bass
 }
 
+%%% Section AO = mm. 92-99
+
+solo_upper_II_AO = \relative c, {
+	s1
+	\clef bass
+	\time 2/4
+	s2*3
+	\time 3/4
+	s2.
+	\repeat unfold 2 {
+		s4 s4 \tweak TupletNumber.stencil ##f \tuplet 6/4 4 { \tuplet 3/2 { fis16 ees d } s8 s8 }
+	}
+	\repeat unfold 3 {
+		\tweak TupletNumber.stencil ##f \tuplet 6/4 4 { \tuplet 3/2 { fis16 ees d } s8 s8 }
+	}
+	\bar "||"
+	% The fermata code: solo piano is the only one who gets it outside of a Part tag.
+	\tweak self-alignment-X #CENTER
+	\textEndMark \markup {
+		\center-column {
+			"lunga"
+			\musicglyph "scripts.ufermata"
+		}
+	}
+}
+
+solo_dynamics_II_AO = {
+	s1 s2*3 s2.*4
+}
+
+solo_lower_II_AO = \relative c {
+	\override TupletBracket.bracket-visibility = ##t
+	\override TupletBracket.positions = #'(-4 . -4)
+	\tupletDown
+	\tuplet 6/4 4 {
+		<b b'>16 \change Staff = "solo_upper" <c' b' c>
+			\change Staff = "solo_lower" <e, e'> \change Staff = "solo_upper" <f' e' f>
+			\change Staff = "solo_lower" <b,, b'> \change Staff = "solo_upper" <c' b' c>
+			\repeat unfold 3 {
+				\change Staff = "solo_lower" <fis, fis'> \change Staff = "solo_upper" <g' fis' g>
+				\change Staff = "solo_lower" <e, e'> \change Staff = "solo_upper" <f' e' f>
+				\change Staff = "solo_lower" <b,, b'> \change Staff = "solo_upper" <c' b' c>
+			}
+		\time 2/4
+		\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" aes'
+			\change Staff = "solo_lower" <f, cis' a'> \change Staff = "solo_upper" c''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" aes'
+			\change Staff = "solo_lower" <f, cis' a'> \change Staff = "solo_upper" d''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" c''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" aes'
+		\change Staff = "solo_lower" <f, cis' a'> \change Staff = "solo_upper" aes'
+			\change Staff = "solo_lower" <f, cis' a'> \change Staff = "solo_upper" c''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" d''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" ees''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" d''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" c''
+		\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" d''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" c''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" aes'
+			\change Staff = "solo_lower" <f, cis' a'> \change Staff = "solo_upper" c''
+			\change Staff = "solo_lower" <f,, cis' a'> \change Staff = "solo_upper" aes'
+			\change Staff = "solo_lower" <f, cis' a'> \change Staff = "solo_upper" aes'
+		\time 3/4
+		\override TupletBracket.positions = #'(-6 . -6)
+		\change Staff = "solo_lower" c,, \change Staff = "solo_upper" <bes' cis e fis>
+			\change Staff = "solo_lower" fis \change Staff = "solo_upper" <bes cis e fis>
+			\change Staff = "solo_lower" c, \change Staff = "solo_upper" <bes' cis e fis>
+			\repeat unfold 2 {
+				\change Staff = "solo_lower" g \change Staff = "solo_upper" <bes cis e fis>
+				\change Staff = "solo_lower" fis \change Staff = "solo_upper" <bes cis e fis>
+				\change Staff = "solo_lower" c, \change Staff = "solo_upper" <bes' cis e fis>
+			}
+		\override TupletBracket.positions = #'(-8 . -8)
+		\repeat unfold 2 {
+			\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" d'
+				\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" ees'
+				\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" d'
+				\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" fis'
+				\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" ees'
+				\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" d'
+				\change Staff = "solo_lower" r8 <fis, b e>16 \change Staff = "solo_upper" d'
+				\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" d'
+		}
+		\repeat unfold 3 {
+			\change Staff = "solo_lower" r8 <fis, b e>16 \change Staff = "solo_upper" d'
+			\change Staff = "solo_lower" <fis, b e> \change Staff = "solo_upper" d'
+		}
+	}
+	\bar "||"
+}
+
+
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
 		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK \solo_upper_II_AL
-		\solo_upper_II_AM \solo_upper_II_AN }
+		\solo_upper_II_AM \solo_upper_II_AN \solo_upper_II_AO }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
 		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ
-		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM \solo_dynamics_II_AN }
+		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM \solo_dynamics_II_AN \solo_dynamics_II_AO }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
 		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK \solo_lower_II_AL
-		\solo_lower_II_AM \solo_lower_II_AN }
+		\solo_lower_II_AM \solo_lower_II_AN \solo_lower_II_AO }

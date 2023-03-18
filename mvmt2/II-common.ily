@@ -28,6 +28,19 @@
 % AQ = mm. 107-110
 % AR = mm. 111-113 (Rehersal 50)
 
+% For the end of section AO.
+Mvmt_II_Fermata_Lunga_On_Bar = {
+	\tag #'Part {
+		\tweak self-alignment-X #CENTER
+		\textEndMark \markup {
+			\center-column {
+				"lunga"
+				\musicglyph "scripts.ufermata"
+			}
+		}
+	}
+}
+
 NULL_II_AA = { \tempo "Andante" \time 12/8 R1.*6 }
 NULL_II_AB = { \mark #38 \tempo 8 = 69 \time 6/8 R2.*6 }
 NULL_II_AC = { R2. \mark #39 \time 7/8 R1*7/8 \time 6/8 R2. \time 7/8 R1*7/8 \time 9/8 \tag #'Score \grace s8 R1*9/8 }
@@ -42,3 +55,5 @@ NULL_II_AK = { \mark #45 \time 5/8 R1*5/8*4 \time 6/8 R2.*2 }
 NULL_II_AL = { \tempo "Piu mosso" \time 5/4 R1*5/4 \time 6/8 R2. \mark #46 \time 5/4 R1*5/4 \time 5/8 R1*5/8 \time 5/4 R1*5/4 \time 3/4 R2. \time 5/4 R1*5/4 }
 NULL_II_AM = { R1*5/4 \time 6/8 R2. \time 5/4 R1*5/4 \time 5/8 R1*5/8 \time 5/4 R1*5/4 \mark #47 \time 3/4 R2. \time 5/4 R1*5/4 \time 7/4 R1*7/4*2 }
 NULL_II_AN = { \tempo "Mosso" \mark #48 \time 4/4 R1*4 }
+NULL_II_AO = { R1 \time 2/4 R2*3 \time 3/4 R2.*4 \bar "||" \Mvmt_II_Fermata_Lunga_On_Bar }
+NULL_II_AO_nofermata = { R1 \time 2/4 R2*3 \time 3/4 R2.*4 \bar "||" }
