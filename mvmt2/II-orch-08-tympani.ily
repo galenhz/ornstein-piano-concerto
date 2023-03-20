@@ -194,10 +194,38 @@ Tympani_II_mvmt_II_AI = \relative c {
 %%% Section AO = mm. 92-99
 %%% Tacet
 
+%%% Section AP = mm. 100-106 (Rehersal 49)
+
+Tympani_I_mvmt_II_AP = \relative c {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	R1*9/8
+	\time 6/8
+	R2.*2
+	ees4\pp ees8 ees4 ees8
+	ees4 ees8 d4 d8
+	d4 d8 d4 d8
+	cis4 cis8 cis4 cis8
+}
+
+Tympani_II_mvmt_II_AP = \relative c {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	% EDIT: Crossed out in part. Going with that.
+	R1*9/8
+	\time 6/8
+	f4\pp f8 f4 f8
+	f4 f8 f4 f8
+	R2.*4
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD \NULL_II_AE \Tympani_I_mvmt_II_AF
-		\NULL_II_AG \Typmani_I_mvmt_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
+		\NULL_II_AG \Typmani_I_mvmt_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO
+		\Tympani_I_mvmt_II_AP }
 Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD \NULL_II_AE
 		\Tympani_II_mvmt_II_AF \NULL_II_AG \Typmani_II_mvmt_II_AH \Tympani_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM
-		\NULL_II_AN \NULL_II_AO }
+		\NULL_II_AN \NULL_II_AO \Tympani_II_mvmt_II_AP }

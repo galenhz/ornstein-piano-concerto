@@ -58,9 +58,9 @@ Bass_mvmt_II_AB = \relative c, {
 	\tempo 8 = 69
 	\time 6/8
 	f8\ff r8 r8 r4.
-	r16 fis''64(\mf\< ees d des)\! c4\>~ c16\! b64(\> aes g ges)\! f4
-	\repeat unfold 2 { r16 fis'64(\< ees d des)\! c4\>~ c16\! b64(\> aes g ges)\! f4 }
-	\repeat unfold 3 { r16 fis'64(\< ees d des)\! c16 b64(\> aes g ges)\! f4 }
+	r16 fis''64(\pp\< ees d des)\! c4~-> c16 b64(\> aes g ges)\! f4
+	\repeat unfold 2 { r16 fis'64(\< ees d des)\! c4~-> c16 b64(\> aes g ges)\! f4 }
+	\repeat unfold 3 { r16 fis'64([\< ees d des)]\! c16 \beamCutL b64(\> aes g ges)\! f4 }
 }
 
 %%% Section AC = mm. 13-17 (Rehearsal ~39)
@@ -439,14 +439,54 @@ Bass_mvmt_II_AN = \relative c' {
 %%% Section AO = mm. 92-99
 %%% Tacet
 
+%%% Section AP = mm. 100-106 (Rehersal 49)
+
+Cello_mvmt_II_AP = \relative c, {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	r4. r4. r8 f8..\f fis'32
+	\time 6/8
+	e4 ees8~ ees8. \beamCutR c16\> \beamCutL b32( aes g ges)\!
+	f32 b64[\pp \beamCutR b \beamCutL e( bes a aes]
+		f32[) b64 \beamCutR b \beamCutL e( bes a aes]
+		f32[) b64 \beamCutR b \beamCutL e( bes a aes]
+		f8) f8..[\f fis'32]
+	e4 ees8~ ees8. \beamCutR c16\> \beamCutL b32( aes g ges)\!
+	f32 b64[\pp \beamCutR b \beamCutL e( bes a aes]
+		f32[) b64 \beamCutR b \beamCutL e( bes a aes]
+		f32[) b64 \beamCutR b \beamCutL e( bes a aes]
+		f16) r16 r8 r8
+	r32 b64[ \beamCutR b \beamCutL e( bes a aes]
+		f32[) b64 \beamCutR b \beamCutL e( bes a aes]
+		f32[) b64 \beamCutR b \beamCutL e( bes a aes]
+		f16) r16 r8 r8
+	r32 b64[ \beamCutR b \beamCutL e( bes a aes]
+		f32[) b64 \beamCutR b \beamCutL e( bes a aes]
+		f16) r16 r32 d'64[\> \beamCutR d \beamCutL gis( cis, c b]) \tuplet 3/2 { bes8( g ges)\! }
+}
+
+Bass_mvmt_II_AP = \relative c' {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	R1*9/8
+	\time 6/8
+	r16 fis64(\p\< ees d des)\! c4~-> c16 b64(\> aes g ges)\! f4
+	R2.
+	r16 fis'64(\< ees d des)\! c4~-> c16 b64(\> aes g ges)\! f4
+	R2.*2
+	r4. r32 d64[\> \beamCutR d \beamCutL gis( cis, c b]) \tuplet 3/2 { bes8( g ges)\! }
+}
+
 %%% Final assembly
 
 Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC \Cello_mvmt_II_AD \Cello_mvmt_II_AE \Cello_mvmt_II_AF
 		\Cello_mvmt_II_AG \Cello_mvmt_II_AH \Cello_mvmt_II_AI \Cello_mvmt_II_AJ \Cello_Bass_mvmt_II_AK \Cello_Bass_mvmt_II_AL \Cello_mvmt_II_AM
-		\Cello_mvmt_II_AN \NULL_II_AO }
+		\Cello_mvmt_II_AN \NULL_II_AO \Cello_mvmt_II_AP }
 Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI
-		\Cello_divisi_II_mvmt_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO_nofermata }
+		\Cello_divisi_II_mvmt_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO_nofermata \NULL_II_AP }
 
 Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC \Bass_mvmt_II_AD \Bass_mvmt_II_AE \Bass_mvmt_II_AF
 		\Bass_mvmt_II_AG \Bass_mvmt_II_AH \Bass_mvmt_II_AI \Bass_mvmt_II_AJ \Cello_Bass_mvmt_II_AK \Cello_Bass_mvmt_II_AL \NULL_II_AM
-		\Bass_mvmt_II_AN \NULL_II_AO }
+		\Bass_mvmt_II_AN \NULL_II_AO \Bass_mvmt_II_AP }

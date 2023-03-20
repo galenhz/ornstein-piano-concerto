@@ -488,17 +488,45 @@ Trombone_III_mvmt_II_AM = \relative c {
 %%% Section AO = mm. 92-99
 %%% Tacet
 
+%%% Section AP = mm. 100-106 (Rehersal 49)
+
+Trombone_I_mvmt_II_AP = \relative c {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	r4. r4. r8 \clef tenor f8..\f fis'32
+	\time 6/8
+	e4 ees8~ ees8. c16(\> b g)\!
+	f4. r8 f8..\f fis'32
+	e4 ees8~ ees8. c16(\> b g)\!
+	f4. r4.
+	R2.*2
+}
+
+Trombone_III_mvmt_II_AP = \relative c, {
+	\mark #49
+	\tempo "Meno"
+	\time 9/8
+	r4. r4. r8 f8..\f fis'32
+	\time 6/8
+	e4 ees8~ ees8. c16(\> b g)\!
+	f4. r8 f8..\f fis'32
+	e4 ees8~ ees8. c16(\> b g)\!
+	f4. r4.
+	R2.*2
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_II = { \clef bass \NULL_II_AA \Trombone_I_mvmt_II_AB \Trombone_I_mvmt_II_AC \Trombone_I_mvmt_II_AD \Trombone_Tuba_cues_mvmt_II_AE
 		\Trombone_I_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK \Trombone_I_mvmt_II_AL
-		\Trombone_I_mvmt_II_AM \NULL_II_AN \NULL_II_AO }
+		\Trombone_I_mvmt_II_AM \NULL_II_AN \NULL_II_AO \Trombone_I_mvmt_II_AP }
 Trombone_II_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \Trombone_II_mvmt_II_AC \Trombone_II_mvmt_II_AD
 		\Trombone_Tuba_cues_mvmt_II_AE \Trombone_II_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK
-		\Trombone_II_mvmt_II_AL \Trombone_II_mvmt_II_AM \NULL_II_AN \NULL_II_AO }
+		\Trombone_II_mvmt_II_AL \Trombone_II_mvmt_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
 Trombone_III_mvmt_II = { \clef bass \NULL_II_AA \Trombone_III_mvmt_II_AB \Trombone_III_mvmt_II_AC \Trombone_III_cues_mvmt_II_AD
 		\Trombone_Tuba_cues_mvmt_II_AE \Trombone_III_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK
-		\Trombone_III_mvmt_II_AL \Trombone_III_mvmt_II_AM \NULL_II_AN \NULL_II_AO }
+		\Trombone_III_mvmt_II_AL \Trombone_III_mvmt_II_AM \NULL_II_AN \NULL_II_AO \Trombone_III_mvmt_II_AP }
 Tuba_mvmt_II = { \clef bass \NULL_II_AA \Trombone_II_Tuba_cues_mvmt_II_AB \NULL_II_AC \Tuba_mvmt_II_AD \Trombone_Tuba_cues_mvmt_II_AE
 		\Tuba_mvmt_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \Trombone_Tuba_cues_mvmt_II_AK \Tuba_mvmt_II_AL \NULL_II_AM
-		\NULL_II_AN \NULL_II_AO }
+		\NULL_II_AN \NULL_II_AO \NULL_II_AP }

@@ -279,16 +279,47 @@ Oboe_I_mvmt_II_AK = \relative c''' {
 %%% Section AO = mm. 92-99
 %%% Tacet
 
+%%% Section AP = mm. 100-106 (Rehersal 49)
+%%% Tacet, cues only
+
+% Same cues as lower flutes.
+Oboe_I_II_cues_mvmt_II_AP = \relative c'' {
+	\tag #'Score \NULL_II_AP
+	\tag #'Part {
+		\mark #49
+		\tempo "Meno"
+		\time 9/8
+		<<
+			\new CueVoice {
+				r4. r4. r8 f8..^"I Fl." fis'32
+				\time 6/8
+				e4 ees8~ ees8. \beamCutR c16 \beamCutL b32( aes g ges)
+				f4. r8 f8.. fis'32
+				e4 ees8~ ees8. \beamCutR c16 \beamCutL b32( aes g ges)
+				f4. r4.
+			}
+			\new Voice {
+				\voiceTwo
+				R1*9/8
+				\time 6/8
+				R2.*4
+			}
+		>>
+		R2.*2
+	}
+}
 
 %%% Final assembly
 
 Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF
-		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI \NULL_II_AJ \Oboe_I_mvmt_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
+		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI \NULL_II_AJ \Oboe_I_mvmt_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO
+		\Oboe_I_II_cues_mvmt_II_AP }
 Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
+		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO
+		\Oboe_I_II_cues_mvmt_II_AP }
 Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
+		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
 Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
+		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
 EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO }
+		\NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
