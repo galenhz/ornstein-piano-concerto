@@ -845,3 +845,10 @@ mm. 101-106: Middle staff breakout for PR, just like in parallel passage at m.9 
 mm. 105-106: Dynamics are odd for the clarinets/bassoons playing the octuplet figure. Need to come up with a
 rationaliztion. #DYNAMICS #UNDECIDED
 (II-orch-03-clarinets, II-orch-04-bassoons)
+
+mm. 107-110: Solo piano in the score splits a middle staff out; whoever copied the PR compressed it into two.
+Sticking with the PR.
+(II-solo-piano)
+
+m. 110: a-natural and e-flat in PR left hand seem in error, based on score.
+(II-piano-reduction)
