@@ -485,19 +485,22 @@ Flute_all_cues_mvmt_II_AP = \relative c'' {
 	}
 }
 
+%%% Section AQ = mm. 107-110
+%%% Tacet
+
 %%% Final construction
 
 Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ
-		\NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
+		\NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP \NULL_II_AQ }
 Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE \Flute_all_cues_mvmt_II_AF
 		\Flute_I_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \Flute_I_mvmt_II_AJ \Flute_I_mvmt_II_AK \NULL_II_AL \NULL_II_AM
-		\Flute_I_cues_mvmt_II_AN \NULL_II_AO \Flute_I_mvmt_II_AP }
+		\Flute_I_cues_mvmt_II_AN \NULL_II_AO \Flute_I_mvmt_II_AP \NULL_II_AQ }
 Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
 		\Flute_all_cues_mvmt_II_AF \Flute_II_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \Flute_II_mvmt_II_AJ \Flute_II_mvmt_II_AK
-		\NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP }
+		\NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ }
 Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
 		\Flute_all_cues_mvmt_II_AF \Flute_III_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \NULL_II_AJ \Flute_III_mvmt_II_AK \NULL_II_AL
-		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP }
+		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ }
 Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
 		\Flute_all_cues_mvmt_II_AF \Flute_IV_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \NULL_II_AJ \Flute_IV_mvmt_II_AK \NULL_II_AL
-		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP }
+		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ }

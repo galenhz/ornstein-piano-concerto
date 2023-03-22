@@ -309,17 +309,53 @@ Oboe_I_II_cues_mvmt_II_AP = \relative c'' {
 	}
 }
 
+%%% Section AQ = mm. 107-110
+
+Oboe_I_mvmt_II_AQ = \relative c'' {
+	\set Staff.timeSignatureFraction = 4/4
+	\scaleDurations 3/4 {
+		r4 e4~\f e8 ees( c ees)
+		e?2~\< e8 aes4\!\> g8\!
+		e2~ e8 ees( c ees)
+		e?1
+	}
+}
+
+Oboe_II_EnglishHorn_cues_mvmt_II_AQ = \relative c'' {
+	\tag #'Score \NULL_II_AQ
+	\tag #'Part {
+		\set Staff.timeSignatureFraction = 4/4
+		\scaleDurations 3/4 {
+			<<
+				\new CueVoice {
+					r4 e4~^"I Ob." e8 ees( c ees)
+					e?2~ e8 aes4 g8
+					e2~ e8 ees( c ees)
+					e?1
+				}
+				\new Voice {
+					\voiceTwo
+					R1*4
+				}
+			>>
+		}
+	}
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_I_mvmt_II_AF
 		\Oboe_I_mvmt_II_AG \NULL_II_AH \Oboe_I_mvmt_II_AI \NULL_II_AJ \Oboe_I_mvmt_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO
-		\Oboe_I_II_cues_mvmt_II_AP }
+		\Oboe_I_II_cues_mvmt_II_AP \Oboe_I_mvmt_II_AQ }
 Oboe_II_mvmt_II = { \Oboe_I_II_mvmt_II_AA \Oboe_I_II_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_II_mvmt_II_AF
 		\NULL_II_AG \NULL_II_AH \Oboe_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO
-		\Oboe_I_II_cues_mvmt_II_AP }
+		\Oboe_I_II_cues_mvmt_II_AP \Oboe_II_EnglishHorn_cues_mvmt_II_AQ }
 Oboe_III_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_III_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_III_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
+		\NULL_II_AG \NULL_II_AH \Oboe_III_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP
+		\NULL_II_AQ }
 Oboe_IV_mvmt_II = { \Oboe_III_IV_cues_mvmt_II_AA \Oboe_IV_mvmt_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \Oboe_IV_cues_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
+		\NULL_II_AG \NULL_II_AH \Oboe_IV_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP
+		\NULL_II_AQ }
 EnglishHorn_mvmt_II = { \EnglishHorn_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \Oboes_All_cues_mvmt_II_AE \EnglishHorn_mvmt_II_AF
-		\NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP }
+		\NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP
+		\Oboe_II_EnglishHorn_cues_mvmt_II_AQ }

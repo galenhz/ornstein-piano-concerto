@@ -850,5 +850,21 @@ mm. 107-110: Solo piano in the score splits a middle staff out; whoever copied t
 Sticking with the PR.
 (II-solo-piano)
 
+mm. 107-110: The breakout of horns/oboe II into 4/4, in the score, is limited to those parts only. The dotted quarters
+in lower strings are left in 6/8 without a metric transition, although the PR converts everything (including those
+parts) to 4/4 to keep things simple. In the parts, most of the instruments doing rests during this period wrote in
+the transition to 4/4; it looks like the conductor switched to 4/4 for the benefit of the orchestra, so this
+would match what they saw. The lower strings and tympani just plow through in 6/8 as though nothing interesting is
+happening elsewhere.
+This leads to an obvious question: why not just go 4/4 for everyone except solo piano, like the PR? Perhaps a courtesy
+tempo marking [dotted quarter = half note] to make things clear. This would make it more like the 12/8 section in m.55
+of the first movement.
+(II-orch-*)
+
+mm. 107-110: Horn VI should be a simple tranposistion of Horn I, but it isn't because it uses different accidents: b-flat
+instead of a-sharp, for example. It might make sense to adjust Horn I to use the same accidentals as VI, and adjust Horn II
+similarly so the intervals flow in parallel as you'd expect. #UNDECIDED
+(II-orch-06-horns)
+
 m. 110: a-natural and e-flat in PR left hand seem in error, based on score.
 (II-piano-reduction)

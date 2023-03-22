@@ -58,3 +58,5 @@ NULL_II_AN = { \tempo "Mosso" \mark #48 \time 4/4 R1*4 }
 NULL_II_AO = { R1 \time 2/4 R2*3 \time 3/4 R2.*4 \bar "||" \Mvmt_II_Fermata_Lunga_On_Bar }
 NULL_II_AO_nofermata = { R1 \time 2/4 R2*3 \time 3/4 R2.*4 \bar "||" }
 NULL_II_AP = { \mark #49 \tempo "Meno" \time 9/8 R1*9/8 \time 6/8 R2.*6 }
+NULL_II_AQ = { \tempo "Meno" \set Staff.timeSignatureFraction = 4/4 R2.*4 }
+NULL_II_AR = { \time 3/4 R2.*3 }

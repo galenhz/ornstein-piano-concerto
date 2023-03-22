@@ -479,14 +479,36 @@ Bass_mvmt_II_AP = \relative c' {
 	r4. r32 d64[\> \beamCutR d \beamCutL gis( cis, c b]) \tuplet 3/2 { bes8( g ges)\! }
 }
 
+%%% Section AQ = mm. 107-110
+
+Cello_mvmt_II_AQ = \relative c {
+	\set Staff.timeSignatureFraction = 4/4
+	\scaleDurations 3/4 {
+		c2\pp gis
+		c1
+		c2 gis
+		c1
+	}
+}
+
+Bass_mvmt_II_AQ = \relative c {
+	\set Staff.timeSignatureFraction = 4/4
+	\scaleDurations 3/4 {
+		f2\pp cis
+		f1
+		f2 cis
+		f1
+	}
+}
+
 %%% Final assembly
 
 Cello_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Cello_mvmt_II_AB \Cello_mvmt_II_AC \Cello_mvmt_II_AD \Cello_mvmt_II_AE \Cello_mvmt_II_AF
 		\Cello_mvmt_II_AG \Cello_mvmt_II_AH \Cello_mvmt_II_AI \Cello_mvmt_II_AJ \Cello_Bass_mvmt_II_AK \Cello_Bass_mvmt_II_AL \Cello_mvmt_II_AM
-		\Cello_mvmt_II_AN \NULL_II_AO \Cello_mvmt_II_AP }
+		\Cello_mvmt_II_AN \NULL_II_AO \Cello_mvmt_II_AP \Cello_mvmt_II_AQ }
 Cello_divisi_II_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI
-		\Cello_divisi_II_mvmt_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO_nofermata \NULL_II_AP }
+		\Cello_divisi_II_mvmt_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO_nofermata \NULL_II_AP \NULL_II_AQ }
 
 Bass_mvmt_II = { \clef bass \Cello_Bass_cues_mvmt_II_AA \Bass_mvmt_II_AB \Bass_mvmt_II_AC \Bass_mvmt_II_AD \Bass_mvmt_II_AE \Bass_mvmt_II_AF
 		\Bass_mvmt_II_AG \Bass_mvmt_II_AH \Bass_mvmt_II_AI \Bass_mvmt_II_AJ \Cello_Bass_mvmt_II_AK \Cello_Bass_mvmt_II_AL \NULL_II_AM
-		\Bass_mvmt_II_AN \NULL_II_AO \Bass_mvmt_II_AP }
+		\Bass_mvmt_II_AN \NULL_II_AO \Bass_mvmt_II_AP \Bass_mvmt_II_AQ }

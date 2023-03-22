@@ -221,11 +221,31 @@ Tympani_II_mvmt_II_AP = \relative c {
 	R2.*4
 }
 
+%%% Section AQ = mm. 107-110
+
+Tympani_I_mvmt_II_AQ = \relative c {
+	\set Staff.timeSignatureFraction = 4/4
+	\scaleDurations 3/4 {
+		r2 cis4\pp r4
+		R1
+		r2 cis4 r4
+		R1
+	}
+}
+
+Tympani_II_mvmt_II_AQ = \relative c, {
+	\set Staff.timeSignatureFraction = 4/4
+	\scaleDurations 3/4 {
+		f4\pp r4 r2
+		\repeat unfold 3 { f4 r4 r2 }
+	}
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_II = { \clef bass \NULL_II_AA \NULL_II_AB \Tympani_I_mvmt_II_AC \Tympani_I_mvmt_II_AD \NULL_II_AE \Tympani_I_mvmt_II_AF
 		\NULL_II_AG \Typmani_I_mvmt_II_AH \NULL_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO
-		\Tympani_I_mvmt_II_AP }
+		\Tympani_I_mvmt_II_AP \Tympani_I_mvmt_II_AQ }
 Tympani_II_mvmt_II = { \clef bass \Tympani_II_mvmt_II_AA \Typmani_II_mvmt_II_AB \Tympani_II_mvmt_II_AC \Tympani_II_mvmt_II_AD \NULL_II_AE
 		\Tympani_II_mvmt_II_AF \NULL_II_AG \Typmani_II_mvmt_II_AH \Tympani_II_mvmt_II_AI \NULL_II_AJ \NULL_II_AK \NULL_II_AL \NULL_II_AM
-		\NULL_II_AN \NULL_II_AO \Tympani_II_mvmt_II_AP }
+		\NULL_II_AN \NULL_II_AO \Tympani_II_mvmt_II_AP \Tympani_II_mvmt_II_AQ }
