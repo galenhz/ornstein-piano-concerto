@@ -119,3 +119,6 @@ better; two accidentals. And the flip between chord and apart voicing looks awkw
 note positions in m. 74. Haven't had much luck finding a good compromise here.
 
 m. 110: Piano reduction middle staff ends kind of awkwardly. May not be much to do about that, though.
+
+m. 111: Solo piano has to break up the septuplet since I can't tie across voices. There has got to be a
+way I can make it look like the PR.

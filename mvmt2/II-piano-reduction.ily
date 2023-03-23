@@ -936,6 +936,7 @@ redux_upper_II_AQ = \relative c' {
 		<e aes c e>2~ q8 <ees g b ees> <c e aes c> <ees g b ees>
 		<e aes c e>1
 	}
+	\unset Staff.timeSignatureFraction
 }
 
 redux_dynamics_II_AQ = {
@@ -963,17 +964,52 @@ redux_lower_II_AQ = \relative c {
 			}
 		>>
 	}
+	\unset Staff.timeSignatureFraction
+}
+
+%%% Section AR = mm. 111-113 (Rehersal 50)
+
+redux_upper_II_AR = \relative c'' {
+	\mark #50
+	\time 3/4
+	\repeat tremolo 12 { <bis cis e>32 <fis g> }
+	<f' aes b c f>2.~
+	q2.
+	\bar "|."
+}
+
+redux_dynamics_II_AR = {
+	s2.*3
+}
+
+redux_lower_II_AR = \relative c' {
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat tremolo 12 { <g bes>32 d' }
+			<c, f aes b c>2.~
+			q2.
+		}
+		\new Voice {
+			\voiceTwo
+			<e, d'>2.
+			<f, f'>2.~
+			q2.
+		}
+	>>
+	\bar "|."
 }
 
 %%% Final assembly
 
 redux_upper_II = { \redux_upper_II_AA \redux_upper_II_AB \redux_upper_II_AC \redux_upper_II_AD \redux_upper_II_AE \redux_upper_II_AF
 		\redux_upper_II_AG \redux_upper_II_AH \redux_upper_II_AI \redux_upper_II_AJ  \redux_upper_II_AK \redux_upper_II_AL
-		\redux_upper_II_AM \redux_upper_II_AN \redux_upper_II_AO \redux_upper_II_AP \redux_upper_II_AQ }
+		\redux_upper_II_AM \redux_upper_II_AN \redux_upper_II_AO \redux_upper_II_AP \redux_upper_II_AQ \redux_upper_II_AR }
 redux_dynamics_II = { \redux_dynamics_II_AA \redux_dynamics_II_AB \redux_dynamics_II_AC \redux_dynamics_II_AD \redux_dynamics_II_AE
 		\redux_dynamics_II_AF \redux_dynamics_II_AG \redux_dynamics_II_AH \redux_dynamics_II_AI \redux_dynamics_II_AK
 		\redux_dynamics_II_AL \redux_dynamics_II_AM \redux_dynamics_II_AN \redux_dynamics_II_AO \redux_dynamics_II_AP
-		\redux_dynamics_II_AQ }
+		\redux_dynamics_II_AQ \redux_dynamics_II_AR }
 redux_lower_II = { \redux_lower_II_AA \redux_lower_II_AB \redux_lower_II_AC \redux_lower_II_AD \redux_lower_II_AE \redux_lower_II_AF
 		\redux_lower_II_AG \redux_lower_II_AH \redux_lower_II_AI \redux_lower_II_AJ \redux_lower_II_AK \redux_lower_II_AL
-		\redux_lower_II_AM \redux_lower_II_AN \redux_lower_II_AO \redux_lower_II_AP \redux_lower_II_AQ }
+		\redux_lower_II_AM \redux_lower_II_AN \redux_lower_II_AO \redux_lower_II_AP \redux_lower_II_AQ \redux_lower_II_AR }

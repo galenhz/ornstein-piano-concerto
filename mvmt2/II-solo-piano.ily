@@ -840,15 +840,66 @@ solo_lower_II_AQ = \relative c'' {
 	>>
 }
 
+%%% Section AR = mm. 111-113 (Rehersal 50)
+
+solo_upper_II_AR = \relative c''' {
+	\mark #50
+	\time 3/4
+	% FIXME: Not being able to do ties across voices forces me to split up
+	%        the septuplet. Technically this works, but I'd prefer to make it
+	%        look like the PR .
+	<<
+		\new Voice {
+			\voiceOne
+			\tweak TupletNumber.stencil ##f \tuplet 7/4 { s4. cis16 } b2
+		}
+		\new Voice {
+			\voiceTwo
+			\set tieWaitForNote = ##t
+			\tuplet 7/4 { s8. gis,16~ c~ e~ cis'~ } <gis, c e cis'>2
+			\unset tieWaitForNote
+		}
+	>>
+	s4 \ottava #1 <fis'' f' fis>2~
+	q2.
+	\bar "|."
+}
+
+solo_dynamics_II_AR = {
+	s2.*3
+}
+
+solo_lower_II_AR = \relative c {
+	\time 3/4
+	\clef bass
+	<<
+		\new Voice {
+			\voiceOne
+			\set tieWaitForNote = ##t
+			\tuplet 7/4 { bes16~ gis'~ d'~ s4 } <bes, gis' d'>2
+			\unset tieWaitForNote
+		}
+		\new Voice {
+			\voiceTwo
+			r4 r4 cis,
+		}
+	>>
+	\override TupletBracket.positions = #'(-8.5 . 6)
+	\tuplet 3/2 { f,8 c''32[ aes' c \change Staff = "solo_upper" f gis b e^\LH_mark gis] }
+		\change Staff = "solo_lower" \clef treble <e f>2~^\LH_mark
+		q2.
+	\bar "|."
+}
+
 %%% Final assembly
 
 solo_upper_II = { \solo_upper_II_AA \solo_upper_II_AB \solo_upper_II_AC \solo_upper_II_AD \solo_upper_II_AE \solo_upper_II_AF
 		\solo_upper_II_AG \solo_upper_II_AH \solo_upper_II_AI \solo_upper_II_AJ \solo_upper_II_AK \solo_upper_II_AL
-		\solo_upper_II_AM \solo_upper_II_AN \solo_upper_II_AO \solo_upper_II_AP \solo_upper_II_AQ }
+		\solo_upper_II_AM \solo_upper_II_AN \solo_upper_II_AO \solo_upper_II_AP \solo_upper_II_AQ \solo_upper_II_AR }
 solo_dynamics_II = { \solo_dynamics_II_AA \solo_dynamics_II_AB \solo_dynamics_II_AC \solo_dynamics_II_AD \solo_dynamics_II_AE
 		\solo_dynamics_II_AF \solo_dynamics_II_AG \solo_dynamics_II_AH \solo_dynamics_II_AI \solo_dynamics_II_AJ
 		\solo_dynamics_II_AK \solo_dynamics_II_AL \solo_dynamics_II_AM \solo_dynamics_II_AN \solo_dynamics_II_AO
-		\solo_dynamics_II_AP \solo_dynamics_II_AQ }
+		\solo_dynamics_II_AP \solo_dynamics_II_AQ \solo_dynamics_II_AR }
 solo_lower_II = { \solo_lower_II_AA \solo_lower_II_AB \solo_lower_II_AC \solo_lower_II_AD \solo_lower_II_AE \solo_lower_II_AF
 		\solo_lower_II_AG \solo_lower_II_AH \solo_lower_II_AI \solo_lower_II_AJ \solo_lower_II_AK \solo_lower_II_AL
-		\solo_lower_II_AM \solo_lower_II_AN \solo_lower_II_AO \solo_lower_II_AP \solo_lower_II_AQ }
+		\solo_lower_II_AM \solo_lower_II_AN \solo_lower_II_AO \solo_lower_II_AP \solo_lower_II_AQ \solo_lower_II_AR }
