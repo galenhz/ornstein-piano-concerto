@@ -868,3 +868,10 @@ similarly so the intervals flow in parallel as you'd expect. #UNDECIDED
 
 m. 110: a-natural and e-flat in PR left hand seem in error, based on score.
 (II-piano-reduction)
+
+m. 111: Flute II has it's b in this bar crossed out and replaced with rests. Score still has the b. Leaving it in.
+(II-orch-01-flutes)
+
+m. 112: Flute I part has been changed from g to f. Unlike some other changes, the score doesn't have this corrected.
+Part matches best what I hear in recording, going with that. (Flute III has bis in score, c in part.)
+(II-orch-01-flutes)

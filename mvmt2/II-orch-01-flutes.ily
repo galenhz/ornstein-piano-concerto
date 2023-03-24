@@ -488,19 +488,59 @@ Flute_all_cues_mvmt_II_AP = \relative c'' {
 %%% Section AQ = mm. 107-110
 %%% Tacet
 
+%%% Section AR = mm. 111-113 (Rehersal 50)
+
+Flute_I_mvmt_II_AR = \relative c'' {
+	\mark #50
+	\time 3/4
+	cis2.\pp
+	f'2.~\pp
+	f2.
+	\bar "|."
+}
+
+% EDIT: the part has measure 111 crossed out and replaced with rests. Going with score.
+Flute_II_mvmt_II_AR = \relative c'' {
+	\mark #50
+	\time 3/4
+	b2.\pp
+	gis'2.~\pp
+	gis2.
+	\bar "|."
+}
+
+Flute_III_mvmt_II_AR = \relative c''' {
+	\mark #50
+	\time 3/4
+	R2.
+	% EDIT: bis in score, c in part.
+	\tag #'Score c2.~ \tag #'Part c2.~\pp
+	c2.
+	\bar "|."
+}
+
+Flute_IV_mvmt_II_AR = \relative c'' {
+	\mark #50
+	\time 3/4
+	R2.
+	gis2.~\pp
+	gis2.
+	\bar "|."
+}
+
 %%% Final construction
 
 Picc_mvmt_II = { \Picc_mvmt_II_AA \NULL_II_AB \NULL_II_AC \NULL_II_AD \NULL_II_AE \NULL_II_AF \NULL_II_AG \NULL_II_AH \NULL_II_AI \NULL_II_AJ
-		\NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP \NULL_II_AQ }
+		\NULL_II_AK \NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \NULL_II_AP \NULL_II_AQ \NULL_II_AR }
 Flute_I_mvmt_II = { \Flute_I_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_I_mvmt_II_AC \Flute_I_mvmt_II_AD \Flute_I_mvmt_II_AE \Flute_all_cues_mvmt_II_AF
 		\Flute_I_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \Flute_I_mvmt_II_AJ \Flute_I_mvmt_II_AK \NULL_II_AL \NULL_II_AM
-		\Flute_I_cues_mvmt_II_AN \NULL_II_AO \Flute_I_mvmt_II_AP \NULL_II_AQ }
+		\Flute_I_cues_mvmt_II_AN \NULL_II_AO \Flute_I_mvmt_II_AP \NULL_II_AQ \Flute_I_mvmt_II_AR }
 Flute_II_mvmt_II = { \Flute_II_mvmt_II_AA \Flute_I_II_mvmt_II_AB \Flute_II_mvmt_II_AC \Flute_II_mvmt_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
 		\Flute_all_cues_mvmt_II_AF \Flute_II_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \Flute_II_mvmt_II_AJ \Flute_II_mvmt_II_AK
-		\NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ }
+		\NULL_II_AL \NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ \Flute_II_mvmt_II_AR }
 Flute_III_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_III_mvmt_II_AB \Flute_III_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
 		\Flute_all_cues_mvmt_II_AF \Flute_III_mvmt_II_AG \NULL_II_AH \Flute_I_III_mvmt_II_AI \NULL_II_AJ \Flute_III_mvmt_II_AK \NULL_II_AL
-		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ }
+		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ \Flute_III_mvmt_II_AR }
 Flute_IV_mvmt_II = { \Flute_III_IV_cues_mvmt_II_AA \Flute_IV_mvmt_II_AB \Flute_IV_cues_mvmt_II_AC \NULL_II_AD \Flute_II_III_IV_cues_mvmt_II_AE
 		\Flute_all_cues_mvmt_II_AF \Flute_IV_mvmt_II_AG \NULL_II_AH \Flute_II_IV_mvmt_II_AI \NULL_II_AJ \Flute_IV_mvmt_II_AK \NULL_II_AL
-		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ }
+		\NULL_II_AM \NULL_II_AN \NULL_II_AO \Flute_all_cues_mvmt_II_AP \NULL_II_AQ \Flute_IV_mvmt_II_AR }
