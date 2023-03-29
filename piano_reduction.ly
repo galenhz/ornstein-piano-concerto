@@ -85,3 +85,32 @@
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-solo-piano.ily"
+\include "mvmt3/III-piano-reduction.ily"
+
+\score {
+	\header { movement = "III. Finale" }
+  <<
+	\new PianoStaff \with { instrumentName = "Piano Solo" } <<
+		\new Staff = "solo_upper" \keepWithTag #'PR { \accidentalStyle forget \solo_upper_III }
+		\new Dynamics \keepWithTag #'PR \solo_dynamics_III
+		\new Staff = "solo_lower" \keepWithTag #'PR { \accidentalStyle forget \solo_lower_III }
+	>>
+	\new PianoStaff \with { instrumentName = "Orchestra" } <<
+		\new Staff = "redux_upper" { \accidentalStyle forget \redux_upper_III }
+		\new Dynamics \redux_dynamics_III
+		\new Staff = "redux_lower" { \accidentalStyle forget \redux_lower_III }
+	>>
+  >>
+  \layout {
+	\context {
+		\Score
+		\numericTimeSignature
+		rehearsalMarkFormatter = #format-mark-circle-numbers
+	}
+  }
+}

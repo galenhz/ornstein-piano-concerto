@@ -122,3 +122,8 @@ m. 110: Piano reduction middle staff ends kind of awkwardly. May not be much to 
 
 m. 111: Solo piano has to break up the septuplet since I can't tie across voices. There has got to be a
 way I can make it look like the PR.
+
+Movement III
+
+m. 1-14: The way the PR is written is difficult to reproduce in lilypond. Just putting the same notes in a
+more default layout. Should revisit to see if I can make it work.
