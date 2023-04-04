@@ -43,6 +43,11 @@ DivVI_mark = \markup "div. in 6"
 Pz_mark = \markup \italic "pizz."
 Arco_mark = \markup \italic "arco"
 
+% Trills with explicit accidentals. Possibly too large.
+trSh = ^\trill^\markup { \sharp }
+trNat = ^\trill^\markup { \natural }
+trFl = ^\trill^\markup { \flat }
+
 %% Two marks used in the piano parts.
 LH_mark = \markup { \fontsize #-4 { "L.H." } }
 RH_mark = \markup { \fontsize #-4 { "R.H." } }

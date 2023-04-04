@@ -174,12 +174,6 @@ Violin_I_II_mvmt_I_AD = \relative c'' {
 	}
 }
 
-%% FIXME: Trill constructs too large.
-
-trSh = ^\trill^\markup { \sharp }
-trNat = ^\trill^\markup { \natural }
-trFl = ^\trill^\markup { \flat }
-
 Viola_mvmt_I_AD = \relative c {
 	\time 10/8
 	e8[(\trSh_\markup { \dynamic mf "con sord." } fis])\trNat fis4(\trNat e)\trSh g(\trNat fis)\trNat
