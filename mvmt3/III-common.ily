@@ -10,5 +10,10 @@
 % over and over.
 
 % AA = mm. 1-9
+% AB = mm. 10-13 (Rehearsal 51)
+% AC - mm. 14-18 (Rehearsal 52)
+% AD = mm. 19-26 (Rehearsal 53)
+% AE = mm. 27-30
 
 NULL_III_AA = { \tempo "Allegro" \time 6/4 R1.*2 \time 5/4 R1*5/4 \time 6/4 R1. \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 4/4 R1 }
+NULL_III_AB = { \mark #51 \time 7/4 R1*7/4 \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 4/4 R1 }

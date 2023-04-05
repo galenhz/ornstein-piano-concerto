@@ -881,3 +881,6 @@ Movement III
 mm. 1-9: Second violin part doesn't use the stuttered beaming that's in the score and the first violin part. For
 now I'm doing it like the score.
 (III-orch-09-violins-viola)
+
+m. 11: Piano reduction's g-natural on the first beat is an error, based on the string parts. Fixing.
+(III-piano-reduction)

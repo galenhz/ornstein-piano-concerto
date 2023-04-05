@@ -41,11 +41,34 @@ solo_lower_III_AA = \relative c, {
 	\override Beam.breakable = ##t
 	\repeat unfold 9 { <gis gis'>8[ <e'' b> <e' f> <b, f'> <b' c>] }
 	\repeat unfold 9 { <g,, g'>8[ < e'' b'> <e' f> <b, fis'> <b' c>] }
+}
+
+%%% Section AB = mm. 10-13 (Rehearsal 51)
+
+solo_upper_III_AB = \relative c'' {
+	\mark #51
+	\time 7/4
+	<b e fis b>4 <c f g c> <dis a' dis> <e a b e> <dis gis a dis>8 <c c'> <b e fis b>4 <gis d' e gis>
+	\time 5/4
+	<dis' gis ais dis> <e a b e> <g c g> <fis b cis fis>8 <e e'> <dis gis a dis>4
+	\time 7/4
+	<b e f b> <c f g c> <dis a' dis> <e a b e> <dis gis a dis>8 <c c'> <b e f b>4 <gis d' e gis>
+	\time 4/4
+	<a d e a>8 q <b e f b> <gis gis'> <g c d g> <f f'> <e a b e>4
+}
+
+solo_dynamics_III_AB = {
+	s1*7/4 s1*5/4 s1*7/4 s1
+}
+
+solo_lower_III_AB = \relative c,, {
+	\repeat unfold 9 { <f f'>8[ < e'' b'> <e' f> <b, f'> <b' c>] }
+		r8
 	\revert Beam.breakable
 }
 
 %%% Final assembly
 
-solo_upper_III = { \solo_upper_III_AA }
-solo_dynamics_III = { \solo_dynamics_III_AA }
-solo_lower_III = { \solo_lower_III_AA }
+solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB }
+solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB }
+solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB }

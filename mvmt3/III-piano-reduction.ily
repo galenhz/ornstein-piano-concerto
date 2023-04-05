@@ -89,8 +89,72 @@ redux_lower_III_AA = {
 	s1
 }
 
+%%% Section AB = mm. 10-13 (Rehearsal 51)
+
+redux_upper_III_AB = \relative c''' {
+	\mark #51
+	\time 7/4
+	\repeat unfold 2 { \change Staff = "redux_lower" <a dis>16 \change Staff = "redux_upper" <a e'>
+			\change Staff = "redux_lower" <a dis> \change Staff = "redux_upper" <e' a> }
+		\change Staff = "redux_lower" <b e> \change Staff = "redux_upper" <b f'>
+			\change Staff = "redux_lower" <b e> \change Staff = "redux_upper" <f' b>
+		\change Staff = "redux_lower" <a, e'> \change Staff = "redux_upper" <a f'>
+			\change Staff = "redux_lower" <a e'> \change Staff = "redux_upper" <f' a>
+		\repeat unfold 2 { \change Staff = "redux_lower" <gis, dis'> \change Staff = "redux_upper" <gis e'>
+			\change Staff = "redux_lower" <gis dis'> \change Staff = "redux_upper" <e' gis> }
+		\change Staff = "redux_lower" <e, b'> \change Staff = "redux_upper" <e c'>
+			\change Staff = "redux_lower" <e b'> \change Staff = "redux_upper" <c' e>
+	\time 5/4
+	% EDIT: The g-natural on the first beat is an error.
+	\change Staff = "redux_lower" <gis dis'> \change Staff = "redux_upper" <gis e'>
+			\change Staff = "redux_lower" <gis dis'> \change Staff = "redux_upper" <e' gis>
+		\change Staff = "redux_lower" <a, e'> \change Staff = "redux_upper" <a f'>
+			\change Staff = "redux_lower" <a e'> \change Staff = "redux_upper" <f' a>
+		\change Staff = "redux_lower" <c f> \change Staff = "redux_upper" <c g'>
+			\change Staff = "redux_lower" <c f> \change Staff = "redux_upper" <g' c>
+		\change Staff = "redux_lower" <b, fis'> \change Staff = "redux_upper" <b g'>
+			\change Staff = "redux_lower" <b fis'> \change Staff = "redux_upper" <g' b>
+		\change Staff = "redux_lower" <gis, dis'> \change Staff = "redux_upper" <gis e'>
+			\change Staff = "redux_lower" <gis dis'> \change Staff = "redux_upper" <e' gis>
+	\time 7/4
+	% Repeat of m. 10.
+	\repeat unfold 2 { \change Staff = "redux_lower" <a, dis> \change Staff = "redux_upper" <a e'>
+			\change Staff = "redux_lower" <a dis> \change Staff = "redux_upper" <e' a> }
+		\change Staff = "redux_lower" <b e> \change Staff = "redux_upper" <b f'>
+			\change Staff = "redux_lower" <b e> \change Staff = "redux_upper" <f' b>
+		\change Staff = "redux_lower" <a, e'> \change Staff = "redux_upper" <a f'>
+			\change Staff = "redux_lower" <a e'> \change Staff = "redux_upper" <f' a>
+		\repeat unfold 2 { \change Staff = "redux_lower" <gis, dis'> \change Staff = "redux_upper" <gis e'>
+			\change Staff = "redux_lower" <gis dis'> \change Staff = "redux_upper" <e' gis> }
+		\change Staff = "redux_lower" <e, b'> \change Staff = "redux_upper" <e c'>
+			\change Staff = "redux_lower" <e b'> \change Staff = "redux_upper" <c' e>
+	\time 4/4
+	\change Staff = "redux_lower" <a ees'> \change Staff = "redux_upper" <c fis>
+			\change Staff = "redux_lower" <a ees'> \change Staff = "redux_upper" <fis' c'>
+		\change Staff = "redux_lower" <fis, c'> \change Staff = "redux_upper" <a ees'>
+			\change Staff = "redux_lower" <fis c'> \change Staff = "redux_upper" <ees' a>
+		\change Staff = "redux_lower" <f, b> \change Staff = "redux_upper" <g d'>
+			\change Staff = "redux_lower" <f b> \change Staff = "redux_upper" <d' g>
+		<e, e'>4 \ottava #0
+}
+
+redux_dynamics_III_AB = {
+	s1*7/4 s1*5/4 s1*7/4 s1
+}
+
+redux_lower_III_AB = \relative c'' {
+	\time 7/4
+	s1*7/4
+	\time 5/4
+	s1*5/4
+	\time 7/4
+	s1*7/4
+	\time 4/4
+	s2. <fis g b>4 \ottava #0
+}
+
 %%% Final assembly
 
-redux_upper_III = { \redux_upper_III_AA }
-redux_dynamics_III = { \redux_dynamics_III_AA }
-redux_lower_III = { \redux_lower_III_AA }
+redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB }
+redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB }
+redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB }
