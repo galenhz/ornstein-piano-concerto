@@ -58,3 +58,19 @@ instrumentName = INSNAME
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-FILENAME.ily"
+
+\score {
+	\new Staff \compressMMRests TRNS \keepWithTag #'Part { \markLengthOn \INSVARNAME_mvmt_III }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

@@ -875,3 +875,9 @@ m. 111: Flute II has it's b in this bar crossed out and replaced with rests. Sco
 m. 112: Flute I part has been changed from g to f. Unlike some other changes, the score doesn't have this corrected.
 Part matches best what I hear in recording, going with that. (Flute III has bis in score, c in part.)
 (II-orch-01-flutes)
+
+Movement III
+
+mm. 1-9: Second violin part doesn't use the stuttered beaming that's in the score and the first violin part. For
+now I'm doing it like the score.
+(III-orch-09-violins-viola)
