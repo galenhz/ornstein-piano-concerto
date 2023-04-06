@@ -50,7 +50,7 @@ solo_upper_III_AB = \relative c'' {
 	\time 7/4
 	<b e fis b>4 <c f g c> <dis a' dis> <e a b e> <dis gis a dis>8 <c c'> <b e fis b>4 <gis d' e gis>
 	\time 5/4
-	<dis' gis ais dis> <e a b e> <g c g> <fis b cis fis>8 <e e'> <dis gis a dis>4
+	<dis' gis ais dis> <e a b e> <g c g'> <fis b cis fis>8 <e e'> <dis gis a dis>4
 	\time 7/4
 	<b e f b> <c f g c> <dis a' dis> <e a b e> <dis gis a dis>8 <c c'> <b e f b>4 <gis d' e gis>
 	\time 4/4
