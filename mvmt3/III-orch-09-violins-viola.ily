@@ -156,13 +156,84 @@ Violin_II_divisi_II_mvmt_III_AA = \relative c''' {
 		\beamCutL e e f e]
 }
 
+%%% Section AB = mm. 10-13 (Rehearsal 51)
+
+Violin_I_mvmt_III_AB = \relative c''' {
+	\break
+	\mark #51
+	\time 7/4
+	a8.(_\Unis_mark_\markup { \italic "sempre" \dynamic ff } a'16-.) a,8.( a'16-.) b,8.( b'16-.) a,8.( a'16-.)
+		gis,8.( gis'16-.) gis,8.( gis'16-.) e,8.( e'16-.)
+	\time 5/4
+	gis,8.( gis'16-.) a,8.( a'16-.) c,8.( c'16-.) b,8.( b'16-.) gis,8.( gis'16-.)
+	\time 7/4
+	a,8.( a'16-.) a,8.( a'16-.) b,8.( b'16-.) a,8.( a'16-.) gis,8.( gis'16-.) gis,8.( gis'16-.) e,8.( e'16-.)
+	\time 4/4
+	c8.( c'16-.) a,8.( a'16-.) g,8.( g'16-.) <e e'>4
+}
+
+Violin_II_mvmt_III_AB = \relative c''' {
+	\mark #51
+	\time 7/4
+	a16(_\markup { \italic "sempre" \dynamic ff } e') a,8 a16( e') a,8 b16( f') b,8 a16( f') a,8
+		gis16( e') gis,8 gis16( e') gis,8 e16( c') e,8
+	\time 5/4
+	gis16( e') gis,8 a16( f') a,8 c16( g') c,8 b16( g') b,8 gis16( e') gis,8
+	\time 7/4
+	a16( e') a,8 a16( e') a,8 b16( f') b,8 a16( f') a,8 gis16( e') gis,8 gis16( e') gis,8 e16( c') e,8
+	\time 4/4
+	c'16( fis) c8 a16( ees') a,8 g16( d') g,8 <gis b>4
+}
+
+Violin_II_divisi_II_mvmt_III_AB = \relative c''' {
+	\time 7/4
+	a8:16_\markup { \italic "sempre" \dynamic ff } dis8:16 a8:16 dis8:16 b8:16 e8:16 a,8:16 e'8:16
+		gis,8:16 dis'8:16 gis,8:16 dis'8:16 e,8:16 b'8:16
+	\time 5/4
+	gis8:16 dis'8:16 a8:16 e'8:16 c8:16 f8:16 b,8:16 fis'8:16 gis,8:16 dis'8:16
+	\time 7/4
+	a8:16 dis8:16 a8:16 dis8:16 b8:16 e8:16 a,8:16 e'8:16 gis,8:16 dis'8:16 gis,8:16 dis'8:16 e,8:16 b'8:16
+	\time 4/4
+	a8:16 ees'8:16 fis,8:16 c'8:16 f,8:16 b8:16 f4
+}
+
+Viola_cues_mvmt_III_AB = \relative c''' {
+	\tag #'Score \NULL_III_AB
+	\tag #'Part <<
+		\new CueVoice {
+			\cueClef treble
+			\time 7/4
+			a2\trNat_"Picc + Fl." b4\trNat a\trNat gis2\trNat e4\trNat
+			\time 5/4
+			gis\trNat a\trNat c\trNat b\trNat gis\trNat
+			\time 7/4
+			a2\trNat b4\trNat a\trNat gis2\trNat e4\trNat
+			\time 4/4
+			c'\trNat a\trNat g\trNat e
+			\cueClefUnset
+		}
+		\new Voice {
+			\voiceTwo
+			\mark #51
+			\time 7/4
+			R1*7/4
+			\time 5/4
+			R1*5/4
+			\time 7/4
+			R1*7/4
+			\time 4/4
+			R1
+		}
+	>>
+}
+
 %%% Final assembly
 
-Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA }
-Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA }
+Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB }
+Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA \NULL_III_AB }
 
-Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA }
-Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA }
+Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA \Violin_II_mvmt_III_AB }
+Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA \Violin_II_divisi_II_mvmt_III_AB }
 
-Viola_mvmt_III = { \clef alto \NULL_III_AA }
-Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA }
+Viola_mvmt_III = { \clef alto \NULL_III_AA \Viola_cues_mvmt_III_AB }
+Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA \NULL_III_AB }
