@@ -153,8 +153,36 @@ redux_lower_III_AB = \relative c'' {
 	s2. <fis g b>4 \ottava #0
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+redux_upper_III_AC = \relative c''' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	r8 b[ c cis e f16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c]
+	r8 b[ c cis e f16. b32] gis8[ g16. gis32 g8 f16. g32 f8 e]
+	\ottava #1
+	r8 a[ bes c des e16. f32] e8[ des16. e32 des8 c16. des32 c8 bes]
+	r8 a[ bes c des e16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c16. e32]
+	cis8[ c16. cis32 c8 bes16. c32 bes8 a16. e'32] cis8[ c16. cis32 c8 bes16. c32 bes8 a]
+	\ottava #0
+}
+
+redux_dynamics_III_AC = {
+	s1.*4 s4 s1-\markup { \italic "poco a poco dim." } s4
+}
+
+redux_lower_III_AC = \relative c' {
+	\time 6/4
+	r8 b[ c cis e f16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c]
+	r8 b[ c cis e f16. b32] gis8[ g16. gis32 g8 f16. g32 f8 e]
+	r8 a[ bes c des e16. f32] e8[ des16. e32 des8 c16. des32 c8 bes]
+	r8 a[ bes c des e16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c16. e32]
+	cis8[ c16. cis32 c8 bes16. c32 bes8 a16. e'32] cis8[ c16. cis32 c8 bes16. c32 bes8 a]
+}
+
 %%% Final assembly
 
-redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB }
-redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB }
-redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB }
+redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC }
+redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC }
+redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC }

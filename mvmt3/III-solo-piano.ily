@@ -67,8 +67,44 @@ solo_lower_III_AB = \relative c,, {
 	\revert Beam.breakable
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+solo_upper_III_AC = {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	s1.*4
+	s4 s1^\markup { \italic "poco a poco dim." } s4
+}
+
+solo_dynamics_III_AC = {
+	s1.*5
+}
+
+solo_lower_III_AC = \relative c, {
+	\tupletDown
+	\override TupletBracket.bracket-visibility = ##t
+	\magnifyMusic 0.8 {
+		\repeat unfold 7 {
+			ees32[ bes' f' \change Staff = "solo_upper" c' e f gis a]
+			\override TupletBracket.positions = #'(-6 . -2)
+			\change Staff = "solo_lower" \clef treble \tuplet 10/8 { a,[ c cis e f \change Staff ="solo_upper" a c cis e f] }
+			\override TupletBracket.positions = #'(-2 . -6)
+			\change Staff = "solo_lower" \tuplet 11/8 { a[ \change Staff = "solo_upper" f e cis c a \change Staff = "solo_lower" f e cis c a] }
+			\override TupletBracket.positions = #'(-12 . -12)
+			\change Staff = "solo_upper" \tuplet 7/4 { a'16[ gis f e c \change Staff = "solo_lower" \clef bass f, bes,] }
+		}
+		ees,32[ bes' f' \change Staff = "solo_upper" c' e f gis a]
+		\override TupletBracket.positions = #'(-6 . -2)
+		\change Staff = "solo_lower" \clef treble \tuplet 10/8 { a,[ c cis e f \change Staff ="solo_upper" a c cis e f] }
+		\revert TupletBracket.positions
+	}
+	\revert TupletBracket.bracket-visibility
+	\tupletNeutral
+}
+
 %%% Final assembly
 
-solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB }
-solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB }
-solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB }
+solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC }
+solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC }
+solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC }
