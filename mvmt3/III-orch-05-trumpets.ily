@@ -41,9 +41,51 @@ Trumpet_all_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+Trumpet_I_mvmt_III_AC = \relative c'' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	\partCombineApart
+	c4-^\f c des-^ c8( bes) a4-^ f
+	c'-^( des) e-^ ees8( des) c4-^ a
+	c-^ des e-^ fis e8-^( des) c4
+	a-^ ees' f-^ bes f8-^( ees) f4
+	a,-^( \tag #'Score ees') \tag #'Part ees)_\markup { \italic "poco a poco dim." } f8-^[( bes,]) c[( bes]) f'-^( ees) f4
+	\partCombineAutomatic
+}
+
+Trumpet_II_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	f8-^ r8 r4 fis8-^ r8 r4 f8-^ r8 r4
+	f8-^ r8 r4 e8-^ r8 r4 f8-^ r8 r4
+	f8-^ r8 r4 e8-^ r8 r4 f8-^ r8 r4
+	f8-^ r8 r4 e8-^ r8 r4 f8-^ r8 r4
+	f8-^ r8 r4_\markup { \italic "poco a poco dim." } e8-^ r8 r4 f8-^ r8 r4
+}
+
+Trumpet_III_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	c8-^ r8 r4 cis8-^ r8 r4 c8-^ r8 r4
+	c8-^ r8 r4 c8-^ r8 r4 c8-^ r8 r4
+	c8-^ r8 r4 c8-^ r8 r4 c8-^ r8 r4
+	c8-^ r8 r4 c8-^ r8 r4 c8-^ r8 r4
+	c8-^ r8 r4_\markup { \italic "poco a poco dim." } c8-^ r8 r4 f8-^ r8 r4
+}
+
+Trumpet_IV_mvmt_III_AC = \transpose c' a \Trumpet_III_mvmt_III_AC
+
 %%% Final assembly
 
-Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB }
-Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB }
-Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB }
-Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB }
+Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_I_mvmt_III_AC }
+Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_II_mvmt_III_AC }
+Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_III_mvmt_III_AC }
+Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_IV_mvmt_III_AC }

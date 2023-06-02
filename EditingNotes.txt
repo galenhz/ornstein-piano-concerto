@@ -884,3 +884,82 @@ now I'm doing it like the score.
 
 m. 11: Piano reduction's g-natural on the first beat is an error, based on the string parts. Fixing.
 (III-piano-reduction)
+
+mm. 14-18: The instruments playing the primary melodic material have various slurs written into the parts.
+
+Flute III/IV: 4 4 4 8 8 4 4 | 4 4 4 8 8 4 4 | 4 4 4 4 8 8 4 | 4 4 4 4 8(8)4 | 4 4 8(8)8(8)8(8)4
+Oboe I:       4(4)4 8(8)4(4)| 4(4)4(4)  4(4)| 4(4)4(4)8(8)4 | 4(4)4(4)8(8)4 | 4 4 8(8)8(8)8(8)4
+Oboe II:      4 4 4 8(8)4(4)| 4(4)4 8(8)4(4)| 4(4)4(4)8(8)4 | 4(4)4(4)8(8)4 | 4 4 8(8)8(8)8(8)4
+Oboe III/IV:                |               | 4 4 4 4 8 8 4 | 4 4 4 4 8(8)4 | 4 4 8(8)8(8)8(8)4
+Clarinet I:   4 4 4 8 8 4 4 | 4 4 4 8 8 4 4 | 4 4 4 4 8 8 4 | 4 4 4 4 8(8)4 | 4 4 8(8)8(8)8(8)4
+Clarinet III:               |               | 4 4 4 4 8 8 4 | 4 4 4 4 8(8)4 | 4 4 8(8)8(8)8(8)4
+Clarinet IV:  4(4)4 8 8 4 4 | 4 4 4 8 8 4 4 | 4 4 4 4 8 8 4 | 4 4 4 4 8(8)4 | 4 4 8(8)8(8)8(8)4
+Trumpet I:    4 4 4 8 8 4 4 | 4 4 4 8 8 4 4 | 4 4 4 4 8 8 4 | 4 4 4 4 8 8 4 | 4 4 8 8 8 8 8 8 4
+Horn I:       4 4 4 8(8)4 4 | 4X4X4 8(8)4X4X| 4X4X4 4 8(8)4 | 4 4 4 4 8X8X4 | 4 4 8X8X8(8)8X8X4
+Horn II:      4 4 4 8 8 4 4 | 4X4X4 4   4X4X| 4(4)4 4 8(8)4 | 4 4 4 4 8(8)4 | 4 4 8(8)8(8)8(8)4
+Horn III/IV:  4 4 4 8(8)4 4 | 4(4)4 8(8)4(4)| 4(4)4 4 8(8)4 | 4 4 4 4 8(8)4 | 4(4)8(8)8(8)8(8)4
+Horn V:       4(4)4 8(8)4 4 | 4(4)4 4   4(4)| 4 4 4 4 8(8)4 | 4 4 4 4 8(8)4 | 4(4)8(8)8(8)8(8)4
+Horn VI:      4 4 4 8(8)4 4 | 4(4)4 8(8)4(4)| 4 4 4 4 8(8)4 | 4 4 4 4 8(8)4 | 4(4)8(8)8(8)8(8)4
+Trombones:    4 4 4 8(8)4 4 | 4(4)4 8(8)4(4)| 4 4 4 4 8(8)4 | 4 4 4 4 8(8)4 | 4(4)8(8)8(8)8(8)4
+
+The score is sketchy in slurs and which parts get them; the most attested slurs are the ones on the eighth
+notes in the last bar. The recording's technical quality limits me to hearing only the top voices:
+
+Recording:    4 4 4 8 8 4 4 | 4(4)4 8(8)4 4 | 4 4 4 4 8 8 4 | 4 4 4 4 8(8)4 | 4(4)8(8)8(8)8(8)4
+
+I'll go with the following for now.
+
+Consensus:    4 4 4 8(8)4 4 | 4(4)4 8(8)4 4 | 4 4 4 4 8(8)4 | 4 4 4 4 8(8)4 | 4(4)8(8)8(8)8(8)4
+(III-orch-*)
+
+mm. 14-18: The primary melody parts above have ^ accents written into most of the parts (with
+Clarinets being the exception). These accents are there for the bass notes in the score, but not these
+parts. Using them for now.
+(III-orch-*)
+
+m. 14: Clarinet IV and Oboe III play the same (c, fourth down from melody) notes on the first and second
+beats, and have those notes slurred in parts and score. Horn parts which have the same notes don't.
+Keeping slurs but will revisit. #UNDECIDED
+(III-orch-02-oboes, III-orch-03-clarinets)
+
+mm. 14-18: Horns I, III and IV all play the primary melody (with horn I having some octave changes). The III/IV
+parts are written with different accidentals than I, especially in the first three bars, and the ones in
+III/IV seem more reasonable. The score has the different accidentals, just as they are in the parts.
+Should I adjust Horn I to match III/IV? #UNDECIDED
+(III-orch-06-horns)
+
+mm. 14-18: Basses lack the ff dynamic that cellos/violas have. Added. Also, cellos show both > and ^ accents
+on the strong beats; score only has ^, going with that.
+(III-orch-10-cello-bass)
+
+mm. 14-18: The "countermelody" parts (Flutes, Clarinets, Bassoons) differ in slurring. Flute inserts have
+no slurs; the parts (including Piccolo) have slurs on all half-bar groupings except the last, which is scratched
+out in piccolo. (The score seems to show slurring on all groups.) Clarinet II shows slurring on all groups except
+the two last, which replace them with slurs between the 8 and the dotted 16 in the last bar. Bassoon I has an
+overlay which scanned badly, but seems to have slurs on all groups. Bassoon II has slurs on all groups.
+The parts are all but inaudible in the recording. Going with all groups slurred for now. #UNDECIDED
+(III-orch-01-flutes, III-orch-03-clarinets, III-orch-04-bassoons)
+
+mm. 14-18: All flutes have an inserted page in the part that covers these bars. Flute I in the score only
+plays the first two measures, then drops out in favor of piccolo. In the rewritten part, it plays all five
+bars, written down an octave but with an "8va". Flute II is written down an octave but without the "8va",
+and like Flute I continues for all five bars. Flutes III and IV were originally playing the melody (as
+seen above), but the inserts in the parts instead match flute II. Following the inserts.
+(III-orch-01-flutes)
+
+mm. 14-18: Interesting puzzle with the oboe parts. They all have inserts in the scan which match those of the
+flutes. But there's no mark in the parts themselves saying to use the insert, like there are for the flutes.
+Score matches the original parts. I think these revisions are due to the countermelody being weak in the
+original scored version, and needing reinforcement. (It's barely audibile in the recording.) Following the
+inserts here too.
+(III-orch-02-oboes)
+
+mm. 14-18: Bassoons I and II originally played the countermelody but only for 2 bars. Bassoon I has a patch
+on the part which writes it out for all five; Bassoon II only has 2 bars, like the score. It seems reasonable
+to extrapolate that II should follow in I's example; no obvious reason not to, especially since so many other
+woodwind parts moved to this countermelody. I'm
+(III-orch-04-bassoons)
+
+m. 16: Trombone I has a cis on beat two and the second half of beat 5; Trumpet I has des. These match the
+score, and the matching horn parts. Leaving as is for now.
+(III-orch-05-trumpets)

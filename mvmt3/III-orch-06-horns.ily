@@ -43,13 +43,88 @@ Horn_I_VI_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+% Question: Adjust I's accidentals to match III/IV?
+
+Horn_I_mvmt_III_AC = \transpose c' f \relative c''' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	g4-^\ff g gis-^ g8( f) e4-^ c
+	g'-^( gis) b-^ ais8( gis) g4-^ e
+	g-^ gis b-^ ais b8-^( gis) g4
+	e-^ ais c-^ f, c'8-^( ais) c4
+	e,-^ \tag #'Part ais_\markup { \italic "poco a poco dim." } \tag #'Score ais c8-^([ f,)] g([ f)] c'-^([ ais)] c4
+}
+
+Horn_II_mvmt_III_AC = \transpose c' f \relative c'' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	e4-^\ff e f-^ e8( cis) c4-^ g
+	e'-^( f) g-^ fis e4-^ c
+	e-^ f g-^ ais g8-^( f) e4
+	c-^ f g-^ f g8-^( f) g4
+	c,-^ f_\markup { \italic "poco a poco dim." } g8-^([ f)] g([ f)] g-^([ f)] g4
+}
+
+Horn_III_IV_VI_mvmt_III_AC = \transpose c' f \relative c'' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	g4-^\ff g aes-^ g8( f) e4-^ c
+	g'-^( aes) b-^ bes8( aes) g4-^ e
+	g-^ gis b-^ cis b8-^( gis) g4
+	e-^ bes' c-^ f c8-^( bes) c4
+	e,-^ bes'_\markup { \italic "poco a poco dim." } c8-^([ f)] g([ f)] c-^([ bes)] c4
+}
+
+Horn_V_mvmt_III_AC = \transpose c' f \relative c'' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	c4-^\ff c des-^ c8( aes) g4-^ e
+	c'-^( des) e-^ ees c-^ g
+	c-^ cis e-^ fis e8-^( cis) c4
+	g-^ des' e-^ f e8-^( d) e4
+	g,-^ \tag #'Part des'_\markup { \italic "poco a poco dim." } \tag #'Score des e8-^[( f)] g[( f]) e-^([ des]) e4
+}
+
+Horn_VII_VIII_cues_mvmt_III_AC = \transpose c' f \relative c'' {
+	\tag #'Score \NULL_III_AC
+	\tag #'Part {
+		\mark #52
+		\tempo "Meno"
+		\time 6/4
+		\tag #'Score \grace s8.
+		<<
+			\new CueVoice {
+				g4-^_"III+IV+VI Hn." g aes-^ g8( f) e4-^ c
+				g'-^( aes) b-^ bes8( aes) g4-^ e
+				g-^ gis b-^ cis b8-^( gis) g4
+				e-^ bes' c-^ f c8-^( bes) c4
+				e,-^ bes' c8-^([ f)] g([ f)] c-^([ bes)] c4
+			}
+			\new Voice {
+				\voiceTwo
+				R1.*5
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
-Horn_I_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB }
-Horn_II_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB }
-Horn_III_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB }
-Horn_IV_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB }
-Horn_V_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB }
-Horn_VI_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB }
-Horn_VII_mvmt_III = { \NULL_III_AA \NULL_III_AB }
-Horn_VIII_mvmt_III = { \NULL_III_AA \NULL_III_AB }
+Horn_I_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_I_mvmt_III_AC }
+Horn_II_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_II_mvmt_III_AC }
+Horn_III_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC }
+Horn_IV_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC }
+Horn_V_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_V_mvmt_III_AC }
+Horn_VI_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC }
+Horn_VII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC }
+Horn_VIII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC }

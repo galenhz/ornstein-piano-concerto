@@ -43,11 +43,46 @@ Bassoon_all_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+% Have to start this in tenor, not change clef; see note in trombones.
+Bassoon_I_II_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	r8 b[(\ff c cis e f16. gis32]) f8[( e16. f32 e8 cis16. e32 cis8 c])
+	r8 b[( c cis e f16. b32]) gis8[( g16. gis32 g8 f16. g32 f8 e])
+	r8 a,[( bes c des e16. f32]) e8[( des16. e32 des8 c16. des32 c8 bes])
+	r8 a[( bes c des e16. gis32]) f8[( e16. f32 e8 cis16. e32 cis8 c16. e32])
+	cis8[( c16. cis32 c8_\markup { \italic "poco a poco dim." } bes16. c32 bes8 a16. e'32]) cis8[( c16. cis32 c8 bes16. c32 bes8 a])
+}
+
+Bassoon_III_IV_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\acciaccatura { \tag #'Score s16 ges8 } f8-^\ff r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { aes8 } ges8-^ r ges r
+	\acciaccatura { ges8 } f8-^ r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { ees8 } des8-^ r c r
+	\acciaccatura { ges'8 } f8-^ r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { aes8 } ges8-^ r ges r
+	\acciaccatura { ges8 } f8-^ r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { ees8 } des8-^ r c r
+	\acciaccatura { ges'8 } f8-^ r f_\markup { \italic "poco a poco dim." } r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { ees8 } des8-^ r c r
+}
+
+Contrabassoon_mvmt_III_AC = \relative c {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	ees2-^\ff
+		\repeat unfold 11 { ees2-^ }
+	\after 4 -\markup { \italic "poco a poco dim." } ees2-^ ees2-^ ees2-^
+}
 
 %%% Final assembly
 
-Bassoon_I_mvmt_III = { \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB }
-Bassoon_II_mvmt_III = { \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB }
-Bassoon_III_mvmt_III = { \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB }
-Bassoon_IV_mvmt_III = { \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB }
-Contrabassoon_mvmt_III = { \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB }
+Bassoon_I_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC }
+Bassoon_II_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC }
+Bassoon_III_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC }
+Bassoon_IV_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC }
+Contrabassoon_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Contrabassoon_mvmt_III_AC }

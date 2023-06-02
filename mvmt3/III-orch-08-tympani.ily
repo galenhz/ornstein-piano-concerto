@@ -43,8 +43,39 @@ Tympani_I_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+Tympani_I_mvmt_III_AC = \relative c {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	ees8\f r8 r4
+		\repeat unfold 11 { ees8 r8 r4 }
+	ees8 r8 \tag #'Score r4 \tag #'Part r4_\markup { \italic "poco a poco dim." } ees8 r8 r4 ees8 r8 r4
+}
+
+Tympani_II_cues_mvmt_III_AC = \relative c {
+	\tag #'Score \NULL_III_AC
+	\tag #'Part {
+		\mark #52
+		\tempo "Meno"
+		\time 6/4
+		<<
+			\new CueVoice {
+				\voiceOne
+				ees8_"I Tymp." r8 r4 ees8 r8 r4 ees8 r8 r4
+			}
+			\new Voice {
+				\voiceTwo
+				R1.
+			}
+		>>
+		R1.*4
+	}
+}
 
 %%% Final assembly
 
-Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB }
-Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB }
+Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC }
+Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC }

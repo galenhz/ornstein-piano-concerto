@@ -169,7 +169,7 @@ Violin_I_mvmt_III_AB = \relative c''' {
 	\time 7/4
 	a,8.( a'16-.) a,8.( a'16-.) b,8.( b'16-.) a,8.( a'16-.) gis,8.( gis'16-.) gis,8.( gis'16-.) e,8.( e'16-.)
 	\time 4/4
-	c8.( c'16-.) a,8.( a'16-.) g,8.( g'16-.) <e e'>4
+	c8.( c'16-.) a,8.( a'16-.) g,8.( g'16-.) <e, e'>4
 }
 
 Violin_II_mvmt_III_AB = \relative c''' {
@@ -227,13 +227,85 @@ Viola_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+Violin_I_mvmt_III_AC = \relative c''' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\repeat unfold 4 {
+		\acciaccatura { e16 ees des } \repeat tremolo 4 { c32->( des?) } \repeat tremolo 4 { c32( des) } \repeat tremolo 4 { c32->( des) }
+			\repeat tremolo 4 { c32( des) } \acciaccatura { e16 ees des } \repeat tremolo 4 { c32->( des) } \repeat tremolo 4 { c32( des) }
+	}
+	\acciaccatura { e16 ees des } \repeat tremolo 4 { c32->( des?) } \repeat tremolo 4 { c32(_\markup { \italic "poco a poco dim." } des) }
+		\repeat tremolo 4 { c32->( des) } \repeat tremolo 4 { c32( des) } \acciaccatura { e16 ees des } \repeat tremolo 4 { c32->( des) }
+		\repeat tremolo 4 { c32( des) }
+}
+
+NULL_divisi_II_mvmt_III_AC = {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	% The official null tags silent grace as score only, but it needs to be here so the part prints correctly too.
+	\grace s8. R1.*5
+}
+
+Violin_II_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	<<
+		\new Voice {
+			\voiceOne
+			f8-.-^[ f-. f-. f-.] ges-.-^[ ges-. f-. ees-.] f-.-^[ f-. f-. f-.]
+			f-.-^[ f-. ges-. ges-.] a-.-^[ a-. ges-. ges-.] f-.-^[ f-. f-. f-.]
+			f-.-^[ f-. ges-. ges-.] a-.-^[ a-. b?-. b-.] a-.-^[ ges-. f-. f-.]
+			\repeat unfold 2 { f-.-^[ f-. ges-. ges-.] a-.-^[ a-. bes-. bes-.] a-.-^[ ges-. f-. f-.] }
+		}
+		\new Voice {
+			\voiceTwo
+			c8-.-^[_\DivIII_mark c-. c-. c-.] des-.-^[ des-. c-. ees-.] c-.-^[ c-. c-. c-.]
+			c-.-^[ c-. des-. des-.] e-.-^[ e-. des-. des-.] c-.-^[ c-. c-. c-.]
+			c-.-^[ c-. des-. des-.] e-.-^[ e-. fis-. fis-.] e-.-^[ des-. c-. c-.]
+			c-.-^[ c-. des-. des-.] f-.-^[ f-. ges-. ges-.] f-.-^[ des-. c-. c-.]
+			c-.-^[ c-. des-._\markup { \italic "poco a poco dim." } des-.] f-.-^[ f-. ges-. ges-.] f-.-^[ des-. c-. c-.]
+		}
+	>>
+}
+
+Violin_II_divisi_II_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	a8-.-^[ a-. a-. a-.] bes-.-^[ bes-. a-. bes-.] a-.-^[ a-. a-. a-.]
+	a8-.-^[ a-. bes-. bes-.] c-.-^[ c-. bes-. bes-.] a-.-^[ a-. a-. a-.]
+	a8-.-^[ a-. bes-. bes-.] c-.-^[ c-. dis-. dis-.] c-.-^[ bes-. a-. a-.]
+	a8-.-^[ a-. bes-. bes-.] c-.-^[ c-. des-. des-.] c-.-^[ bes-. a-. a-.]
+	a8-.-^[ a-. bes-._\markup { \italic "poco a poco dim." } bes-.] c-.-^[ c-. des-. des-.] c-.-^[ bes-. a-. a-.]
+}
+
+Viola_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	% first s16 to match the violin I spacing
+	\acciaccatura { s16 ges8 } f8-.-^[\ff f-. f-. f-.] \acciaccatura { ges8 } f-.-^[ f-. f-. f-.] \acciaccatura { aes8 } ges?-.-^[ ges-. ges-. ges-.]
+	\acciaccatura { ges8 } f8-.-^[ f-. f-. f-.] \acciaccatura { ges8 } f-.-^[ f-. f-. f-.] \acciaccatura { ees8 } des-.-^[ c-. c-. c-.]
+	\acciaccatura { ges'8 } f8-.-^[ f-. f-. f-.] \acciaccatura { ges8 } f-.-^[ f-. f-. f-.] \acciaccatura { aes8 } ges?-.-^[ ges-. ges-. ges-.]
+	\acciaccatura { ges8 } f8-.-^[ f-. f-. f-.] \acciaccatura { ges8 } f-.-^[ f-. f-. f-.] \acciaccatura { ees8 } des-.-^[ c-. c-. c-.]
+	\acciaccatura { ges'8 } f8-.-^[ f-. f-._\markup { \italic "poco a poco dim." } f-.]
+		\acciaccatura { ges8 } f-.-^[ f-. f-. f-.] \acciaccatura { ees8 } des-.-^[ c-. c-. c-.]
+}
+
 %%% Final assembly
 
-Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB }
-Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA \NULL_III_AB }
+Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB \Violin_I_mvmt_III_AC }
+Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC }
 
-Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA \Violin_II_mvmt_III_AB }
-Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA \Violin_II_divisi_II_mvmt_III_AB }
+Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA \Violin_II_mvmt_III_AB \Violin_II_mvmt_III_AC }
+Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA \Violin_II_divisi_II_mvmt_III_AB \Violin_II_divisi_II_mvmt_III_AC }
 
-Viola_mvmt_III = { \clef alto \NULL_III_AA \Viola_cues_mvmt_III_AB }
-Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA \NULL_III_AB }
+Viola_mvmt_III = { \clef alto \NULL_III_AA \Viola_cues_mvmt_III_AB \Viola_mvmt_III_AC }
+Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC }

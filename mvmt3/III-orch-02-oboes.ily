@@ -13,7 +13,7 @@
 %%% Section AB = mm. 10-13 (Rehearsal 51)
 %%% Tacet, cues only
 
-Oboe_I_II_cues_mvmt_III_AB = \relative c''' {
+Oboe_all_cues_mvmt_III_AB = \relative c''' {
 	\tag #'Score \NULL_III_AB
 	\tag #'Part <<
 		\new CueVoice {
@@ -41,10 +41,44 @@ Oboe_I_II_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+Oboe_all_mvmt_III_AC = \relative c'' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	r8 b[(\ff c cis e f16. gis32]) f8[( e16. f32 e8 cis16. e32 cis8 c])
+	r8 b[( c cis e f16. b32]) gis8[( g16. gis32 g8 f16. g32 f8 e])
+	r8 a,[( bes c des e16. f32]) e8[( des16. e32 des8 c16. des32 c8 bes])
+	r8 a[( bes c des e16. gis32]) f8[( e16. f32 e8 cis16. e32 cis8 c16. e32])
+	cis8[( c16. cis32 c8_\markup { \italic "poco a poco dim." } bes16. c32 bes8 a16. e'32]) cis8[( c16. cis32 c8 bes16. c32 bes8 a])
+}
+
+EnglishHorn_cues_mvmt_III_AC = \relative c'' {
+	\tag #'Score \NULL_III_AC
+	\tag #'Part {
+		\mark #52
+		\tempo "Meno"
+		\time 6/4
+		<<
+			\new CueVoice {
+				r8 b[(_"Fl.+Ob." c cis e f16. gis32]) f8[( e16. f32 e8 cis16. e32 cis8 c])
+				r8 b[( c cis e f16. b32]) gis8[( g16. gis32 g8 f16. g32 f8 e])
+			}
+			\new Voice {
+				\voiceTwo
+				R1.*2
+			}
+		>>
+		R1.*3
+	}
+}
+
 %%% Final assembly
 
-Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_I_II_cues_mvmt_III_AB }
-Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_I_II_cues_mvmt_III_AB }
-Oboe_III_mvmt_III = { \NULL_III_AA \NULL_III_AB }
-Oboe_IV_mvmt_III = { \NULL_III_AA \NULL_III_AB }
-EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB }
+Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC }
+Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC }
+Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC }
+Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC }
+EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC }

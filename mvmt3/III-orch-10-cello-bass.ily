@@ -44,9 +44,31 @@ Cello_Bass_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+Cello_mvmt_III_AC = \relative c {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	bes8-^\ff r8 bes r
+		\repeat unfold 11 { bes8-^ r bes r }
+	bes8-^ r bes_\markup { \italic "poco a poco dim." } r bes8-^ r bes r bes8-^ r bes r
+}
+
+Bass_mvmt_III_AC = \relative c {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	ees2-^\ff
+		\repeat unfold 11 { ees2-^ }
+	\after 4 -\markup { \italic "poco a poco dim." } ees2-^ ees2-^ ees2-^
+}
+
 %%% Final assembly
 
-Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB }
-Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB }
+Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC }
+Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC }
 
-Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB }
+Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC }

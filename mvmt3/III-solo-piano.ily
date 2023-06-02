@@ -73,6 +73,7 @@ solo_upper_III_AC = {
 	\mark #52
 	\tempo "Meno"
 	\time 6/4
+	\tag #'Score \grace s8.
 	s1.*4
 	s4 s1^\markup { \italic "poco a poco dim." } s4
 }
@@ -82,6 +83,7 @@ solo_dynamics_III_AC = {
 }
 
 solo_lower_III_AC = \relative c, {
+	\tag #'Score \grace s8.
 	\tupletDown
 	\override TupletBracket.bracket-visibility = ##t
 	\magnifyMusic 0.8 {

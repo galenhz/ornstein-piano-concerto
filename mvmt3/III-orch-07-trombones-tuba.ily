@@ -43,10 +43,38 @@ Trombone_Tuba_cues_mvmt_III_AB = \relative c''' {
 	>>
 }
 
+%%% Section AC - mm. 14-18 (Rehearsal 52)
+
+% Changing to tenor here causes double clefs due to the change and the previous cueClefUnset. Have to start in tenor
+% to make this work.
+
+Trombone_I_II_mvmt_III_AC = \relative c' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	c4-^\ff c des-^ c8( bes) a4-^ f
+	c'-^( des) e-^ ees8( des) c4-^ a
+	c-^ cis e-^ fis e8-^( cis) c4
+	a-^ ees' f-^ bes f8-^( ees) f4
+	a,-^( ees')_\markup { \italic "poco a poco dim." } f8-^[( bes]) c[( bes]) f-^( ees) f4
+}
+
+Trombone_III_mvmt_III_AC = \relative c {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	bes8\f r8 r4
+		\repeat unfold 11 { bes8 r r4 }
+	bes8 r r4_\markup { \italic "poco a poco dim." } bes8 r r4  bes8 r r4
+}
+
+Tuba_mvmt_III_AC = \transpose c' f \Trombone_III_mvmt_III_AC
 
 %%% Final assembly
 
-Trombone_I_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB }
-Trombone_II_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB }
-Trombone_III_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB }
-Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB }
+Trombone_I_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC }
+Trombone_II_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC }
+Trombone_III_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_III_mvmt_III_AC }
+Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Tuba_mvmt_III_AC }
