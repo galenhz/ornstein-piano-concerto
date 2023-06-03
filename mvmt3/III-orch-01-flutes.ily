@@ -155,10 +155,41 @@ Flute_II_III_IV_mvmt_III_AC = \relative c'' {
 	cis8[( c16. cis32 c8_\markup { \italic "poco a poco dim." } bes16. c32 bes8 a16. e'32]) cis8[( c16. cis32 c8 bes16. c32 bes8 a])
 }
 
+%%% Section AD = mm. 19-26 (Rehearsal 53)
+
+Picc_mvmt_III_AD = \relative c'' {
+	\mark #53
+	\time 3/4
+	\tag #'Score \grace s8.
+	f8 r8 r4 r4
+	R2.*7
+}
+
+Flute_I_mvmt_III_AD = \relative c'' {
+	\mark #53
+	\time 3/4
+	\tag #'Score \grace s8.
+	f8 r8 r4 r4
+	R2.*7
+}
+
+Flute_II_IV_mvmt_III_AD = \transpose c' c \Flute_I_mvmt_III_AD
+
+Flute_III_mvmt_III_AD = \relative c' {
+	\mark #53
+	\time 3/4
+	\tag #'Score \grace s8.
+	f8 r8 r4 r4
+	R2.*2
+	\tuplet 6/4 4 { \tag #'Score c'16(\p \tag #'Part c16(\p^\Solo_mark b c b bes a) bes( a bes a aes g) aes( g aes g fis f) }
+	R2.*3
+	\tuplet 6/4 4 { c'16( b c b bes a) bes( a bes a aes g) aes( g aes g fis f) }
+}
+
 %%% Final construction
 
-Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC }
-Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC }
-Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC }
-Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC }
-Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC }
+Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD }
+Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD }
+Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD }
+Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD }
+Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD }

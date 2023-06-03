@@ -165,7 +165,6 @@ redux_upper_III_AC = \relative c''' {
 	r8 a[ bes c des e16. f32] e8[ des16. e32 des8 c16. des32 c8 bes]
 	r8 a[ bes c des e16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c16. e32]
 	cis8[ c16. cis32 c8 bes16. c32 bes8 a16. e'32] cis8[ c16. cis32 c8 bes16. c32 bes8 a]
-	\ottava #0
 }
 
 redux_dynamics_III_AC = {
@@ -181,8 +180,40 @@ redux_lower_III_AC = \relative c' {
 	cis8[ c16. cis32 c8 bes16. c32 bes8 a16. e'32] cis8[ c16. cis32 c8 bes16. c32 bes8 a]
 }
 
+%%% Section AD = mm. 19-26 (Rehearsal 53)
+
+redux_upper_III_AD = \relative c''' {
+	\mark #53
+	\time 3/4
+	f8 \ottava #0 r8 r4 r4
+	R2.*2
+	\tuplet 6/4 4 {
+		c,16 b c b \change Staff = "redux_lower" bes a \change Staff = "redux_upper"
+			bes a bes a \change Staff = "redux_lower" aes g \change Staff = "redux_upper"
+			aes g aes g \change Staff = "redux_lower" fis f \change Staff = "redux_upper"
+	}
+	R2.*3
+	\tuplet 6/4 4 {
+		c'16 b c b \change Staff = "redux_lower" bes a \change Staff = "redux_upper"
+			bes a bes a \change Staff = "redux_lower" aes g \change Staff = "redux_upper"
+			aes g aes g \change Staff = "redux_lower" fis f \change Staff = "redux_upper"
+	}
+}
+
+redux_dynamics_III_AD = {
+	s2.*8
+}
+
+redux_lower_III_AD = \relative c' {
+	f8 r8 r4 r4
+	R2.*2
+	s2.
+	R2.*3
+	s2.
+}
+
 %%% Final assembly
 
-redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC }
-redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC }
-redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC }
+redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD }
+redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD }
+redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD }

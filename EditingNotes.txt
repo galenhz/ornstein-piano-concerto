@@ -957,9 +957,19 @@ inserts here too.
 mm. 14-18: Bassoons I and II originally played the countermelody but only for 2 bars. Bassoon I has a patch
 on the part which writes it out for all five; Bassoon II only has 2 bars, like the score. It seems reasonable
 to extrapolate that II should follow in I's example; no obvious reason not to, especially since so many other
-woodwind parts moved to this countermelody. I'm
+woodwind parts moved to this countermelody.
 (III-orch-04-bassoons)
 
 m. 16: Trombone I has a cis on beat two and the second half of beat 5; Trumpet I has des. These match the
 score, and the matching horn parts. Leaving as is for now.
 (III-orch-05-trumpets)
+
+m. 19: Extend the 8va in the piano reduction upper staff to the downbeat of this bar. It makes more sense that
+way.
+(III-piano-reduction)
+
+m. 19: The various wind instruments which had the countermelody inserted rather than in the parts don't have
+the final f that starts this bar; only the second clarinet and piccolo have them, as they were the only ones doing
+this figure in the original score. Does it make sense to add it to the adjusted parts? (Flutes/Oboes/Bassoons)
+I'm going to go with "yes" for now. #UNDECIDED
+(III-orch-*)

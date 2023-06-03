@@ -66,9 +66,45 @@ Bass_mvmt_III_AC = \relative c {
 	\after 4 -\markup { \italic "poco a poco dim." } ees2-^ ees2-^ ees2-^
 }
 
+%%% Section AD = mm. 19-26 (Rehearsal 53)
+
+Cello_mvmt_III_AD = \relative c' {
+	\mark #53
+	\time 3/4
+	\tag #'Score \grace s8.
+	<<
+		\new Voice {
+			\voiceOne
+			d8^\Div_mark s8 s4 s4
+		}
+		\new Voice {
+			\voiceTwo
+			f,8\p d8\rest d4\rest d4\rest
+		}
+	>>
+	R2.*7
+}
+
+Bass_mvmt_III_AD = \relative c' {
+	\mark #53
+	\time 3/4
+	\tag #'Score \grace s8.
+	<<
+		\new Voice {
+			\voiceOne
+			a8^\Div_mark s8 s4 s4
+		}
+		\new Voice {
+			\voiceTwo
+			d,8\p d8\rest d4\rest d4\rest
+		}
+	>>
+	R2.*7
+}
+
 %%% Final assembly
 
-Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC }
-Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC }
+Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD }
+Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD }
 
-Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC }
+Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD }

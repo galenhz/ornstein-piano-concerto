@@ -101,12 +101,46 @@ solo_lower_III_AC = \relative c, {
 		\change Staff = "solo_lower" \clef treble \tuplet 10/8 { a,[ c cis e f \change Staff ="solo_upper" a c cis e f] }
 		\revert TupletBracket.positions
 	}
+	\change Staff ="solo_lower"
 	\revert TupletBracket.bracket-visibility
 	\tupletNeutral
 }
 
+%%% Section AD = mm. 19-26 (Rehearsal 53)
+
+solo_upper_III_AD = \relative c'' {
+	\mark #53
+	\time 3/4
+	\tag #'Score \grace s8.
+	\repeat unfold 2 {
+		r8 <c f a>[ <des ges bes> <ees a c>] <f bes des>[ <ees a c>]
+		q <des ges bes> <c f a>4 q
+		<c e gis> <a des f>8 <gis c e> <c fes aes>4~
+		q2.
+	}
+}
+
+solo_dynamics_III_AD = {
+	s2.*8
+}
+
+solo_lower_III_AD = \relative c,, {
+	\clef bass
+	\tag #'Score \grace s8.
+	\tuplet 3/2 4 {
+		<d d'>8 a'' f' a cis f \clef treble a f cis
+		\clef bass a f a, d, a' f' a cis f
+		f,, cis' a' cis, a' cis \clef treble cis' f, a,
+		\clef bass f' a, cis, f, cis' a' cis, a' cis
+		d,, a' f' a cis f \clef treble a f cis
+		\clef bass a f a, d, a' f' a cis f
+		f,, cis' a' cis, a' cis \clef treble cis' f, a,
+		\clef bass f' a, cis, f, cis' a' cis, a' cis
+	}
+}
+
 %%% Final assembly
 
-solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC }
-solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC }
-solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC }
+solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD }
+solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD }
+solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD }
