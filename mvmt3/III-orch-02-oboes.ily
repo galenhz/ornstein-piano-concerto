@@ -86,10 +86,13 @@ Oboe_all_mvmt_III_AD = \relative c'
 	R2.*7
 }
 
+%%% Section AE = mm. 27-30
+%%% Tacet
+
 %%% Final assembly
 
-Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD }
-Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD }
-Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD}
-Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD }
-EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD }
+Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE }
+Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE }
+Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE }
+Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE }
+EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE }

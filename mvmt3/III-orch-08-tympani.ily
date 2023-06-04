@@ -78,7 +78,15 @@ Tympani_II_cues_mvmt_III_AC = \relative c {
 %%% Section AD = mm. 19-26 (Rehearsal 53)
 %%% Tacet
 
+%%% Section AE = mm. 27-30
+
+Tympani_I_mvmt_III_AE = \relative c {
+	\tempo "Mosso"
+	c4\mp r c
+	\repeat unfold 3 { c r c }
+}
+
 %%% Final assembly
 
-Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD }
-Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD }
+Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE }
+Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE }

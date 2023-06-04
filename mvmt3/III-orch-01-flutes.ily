@@ -186,10 +186,44 @@ Flute_III_mvmt_III_AD = \relative c' {
 	\tuplet 6/4 4 { c'16( b c b bes a) bes( a bes a aes g) aes( g aes g fis f) }
 }
 
+%%% Section AE = mm. 27-30
+
+Flute_I_mvmt_III_AE = \relative c''' {
+	\tempo "Mosso"
+	\partCombineApart
+	\tuplet 3/2 8 {
+		\tag #'Score e16( \tag #'Part e16(\mf b) \beamCutR b \beamCutL e( b) b  e( b) \beamCutR b \beamCutL e( b) b  f'( e) \beamCutR e \beamCutL e e e
+		\repeat unfold 2 { e( b) \beamCutR b \beamCutL e( b) b } b b \beamCutR b \beamCutL b b b
+		\repeat unfold 2 { e( b) \beamCutR b \beamCutL e( b) b } f'( e) \beamCutR e \beamCutL e e e
+		\repeat unfold 2 { e( b) \beamCutR b \beamCutL e( b) b } d( des \beamCutR bes) \beamCutL bes bes bes
+	}
+	\partCombineAutomatic
+}
+
+Flute_II_mvmt_III_AE = \relative c''' {
+	\tempo "Mosso"
+	\tuplet 3/2 8 {
+		b16\mf b \beamCutR b \beamCutL b b b  b b \beamCutR b \beamCutL b b b  c( b) \beamCutR b \beamCutL b b b
+		\repeat unfold 2 { b b \beamCutR b \beamCutL b b b } f( e) \beamCutR e \beamCutL e e e
+		\repeat unfold 2 { b' b \beamCutR b \beamCutL b b b } c( b) \beamCutR b \beamCutL b b b
+		\repeat unfold 2 { b b \beamCutR b \beamCutL b b b } a( aes) \beamCutR f \beamCutL f f f
+	}
+}
+
+Flute_IV_mvmt_III_AE = \relative c'' {
+	\tempo "Mosso"
+	\tuplet 3/2 8 {
+		e16\mf e \beamCutR e \beamCutL e e e  e e \beamCutR e \beamCutL e e e  f( e) \beamCutR e \beamCutL e e e
+		\repeat unfold 2 { e e \beamCutR e \beamCutL e e e } b b \beamCutR b \beamCutL b b b
+		\repeat unfold 2 { e e \beamCutR e \beamCutL e e e } f( e) \beamCutR e \beamCutL e e e
+		\repeat unfold 2 { e e \beamCutR e \beamCutL e e e } d( des) \beamCutR bes \beamCutL bes bes bes
+	}
+}
+
 %%% Final construction
 
-Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD }
-Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD }
-Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD }
-Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD }
-Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD }
+Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD \NULL_III_AE }
+Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD \Flute_I_mvmt_III_AE }
+Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_II_mvmt_III_AE }
+Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD \NULL_III_AE }
+Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_IV_mvmt_III_AE }

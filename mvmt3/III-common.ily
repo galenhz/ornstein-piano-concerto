@@ -19,3 +19,4 @@ NULL_III_AA = { \tempo "Allegro" \time 6/4 R1.*2 \time 5/4 R1*5/4 \time 6/4 R1. 
 NULL_III_AB = { \mark #51 \time 7/4 R1*7/4 \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 4/4 R1 }
 NULL_III_AC = { \mark #52 \tempo "Meno" \time 6/4 \tag #'Score \grace s8. R1.*5 }
 NULL_III_AD = { \mark #53 \time 3/4 \tag #'Score \grace s8. R2.*8 }
+NULL_III_AE = { \tempo "Mosso" R2.*4 }
