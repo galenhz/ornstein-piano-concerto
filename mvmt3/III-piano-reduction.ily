@@ -249,8 +249,63 @@ redux_lower_III_AE = \relative c, {
 	\repeat unfold 12 { <c f b>8[ <f b>] }
 }
 
+%%% Section AF = mm. 31-39 (Rehearsal 54)
+
+redux_upper_III_AF = \relative c' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	<c e gis b>8[ <gis' b>16 \beamCutR q \beamCutL q q]
+	<a c>8[ <gis b>16 \beamCutR q \beamCutL q q]
+	<b dis>8[ <gis b>16 \beamCutR q \beamCutL q q]
+	<a c>16[ \beamCutR <gis b> \beamCutL q \beamCutR <fis a> \beamCutL q <f aes>]
+	<c e gis b>8[ <gis' b>16 \beamCutR q \beamCutL q q]
+	<a c>8[ <gis b>16 \beamCutR q \beamCutL q q]
+	<b dis>8[ <gis b>16 \beamCutR q \beamCutL q q]
+	<ees' fis>16[ \beamCutR <d f> \beamCutL q \beamCutR <cis e> \beamCutL q <c ees>]
+	<f aes>16[ \beamCutR <e g> \beamCutL q \beamCutR <ees ges> \beamCutL q <d f>]
+}
+
+redux_dynamics_III_AF = {
+	s4.*9
+}
+
+redux_lower_III_AF = \relative c' {
+	<<
+		\new Voice {
+			\voiceOne
+			r8 <c e>16[ \beamCutR q \beamCutL q q]
+		}
+		\new Voice {
+			\voiceTwo
+			<d,, a' f'>16 r16 r8 r8
+		}
+	>>
+	\clef treble
+	<des'' f>8[ <c e>16 \beamCutR q \beamCutL q q]
+	<e gis>8[ <c e>16 \beamCutR q \beamCutL q q]
+	<des f>16[ \beamCutR <c e> \beamCutL q \beamCutR <bes d> \beamCutL q <a cis>]
+	\clef bass
+	<<
+		\new Voice {
+			\voiceOne
+			r8 <c e>16[ \beamCutR q \beamCutL q q]
+		}
+		\new Voice {
+			\voiceTwo
+			<d,, a' f'>16 r16 r8 r8
+		}
+	>>
+	\clef treble
+	<des'' f>8[ <c e>16 \beamCutR q \beamCutL q q]
+	<e gis>8[ <c e>16 \beamCutR q \beamCutL q q]
+	<g' bes>16[ \beamCutR <fis a> \beamCutL q \beamCutR <f aes> \beamCutL q <e g>]
+	<a c>16[ \beamCutR <gis b> \beamCutL q \beamCutR <g bes> \beamCutL q <fis a>]
+}
+
 %%% Final assembly
 
-redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE }
-redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE }
-redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE }
+redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF }
+redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
+		\redux_dynamics_III_AF }
+redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF }

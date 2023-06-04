@@ -173,8 +173,28 @@ solo_lower_III_AE = \relative c, {
 	}
 }
 
+%%% Section AF = mm. 31-39 (Rehearsal 54)
+
+solo_upper_III_AF = \relative c' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	<gis b>16 r16 r8 r8
+	R4.*8
+}
+
+solo_dynamics_III_AF = {
+	s4.*9
+}
+
+solo_lower_III_AF = \relative c, {
+	<d a' f'>16 r16 r8 r8
+	R4.*8
+}
+
 %%% Final assembly
 
-solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE }
-solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE }
-solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE }
+solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF }
+solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
+		\solo_dynamics_III_AF }
+solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF }
