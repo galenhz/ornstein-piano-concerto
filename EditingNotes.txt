@@ -928,6 +928,12 @@ III/IV seem more reasonable. The score has the different accidentals, just as th
 Should I adjust Horn I to match III/IV? #UNDECIDED
 (III-orch-06-horns)
 
+mm. 14-18: Something I noticed while doing the piano reduction ossia: the transfer of a bunch of parts to
+the countermelody has left one of the notes in the chords a bit thin. Horn V is the only voice playing
+the fifth under the melody. Anyone performing this might want to swap Horn III from copying IV/VI and
+have it play in unison with V. #SPECULATION
+(III-orch-06-horns)
+
 mm. 14-18: Basses lack the ff dynamic that cellos/violas have. Added. Also, cellos show both > and ^ accents
 on the strong beats; score only has ^, going with that.
 (III-orch-10-cello-bass)
@@ -973,3 +979,7 @@ the final f that starts this bar; only the second clarinet and piccolo have them
 this figure in the original score. Does it make sense to add it to the adjusted parts? (Flutes/Oboes/Bassoons)
 I'm going to go with "yes" for now. #UNDECIDED
 (III-orch-*)
+
+m. 27-30: In the PR, the solo piano bars the top voice differently in the firat two measures compared to the
+second. The score has all four measures the same way the second half of the PR does. Going with that.
+(III-solo-piano)

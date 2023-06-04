@@ -139,8 +139,42 @@ solo_lower_III_AD = \relative c,, {
 	}
 }
 
+%%% Section AE = mm. 27-30
+
+solo_upper_III_AE = \relative c'' {
+	\tempo "Mosso"
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 2 {
+				aes8[ g aes g ces bes]
+				aes[ g aes g f e]
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 8 {
+				\repeat unfold 2 { g16[ f \beamCutR e \beamCutL f e d] } bes'[ aes \beamCutR g \beamCutL aes g f]
+				\repeat unfold 2 { g16[ f \beamCutR e \beamCutL f e d] } e[ d \beamCutR cis \beamCutL d cis b]
+				\repeat unfold 2 { g'16[ f \beamCutR e \beamCutL f e d] } bes'[ aes \beamCutR g \beamCutL aes g f]
+				\repeat unfold 2 { g16[ f \beamCutR e \beamCutL f e d] } e[ d \beamCutR cis \beamCutL d cis bes]
+			}
+		}
+	>>
+}
+
+solo_dynamics_III_AE = {
+	s2.*4
+}
+
+solo_lower_III_AE = \relative c, {
+	\repeat unfold 4 {
+		c16[ \beamCutR f \beamCutL b c] f[ \beamCutR b \beamCutL f c] b[ \beamCutR f \beamCutL c f]
+	}
+}
+
 %%% Final assembly
 
-solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD }
-solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD }
-solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD }
+solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE }
+solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE }
+solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE }

@@ -230,8 +230,27 @@ redux_lower_III_AD = \relative c' {
 	s2.
 }
 
+%%% Section AE = mm. 27-30
+
+redux_upper_III_AE = \relative c'' {
+	\tempo "Mosso"
+	r8 <b f' b>[ <e b' e> <f c' f> <e b' e>16 <d a' d> <e b' e>8]
+	r8 <b f' b>[ <e b' e> <d a' d>16 \beamCutR <cis gis' cis> \beamCutL <d a' d> <cis gis' cis> <b f' b>8]
+	r8 <b f' b>[ <e b' e> <f c' f> <e b' e>16 <d a' d> <e b' e>8]
+	r8 <b f' b>[ <e b' e> <d a' d>16 \beamCutR <cis gis' cis> \beamCutL <d a' d> <cis gis' cis> <bes f' bes>8]
+}
+
+redux_dynamics_III_AE = {
+	s2.*4
+}
+
+redux_lower_III_AE = \relative c, {
+	\clef bass
+	\repeat unfold 12 { <c f b>8[ <f b>] }
+}
+
 %%% Final assembly
 
-redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD }
-redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD }
-redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD }
+redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE }
+redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE }
+redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE }
