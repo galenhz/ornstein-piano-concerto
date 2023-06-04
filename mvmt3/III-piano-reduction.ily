@@ -180,6 +180,24 @@ redux_lower_III_AC = \relative c' {
 	cis8[ c16. cis32 c8 bes16. c32 bes8 a16. e'32] cis8[ c16. cis32 c8 bes16. c32 bes8 a]
 }
 
+% Quick piano reduction by me of the main part of the orchestra in this section. May find use for it.
+
+redux_ossia_upper_III_AC = \relative c'' {
+	\mark #52
+	\tempo "Meno"
+	\time 6/4
+	<c f a c>4-^ q <des ges bes des>4-^ <c f a c>8 <bes des ges bes> <a c f a>4-^ <f a c f>
+	<c' f a c>-^ <des ges bes des> <e a c e>-^ <ees aes ces ees>8 <des des'> <c f a c>4-^ <a c f a>
+	<c f a c>-^ <des ges bes des> <e a c e>-^ <fis b dis fis> <e a c e>8-^ <des ges bes des> <c f a c>4
+	<a c f a>4-^ <ees' ges bes ees> <f a c f>-^ <bes ges' bes> <f a c f>8-^ <ees ges bes ees> <f a c f>4
+	<a, c f a>4-^ <ees' ges bes ees> <f a c f>8-^[ <bes bes'>] <c c'>[ <bes bes'>] <f a c f>-^[ <ees ges bes ees>] <f a c f>4
+}
+
+redux_ossia_lower_III_AC = \relative c, {
+	\clef bass
+	\repeat unfold 15 { <ees bes' f'>4-^ <bes' f'> }
+}
+
 %%% Section AD = mm. 19-26 (Rehearsal 53)
 
 redux_upper_III_AD = \relative c''' {

@@ -91,7 +91,7 @@ Horn_V_mvmt_III_AC = \transpose c' f \relative c'' {
 	c4-^\ff c des-^ c8( aes) g4-^ e
 	c'-^( des) e-^ ees c-^ g
 	c-^ cis e-^ fis e8-^( cis) c4
-	g-^ des' e-^ f e8-^( d) e4
+	g-^ des' e-^ f e8-^( des) e4
 	g,-^ \tag #'Part des'_\markup { \italic "poco a poco dim." } \tag #'Score des e8-^[( f)] g[( f]) e-^([ des]) e4
 }
 
