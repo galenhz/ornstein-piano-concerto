@@ -116,10 +116,76 @@ Bass_mvmt_III_AE = \relative c {
 	\repeat unfold 9 { c-- r }
 }
 
+%%% Section AF = mm. 31-39 (Rehearsal 54)
+
+Cello_mvmt_III_AF = \relative c {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	\tuplet 3/2 8 {
+		f16[\sfz gis gis] gis[ gis gis] gis[ gis gis]
+		a->[( gis) gis] gis[ gis gis] gis[ gis gis]
+		b->[( gis) gis] gis[ gis gis] gis[ gis gis]
+		a->[( aes) aes] aes->[( fis) fis] fis->[( f) f]
+		r16 gis[ gis] gis[ gis gis] gis[ gis gis]
+		a->[( gis) gis] gis[ gis gis] gis[ gis gis]
+		b->[( gis) gis] gis[ gis gis] gis[ gis gis]
+		e'->[( dis) dis] dis->[( d) d] d->[( cis) cis]
+		fis->[( f) f] f->[( e) e] e->[( dis) dis]
+	}
+}
+
+Cello_divisi_II_mvmt_III_AF = \relative c {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	\tuplet 3/2 8 {
+		a16[\sfz^\Div_mark f' f] f[ f f] f[ f f]
+		f->[ f f] f[ f f] f[ f f]
+		gis->[( f) f] f[ f f] f[ f f]
+		f->[ f f] f->[( d) d] d->[( des) des]
+		r16 f[ f] f[ f f] f[ f f]
+		f->[ f f] f[ f f] f[ f f]
+		gis->[( f) f] f[ f f] f[ f f]
+		c'->[( b) b] b->[( bes) bes] bes->[( a) a]
+		d->[( des) des] des->[( c) c] c->[( b) b]
+	}
+}
+
+Bass_mvmt_III_AF = \relative c {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	<<
+		\new Voice {
+			\voiceOne
+			d16^\Div_mark d\rest d8\rest d8\rest
+		}
+		\new Voice {
+			\voiceTwo
+			d,16\sfz s16 s8 s8
+		}
+	>>
+	R4.*3
+	<<
+		\new Voice {
+			\voiceOne
+			a''8 s8 s8
+		}
+		\new Voice {
+			\voiceTwo
+			d,8 d\rest d\rest
+		}
+	>>
+	R4.*4
+}
 
 %%% Final assembly
 
-Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE }
-Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE }
+Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE \Cello_mvmt_III_AF }
+Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF }
 
-Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE }
+Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF }

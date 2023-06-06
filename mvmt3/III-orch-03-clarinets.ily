@@ -114,10 +114,79 @@ Clarinet_II_mvmt_III_AD = \transpose c' bes \relative c'' {
 %%% Section AE = mm. 27-30
 %%% Tacet
 
+%%% Section AF = mm. 31-39 (Rehearsal 54)
+
+Clarinet_I_mvmt_III_AF = \transpose c' bes \relative c'' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	cis16-^\sfz[ \beamCutL \beamCutR r16 \beamCutL \tag #'Score cis \tag #'Part cis_\markup { \italic "staccato sempre" } \beamCutR cis \beamCutL cis cis]
+	d-^[ \beamCutL \beamCutR r16 \beamCutL cis \beamCutR cis \beamCutL cis cis]
+	f-^[ \beamCutL \beamCutR r16 \beamCutL cis \beamCutR cis \beamCutL cis cis]
+	d->[( \beamCutR cis) \beamCutL cis->( \beamCutR b) \beamCutL b->( ais)]
+	cis-^[ \beamCutL \beamCutR r16 \beamCutL cis \beamCutR cis \beamCutL cis cis]
+	d-^[ \beamCutL \beamCutR r16 \beamCutL cis \beamCutR cis \beamCutL cis cis]
+	f-^[ \beamCutL \beamCutR r16 \beamCutL cis \beamCutR cis \beamCutL cis cis]
+	gis'->[( \beamCutR g) \beamCutL g->( \beamCutR fis) \beamCutL fis->( f)]
+	bes->[( \beamCutR a) \beamCutL a->( \beamCutR aes) \beamCutL aes->( g)]
+}
+
+% Can't just transpose it down a minor third, because of some differing note choices.
+Clarinet_II_mvmt_III_AF = \transpose c' bes \relative c'' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	ais16-^\sfz[ \beamCutL \beamCutR r16 \beamCutL ais_\markup { \italic "staccato sempre" } \beamCutR ais \beamCutL ais ais]
+	b-^[ \beamCutL \beamCutR r16 \beamCutL ais \beamCutR ais \beamCutL ais ais]
+	cis-^[ \beamCutL \beamCutR r16 \beamCutL ais \beamCutR ais \beamCutL ais ais]
+	b->[( \beamCutR ais) \beamCutL ais->( \beamCutR gis) \beamCutL gis->( g)]
+	ais-^[ \beamCutL \beamCutR r16 \beamCutL ais \beamCutR ais \beamCutL ais ais]
+	b-^[ \beamCutL \beamCutR r16 \beamCutL ais \beamCutR ais \beamCutL ais ais]
+	cis-^[ \beamCutL \beamCutR r16 \beamCutL ais \beamCutR ais \beamCutL ais ais]
+	f'->[( \beamCutR e) \beamCutL e->( \beamCutR dis) \beamCutL dis->( d)]
+	g->[( \beamCutR fis) \beamCutL fis->( \beamCutR f) \beamCutL f->( e)]
+}
+
+Clarinet_III_mvmt_II_AF = \transpose c' bes \relative c' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	fis16-^\sfz[ \beamCutL \beamCutR r16 \beamCutL \tag #'Score fis \tag #'Part fis_\markup { \italic "staccato sempre" } \beamCutR fis \beamCutL fis fis]
+	g-^[ \beamCutL \beamCutR r16 \beamCutL fis \beamCutR fis \beamCutL fis fis]
+	ais-^[ \beamCutL \beamCutR r16 \beamCutL fis \beamCutR fis \beamCutL fis fis]
+	g->[( \beamCutR fis) \beamCutL fis->( \beamCutR e) \beamCutL e->( dis)]
+	fis16-^[ \beamCutL \beamCutR r16 \beamCutL fis \beamCutR fis \beamCutL fis fis]
+	g-^[ \beamCutL \beamCutR r16 \beamCutL fis \beamCutR fis \beamCutL fis fis]
+	ais-^[ \beamCutL \beamCutR r16 \beamCutL fis \beamCutR fis \beamCutL fis fis]
+	c'->[( \beamCutR b) \beamCutL b->( \beamCutR ais) \beamCutL ais->( a)]
+	d->[( \beamCutR cis) \beamCutL cis->( \beamCutR c) \beamCutL c->( b)]
+}
+
+Clarinet_IV_mvmt_III_AF = \transpose c' bes \relative c' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	d16-^\sfz[ \beamCutL \beamCutR r16 \beamCutL d_\markup { \italic "staccato sempre" } \beamCutR d \beamCutL d d]
+	ees-^[ \beamCutL \beamCutR r16 \beamCutL d \beamCutR d \beamCutL d d]
+	fis-^[ \beamCutL \beamCutR r16 \beamCutL d \beamCutR d \beamCutL d d]
+	ees->[( \beamCutR d) \beamCutL d->( \beamCutR c) \beamCutL c->( b)]
+	d16-^[ \beamCutL \beamCutR r16 \beamCutL d \beamCutR d \beamCutL d d]
+	ees-^[ \beamCutL \beamCutR r16 \beamCutL d \beamCutR d \beamCutL d d]
+	fis-^[ \beamCutL \beamCutR r16 \beamCutL d \beamCutR d \beamCutL d d]
+	a'->[( \beamCutR aes) \beamCutL aes->( \beamCutR g) \beamCutL g->( fis)]
+	b->[( \beamCutR ais) \beamCutL ais->( \beamCutR a) \beamCutL a->( aes)]
+}
+
 %%% Final assembly
 
-Clarinet_I_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Clarinet_II_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_II_mvmt_III_AC \Clarinet_II_mvmt_III_AD \NULL_III_AE }
-Clarinet_III_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Clarinet_IV_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-BassClarinet_mvmt_III = { \NULL_III_AA \BassClarinet_cues_mvmt_III_AB \BassClarinet_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
+Clarinet_I_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_I_mvmt_III_AF }
+Clarinet_II_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_II_mvmt_III_AC \Clarinet_II_mvmt_III_AD \NULL_III_AE
+		\Clarinet_II_mvmt_III_AF }
+Clarinet_III_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
+		\Clarinet_III_mvmt_II_AF }
+Clarinet_IV_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_IV_mvmt_III_AF }
+BassClarinet_mvmt_III = { \NULL_III_AA \BassClarinet_cues_mvmt_III_AB \BassClarinet_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF }

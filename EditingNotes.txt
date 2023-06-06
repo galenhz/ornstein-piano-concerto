@@ -983,3 +983,6 @@ I'm going to go with "yes" for now. #UNDECIDED
 m. 27-30: In the PR, the solo piano bars the top voice differently in the firat two measures compared to the
 second. The score has all four measures the same way the second half of the PR does. Going with that.
 (III-solo-piano)
+
+m. 34: Violin I part lacks the accents on the beats that clarinets/horns have. Adding them.
+(III-orch-09-violins-viola)

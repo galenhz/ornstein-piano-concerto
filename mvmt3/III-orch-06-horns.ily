@@ -124,13 +124,81 @@ Horn_VII_VIII_cues_mvmt_III_AC = \transpose c' f \relative c'' {
 %%% Section AE = mm. 27-30
 %%% Tacet
 
+%%% Section AF = mm. 31-39 (Rehearsal 54)
+
+Horn_I_mvmt_III_AF = \transpose c' f \relative c'' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	dis16-^[\f r \tag #'Score dis] \tag #'Part dis]_\markup { \italic "staccato sempre" } r r8
+	e16-^[ r dis] r r8
+	fis16-^[ r dis] r r8
+	e16-^[ r dis-^ r cis-^] r
+	dis-^[ r dis] r r8
+	e16-^[ r dis] r r8
+	fis16-^[ r dis] r r8
+	ais'16-^[ r a-^ r gis-^] r
+	c-^[ r b-^ r bes-^] r
+}
+
+% Can't just transpose due to duplicate markup in score.
+Horn_II_mvmt_III_AF = \transpose c' f \relative c' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	dis16-^[\f r dis]_\markup { \italic "staccato sempre" } r r8
+	e16-^[ r dis] r r8
+	fis16-^[ r dis] r r8
+	e16-^[ r dis-^ r cis-^] r
+	dis-^[ r dis] r r8
+	e16-^[ r dis] r r8
+	fis16-^[ r dis] r r8
+	ais'16-^[ r a-^ r gis-^] r
+	c-^[ r b-^ r bes-^] r
+}
+
+Horn_V_mvmt_III_AF = \transpose c' f \relative c'' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	b16-^[\f r \tag #'Score b] \tag #'Part b]_\markup { \italic "staccato sempre" } r r8
+	c16-^[ r b] r r8
+	dis16-^[ r b] r r8
+	c16-^[ r b-^ r a-^] r
+	b-^[ r b] r r8
+	c16-^[ r b] r r8
+	dis16-^[ r b] r r8
+	f'16-^[ r e-^ r dis-^] r
+	g-^[ r fis-^ r f-^] r
+}
+
+% Can't just transpose due to one note out of sync.
+Horn_VI_mvmt_III_AF = \transpose c' f \relative c'' {
+	\mark #54
+	\tempo "poco mosso"
+	\time 3/8
+	\tag #'Score \grace s8
+	g16-^[\f r g]_\markup { \italic "staccato sempre" } r r8
+	aes16-^[ r g] r r8
+	b16-^[ r g] r r8
+	aes16-^[ r g-^ r f-^] r
+	g-^[ r g] r r8
+	aes16-^[ r g] r r8
+	b16-^[ r g] r r8
+	d'16-^[ r des-^ r c-^] r
+	e-^[ r dis-^ r d-^] r
+}
+
 %%% Final assembly
 
-Horn_I_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Horn_II_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
+Horn_I_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_I_mvmt_III_AF }
+Horn_II_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_II_mvmt_III_AF }
 Horn_III_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
 Horn_IV_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Horn_V_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_V_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Horn_VI_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
+Horn_V_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_V_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_V_mvmt_III_AF }
+Horn_VI_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_VI_mvmt_III_AF }
 Horn_VII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
 Horn_VIII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE }

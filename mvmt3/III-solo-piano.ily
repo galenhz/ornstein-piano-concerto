@@ -179,6 +179,7 @@ solo_upper_III_AF = \relative c' {
 	\mark #54
 	\tempo "poco mosso"
 	\time 3/8
+	\tag #'Score \grace s8
 	<gis b>16 r16 r8 r8
 	R4.*8
 }
@@ -188,6 +189,7 @@ solo_dynamics_III_AF = {
 }
 
 solo_lower_III_AF = \relative c, {
+	\tag #'Score \grace s8
 	<d a' f'>16 r16 r8 r8
 	R4.*8
 }
