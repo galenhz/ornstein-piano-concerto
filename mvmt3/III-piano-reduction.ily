@@ -303,9 +303,37 @@ redux_lower_III_AF = \relative c' {
 	<a c>16[ \beamCutR <gis b> \beamCutL q \beamCutR <g bes> \beamCutL q <fis a>]
 }
 
+%%%% Section AG = mm. 40-53 (Rehearsal 55)
+
+redux_upper_III_AG = \relative c' {
+	\mark #55
+	\repeat unfold 3 { bes8[ bes16 \beamCutR bes \beamCutL fis bes] }
+	d \beamCutR fis, \beamCutL cis' \beamCutR fis, \beamCutL c' fis,
+	\repeat unfold 3 { bes8[ bes16 \beamCutR bes \beamCutL fis bes] }
+	e \beamCutR a, \beamCutL ees' \beamCutR aes, \beamCutL d g,
+	fis' \beamCutR b, \beamCutL f' \beamCutR bes, \beamCutL e a,
+	\repeat unfold 5 { <d fis bes d>4. }
+}
+
+redux_dynamics_III_AG = {
+	s4.*14
+}
+
+redux_lower_III_AG = \relative c, {
+	\clef bass
+	\repeat unfold 3 { <bes bes'>8[ q16 \beamCutR q \beamCutL fis' <bes, bes'>] }
+	<d d'> \beamCutR fis \beamCutL <cis cis'> \beamCutR fis \beamCutL <c c'> fis
+	\repeat unfold 3 { <bes, bes'>8[ q16 \beamCutR q \beamCutL fis' <bes, bes'>] }
+	<e e'> \beamCutR a \beamCutL <ees ees'> \beamCutR aes \beamCutL <d, d'> g
+	<fis fis'> \beamCutR b \beamCutL <f f'> \beamCutR bes \beamCutL <e, e'> a
+	\repeat unfold 5 { \tuplet 4/3 { <d gis d'>8 <fis, fis'> <d d'> <fis, fis'> } }
+}
+
 %%% Final assembly
 
-redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF }
+redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
+		\redux_upper_III_AG }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
-		\redux_dynamics_III_AF }
-redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF }
+		\redux_dynamics_III_AF \redux_dynamics_III_AG }
+redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
+		\redux_lower_III_AG }

@@ -194,9 +194,54 @@ solo_lower_III_AF = \relative c, {
 	R4.*8
 }
 
+%%%% Section AG = mm. 40-53 (Rehearsal 55)
+
+solo_upper_III_AG = \relative c'' {
+	\mark #55
+	<c fis c'>8 q16 \beamCutR q \beamCutL q q
+	<cis g' cis>8 <c fis c'>16 \beamCutR q \beamCutL q q
+	<ees a ees'>8 <c fis c'>16 \beamCutR q \beamCutL q q
+	<cis g' cis> \beamCutR <c fis c'> \beamCutL q \beamCutR <bes ees bes'> \beamCutL q <a d a'>
+	<c fis c'>8 q16 \beamCutR q \beamCutL q q
+	<cis g' cis>8 <c fis c'>16 \beamCutR q \beamCutL q q
+	<ees a ees'>8 <c fis c'>16 \beamCutR q \beamCutL q q
+	<e bes' e> \beamCutR <ees a ees'> \beamCutL q \beamCutR <d aes' d> \beamCutL q <des g des'>
+	<fis c' fis> \beamCutR <f b f'> \beamCutL q \beamCutR <e bes' e> \beamCutL q <ees a ees'>
+	r16 \ottava #1 <a a'> <ees' ees'>8[ <f f'>]
+	r16 <a, a'> <gis' gis'>8[ <bes bes'>]
+	r16 <a, a'> <ees' ees'>8[ <f f'>]
+	r16 <a, a'> <gis' gis'>8[ <beses beses'>]
+	r16 <a, a'> <gis' gis'>8[ <bes bes'>]
+	\ottava #0
+}
+
+solo_dynamics_III_AG = {
+	s4.\ff s4.*13
+}
+
+solo_lower_III_AG = \relative c' {
+	\clef treble
+	<a d fis a>8 q16 \beamCutR q \beamCutL q q
+	<bes ees g bes>8 <a d fis a>16 \beamCutR q \beamCutL q q
+	<c fis a c>8 <a d fis a>16 \beamCutR q \beamCutL q q
+	<bes ees g bes> \beamCutR <a d fis a> \beamCutL q \beamCutR <g c ees g> \beamCutL q <fis bes d fis>
+	<a d fis a>8 q16 \beamCutR q \beamCutL q q
+	<bes ees g bes>8 <a d fis a>16 \beamCutR q \beamCutL q q
+	<c fis a c>8 <a d fis a>16 \beamCutR q \beamCutL q q
+	<cis g' bes cis> \beamCutR <c fis a c> \beamCutL q \beamCutR <b f' aes b> \beamCutL q <bes e g bes>
+	<ees a c ees> \beamCutR <d gis b d> \beamCutL q \beamCutR <cis g' bes cis> \beamCutL q <c fis a c>
+	r16 <a a'> <ees' ees'>8[ <f f'>]
+	r16 <a, a'> <gis' gis'>8[ <bes bes'>]
+	r16 <a, a'> <ees' ees'>8[ <f f'>]
+	r16 <a, a'> <gis' gis'>8[ <beses beses'>]
+	r16 <a a'> <gis gis'>8[ <bes bes'>]
+}
+
 %%% Final assembly
 
-solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF }
+solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
+		\solo_upper_III_AG }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
-		\solo_dynamics_III_AF }
-solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF }
+		\solo_dynamics_III_AF \solo_dynamics_III_AG }
+solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
+		\solo_lower_III_AG }
