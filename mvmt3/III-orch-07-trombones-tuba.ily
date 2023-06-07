@@ -81,12 +81,72 @@ Tuba_mvmt_III_AC = \transpose c' f \Trombone_III_mvmt_III_AC
 %%% Section AF = mm. 31-39 (Rehearsal 54)
 %%% Tacet
 
+%%% Section AG = mm. 40-53 (Rehearsal 55)
+
+Trombone_partial_cues_mvmt_III_AG = \relative c {
+	\mark #55
+	\tag #'Score R4.*9
+	\tag #'Part <<
+		\new CueVoice {
+			bes16[_"Cbass." \beamCutL \beamCutR r16 \beamCutL bes \beamCutR bes \beamCutL \beamCutR r bes]
+			\repeat unfold 2 { bes[ \beamCutL \beamCutR r16 \beamCutL bes \beamCutR bes \beamCutL \beamCutR r bes] }
+			d8[ cis c]
+			\repeat unfold 3 { bes16[ \beamCutL \beamCutR r16 \beamCutL bes \beamCutR bes \beamCutL \beamCutR r bes] }
+			e8[ ees d]
+			fis[ f e]
+		}
+		\new Voice {
+			\voiceTwo
+			R4.*9
+		}
+	>>
+}
+
+Trombone_I_mvmt_III_AG = \relative c' {
+	\clef bass
+	\Trombone_partial_cues_mvmt_III_AG
+	\tag #'Score d4. \tag #'Part d4.\f
+	\repeat unfold 4 { d }
+}
+
+Trombone_II_mvmt_III_AG = \relative c' {
+	\clef bass
+	\Trombone_partial_cues_mvmt_III_AG
+	gis8\f fis4
+	\repeat unfold 4 { gis8 fis4 }
+}
+
+Trombone_III_mvmt_III_AG = \relative c {
+	\Trombone_partial_cues_mvmt_III_AG
+	d4.\f
+	\repeat unfold 4 { d }
+}
+
+Tuba_cues_mvmt_III_AG = \relative c {
+	\tag #'Score \NULL_III_AG
+	\tag #'Part {
+		\mark #55
+		R4.*9
+		<<
+			\new CueVoice {
+				d4.^"III Tbn."
+				\repeat unfold 4 { d }
+			}
+			\new Voice {
+				\voiceTwo
+				R4.*5
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF }
+		\NULL_III_AF \Trombone_I_mvmt_III_AG }
 Trombone_II_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF }
+		\NULL_III_AF \Trombone_II_mvmt_III_AG }
 Trombone_III_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF }
-Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Tuba_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF }
+		\NULL_III_AF \Trombone_III_mvmt_III_AG }
+Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Tuba_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
+		\Tuba_cues_mvmt_III_AG }

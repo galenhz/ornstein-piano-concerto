@@ -435,19 +435,32 @@ Viola_divisi_II_mvmt_III_AF = \relative c' {
 	R4.*8
 }
 
+%%% Section AG = mm. 40-53 (Rehearsal 55)
+
+Viola_mvmt_III_AG = \relative c' {
+	\mark #55
+	bes16-^[\f^\Unis_mark \beamCutL \beamCutR r16 \beamCutL bes \beamCutR bes \beamCutL fis( bes)]
+	\repeat unfold 2 { bes-^[ \beamCutL \beamCutR r16 \beamCutL bes \beamCutR bes \beamCutL fis( bes)] }
+	d-^( \beamCutR fis,) \beamCutL cis'-^( \beamCutR fis,) \beamCutL c'-^( fis,)
+	\repeat unfold 3 { bes-^[ \beamCutL \beamCutR r16 \beamCutL bes \beamCutR bes \beamCutL fis( bes)] }
+	e->( \beamCutR a,) \beamCutL ees'->( \beamCutR aes,) \beamCutL d->( g,)
+	fis'->( \beamCutR b,) \beamCutL f'-^( \beamCutR bes,) \beamCutL e->( a,)
+	R4.*5
+}
+
 %%% Final assembly
 
 Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB \Violin_I_mvmt_III_AC \Violin_I_mvmt_III_AD \Violin_I_mvmt_III_AE
-		\Violin_I_mvmt_III_AF }
+		\Violin_I_mvmt_III_AF \NULL_III_AG }
 Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_divisi_II_mvmt_III_AD
-		\Violin_I_divisi_II_mvmt_III_AE \NULL_divisi_II_mvmt_III_AF }
+		\Violin_I_divisi_II_mvmt_III_AE \NULL_divisi_II_mvmt_III_AF \NULL_III_AG }
 
 Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA \Violin_II_mvmt_III_AB \Violin_II_mvmt_III_AC \Violin_II_mvmt_III_AD \Violin_II_mvmt_III_AE
-		\Violin_II_mvmt_III_AF }
+		\Violin_II_mvmt_III_AF \NULL_III_AG }
 Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA \Violin_II_divisi_II_mvmt_III_AB \Violin_II_divisi_II_mvmt_III_AC
-		\Violin_II_divisi_II_mvmt_III_AD \Violin_II_divisi_II_mvmt_III_AE \Violin_II_divisi_II_mvmt_III_AF }
+		\Violin_II_divisi_II_mvmt_III_AD \Violin_II_divisi_II_mvmt_III_AE \Violin_II_divisi_II_mvmt_III_AF \NULL_III_AG }
 
 Viola_mvmt_III = { \clef alto \NULL_III_AA \Viola_cues_mvmt_III_AB \Viola_mvmt_III_AC \Viola_mvmt_III_AD \Viola_mvmt_III_AE
-		\Viola_mvmt_III_AF }
+		\Viola_mvmt_III_AF \Viola_mvmt_III_AG }
 Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_III_AD
-		\Viola_divisi_II_mvmt_III_AE \Viola_divisi_II_mvmt_III_AF }
+		\Viola_divisi_II_mvmt_III_AE \Viola_divisi_II_mvmt_III_AF \NULL_III_AG }

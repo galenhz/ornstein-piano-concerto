@@ -986,3 +986,7 @@ second. The score has all four measures the same way the second half of the PR d
 
 m. 34: Violin I part lacks the accents on the beats that clarinets/horns have. Adding them.
 (III-orch-09-violins-viola)
+
+m. 49-53: We've reached the point where keeping Trombone I/II in tenor clef has reached diminishing returns. Flipping
+back to bass here, instead of just before rehersal 61.
+(III-orch-07-trombones-tuba)

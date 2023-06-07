@@ -99,7 +99,23 @@ Tympani_II_mvmt_III_AF = \relative c {
 	R4.*4
 }
 
+%%% Section AG = mm. 40-53 (Rehearsal 55)
+
+Tympani_II_mvmt_III_AG = \relative c {
+	\mark #55
+	bes8\f r r
+	bes\mf r r
+	bes r r
+	R4.
+	bes8 r r
+	bes8 r r
+	bes8 r r
+	R4.*7
+}
+
 %%% Final assembly
 
-Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF }
-Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF }
+Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
+		\NULL_III_AG }
+Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
+		\Tympani_II_mvmt_III_AG }

@@ -303,7 +303,7 @@ redux_lower_III_AF = \relative c' {
 	<a c>16[ \beamCutR <gis b> \beamCutL q \beamCutR <g bes> \beamCutL q <fis a>]
 }
 
-%%%% Section AG = mm. 40-53 (Rehearsal 55)
+%%% Section AG = mm. 40-53 (Rehearsal 55)
 
 redux_upper_III_AG = \relative c' {
 	\mark #55

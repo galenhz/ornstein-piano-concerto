@@ -192,13 +192,56 @@ Horn_VI_mvmt_III_AF = \transpose c' f \relative c'' {
 	e-^[ r dis-^ r d-^] r
 }
 
+%%% Section AG = mm. 40-53 (Rehearsal 55)
+
+Horn_I_mvmt_III_AG = \transpose c' f \relative c''' {
+	\mark #55
+	R4.*9
+	a4.\f
+	a
+	a
+	a
+	a
+}
+
+Horn_II_mvmt_III_AG = \transpose c' aes \Horn_I_mvmt_III_AG
+
+Horn_V_mvmt_III_AG = \transpose c' e \Horn_I_mvmt_III_AG
+
+Horn_VI_mvmt_III_AG = \transpose c' c \Horn_I_mvmt_III_AG
+
+Horn_other_cues_mvmt_III_AG = \transpose c' f \relative c'' {
+	\tag #'Score \NULL_III_AG
+	\tag #'Part {
+		\mark #55
+		R4.*9
+		<<
+			\new CueVoice {
+				<a cis f a>4.^"I+II+V+IV Hn." q q q q
+			}
+			\new Voice {
+				\voiceTwo
+				R4.*5
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
-Horn_I_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_I_mvmt_III_AF }
-Horn_II_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_II_mvmt_III_AF }
-Horn_III_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Horn_IV_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Horn_V_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_V_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_V_mvmt_III_AF }
-Horn_VI_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_VI_mvmt_III_AF }
-Horn_VII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
-Horn_VIII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE }
+Horn_I_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_I_mvmt_III_AF
+		\Horn_I_mvmt_III_AG }
+Horn_II_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_II_mvmt_III_AF
+		\Horn_II_mvmt_III_AG }
+Horn_III_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
+		\Horn_other_cues_mvmt_III_AG }
+Horn_IV_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
+		\Horn_other_cues_mvmt_III_AG }
+Horn_V_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_V_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_V_mvmt_III_AF
+		\Horn_V_mvmt_III_AG }
+Horn_VI_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_VI_mvmt_III_AF
+		\Horn_VI_mvmt_III_AG }
+Horn_VII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
+		\Horn_other_cues_mvmt_III_AG }
+Horn_VIII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE\NULL_III_AF
+		\Horn_other_cues_mvmt_III_AG }

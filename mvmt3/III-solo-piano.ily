@@ -194,7 +194,7 @@ solo_lower_III_AF = \relative c, {
 	R4.*8
 }
 
-%%%% Section AG = mm. 40-53 (Rehearsal 55)
+%%% Section AG = mm. 40-53 (Rehearsal 55)
 
 solo_upper_III_AG = \relative c'' {
 	\mark #55

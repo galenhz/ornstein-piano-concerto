@@ -95,15 +95,18 @@ Bassoon_I_II_mvmt_III_AD = \relative c {
 %%% Section AF = mm. 31-39 (Rehearsal 54)
 %%% Tacet
 
+%%% Section AG = mm. 40-53 (Rehearsal 55)
+%%% Tacet
+
 %%% Final assembly
 
 Bassoon_I_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD \NULL_III_AE
-		\NULL_III_AF }
+		\NULL_III_AF \NULL_III_AG }
 Bassoon_II_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD \NULL_III_AE
-		\NULL_III_AF }
+		\NULL_III_AF \NULL_III_AG }
 Bassoon_III_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF }
+		\NULL_III_AF \NULL_III_AG }
 Bassoon_IV_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF }
+		\NULL_III_AF \NULL_III_AG }
 Contrabassoon_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Contrabassoon_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF }
+		\NULL_III_AF \NULL_III_AG }
