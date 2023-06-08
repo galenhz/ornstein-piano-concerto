@@ -329,11 +329,82 @@ redux_lower_III_AG = \relative c, {
 	\repeat unfold 5 { \tuplet 4/3 { <d gis d'>8 <fis, fis'> <d d'> <fis, fis'> } }
 }
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+
+redux_upper_III_AH = \relative c' {
+	\mark #56
+	\tempo "Largo (Lento)"
+	\time 5/4
+	dis8 e~ e4 dis8 e fis g~ g4
+	\time 6/4
+	<<
+		\new Voice {
+			\voiceOne
+			<aes, g'>2. <e'>2 <e>4
+			\time 3/4
+			a8[ g] a[ g~] g4
+			\time 4/4
+			g8[ fis] fis[ ees~] ees4 cis8 d
+		}
+		\new Voice {
+			\voiceTwo
+			e8 des c2~ c2.
+			\time 3/4
+			<bes d>2.
+			\time 4/4
+			<aes d>2. s4
+		}
+	>>
+	\time 3/4
+	\clef bass
+	\repeat unfold 3 { r32 f f \beamCutR f \beamCutL f16 f }
+	\time 4/4
+	a32 gis f \beamCutR f \beamCutL f16 f r32 f f \beamCutR f \beamCutL f16 f r32 f f \beamCutR f \beamCutL f16 f~ f8 f
+}
+
+redux_dynamics_III_AH = {
+	s1*5/4 s1. s2. s1 s2. s1
+}
+
+redux_lower_III_AH = \relative c {
+	\time 5/4
+	<<
+		\new Voice {
+			\voiceOne
+			<e a c>2. <g c e>2
+			\time 6/4
+			\crossStaff {
+				s2. <d gis>2 <gis>4
+			}
+			\time 3/4
+			s2.
+			\time 4/4
+			s2. <d gis>4
+		}
+		\new Voice {
+			\voiceTwo
+			<a, a'>2. <c c'>2
+			\time 6/4
+			<f, f'>2. <bes bes'>2 q4
+			\time 3/4
+			\stemUp <g' d'>2.
+			\time 4/4
+			<bes, bes'>2. \stemNeutral q4
+		}
+	>>
+	\tuplet 3/2 8 {
+		\time 3/4
+		\repeat unfold 3 { <d, d'>16[ a'' \beamCutR \parenthesize f'~ \beamCutL \parenthesize f f a,] }
+		\time 4/4
+		\repeat unfold 4 { <d,, d'>16[ des'' \beamCutR aes'~ \beamCutL aes aes des,] }
+	}
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
-		\redux_upper_III_AG }
+		\redux_upper_III_AG \redux_upper_III_AH }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
-		\redux_dynamics_III_AF \redux_dynamics_III_AG }
+		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
-		\redux_lower_III_AG }
+		\redux_lower_III_AG \redux_lower_III_AH }

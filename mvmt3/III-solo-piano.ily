@@ -237,11 +237,66 @@ solo_lower_III_AG = \relative c' {
 	r16 <a a'> <gis gis'>8[ <bes bes'>]
 }
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+
+solo_upper_III_AH = \relative c' {
+	\mark #56
+	\tempo "Largo (Lento)"
+	\tuplet 3/2 4 {
+		\time 5/4
+		\repeat unfold 3 { <c e b'>4~ q16 <b dis bes'> }
+			<c e cis'>4~ q16 <b dis bes'> <c e b'>4~ q16 <b dis bes'>
+		\time 6/4
+		\repeat unfold 3 { <c e g>4~ q16 <b dis bes'> }
+			<c e g>4~ q16 <b dis fis> <g b ees>4~ q16 <b dis fis> <c e g>4~ q16 <b dis bes'>
+		\time 3/4
+		\repeat unfold 3 { <d fis bes cis>4~ q16 <ees g bes d> }
+		\time 4/4
+		<ges bes d f>4~ q16 <ees g bes d> <d fis bes cis>4~ q16 <ees g bes d> <d fis cis'>4~ q16 <c e bes'> <b dis g>4~ q16 <c e gis>
+		\mark #57
+		\time 3/4
+		\repeat unfold 2 { <c fis g b>4~ q16 <des f a c> } <c fis g b>4~ q16 <e aes c ees>
+		\time 4/4
+		<c fis g b>4~ q16 <des f a c> <c fis g b>4~ q16 <b ees g bes> <aes c e g>4~ q16 <a des f aes> <c fis g b>4~ q16 <des f a c>
+	}
+}
+
+solo_dynamics_III_AH = {
+	s1*5/4 s1. s2. s1 s2. s1
+}
+
+solo_lower_III_AH = \relative c,, {
+	\clef bass
+	\tuplet 3/2 4 {
+		\time 5/4
+		\ottava #-1 <a a'>8 \ottava #0 e''[ a] gis' c, e, g' c, e, c g' e' g bes b
+		\time 6/4
+		r f,,[ f'] c'[ fis g] aes[ c, f,] r bes,,[ bes'] g''[ g,] r bes,[ bes' g']
+		\time 3/4
+		<g,, g'>[ d'' bes'] cis[ bes d,] r <g, d'> bes'
+	}
+	\time 4/4
+	\tuplet 3/2 4 { cis[ bes d,] bes,[ bes' d] } gis[ d] \tuplet 3/2 { bes,[ bes' d] }
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			\tuplet 3/2 4 { \repeat unfold 7 { r16 f f8 f } }
+		}
+		\new Voice {
+			\voiceTwo
+			<d, a'>2.
+			\time 4/4
+			<f cis'>1
+		}
+	>>
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
-		\solo_upper_III_AG }
+		\solo_upper_III_AG \solo_upper_III_AH }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
-		\solo_dynamics_III_AF \solo_dynamics_III_AG }
+		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
-		\solo_lower_III_AG }
+		\solo_lower_III_AG \solo_lower_III_AH }

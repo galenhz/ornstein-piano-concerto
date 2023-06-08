@@ -112,5 +112,10 @@
 		\numericTimeSignature
 		rehearsalMarkFormatter = #format-mark-circle-numbers
 	}
+	% The piano reduction makes use of this in section AH.
+	\context {
+		\PianoStaff
+		\consists "Span_stem_engraver"
+	}
   }
 }
