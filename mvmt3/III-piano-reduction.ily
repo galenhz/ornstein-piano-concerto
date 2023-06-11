@@ -396,7 +396,7 @@ redux_lower_III_AH = \relative c {
 		\time 3/4
 		\repeat unfold 3 { <d, d'>16[ a'' \beamCutR \parenthesize f'~ \beamCutL \parenthesize f f a,] }
 		\time 4/4
-		\repeat unfold 4 { <d,, d'>16[ des'' \beamCutR aes'~ \beamCutL aes aes des,] }
+		\repeat unfold 4 { <f, f'>16[ des'' \beamCutR aes'~ \beamCutL aes aes des,] }
 	}
 }
 
