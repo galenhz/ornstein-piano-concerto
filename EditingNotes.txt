@@ -978,6 +978,8 @@ m. 19: The various wind instruments which had the countermelody inserted rather 
 the final f that starts this bar; only the second clarinet and piccolo have them, as they were the only ones doing
 this figure in the original score. Does it make sense to add it to the adjusted parts? (Flutes/Oboes/Bassoons)
 I'm going to go with "yes" for now. #UNDECIDED
+Second question; should they land on an explicit p dynamic, like the strings, to go along with the diminuendo?
+Again, going with "yes" for now. #DYNAMICS
 (III-orch-*)
 
 m. 27-30: In the PR, the solo piano bars the top voice differently in the firat two measures compared to the
@@ -990,3 +992,11 @@ m. 34: Violin I part lacks the accents on the beats that clarinets/horns have. A
 m. 49-53: We've reached the point where keeping Trombone I/II in tenor clef has reached diminishing returns. Flipping
 back to bass here, instead of just before rehersal 61.
 (III-orch-07-trombones-tuba)
+
+m. 54: Violin II's first note in part is c; according to score (and cues in Violin I part), it's a. Could be a copyist
+error that nobody caught. Changing to a.
+(III-orch-09-violins-viola)
+
+m. 56: Flute I has no dynamic in score. Part is ff, clearly by performer, not copyist. Giving it mp for now to match EH
+in previous bars. #DYNAMICS
+(III-orch-01-flutes)

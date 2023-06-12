@@ -227,21 +227,24 @@ Horn_other_cues_mvmt_III_AG = \transpose c' f \relative c'' {
 	}
 }
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+%%% Tacet
+
 %%% Final assembly
 
 Horn_I_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_I_mvmt_III_AF
-		\Horn_I_mvmt_III_AG }
+		\Horn_I_mvmt_III_AG \NULL_III_AH }
 Horn_II_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_II_mvmt_III_AF
-		\Horn_II_mvmt_III_AG }
+		\Horn_II_mvmt_III_AG \NULL_III_AH }
 Horn_III_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\Horn_other_cues_mvmt_III_AG }
+		\Horn_other_cues_mvmt_III_AG \NULL_III_AH }
 Horn_IV_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\Horn_other_cues_mvmt_III_AG }
+		\Horn_other_cues_mvmt_III_AG \NULL_III_AH }
 Horn_V_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_V_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_V_mvmt_III_AF
-		\Horn_V_mvmt_III_AG }
+		\Horn_V_mvmt_III_AG \NULL_III_AH }
 Horn_VI_mvmt_III = { \NULL_III_AA \Horn_I_VI_cues_mvmt_III_AB \Horn_III_IV_VI_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Horn_VI_mvmt_III_AF
-		\Horn_VI_mvmt_III_AG }
+		\Horn_VI_mvmt_III_AG \NULL_III_AH }
 Horn_VII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\Horn_other_cues_mvmt_III_AG }
+		\Horn_other_cues_mvmt_III_AG \NULL_III_AH }
 Horn_VIII_mvmt_III = { \NULL_III_AA \NULL_III_AB \Horn_VII_VIII_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE\NULL_III_AF
-		\Horn_other_cues_mvmt_III_AG }
+		\Horn_other_cues_mvmt_III_AG \NULL_III_AH }

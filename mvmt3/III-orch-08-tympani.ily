@@ -113,9 +113,30 @@ Tympani_II_mvmt_III_AG = \relative c {
 	R4.*7
 }
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+
+Tympani_I_mvmt_III_AH = \relative c {
+	\mark #56
+	\tempo "Largo (Lento)"
+	\time 5/4
+	R1*5/4
+	\time 6/4
+	R1.
+	\time 3/4
+	R2.
+	\time 4/4
+	R1
+	\mark #57
+	\time 3/4
+	r32\ppp f f \beamCutR f \beamCutL f16 f
+		\repeat unfold 2 { r32 f f \beamCutR f \beamCutL f16 f }
+	\time 4/4
+	\repeat unfold 4 { r32 f f \beamCutR f \beamCutL f16 f }
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
-		\NULL_III_AG }
+		\NULL_III_AG \Tympani_I_mvmt_III_AH }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
-		\Tympani_II_mvmt_III_AG }
+		\Tympani_II_mvmt_III_AG \NULL_III_AH }

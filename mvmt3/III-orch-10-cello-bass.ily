@@ -207,12 +207,56 @@ Bass_mvmt_III_AG = \relative c {
 	\repeat unfold 5 { \tuplet 4/3 { d'( fis,) d( fis,) } }
 }
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+
+Cello_Bass_mvmt_III_AH_partial = \relative c {
+	\mark #56
+	\tempo "Largo (Lento)"
+	\time 5/4
+	a2.\p c2
+	\time 6/4
+	f,2. bes2 bes4
+	\time 3/4
+	g2.
+	\time 4/4
+	bes2.\> bes4\!
+}
+
+Cello_mvmt_III_AH = \relative c, {
+	\Cello_Bass_mvmt_III_AH_partial
+	\mark #57
+	\time 3/4
+	\repeat unfold 3 { \tuplet 3/2 8 { d16[( a' \beamCutR f'~ \beamCutL f) f( a,]) } }
+	\time 4/4
+	\repeat unfold 4 { \tuplet 3/2 8 { f[( des' \beamCutR aes'~ \beamCutL aes) aes( f]) } }
+}
+
+Bass_mvmt_III_AH = \relative c {
+	\Cello_Bass_mvmt_III_AH_partial
+	\mark #57
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			d4^\Div_mark d d
+			\time 4/4
+			f f f f
+		}
+		\new Voice {
+			\voiceTwo
+			d,4\pp d d
+			\time 4/4
+			f f f f
+		}
+	>>
+}
+
 %%% Final assembly
 
 Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE
-		\Cello_mvmt_III_AF \Cello_mvmt_III_AG }
+		\Cello_mvmt_III_AF \Cello_mvmt_III_AG \Cello_mvmt_III_AH }
 Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF
-		\NULL_III_AG }
+		\NULL_III_AG \NULL_III_AH }
 
 Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF
-		\Bass_mvmt_III_AG }
+		\Bass_mvmt_III_AG \Bass_mvmt_III_AH }

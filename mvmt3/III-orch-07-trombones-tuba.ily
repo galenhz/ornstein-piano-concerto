@@ -140,13 +140,16 @@ Tuba_cues_mvmt_III_AG = \relative c {
 	}
 }
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+%%% Tacet
+
 %%% Final assembly
 
 Trombone_I_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF \Trombone_I_mvmt_III_AG }
+		\NULL_III_AF \Trombone_I_mvmt_III_AG \NULL_III_AH }
 Trombone_II_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF \Trombone_II_mvmt_III_AG }
+		\NULL_III_AF \Trombone_II_mvmt_III_AG \NULL_III_AH }
 Trombone_III_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF \Trombone_III_mvmt_III_AG }
+		\NULL_III_AF \Trombone_III_mvmt_III_AG \NULL_III_AH }
 Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Tuba_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\Tuba_cues_mvmt_III_AG }
+		\Tuba_cues_mvmt_III_AG \NULL_III_AH }

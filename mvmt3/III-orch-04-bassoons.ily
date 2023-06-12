@@ -85,7 +85,8 @@ Bassoon_I_II_mvmt_III_AD = \relative c {
 	\mark #53
 	\time 3/4
 	\tag #'Score \grace s8.
-	f8 r8 r4 r4
+	f8\p r8 r4 r4
+	\clef bass
 	R2.*7
 }
 
@@ -98,10 +99,78 @@ Bassoon_I_II_mvmt_III_AD = \relative c {
 %%% Section AG = mm. 40-53 (Rehearsal 55)
 %%% Tacet
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+
+Bassoon_cues_mvmt_III_AH = \relative c, {
+	\tag #'Score \NULL_III_AH
+	\tag #'Part {
+		\mark #56
+		\tempo "Largo (Lento)"
+		\time 5/4
+		R1*5/4
+		\time 6/4
+		R1.
+		\time 3/4
+		R2.
+		\time 4/4
+		R1
+		\mark #57
+		\time 3/4
+		<<
+			\new CueVoice {
+				\voiceOne
+				d2^"Cbn." d4
+				\time 4/4
+				f2 f
+			}
+			\new Voice {
+				\voiceThree
+				R2.
+				\time 4/4
+				R1
+			}
+		>>
+	}
+}
+
+Contrabassoon_mvmt_III_AH = \relative c'' {
+	\mark #56
+	\tempo "Largo (Lento)"
+	\time 5/4
+	R1*5/4
+	\time 6/4
+	R1.
+	\time 3/4
+	\tag #'Score { R2. \time 4/4 R1 }
+	\tag #'Part <<
+		\new CueVoice {
+			\voiceOne
+			\cueClef treble
+			a8[(^"I Fl." g)] a[( g~] g4)
+			\time 4/4
+			g8[( fis]) fis([ ees~] ees4) cis8( d)
+			\cueClefUnset
+		}
+		\new Voice {
+			\voiceTwo
+			\override MultiMeasureRest.staff-position = #-8
+			R2.
+			\time 4/4
+			R1
+			\revert MultiMeasureRest.staff-position
+		}
+	>>
+	\mark #57
+	\time 3/4
+	d,,2\p d4
+	\time 4/4
+	f2 f
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD \NULL_III_AE
-		\NULL_III_AF \NULL_III_AG }
+		\NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH }
 Bassoon_II_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG }
 Bassoon_III_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
@@ -109,4 +178,4 @@ Bassoon_III_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \
 Bassoon_IV_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG }
 Contrabassoon_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Contrabassoon_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF \NULL_III_AG }
+		\NULL_III_AF \NULL_III_AG \Contrabassoon_mvmt_III_AH }

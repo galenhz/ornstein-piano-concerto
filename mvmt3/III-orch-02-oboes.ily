@@ -82,7 +82,7 @@ Oboe_all_mvmt_III_AD = \relative c'
 	\mark #53
 	\time 3/4
 	\tag #'Score \grace s8.
-	f8 r8 r4 r4
+	f8\p r8 r4 r4
 	R2.*7
 }
 
@@ -113,11 +113,66 @@ EnglishHorn_cues_mvmt_III_AG = \transpose c' f \relative c'' {
 	}
 }
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+
+Oboe_all_cues_mvmt_III_AH = \relative c' {
+	\tag #'Score \NULL_III_AH
+	\tag #'Part {
+		\mark #56
+		\tempo "Largo (Lento)"
+		\time 5/4
+		<<
+			\new CueVoice {
+				\voiceOne
+				dis8(^"E.H." e~ e4) dis8( e) fis( g~ g4)
+				\time 6/4
+				e8( des) c2~ c2.
+			}
+			\new Voice {
+				\voiceThree
+				\override MultiMeasureRest.staff-position = #4
+				R1*5/4
+				\time 6/4
+				R1.
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+		\time 3/4
+		R2.
+		\time 4/4
+		R1
+		\mark #57
+		\time 3/4
+		R2.
+		\time 4/4
+		R1
+	}
+}
+
+EnglishHorn_mvmt_III_AH = \transpose c' f \relative c'' {
+	\mark #56
+	\tempo "Largo (Lento)"
+	\time 5/4
+	\tag #'Score ais8(\mp \tag #'Part ais8(\mp^\Solo_mark b~ b4) aes8( b) cis( d~ d4)
+	\time 6/4
+	b8( aes) g2~ g2.
+	\time 3/4
+	R2.
+	\time 4/4
+	R1
+	\mark #57
+	\time 3/4
+	R2.
+	\time 4/4
+	R1
+}
 
 %%% Final assembly
 
-Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG }
+Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
+		\Oboe_all_cues_mvmt_III_AH }
 Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG }
 Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE \NULL_III_AF \NULL_III_AG }
 Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG }
-EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \EnglishHorn_cues_mvmt_III_AG }
+EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \EnglishHorn_cues_mvmt_III_AG
+		\EnglishHorn_mvmt_III_AH }

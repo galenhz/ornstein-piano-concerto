@@ -107,7 +107,7 @@ Clarinet_II_mvmt_III_AD = \transpose c' bes \relative c'' {
 	\mark #53
 	\time 3/4
 	\tag #'Score \grace s8.
-	g8 r8 r4 r4
+	g8\p r8 r4 r4
 	R2.*7
 }
 
@@ -184,15 +184,18 @@ Clarinet_IV_mvmt_III_AF = \transpose c' bes \relative c' {
 %%% Section AG = mm. 40-53 (Rehearsal 55)
 %%% Tacet
 
+%%% Section AH = mm. 54-59 (Rehearsal 56-57)
+%%% Tacet
+
 %%% Final assembly
 
 Clarinet_I_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_I_mvmt_III_AF
-		\NULL_III_AG }
+		\NULL_III_AG \NULL_III_AH }
 Clarinet_II_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_II_mvmt_III_AC \Clarinet_II_mvmt_III_AD \NULL_III_AE
-		\Clarinet_II_mvmt_III_AF \NULL_III_AG }
+		\Clarinet_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH }
 Clarinet_III_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\Clarinet_III_mvmt_II_AF \NULL_III_AG }
+		\Clarinet_III_mvmt_II_AF \NULL_III_AG \NULL_III_AH }
 Clarinet_IV_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_IV_mvmt_III_AF
-		\NULL_III_AG }
+		\NULL_III_AG \NULL_III_AH }
 BassClarinet_mvmt_III = { \NULL_III_AA \BassClarinet_cues_mvmt_III_AB \BassClarinet_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\NULL_III_AG }
+		\NULL_III_AG \NULL_III_AH }
