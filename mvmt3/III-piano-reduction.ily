@@ -11,6 +11,7 @@
 		 
 redux_upper_III_AA = \relative c''' {
 	\tempo "Allegro"
+	\tag #'Midi \tempo 4 = 160
 	\time 6/4
 	\ottava #1
 	% FIXME: This is tricky to render the same way the PR does. I'm just going with simple default
@@ -158,6 +159,7 @@ redux_lower_III_AB = \relative c'' {
 redux_upper_III_AC = \relative c''' {
 	\mark #52
 	\tempo "Meno"
+	\tag #'Midi \tempo 4 = 96
 	\time 6/4
 	r8 b[ c cis e f16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c]
 	r8 b[ c cis e f16. b32] gis8[ g16. gis32 g8 f16. g32 f8 e]
@@ -334,6 +336,7 @@ redux_lower_III_AG = \relative c, {
 redux_upper_III_AH = \relative c' {
 	\mark #56
 	\tempo "Largo (Lento)"
+	\tag #'Midi \tempo 4 = 72
 	\time 5/4
 	dis8 e~ e4 dis8 e fis g~ g4
 	\time 6/4
@@ -400,11 +403,71 @@ redux_lower_III_AH = \relative c {
 	}
 }
 
+%%% Section AI = mm. 60-67 (Rehearsal ~58)
+
+redux_upper_III_AI = \relative c'' {
+	\clef treble
+	\time 3/4
+	<ees ees'>8 <d d'> \tuplet 3/2 { <cis cis'>16 <c c'> <a a'> } <c c'>8~ \tuplet 3/2 { q <cis cis'> <d d'> }
+	\time 2/4
+	\tuplet 3/2 { <dis dis'>16 <e e'> <gis gis'> } <f f'>8~ q8. <e e'>16
+	\time 3/4
+	<ees ees'>8 <d d'> \tuplet 3/2 { <cis cis'>16 <c c'> <a a'> } <c c'>8~ \tuplet 3/2 { q <cis cis'> <d d'> }
+	\tuplet 3/2 { <dis dis'>16 <e e'> <gis gis'> } <f f'>8~ q4. r8
+	\mark #58
+	\repeat unfold 2 {
+		\time 6/8
+		\repeat unfold 2 { <c f g c>4~ q16 <des ges aes bes> }
+		\time 9/8
+		<b e fis b>2.~ q4.
+	}
+}
+
+redux_dynamics_III_AI = {
+	s2. s2 s2.*2 s2. s1*9/8 s2. s1*9/8
+}
+
+redux_lower_III_AI = \relative c {
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			r8 f4 f f8
+			\time 2/4
+			r8 cis4 cis8
+			\time 3/4
+			r8 f4 f f8
+			r8 cis4 cis cis8
+			\repeat unfold 2 {
+				\time 6/8
+				\repeat unfold 2 { <c' f g>4~ q16 <des ges aes> }
+				\time 9/8
+				\parenthesize <b e fis>2.~ q4.
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			<d,, a' f'>2.
+			\time 2/4
+			<f cis' a'>2
+			\time 3/4
+			<d a' f'>2.
+			<f cis' a'>
+			\repeat unfold 2 {
+				\time 6/8
+				<aes, aes'>2.
+				\time 9/8
+				<c g' e'>2.~ q4.
+			}
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
-		\redux_upper_III_AG \redux_upper_III_AH }
+		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
-		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH }
+		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
-		\redux_lower_III_AG \redux_lower_III_AH }
+		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI }

@@ -292,11 +292,98 @@ solo_lower_III_AH = \relative c,, {
 	>>
 }
 
+%%% Section AI = mm. 60-67 (Rehearsal ~58)
+
+solo_upper_III_AI = \relative c' {
+	\tuplet 3/2 4 {
+		\time 3/4
+		\repeat unfold 3 { <f a cis e>4~ q16 <ges bes d f> }
+		\time 2/4
+		\repeat unfold 2 { <e aes c ees>4~ q16 <f a des fes> }
+		\time 3/4
+		\repeat unfold 3 { <f a cis e>4~ q16 <ges bes d f> }
+		<e aes c ees>4~ q16 <f a des fes> <ees g b d>4~ q16 <e aes c ees> <d fis ais cis>4~ q16 <des f a c>
+	}
+	\mark #58
+	\repeat unfold 2 {
+		\time 6/8
+		\repeat unfold 2 { <a c d g>4~ q16 <aes des ees aes> }
+		\time 9/8
+		<<
+			\new Voice {
+				\voiceOne
+				r4. <fis'' b e fis>2.
+			}
+			\new Voice {
+				\voiceTwo
+				s4. <b,, e fis b>2.
+			}
+		>>
+	}
+}
+
+solo_dynamics_III_AI = {
+	s2. s2 s2.*2 s2. s1*9/8 s2. s1*9/8
+}
+
+solo_lower_III_AI = \relative c'' {
+	\clef treble
+	\time 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			\override TupletBracket.bracket-visibility = ##f
+			\override TupletNumber.stencil = ##f
+			\tuplet 3/2 4 {
+				\repeat unfold 3 { r8 a~ a }
+				\time 2/4
+				\repeat unfold 2 { r8 f~ f }
+				\time 3/4
+				\repeat unfold 3 { r8 a~ a }
+				\repeat unfold 3 { r8 f~ f }
+			}
+			\revert TupletBracket.bracket-visibility
+			\revert TupletNumber.stencil
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 3/2 4 {
+				\repeat unfold 3 { r16 a, gis' f~ f8 }
+				\time 2/4
+				\repeat unfold 2 { r16 a, e' cis~ cis8 }
+				\time 3/4
+				\repeat unfold 3 { r16 a gis' f~ f8 }
+				\repeat unfold 3 { r16 a, e' cis~ cis8 }
+			}
+		}
+	>>
+	\mark #58
+	\clef bass
+	\repeat unfold 2 {
+		<<
+			\new Voice {
+				\voiceOne
+				\time 6/8
+				\repeat unfold 2 { r8 g~ g }
+				\time 9/8
+				<fis b e fis>2.~ q4.
+			}
+			\new Voice {
+				\voiceTwo
+				\time 6/8
+				\repeat unfold 2 { r16 aes, d c~ c8 }
+				\time 9/8
+				<c, g' e'>2.~ q4.
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
-		\solo_upper_III_AG \solo_upper_III_AH }
+		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
-		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH }
+		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
-		\solo_lower_III_AG \solo_lower_III_AH }
+		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI }

@@ -1000,3 +1000,6 @@ error that nobody caught. Changing to a.
 m. 56: Flute I has no dynamic in score. Part is ff, clearly by performer, not copyist. Giving it mp for now to match EH
 in previous bars. #DYNAMICS
 (III-orch-01-flutes)
+
+mm. 64-67: Solo piano part is perfectly readable as written, but honestly this might be better with a third staff.
+(III-solo-piano)

@@ -127,3 +127,5 @@ Movement III
 
 m. 1-14: The way the PR is written is difficult to reproduce in lilypond. Just putting the same notes in a
 more default layout. Should revisit to see if I can make it work.
+
+mm. 60-67: Writing the lower solo part a bit differently than the score to dodge the "ties across voices" problem.

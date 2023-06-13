@@ -101,7 +101,7 @@
 		\new Staff = "solo_lower" \keepWithTag #'PR { \accidentalStyle forget \solo_lower_III }
 	>>
 	\new PianoStaff \with { instrumentName = "Orchestra" } <<
-		\new Staff = "redux_upper" { \accidentalStyle forget \redux_upper_III }
+		\new Staff = "redux_upper" \removeWithTag #'Midi { \accidentalStyle forget \redux_upper_III }
 		\new Dynamics \redux_dynamics_III
 		\new Staff = "redux_lower" { \accidentalStyle forget \redux_lower_III }
 	>>
