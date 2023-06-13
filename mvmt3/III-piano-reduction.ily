@@ -417,7 +417,7 @@ redux_upper_III_AI = \relative c'' {
 	\mark #58
 	\repeat unfold 2 {
 		\time 6/8
-		\repeat unfold 2 { <c f g c>4~ q16 <des ges aes bes> }
+		\repeat unfold 2 { <c f g c>4~ q16 <des ges aes des> }
 		\time 9/8
 		<b e fis b>2.~ q4.
 	}
