@@ -167,12 +167,54 @@ EnglishHorn_mvmt_III_AH = \transpose c' f \relative c'' {
 	R1
 }
 
+%%% Section AI = mm. 60-67 (Rehearsal ~58)
+%%% Tacet, cues only
+
+Oboe_I_II_cues_mvmt_III_AI = \relative c''' {
+	\tag #'Score \NULL_III_AI
+	\tag #'Part {
+		\time 3/4
+		R2.
+		\time 2/4
+		R2
+		\time 3/4
+		R2.*2
+		\mark #58
+		\time 6/8
+		<<
+			\new CueVoice {
+				c4~(_"I Cl." c16 des) c4~( c16 des)
+				\time 9/8
+				b2.~ b4.
+				\time 6/8
+				c4~( c16 des) c4~( c16 des)
+				\time 9/8
+				b2.~ b4.
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\time 9/8
+				R1*9/8
+				\time 6/8
+				R2.
+				\time 9/8
+				R1*9/8
+			}
+		>>
+	}
+}
+
+
 %%% Final assembly
 
 Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Oboe_all_cues_mvmt_III_AH }
-Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG }
-Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE \NULL_III_AF \NULL_III_AG }
-Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG }
+		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI }
+Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
+		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI }
+Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE \NULL_III_AF \NULL_III_AG
+		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI }
+Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
+		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI }
 EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \EnglishHorn_cues_mvmt_III_AG
-		\EnglishHorn_mvmt_III_AH }
+		\EnglishHorn_mvmt_III_AH \NULL_III_AI }

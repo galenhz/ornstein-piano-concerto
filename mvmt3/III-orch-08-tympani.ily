@@ -134,9 +134,55 @@ Tympani_I_mvmt_III_AH = \relative c {
 	\repeat unfold 4 { r32 f f \beamCutR f \beamCutL f16 f }
 }
 
+%%% Section AI = mm. 60-67 (Rehearsal ~58)
+
+Tympani_I_mvmt_III_AI = \relative c {
+	\time 3/4
+	r8 f4\pp f f8
+	\time 2/4
+	R2
+	\time 3/4
+	r8 f4 f f8
+	R2.
+	\mark #58
+	\repeat unfold 2 {
+		\time 6/8
+		R2.
+		\time 9/8
+		R1*9/8
+	}
+}
+
+Tympani_II_mvmt_III_AI = \relative c {
+	\time 3/4
+	\tag #'Score R2.
+	\tag #'Part <<
+		\new CueVoice {
+			\voiceOne
+			r8 f4^"I Tym." f f8
+		}
+		\new Voice {
+			\voiceTwo
+			R2.
+		}
+	>>
+	\time 2/4
+	r8 cis4\pp cis8
+	\time 3/4
+	R2.
+	r8 cis4 cis cis8
+	\mark #58
+	\repeat unfold 2 {
+		\time 6/8
+		R2.
+		\time 9/8
+		R1*9/8
+	}
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
-		\NULL_III_AG \Tympani_I_mvmt_III_AH }
+		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
-		\Tympani_II_mvmt_III_AG \NULL_III_AH }
+		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI }

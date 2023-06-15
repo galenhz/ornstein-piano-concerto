@@ -98,13 +98,51 @@ Trumpet_IV_mvmt_III_AC = \transpose c' a \Trumpet_III_mvmt_III_AC
 %%% Section AH = mm. 54-59 (Rehearsal 56-57)
 %%% Tacet
 
+%%% Section AI = mm. 60-67 (Rehearsal ~58)
+%%% Tacet, cues only
+
+Trumpet_cues_mvmt_III_AI = \relative c''' {
+	\tag #'Score \NULL_III_AI
+	\tag #'Part {
+		\time 3/4
+		R2.
+		\time 2/4
+		R2
+		\time 3/4
+		R2.*2
+		\mark #58
+		\time 6/8
+		<<
+			\new CueVoice {
+				c4~(_"I Cl." c16 des) c4~( c16 des)
+				\time 9/8
+				b2.~ b4.
+				\time 6/8
+				c4~( c16 des) c4~( c16 des)
+				\time 9/8
+				b2.~ b4.
+			}
+			\new Voice {
+				\voiceTwo
+				R2.
+				\time 9/8
+				R1*9/8
+				\time 6/8
+				R2.
+				\time 9/8
+				R1*9/8
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
 Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }
 Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }
 Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }
 Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }

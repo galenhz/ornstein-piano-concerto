@@ -286,7 +286,7 @@ Flute_I_mvmt_III_AH = \relative c' {
 	R1
 }
 
-Flute_Picc_cues_mvmt_III_AH = \relative c'' {
+Flute_II_cues_mvmt_III_AH = \relative c'' {
 	\tag #'Score \NULL_III_AH
 	\tag #'Part {
 		\mark #56
@@ -320,15 +320,71 @@ Flute_Picc_cues_mvmt_III_AH = \relative c'' {
 	}
 }
 
+%%% Section AI = mm. 60-67 (Rehearsal ~58)
+
+Flute_I_mvmt_III_AI = \relative c''' {
+	\time 3/4
+	\tag #'Score ees8.(\f \tag #'Part ees8.(\f^\Soli_mark d16) \tuplet 3/2 { cis( c a } c8~ \tuplet 3/2 { c) cis( d) }
+	\time 2/4
+	\tuplet 3/2 { dis16( e gis) } f8~( f8. e16)
+	\time 3/4
+	ees8.( d16) \tuplet 3/2 { cis( c a } c8~ \tuplet 3/2 { c) cis( d) }
+	\tuplet 3/2 { dis16( e gis) } f8~( f4.) r8
+	\mark #58
+	\time 6/8
+	R2.
+	\time 9/8
+	R1*9/8
+	\time 6/8
+	R2.
+	\time 9/8
+	R1*9/8
+}
+
+Flute_II_mvmt_III_AI = \transpose c' c \Flute_I_mvmt_III_AI
+
+Flute_Picc_cues_mvmt_III_AI = \relative c'' {
+	\tag #'Score \NULL_III_AI
+	\tag #'Part {
+		\time 3/4
+		<<
+			\new CueVoice {
+				<ees ees'>8.(_"I+II Fl." <d d'>16) \tuplet 3/2 { <cis cis'>( <c c'> <a a'> } <c c'>8~ \tuplet 3/2 { q) <cis cis'>( <d d'>) }
+				\time 2/4
+				\tuplet 3/2 { <dis dis'>16( <e e'> <gis gis'>) } <f f'>8~( q8. <e e'>16)
+			}
+			\new Voice {
+				\voiceTwo
+				\override MultiMeasureRest.staff-position = #-10
+				R2.
+				\time 2/4
+				R2
+				\revert MultiMeasureRest.staff-position
+			}
+		>>
+		\time 3/4
+		R2.*2
+		\mark #58
+		\time 6/8
+		R2.
+		\time 9/8
+		R1*9/8
+		\time 6/8
+		R2.
+		\time 9/8
+		R1*9/8
+	}
+}
+
 %%% Final construction
 
 Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Flute_Picc_cues_mvmt_III_AH }
+		\NULL_III_AH \Flute_Picc_cues_mvmt_III_AI }
 Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD \Flute_I_mvmt_III_AE
-		\Flute_I_mvmt_III_AF \NULL_III_AG \Flute_I_mvmt_III_AH }
+		\Flute_I_mvmt_III_AF \NULL_III_AG \Flute_I_mvmt_III_AH \Flute_I_mvmt_III_AI }
 Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_II_mvmt_III_AE
-		\Flute_II_mvmt_III_AF \NULL_III_AG \Flute_Picc_cues_mvmt_III_AH }
+		\Flute_II_mvmt_III_AF \NULL_III_AG \Flute_II_cues_mvmt_III_AH \Flute_II_mvmt_III_AI }
 Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD \NULL_III_AE \NULL_III_AF
-		\NULL_III_AG \Flute_Picc_cues_mvmt_III_AH }
+		\NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI }
 Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_IV_mvmt_III_AE
-		\Flute_IV_mvmt_III_AF \NULL_III_AG \Flute_Picc_cues_mvmt_III_AH }
+		\Flute_IV_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI }

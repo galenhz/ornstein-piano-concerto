@@ -1003,3 +1003,8 @@ in previous bars. #DYNAMICS
 
 mm. 64-67: Solo piano part is perfectly readable as written, but honestly this might be better with a third staff.
 (III-solo-piano)
+
+m. 64: Clarinet IV has an empty bar here, jumping in suddenly in m. 65 instead. The score shows it playing in this
+bar, an octave below I as we'd expect from the rest of the line. No mark in the score indicating anything was changed.
+Going with the score here.
+(III-orch-03-clarinets)
