@@ -379,11 +379,80 @@ solo_lower_III_AI = \relative c'' {
 	}
 }
 
+%%% Section AJ = mm. 68-76 (Rehearsal ~59)
+
+solo_upper_III_AJ = \relative c, {
+	\tempo "Allegretto"
+	\time 5/4
+	\tuplet 3/2 4 {
+		\change Staff = "solo_lower" <c c'>8 \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <g,, g'> \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <c, c'>8 \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <d, d'>8 \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <a,, a'>8 \change Staff = "solo_upper" <ees''' a> bes
+		\change Staff = "solo_lower" <c,, c'>8 \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <g,, g'> \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <c, c'>8 \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <d, d'>8 \change Staff = "solo_upper" \clef bass <aes'' d> ees
+			\change Staff = "solo_lower" <f, f'>8 \change Staff = "solo_upper" <aes' d> ees \clef treble
+		\change Staff = "solo_lower" <g, g'> \change Staff = "solo_upper" <aes'' d> ees
+			\change Staff = "solo_lower" <aes,, aes'> \change Staff = "solo_upper" <aes'' d> ees
+			\change Staff = "solo_lower" <ces, ces'> \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <d, d'> \change Staff = "solo_upper" <c'' f> fis,
+			\change Staff = "solo_lower" <aes,, aes'> \change Staff = "solo_upper" <c'' f> fis,
+		\change Staff = "solo_lower" <g,, g'> \change Staff = "solo_upper" <gis'' d'> ees
+			\change Staff = "solo_lower" <aes,, aes'> \change Staff = "solo_upper" <gis'' d'> ees
+			\change Staff = "solo_lower" <ces, ces'> \change Staff = "solo_upper" <c'' fis> fis,
+			\change Staff = "solo_lower" <d, d'> \change Staff = "solo_upper" <c'' fis> fis,
+			\change Staff = "solo_lower" <aes,, aes'> \change Staff = "solo_upper" <c'' fis> fis,
+		\change Staff = "solo_lower" <fis,, fis'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <ees,, ees'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <c,, c'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <fis, fis'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <a, a'> \change Staff = "solo_upper" <ees'' a> bes
+		\change Staff = "solo_lower" <ees,, ees'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <fis, fis'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <a, a'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <ees,, ees'> \change Staff = "solo_upper" <ees'' a> bes
+			\change Staff = "solo_lower" <c,, c'> \change Staff = "solo_upper" <ees'' a> bes
+		\mark #59
+		\time 4/4
+		\change Staff = "solo_lower" <e,, e'> \change Staff = "solo_upper" <gis' b e> f
+			\change Staff = "solo_lower" <b,, b'> \change Staff = "solo_upper" <gis'' b e> f
+			\change Staff = "solo_lower" <f,, f'> \change Staff = "solo_upper" <gis'' b e> f
+			\change Staff = "solo_lower" <cis,, cis'> \change Staff = "solo_upper" <gis''' b e> f
+		\change Staff = "solo_lower" <e, e'> \change Staff = "solo_upper" <gis' b e> f
+			\change Staff = "solo_lower" <b,, b'> \change Staff = "solo_upper" <b'' e g> gis
+			\change Staff = "solo_lower" <f,, f'> \change Staff = "solo_upper" <b'' e g> gis
+			\change Staff = "solo_lower" <cis,,, cis'> \change Staff = "solo_upper" <b''' e g> gis
+		\change Staff = "solo_lower" <e, e'> \change Staff = "solo_upper" <b'' e g> gis
+			\change Staff = "solo_lower" <b,, b'> \change Staff = "solo_upper" <e'' g bes> b
+			\change Staff = "solo_lower" <f,, f'> \change Staff = "solo_upper" <e''' g bes> b
+			\change Staff = "solo_lower" <cis,,, cis'> \change Staff = "solo_upper" <e''' g bes> b
+	}
+}
+
+solo_dynamics_III_AJ = {
+	s1*5/4*6 s1*3
+}
+
+%% FIXME: PR combines the stems on the duplets in the lower staff. Need to figure out how to imitate.
+
+solo_lower_III_AJ = \relative c {
+	\time 5/4
+	s1*5/4*2
+	s2 <ces ces'>8 <aes aes'> s2
+	s1*5/4*2
+	\stemDown <ees ees'>8 <c c'> s1 \stemNeutral
+	\time 4/4
+	s1*3
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
-		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI }
+		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
-		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI }
+		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
-		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI }
+		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ }

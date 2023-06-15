@@ -129,3 +129,7 @@ m. 1-14: The way the PR is written is difficult to reproduce in lilypond. Just p
 more default layout. Should revisit to see if I can make it work.
 
 mm. 60-67: Writing the lower solo part a bit differently than the score to dodge the "ties across voices" problem.
+
+m. 70 and 72: Solo piano combines the stems on the lower staff. Need to figure out how to imitate.
+
+mm. 74-76: Piano reduction: imitating the PR gets something just as smooshed. This needs to be done better.

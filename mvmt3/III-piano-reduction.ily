@@ -463,11 +463,103 @@ redux_lower_III_AI = \relative c {
 	>>
 }
 
+%%% Section AJ = mm. 68-76 (Rehearsal ~59)
+
+redux_upper_III_AJ = \relative c'' {
+	\tempo "Allegretto"
+	\tag #'Midi \tempo 4 = 132
+	\time 5/4
+	<<
+		\new Voice {
+			\voiceOne
+			f4 ees f8 fis a4 fis
+			f8[ ees f fis f ees] d4 b
+			d ees f fis f8 ees
+			d[ b d ees] fis4 f ees
+			a b a gis8 fis f4
+			ees a8 b a4 gis8[ fis] f[ ees]
+			\mark #59
+			\time 4/4
+			e4 b f cis
+			s2 e'4 b
+			f cis s2
+		}
+		\new Voice {
+			\voiceTwo
+			<fis c'>2. <bes ees>2
+			<fis c'>2. <ees aes>2
+			q2 <fis c'>2.
+			<ees aes>2 c'2.
+			<bes ees>1 <fis c'>4~
+			q <bes ees>2. <fis c'>4
+			\time 4/4
+			<fis g b e>1~
+			q1~
+			q1
+		}
+		\new Voice {
+			\voiceThree
+			s1*5/4*6
+			\time 4/4
+			s1
+			r4 g'2.
+			r4 bes2.
+		}
+	>>
+}
+
+redux_dynamics_III_AJ = {
+	s1*5/4*6 s1*3
+}
+
+%% FIXME: All of the 5/4 is simply an octave duplicate. Compress using transposition?
+%%        74-76 is a muddled mess in PR as well. Rework?
+
+redux_lower_III_AJ = \relative c' {
+	\time 5/4
+	<<
+		\new Voice {
+			\voiceOne
+			f4 ees f8 fis a4 fis
+			f8[ ees f fis f ees] d4 b
+			d ees f fis f8 ees
+			d[ b d ees] fis4 f ees
+			a b a gis8 fis f4
+			ees a8 b a4 gis8[ fis] f[ ees]
+			\time 4/4
+			e4 b f cis
+			g' cis, s2
+			s2 g'4 cis,
+		}
+		\new Voice {
+			\voiceTwo
+			<fis c'>2. <bes ees>2
+			<fis c'>2. <ees aes>2
+			q2 <fis c'>2.
+			<ees aes>2 c'2.
+			<bes ees>1 <fis c'>4~
+			q <bes ees>2. <fis c'>4
+			\time 4/4
+			<fis g b e>1~
+			q1~
+			q1
+		}
+		\new Voice {
+			\voiceFour
+			s1*5/4*6
+			\time 4/4
+			s1
+			g,4 cis, e'' b
+			f cis g cis,
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
-		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI }
+		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
-		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI }
+		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
-		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI }
+		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ }
