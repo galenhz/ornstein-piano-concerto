@@ -205,16 +205,54 @@ Oboe_I_II_cues_mvmt_III_AI = \relative c''' {
 	}
 }
 
+%%% Section AJ = mm. 68-76 (Rehearsal ~59)
+
+Oboe_I_II_mvmt_III_AJ = \relative c'' {
+	\tempo "Allegretto"
+	\time 5/4
+	f4(\mf ees) f8( fis) a4( fis)
+	f?8[( ees) f( fis) f( ees]) d4( b)
+	d4( ees) f( fis) f8( ees)
+	d8[( b) d( ees]) fis4 f( ees)
+	R1*5/4*2
+	\mark #59
+	\time 4/4
+	R1*3
+}
+
+Oboe_cues_mvmt_III_AJ = \relative c'' {
+	\tag #'Score \NULL_III_AJ
+	\tag #'Part {
+		\tempo "Allegretto"
+		\time 5/4
+		<<
+			\new CueVoice {
+				f4(_"I+II Ob." ees) f8( fis) a4( fis)
+				f?8[( ees) f( fis) f( ees]) d4( b)
+				d4( ees) f( fis) f8( ees)
+				d8[( b) d( ees]) fis4 f( ees)
+			}
+			\new Voice {
+				\voiceTwo
+				R1*5/4*4
+			}
+		>>
+		R1*5/4*2
+		\mark #59
+		\time 4/4
+		R1*3
+	}
+}
 
 %%% Final assembly
 
 Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI }
+		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ }
 Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI }
+		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ }
 Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI }
+		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ }
 Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI }
+		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ }
 EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \EnglishHorn_cues_mvmt_III_AG
-		\EnglishHorn_mvmt_III_AH \NULL_III_AI }
+		\EnglishHorn_mvmt_III_AH \NULL_III_AI \NULL_III_AJ }

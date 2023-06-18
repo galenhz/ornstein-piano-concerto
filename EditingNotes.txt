@@ -1008,3 +1008,12 @@ m. 64: Clarinet IV has an empty bar here, jumping in suddenly in m. 65 instead. 
 bar, an octave below I as we'd expect from the rest of the line. No mark in the score indicating anything was changed.
 Going with the score here.
 (III-orch-03-clarinets)
+
+mm. 68-73: Flute, violin I and oboe parts have accents. Violin IIand viola parts do not. No sign of them in the scores;
+leaving them out for now. Flute slurs also don't match Violin I, but score shows them as different. Leaving them as is.
+#UNDECIDED
+(III-orch-*)
+
+mm. 74-76: Violin I and viola have accents here, II partially, cellos/bass do not. No sign of them in the score.
+Leaving out for now. #UNDECIDED
+(III-orch-*)

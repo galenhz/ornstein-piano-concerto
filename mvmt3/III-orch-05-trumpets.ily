@@ -136,13 +136,72 @@ Trumpet_cues_mvmt_III_AI = \relative c''' {
 	}
 }
 
+%%% Section AJ = mm. 68-76 (Rehearsal ~59)
+
+Trumpet_I_mvmt_III_AJ = \relative c'' {
+	\tempo "Allegretto"
+	\time 5/4
+	c2.\p( ees2)
+	c2.( aes2)
+	aes2( c2.)
+	gis2( c2.)
+	ees1( c4~)
+	c ees2.( c4)
+	\mark #59
+	\time 4/4
+	R1*2
+	r4 b'2.\mf
+}
+
+Trumpet_II_mvmt_III_AJ = \relative c' {
+	\tempo "Allegretto"
+	\time 5/4
+	f2.\p( a2)
+	f2.( d2)
+	d2( f2.)
+	d2( fis2.)
+	c'1( f,4~)
+	f a2.( f4)
+	\mark #59
+	\time 4/4
+	e'1~\mf
+	e1~
+	e1
+}
+
+Trumpet_III_mvmt_III_AJ = \relative c''' {
+	\tempo "Allegretto"
+	\time 5/4
+	R1*5/4*6
+	\mark #59
+	\time 4/4
+	R1
+	r4 g2.~\mf
+	g1
+}
+
+Trumpet_IV_mvmt_III_AJ = \relative c' {
+	\tempo "Allegretto"
+	\time 5/4
+	fis2.\p( bes2)
+	fis2.( ees2)
+	ees( fis2.)
+	ees2( fis2.)
+	bes1( fis4~)
+	fis bes2.( fis4)
+	\mark #59
+	\time 4/4
+	b1~\mf
+	b1~
+	b1
+}
 %%% Final assembly
 
 Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_I_mvmt_III_AJ }
 Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_II_mvmt_III_AJ }
 Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_III_mvmt_III_AJ }
 Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_IV_mvmt_III_AJ }

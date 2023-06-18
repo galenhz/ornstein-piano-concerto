@@ -376,15 +376,28 @@ Flute_Picc_cues_mvmt_III_AI = \relative c'' {
 	}
 }
 
+%%% Section AJ = mm. 68-76 (Rehearsal ~59)
+
+Flute_I_II_mvmt_III_AJ = \relative c''' {
+	\tempo "Allegretto"
+	\time 5/4
+	R1*5/4*4
+	a4(\mf b) a( gis8 fis) f4(
+	ees) a8( b a4) gis8[( fis)] f[( e])
+	\mark #59
+	\time 4/4
+	R1*3
+}
+
 %%% Final construction
 
 Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Flute_Picc_cues_mvmt_III_AI }
+		\NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ }
 Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD \Flute_I_mvmt_III_AE
-		\Flute_I_mvmt_III_AF \NULL_III_AG \Flute_I_mvmt_III_AH \Flute_I_mvmt_III_AI }
+		\Flute_I_mvmt_III_AF \NULL_III_AG \Flute_I_mvmt_III_AH \Flute_I_mvmt_III_AI \Flute_I_II_mvmt_III_AJ }
 Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_II_mvmt_III_AE
-		\Flute_II_mvmt_III_AF \NULL_III_AG \Flute_II_cues_mvmt_III_AH \Flute_II_mvmt_III_AI }
+		\Flute_II_mvmt_III_AF \NULL_III_AG \Flute_II_cues_mvmt_III_AH \Flute_II_mvmt_III_AI \Flute_I_II_mvmt_III_AJ }
 Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD \NULL_III_AE \NULL_III_AF
-		\NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI }
+		\NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ }
 Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_IV_mvmt_III_AE
-		\Flute_IV_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI }
+		\Flute_IV_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ }

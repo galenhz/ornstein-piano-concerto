@@ -265,15 +265,28 @@ BassClarinet_cues_mvmt_III_AI = \transpose c' bes, \relative c'' {
 	}
 }
 
+%%% Section AJ = mm. 68-76 (Rehearsal ~59)
+
+Clarinet_I_II_mvmt_III_AJ = \transpose c' bes \relative c''' {
+	\tempo "Allegretto"
+	\time 5/4
+	R1*5/4*4
+	b4(\mf cis) b( ais8 gis) g4(
+	f) b8( cis b4) ais8[( gis)] g[( f])
+	\mark #59
+	\time 4/4
+	R1*3
+}
+
 %%% Final assembly
 
 Clarinet_I_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_I_mvmt_III_AF
-		\NULL_III_AG \NULL_III_AH \Clarinet_I_mvmt_III_AI }
+		\NULL_III_AG \NULL_III_AH \Clarinet_I_mvmt_III_AI \Clarinet_I_II_mvmt_III_AJ }
 Clarinet_II_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_II_mvmt_III_AC \Clarinet_II_mvmt_III_AD \NULL_III_AE
-		\Clarinet_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Clarinet_II_mvmt_III_AI }
+		\Clarinet_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Clarinet_II_mvmt_III_AI \Clarinet_I_II_mvmt_III_AJ }
 Clarinet_III_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\Clarinet_III_mvmt_II_AF \NULL_III_AG \NULL_III_AH \Clarinet_III_mvmt_III_AI }
+		\Clarinet_III_mvmt_II_AF \NULL_III_AG \NULL_III_AH \Clarinet_III_mvmt_III_AI \NULL_III_AJ }
 Clarinet_IV_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_IV_mvmt_III_AF
-		\NULL_III_AG \NULL_III_AH \Clarinet_IV_mvmt_III_AI }
+		\NULL_III_AG \NULL_III_AH \Clarinet_IV_mvmt_III_AI \NULL_III_AJ }
 BassClarinet_mvmt_III = { \NULL_III_AA \BassClarinet_cues_mvmt_III_AB \BassClarinet_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\NULL_III_AG \NULL_III_AH \BassClarinet_cues_mvmt_III_AI }
+		\NULL_III_AG \NULL_III_AH \BassClarinet_cues_mvmt_III_AI \NULL_III_AJ }

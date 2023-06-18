@@ -133,3 +133,6 @@ mm. 60-67: Writing the lower solo part a bit differently than the score to dodge
 m. 70 and 72: Solo piano combines the stems on the lower staff. Need to figure out how to imitate.
 
 mm. 74-76: Piano reduction: imitating the PR gets something just as smooshed. This needs to be done better.
+
+m. 74: In score, trumpet III/IV should be marked "solo IV", just like I/II is marked "Solo II". Not sure why different
+treatment here.

@@ -180,9 +180,34 @@ Tympani_II_mvmt_III_AI = \relative c {
 	}
 }
 
+%%% Section AJ = mm. 68-76 (Rehearsal ~59)
+%%% Tacet, cues only
+
+Tympani_cues_mvmt_III_AJ = \relative c' {
+	\tag #'Score \NULL_III_AJ
+	\tag #'Part {
+		\tempo "Allegretto"
+		\time 5/4
+		R1*5/4*6
+		\mark #59
+		\time 4/4
+		<<
+			\new CueVoice {
+				e4(^"Vcl.+Cb." b) f( cis)
+				g( cis,) e''( b)
+				f( cis) g( cis,)
+			}
+			\new Voice {
+				\voiceTwo
+				R1*3
+			}
+		>>
+	}
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
-		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI }
+		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI \Tympani_cues_mvmt_III_AJ }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
-		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI }
+		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI \Tympani_cues_mvmt_III_AJ }
