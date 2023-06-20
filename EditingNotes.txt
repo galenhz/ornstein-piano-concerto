@@ -1017,3 +1017,6 @@ leaving them out for now. Flute slurs also don't match Violin I, but score shows
 mm. 74-76: Violin I and viola have accents here, II partially, cellos/bass do not. No sign of them in the score.
 Leaving out for now. #UNDECIDED
 (III-orch-*)
+
+mm. 85-87: In the piano reduction, the b that starts in 85 should clearly be b-flat based on the score. Fixed.
+(III-piano-reduction)

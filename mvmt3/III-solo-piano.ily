@@ -448,11 +448,38 @@ solo_lower_III_AJ = \relative c {
 	s1*3
 }
 
+%%% Section AK = mm. 77-89 (Rehearsal ~60)
+
+solo_upper_III_AK = {
+	\time 3/4
+	\clef bass
+	s2.*13
+}
+
+solo_dynamics_III_AK = {
+	s2.*13
+}
+
+solo_lower_III_AK = \relative c,, {
+	\time 3/4
+	\repeat unfold 8 {
+		\tuplet 11/6 {
+			c8 c' \change Staff = "solo_upper" c' gis' a \change Staff = "solo_lower"
+				c, gis' a \change Staff = "solo_upper" a gis c, \change Staff = "solo_lower"
+		}
+	}
+	\repeat unfold 5 {
+		g,16[ g' \change Staff = "solo_upper" d' \beamCutR bes' \beamCutL cis \change Staff = "solo_lower"
+			f, bes \beamCutR cis \change Staff = "solo_upper" \beamCutL ees cis bes d,] \change Staff = "solo_lower"
+	}
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
-		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ }
+		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
-		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ }
+		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
+		\solo_dynamics_III_AK }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
-		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ }
+		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK }
