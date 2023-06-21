@@ -318,7 +318,7 @@ Cello_mvmt_III_AJ = \relative c' {
 	>>
 	\mark #59
 	\time 4/4
-	e'4( b) f( cis)
+	e'4(_\Unis_mark b) f( cis)
 	g( cis,) e''( b)
 	f( cis) g( cis,)
 }
@@ -334,12 +334,41 @@ Bass_mvmt_III_AJ = \relative c' {
 	r4 cis' g( cis,)
 }
 
+%%% Section AK = mm. 77-89 (Rehearsal ~60)
+
+Cello_mvmt_III_AK = \relative c {
+	\time 3/4
+	c2.~\f
+	c2.~
+	c2.~
+	\mark #60
+	\repeat unfold 4 { c2.~ }
+	c2.
+	\tag #'Score cis'2.~\fff \tag #'Part cis2.~\fff^\Soli_mark
+	\tuplet 3/2 4 { cis8 b( bes) cis( b bes) } bes bes~
+	bes4 \acciaccatura { g8 } \tuplet 3/2 { g( bes b) } bes4~
+	bes2.~
+	bes2.
+}
+
+Bass_mvmt_III_AK = \relative c {
+	\time 3/4
+	c2.~\f
+	c2.~
+	c2.~
+	\mark #60
+	\repeat unfold 4 { c2.~ }
+	c2.
+	\repeat unfold 4 { g2.~ }
+	g2.
+}
+
 %%% Final assembly
 
 Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE
-		\Cello_mvmt_III_AF \Cello_mvmt_III_AG \Cello_mvmt_III_AH \Cello_mvmt_III_AI \Cello_mvmt_III_AJ }
+		\Cello_mvmt_III_AF \Cello_mvmt_III_AG \Cello_mvmt_III_AH \Cello_mvmt_III_AI \Cello_mvmt_III_AJ \Cello_mvmt_III_AK }
 Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF
-		\NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ }
+		\NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK }
 
 Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF
-		\Bass_mvmt_III_AG \Bass_mvmt_III_AH \Bass_mvmt_III_AI \Bass_mvmt_III_AJ }
+		\Bass_mvmt_III_AG \Bass_mvmt_III_AH \Bass_mvmt_III_AI \Bass_mvmt_III_AJ \Bass_mvmt_III_AK }

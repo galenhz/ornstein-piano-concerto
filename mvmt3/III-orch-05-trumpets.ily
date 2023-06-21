@@ -195,13 +195,28 @@ Trumpet_IV_mvmt_III_AJ = \relative c' {
 	b1~
 	b1
 }
+
+%%% Section AK = mm. 77-89 (Rehearsal ~60)
+
+Trumpet_I_mvmt_III_AK = \relative c' {
+	\time 3/4
+	R2.*3
+	\mark #60
+	fis2.~\ff
+	\tuplet 3/2 4 { fis8 e( dis) fis( e dis) } dis dis~
+	dis4 \acciaccatura { c8 } \tuplet 3/2 { c8( dis e) } dis4~
+	dis2.~
+	dis2.
+	R2.*5
+}
+
 %%% Final assembly
 
 Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_I_mvmt_III_AJ }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_I_mvmt_III_AJ \Trumpet_I_mvmt_III_AK }
 Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_II_mvmt_III_AJ }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_II_mvmt_III_AJ \NULL_III_AK }
 Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_III_mvmt_III_AJ }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_III_mvmt_III_AJ \NULL_III_AK }
 Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_IV_mvmt_III_AJ }
+		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_IV_mvmt_III_AJ \NULL_III_AK }

@@ -205,9 +205,39 @@ Tympani_cues_mvmt_III_AJ = \relative c' {
 	}
 }
 
+%%% Section AK = mm. 77-89 (Rehearsal ~60)
+
+Tympani_I_mvmt_III_AK = \relative c {
+	\time 3/4
+	r8 c\f c[ r c] r
+	\repeat unfold 2 { r8 c c[ r c] r }
+	\mark #60
+	\repeat unfold 5 { r8 c c[ r c] r }
+	R2.*5
+}
+
+Tympani_II_mvmt_III_AK = \relative c {
+	\time 3/4
+	\tag #'Score { R2.*3 }
+	\tag #'Part <<
+		\new CueVoice {
+			r8 c^"I Tym." c[ r c] r
+			\repeat unfold 2 { r8 c c[ r c] r }
+		}
+		\new Voice {
+			\voiceTwo
+			R2.*3
+		}
+	>>
+	\mark #60
+	R2.*5
+	r8 g\f g[ r g] r
+	\repeat unfold 4 { r8 g g[ r g] r }
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
-		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI \Tympani_cues_mvmt_III_AJ }
+		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_I_mvmt_III_AK }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
-		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI \Tympani_cues_mvmt_III_AJ }
+		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_II_mvmt_III_AK }

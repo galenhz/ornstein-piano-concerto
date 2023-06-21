@@ -1020,3 +1020,7 @@ Leaving out for now. #UNDECIDED
 
 mm. 85-87: In the piano reduction, the b that starts in 85 should clearly be b-flat based on the score. Fixed.
 (III-piano-reduction)
+
+mm. 85-89: Bassoon I and II drop into bass clef for five bars here, but jump right back to tenor. Leaving it in
+tenor for now.
+(III-orch-04-bassoons)

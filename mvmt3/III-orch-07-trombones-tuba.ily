@@ -149,13 +149,69 @@ Tuba_cues_mvmt_III_AG = \relative c {
 %%% Section AJ = mm. 68-76 (Rehearsal ~59)
 %%% Tacet
 
+%%% Section AK = mm. 77-89 (Rehearsal ~60)
+
+Trombone_Tuba_partial_mvmt_III_AK = \relative c' {
+	\time 3/4
+	R2.*3
+	\mark #60
+	\tag #'Score { R2.*5 }
+	\tag #'Part <<
+		\new CueVoice {
+			\cueClef treble
+			fis2.~_"I Tpt."
+			\tuplet 3/2 4 { fis8 e( dis) fis( e dis) } dis dis~
+			dis4 \acciaccatura { c8 } \tuplet 3/2 { c8( dis e) } dis4~
+			dis2.~
+			dis2.
+			\cueClefUnset
+		}
+		\new Voice {
+			\voiceThree
+			R2.*5
+		}
+	>>
+}
+
+Trombone_I_mvmt_III_AK = \relative c' {
+	\Trombone_Tuba_partial_mvmt_III_AK
+	bes2.~\f
+	bes2.~
+	bes4 bes2~
+	bes2.~
+	bes2.
+}
+
+Trombone_II_mvmt_III_AK = \relative c {
+	\Trombone_Tuba_partial_mvmt_III_AK
+	d2.~\f
+	d2.~
+	d4 d2~
+	d2.~
+	d2.
+}
+
+Trombone_III_mvmt_III_AK = \relative c {
+	\Trombone_Tuba_partial_mvmt_III_AK
+	g2.~\f
+	g2.~
+	g4 g2~
+	g2.~
+	g2.
+}
+
+Tuba_cues_mvmt_III_AK = \relative c {
+	\Trombone_Tuba_partial_mvmt_III_AK
+	R2.*5
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF \Trombone_I_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ }
+		\NULL_III_AF \Trombone_I_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_I_mvmt_III_AK }
 Trombone_II_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF \Trombone_II_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ }
+		\NULL_III_AF \Trombone_II_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_II_mvmt_III_AK }
 Trombone_III_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
-		\NULL_III_AF \Trombone_III_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ }
+		\NULL_III_AF \Trombone_III_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_III_mvmt_III_AK }
 Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Tuba_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\Tuba_cues_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ }
+		\Tuba_cues_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Tuba_cues_mvmt_III_AK }
