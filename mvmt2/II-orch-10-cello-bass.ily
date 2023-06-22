@@ -375,7 +375,7 @@ Cello_Bass_mvmt_II_AK = \relative c, {
 %%% Section AL = mm. 72-78 (Rehearsal ~46)
 
 Cello_Bass_mvmt_II_AL = \relative c, {
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\time 5/4
 	fis1~\f fis4~
 	\time 6/8

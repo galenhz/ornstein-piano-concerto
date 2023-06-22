@@ -344,7 +344,7 @@ Trombone_Tuba_cues_mvmt_II_AK = \relative c {
 %%% Section AL = mm. 72-78 (Rehearsal ~46)
 
 Trombone_I_mvmt_II_AL = \relative c' {
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\time 5/4
 	\clef tenor
 	cis1~\ff cis4~
@@ -364,7 +364,7 @@ Trombone_I_mvmt_II_AL = \relative c' {
 }
 
 Trombone_II_mvmt_II_AL = \relative c' {
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\time 5/4
 	\clef tenor
 	bes1~\ff bes4~
@@ -384,7 +384,7 @@ Trombone_II_mvmt_II_AL = \relative c' {
 }
 
 Trombone_III_mvmt_II_AL = \relative c {
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\time 5/4
 	fis1~\ff fis4~
 	\time 6/8
@@ -405,7 +405,7 @@ Trombone_III_mvmt_II_AL = \relative c {
 % This is the end of the Tuba part in this movement.
 
 Tuba_mvmt_II_AL = \relative c {
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\time 5/4
 	d1~\ff d4~
 	\time 6/8

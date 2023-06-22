@@ -511,7 +511,7 @@ solo_upper_II_AL_figure = \relative c' {
 }
 
 solo_upper_II_AL = \relative c' {
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\time 5/4
 	r4 \solo_upper_II_AL_figure
 	\time 6/8

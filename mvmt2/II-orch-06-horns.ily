@@ -404,7 +404,7 @@ Horn_all_cues_mvmt_II_AJ = \transpose c' f \relative c'' {
 Horn_I_IV_cues_mvmt_II_AL = \relative c' {
 	\tag #'Score \NULL_II_AL
 	\tag #'Part {
-		\tempo "Piu mosso"
+		\tempo "Più mosso"
 		\time 5/4
 		<<
 			\new CueVoice {
