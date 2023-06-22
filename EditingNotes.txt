@@ -1028,3 +1028,7 @@ tenor for now.
 mm. 90-91: Piano reduction, in the inner voices, uses a different barring style in 90 and 91. The score and parts
 use 90's barring style for both measures. Doing the same.
 (III-piano-reduction)
+
+mm. 92-94: The piano reduction goes into 4/4 for these measures, vs. the 12/8 of the solo. This seems to be pointless,
+since the orchestra is silent at this point. The parts and score have 12/8 for everyone. Just leaving this as 12/8.
+(III-orch-*, III-piano-reduction)

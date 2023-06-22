@@ -482,7 +482,7 @@ solo_upper_III_AL = \relative c'' {
 	\clef treble
 	R1*5/4
 	r2 r2 \tuplet 3/2 { r8 <bes bes'> <cis cis'> }
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\time 12/8
 	<<
 		\new Voice {

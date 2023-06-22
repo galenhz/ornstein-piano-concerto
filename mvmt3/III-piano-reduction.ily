@@ -641,7 +641,7 @@ redux_upper_III_AL = \relative c''' {
 			r q q[ r q] r r q[ r <bes c>]
 		}
 	>>
-	\tempo "Piu mosso"
+	\tempo "Più mosso"
 	\tag #'Midi \tempo 4. = 156
 	\time 12/8
 	R1.*3
