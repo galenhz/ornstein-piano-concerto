@@ -474,12 +474,54 @@ solo_lower_III_AK = \relative c,, {
 	}
 }
 
+%%% Section AL = mm. 90-95 (Rehearsal 61)
+
+solo_upper_III_AL = \relative c'' {
+	\mark #61
+	\time 5/4
+	\clef treble
+	R1*5/4
+	r2 r2 \tuplet 3/2 { r8 <bes bes'> <cis cis'> }
+	\tempo "Piu mosso"
+	\time 12/8
+	<<
+		\new Voice {
+			\voiceOne
+			bes'2. bes2.
+			s1.
+			bes2. bes2.
+		}
+		\new Voice {
+			\voiceTwo
+			<e, e'>4. \tuplet 2/3 { <d d'>8 <cis cis'> } <e e'> <d d'> <cis cis'> \tuplet 2/3 { q q }
+			<bes bes'> <cis cis'> <d d'> <cis fis cis'>2.~ q 8 <bes bes'> <cis cis'>
+			<e e'>4. \tuplet 2/3 { <d d'>8 <cis cis'> } <e e'> <d d'> <cis cis'> \tuplet 2/3 { q q }
+		}
+	>>
+	\time 3/4
+	\tuplet 3/2 4 { r8 <gis gis'> <a a'> <bes bes'> <cis cis'> <d d'> <ees ees'> <fis fis'> <ees ees'> }
+}
+
+solo_dynamics_III_AL = {
+	s1*5/4*2 s1.*3 s2.
+}
+
+solo_lower_III_AL = \relative c {
+	\time 5/4
+	R1*5/4
+	r2 r2 r4
+	\time 12/8
+	\repeat unfold 3 { r8 <c cis c'> q <fis fis'>4 <c c'>8 <g' g'> <fis fis'> <c c'>~ q4 q8 }
+	\time 3/4
+	<bes bes'>8[ <c c'>] <fis fis'>[ <g g'>] <fis fis'>[ <c c'>]
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
-		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK }
+		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
-		\solo_dynamics_III_AK }
+		\solo_dynamics_III_AK \solo_dynamics_III_AL }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
-		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK }
+		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL }

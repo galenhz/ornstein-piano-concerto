@@ -1024,3 +1024,7 @@ mm. 85-87: In the piano reduction, the b that starts in 85 should clearly be b-f
 mm. 85-89: Bassoon I and II drop into bass clef for five bars here, but jump right back to tenor. Leaving it in
 tenor for now.
 (III-orch-04-bassoons)
+
+mm. 90-91: Piano reduction, in the inner voices, uses a different barring style in 90 and 91. The score and parts
+use 90's barring style for both measures. Doing the same.
+(III-piano-reduction)
