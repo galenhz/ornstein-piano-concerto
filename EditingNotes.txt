@@ -1032,3 +1032,8 @@ use 90's barring style for both measures. Doing the same.
 mm. 92-94: The piano reduction goes into 4/4 for these measures, vs. the 12/8 of the solo. This seems to be pointless,
 since the orchestra is silent at this point. The parts and score have 12/8 for everyone. Just leaving this as 12/8.
 (III-orch-*, III-piano-reduction)
+
+mm. 96-103: The piano reduction bars the lower staff 16th figure in two different ways: broken up in 96-99, and connected
+with stuttered beams in 100-103. The orchestral parts playing that are beamed the second way in the score. Going with
+that throughout.
+(III-piano-reduction)

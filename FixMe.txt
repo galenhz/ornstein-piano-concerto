@@ -136,3 +136,5 @@ mm. 74-76: Piano reduction: imitating the PR gets something just as smooshed. Th
 
 m. 74: In score, trumpet III/IV should be marked "solo IV", just like I/II is marked "Solo II". Not sure why different
 treatment here.
+
+mm. 96-103: Piano reduction lower staff should parenthesize every other downbeat chord, but it's not doing it, Why?

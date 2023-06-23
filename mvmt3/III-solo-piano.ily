@@ -516,12 +516,42 @@ solo_lower_III_AL = \relative c {
 	<bes bes'>8[ <c c'>] <fis fis'>[ <g g'>] <fis fis'>[ <c c'>]
 }
 
+%%% Section AM = mm. 96-103 (Rehearsal 62)
+
+solo_upper_III_AM = \relative c'' {
+	\mark #62
+	\tempo "Meno"
+	\time 2/4
+	\repeat unfold 2 {
+		cis32[ cis' cis, \change Staff = "solo_lower" b]
+			\repeat unfold 7 {
+				\change Staff = "solo_upper" bes[ bes' bes, \change Staff = "solo_lower" bes]
+			}
+		\change Staff = "solo_upper" b[ b' b, \change Staff = "solo_lower" bes]
+			\repeat unfold 7 {
+				\change Staff = "solo_upper" g[ g' g, \change Staff = "solo_lower" g]
+			}
+	}
+}
+
+solo_dynamics_III_AM = {
+	s2*8
+}
+
+solo_lower_III_AM = {
+	\time 2/4
+	\clef treble
+	s2*8
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
-		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL }
+		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
+		\solo_upper_III_AM }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
-		\solo_dynamics_III_AK \solo_dynamics_III_AL }
+		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
-		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL }
+		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
+		\solo_lower_III_AM }

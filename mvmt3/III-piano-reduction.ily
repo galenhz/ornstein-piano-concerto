@@ -673,12 +673,69 @@ redux_lower_III_AL = \relative c {
 	R2.
 }
 
+%%% Section AM = mm. 96-103 (Rehearsal 62)
+
+redux_upper_III_AM = \relative c' {
+	\mark #62
+	\tempo "Meno"
+	\tag #'Midi \tempo 4 = 80
+	\time 2/4
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 4 {
+				<d g bes>8 s4.
+				s2
+			}
+		}
+		\new Voice {
+			\voiceTwo
+			r8 cis''[ d cis]
+			\tuplet 3/2 { b16[ cis \beamCutR b} \beamCutL bes g bes8 bes]
+			r8 bes[ cis d]
+			\tuplet 3/2 { cis16 d \beamCutR cis } \beamCutL bes g bes4
+			r8 \tuplet 3/2 { bes16[ cis d } f8 d]
+			\tuplet 3/2 { cis16[ d \beamCutR cis } \beamCutL bes g bes8 bes]
+			r8 fis16[ bes b8 bes]
+			\tuplet 3/2 { bes16[ b bes } g8] bes4
+		}
+	>>
+}
+
+redux_dynamics_III_AM = {
+	s2*8
+}
+
+redux_lower_III_AM = \relative c' {
+	\time 2/4
+	<<
+		\new Voice {
+			\voiceOne
+			\override Beam.breakable = ##t
+			\repeat unfold 4 {
+				r8 cis16[ d e \beamCutR f \beamCutL cis d
+				e \beamCutR f \beamCutL cis d e \beamCutR f \beamCutL cis d]
+			}
+			\revert Beam.breakable
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 4 {
+				<cis,, g' d'>8 r8 r4
+				\parenthesize q8 r8 r4
+			}
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
-		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL }
+		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
+		\redux_upper_III_AM }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
-		\redux_dynamics_III_AK \redux_dynamics_III_AL }
+		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
-		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL }
+		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
+		\redux_lower_III_AM }
