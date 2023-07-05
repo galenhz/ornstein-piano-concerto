@@ -531,6 +531,7 @@ solo_upper_III_AM = \relative c'' {
 			\repeat unfold 7 {
 				\change Staff = "solo_upper" g[ g' g, \change Staff = "solo_lower" g]
 			}
+		\change Staff = "solo_upper"
 	}
 }
 
@@ -544,14 +545,66 @@ solo_lower_III_AM = {
 	s2*8
 }
 
+%%% Section AN = mm. 104-112 (Rehearsal 63-64)
+
+solo_upper_III_AN = \relative c'' {
+	\mark #63
+	fis32[ fis' fis, \change Staff = "solo_lower" e]
+		\repeat unfold 7 {
+			\change Staff = "solo_upper" ees[ ees' ees, \change Staff = "solo_lower" ees]
+		}
+	\change Staff = "solo_upper" e[ e' e, \change Staff = "solo_lower" ees]
+		\repeat unfold 7 {
+			\change Staff = "solo_upper" c[ c' c, \change Staff = "solo_lower" c]
+		}
+	\change Staff = "solo_upper" fis[ fis' fis, \change Staff = "solo_lower" e]
+		\repeat unfold 7 {
+			\change Staff = "solo_upper" ees[ ees' ees, \change Staff = "solo_lower" ees]
+		}
+	\change Staff = "solo_upper" e[ e' e, \change Staff = "solo_lower" ees]
+		\repeat unfold 3 {
+			\change Staff = "solo_upper" c[ c' c, \change Staff = "solo_lower" c]
+		}
+	\change Staff = "solo_upper" des[ des' des, \change Staff = "solo_lower" c]
+		\repeat unfold 3 {
+			\change Staff = "solo_upper" a[ a' a, \change Staff = "solo_lower" a]
+		}
+	\mark #64
+	\time 3/4
+	% Have to swap to other stream, since a glissando in a parallel voice can't terminate
+	\change Staff = "solo_upper"
+	s2 fis''4\glissando
+}
+
+solo_dynamics_III_AN = {
+	s2*8 s2.
+}
+
+solo_lower_III_AN = \relative c'' {
+	s2*8
+	\time 3/4
+	\repeat unfold 3 {
+		\change Staff = "solo_upper" a32[ a' a, \change Staff = "solo_lower" a]
+	}
+	\change Staff = "solo_upper" a[ a' a, \change Staff = "solo_lower" a]~ a4
+}
+
+%%% Section AO = mm. 113-117 (Rehearsal ~65)
+%%% Incomplete for now, just the glissando target
+
+solo_upper_III_AO = \relative c {
+	\time 4/4
+	f8 s8 s2.
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
-		\solo_upper_III_AM }
+		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
-		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM }
+		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
-		\solo_lower_III_AM }
+		\solo_lower_III_AM \solo_lower_III_AN }

@@ -746,8 +746,8 @@ mm. 7-12: Piano reduction again gets a middle staff to avoid congestion.
 mm. 8, 10: Piano reduction doesn't bar the way the score and parts do. Adjust? #UHNDECIDED
 (II-piano-reduction)
 
-m. 14: So far I've simply copied the rehersal marks from the orchestral material without changing anything.
-But some of the marks are...not where I would put them. This is a good example; mark 39 msuically belongs
+m. 14: So far I've simply copied the rehearsal marks from the orchestral material without changing anything.
+But some of the marks are...not where I would put them. This is a good example; mark 39 musically belongs
 in measure 13. At some point I need to decide how much deference I should give the materials here. #UNDECIDED
 (II-*)
 
@@ -990,7 +990,7 @@ m. 34: Violin I part lacks the accents on the beats that clarinets/horns have. A
 (III-orch-09-violins-viola)
 
 m. 49-53: We've reached the point where keeping Trombone I/II in tenor clef has reached diminishing returns. Flipping
-back to bass here, instead of just before rehersal 61.
+back to bass here, instead of just before rehearsal 61.
 (III-orch-07-trombones-tuba)
 
 m. 54: Violin II's first note in part is c; according to score (and cues in Violin I part), it's a. Could be a copyist
@@ -1047,3 +1047,10 @@ this later. #UNDECIDED
 mm. 96-103: Viola part not done in a beam-through fashion in the parts, although it is in the score. Everyone else has
 beam-through. Changing viola part to match.
 (III-orch-09-violins-viola)
+
+mm. 111-112: Piano reduction matches what's in the source, but the source is arguably a bit ugly and might stand some
+revision at some point. #UNDECIDED
+(III-piano-reduction)
+
+m. 112, 116, 118: Why are rehearsal numbers 64 through 66 where they are? More evidence rehersal marks should be reworked.
+(III-orch-*)

@@ -728,14 +728,80 @@ redux_lower_III_AM = \relative c' {
 	>>
 }
 
+%%% Section AN = mm. 104-112 (Rehearsal 63-64)
+
+redux_upper_III_AN = \relative c' {
+	\mark #63
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 3 {
+				<fis c' ees g>8 s4.
+				s2
+			}
+			q8 s4.
+		}
+		\new Voice {
+			\voiceTwo
+			r8 fis''[ g fis]
+			\tuplet 3/2 { e16[ fis \beamCutR e} \beamCutL ees c ees8 ees]
+			r8 ees[ fis g]
+			\tuplet 3/2 { fis16 g \beamCutR fis } \beamCutL ees c ees4
+			r8 \tuplet 3/2 { ees16[ fis g } bes8 g]
+			\tuplet 3/2 { fis16[ g \beamCutR fis } \beamCutL ees c ees8 ees]
+			r8 \tuplet 3/2 { ees16[ fis g } bes8 g]
+		}
+	>>
+	\repeat unfold 4 {
+		\tuplet 10/8 { fis32[ g fis ees c ees fis g bes g] }
+	}
+		r4
+}
+
+redux_dynamics_III_AN = {
+	s2*8 s2.
+}
+
+redux_lower_III_AN = \relative c' {
+	<<
+		\new Voice {
+			\voiceOne
+			\override Beam.breakable = ##t
+			\repeat unfold 3 {
+				r8 \clef treble fis16[ g a \beamCutR bes \beamCutL fis g
+				a \beamCutR bes \beamCutL fis g a \beamCutR bes \beamCutL fis g]
+			}
+			r8 \clef treble fis16[ g a bes] fis[ g
+			a bes] \clef treble fis[ g a bes] fis[ g
+			\time 3/4
+			\mark #64
+			a bes] c8 s2
+			\revert Beam.breakable
+		}
+		\new Voice {
+			\voiceTwo
+			<fis,,, c' g'>8 r8 r4
+			s2
+			\repeat unfold 2 {
+				\clef bass q8 r8 r4
+				s2
+			}
+			\clef bass q8 r8 r4
+			\clef bass \parenthesize <ees a c fis>2
+			\time 3/4
+			\clef bass <ees c' a'>2.
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
-		\redux_upper_III_AM }
+		\redux_upper_III_AM \redux_upper_III_AN }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
-		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM }
+		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
-		\redux_lower_III_AM }
+		\redux_lower_III_AM \redux_lower_III_AN }
