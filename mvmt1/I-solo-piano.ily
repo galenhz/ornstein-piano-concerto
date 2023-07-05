@@ -2243,7 +2243,7 @@ solo_upper_I_BK = \relative c''' {
 		\tuplet 3/2 { \change Staff = "solo_upper" <d' ees>[ \change Staff = "solo_lower" <g, cis> <g cis>] } \change Staff = "solo_upper"
 	}
 	\tuplet 3/2 { <d' fis>16[ \change Staff = "solo_lower"  \clef treble <g, cis> <g cis>] }
-		ees,8 \glissando
+		ees,8\glissando
 }
 
 solo_dynamics_I_BK = {
