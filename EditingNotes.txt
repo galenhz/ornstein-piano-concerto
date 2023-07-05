@@ -1037,3 +1037,13 @@ mm. 96-103: The piano reduction bars the lower staff 16th figure in two differen
 with stuttered beams in 100-103. The orchestral parts playing that are beamed the second way in the score. Going with
 that throughout.
 (III-piano-reduction)
+
+mm. 96-103: Melody parts have articulations, some of which are backed by the score, and others not. Oboes and Violin II have
+staccato marks on some notes, which are in the score; Violin was missing some that oboes have, so I added those. Brass parts
+have no staccato marks but ^ accents on the second beat, which aren't in the score. Leaving those out. Should revisit
+this later. #UNDECIDED
+(III-orch-*)
+
+mm. 96-103: Viola part not done in a beam-through fashion in the parts, although it is in the score. Everyone else has
+beam-through. Changing viola part to match.
+(III-orch-09-violins-viola)

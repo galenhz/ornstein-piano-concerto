@@ -341,18 +341,64 @@ BassClarinet_cues_mvmt_III_AL = \relative c' {
 	}
 }
 
+%%% Section AM = mm. 96-103 (Rehearsal 62)
+
+Clarinet_I_II_mvmt_III_AM = \transpose c' bes \relative c'' {
+	\mark #62
+	\tempo "Meno"
+	\time 2/4
+	\override Beam.breakable = ##t
+	r8 dis32[(\f e dis \beamCutR e) \beamCutL fis( g fis \beamCutR g) \beamCutL a( bes a \beamCutR g)
+	\beamCutL fis( g fis \beamCutR g \beamCutL fis g fis \beamCutR e) \beamCutL dis( e dis \beamCutR e \beamCutL dis e dis cis])
+	R2*2
+	r8 dis32[( e dis \beamCutR e) \beamCutL fis( g fis \beamCutR g) \beamCutL a( bes a \beamCutR g)
+	\beamCutL fis( g fis \beamCutR g \beamCutL fis g fis \beamCutR e) \beamCutL dis( e dis \beamCutR e \beamCutL dis e dis cis])
+	R2*2
+	\revert Beam.breakable
+}
+
+Clarinet_III_IV_mvmt_III_AM = \transpose c' bes \relative c'' {
+	\mark #62
+	\tempo "Meno"
+	\time 2/4
+	\override Beam.breakable = ##t
+	R2*2
+	r8 c32[(\ff cis c \beamCutR cis \beamCutL d e d \beamCutR e \beamCutL fis g fis \beamCutR e)
+	\beamCutL dis( e dis \beamCutR e \beamCutL dis e dis \beamCutR cis) \beamCutL c( cis c \beamCutR cis \beamCutL \tuplet 3/2 { c16 ais a]) }
+	R2*2
+	r8 c32[( cis c \beamCutR cis \beamCutL d e d \beamCutR e \beamCutL fis g fis \beamCutR e)
+	\beamCutL dis( e dis \beamCutR e \beamCutL dis e dis \beamCutR cis) \beamCutL c( cis c \beamCutR cis \beamCutL \tuplet 3/2 { c16 ais a]) }
+	\revert Beam.breakable
+}
+
+BassClarinet_mvmt_III_AM = \transpose c' bes, \relative c'' {
+	\mark #62
+	\tempo "Meno"
+	\time 2/4
+	\override Beam.breakable = ##t
+	r8 dis32[(\f e dis \beamCutR e \beamCutL fis g fis \beamCutR g \beamCutL dis e dis \beamCutR e)
+	\beamCutL fis( g fis \beamCutR g \beamCutL dis e dis \beamCutR e) \beamCutL fis( g fis \beamCutR g \beamCutL dis e dis e])
+	\repeat unfold 3 {
+		r8 dis32[( e dis \beamCutR e \beamCutL fis g fis \beamCutR g \beamCutL dis e dis \beamCutR e)
+		\beamCutL fis( g fis \beamCutR g \beamCutL dis e dis \beamCutR e) \beamCutL fis( g fis \beamCutR g \beamCutL dis e dis e])
+	}
+	\revert Beam.breakable
+}
 
 %%% Final assembly
 
 Clarinet_I_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_I_mvmt_III_AF
-		\NULL_III_AG \NULL_III_AH \Clarinet_I_mvmt_III_AI \Clarinet_I_II_mvmt_III_AJ \Clarinet_I_II_mvmt_III_AK \NULL_III_AL }
+		\NULL_III_AG \NULL_III_AH \Clarinet_I_mvmt_III_AI \Clarinet_I_II_mvmt_III_AJ \Clarinet_I_II_mvmt_III_AK \NULL_III_AL
+		\Clarinet_I_II_mvmt_III_AM }
 Clarinet_II_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_II_mvmt_III_AC \Clarinet_II_mvmt_III_AD \NULL_III_AE
 		\Clarinet_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Clarinet_II_mvmt_III_AI \Clarinet_I_II_mvmt_III_AJ \Clarinet_I_II_mvmt_III_AK
-		\NULL_III_AL }
+		\NULL_III_AL \Clarinet_I_II_mvmt_III_AM }
 Clarinet_III_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\Clarinet_III_mvmt_II_AF \NULL_III_AG \NULL_III_AH \Clarinet_III_mvmt_III_AI \NULL_III_AJ \Clarinet_other_cues_mvmt_III_AK
-		\NULL_III_AL }
+		\NULL_III_AL \Clarinet_III_IV_mvmt_III_AM }
 Clarinet_IV_mvmt_III = { \NULL_III_AA \Clarinet_all_cues_mvmt_III_AB \Clarinet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Clarinet_IV_mvmt_III_AF
-		\NULL_III_AG \NULL_III_AH \Clarinet_IV_mvmt_III_AI \NULL_III_AJ \Clarinet_other_cues_mvmt_III_AK \NULL_III_AL }
+		\NULL_III_AG \NULL_III_AH \Clarinet_IV_mvmt_III_AI \NULL_III_AJ \Clarinet_other_cues_mvmt_III_AK \NULL_III_AL
+		\Clarinet_III_IV_mvmt_III_AM }
 BassClarinet_mvmt_III = { \NULL_III_AA \BassClarinet_cues_mvmt_III_AB \BassClarinet_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\NULL_III_AG \NULL_III_AH \BassClarinet_cues_mvmt_III_AI \NULL_III_AJ \NULL_III_AK \BassClarinet_cues_mvmt_III_AL }
+		\NULL_III_AG \NULL_III_AH \BassClarinet_cues_mvmt_III_AI \NULL_III_AJ \NULL_III_AK \BassClarinet_cues_mvmt_III_AL
+		\BassClarinet_mvmt_III_AM }
