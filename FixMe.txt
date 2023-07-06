@@ -138,3 +138,6 @@ m. 74: In score, trumpet III/IV should be marked "solo IV", just like I/II is ma
 treatment here.
 
 mm. 96-103: Piano reduction lower staff should parenthesize every other downbeat chord, but it's not doing it, Why?
+
+mm. 104-111: Violin I part shows my flat/sharp trill constructs don't play nice with ottava lines. I've never been entirely
+satisfied with them anyway. Need to rework them.

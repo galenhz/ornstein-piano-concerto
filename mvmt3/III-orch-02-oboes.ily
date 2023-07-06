@@ -345,17 +345,64 @@ EnglishHorn_mvmt_III_AM = \transpose c' f \relative c'' {
 	\revert Beam.breakable
 }
 
+%%% Section AN = mm. 104-112 (Rehearsal 63-64)
+
+Oboe_III_mvmt_III_AN = \relative c' {
+	\mark #63
+	\override Beam.breakable = ##t
+	r8 \tag #'Score fis16[( \tag #'Part fis16[(\ff \beamCutR g) \beamCutL a( \beamCutR bes \beamCutL fis \beamCutR g)
+	\beamCutL a( \beamCutR bes \beamCutL fis \beamCutR g) \beamCutL a( \beamCutR bes \beamCutL fis g])
+	\repeat unfold 3 {
+		r8 fis16[( \beamCutR g) \beamCutL a( \beamCutR bes \beamCutL fis \beamCutR g)
+		\beamCutL a( \beamCutR bes \beamCutL fis \beamCutR g) \beamCutL a( \beamCutR bes \beamCutL fis g])
+	}
+	\revert Beam.breakable
+	\mark #64
+	\time 3/4
+	a( bes fis8) r4 r4
+}
+
+Oboe_IV_mvmt_III_AN = \relative c' {
+	\mark #63
+	\override Beam.breakable = ##t
+	r8 fis32[(\ff g fis \beamCutR g \beamCutL a bes a \beamCutR bes \beamCutL fis g fis \beamCutR g)
+	\beamCutL a( bes a \beamCutR bes \beamCutL fis g fis \beamCutR g) \beamCutL a( bes a \beamCutR bes \beamCutL fis g fis g])
+	\repeat unfold 3 {
+		r8 fis32[( g fis \beamCutR g \beamCutL a bes a \beamCutR bes \beamCutL fis g fis \beamCutR g)
+		\beamCutL a( bes a \beamCutR bes \beamCutL fis g fis \beamCutR g) \beamCutL a( bes a \beamCutR bes \beamCutL fis g fis g])
+	}
+	\revert Beam.breakable
+	\mark #64
+	\time 3/4
+	a[( bes a bes c8]) r4 r4
+}
+
+EnglishHorn_mvmt_III_AN = \transpose c' f \relative c'' {
+	\mark #63
+	\override Beam.breakable = ##t
+	\repeat unfold 4 {
+		r8 g16[( \beamCutR d') \beamCutL bes( \beamCutR f') \beamCutL g,( \beamCutR d')
+		\beamCutL bes( \beamCutR f') \beamCutL g,( \beamCutR d') \beamCutL bes( \beamCutR f') g,( d'])
+	}
+	\mark #64
+	\time 3/4
+	e4 r4 r4
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_I_mvmt_III_AL
-		\Oboes_all_mvmt_III_AM }
+		\Oboes_all_mvmt_III_AM \NULL_III_AN }
 Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_II_mvmt_III_AL
-		\Oboes_all_mvmt_III_AM }
+		\Oboes_all_mvmt_III_AM \NULL_III_AN }
 Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_III_mvmt_III_AL \Oboes_all_mvmt_III_AM }
+		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_III_mvmt_III_AL \Oboes_all_mvmt_III_AM
+		\Oboe_III_mvmt_III_AN }
 Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
-		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_IV_mvmt_III_AL \Oboes_all_mvmt_III_AM }
+		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_IV_mvmt_III_AL \Oboes_all_mvmt_III_AM
+		\Oboe_IV_mvmt_III_AN }
 EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \EnglishHorn_cues_mvmt_III_AG
-		\EnglishHorn_mvmt_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \EnglishHorn_cues_mvmt_III_AL \EnglishHorn_mvmt_III_AM }
+		\EnglishHorn_mvmt_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \EnglishHorn_cues_mvmt_III_AL \EnglishHorn_mvmt_III_AM
+		\EnglishHorn_mvmt_III_AN }

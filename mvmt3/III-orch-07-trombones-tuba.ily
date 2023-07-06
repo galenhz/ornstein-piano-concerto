@@ -282,16 +282,65 @@ Trombone_III_mvmt_III_AM = \relative c {
 
 Tuba_mvmt_III_AM = \transpose d' cis \Trombone_III_mvmt_III_AM
 
+%%% Section AN = mm. 104-112 (Rehearsal 63-64)
+
+Trombone_I_mvmt_III_AN = \relative c' {
+	\mark #63
+	\repeat unfold 7 {
+		fis8 r8 r4
+	}
+	fis,2
+	\mark #64
+	\time 3/4
+	R2.
+	\clef bass
+}
+
+Trombone_II_mvmt_III_AN = \relative c' {
+	\mark #63
+	\repeat unfold 7 {
+		c8 r8 r4
+	}
+	c,2
+	\mark #64
+	\time 3/4
+	R2.
+	\clef bass
+}
+
+Trombone_III_mvmt_III_AN = \relative c' {
+	\mark #63
+	\repeat unfold 7 {
+		g8 r8 r4
+	}
+	R2
+	\mark #64
+	\time 3/4
+	a2 r4
+}
+
+Tuba_mvmt_III_AN = \relative c, {
+	\mark #63
+	\repeat unfold 7 {
+		fis8 r8 r4
+	}
+	ees2
+	\mark #64
+	\time 3/4
+	ees2 r4
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \Trombone_I_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_I_mvmt_III_AK \Trombone_I_mvmt_III_AL
-		\Trombone_I_mvmt_III_AM }
+		\Trombone_I_mvmt_III_AM \Trombone_I_mvmt_III_AN }
 Trombone_II_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \Trombone_II_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_II_mvmt_III_AK \Trombone_II_mvmt_III_AL
-		\Trombone_II_mvmt_III_AM }
+		\Trombone_II_mvmt_III_AM \Trombone_II_mvmt_III_AN }
 Trombone_III_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \Trombone_III_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_III_mvmt_III_AK \Trombone_III_mvmt_III_AL
-		\Trombone_III_mvmt_III_AM }
+		\Trombone_III_mvmt_III_AM \Trombone_III_mvmt_III_AN }
 Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Tuba_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
-		\Tuba_cues_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Tuba_cues_mvmt_III_AK \Tuba_mvmt_III_AL \Tuba_mvmt_III_AM }
+		\Tuba_cues_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Tuba_cues_mvmt_III_AK \Tuba_mvmt_III_AL \Tuba_mvmt_III_AM
+		\Tuba_mvmt_III_AN }

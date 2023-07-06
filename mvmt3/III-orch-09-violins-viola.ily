@@ -707,7 +707,7 @@ Violin_II_mvmt_III_AM = \relative c'' {
 	\time 2/4
 	r8 cis-.\ff d-.[( cis-.])
 	\tuplet 3/2 { b16[( cis \beamCutR b) } \beamCutL bes( g) bes8 bes]
-	r bes-. cis-.[( d-.])
+	r bes-. cis[( d])
 	\tuplet 3/2 { cis16[( d \beamCutR cis) } \beamCutL bes( g]) bes4
 	r8 \tuplet 3/2 { bes16[( cis d) } f8 d]
 	\tuplet 3/2 { cis16[( d \beamCutR cis) } \beamCutL bes( g) bes8 bes]
@@ -741,25 +741,83 @@ Viola_divisi_II_mvmt_III_AM = \relative c' {
 	\revert Beam.breakable
 }
 
+%%% Section AN = mm. 104-112 (Rehearsal 63-64)
+
+Violin_I_mvmt_III_AN = \relative c'''' {
+	\mark #63
+	\ottava #1
+	bes4\trill c8\trFl bes\trill
+	a\trFl g\trill a4\trFl
+	a8\trFl bes\trill c\trFl bes\trill
+	a\trFl g\trill a4\trFl
+	bes4\trill c8\trFl bes\trill
+	a\trFl g\trill a4\trFl
+	a8\trFl bes\trill a\trFl g\trill
+	\ottava #0
+	\repeat unfold 2 { \tuplet 10/8 { fis32[( g fis ees c ees fis g bes g]) } }
+	\mark #64
+	\time 3/4
+	\repeat unfold 2 { \tuplet 10/8 { fis32[( g fis ees c ees fis g bes g]) } } f4
+}
+
+Violin_II_mvmt_III_AN = \relative c'' {
+	\mark #63
+	r8 fis-._\markup { \italic "più" \dynamic f }  g-.[( fis-.])
+	\tuplet 3/2 { e16[( fis \beamCutR e) } \beamCutL ees( c) e8 e]
+	r8 ees-. fis[( g)]
+	\tuplet 3/2 { fis16[( g \beamCutR fis) } \beamCutL ees( c)] ees4
+	r8 \tuplet 3/2 { ees16[( fis g) } bes8 g]
+	\tuplet 3/2 { fis16[( g \beamCutR fis) } ees( c) ees8 ees]
+	r8 \tuplet 3/2 { ees16[( fis g) } bes8 g]
+	\repeat unfold 2 { \tuplet 10/8 { a32( c a fis ees fis a c des c) } }
+	\mark #64
+	\time 3/4
+	\repeat unfold 2 { \tuplet 10/8 { a32( c a fis ees fis a c des c) } } r4
+}
+
+Viola_mvmt_III_AN = \relative c' {
+	\mark #63
+	\override Beam.breakable = ##t
+	\repeat unfold 4 {
+		r8 fis32[ fis g \beamCutR g \beamCutL a a bes \beamCutR bes \beamCutL fis fis g \beamCutR g
+		\beamCutL a a bes \beamCutR bes \beamCutL fis fis g \beamCutR g \beamCutL a a bes \beamCutR bes \beamCutL fis fis g g]
+	}
+	\revert Beam.breakable
+	\mark #64
+	\time 3/4
+	a a bes bes c8~ c4 r4
+}
+
+Viola_divisi_II_mvmt_III_AN = \relative c' {
+	\override Beam.breakable = ##t
+	\repeat unfold 4 {
+		r8 c32[ c ees \beamCutR ees \beamCutL ees ees g \beamCutR g \beamCutL c, c ees \beamCutR ees
+		\beamCutL ees ees g \beamCutR g \beamCutL c, c ees \beamCutR ees \beamCutL ees ees g \beamCutR g \beamCutL c, c ees ees]
+	}
+	\revert Beam.breakable
+	\time 3/4
+	ees ees fis fis fis8~ fis4 r4
+}
+
 %%% Final assembly
 
 Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB \Violin_I_mvmt_III_AC \Violin_I_mvmt_III_AD \Violin_I_mvmt_III_AE
 		\Violin_I_mvmt_III_AF \NULL_III_AG \Violin_I_mvmt_III_AH \NULL_III_AI \Violin_I_mvmt_III_AJ \NULL_III_AK \Violin_I_mvmt_III_AL
-		\Violin_I_mvmt_III_AM }
+		\Violin_I_mvmt_III_AM \Violin_I_mvmt_III_AN }
 Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_divisi_II_mvmt_III_AD
 		\Violin_I_divisi_II_mvmt_III_AE \NULL_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK
-		\NULL_III_AL \NULL_III_AM }
+		\NULL_III_AL \NULL_III_AM \NULL_III_AN }
 
 Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA \Violin_II_mvmt_III_AB \Violin_II_mvmt_III_AC \Violin_II_mvmt_III_AD \Violin_II_mvmt_III_AE
 		\Violin_II_mvmt_III_AF \NULL_III_AG \Violin_II_mvmt_III_AH \Violin_II_cues_mvmt_III_AI \Violin_II_mvmt_III_AJ \NULL_III_AK
-		\NULL_III_AL \Violin_II_mvmt_III_AM }
+		\NULL_III_AL \Violin_II_mvmt_III_AM \Violin_II_mvmt_III_AN }
 Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA \Violin_II_divisi_II_mvmt_III_AB \Violin_II_divisi_II_mvmt_III_AC
 		\Violin_II_divisi_II_mvmt_III_AD \Violin_II_divisi_II_mvmt_III_AE \Violin_II_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH
-		\NULL_III_AI \Violin_II_divisi_II_mvmt_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM }
+		\NULL_III_AI \Violin_II_divisi_II_mvmt_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN }
 
 Viola_mvmt_III = { \clef alto \NULL_III_AA \Viola_cues_mvmt_III_AB \Viola_mvmt_III_AC \Viola_mvmt_III_AD \Viola_mvmt_III_AE
 		\Viola_mvmt_III_AF \Viola_mvmt_III_AG \Viola_mvmt_III_AH \Viola_mvmt_III_AI \Viola_mvmt_III_AJ \NULL_III_AK \NULL_III_AL
-		\Viola_mvmt_III_AM }
+		\Viola_mvmt_III_AM \Viola_mvmt_III_AN }
 Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_III_AD
 		\Viola_divisi_II_mvmt_III_AE \Viola_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK
-		\NULL_III_AL \Viola_divisi_II_mvmt_III_AM }
+		\NULL_III_AL \Viola_divisi_II_mvmt_III_AM \Viola_divisi_II_mvmt_III_AN }
