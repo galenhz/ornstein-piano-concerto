@@ -837,14 +837,39 @@ redux_lower_III_AO = \relative c' {
 	\repeat unfold 8 { \repeat tremolo 8 { <b cis>32 fis' } }
 }
 
+%%% Section AP = mm. 118-121 (Rehearsal 66)
+
+redux_upper_III_AP = \relative c' {
+	\mark #66
+	c8 \clef bass \grace { bes16 c } bes e, \tuplet 5/4 { fis16 fis fis fis c' }
+		fis8[ \grace { e16 fis } e bes] \tuplet 6/4 { c c c c e, fis }
+	c'8[ \grace { bes16 c } bes e,] fis \beamCutR fis \tuplet 6/4 { \beamCutL fis32 g fis f fis bes } g4 r8 e16 fis
+	c'8 \grace { bes16 c } bes e, \tuplet 5/4 { fis16 fis fis fis c' }
+		fis8[ \grace { e16 fis } e bes] \tuplet 6/4 { c c c c e, fis }
+	\time 5/4
+	\clef treble
+	c'8[ \grace { bes16 c } bes e,] fis c' fis e c8[ \grace { bes16 c } bes e,] fis c' fis e fis, c' fis e
+}
+
+redux_dynamics_III_AP = {
+	s1*3 s1*5/4
+}
+
+redux_lower_III_AP = \relative c {
+	\mark #66
+	\repeat unfold 8 { c16 fis, fis fis c fis fis fis }
+		c' fis, fis fis
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
-		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO }
+		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
-		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO }
+		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
+		\redux_dynamics_III_AP }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
-		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO }
+		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP }

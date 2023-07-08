@@ -141,3 +141,7 @@ mm. 96-103: Piano reduction lower staff should parenthesize every other downbeat
 
 mm. 104-111: Violin I part shows my flat/sharp trill constructs don't play nice with ottava lines. I've never been entirely
 satisfied with them anyway. Need to rework them.
+
+mm. 118-121: Too many notes in the solo piano; I've had to shrink them to illegibility in order to fit onto the page.
+I need a better way; I might be able to apply it to earlier sections as well, if I can figure one out. Also, the
+grace notes in the PR disrupt the flow of the solo part.

@@ -630,14 +630,66 @@ solo_lower_III_AO = \relative c, {
 	}
 }
 
+%%% Section AP = mm. 118-121 (Rehearsal 66)
+
+% I've reached the limit of how far I can shrink the music to get it to fit in the page size.
+% I need a better solution.
+
+solo_upper_III_AP = \relative c' {
+	\mark #66
+	\magnifyMusic 0.5 {
+		\tuplet 11/8 4 {
+			\repeat unfold 6 {
+				e32 bes' ees fis e bes' ees fis \ottava #1 e bes' ees
+					fis ees bes e, \ottava #0 fis ees bes e, fis ees bes
+			}
+		}
+	}
+	\magnifyMusic 0.4 {
+		\tuplet 11/8 4 {
+			\repeat unfold 2 {
+				e, bes' ees fis e bes' ees fis \ottava #1 e bes' ees
+					fis ees bes e, \ottava #0 fis ees bes e, fis ees bes
+			}
+			e, bes' ees fis e bes' ees fis \ottava #1 e bes' ees
+		}
+	}
+}
+
+solo_dynamics_III_AP = {
+	s1*3 s1*5/4
+}
+
+solo_lower_III_AP = \relative c' {
+	\clef treble
+	\magnifyMusic 0.5 {
+		\tuplet 14/8 4 {
+			\repeat unfold 6 {
+				bes32 cis ees fis a bes cis ees fis a bes cis ees fis
+					a fis ees cis b a fis ees cis bes a fis e cis
+			}
+		}
+	}
+	\magnifyMusic 0.4 {
+		\tuplet 14/8 4 {
+			\repeat unfold 2 {
+				bes cis ees fis a bes cis ees fis a bes cis ees fis
+					a fis ees cis b a fis ees cis bes a fis e cis
+			}
+			bes cis ees fis a bes cis ees fis a bes cis ees fis
+		}
+	}
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
-		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO }
+		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
-		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO }
+		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
+		\solo_dynamics_III_AP }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
-		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO }
+		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP }
