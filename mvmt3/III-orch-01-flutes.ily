@@ -550,20 +550,69 @@ Flute_IV_cues_mvmt_III_AN = \relative c''' {
 	}
 }
 
+%%% Section AO = mm. 113-117 (Rehearsal ~65)
+
+Picc_mvmt_III_AO = \relative c'' {
+	\time 4/4
+	r2 r4 r8 \tuplet 3/2 { r16\ff cis( dis) }
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) \tuplet 5/4 { dis-. dis-. dis-. dis( gis) }
+		cis8-^[ \appoggiatura { b16 cis } b( fis]) \tuplet 5/4 { gis-. gis-. gis-. cis,( dis) }
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) dis-.[ \beamCutR dis-.
+		\tuplet 6/4 { \beamCutL dis32( e dis cisis dis g]) } e4 r8 \tuplet 3/2 { r16 cis( dis) }
+	\mark #65
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) \tuplet 5/4 { dis-. dis-. dis-. dis( gis) }
+		cis8-^[ \appoggiatura { b16 cis } b( fis]) \tuplet 5/4 { gis-. gis-. gis-. cis,( dis) }
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) dis-.[ \beamCutR dis-.
+		\tuplet 6/4 { \beamCutL dis32( e dis cisis dis g]) } e2
+}
+
+% Almost but not quite the same.
+Flute_I_II_mvmt_III_AO = \relative c''' {
+	\time 4/4
+	r2 r4 r8 \tuplet 3/2 { r16\ff cis( dis) }
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) \tuplet 5/4 { dis-. dis-. dis-. dis( gis) }
+		cis,8-^[ b'16( fis]) \tuplet 5/4 { gis-. gis-. gis-. cis,( dis) }
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) dis-.[ \beamCutR dis-.
+		\tuplet 6/4 { \beamCutL dis32( e dis cisis dis g]) } e4 r8 \tuplet 3/2 { r16 cis( dis) }
+	\mark #65
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) \tuplet 5/4 { dis-. dis-. dis-. dis( gis) }
+		cis,8-^[ b'16( fis]) \tuplet 5/4 { gis-. gis-. gis-. cis,( dis) }
+	gis8-^[ \appoggiatura { fis16 gis } fis( cis]) dis-.[ \beamCutR dis-.
+		\tuplet 6/4 { \beamCutL dis32( e dis cisis dis g]) } e2
+}
+
+Flute_III_mvmt_III_AO = \relative c'' {
+	\time 4/4
+	R1
+	\repeat tremolo 4 { fis32(\f e) }
+		\repeat unfold 7 { \repeat tremolo 4 { fis32( e) } }
+	\mark #65
+	\repeat unfold 8 { \repeat tremolo 4 { fis32( e) } }
+}
+
+Flute_IV_mvmt_III_AO = \relative c'' {
+	\time 4/4
+	R1
+	\repeat tremolo 4 { b32(\f cis) }
+		\repeat unfold 7 { \repeat tremolo 4 { b32( cis) } }
+	\mark #65
+	\repeat unfold 8 { \repeat tremolo 4 { b32( cis) } }
+}
+
 %%% Final construction
 
 Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK \NULL_III_AL \Picc_cues_mvmt_III_AM
-		\Picc_mvmt_III_AN }
+		\Picc_mvmt_III_AN \Picc_mvmt_III_AO }
 Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD \Flute_I_mvmt_III_AE
 		\Flute_I_mvmt_III_AF \NULL_III_AG \Flute_I_mvmt_III_AH \Flute_I_mvmt_III_AI \Flute_I_II_mvmt_III_AJ \Flute_I_II_mvmt_III_AK
-		\Flute_I_III_mvmt_III_AL \NULL_III_AM \Flute_I_mvmt_III_AN }
+		\Flute_I_III_mvmt_III_AL \NULL_III_AM \Flute_I_mvmt_III_AN \Flute_I_II_mvmt_III_AO }
 Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_II_mvmt_III_AE
 		\Flute_II_mvmt_III_AF \NULL_III_AG \Flute_II_cues_mvmt_III_AH \Flute_II_mvmt_III_AI \Flute_I_II_mvmt_III_AJ \Flute_I_II_mvmt_III_AK
-		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_II_mvmt_III_AN }
+		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_II_mvmt_III_AN \Flute_I_II_mvmt_III_AO }
 Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD \NULL_III_AE \NULL_III_AF
 		\NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK \Flute_I_III_mvmt_III_AL
-		\NULL_III_AM \Flute_III_mvmt_III_AN }
+		\NULL_III_AM \Flute_III_mvmt_III_AN \Flute_III_mvmt_III_AO }
 Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_IV_mvmt_III_AE
 		\Flute_IV_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK
-		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_IV_cues_mvmt_III_AN }
+		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_IV_cues_mvmt_III_AN \Flute_IV_mvmt_III_AO }

@@ -527,7 +527,7 @@ solo_upper_III_AM = \relative c'' {
 			\repeat unfold 7 {
 				\change Staff = "solo_upper" bes[ bes' bes, \change Staff = "solo_lower" bes]
 			}
-		\change Staff = "solo_upper" b[ b' b, \change Staff = "solo_lower" bes]
+		\change Staff = "solo_upper" b?[ b' b, \change Staff = "solo_lower" bes]
 			\repeat unfold 7 {
 				\change Staff = "solo_upper" g[ g' g, \change Staff = "solo_lower" g]
 			}
@@ -553,7 +553,7 @@ solo_upper_III_AN = \relative c'' {
 		\repeat unfold 7 {
 			\change Staff = "solo_upper" ees[ ees' ees, \change Staff = "solo_lower" ees]
 		}
-	\change Staff = "solo_upper" e[ e' e, \change Staff = "solo_lower" ees]
+	\change Staff = "solo_upper" e?[ e' e, \change Staff = "solo_lower" ees]
 		\repeat unfold 7 {
 			\change Staff = "solo_upper" c[ c' c, \change Staff = "solo_lower" c]
 		}
@@ -561,7 +561,7 @@ solo_upper_III_AN = \relative c'' {
 		\repeat unfold 7 {
 			\change Staff = "solo_upper" ees[ ees' ees, \change Staff = "solo_lower" ees]
 		}
-	\change Staff = "solo_upper" e[ e' e, \change Staff = "solo_lower" ees]
+	\change Staff = "solo_upper" e?[ e' e, \change Staff = "solo_lower" ees]
 		\repeat unfold 3 {
 			\change Staff = "solo_upper" c[ c' c, \change Staff = "solo_lower" c]
 		}
@@ -590,11 +590,44 @@ solo_lower_III_AN = \relative c'' {
 }
 
 %%% Section AO = mm. 113-117 (Rehearsal ~65)
-%%% Incomplete for now, just the glissando target
 
 solo_upper_III_AO = \relative c {
 	\time 4/4
-	f8 s8 s2.
+	\magnifyMusic 0.63 { f8 } s8 s2.
+	s1*2
+	\mark #65
+	s1*2
+}
+
+solo_dynamics_III_AO = {
+	s1*5
+}
+
+% Edit: Beat three-and-a half of bar 113 breaks the symmetry in the PR, starting with a
+%       instead of f. Score confirms it's an f, making the two halves of the bar the same.
+
+solo_lower_III_AO = \relative c, {
+	\tag #'PR \break
+	\time 4/4
+	\clef bass
+	\magnifyMusic 0.63 {
+		\repeat unfold 2 {
+			f64[ cis' a' \change Staff = "solo_upper" e' gis b c e]
+				\change Staff = "solo_lower" f,,[ cis' a' \change Staff = "solo_upper" e' gis b c e]
+				f e[ c b gis e \change Staff = "solo_lower" \clef treble a, cis,]
+				\tuplet 7/4 { \change Staff = "solo_upper" e'32[ c b gis e \change Staff = "solo_lower" \clef bass a, cis,] }
+		}
+		\repeat unfold 8 {
+			\tuplet 7/4 8 {
+				d,32[ gis fis' \change Staff = "solo_upper" gis cis fis gis]
+				\change Staff = "solo_lower" gis,[ cis fis \change Staff = "solo_upper" gis cis fis gis]
+			}
+			\tuplet 6/4 8 {
+				<fis' gis>[ cis gis \change Staff = "solo_lower" \clef treble fis cis gis]
+				\change Staff = "solo_upper" <fis' gis>[ cis gis \change Staff = "solo_lower" \clef bass fis cis gis]
+			}
+		}
+	}
 }
 
 %%% Final assembly
@@ -604,7 +637,7 @@ solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \sol
 		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
-		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN }
+		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
-		\solo_lower_III_AM \solo_lower_III_AN }
+		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO }

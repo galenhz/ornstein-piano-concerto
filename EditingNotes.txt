@@ -1054,3 +1054,18 @@ revision at some point. #UNDECIDED
 
 m. 112, 116, 118: Why are rehearsal numbers 64 through 66 where they are? More evidence rehersal marks should be reworked.
 (III-orch-*)
+
+m. 113: Solo piano beat three-and-a-half starts with an a, as opposed to the f that starts beat one-and-a-half. Since
+the two halves of the bar are otherwise identical, this is suspicious. Full score confirms f. Making it f to keep
+symmetry.
+(III-solo-piano)
+
+mm. 114-117: Solo piano has four identical bars notewise, again both halves symmetric. Bar 114 has a slightly different
+pattern in clefs than the other three, not changing the lower staff to bass clef just before beat three. The other bars
+do that, despite the fact the copyist left out the actual clef in 116. Doing all four bars the same way.
+(III-solo-piano)
+
+mm. 114-117: Violin I part has some accents and staccato markings in the melody that are also in the score; the flute and
+piccolo, who copy this line, don't have them. I've added them in to match Violin I for now. Not sure it's right. Should
+revisit. Oh, and flutes/piccolo slur the beats with the grace notes slightly differently. #UNDECIDED
+(III-orch-01-flutes)
