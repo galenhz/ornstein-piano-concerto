@@ -318,17 +318,20 @@ Trumpet_IV_mvmt_III_AN = \relative c'' {
 %%% Section AO = mm. 113-117 (Rehearsal ~65)
 %%% Tacet
 
+%%% Section AP = mm. 118-121 (Rehearsal 66)
+%%% Tacet
+
 %%% Final assembly
 
 Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_I_mvmt_III_AJ \Trumpet_I_mvmt_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_I_mvmt_III_AM
-		\Trumpet_I_mvmt_III_AN \NULL_III_AO }
+		\Trumpet_I_mvmt_III_AN \NULL_III_AO \NULL_III_AP }
 Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_II_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_II_mvmt_III_AM
-		\Trumpet_II_mvmt_III_AN \NULL_III_AO }
+		\Trumpet_II_mvmt_III_AN \NULL_III_AO \NULL_III_AP }
 Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_III_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_III_mvmt_III_AM
-		\Trumpet_III_mvmt_III_AN \NULL_III_AO }
+		\Trumpet_III_mvmt_III_AN \NULL_III_AO \NULL_III_AP }
 Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_IV_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_IV_mvmt_III_AM
-		\Trumpet_IV_mvmt_III_AN \NULL_III_AO }
+		\Trumpet_IV_mvmt_III_AN \NULL_III_AO \NULL_III_AP }

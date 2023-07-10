@@ -1069,3 +1069,7 @@ mm. 114-117: Violin I part has some accents and staccato markings in the melody 
 piccolo, who copy this line, don't have them. I've added them in to match Violin I for now. Not sure it's right. Should
 revisit. Oh, and flutes/piccolo slur the beats with the grace notes slightly differently. #UNDECIDED
 (III-orch-01-flutes)
+
+m. 119: Viola has an e-double-sharp in beat 2, which makes no sense; score has f-natural, which would be e-sharp. PR has
+f-natural. e-sharp actually might make the figure a bit more readable; cheating a bit and using that.
+(III-orch-09-violins-viola)

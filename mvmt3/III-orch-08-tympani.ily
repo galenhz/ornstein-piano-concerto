@@ -290,11 +290,29 @@ Tympani_II_mvmt_III_AN = \relative c, {
 %%% Section AO = mm. 113-117 (Rehearsal ~65)
 %%% Tacet
 
+%%% Section AP = mm. 118-121 (Rehearsal 66)
+
+Tympani_I_mvmt_III_AP = \relative c {
+	\mark #66
+	c16\ppp r16 r8
+		\repeat unfold 11 { c16 r16 r8 }
+	\time 5/4
+	\repeat unfold 5 { c16 r16 r8 }
+}
+
+Tympani_II_mvmt_III_AP = \relative c, {
+	\mark #66
+	r32\ppp fis fis fis fis fis fis fis
+		\repeat unfold 11 { r32 fis fis fis fis fis fis fis }
+	\time 5/4
+	\repeat unfold 5 { r32 fis fis fis fis fis fis fis }
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
 		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_I_mvmt_III_AK \NULL_III_AL \Tympani_I_mvmt_III_AM
-		\Tympani_I_mvmt_III_AN \NULL_III_AO }
+		\Tympani_I_mvmt_III_AN \NULL_III_AO \Tympani_I_mvmt_III_AP }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
 		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_II_mvmt_III_AK \Tympani_II_mvmt_III_AL
-		\Tympani_II_mvmt_III_AM \Tympani_II_mvmt_III_AN \NULL_III_AO }
+		\Tympani_II_mvmt_III_AM \Tympani_II_mvmt_III_AN \NULL_III_AO \Tympani_II_mvmt_III_AP }
