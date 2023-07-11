@@ -681,15 +681,59 @@ solo_lower_III_AP = \relative c' {
 	}
 }
 
+%%% Section AQ = mm. 122-125 (Rehersal 67)
+
+% Edit: 3rd beat grace note pattern should be e-fis not e-f.
+solo_upper_III_AQ = \relative c'''' {
+	\mark #67
+	\time 4/4
+	c8[ \grace { bes16 c } bes \change Staff = "solo_lower" e,] \change Staff = "solo_upper"
+		\tuplet 5/4 { fis \change Staff = "solo_lower" fis \change Staff = "solo_upper" fis \change Staff = "solo_lower" fis \change Staff = "solo_upper" c' }
+		fis8[ \grace { e16 fis } e \change Staff = "solo_lower" bes] \change Staff = "solo_upper"
+		\tuplet 6/4 { c \change Staff = "solo_lower" c \change Staff = "solo_upper" c \change Staff = "solo_lower" c \change Staff = "solo_upper" e, fis }
+	c'8[ \grace { bes16 c } bes \change Staff = "solo_lower" e,] \change Staff = "solo_upper"
+		\tuplet 5/4 { fis \change Staff = "solo_lower" fis \change Staff = "solo_upper" fis \change Staff = "solo_lower" fis \change Staff = "solo_upper" c' }
+		\tuplet 6/4 8 {
+			\repeat unfold 4 {
+				\change Staff = "solo_upper" fis32[ e fis e c \change Staff = "solo_lower" bes]
+				\change Staff = "solo_upper" c[ bes c bes \change Staff = "solo_lower" e, fis]
+			}
+		}
+	\tuplet 6/4 4 {
+		aes,16 \change Staff = "solo_upper" <g' g'> \change Staff = "solo_lower" aes, \change Staff = "solo_upper" <g' g'>
+			\change Staff= "solo_lower" fis, \change Staff = "solo_upper" <f' f'> \ottava #0
+		\change Staff = "solo_lower" aes, \change Staff = "solo_upper" <g g'> \change Staff = "solo_lower" aes \change Staff = "solo_upper" <g g'>
+			\change Staff= "solo_lower" fis \change Staff = "solo_upper" <f f'>
+		\change Staff = "solo_lower" aes, \change Staff = "solo_upper" <g g'> \change Staff = "solo_lower" aes \change Staff = "solo_upper" <g g'>
+			\change Staff= "solo_lower" fis \change Staff = "solo_upper" <f f'>
+		\change Staff = "solo_lower" aes, \change Staff = "solo_upper" <g g'> \change Staff = "solo_lower" aes \change Staff = "solo_upper" <g g'>
+			\change Staff= "solo_lower" fis \change Staff = "solo_upper" <f f'>
+	}
+}
+
+solo_dynamics_III_AQ = {
+	s1*2 s2 s1
+}
+
+solo_lower_III_AQ = {
+	\time 4/4
+	s2 s8 \ottava #1 s8 s4 \ottava #0
+	s2 s16 \ottava #1 s16 \ottava #0 s8 s16 \ottava #1 s16 \ottava #0 s8
+	\time 2/4
+	s16 \ottava #1 s16 \ottava #0 s8 s16 \ottava #1 s16 \ottava #0 s8
+	\time 4/4
+	s1
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
-		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP }
+		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
 		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
-		\solo_dynamics_III_AP }
+		\solo_dynamics_III_AP \solo_dynamics_III_AQ }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
-		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP }
+		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ }

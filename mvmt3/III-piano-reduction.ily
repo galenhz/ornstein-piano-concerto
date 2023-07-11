@@ -861,15 +861,42 @@ redux_lower_III_AP = \relative c {
 		c' fis, fis fis
 }
 
+%%% Section AQ = mm. 122-125 (Rehersal 67)
+
+redux_upper_III_AQ = \relative c'''' {
+	\mark #67
+	\time 4/4
+	\tuplet 7/4 4 {
+		\repeat unfold 5 { gis16 fis e d c bes gis fis gis bes c d e fis }
+	}
+	<aes,,, c e f>4 r4 r4 r4
+}
+
+redux_dynamics_III_AQ = {
+	s1*2 s2 s1
+}
+
+% QUESTION: PR has a slightly different pattern in the 2/4 bar, bes fis fis. Right? Wrong?
+redux_lower_III_AQ = \relative c {
+	\time 4/4
+	\tuplet 3/2 4 {
+		\repeat unfold 4 { bes8 fis' gis e' fis, fis }
+		\time 2/4
+		bes,8 fis' gis e' fis, fis
+	}
+	\time 4/4
+	<f, des'>4 r4 r4 r4
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
-		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP }
+		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
-		\redux_dynamics_III_AP }
+		\redux_dynamics_III_AP \redux_dynamics_III_AQ }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
-		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP }
+		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ }

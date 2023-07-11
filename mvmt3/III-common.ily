@@ -45,3 +45,4 @@ NULL_III_AM = { \mark #62 \tempo "Meno" \time 2/4 R2*8 }
 NULL_III_AN = { \mark #63 R2*8 \mark #64 \time 3/4 R2. }
 NULL_III_AO = { \time 4/4 R1*3 \mark #65 R1*2 }
 NULL_III_AP = { \mark #66 R1*3 \time 5/4 R1*5/4 }
+NULL_III_AQ = { \mark #67 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1 }
