@@ -876,7 +876,7 @@ redux_dynamics_III_AQ = {
 	s1*2 s2 s1
 }
 
-% QUESTION: PR has a slightly different pattern in the 2/4 bar, bes fis fis. Right? Wrong?
+% Edit: PR has a slightly different pattern in the 2/4 bar. No reason for it.
 redux_lower_III_AQ = \relative c {
 	\time 4/4
 	\tuplet 3/2 4 {
@@ -888,15 +888,86 @@ redux_lower_III_AQ = \relative c {
 	<f, des'>4 r4 r4 r4
 }
 
+%%% Section AR = mm. 126-132 (Rehersal 68-69)
+
+redux_upper_III_AR = \relative c''' {
+	\mark #68
+	\tempo "Meno mosso"
+	\time 3/4
+	R2.
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			<c c'>4 <bes bes'>8 <a a'> \tuplet 3/2 { <c c'> <bes bes'> <a a'> } q q
+			\tuplet 3/2 { <fis fis'> <a a'> <bes bes'> } <a a'>2.~
+			q2 r8 <fis fis'> <a a'> <bes bes'>
+			<c c'>4 <bes bes'>8 <a a'> \tuplet 3/2 { <c c'> <bes bes'> <a a'> } q q
+			\time 6/4
+			\tuplet 3/2 { <fis fis'> <a a'> <bes bes'> } <a a'>1~ q4
+		}
+		\new Voice {
+			\voiceTwo
+			c,4 bes8 a \tuplet 3/2 { c bes a } a a
+			\tuplet 3/2 { fis a bes } a2.~
+			a2 r8 fis a bes
+			c4 bes8 a \tuplet 3/2 { c bes a } a a
+			\time 6/4
+			\tuplet 3/2 { fis a bes } a1~ a4
+		}
+		\new Voice {
+			\voiceFour
+			<e' fis>2 q2
+		}
+	>>
+	\mark #69
+	\time 3/4
+	R2.
+}
+
+redux_dynamics_III_AR = {
+	s2. s1*4 s1. s2.-\markup { \italic "rit." }
+}
+
+redux_lower_III_AR = \relative c {
+	\time 3/4
+	cis8 r cis r cis r
+	\time 4/4
+	\parenthesize cis,2 \parenthesize cis2
+	<<
+		\new Voice {
+			\voiceOne
+			r4 \tuplet 3/2 4 { r8 \clef treble <a'' a'> <c c'> <cis cis'> <c c'> q <e e'> <cis cis'> <c c'> }
+			<c c'> q \tuplet 3/2 { <a a'> <c c'> <cis cis'> } <c c'>2
+			s1
+			\time 6/4
+			r4 <a a'>8[ \clef treble <c c'>] \tuplet 3/2 { <cis cis'>[ <c c'> q] } q[ q] \tuplet 3/2 { <e e'>[ <cis cis'> <c c'>] } q <a a'>
+			\time 3/4
+			\tuplet 5/4 { bes16 c des e fis } e8 <c des>4 bes8
+		}
+		\new Voice {
+			\voiceTwo
+			\parenthesize cis,,4 \parenthesize cis2.
+			s1
+			\clef bass \parenthesize c2 \parenthesize c2
+			\time 6/4
+			\parenthesize c4 \parenthesize c1 s4
+			\time 3/4
+			\clef bass
+			\tuplet 5/4 { e16 fis c' c c } c8 <c des>4 <ges bes>8
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
-		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ }
+		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
-		\redux_dynamics_III_AP \redux_dynamics_III_AQ }
+		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
-		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ }
+		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR }

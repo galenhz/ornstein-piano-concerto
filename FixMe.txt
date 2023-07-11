@@ -145,3 +145,6 @@ satisfied with them anyway. Need to rework them.
 mm. 118-121: Too many notes in the solo piano; I've had to shrink them to illegibility in order to fit onto the page.
 I need a better way; I might be able to apply it to earlier sections as well, if I can figure one out. Also, the
 grace notes in the PR disrupt the flow of the solo part.
+
+m. 132: Piano reduction renders the middle quarter note oddly; they should stack on top of each other like the PR,
+but they don't.

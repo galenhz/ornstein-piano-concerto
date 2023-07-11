@@ -1070,6 +1070,10 @@ piccolo, who copy this line, don't have them. I've added them in to match Violin
 revisit. Oh, and flutes/piccolo slur the beats with the grace notes slightly differently. #UNDECIDED
 (III-orch-01-flutes)
 
+mm. 118-125: This section generally has missing or inconsistant dynamics. Didn't do much thinking here. Need to come
+back to this section when the dust settles and work out how this should look. #UNDECIDED #DYNAMICS
+(III-orch-*)
+
 m. 119: Viola has an e-double-sharp in beat 2, which makes no sense; score has f-natural, which would be e-sharp. PR has
 f-natural. e-sharp actually might make the figure a bit more readable; cheating a bit and using that.
 (III-orch-09-violins-viola)
@@ -1078,4 +1082,13 @@ m. 122: Solo piano, pretty sure the grace notes in beat 3 are supposed to be e f
 (III-solo-piano)
 
 m. 123: Piano sextuplets are 32nd in score, 16th in PR. 32nd obviously correct.
+(III-solo-piano)
+
+m. 124: Piano reduction changes the pattern suddenly in this bar, changing gis to fis. I can't see any reason to do this;
+the orchestra isn't changing anything it's doing, and this passage doesn't match any particular instrument anyway. Letting
+the pattern sit.
+(III-piano-reduction)
+
+m. 129: PR solo piano, in the last eighth note, breaks the pattern by changing <bes ees> to <e, bes' ees>. No sign of this extra
+note in the score, and it never happens again. Suspect it's an error.
 (III-solo-piano)
