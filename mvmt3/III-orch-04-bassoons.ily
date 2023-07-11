@@ -472,20 +472,99 @@ Bassoon_III_IV_cues_mvmt_III_AP = \relative c' {
 	}
 }
 
+%%% Section AQ = mm. 122-125 (Rehersal 67)
+
+Bassoon_I_mvmt_III_AQ = \relative c'' {
+	\mark #67
+	\time 4/4
+	\tuplet 6/4 4 {
+		\repeat unfold 8 { gis16( fis gis fis gis fis) }
+		\time 2/4
+		\repeat unfold 2 { gis( fis gis fis gis fis) }
+	}
+	\time 4/4
+	R1
+}
+
+Bassoon_II_mvmt_III_AQ = \relative c' {
+	\mark #67
+	\time 4/4
+	\tuplet 6/4 4 {
+		\repeat unfold 8 { e16( d e d e d) }
+		\time 2/4
+		\repeat unfold 2 { e( d e d e d) }
+	}
+	\time 4/4
+	R1
+}
+
+Bassoon_III_mvmt_III_AQ = \relative c' {
+	\mark #67
+	\time 4/4
+	\tuplet 6/4 4 {
+		\repeat unfold 8 { d16( c d c d c) }
+		\time 2/4
+		\repeat unfold 2 { d( c d c d c) }
+	}
+	\time 4/4
+	R1
+}
+
+Bassoon_IV_mvmt_III_AQ = \relative c' {
+	\mark #67
+	\time 4/4
+	\tuplet 6/4 4 {
+		\repeat unfold 8 { bes16( aes bes aes bes aes) }
+		\time 2/4
+		\repeat unfold 2 { bes( aes bes aes bes aes) }
+	}
+	\time 4/4
+	R1
+}
+
+Contrabassoon_cues_mvmt_III_AQ = \relative c' {
+	\tag #'Score \NULL_III_AQ
+	\tag #'Part {
+		\mark #67
+		\time 4/4
+		<<
+			\new CueVoice {
+				\tuplet 6/4 4 {
+					bes16(_"IV Bsn." aes bes aes bes aes)
+						\repeat unfold 3 { bes( aes bes aes bes aes) }
+				}
+			}
+			\new Voice {
+				\voiceTwo
+				R1
+			}
+		>>
+		R1
+		\time 2/4
+		R2
+		\time 4/4
+		R1
+	}
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD
 		\NULL_III_AE \NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_I_mvmt_III_AI \NULL_III_AJ \Bassoon_I_II_mvmt_III_AK
-		\Bassoon_I_mvmt_III_AL \Bassoon_I_II_mvmt_III_AM \Bassoon_I_mvmt_III_AN \Bassoon_I_II_mvmt_III_AO \NULL_III_AP }
+		\Bassoon_I_mvmt_III_AL \Bassoon_I_II_mvmt_III_AM \Bassoon_I_mvmt_III_AN \Bassoon_I_II_mvmt_III_AO \NULL_III_AP
+		\Bassoon_I_mvmt_III_AQ }
 Bassoon_II_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD
 		\NULL_III_AE \NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_II_mvmt_III_AI \NULL_III_AJ \Bassoon_I_II_mvmt_III_AK
-		\Bassoon_II_mvmt_III_AL \Bassoon_I_II_mvmt_III_AM \Bassoon_II_mvmt_III_AN \Bassoon_I_II_mvmt_III_AO \NULL_III_AP }
+		\Bassoon_II_mvmt_III_AL \Bassoon_I_II_mvmt_III_AM \Bassoon_II_mvmt_III_AN \Bassoon_I_II_mvmt_III_AO \NULL_III_AP
+		\Bassoon_II_mvmt_III_AQ }
 Bassoon_III_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_III_mvmt_III_AI \NULL_III_AJ \Bassoon_Contra_cues_mvmt_III_AK
-		\Bassoon_III_mvmt_III_AL \Bassoon_III_mvmt_III_AM \NULL_III_AN \NULL_III_AO \Bassoon_III_IV_cues_mvmt_III_AP }
+		\Bassoon_III_mvmt_III_AL \Bassoon_III_mvmt_III_AM \NULL_III_AN \NULL_III_AO \Bassoon_III_IV_cues_mvmt_III_AP
+		\Bassoon_III_mvmt_III_AQ }
 Bassoon_IV_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_IV_mvmt_III_AI \NULL_III_AJ \Bassoon_Contra_cues_mvmt_III_AK
-		\Bassoon_IV_mvmt_III_AL \Bassoon_IV_mvmt_III_AM \NULL_III_AN \NULL_III_AO \Bassoon_III_IV_cues_mvmt_III_AP }
+		\Bassoon_IV_mvmt_III_AL \Bassoon_IV_mvmt_III_AM \NULL_III_AN \NULL_III_AO \Bassoon_III_IV_cues_mvmt_III_AP
+		\Bassoon_IV_mvmt_III_AQ }
 Contrabassoon_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Contrabassoon_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG \Contrabassoon_mvmt_III_AH \Contrabassoon_mvmt_III_AI \NULL_III_AJ \Bassoon_Contra_cues_mvmt_III_AK
-		\Contrabassoon_mvmt_III_AL \NULL_III_AM \NULL_III_AN \NULL_III_AO \NULL_III_AP }
+		\Contrabassoon_mvmt_III_AL \NULL_III_AM \NULL_III_AN \NULL_III_AO \NULL_III_AP \Contrabassoon_cues_mvmt_III_AQ }

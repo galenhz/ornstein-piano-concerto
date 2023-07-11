@@ -502,15 +502,42 @@ Bass_mvmt_III_AP = \relative c' {
 	c' r c, r c' r c, r c' r
 }
 
+%%% Section AQ = mm. 122-125 (Rehersal 67)
+
+Cello_mvmt_III_AQ = \relative c {
+	\mark #67
+	\time 4/4
+	\tuplet 6/4 4 {
+		bes16(\f fis') fis fis fis fis e'( fis,) fis fis fis fis
+		\repeat unfold 3 {
+			bes,16( fis') fis fis fis fis e'( fis,) fis fis fis fis
+		}
+		\time 2/4
+		bes,16( fis') fis fis fis fis e'( fis,) fis fis fis fis
+	}
+	\time 4/4
+	f,4 r4 r2
+}
+
+Bass_mvmt_III_AQ = \relative c, {
+	\mark #67
+	\time 4/4
+	R1*2
+	\time 2/4
+	R2
+	\time 4/4
+	f4 r4 r2
+}
+
 %%% Final assembly
 
 Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE \Cello_mvmt_III_AF
 		\Cello_mvmt_III_AG \Cello_mvmt_III_AH \Cello_mvmt_III_AI \Cello_mvmt_III_AJ \Cello_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Cello_mvmt_III_AM
-		\Cello_mvmt_III_AN \Cello_mvmt_III_AO \Cello_mvmt_III_AP }
+		\Cello_mvmt_III_AN \Cello_mvmt_III_AO \Cello_mvmt_III_AP \Cello_mvmt_III_AQ }
 Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF
 		\NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \Cello_divisi_II_mvmt_III_AO
-		\NULL_III_AP }
+		\NULL_III_AP \NULL_III_AQ }
 
 Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF
 		\Bass_mvmt_III_AG \Bass_mvmt_III_AH \Bass_mvmt_III_AI \Bass_mvmt_III_AJ \Bass_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Bass_mvmt_III_AM
-		\Bass_mvmt_III_AN \Bass_mvmt_III_AO \Bass_mvmt_III_AP }
+		\Bass_mvmt_III_AN \Bass_mvmt_III_AO \Bass_mvmt_III_AP \Bass_mvmt_III_AQ }
