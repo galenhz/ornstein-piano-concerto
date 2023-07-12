@@ -58,3 +58,19 @@ instrumentName = "Tympani I"
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-08-tympani.ily"
+
+\score {
+	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Tympani_I_mvmt_III }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

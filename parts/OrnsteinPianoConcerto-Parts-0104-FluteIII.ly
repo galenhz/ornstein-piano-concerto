@@ -58,3 +58,19 @@ instrumentName = "Flute III"
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-01-flutes.ily"
+
+\score {
+	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Flute_III_mvmt_III }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

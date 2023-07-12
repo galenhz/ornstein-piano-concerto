@@ -58,3 +58,19 @@ instrumentName = "Bassoon II"
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-04-bassoons.ily"
+
+\score {
+	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Bassoon_II_mvmt_III }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

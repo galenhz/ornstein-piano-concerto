@@ -58,3 +58,19 @@ instrumentName = \markup{\concat{"Clarinet IV in B" \flat}}
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-03-clarinets.ily"
+
+\score {
+	\new Staff \compressMMRests \transpose bes c' \keepWithTag #'Part { \markLengthOn \Clarinet_IV_mvmt_III }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

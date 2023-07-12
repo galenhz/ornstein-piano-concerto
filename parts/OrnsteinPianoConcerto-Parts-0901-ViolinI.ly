@@ -64,3 +64,22 @@ instrumentName = "Violin I"
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-09-violins-viola.ily"
+
+\score {
+	\new StaffGroup <<
+		\new Staff \compressMMRests \keepWithTag #'Part { \markLengthOn \Violin_I_mvmt_III }
+		\new Staff \with { \RemoveAllEmptyStaves } \compressMMRests \keepWithTag #'Part \Violin_I_divisi_II_mvmt_III
+	>>
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

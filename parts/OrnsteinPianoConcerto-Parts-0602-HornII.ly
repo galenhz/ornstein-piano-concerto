@@ -58,3 +58,19 @@ instrumentName = "Horn II in F"
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-06-horns.ily"
+
+\score {
+	\new Staff \compressMMRests \transpose f c' \keepWithTag #'Part { \markLengthOn \Horn_II_mvmt_III }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

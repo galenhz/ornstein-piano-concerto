@@ -64,3 +64,22 @@ instrumentName = "Cello"
 	}
   }
 }
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-10-cello-bass.ily"
+
+\score {
+	\new StaffGroup <<
+		\new Staff \compressMMRests \keepWithTag #'Part { \markLengthOn \Cello_mvmt_III }
+		\new Staff \with { \RemoveAllEmptyStaves } \compressMMRests \keepWithTag #'Part \Cello_divisi_II_mvmt_III
+	>>
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}

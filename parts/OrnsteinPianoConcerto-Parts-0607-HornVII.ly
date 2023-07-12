@@ -5,7 +5,7 @@
 %%% The full text can be found in the LICENSE file with this code. It can be
 %%% downloaded at https://imslp.org/wiki/Permissible_IMSLP_Licenses_(Various)
 
-\version "2.23.82"
+\version "2.24.0"
 
 \include "common.ily"
 
@@ -34,6 +34,25 @@ instrumentName = "Horn VII in F"
 
 \score {
 	\new Staff \compressMMRests \transpose f c' \keepWithTag #'Part { \markLengthOn \Horn_VII_mvmt_I }
+	\layout {
+	\context {
+		\Score
+			rehearsalMarkFormatter = #format-mark-circle-numbers
+			\numericTimeSignature
+	}
+  }
+}
+
+%%% Second movement
+%%% Tacet
+
+%%% Third movement
+
+\include "mvmt3/III-common.ily"
+\include "mvmt3/III-orch-06-horns.ily"
+
+\score {
+	\new Staff \compressMMRests \transpose f c' \keepWithTag #'Part { \markLengthOn \Horn_VII_mvmt_III }
 	\layout {
 	\context {
 		\Score
