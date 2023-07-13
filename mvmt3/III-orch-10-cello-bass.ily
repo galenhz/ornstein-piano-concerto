@@ -529,15 +529,64 @@ Bass_mvmt_III_AQ = \relative c, {
 	f4 r4 r2
 }
 
+%%% Section AR = mm. 126-132 (Rehersal 68-69)
+
+Cello_mvmt_III_AR = \relative c' {
+	\mark #68
+	\tempo "Meno mosso"
+	\time 3/4
+	R2.
+	\time 4/4
+	c4_\markup { \dynamic ff \italic "sempre" } bes8( a) \tuplet 3/2 { c( bes a) } a a
+	\tuplet 3/2 { fis( a bes) } a2.~
+	a2 r8 fis( a[ bes])
+	c4 bes8( a) \tuplet 3/2 { cis->( bes a) } a a
+	\time 6/4
+	\tuplet 3/2 { fis( a bes) } a1~ a4
+	\mark #69
+	\time 3/4
+	\tuplet 5/4 { bes,16(\< c cis e fis)\! } e8 cis4( bes8)
+}
+
+Cello_divisi_II_mvmt_III_AR = \relative c, {
+	\mark #68
+	\tempo "Meno mosso"
+	\time 3/4
+	R2.
+	\time 4/4
+	R1*4
+	\time 6/4
+	R1.
+	\time 3/4
+	\tuplet 5/4 { e16(\< fis c' c c)\! } c8 c4 ges8
+}
+
+Bass_mvmt_III_AR = \relative c {
+	\mark #68
+	\tempo "Meno mosso"
+	\time 3/4
+	R2.
+	\time 4/4
+	cis2_\markup { \dynamic ff \italic "sempre" } cis2
+	cis4 cis2.~
+	cis1
+	c?2 c2
+	\time 6/4
+	c4 c1~ c4
+	\mark #69
+	\time 3/4
+	R2.
+}
+
 %%% Final assembly
 
 Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE \Cello_mvmt_III_AF
 		\Cello_mvmt_III_AG \Cello_mvmt_III_AH \Cello_mvmt_III_AI \Cello_mvmt_III_AJ \Cello_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Cello_mvmt_III_AM
-		\Cello_mvmt_III_AN \Cello_mvmt_III_AO \Cello_mvmt_III_AP \Cello_mvmt_III_AQ }
+		\Cello_mvmt_III_AN \Cello_mvmt_III_AO \Cello_mvmt_III_AP \Cello_mvmt_III_AQ \Cello_mvmt_III_AR }
 Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF
 		\NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \Cello_divisi_II_mvmt_III_AO
-		\NULL_III_AP \NULL_III_AQ }
+		\NULL_III_AP \NULL_III_AQ \Cello_divisi_II_mvmt_III_AR }
 
 Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF
 		\Bass_mvmt_III_AG \Bass_mvmt_III_AH \Bass_mvmt_III_AI \Bass_mvmt_III_AJ \Bass_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Bass_mvmt_III_AM
-		\Bass_mvmt_III_AN \Bass_mvmt_III_AO \Bass_mvmt_III_AP \Bass_mvmt_III_AQ }
+		\Bass_mvmt_III_AN \Bass_mvmt_III_AO \Bass_mvmt_III_AP \Bass_mvmt_III_AQ \Bass_mvmt_III_AR }

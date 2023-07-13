@@ -324,17 +324,57 @@ Trumpet_IV_mvmt_III_AN = \relative c'' {
 %%% Section AQ = mm. 122-125 (Rehersal 67)
 %%% Tacet
 
+%%% Section AR = mm. 126-132 (Rehersal 68-69)
+
+Trumpet_I_mvmt_III_AR = \relative c'' {
+	\mark #68
+	\tempo "Meno mosso"
+	\time 3/4
+	R2.
+	\time 4/4
+	fis2\mf fis
+	fis4 fis2.~
+	fis1
+	fis2 fis
+	\time 6/4
+	fis4 fis1~ fis4
+	\mark #69
+	\time 3/4
+	R2.
+}
+
+Trumpet_II_mvmt_III_AR = \transpose c' c \Trumpet_I_mvmt_III_AR
+
+Trumpet_III_mvmt_III_AR = \relative c'' {
+	\mark #68
+	\tempo "Meno mosso"
+	\time 3/4
+	R2.
+	\time 4/4
+	e2\mf e
+	e4. r8 r2
+	r2 r8 e4.
+	e2 e
+	\time 6/4
+	e4. r8 r2 r2
+	\mark #69
+	\time 3/4
+	R2.
+}
+
+Trumpet_IV_mvmt_III_AR = \transpose c' c \Trumpet_I_mvmt_III_AR
+
 %%% Final assembly
 
 Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_I_mvmt_III_AJ \Trumpet_I_mvmt_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_I_mvmt_III_AM
-		\Trumpet_I_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ }
+		\Trumpet_I_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_I_mvmt_III_AR }
 Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_II_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_II_mvmt_III_AM
-		\Trumpet_II_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ }
+		\Trumpet_II_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_II_mvmt_III_AR }
 Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_III_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_III_mvmt_III_AM
-		\Trumpet_III_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ }
+		\Trumpet_III_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_III_mvmt_III_AR }
 Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_IV_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_IV_mvmt_III_AM
-		\Trumpet_IV_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ }
+		\Trumpet_IV_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_IV_mvmt_III_AR }

@@ -1089,6 +1089,28 @@ the orchestra isn't changing anything it's doing, and this passage doesn't match
 the pattern sit.
 (III-piano-reduction)
 
+mm. 128-129: These began life as a single 8/4 measure. This change makes some of the held notes awkwardly straddle the new
+bar line, such as in the strings and upper winds. Changing them to look more like the piano reduction.
+(III-orch-*)
+
+m. 128: The bass part has the first beat tied to the rest of the bar. That first tie isn't in the score. Based on the PR,
+I'm treating it with skepticism and removing it for now. #UNDECIDED
+(III-orch-10-cello-bass)
+
 m. 129: PR solo piano, in the last eighth note, breaks the pattern by changing <bes ees> to <e, bes' ees>. No sign of this extra
 note in the score, and it never happens again. Suspect it's an error.
 (III-solo-piano)
+
+m. 130: Accents on beat 3 of the melody are in multiple parts and score. All clarinet parts also show an accent on beat 2, but
+neither the score or any other parts have that. Keeping the one on 3 and adding it to parts that don't have it, leaving off
+2 for now.
+(III-orch-*)
+
+m. 131: Some parts and score show a diminuendo on the last beat of this bar. This probably should go in, but haven't done
+so yet. #DYNAMICS #UNDECIDED
+(III-orch-)
+
+m. 132: Upper cello/viola quintuplet is written a bit differently than it was transcribed in the PR. PR line uses des instead of cis.
+It might make sense to adjust the cello line accordingly, maybe. Also, the Viola divisi uses c-sharp throughout, and based on the
+score it should match the cello instead.
+(III-orch-10-cello-bass)

@@ -656,20 +656,44 @@ Flute_IV_mvmt_III_AQ = \relative c' {
 	R1
 }
 
+%%% Section AR = mm. 126-132 (Rehersal 68-69)
+ 
+Picc_Flute_I_II_mvmt_III_AR = \relative c''' {
+	\mark #68
+	\tempo "Meno mosso"
+	\time 3/4
+	R2.
+	\time 4/4
+	c4_\markup { \dynamic ff \italic "sempre" } bes8( a) \tuplet 3/2 { c( bes a) } a a
+	\tuplet 3/2 { fis( a bes) } a2.~
+	a2 r8 fis( a[ bes])
+	c4 bes8( a) \tuplet 3/2 { cis->( bes a) } a a
+	\time 6/4
+	\tuplet 3/2 { fis( a bes) } a1~ a4
+	\mark #69
+	\time 3/4
+	R2.
+}
+
+Flute_III_IV_mvmt_III_AR = \transpose c' c \Picc_Flute_I_II_mvmt_III_AR
+
 %%% Final construction
 
 Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK \NULL_III_AL \Picc_cues_mvmt_III_AM
-		\Picc_mvmt_III_AN \Picc_mvmt_III_AO \NULL_III_AP \NULL_III_AQ }
+		\Picc_mvmt_III_AN \Picc_mvmt_III_AO \NULL_III_AP \NULL_III_AQ \Picc_Flute_I_II_mvmt_III_AR }
 Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD \Flute_I_mvmt_III_AE
 		\Flute_I_mvmt_III_AF \NULL_III_AG \Flute_I_mvmt_III_AH \Flute_I_mvmt_III_AI \Flute_I_II_mvmt_III_AJ \Flute_I_II_mvmt_III_AK
-		\Flute_I_III_mvmt_III_AL \NULL_III_AM \Flute_I_mvmt_III_AN \Flute_I_II_mvmt_III_AO \NULL_III_AP \Flute_I_mvmt_III_AQ }
+		\Flute_I_III_mvmt_III_AL \NULL_III_AM \Flute_I_mvmt_III_AN \Flute_I_II_mvmt_III_AO \NULL_III_AP \Flute_I_mvmt_III_AQ
+		\Picc_Flute_I_II_mvmt_III_AR }
 Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_II_mvmt_III_AE
 		\Flute_II_mvmt_III_AF \NULL_III_AG \Flute_II_cues_mvmt_III_AH \Flute_II_mvmt_III_AI \Flute_I_II_mvmt_III_AJ \Flute_I_II_mvmt_III_AK
-		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_II_mvmt_III_AN \Flute_I_II_mvmt_III_AO \NULL_III_AP \Flute_II_mvmt_III_AQ }
+		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_II_mvmt_III_AN \Flute_I_II_mvmt_III_AO \NULL_III_AP \Flute_II_mvmt_III_AQ
+		\Picc_Flute_I_II_mvmt_III_AR }
 Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD \NULL_III_AE \NULL_III_AF
 		\NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK \Flute_I_III_mvmt_III_AL
-		\NULL_III_AM \Flute_III_mvmt_III_AN \Flute_III_mvmt_III_AO \NULL_III_AP \Flute_III_mvmt_III_AQ }
+		\NULL_III_AM \Flute_III_mvmt_III_AN \Flute_III_mvmt_III_AO \NULL_III_AP \Flute_III_mvmt_III_AQ \Flute_III_IV_mvmt_III_AR }
 Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_IV_mvmt_III_AE
 		\Flute_IV_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK
-		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_IV_cues_mvmt_III_AN \Flute_IV_mvmt_III_AO \NULL_III_AP \Flute_IV_mvmt_III_AQ }
+		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_IV_cues_mvmt_III_AN \Flute_IV_mvmt_III_AO \NULL_III_AP \Flute_IV_mvmt_III_AQ
+		\Flute_III_IV_mvmt_III_AR }
