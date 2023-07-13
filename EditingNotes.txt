@@ -1118,6 +1118,11 @@ It might make sense to adjust the cello line accordingly, maybe. Also, the Viola
 score it should match the cello instead.
 (III-orch-10-cello-bass)
 
+m. 133-134: Flutes have a big sweeping slur in both score and Flute I part; Flute II part slur was rewritten equivalently but
+less long. Bassoons have slurs in score but not part. Adjusting slurs to only go as far as needed and making bassoon part match
+flute/score. Flute score and parts also have some articulations I've copied to bassoons.
+(III-orch-01-flutes, III-orch-04-bassoons)
+
 m. 135: What's going on in the piano reduction here? It looks like the bar was never completed; the bass drops out despite the
 fact the orchestra keeps going, and part of the rhythm in the upper staff doesn't make sense now, despite the fact the
 orchestra pattern hasn't changed. Revising this bar to be more like 133-134.
