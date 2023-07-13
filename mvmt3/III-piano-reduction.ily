@@ -902,7 +902,7 @@ redux_upper_III_AR = \relative c''' {
 			<c c'>4 <bes bes'>8 <a a'> \tuplet 3/2 { <c c'> <bes bes'> <a a'> } q q
 			\tuplet 3/2 { <fis fis'> <a a'> <bes bes'> } <a a'>2.~
 			q2 r8 <fis fis'> <a a'> <bes bes'>
-			<c c'>4 <bes bes'>8 <a a'> \tuplet 3/2 { <c c'> <bes bes'> <a a'> } q q
+			<c c'>4 <bes bes'>8 <a a'> \tuplet 3/2 { <cis cis'> <bes bes'> <a a'> } q q
 			\time 6/4
 			\tuplet 3/2 { <fis fis'> <a a'> <bes bes'> } <a a'>1~ q4
 		}
