@@ -1114,9 +1114,13 @@ so yet. #DYNAMICS #UNDECIDED
 (III-orch-)
 
 m. 132: Upper cello/viola quintuplet is written a bit differently than it was transcribed in the PR. PR line uses des instead of cis.
-It might make sense to adjust the cello line accordingly, maybe. Also, the Viola divisi uses c-sharp throughout, and based on the
-score it should match the cello instead.
-(III-orch-10-cello-bass)
+It might make sense to adjust the cello line accordingly, maybe. Also, the Viola divisi in the part uses c-sharp throughout, and based
+on the score it should match the cello instead.
+UPDATE: In order to squash the cello divisi line and not lose the c/cis distinction in the quarter note, I needed to make the change
+to match the PR. But now looking at the score, I see an ambiguity in the way the bar is written: that quarter note might be plain
+c for *both* voices, in both viola and cello. The transcribed parts indicate clashing c and cis; the PR indicates same with c and des.
+I'm resolving this for now by matching the parts but using des in place of cis, like the PR.
+(III-orch-09-violins-viola, III-orch-10-cello-bass)
 
 m. 133-134: Flutes have a big sweeping slur in both score and Flute I part; Flute II part slur was rewritten equivalently but
 less long. Bassoons have slurs in score but not part. Adjusting slurs to only go as far as needed and making bassoon part match

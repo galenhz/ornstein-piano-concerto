@@ -531,8 +531,7 @@ Bass_mvmt_III_AQ = \relative c, {
 
 %%% Section AR = mm. 126-132 (Rehersal 68-69)
 
-% FIXME: A single divisi bar? really? This messes up presentation around it.
-%        Should fold it into single staff.
+% Edit: Squash the cello part divisi, since that single bar messes up the flow.
 
 Cello_mvmt_III_AR = \relative c' {
 	\mark #68
@@ -548,20 +547,16 @@ Cello_mvmt_III_AR = \relative c' {
 	\tuplet 3/2 { fis( a bes) } a1~ a4
 	\mark #69
 	\time 3/4
-	\tuplet 5/4 { bes,16(\< c cis e fis)\! } e8 cis4( bes8)
-}
-
-Cello_divisi_II_mvmt_III_AR = \relative c, {
-	\mark #68
-	\tempo "Meno mosso"
-	\time 3/4
-	R2.
-	\time 4/4
-	R1*4
-	\time 6/4
-	R1.
-	\time 3/4
-	\tuplet 5/4 { e16(\< fis c' c c)\! } c8 c4 ges8
+	<<
+		\new Voice {
+			\voiceOne
+			\tuplet 5/4 { bes,16(^\Div_mark c des e fis) } e8 des4( bes8)
+		}
+		\new Voice {
+			\voiceTwo
+			\tuplet 5/4 { e,16(\< fis c' c c)\! } c8 c4 ges8
+		}
+	>>
 }
 
 Bass_mvmt_III_AR = \relative c {
@@ -611,7 +606,7 @@ Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_m
 		\Cello_mvmt_III_AN \Cello_mvmt_III_AO \Cello_mvmt_III_AP \Cello_mvmt_III_AQ \Cello_mvmt_III_AR \Cello_mvmt_III_AS }
 Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF
 		\NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \Cello_divisi_II_mvmt_III_AO
-		\NULL_III_AP \NULL_III_AQ \Cello_divisi_II_mvmt_III_AR \NULL_III_AS }
+		\NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS }
 
 Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF
 		\Bass_mvmt_III_AG \Bass_mvmt_III_AH \Bass_mvmt_III_AI \Bass_mvmt_III_AJ \Bass_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Bass_mvmt_III_AM

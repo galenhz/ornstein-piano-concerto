@@ -921,11 +921,14 @@ Violin_I_mvmt_III_AR = {
 
 Violin_II_mvmt_III_AR = \transpose c' c \Violin_I_mvmt_III_AR
 
+% Edit: Since I'm switching cis to des in the cello line, doing the same here
+%       for consistency.
+
 Viola_mvmt_III_AR = \relative c' {
 	\transpose c' c \Violin_Viola_melody_mvmt_III_AR_partial
 	\mark #69
 	\time 3/4
-	\tuplet 5/4 { bes16( c cis e fis) } e8 cis4( bes8)
+	\tuplet 5/4 { bes16( c des e fis) } e8 des4( bes8)
 }
 
 Viola_divisi_II_mvmt_III_AR = \relative c {
