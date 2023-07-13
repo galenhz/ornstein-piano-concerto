@@ -1089,6 +1089,9 @@ the orchestra isn't changing anything it's doing, and this passage doesn't match
 the pattern sit.
 (III-piano-reduction)
 
+m. 127: Contrabassoon got upgraded to ff in score. Using that. #DYNAMICS
+(III-orch-04-bassoons)
+
 mm. 128-129: These began life as a single 8/4 measure. This change makes some of the held notes awkwardly straddle the new
 bar line, such as in the strings and upper winds. Changing them to look more like the piano reduction.
 (III-orch-*)
@@ -1114,3 +1117,19 @@ m. 132: Upper cello/viola quintuplet is written a bit differently than it was tr
 It might make sense to adjust the cello line accordingly, maybe. Also, the Viola divisi uses c-sharp throughout, and based on the
 score it should match the cello instead.
 (III-orch-10-cello-bass)
+
+m. 135: What's going on in the piano reduction here? It looks like the bar was never completed; the bass drops out despite the
+fact the orchestra keeps going, and part of the rhythm in the upper staff doesn't make sense now, despite the fact the
+orchestra pattern hasn't changed. Revising this bar to be more like 133-134.
+(III-piano-reduction)
+
+m. 137: Now the piano reduction changes the way the top staff lower voice is notated. It has the same rhythmic meaning as
+before, and lilypond has a heck of a time making the new way look good. Just continuing to do it the way it was done before
+instead.
+(III-piano-reduction)
+
+m. 138: Piano reduction loses the lower bass notes for a while. Adding them back.
+(III-piano-reduction)
+
+m. 139: Solo piano lower staff is missing a tie. It's there in score. Adding.
+(III-solo-piano)

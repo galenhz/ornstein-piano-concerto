@@ -959,15 +959,95 @@ redux_lower_III_AR = \relative c {
 	>>
 }
 
+%%% Section AS = mm. 133-142
+
+% Edit: Was m. 135 left incomplete in the PR? It should continue patterns
+%       like 133-134. Adjusting to something slightly more sane.
+
+% FIXME: Need to manually adjust the tie on a in 135 as well.
+
+redux_upper_III_AS = \relative c'' {
+	\tempo "Moderato"
+	\set Staff.timeSignatureFraction = 3/4
+	<<
+		\new Voice {
+			\voiceOne
+			a4~ a8 bes4 cis8~
+			cis4 \tuplet 6/4 2 { cis8[ cis cis cis cis e] }
+			d cis~ cis4. cis8~
+			cis4 cis8 d4.~
+			d4 \tuplet 5/4 2 { cis8[ cis cis e d~] }
+			d4~ d8[ cis bes cis~]
+			\tuplet 4/3 { cis4 e f d~ }
+			d2 cis4
+			bes4 <a cis>2~
+			q2.
+		}
+		\new Voice {
+			\voiceTwo
+			r8 r16 <gis a>~ a2
+			r8 r16 <gis a>~ a2
+			r8 r16 <gis a>~ \tieUp a2~
+			a2. \tieNeutral
+			r8 r16 <gis a>~ a2
+			r8 r16 <gis a>~ a2
+			r8 r16 <gis a>~ \tieUp a2~
+			a2. \tieNeutral
+			r8 r16 <gis a>~ \tieUp a2~
+			a2. \tieNeutral
+		}
+		\new Voice {
+			\voiceTwo
+			s4 fis8 f~ f4
+			s4 fis8 f~ f4
+			s4 fis8 f~ f4~
+			f2.
+			s4 fis8 f~ f4
+			s4 fis8 f~ f4
+			s4 fis8 f~ f4~
+			f2.
+			s4 fis8 f~ f4~
+			f2.
+		}
+	>>
+	\unset Staff.timeSignatureFraction
+}
+
+redux_dynamics_III_AS = {
+	s2.*10
+}
+
+redux_lower_III_AS = \relative c {
+	\set Staff.timeSignatureFraction = 6/8
+	<<
+		\new Voice {
+			\voiceOne
+			\magnifyMusic 0.9 { \repeat unfold 20 {
+				\tuplet 3/2 8 { r16 a[ \beamCutR f' \beamCutL a, f' \beamCutR a, \beamCutL aes ges f] }
+			} }
+		}
+		\new Voice {
+			\voiceTwo
+			\repeat unfold 3 { d4. d }
+			\repeat unfold 3 { c4. c }
+			\repeat unfold 2 { b4. b }
+			\repeat unfold 2 { bes4. bes }
+		}
+	>>
+	\unset Staff.timeSignatureFraction
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
-		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR }
+		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR
+		\redux_upper_III_AS }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
-		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR }
+		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
-		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR }
+		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR
+		\redux_lower_III_AS }

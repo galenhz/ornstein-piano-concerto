@@ -766,15 +766,49 @@ solo_lower_III_AR = \relative c, {
 	<fis,, c' fis>4 r4 r4
 }
 
+%%% Section AS = mm. 133-142
+
+solo_upper_III_AS = \relative c'' {
+	\tempo "Moderato"
+	\clef treble
+	R2.*2
+	r4 r \tuplet 3/2 4 { r8 <a a'> <ees' ees'>
+	<f f'> <fis fis'> <a a'> } q4 \tuplet 3/2 4 { q4 q16 q
+	\ottava #1 <c c'>8 <bes bes'> <a a'> } q4. q8~
+	q16 <bes bes'> <a a'> <fis fis'> <a a'>2~
+	q8 <c c'> \tuplet 3/2 { <cis cis'> <bes bes'> <a a'> } q q~
+	q16 <bes bes'> <a a'> <fis fis'> <a a'>2~
+	q8[ <bes bes'>] <a a'> <fis fis'>4 <a a'>8~
+	q2. \ottava #0
+}
+
+solo_dynamics_III_AS = {
+	s2.*10
+}
+
+solo_lower_III_AS = \relative c' {
+	R2.*2
+	r4 r \tuplet 3/2 4 { r8 a ees'
+	\clef treble f fis a } a4 \tuplet 3/2 4 { a4 a16 a
+	c8 bes a } a4. a8~
+	a16 bes a fis a2~
+	a8 c \tuplet 3/2 { cis bes a } a a~
+	a16 bes a fis a2~
+	a8[ bes] a fis4 a8~
+	a2.
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
-		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ \solo_upper_III_AR }
+		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ \solo_upper_III_AR
+		\solo_upper_III_AS }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
 		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
-		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR }
+		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR \solo_dynamics_III_AS }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
-		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ \solo_lower_III_AR }
+		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ \solo_lower_III_AR
+		\solo_lower_III_AS }

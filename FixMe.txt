@@ -148,3 +148,5 @@ grace notes in the PR disrupt the flow of the solo part.
 
 m. 132: Piano reduction renders the middle quarter note oddly; they should stack on top of each other like the PR,
 but they don't.
+
+m. 135, 139: Piano reduction top staff, long ties on A need to be manually adjusted.

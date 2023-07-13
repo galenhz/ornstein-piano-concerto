@@ -63,4 +63,4 @@ NULL_III_AO = { \time 4/4 R1*3 \mark #65 R1*2 }
 NULL_III_AP = { \mark #66 R1*3 \time 5/4 R1*5/4 }
 NULL_III_AQ = { \mark #67 \time 4/4 R1*2 \time 2/4 R2 \time 4/4 R1 }
 NULL_III_AR = { \mark #68 \tempo "Meno mosso" \time 3/4 R2. \time 4/4 R1*4 \time 6/4 R1. \mark #69 \time 3/4 R2. }
-NULL_III_AS = { \tempo "Moderato" \time 3/4 R2.*10 }
+NULL_III_AS = { \tempo "Moderato" R2.*10 }
