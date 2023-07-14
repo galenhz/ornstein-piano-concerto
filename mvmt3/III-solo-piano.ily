@@ -842,6 +842,9 @@ solo_dynamics_III_AT = {
 	s1*12
 }
 
+% FIXME: the columns aren't aligned the way I want in the lower staff; the whole notes
+%        below should align with the whole notes above.
+
 solo_lower_III_AT = \relative c' {
 	\time 4/4
 	\clef bass
