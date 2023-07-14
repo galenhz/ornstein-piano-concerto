@@ -153,3 +153,6 @@ m. 135, 139: Piano reduction top staff, long ties on A need to be manually adjus
 
 m. 143-154: Solo piano lower staff should reverse the column shifts so the whole notes align with the upper staff.
 This seems possible, but my experiments aren't working so far.
+
+m. 155-161: Solo piano is a mess since the staves are not far enough apart to avoid collisions. Needs serious
+attention.

@@ -1080,17 +1080,67 @@ redux_lower_III_AT = \relative c, {
 	<g g'>
 }
 
+%%% Section AU = mm. 155-161 (Rehearsal 71)
+
+redux_upper_III_AU = \relative c' {
+	\mark #71
+	\clef treble
+	\repeat unfold 2 {
+		\repeat tremolo 8 { f32 d } \repeat tremolo 8 { f d }
+		\repeat tremolo 8 { f c } \repeat tremolo 8 { f c }
+	}
+	\repeat tremolo 8 { e bes} \repeat tremolo 8 { e bes }
+	\repeat tremolo 8 { ees a, } \repeat tremolo 8 { ees' a, }
+	\time 5/4
+	\repeat tremolo 8 { ees' a, } \repeat tremolo 8 { ees' a, } \repeat tremolo 4 { ees' a, }
+}
+
+redux_dynamics_III_AU = {
+	s1*6 s1*5/4
+}
+
+% FIXME: This is a compressed mess in the PR, like some other spots. Need to rework or
+%        figure out a way to stretch the staff.
+
+redux_lower_III_AU = \relative c' {
+	<<
+		\new Voice {
+			\voiceOne
+			a8[ b] b[ bes] bes[ a] a[ aes]
+			\tuplet 5/4 { gis16 a aes g fis } aes2 g4
+			a8[ bes] c[ b] b[ bes] bes[ a]
+			\tuplet 5/4 { gis16 a aes g fis } aes2 g4
+			fis8[ g] fis[ f] f[ e] e[ ees]
+			\tuplet 5/4 { ees16 fes ees d cis } ees8 d4 des c8
+			\time 5/4
+			\tuplet 5/4 { cis16 d des c b } des8 c4 b8 des8 c4 b8
+		}
+		\new Voice {
+			\voiceTwo
+			<d, a'>1
+			<f c'>
+			<d a' f'>
+			<f c'>
+			<bes, gis'>
+			<cis g'>
+			\time 5/4
+			g1 s4
+		}
+	>>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
 		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR
-		\redux_upper_III_AS \redux_upper_III_AT }
+		\redux_upper_III_AS \redux_upper_III_AT \redux_upper_III_AU }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
-		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS \redux_dynamics_III_AT }
+		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS \redux_dynamics_III_AT
+		\redux_dynamics_III_AU }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
 		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR
-		\redux_lower_III_AS \redux_lower_III_AT }
+		\redux_lower_III_AS \redux_lower_III_AT \redux_lower_III_AU }
