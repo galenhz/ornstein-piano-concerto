@@ -1126,18 +1126,53 @@ redux_lower_III_AU = \relative c' {
 	>>
 }
 
+%%% Section AV = mm. 162-168 (Rehearsal 72)
+
+redux_upper_III_AV = \relative c {
+	\mark #72
+	\tempo "Poco a poco animato"
+	\tag #'Midi \tempo 4 = 108
+	\time 5/8
+	\clef bass
+	<d gis cis>8[ q <e a d> <d gis cis> q]
+	<f b e>[ <e f d> <d gis cis> q q]
+	q[ q <e a d> <d gis cis> q]
+	q[ <c f b> <d gis cis> <ces f bes> q]
+	<c f b>[ <d gis cis> <e a d> <f b e> <g c f>]
+	<e a d>[ q <f b e> <e a d> <d gis cis>]
+	<e a d>[ <c f b> q <ces f bes> <d gis cis>]
+}
+
+redux_dynamics_III_AV = {
+	s1*5/8*7
+}
+
+redux_lower_III_AV = \relative c,, {
+	\time 5/8
+	\repeat unfold 7 {
+		\tuplet 3/2 8 { f16 f' \beamCutR f, \beamCutL f' f, \beamCutR f' \beamCutL aes, aes' \beamCutR aes,
+			\beamCutL f f' \beamCutR f, \beamCutL f' f, f' }
+	}
+}
+
+%%% Section AW = mm. 169-175 (Rehearsal 73)
+
+redux_dynamics_III_AW = {
+	s1*5/8*7
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
 		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR
-		\redux_upper_III_AS \redux_upper_III_AT \redux_upper_III_AU }
+		\redux_upper_III_AS \redux_upper_III_AT \redux_upper_III_AU \redux_upper_III_AV \tag #'Midi \tempo 4 = 124 \NULL_III_AW }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
 		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS \redux_dynamics_III_AT
-		\redux_dynamics_III_AU }
+		\redux_dynamics_III_AU \redux_dynamics_III_AV \redux_dynamics_III_AW }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
 		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR
-		\redux_lower_III_AS \redux_lower_III_AT \redux_lower_III_AU }
+		\redux_lower_III_AS \redux_lower_III_AT \redux_lower_III_AU \redux_lower_III_AV \NULL_III_AW }

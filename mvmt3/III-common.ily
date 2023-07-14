@@ -66,3 +66,5 @@ NULL_III_AR = { \mark #68 \tempo "Meno mosso" \time 3/4 R2. \time 4/4 R1*4 \time
 NULL_III_AS = { \tempo "Moderato" R2.*10 }
 NULL_III_AT = { \mark #70 \tempo "Poco più sostenuto" \time 4/4 R1*12 }
 NULL_III_AU = { \mark #71 R1*6 \time 5/4 R1*5/4 }
+NULL_III_AV = { \mark #72 \tempo "Poco a poco animato" \time 5/8 R1*5/8*7 }
+NULL_III_AW = { \mark #73 R1*5/8*7 }

@@ -916,18 +916,61 @@ solo_lower_III_AU = \relative c, {
 		\tuplet 6/4 { g, g' cis f a \change Staff = "solo_upper" <cis g'> } \tuplet 3/2 4 { q8 \change Staff = "solo_lower" a f cis g g, }
 }
 
+%%% Section AV = mm. 162-168 (Rehearsal 72)
+
+solo_upper_III_AV = {
+	\mark #72
+	\tempo "Poco a poco animato"
+	\time 5/8
+	r8 r r r4
+	R1*5/8*6
+}
+
+solo_dynamics_III_AV = {
+	s1*5/8*7
+}
+
+solo_lower_III_AV = \relative c,, {
+	\time 5/8
+	<f f'>8 r r r4
+	R1*5/8*6
+}
+
+%%% Section AW = mm. 169-175 (Rehearsal 73)
+
+solo_upper_III_AW = \relative c' {
+	\mark #73
+	<a d g>8[ q <bes ees aes> <a d g> q]
+	<c f bes>[ <bes ees aes> <a d g> q q]
+	q[ q <bes ees aes> <a d g> q]
+	q[ <g c f> <a d g> <fis b e> q]
+	<g c f>[ <a d g> <bes ees aes> <c f bes> <cis fis b>]
+	<bes ees aes>[ q <c f bes> <bes ees aes> <a d g>]
+	<bes ees aes>[ <g c f> q <fis b e> <a d g>]
+}
+
+solo_dynamics_III_AW = {
+	s1*5/8*7
+}
+
+solo_lower_III_AW = \relative c,, {
+	\repeat unfold 7 {
+		\tuplet 8/5 { ees8[ ees' ees, ees' c' d c ees,] }
+	}
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
 		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ \solo_upper_III_AR
-		\solo_upper_III_AS \solo_upper_III_AT \solo_upper_III_AU }
+		\solo_upper_III_AS \solo_upper_III_AT \solo_upper_III_AU \solo_upper_III_AV \solo_upper_III_AW }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
 		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
 		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR \solo_dynamics_III_AS \solo_dynamics_III_AT
-		\solo_dynamics_III_AU }
+		\solo_dynamics_III_AU \solo_dynamics_III_AV \solo_dynamics_III_AW }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
 		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ \solo_lower_III_AR
-		\solo_lower_III_AS \solo_lower_III_AT \solo_lower_III_AU }
+		\solo_lower_III_AS \solo_lower_III_AT \solo_lower_III_AU \solo_lower_III_AV \solo_lower_III_AW }
