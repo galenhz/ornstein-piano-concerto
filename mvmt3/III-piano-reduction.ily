@@ -1131,7 +1131,7 @@ redux_lower_III_AU = \relative c' {
 redux_upper_III_AV = \relative c {
 	\mark #72
 	\tempo "Poco a poco animato"
-	\tag #'Midi \tempo 4 = 108
+	\tag #'Midi \tempo 4 = 112
 	\time 5/8
 	\clef bass
 	<d gis cis>8[ q <e a d> <d gis cis> q]

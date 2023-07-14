@@ -336,14 +336,68 @@ Tympani_I_mvmt_II_AR = \relative c {
 %%% Tacet
 
 %%% Section AU = mm. 155-161 (Rehearsal 71)
+%%% Tacet, cues only
+
+Tympani_II_cues_mvmt_III_AU = \relative c' {
+	\tag #'Score \NULL_III_AU
+	\tag #'Part {
+		\mark #71
+		<<
+			\new CueVoice {
+				\repeat tremolo 8 { d32(_"II Vln." f) } \repeat tremolo 8 { d( f) }
+				\repeat tremolo 8 { c( f) } \repeat tremolo 8 { c( f) }
+			}
+			\new Voice {
+				\voiceTwo
+				R1*2
+			}
+		>>
+		R1*4
+		\time 5/4
+		R1*5/4
+	}
+}
+
+%%% Section AV = mm. 162-168 (Rehearsal 72)
+Tympani_I_cues_mvmt_III_AV = \relative c, {
+	\tag #'Score \NULL_III_AV
+	\tag #'Part {
+		\mark #72
+		\tempo "Poco a poco animato"
+		\time 5/8
+		<<
+			\new CueVoice {
+				\autoBeamOff f8^"I Tym." f aes f f \autoBeamOn
+			}
+			\new Voice {
+				\voiceOne
+				R1*5/8
+			}
+		>>
+		R1*5/8*6
+	}
+}
+
+Tympani_II_mvmt_III_AV = \relative c, {
+	\mark #72
+	\tempo "Poco a poco animato"
+	\time 5/8
+	\autoBeamOff
+	f8\p f aes f f
+	\repeat unfold 6 { f f aes f f }
+	\autoBeamOn
+}
+
+%%% Section AW = mm. 169-175 (Rehearsal 73)
 %%% Tacet
 
 %%% Final assembly
 
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
 		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_I_mvmt_III_AK \NULL_III_AL \Tympani_I_mvmt_III_AM
-		\Tympani_I_mvmt_III_AN \NULL_III_AO \Tympani_I_mvmt_III_AP \NULL_III_AQ \Tympani_I_mvmt_II_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU }
+		\Tympani_I_mvmt_III_AN \NULL_III_AO \Tympani_I_mvmt_III_AP \NULL_III_AQ \Tympani_I_mvmt_II_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
+		\Tympani_I_cues_mvmt_III_AV }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
 		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_II_mvmt_III_AK \Tympani_II_mvmt_III_AL
 		\Tympani_II_mvmt_III_AM \Tympani_II_mvmt_III_AN \NULL_III_AO \Tympani_II_mvmt_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT
-		\NULL_III_AU }
+		\Tympani_II_cues_mvmt_III_AU \Tympani_II_mvmt_III_AV }
