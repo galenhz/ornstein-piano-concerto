@@ -1037,17 +1037,60 @@ redux_lower_III_AS = \relative c {
 	\unset Staff.timeSignatureFraction
 }
 
+%%% Section AT = mm. 143-154 (Rehearsal 70)
+
+% Edit: Simplify things a bit and move the 16th note line to the upper staff right away.
+
+redux_upper_III_AT = \relative c {
+	\mark #70
+	\tempo "Poco più sostenuto"
+	\time 4/4
+	\clef bass
+	\repeat unfold 2 { r16 f bes f'~ f f bes, f }
+	\repeat unfold 2 { r16 f b f'~ f f b, f }
+	\repeat unfold 2 { r16 g cis g'~ g g cis, g }
+	\repeat unfold 2 { r16 d bes' e~ e e bes d, }
+	\repeat unfold 2 { r16 f b f'~ f f b, f }
+	\repeat unfold 2 { r16 g cis g'~ g g cis, g }
+	\repeat unfold 2 { r16 d gis e'~ e e gis, d }
+	\repeat unfold 2 { r16 f b f'~ f f b, f }
+	\repeat unfold 2 { r16 d gis d'~ d d gis, d }
+	\repeat unfold 2 { r16 f b f'~ f f b, f }
+	\repeat unfold 2 { r16 d gis d'~ d d gis, d }
+	\repeat unfold 2 { r16 f b f'~ f f b, f }
+}
+
+redux_dynamics_III_AT = {
+	s1*12
+}
+
+redux_lower_III_AT = \relative c, {
+	\time 4/4
+	<d a'>1
+	<g, g'>
+	<a a'>
+	<bes bes'>
+	<g g'>
+	<a a'>
+	<bes bes'>
+	<g g'>
+	<e e'>
+	<g g'>
+	<e e'>
+	<g g'>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
 		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR
-		\redux_upper_III_AS }
+		\redux_upper_III_AS \redux_upper_III_AT }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
-		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS }
+		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS \redux_dynamics_III_AT }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
 		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR
-		\redux_lower_III_AS }
+		\redux_lower_III_AS \redux_lower_III_AT }

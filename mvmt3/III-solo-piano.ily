@@ -798,17 +798,97 @@ solo_lower_III_AS = \relative c' {
 	a2.
 }
 
+%%% Section AT = mm. 143-154 (Rehearsal 70)
+
+solo_upper_III_AT = \relative c'' {
+	\mark #70
+	\tempo "Poco più sostenuto"
+	\time 4/4
+	<<
+		\new Voice {
+			\voiceOne
+			e8 f fis4~ fis8 f4 e8
+			\tuplet 5/4 { dis16 e ees d b } ees2( e4)
+			fis8 g aes2 g4
+			\tuplet 5/4 { fis16 g fis f d } f2 fis4
+			a8 bes b2 bes4
+			\tuplet 5/4 { a16 bes a aes f } a2 aes4
+			g8[ gis] bes a4 aes g8
+			\tuplet 5/4 { fis16 g fis f d } fis2 f4
+			b,8 c dis2 e8 f
+			\tuplet 5/4 { fis16 g fis f d } f2.
+			b,8 c dis2 e8 f
+			\tuplet 5/4 { fis16 g fis f d } f4. e4 ees8
+		}
+		\new Voice {
+			\voiceTwo
+			<f, bes>1
+			<f b>
+			<g bes>
+			<fis bes e>
+			<b ees>
+			<g cis fis>
+			<fis c' e>
+			<f b e>
+			<c f gis>
+			<f b>
+			<c f gis>
+			<f b>
+		}
+	>>
+}
+
+solo_dynamics_III_AT = {
+	s1*12
+}
+
+solo_lower_III_AT = \relative c' {
+	\time 4/4
+	\clef bass
+	<<
+		\new Voice {
+			\voiceOne
+			\repeat unfold 8 { cis32 d cis d cis c b bes }
+			\repeat unfold 4 { e f e f e ees d des }
+			\repeat unfold 4 { cis d cis d cis c b bes }
+			\repeat unfold 4 { fis' g fis g fis f e ees }
+			\repeat unfold 4 { f fis f fis f e ees d }
+			\repeat unfold 4 { e f e f e ees d des }
+			\repeat unfold 4 { dis e dis e dis d cis c }
+			\repeat unfold 4 { gis a gis a gis g fis f }
+			\repeat unfold 4 { cis' d cis d cis c b bes }
+			\repeat unfold 4 { gis a gis a gis g fis f }
+			\repeat unfold 4 { cis' d cis d cis c b bes }
+		}
+		\new Voice {
+			\voiceTwo
+			<d,, a' f' bes>1
+			<g, g' f' b>
+			<a' g' cis>
+			<bes, bes' gis'>
+			<g g' f' b>
+			<a a' g' cis>
+			<bes bes' d gis>
+			<g g' f' b>
+			<e' d'>
+			<g, g' f' b>
+			<e' d'>
+			<g, g' f' b>
+		}
+	>>
+}
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
 		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ \solo_upper_III_AR
-		\solo_upper_III_AS }
+		\solo_upper_III_AS \solo_upper_III_AT }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
 		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
-		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR \solo_dynamics_III_AS }
+		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR \solo_dynamics_III_AS \solo_dynamics_III_AT }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
 		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ \solo_lower_III_AR
-		\solo_lower_III_AS }
+		\solo_lower_III_AS \solo_lower_III_AT }
