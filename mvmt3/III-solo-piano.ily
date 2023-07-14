@@ -893,6 +893,10 @@ solo_upper_III_AU = {
 solo_dynamics_III_AU = {
 	s1*6 s1*5/4
 }
+
+% FIXME: This is a compressed mess in the PR, like some other spots. Need to rework or
+%        figure out a way to stretch the staff.
+
 solo_lower_III_AU = \relative c, {
 	\tuplet 6/4 4 {
 		\repeat unfold 2 {
