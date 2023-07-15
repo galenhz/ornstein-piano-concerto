@@ -68,3 +68,5 @@ NULL_III_AT = { \mark #70 \tempo "Poco più sostenuto" \time 4/4 R1*12 }
 NULL_III_AU = { \mark #71 R1*6 \time 5/4 R1*5/4 }
 NULL_III_AV = { \mark #72 \tempo "Poco a poco animato" \time 5/8 R1*5/8*7 }
 NULL_III_AW = { \mark #73 R1*5/8*7 }
+NULL_III_AX = { \mark #74 R1*5/8*10 \time 3/8 R4. }
+NULL_III_AY = { \mark #75 \time 5/8 \tag #'Score \grace s8. R1*5/8*15 \time 3/4 R2. }

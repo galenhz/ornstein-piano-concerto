@@ -1161,18 +1161,88 @@ redux_dynamics_III_AW = {
 	s1*5/8*7
 }
 
+%%% Section AX = mm. 176-186 (Rehearsal 74)
+
+redux_upper_III_AX = \relative c' {
+	\mark #74
+	\clef treble
+	<fis fis'>8[ q <g g'> <fis fis'> q]
+	<a a'>[ <g g'> <fis fis'> q q]
+	q[ q <g g'> <fis fis'> q]
+	q[ <e e'> <fis fis'> <ees ees'> q]
+	<e e'>[ <fis fis'> <g g'> <a a'> <bes bes'>]
+	<g g'>[ q <a a'> <g g'> <fis fis'>]
+	<g g'>[ <e e'> q <ees ees'> <fis fis'>]
+	<g g'>[ <a a'> <bes bes'> <c c'> <cis cis'>]
+	q[ q <e e'> <cis cis'> <c c'>]
+	<bes bes'>[ <g g'> <bes bes'> <c c'> <cis cis'>]
+	\time 3/8
+	<bes bes'>[ <a a'> <fis fis'>]
+}
+
+redux_dynamics_III_AX = {
+	s1*5/8*10 s4.
+}
+
+redux_lower_III_AX = \relative c,, {
+	\repeat unfold 10 { <d d'>8[ <bes''' d> q q q] }
+	\time 3/8
+	<f,, f'>[ <ees ees'> <d d'>]
+}
+
+%%% Section AY = mm. 187-202 (Rehearsal 75)
+
+redux_upper_III_AY = \relative c''' {
+	\mark #75
+	\time 5/8
+	\tag #'Midi \tempo 4 = 140
+	\grace s8.
+	<g cis d g>8[ q <aes d ees aes> <g cis d g> q]
+	<bes cis bes'>[ <aes cis d aes'> <g d' ees g> <g cis d g> q]
+	\ottava #1 q[ q <aes d ees aes> <g cis d g> q]
+	q[ <f cis' d f> <g d' ees g> <e cis' d e> q]
+	<f cis' d f>[ <g cis d g> <aes d ees aes> <bes d bes'> <ces d ces'>]
+	<aes cis d aes'>[ q <bes d ees bes'> <aes cis d aes'> <g cis d g>]
+	<aes cis d aes'>[ <f cis' d f> <f d' ees f> <e cis' d e> <g cis d g>]
+	<aes cis d aes'>[ <bes d bes'> <ces d ces'> <cis cis'> <d d'>]
+	<f f'>[ <fis fis'> q <f f'> <g g'>]
+	q[ <fis fis'> <f f'> <d d'> <gis gis'>]
+	q[ <fis fis'> q <f f'> <d d'>]
+	<f f'>[ <fis fis'> q <f f'> <g g'>]
+	q[ <fis fis'> <f f'> <d d'> <gis gis'>]
+	\repeat unfold 2 { q[ <fis fis'> q <f f'> <d d'>] }
+	\time 3/4
+	\tag #'Midi \tempo 4 = 160
+	<f f'>4 <fis fis'> <a a'>
+}
+
+redux_dynamics_III_AY = {
+	s1*5/8*15 s2.
+}
+
+redux_lower_III_AY = \relative c, {
+	\time 5/8
+	\repeat unfold 15 {
+		\grace { ees16 d des } <c, c'>8[ <d'' fis bes> q <bes, bes'> <d' fis bes>]
+	}
+	\time 3/4
+	<fis,, fis'>4 <f f'> <ees ees'>
+}
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
 		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR
-		\redux_upper_III_AS \redux_upper_III_AT \redux_upper_III_AU \redux_upper_III_AV \tag #'Midi \tempo 4 = 124 \NULL_III_AW }
+		\redux_upper_III_AS \redux_upper_III_AT \redux_upper_III_AU \redux_upper_III_AV \tag #'Midi \tempo 4 = 124 \NULL_III_AW
+		\redux_upper_III_AX \redux_upper_III_AY }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
 		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS \redux_dynamics_III_AT
-		\redux_dynamics_III_AU \redux_dynamics_III_AV \redux_dynamics_III_AW }
+		\redux_dynamics_III_AU \redux_dynamics_III_AV \redux_dynamics_III_AW \redux_dynamics_III_AX \redux_dynamics_III_AY }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
 		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR
-		\redux_lower_III_AS \redux_lower_III_AT \redux_lower_III_AU \redux_lower_III_AV \NULL_III_AW }
+		\redux_lower_III_AS \redux_lower_III_AT \redux_lower_III_AU \redux_lower_III_AV \NULL_III_AW \redux_lower_III_AX 
+		\redux_lower_III_AY }
