@@ -175,7 +175,7 @@ setSoloTextVII_VIII = { \set Staff.soloText = #"Solo VII" \set Staff.soloIIText 
 		>>
 		\new StaffGroup = "StaffGroup_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." } <<
 			\new Staff = "Staff_cello" \keepWithTag #'Score \Cello_mvmt_I
-			\new Staff = "Staff_cello_divisi_III" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Cello_divisi_II_mvmt_I
+			\new Staff = "Staff_cello_divisi_II" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Cello_divisi_II_mvmt_I
 		>>
 		\new Staff = "Staff_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } \keepWithTag #'Score \Bass_mvmt_I
 	>>
@@ -312,7 +312,7 @@ setSoloTextVII_VIII = { \set Staff.soloText = #"Solo VII" \set Staff.soloIIText 
 		>>
 		\new StaffGroup = "StaffGroup_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." } <<
 			\new Staff = "Staff_cello" \keepWithTag #'Score \Cello_mvmt_II
-			\new Staff = "Staff_cello_divisi_III" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Cello_divisi_II_mvmt_II
+			\new Staff = "Staff_cello_divisi_II" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Cello_divisi_II_mvmt_II
 		>>
 		\new Staff = "Staff_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } \keepWithTag #'Score \Bass_mvmt_II
 	>>
@@ -453,9 +453,12 @@ setSoloTextVII_VIII = { \set Staff.soloText = #"Solo VII" \set Staff.soloIIText 
 		>>
 		\new StaffGroup = "StaffGroup_cello" \with { instrumentName = "Cello" shortInstrumentName = "Vc." } <<
 			\new Staff = "Staff_cello" \keepWithTag #'Score \Cello_mvmt_III
-			\new Staff = "Staff_cello_divisi_III" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Cello_divisi_II_mvmt_III
+			\new Staff = "Staff_cello_divisi_II" \with {\RemoveAllEmptyStaves } \keepWithTag #'Score \Cello_divisi_II_mvmt_III
 		>>
-		\new Staff = "Staff_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } \keepWithTag #'Score \Bass_mvmt_III
+		\new StaffGroup = "StaffGroup_bass" \with { instrumentName = "Bass" shortInstrumentName = "Cb." } <<
+			\new Staff = "Staff_bass" \keepWithTag #'Score \Bass_mvmt_III
+			\new Staff = "Staff_bass_divisi_II" \with { \RemoveAllEmptyStaves } \keepWithTag #'Score \Bass_divisi_II_mvmt_III
+		>>
 	>>
   >>
   \layout {

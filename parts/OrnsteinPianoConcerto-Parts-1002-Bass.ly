@@ -65,7 +65,10 @@ instrumentName = "Bass"
 \include "mvmt3/III-orch-10-cello-bass.ily"
 
 \score {
-	\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Bass_mvmt_III }
+	\new StaffGroup <<
+		\new Staff \compressMMRests  \keepWithTag #'Part { \markLengthOn \Bass_mvmt_III }
+		\new Staff \with { \RemoveAllEmptyStaves } \compressMMRests \keepWithTag #'Part \Bass_divisi_II_mvmt_III
+	>>
 	\layout {
 	\context {
 		\Score

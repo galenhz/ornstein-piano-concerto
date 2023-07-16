@@ -1116,7 +1116,8 @@ so yet. #DYNAMICS #UNDECIDED
 m. 132: Upper cello/viola quintuplet is written a bit differently than it was transcribed in the PR. PR line uses des instead of cis.
 It might make sense to adjust the cello line accordingly, maybe. Also, the Viola divisi in the part uses c-sharp throughout, and based
 on the score it should match the cello instead.
-UPDATE: In order to squash the cello divisi line and not lose the c/cis distinction in the quarter note, I needed to make the change
+UPDATE: In order to squash the cello divisi line and not lose the c/cis distinction in the quarter note, I nee
+m. ded to make the change
 to match the PR. But now looking at the score, I see an ambiguity in the way the bar is written: that quarter note might be plain
 c for *both* voices, in both viola and cello. The transcribed parts indicate clashing c and cis; the PR indicates same with c and des.
 I'm resolving this for now by matching the parts but using des in place of cis, like the PR.
@@ -1142,3 +1143,9 @@ m. 138: Piano reduction loses the lower bass notes for a while. Adding them back
 
 m. 139: Solo piano lower staff is missing a tie. It's there in score. Adding.
 (III-solo-piano)
+
+m. 162: Clarinet III/IV has wrong note in third beat. Score correct, matches PR.
+(III-orch-03-clarinets)
+
+mm. 176-186: The 3+2 accent pattern is in the score for everyone, but not in all parts. Adding them globally.
+(III-orch-*)
