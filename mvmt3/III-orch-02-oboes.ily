@@ -556,25 +556,81 @@ Oboe_all_mvmt_III_AX = \relative c'' {
 
 EnglishHorn_mvmt_III_AX = \transpose c' c \Oboe_all_mvmt_III_AX
 
+%%% Section AY = mm. 187-202 (Rehearsal 75)
+
+Oboe_I_II_mvmt_III_AY = \relative c''' {
+	\mark #75
+	\time 5/8
+	\tag #'Score \grace s8.
+	g8[\f g aes-> g g]
+	bes[ aes g-> g g]
+	g[ g aes-> g g]
+	g[ f g-> e e]
+	f[ g aes-> bes ces]
+	aes[ aes bes-> aes g]
+	aes[ f f-> e g]
+	aes[ bes ces-> cis d]
+	d8 dis4 d8 r
+	r fis[ f d] r
+	r fis4 f8 d
+	f fis4 f8 r
+	r fis[ f d] r
+	r fis4 f8 d
+	r fis4 f8 d
+	\time 3/4
+	f4-^\fff fis-^ a-^
+}
+
+Oboe_III_mvmt_III_AY = \relative c''' {
+	\mark #75
+	\time 5/8
+	\tag #'Score \grace s8.
+	d8[\f d ees-> d d]
+	\repeat unfold 14 { d8[ d ees-> d d] }
+	\time 3/4
+	d4-^\fff d-^ d-^
+}
+
+Oboe_IV_mvmt_III_AY = \relative c''' {
+	\mark #75
+	\time 5/8
+	\tag #'Score \grace s8.
+	cis8[\f cis d-> cis cis]
+	\repeat unfold 14 { cis8[ cis d-> cis cis] }
+	\time 3/4
+	cis4-^\fff cis-^ cis-^
+}
+
+EnglishHorn_III_mvmt_III_AY = \transpose c' f \relative c''' {
+	\mark #75
+	\time 5/8
+	\tag #'Score \grace s8.
+	R1*5/8*8
+	f8[\f f f-> f f]
+	\repeat unfold 6 { f8[\f f f-> f f] }
+	\time 3/4
+	f4-^\fff f-^ f-^
+}
+
 %%% Final assembly
 
 Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_I_mvmt_III_AL
 		\Oboes_all_mvmt_III_AM \NULL_III_AN \Oboe_I_II_mvmt_III_AO \NULL_III_AP \Oboe_I_mvmt_III_AQ \Oboe_I_mvmt_III_AR \NULL_III_AS
-		\NULL_III_AT \NULL_III_AU \NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX }
+		\NULL_III_AT \NULL_III_AU \NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_I_II_mvmt_III_AY }
 Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_II_mvmt_III_AL
 		\Oboes_all_mvmt_III_AM \NULL_III_AN \Oboe_I_II_mvmt_III_AO \NULL_III_AP \Oboe_II_mvmt_III_AQ \Oboe_II_mvmt_III_AR \NULL_III_AS
-		\NULL_III_AT \NULL_III_AU \NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX }
+		\NULL_III_AT \NULL_III_AU \NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_I_II_mvmt_III_AY }
 Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_III_mvmt_III_AL \Oboes_all_mvmt_III_AM
 		\Oboe_III_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Oboe_III_IV_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
-		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX }
+		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_III_mvmt_III_AY }
 Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_IV_mvmt_III_AL \Oboes_all_mvmt_III_AM
 		\Oboe_IV_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Oboe_III_IV_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
-		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX }
+		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_IV_mvmt_III_AY }
 EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \EnglishHorn_cues_mvmt_III_AG
 		\EnglishHorn_mvmt_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \EnglishHorn_cues_mvmt_III_AL \EnglishHorn_mvmt_III_AM
 		\EnglishHorn_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \EnglishHorn_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
-		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \EnglishHorn_mvmt_III_AX }
+		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \EnglishHorn_mvmt_III_AX \EnglishHorn_III_mvmt_III_AY }

@@ -1038,31 +1038,151 @@ Viola_mvmt_III_AX = \relative c' {
 	<bes d bes'>->[ <bes d>-> <bes d bes'>->]
 }
 
+%%% Section AY = mm. 187-202 (Rehearsal 75)
+
+% Edit: violin I part in m. 190 left out one of the tremolos.
+
+Violin_I_mvmt_III_AY = \relative c'''' {
+	\mark #75
+	\time 5/8
+	\break
+	\tag #'Score \grace s8.
+	g4:32 aes8:32-^ g4:32
+	bes8:32 aes8:32 g4.:32-^
+	g4:32 aes8:32-^ g4:32
+	g8:32[ f8:32 g8:32-^] e4:32
+	f8:32[ g8:32 aes8:32-^ bes8:32 ces8:32]
+	aes4:32 bes8:32-^[ aes8:32 g8:32]
+	aes8:32 f4:32 e8:32 g8:32
+	aes8:32[ bes8:32 ces8:32-^ cis,8:32 d8:32]
+	f8:32 fis4:32 f8:32 g8:32
+	g8:32[ fis8:32 f8:32-^ f8:32 gis8:32]
+	gis8:32 fis4:32 f8:32 d8:32
+	f8:32 fis4:32 f8:32 g8:32
+	g8:32[ fis8:32 f8:32-^ d8:32 gis8:32]
+	gis8:32 fis4:32 f8:32 d8:32
+	gis8:32 fis4:32 f8:32 d8:32
+	\time 3/4
+	f4:32 fis4:32 a4:32
+}
+
+Violin_I_divisi_II_mvmt_III_AY = \relative c'''' {
+	\time 5/8
+	\tag #'Score \grace s8.
+	g8[ g aes-^ g g]
+	bes[ aes g-^ g g]
+	g[ g aes-^ g g]
+	g[ f g-^ e e]
+	f[ g aes-^ bes ces]
+	aes[ aes bes-^( aes) g]
+	aes[ f f-^ e g]
+	aes[ bes ces-^ cis, d]
+	f[ fis fis-^ f g]
+	g[ fis f-^ f gis]
+	gis[ fis fis-^ f d]
+	f[ fis fis-^ f g]
+	g[ fis f-^ d gis]
+	gis[ fis fis-^ f d]
+	gis[ fis fis-^ f d]
+	\time 3/4
+	f4:32 fis4:32 a4:32
+}
+
+%%% Violin II parts are almost perfect octave transpositions, *except* for the octave drop in m. 194.
+
+Violin_II_mvmt_III_AY = \relative c''' {
+	\mark #75
+	\time 5/8
+	\break
+	\tag #'Score \grace s8.
+	g4:32 aes8:32-^ g4:32
+	bes8:32 aes8:32 g4.:32-^
+	g4:32 aes8:32-^ g4:32
+	g8:32[ f8:32 g8:32-^] e4:32
+	f8:32[ g8:32 aes8:32-^ bes8:32 ces8:32]
+	aes4:32 bes8:32-^[ aes8:32 g8:32]
+	aes8:32 f4:32 e8:32 g8:32
+	aes8:32[ bes8:32 ces8:32-^ cis8:32 d8:32]
+	f8:32 fis4:32 f8:32 g8:32
+	g8:32[ fis8:32 f8:32-^ f8:32 gis8:32]
+	gis8:32 fis4:32 f8:32 d8:32
+	f8:32 fis4:32 f8:32 g8:32
+	g8:32[ fis8:32 f8:32-^ d8:32 gis8:32]
+	gis8:32 fis4:32 f8:32 d8:32
+	gis8:32 fis4:32 f8:32 d8:32
+	\time 3/4
+	f4:32 fis4:32 a4:32
+}
+
+Violin_II_divisi_II_mvmt_III_AY = \relative c''' {
+	\time 5/8
+	\tag #'Score \grace s8.
+	g8[ g aes-^ g g]
+	bes[ aes g-^ g g]
+	g[ g aes-^ g g]
+	g[ f g-^ e e]
+	f[ g aes-^ bes ces]
+	aes[ aes bes-^( aes) g]
+	aes[ f f-^ e g]
+	aes[ bes ces-^ cis d]
+	f[ fis fis-^ f g]
+	g[ fis f-^ f gis]
+	gis[ fis fis-^ f d]
+	f[ fis fis-^ f g]
+	g[ fis f-^ d gis]
+	gis[ fis fis-^ f d]
+	gis[ fis fis-^ f d]
+	\time 3/4
+	f4:32 fis4:32 a4:32
+}
+
+Viola_mvmt_III_AY = \relative c' {
+	\mark #75
+	\time 5/8
+	\break
+	\tag #'Score \grace s8.
+	\repeat unfold 15 { r8 <d bes'>[ q-^ r q] }
+	\time 3/4
+	q4\ff\< q q\!
+}
+
+Viola_divisi_II_mvmt_III_AY = \relative c' {
+	\time 5/8
+	\tag #'Score \grace s8.
+	\repeat unfold 15 { r8 <bes fis'>[ q-^ r q] }
+	\time 3/4
+	q4\ff\< q q\!
+}
+
 %%% Final assembly
 
 Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB \Violin_I_mvmt_III_AC \Violin_I_mvmt_III_AD \Violin_I_mvmt_III_AE
 		\Violin_I_mvmt_III_AF \NULL_III_AG \Violin_I_mvmt_III_AH \NULL_III_AI \Violin_I_mvmt_III_AJ \NULL_III_AK \Violin_I_mvmt_III_AL
 		\Violin_I_mvmt_III_AM \Violin_I_mvmt_III_AN \Violin_I_mvmt_III_AO \Violin_I_mvmt_III_AP \Violin_I_mvmt_III_AQ
-		\Violin_I_mvmt_III_AR \NULL_III_AS \NULL_III_AT \Violin_I_cues_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Violin_I_mvmt_III_AX }
+		\Violin_I_mvmt_III_AR \NULL_III_AS \NULL_III_AT \Violin_I_cues_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Violin_I_mvmt_III_AX
+		\Violin_I_mvmt_III_AY }
 Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_divisi_II_mvmt_III_AD
 		\Violin_I_divisi_II_mvmt_III_AE \NULL_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK
 		\NULL_III_AL \NULL_III_AM \NULL_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT
-		\NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX }
+		\NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX \Violin_I_divisi_II_mvmt_III_AY }
 
 Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA \Violin_II_mvmt_III_AB \Violin_II_mvmt_III_AC \Violin_II_mvmt_III_AD \Violin_II_mvmt_III_AE
 		\Violin_II_mvmt_III_AF \NULL_III_AG \Violin_II_mvmt_III_AH \Violin_II_cues_mvmt_III_AI \Violin_II_mvmt_III_AJ \NULL_III_AK
 		\NULL_III_AL \Violin_II_mvmt_III_AM \Violin_II_mvmt_III_AN \Violin_II_mvmt_III_AO \NULL_III_AP \Violin_II_mvmt_III_AQ
-		\Violin_II_mvmt_III_AR \NULL_III_AS \NULL_III_AT \Violin_II_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Violin_II_mvmt_III_AX }
+		\Violin_II_mvmt_III_AR \NULL_III_AS \NULL_III_AT \Violin_II_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Violin_II_mvmt_III_AX
+		\Violin_II_mvmt_III_AY }
 Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA \Violin_II_divisi_II_mvmt_III_AB \Violin_II_divisi_II_mvmt_III_AC
 		\Violin_II_divisi_II_mvmt_III_AD \Violin_II_divisi_II_mvmt_III_AE \Violin_II_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH
 		\NULL_III_AI \Violin_II_divisi_II_mvmt_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \Violin_II_divisi_II_mvmt_III_AO
-		\NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX }
+		\NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX
+		\Violin_II_divisi_II_mvmt_III_AY }
 
 Viola_mvmt_III = { \clef alto \NULL_III_AA \Viola_cues_mvmt_III_AB \Viola_mvmt_III_AC \Viola_mvmt_III_AD \Viola_mvmt_III_AE
 		\Viola_mvmt_III_AF \Viola_mvmt_III_AG \Viola_mvmt_III_AH \Viola_mvmt_III_AI \Viola_mvmt_III_AJ \NULL_III_AK \NULL_III_AL
 		\Viola_mvmt_III_AM \Viola_mvmt_III_AN \Viola_mvmt_III_AO \Viola_mvmt_III_AP \Viola_mvmt_III_AQ \Viola_mvmt_III_AR
-		\NULL_III_AS \Viola_mvmt_III_AT \Viola_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Viola_mvmt_III_AX }
+		\NULL_III_AS \Viola_mvmt_III_AT \Viola_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Viola_mvmt_III_AX \Viola_mvmt_III_AY }
 Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_III_AD
 		\Viola_divisi_II_mvmt_III_AE \Viola_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK
 		\NULL_III_AL \Viola_divisi_II_mvmt_III_AM \Viola_divisi_II_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ
-		\Viola_divisi_II_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX }
+		\Viola_divisi_II_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX
+		\Viola_divisi_II_mvmt_III_AY }

@@ -1149,3 +1149,10 @@ m. 162: Clarinet III/IV has wrong note in third beat. Score correct, matches PR.
 
 mm. 176-186: The 3+2 accent pattern is in the score for everyone, but not in all parts. Adding them globally.
 (III-orch-*)
+
+mm. 187-202: There are a number of cases here where some parts have articulations that others don't (like staccato
+marks on all the non-accented 8th notes), some have dynamic directions but not all (final cresecendo in lower strings
+and some other parts, but not upper strings), and there is a "poco a poco cresc." in this section in some parts but
+not others, and missing from the score. For now I am largely using the individual parts and not trying to fix this,
+but at some point decisions must be made. #DYNAMICS #UNDECIDED
+(III-orch-*)

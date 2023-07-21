@@ -159,3 +159,6 @@ attention.
 
 m. 162-168: How do I get lilypond to do the "triplet tremolo" thing that the parts and score do? Much more compact
 and easier to read.
+
+m. 187-202: Should change the short names of the Piccolo and flute III/IV lines to reflect that for these bars
+we have a second piccolo and no Flute IV.

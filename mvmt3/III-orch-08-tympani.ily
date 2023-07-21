@@ -397,7 +397,19 @@ Tympani_I_mvmt_III_AX = \relative c {
 	\mark #74
 	\repeat unfold 10 { d2 bes8 }
 	\time 3/8
-	R4.
+	R4._"D to C subito"
+}
+
+%%% Section AY = mm. 187-202 (Rehearsal 75)
+
+Tympani_I_mvmt_III_AY = \relative c {
+	\mark #75
+	\time 5/8
+	\tag #'Score \grace s8.
+	c4.\mf bes4
+	\repeat unfold 14 { c4. bes4 }
+	\time 3/4
+	R2.
 }
 
 %%% Final assembly
@@ -405,8 +417,8 @@ Tympani_I_mvmt_III_AX = \relative c {
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
 		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_I_mvmt_III_AK \NULL_III_AL \Tympani_I_mvmt_III_AM
 		\Tympani_I_mvmt_III_AN \NULL_III_AO \Tympani_I_mvmt_III_AP \NULL_III_AQ \Tympani_I_mvmt_II_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
-		\Tympani_I_cues_mvmt_III_AV \NULL_III_AW \Tympani_I_mvmt_III_AX }
+		\Tympani_I_cues_mvmt_III_AV \NULL_III_AW \Tympani_I_mvmt_III_AX \Tympani_I_mvmt_III_AY }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
 		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_II_mvmt_III_AK \Tympani_II_mvmt_III_AL
 		\Tympani_II_mvmt_III_AM \Tympani_II_mvmt_III_AN \NULL_III_AO \Tympani_II_mvmt_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT
-		\Tympani_II_cues_mvmt_III_AU \Tympani_II_mvmt_III_AV \NULL_III_AW \NULL_III_AX }
+		\Tympani_II_cues_mvmt_III_AU \Tympani_II_mvmt_III_AV \NULL_III_AW \NULL_III_AX \NULL_III_AY }
