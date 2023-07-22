@@ -994,20 +994,95 @@ solo_dynamics_III_AY = {
 	s1*5/8*15 s4.
 }
 
+%%% Section AZ = mm. 203-210 (Rehearsal 76)
+
+% Mostly a copy of mm. 2-9
+
+solo_upper_III_AZ = \relative c'''' {
+	\mark #76
+	\time 6/4
+	\clef treble
+	\ottava #1 <b e f b>4 \ottava #0 <b,, e f b> <c f g c> <b e f b>8 <a d e a> <gis cis dis gis>4 <e a b e>
+	\time 5/4
+	<b' e f b> <c f g c> <ees aes bes ees> <d g a d>8 <c f g c> <b e f b>4
+	\time 6/4
+	q q <c f g c> <b e f b>8 <a d e a> <gis cis dis gis>4 <e a b e>
+	\time 5/4
+	<f b c f>8 <e e'> <f b c f>4 <a d e a> <b e f b> <gis d' e gis>
+	\time 7/4
+	<b e fis b> <c f g c> <dis gis a dis> <e a b e> <dis gis a dis>8 <c f g c> <b e fis b>4 <gis d' e gis>
+	\time 5/4
+	<dis' gis ais dis> <e a b e> <g c d g> <fis b cis fis>8 <e a b e> <ees aes bes ees>4
+	\time 7/4
+	<b e fis b> <c f g c> <dis gis ais dis> <e a b e> <dis gis ais dis>8 <cis fis gis cis> <c f g c>4 <a d e a>
+	\time 4/4
+	<a d e a>8 q <c f g c> <a a'> <gis cis dis gis> <f f'> <e a b e>4
+}
+
+solo_dynamics_III_AZ = {
+	s1. s1*5/4 s1. s1*5/4 s1*7/4 s1*5/4 s1*7/4 s1
+}
+
+solo_lower_III_AZ = \relative c, {
+	\time 6/4
+	\override Beam.breakable = ##t
+	\repeat unfold 9 { <gis gis'>8[ <e'' b> <e' f> <b, f'> <b' c>] }
+	\repeat unfold 9 { <g,, g'>8[ < e'' b'> <e' f> <b, fis'> <b' c>] }
+}
+
+%%% Section BA = mm. 211-214 (Rehearsal 77)
+
+% Copy of mm. 10-13
+
+solo_upper_III_BA = \relative c'' {
+	\mark #77
+	\time 7/4
+	<b e fis b>4 <c f g c> <dis a' dis> <e a b e> <dis gis a dis>8 <c c'> <b e fis b>4 <gis d' e gis>
+	\time 5/4
+	<dis' gis ais dis> <e a b e> <g c g'> <fis b cis fis>8 <e e'> <dis gis a dis>4
+	\time 7/4
+	<b e f b> <c f g c> <dis a' dis> <e a b e> <dis gis a dis>8 <c c'> <b e f b>4 <gis d' e gis>
+	\time 4/4
+	<a d e a>8 q <b e f b> <gis gis'> <g c d g> <f f'> <e a b e>4
+}
+
+solo_dynamics_III_BA = \solo_dynamics_III_AB
+
+solo_lower_III_BA = \solo_lower_III_AB
+
+%%% Section BB = mm. 215-219 (Rehearsal 78)
+
+% Copy of mm. 14-18
+
+solo_upper_III_BB = {
+	\mark #78
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	%s1.*4
+	%s4 s1^\markup { \italic "poco a poco dim." } s4
+	s1.*5
+}
+
+solo_dynamics_III_BB = \solo_dynamics_III_AC
+
+solo_lower_III_BB = \solo_lower_III_AC
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
 		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ \solo_upper_III_AR
 		\solo_upper_III_AS \solo_upper_III_AT \solo_upper_III_AU \solo_upper_III_AV \solo_upper_III_AW \solo_upper_III_AX
-		\solo_upper_lower_III_AY }
+		\solo_upper_lower_III_AY \solo_upper_III_AZ \solo_upper_III_BA \solo_upper_III_BB }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
 		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
 		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR \solo_dynamics_III_AS \solo_dynamics_III_AT
-		\solo_dynamics_III_AU \solo_dynamics_III_AV \solo_dynamics_III_AW \solo_dynamics_III_AX \solo_dynamics_III_AY }
+		\solo_dynamics_III_AU \solo_dynamics_III_AV \solo_dynamics_III_AW \solo_dynamics_III_AX \solo_dynamics_III_AY
+		\solo_dynamics_III_AZ \solo_dynamics_III_BA \solo_dynamics_III_BB }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
 		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ \solo_lower_III_AR
 		\solo_lower_III_AS \solo_lower_III_AT \solo_lower_III_AU \solo_lower_III_AV \solo_lower_III_AW \solo_lower_III_AX
-		\solo_upper_lower_III_AY }
+		\solo_upper_lower_III_AY \solo_lower_III_AZ \solo_lower_III_BA \solo_lower_III_BB }

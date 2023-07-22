@@ -8,12 +8,9 @@
 %%% III-piano-reduction.ily: Piano reduction, third movement
 
 %%% Section AA = mm. 1-9
-		 
-redux_upper_III_AA = \relative c''' {
-	\tempo "Allegro"
-	\tag #'Midi \tempo 4 = 160
-	\time 6/4
-	\ottava #1
+
+% Break this section out for re-use in AZ
+redux_upper_III_AA_partial = \relative c''' {
 	% FIXME: This is tricky to render the same way the PR does. I'm just going with simple default
 	%        lilypond behavior for now.
 	%\change Staff = "redux_lower" <dis ais'>16[ \change Staff = "redux_upper" <e b'>
@@ -24,8 +21,7 @@ redux_upper_III_AA = \relative c''' {
 	%	}
 	%	\beamCutL \change Staff = "redux_lower" <dis ais'>16 \change Staff = "redux_upper" <e b'>
 	%	\change Staff = "redux_lower" <dis ais'>16 \change Staff = "redux_upper" <e b'>]
-	\repeat unfold 12 { \change Staff = "redux_lower" <dis ais'>16 \change Staff = "redux_upper" <e b'> }
-	\repeat unfold 4 { \change Staff = "redux_lower" <e b'> \change Staff = "redux_upper" <f c'> }
+	\repeat unfold 4 { \change Staff = "redux_lower" <e b'>16 \change Staff = "redux_upper" <f c'> }
 		\repeat unfold 2 { \change Staff = "redux_lower" <d a'> \change Staff = "redux_upper" <e b'> }
 		\repeat unfold 4 { \change Staff = "redux_lower" <e b'> \change Staff = "redux_upper" <f c'> }
 		\repeat unfold 2 { \change Staff = "redux_lower" <cis gis'> \change Staff = "redux_upper" <d a'> }
@@ -66,6 +62,16 @@ redux_upper_III_AA = \relative c''' {
 		\repeat unfold 2 { \change Staff = "redux_lower" <e b'> \change Staff = "redux_upper" <f c'> }
 }
 
+redux_upper_III_AA = \relative c''' {
+	\tempo "Allegro"
+	\tag #'Midi \tempo 4 = 160
+	\time 6/4
+	\ottava #1
+	% FIXME: See note in "partial above.
+	\repeat unfold 12 { \change Staff = "redux_lower" <dis ais'>16 \change Staff = "redux_upper" <e b'> }
+	\redux_upper_III_AA_partial
+}
+
 redux_dynamics_III_AA = {
 	s1.*2 s1*5/4 s1. s1*5/4 s1*7/4 s1*5/4 s1*7/4 s1
 }
@@ -92,8 +98,8 @@ redux_lower_III_AA = {
 
 %%% Section AB = mm. 10-13 (Rehearsal 51)
 
-redux_upper_III_AB = \relative c''' {
-	\mark #51
+% Break this section out for re-use in BA
+redux_upper_III_AB_partial = \relative c''' {
 	\time 7/4
 	\repeat unfold 2 { \change Staff = "redux_lower" <a dis>16 \change Staff = "redux_upper" <a e'>
 			\change Staff = "redux_lower" <a dis> \change Staff = "redux_upper" <e' a> }
@@ -139,6 +145,11 @@ redux_upper_III_AB = \relative c''' {
 		<e, e'>4 \ottava #0
 }
 
+redux_upper_III_AB = {
+	\mark #51
+	\redux_upper_III_AB_partial
+}
+
 redux_dynamics_III_AB = {
 	s1*7/4 s1*5/4 s1*7/4 s1
 }
@@ -156,10 +167,8 @@ redux_lower_III_AB = \relative c'' {
 
 %%% Section AC - mm. 14-18 (Rehearsal 52)
 
-redux_upper_III_AC = \relative c''' {
-	\mark #52
-	\tempo "Meno"
-	\tag #'Midi \tempo 4 = 96
+% Break this section out for use in BB
+redux_upper_III_AC_partial = \relative c''' {
 	\time 6/4
 	r8 b[ c cis e f16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c]
 	r8 b[ c cis e f16. b32] gis8[ g16. gis32 g8 f16. g32 f8 e]
@@ -167,6 +176,13 @@ redux_upper_III_AC = \relative c''' {
 	r8 a[ bes c des e16. f32] e8[ des16. e32 des8 c16. des32 c8 bes]
 	r8 a[ bes c des e16. gis32] f8[ e16. f32 e8 cis16. e32 cis8 c16. e32]
 	cis8[ c16. cis32 c8 bes16. c32 bes8 a16. e'32] cis8[ c16. cis32 c8 bes16. c32 bes8 a]
+}
+
+redux_upper_III_AC = {
+	\mark #52
+	\tempo "Meno"
+	\tag #'Midi \tempo 4 = 96
+	\redux_upper_III_AC_partial
 }
 
 redux_dynamics_III_AC = {
@@ -188,11 +204,11 @@ redux_ossia_upper_III_AC = \relative c'' {
 	\mark #52
 	\tempo "Meno"
 	\time 6/4
-	<c f a c>4-^ q <des ges bes des>4-^ <c f a c>8 <bes des ges bes> <a c f a>4-^ <f a c f>
-	<c' f a c>-^ <des ges bes des> <e a c e>-^ <ees aes ces ees>8 <des des'> <c f a c>4-^ <a c f a>
-	<c f a c>-^ <des ges bes des> <e a c e>-^ <fis b dis fis> <e a c e>8-^ <des ges bes des> <c f a c>4
-	<a c f a>4-^ <ees' ges bes ees> <f a c f>-^ <bes ges' bes> <f a c f>8-^ <ees ges bes ees> <f a c f>4
-	<a, c f a>4-^ <ees' ges bes ees> <f a c f>8-^[ <bes bes'>] <c c'>[ <bes bes'>] <f a c f>-^[ <ees ges bes ees>] <f a c f>4
+	<c f a c>4 q <des ges bes des>4 <c f a c>8 <bes des ges bes> <a c f a>4 <f a c f>
+	<c' f a c> <des ges bes des> <e a c e> <ees aes ces ees>8 <des des'> <c f a c>4 <a c f a>
+	<c f a c> <des ges bes des> <e a c e> <fis b dis fis> <e a c e>8 <des ges bes des> <c f a c>4
+	<a c f a>4 <ees' ges bes ees> <f a c f> <bes ges' bes> <f a c f>8 <ees ges bes ees> <f a c f>4
+	<a, c f a>4 <ees' ges bes ees> <f a c f>8[ <bes bes'>] <c c'>[ <bes bes'>] <f a c f>[ <ees ges bes ees>] <f a c f>4
 }
 
 redux_ossia_lower_III_AC = \relative c, {
@@ -1229,20 +1245,88 @@ redux_lower_III_AY = \relative c, {
 	<fis,, fis'>4 <f f'> <ees ees'>
 }
 
+%%% Section AZ = mm. 203-210 (Rehearsal 76)
+
+% Copy of mm. 2-9
+
+redux_upper_III_AZ = {
+	\mark #76
+	\time 6/4
+	\ottava #1
+	\redux_upper_III_AA_partial
+}
+
+redux_dynamics_III_AZ = {
+	s1. s1*5/4 s1. s1*5/4 s1*7/4 s1*5/4 s1*7/4 s1
+}
+
+redux_lower_III_AZ = {
+	\time 6/4
+	\clef treble
+	\ottava #1
+	s1.
+	\time 5/4
+	s1*5/4
+	\time 6/4
+	s1.
+	\time 5/4
+	s1*5/4
+	\time 7/4
+	s1*7/4
+	\time 5/4
+	s1*5/4
+	\time 7/4
+	s1*7/4
+	\time 4/4
+	s1
+}
+
+%%% Section BA = mm. 211-214 (Rehearsal 77)
+
+% Copy of mm. 10-13
+
+redux_upper_III_BA = {
+	\mark #77
+	\redux_upper_III_AB_partial
+}
+
+redux_dynamics_III_BA = \redux_dynamics_III_AB
+
+redux_lower_III_BA = \redux_lower_III_AB
+
+%%% Section BB = mm. 215-219 (Rehearsal 78)
+
+% Copy of mm. 14-18
+
+redux_upper_III_BB = {
+	\mark #78
+	\tempo "Meno"
+	\tag #'Midi \tempo 4 = 96
+	\redux_upper_III_AC_partial
+	\ottava #0
+}
+
+redux_dynamics_III_BB = {
+	s1.*5
+}
+
+redux_lower_III_BB = \redux_lower_III_AC
+
 %%% Final assembly
 
 redux_upper_III = { \redux_upper_III_AA \redux_upper_III_AB \redux_upper_III_AC \redux_upper_III_AD \redux_upper_III_AE \redux_upper_III_AF
 		\redux_upper_III_AG \redux_upper_III_AH \redux_upper_III_AI \redux_upper_III_AJ \redux_upper_III_AK \redux_upper_III_AL
 		\redux_upper_III_AM \redux_upper_III_AN \redux_upper_III_AO \redux_upper_III_AP \redux_upper_III_AQ \redux_upper_III_AR
 		\redux_upper_III_AS \redux_upper_III_AT \redux_upper_III_AU \redux_upper_III_AV \tag #'Midi \tempo 4 = 124 \NULL_III_AW
-		\redux_upper_III_AX \redux_upper_III_AY }
+		\redux_upper_III_AX \redux_upper_III_AY \redux_upper_III_AZ \redux_upper_III_BA \redux_upper_III_BB }
 redux_dynamics_III = { \redux_dynamics_III_AA \redux_dynamics_III_AB \redux_dynamics_III_AC \redux_dynamics_III_AD \redux_dynamics_III_AE
 		\redux_dynamics_III_AF \redux_dynamics_III_AG \redux_dynamics_III_AH \redux_dynamics_III_AI \redux_dynamics_III_AJ
 		\redux_dynamics_III_AK \redux_dynamics_III_AL \redux_dynamics_III_AM \redux_dynamics_III_AN \redux_dynamics_III_AO
 		\redux_dynamics_III_AP \redux_dynamics_III_AQ \redux_dynamics_III_AR \redux_dynamics_III_AS \redux_dynamics_III_AT
-		\redux_dynamics_III_AU \redux_dynamics_III_AV \redux_dynamics_III_AW \redux_dynamics_III_AX \redux_dynamics_III_AY }
+		\redux_dynamics_III_AU \redux_dynamics_III_AV \redux_dynamics_III_AW \redux_dynamics_III_AX \redux_dynamics_III_AY
+		\redux_dynamics_III_AZ \redux_dynamics_III_BA \redux_dynamics_III_BB }
 redux_lower_III = { \redux_lower_III_AA \redux_lower_III_AB \redux_lower_III_AC \redux_lower_III_AD \redux_lower_III_AE \redux_lower_III_AF
 		\redux_lower_III_AG \redux_lower_III_AH \redux_lower_III_AI \redux_lower_III_AJ \redux_lower_III_AK \redux_lower_III_AL
 		\redux_lower_III_AM \redux_lower_III_AN \redux_lower_III_AO \redux_lower_III_AP \redux_lower_III_AQ \redux_lower_III_AR
 		\redux_lower_III_AS \redux_lower_III_AT \redux_lower_III_AU \redux_lower_III_AV \NULL_III_AW \redux_lower_III_AX 
-		\redux_lower_III_AY }
+		\redux_lower_III_AY \redux_lower_III_AZ \redux_lower_III_BA \redux_lower_III_BB }

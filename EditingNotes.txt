@@ -1156,3 +1156,8 @@ and some other parts, but not upper strings), and there is a "poco a poco cresc.
 not others, and missing from the score. For now I am largely using the individual parts and not trying to fix this,
 but at some point decisions must be made. #DYNAMICS #UNDECIDED
 (III-orch-*)
+
+mm. 203-210: This is mostly a copy of mm. 2-9. The opening solo piano chord is two octaves higher, and the first
+bass pattern in the PR is missing a clustered f in beat 2. Score confirms the latter seems to be a copyist error;
+changing it back to match m. 2.
+(III-solo-piano)

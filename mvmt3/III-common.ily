@@ -70,3 +70,6 @@ NULL_III_AV = { \mark #72 \tempo "Poco a poco animato" \time 5/8 R1*5/8*7 }
 NULL_III_AW = { \mark #73 R1*5/8*7 }
 NULL_III_AX = { \mark #74 R1*5/8*10 \time 3/8 R4. }
 NULL_III_AY = { \mark #75 \time 5/8 \tag #'Score \grace s8. R1*5/8*15 \time 3/4 R2. }
+NULL_III_AZ = { \mark #76 \time 6/4 R1. \time 5/4 R1*5/4 \time 6/4 R1. \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 4/4 R1 }
+NULL_III_BA = { \mark #77 \time 7/4 R1*7/4 \time 5/4 R1*5/4 \time 7/4 R1*7/4 \time 4/4 R1 }
+NULL_III_BB = { \mark #78 \tempo "Meno" \time 6/4 \tag #'Score \grace s8. R1.*5 }
