@@ -74,6 +74,9 @@ m. 12: Horns V/VI have first FF then FFF in the part. Only FF may have backing i
 score, but looks like copyist. Keeping for now.
 (I-orch-06-horns)
 
+m. 13: Flutes/Picc/Violins have dim. here? Parallel bit in m. 214. #DYNAMICS #UNDECIDED
+(III-orch-*)
+
 m. 16: Flute I has mf scratched out and replaced with F in both score and part.
 Seems official to me. #DYNAMICS
 (I-orch-01-flutes)
@@ -1116,8 +1119,7 @@ so yet. #DYNAMICS #UNDECIDED
 m. 132: Upper cello/viola quintuplet is written a bit differently than it was transcribed in the PR. PR line uses des instead of cis.
 It might make sense to adjust the cello line accordingly, maybe. Also, the Viola divisi in the part uses c-sharp throughout, and based
 on the score it should match the cello instead.
-UPDATE: In order to squash the cello divisi line and not lose the c/cis distinction in the quarter note, I nee
-m. ded to make the change
+UPDATE: In order to squash the cello divisi line and not lose the c/cis distinction in the quarter note, I needed to make the change
 to match the PR. But now looking at the score, I see an ambiguity in the way the bar is written: that quarter note might be plain
 c for *both* voices, in both viola and cello. The transcribed parts indicate clashing c and cis; the PR indicates same with c and des.
 I'm resolving this for now by matching the parts but using des in place of cis, like the PR.
@@ -1161,3 +1163,6 @@ mm. 203-210: This is mostly a copy of mm. 2-9. The opening solo piano chord is t
 bass pattern in the PR is missing a clustered f in beat 2. Score confirms the latter seems to be a copyist error;
 changing it back to match m. 2.
 (III-solo-piano)
+
+m. 214: Flutes/Picc and Violins have a dim. in this bar, that matches the previous copy in m. 13. #DYNAMICS #UNDECIDED
+(III-orch-01-flutes)

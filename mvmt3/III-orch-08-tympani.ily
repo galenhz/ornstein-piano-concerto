@@ -412,13 +412,49 @@ Tympani_I_mvmt_III_AY = \relative c {
 	R2.
 }
 
+%%% Section AZ = mm. 203-210 (Rehearsal 76)
+%%% Tacet
+
+%%% Section BA = mm. 211-214 (Rehearsal 77)
+%%% Tacet, cues only
+
+Tympani_I_cues_mvmt_III_BA = \relative c''' {
+	\tag #'Score \NULL_III_BA
+	\tag #'Part <<
+		\new CueVoice {
+			\cueClef treble
+			\time 7/4
+			a2\trNat_"Picc + Fl." b4\trNat a\trNat gis2\trNat e4\trNat
+			\time 5/4
+			gis\trNat a\trNat c\trNat b\trNat gis\trNat
+			\time 7/4
+			a2\trNat b4\trNat a\trNat gis2\trNat e4\trNat
+			\time 4/4
+			c'\trNat a\trNat g\trNat e
+			\cueClefUnset
+		}
+		\new Voice {
+			\voiceTwo
+			\mark #51
+			\time 7/4
+			R1*7/4
+			\time 5/4
+			R1*5/4
+			\time 7/4
+			R1*7/4
+			\time 4/4
+			R1
+		}
+	>>
+}
+
 %%% Final assembly
 
 Tympani_I_mvmt_III = { \clef bass \NULL_III_AA \Tympani_I_cues_mvmt_III_AB \Tympani_I_mvmt_III_AC \NULL_III_AD \Tympani_I_mvmt_III_AE \NULL_III_AF
 		\NULL_III_AG \Tympani_I_mvmt_III_AH \Tympani_I_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_I_mvmt_III_AK \NULL_III_AL \Tympani_I_mvmt_III_AM
 		\Tympani_I_mvmt_III_AN \NULL_III_AO \Tympani_I_mvmt_III_AP \NULL_III_AQ \Tympani_I_mvmt_II_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
-		\Tympani_I_cues_mvmt_III_AV \NULL_III_AW \Tympani_I_mvmt_III_AX \Tympani_I_mvmt_III_AY }
+		\Tympani_I_cues_mvmt_III_AV \NULL_III_AW \Tympani_I_mvmt_III_AX \Tympani_I_mvmt_III_AY \NULL_III_AZ \Tympani_I_cues_mvmt_III_BA }
 Tympani_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \Tympani_II_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \Tympani_II_mvmt_III_AF
 		\Tympani_II_mvmt_III_AG \NULL_III_AH \Tympani_II_mvmt_III_AI \Tympani_cues_mvmt_III_AJ \Tympani_II_mvmt_III_AK \Tympani_II_mvmt_III_AL
 		\Tympani_II_mvmt_III_AM \Tympani_II_mvmt_III_AN \NULL_III_AO \Tympani_II_mvmt_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT
-		\Tympani_II_cues_mvmt_III_AU \Tympani_II_mvmt_III_AV \NULL_III_AW \NULL_III_AX \NULL_III_AY }
+		\Tympani_II_cues_mvmt_III_AU \Tympani_II_mvmt_III_AV \NULL_III_AW \NULL_III_AX \NULL_III_AY \NULL_III_AZ \NULL_III_BA }
