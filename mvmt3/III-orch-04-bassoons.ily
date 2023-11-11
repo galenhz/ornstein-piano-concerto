@@ -709,6 +709,7 @@ Contrabassoon_mvmt_III_AX = \relative c {
 
 %%% Section AY = mm. 187-202 (Rehearsal 75)
 
+% Have to switch I/II to tenor here, to avoid same clef problem as AC above.
 Bassoon_I_II_mvmt_III_AY = \relative c, {
 	\mark #75
 	\time 5/8
@@ -716,6 +717,7 @@ Bassoon_I_II_mvmt_III_AY = \relative c, {
 	\repeat unfold 14 { \appoggiatura { ees16 d des } c4 r4 r8 }
 	\time 3/4
 	fis4-^\fff f-^ ees-^
+	\clef tenor
 }
 
 Bassoon_III_mvmt_III_AY = \relative c {
@@ -784,30 +786,65 @@ Bassoon_all_cues_mvmt_III_BA = \relative c''' {
 	>>
 }
 
+%%% Section BB = mm. 215-219 (Rehearsal 78)
+
+Bassoon_I_II_mvmt_III_BB = \relative c' {
+	\mark #78
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	r8 b[(\ff c cis e f16. gis32]) f8[( e16. f32 e8 cis16. e32 cis8 c])
+	r8 b[( c cis e f16. b32]) gis8[( g16. gis32 g8 f16. g32 f8 e])
+	r8 a,[( bes c des e16. f32]) e8[( des16. e32 des8 c16. des32 c8 bes])
+	r8 a[( bes c des e16. gis32]) f8[( e16. f32 e8 cis16. e32 cis8 c16. e32])
+	cis8[( c16. cis32 c8 bes16. c32 bes8 a16. e'32]) cis8[( c16. cis32 c8 bes16. c32 bes8 a])
+}
+
+Bassoon_III_IV_mvmt_III_BB = \relative c' {
+	\mark #78
+	\tempo "Meno"
+	\time 6/4
+	\acciaccatura { \tag #'Score s16 ges8 } f8-^\ff r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { aes8 } ges8-^ r ges r
+	\acciaccatura { ges8 } f8-^ r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { ees8 } des8-^ r c r
+	\acciaccatura { ges'8 } f8-^ r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { aes8 } ges8-^ r ges r
+	\acciaccatura { ges8 } f8-^ r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { ees8 } des8-^ r c r
+	\acciaccatura { ges'8 } f8-^ r f r \acciaccatura { ges8 } f8-^ r f r \acciaccatura { ees8 } des8-^ r c r
+}
+
+Contrabassoon_mvmt_III_BB = \relative c {
+	\mark #78
+	\tempo "Meno"
+	\time 6/4
+	\tag #'Score \grace s8.
+	ees2-^\ff
+		\repeat unfold 11 { ees2-^ }
+	ees2-^ ees2-^ ees2-^
+}
+
 %%% Final assembly
 
 Bassoon_I_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD
 		\NULL_III_AE \NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_I_mvmt_III_AI \NULL_III_AJ \Bassoon_I_II_mvmt_III_AK
 		\Bassoon_I_mvmt_III_AL \Bassoon_I_II_mvmt_III_AM \Bassoon_I_mvmt_III_AN \Bassoon_I_II_mvmt_III_AO \NULL_III_AP
 		\Bassoon_I_mvmt_III_AQ \Bassoon_I_mvmt_III_AR \Bassoon_I_II_mvmt_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW
-		\Bassoon_all_cues_mvmt_III_AX \Bassoon_I_II_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA }
+		\Bassoon_all_cues_mvmt_III_AX \Bassoon_I_II_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA \Bassoon_I_II_mvmt_III_BB }
 Bassoon_II_mvmt_III = { \clef tenor \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_I_II_mvmt_III_AC \Bassoon_I_II_mvmt_III_AD
 		\NULL_III_AE \NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_II_mvmt_III_AI \NULL_III_AJ \Bassoon_I_II_mvmt_III_AK
 		\Bassoon_II_mvmt_III_AL \Bassoon_I_II_mvmt_III_AM \Bassoon_II_mvmt_III_AN \Bassoon_I_II_mvmt_III_AO \NULL_III_AP
 		\Bassoon_II_mvmt_III_AQ \Bassoon_II_mvmt_III_AR \Bassoon_I_II_mvmt_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW
-		\Bassoon_all_cues_mvmt_III_AX \Bassoon_I_II_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA }
+		\Bassoon_all_cues_mvmt_III_AX \Bassoon_I_II_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA \Bassoon_I_II_mvmt_III_BB }
 Bassoon_III_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_III_mvmt_III_AI \NULL_III_AJ \Bassoon_Contra_cues_mvmt_III_AK
 		\Bassoon_III_mvmt_III_AL \Bassoon_III_mvmt_III_AM \NULL_III_AN \NULL_III_AO \Bassoon_III_IV_cues_mvmt_III_AP
 		\Bassoon_III_mvmt_III_AQ \Bassoon_III_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW
-		\Bassoon_all_cues_mvmt_III_AX \Bassoon_III_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA }
+		\Bassoon_all_cues_mvmt_III_AX \Bassoon_III_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA \Bassoon_III_IV_mvmt_III_BB }
 Bassoon_IV_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Bassoon_III_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG \Bassoon_cues_mvmt_III_AH \Bassoon_IV_mvmt_III_AI \NULL_III_AJ \Bassoon_Contra_cues_mvmt_III_AK
 		\Bassoon_IV_mvmt_III_AL \Bassoon_IV_mvmt_III_AM \NULL_III_AN \NULL_III_AO \Bassoon_III_IV_cues_mvmt_III_AP
 		\Bassoon_IV_mvmt_III_AQ \Bassoon_IV_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW
-		\Bassoon_all_cues_mvmt_III_AX \Bassoon_IV_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA }
+		\Bassoon_all_cues_mvmt_III_AX \Bassoon_IV_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA \Bassoon_III_IV_mvmt_III_BB }
 Contrabassoon_mvmt_III = { \clef bass \NULL_III_AA \Bassoon_all_cues_mvmt_III_AB \Contrabassoon_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \NULL_III_AG \Contrabassoon_mvmt_III_AH \Contrabassoon_mvmt_III_AI \NULL_III_AJ \Bassoon_Contra_cues_mvmt_III_AK
 		\Contrabassoon_mvmt_III_AL \NULL_III_AM \NULL_III_AN \NULL_III_AO \NULL_III_AP \Contrabassoon_cues_mvmt_III_AQ
 		\Contrabassoon_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Contrabassoon_mvmt_III_AX
-		\Contrabassoon_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA }
+		\Contrabassoon_mvmt_III_AY \NULL_III_AZ \Bassoon_all_cues_mvmt_III_BA \Contrabassoon_mvmt_III_BB }
