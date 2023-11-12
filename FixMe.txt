@@ -162,3 +162,5 @@ and easier to read.
 
 m. 187-202: Should change the short names of the Piccolo and flute III/IV lines to reflect that for these bars
 we have a second piccolo and no Flute IV.
+
+m. 220-224: In the PR lift the tuplet brackets a bit to get them over the sharps.
