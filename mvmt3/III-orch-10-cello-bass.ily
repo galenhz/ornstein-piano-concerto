@@ -827,24 +827,78 @@ Bass_mvmt_III_BB = \relative c {
 		\repeat unfold 14 { ees2-^ }
 }
 
+%%% Section BC = mm. 220-224 (Rehearsal 79)
+
+Cello_mvmt_III_BC = \relative c' {
+	\mark #79
+	\time 4/4
+	\tag #'Score \grace s8.
+	\tuplet 3/2 2 {
+		des4-^_\f des8-.[_\Div_mark des-.] des-.[ des-.] d4-^ des8-.[ des-.] des-.[ des-.]
+		f4-^ des8-.[ des-.] des-.[ des-.] d([ des)] des([ ces)] ces([ bes)]
+		des4-^ des8-.[ des-.] des-.[ des-.] d4-^ des8-.[ des-.] des-.[ des-.]
+		f4-^ des8-.[ des-.] des-.[ des-.] d([ des)] des([ ces)] ces([ bes)]
+	}
+	\time 6/4
+	R1.
+}
+
+Cello_divisi_II_mvmt_III_BC = \relative c {
+	\mark #79
+	\time 4/4
+	\tag #'Score \grace s8.
+	\tuplet 3/2 2 {
+		f4-^\f f8-.[ f-.] f-.[ f-.] fis4-^ f8-.[ f-.] f-.[ f-.]
+		a4-^ f8-.[ f-.] f-.[ f-.] fis([ f)] f([ ees)] ees([ d)]
+		f4-^ f8-.[ f-.] f-.[ f-.] fis4-^ f8-.[ f-.] f-.[ f-.]
+		a4-^ f8-.[ f-.] f-.[ f-.] fis([ f)] f([ ees)] ees([ d)]
+	}
+	\time 6/4
+	R1.
+}
+
+Bass_mvmt_III_BC = \relative c' {
+	\mark #79
+	\time 4/4
+	\tag #'Score \grace s8.
+	<<
+		\new Voice {
+			\voiceOne
+			a1-^~^\Div_mark
+			a1
+			a1-^~
+			a1
+		}
+		\new Voice {
+			\voiceTwo
+			d,1~\f
+			d1
+			d1~
+			d1
+		}
+	>>
+	\time 6/4
+	R1.
+}
+
 %%% Final assembly
 
 Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE \Cello_mvmt_III_AF
 		\Cello_mvmt_III_AG \Cello_mvmt_III_AH \Cello_mvmt_III_AI \Cello_mvmt_III_AJ \Cello_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Cello_mvmt_III_AM
 		\Cello_mvmt_III_AN \Cello_mvmt_III_AO \Cello_mvmt_III_AP \Cello_mvmt_III_AQ \Cello_mvmt_III_AR \Cello_mvmt_III_AS \Cello_mvmt_III_AT
 		\Cello_mvmt_III_AU \Cello_mvmt_III_AV \NULL_III_AW \Cello_mvmt_III_AX \Cello_mvmt_III_AY \NULL_III_AZ \Cello_Bass_cues_mvmt_III_BA
-		\Cello_mvmt_III_BB }
+		\Cello_mvmt_III_BB \Cello_mvmt_III_BC }
 Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF
 		\NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \Cello_divisi_II_mvmt_III_AO
 		\NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Cello_divisi_II_mvmt_III_AX
-		\Cello_divisi_II_NULL_mvmt_III_AY \NULL_III_AZ \NULL_III_BA \NULL_III_BB }
+		\Cello_divisi_II_NULL_mvmt_III_AY \NULL_III_AZ \NULL_III_BA \NULL_III_BB \Cello_divisi_II_mvmt_III_BC }
 
 Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF
 		\Bass_mvmt_III_AG \Bass_mvmt_III_AH \Bass_mvmt_III_AI \Bass_mvmt_III_AJ \Bass_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Bass_mvmt_III_AM
 		\Bass_mvmt_III_AN \Bass_mvmt_III_AO \Bass_mvmt_III_AP \Bass_mvmt_III_AQ \Bass_mvmt_III_AR \Bass_mvmt_III_AS \Bass_mvmt_III_AT
 		\Bass_mvmt_III_AU \Bass_mvmt_III_AV \NULL_III_AW \Bass_mvmt_III_AX \Bass_mvmt_III_AY \NULL_III_AZ \Cello_Bass_cues_mvmt_III_BA
-		\Bass_mvmt_III_BB }
+		\Bass_mvmt_III_BB \Bass_mvmt_III_BC }
 Bass_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG \NULL_III_AH
 		\NULL_III_AI \NULL_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \NULL_III_AR
 		\NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Bass_divisi_II_mvmt_III_AX \NULL_III_AY \NULL_III_AZ \NULL_III_BA
-		\NULL_III_BB }
+		\NULL_III_BB \NULL_III_BC }

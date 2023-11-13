@@ -1073,7 +1073,7 @@ piccolo, who copy this line, don't have them. I've added them in to match Violin
 revisit. Oh, and flutes/piccolo slur the beats with the grace notes slightly differently. #UNDECIDED
 (III-orch-01-flutes)
 
-mm. 118-125: This section generally has missing or inconsistant dynamics. Didn't do much thinking here. Need to come
+mm. 118-125: This section generally has missing or inconsistent dynamics. Didn't do much thinking here. Need to come
 back to this section when the dust settles and work out how this should look. #UNDECIDED #DYNAMICS
 (III-orch-*)
 
@@ -1171,3 +1171,15 @@ m. 215-219: This is a repeat of 14-18. Flutes again have an insert for these bar
 no octave difference between Picc, I, and the rest: the insert is the same for everybody. This should *probably* look
 like 14-18 instead.
 (III-orch-01-flutes)
+
+m. 220: Upper string parts lack f dynamic marks that are in score, lower strings and clarinets/bassoons. Adding. #DYNAMICS
+(III-orch-09-violins-viola)
+
+mm. 220-223: The strings and lower winds all play the same pattern, but with different accent patterns. The string parts
+put carat accents at the start of each figure, with none on the closing eighths. They also have staccato marks on the
+non-slurred eighths. The clarinets/bassoons put > accents in place of the carats, but no staccato marks, and > accents on
+each eighth-note pair at the close. The score has pencil marks: the string ^ accents are there, but so are the wind > accents,
+and the strings also have the > accents on the closing figure that aren't in the parts. No staccato marks for anyone.
+For now, copying the parts complete with inconsistencies. The recording definitely has those closing eighth note accents,
+so for a start should probably copy those into the string parts. #UNDECIDED
+(III-orch-*)

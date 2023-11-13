@@ -1073,6 +1073,7 @@ solo_lower_III_BB = \solo_lower_III_AC
 solo_upper_III_BC = \relative c' {
 	\mark #79
 	\time 4/4
+	\tag #'Score \grace s8.
 	R1*4
 	\time 6/4
 	\tupletUp
@@ -1089,6 +1090,7 @@ solo_dynamics_III_BC = {
 solo_lower_II_BC = \relative c,, {
 	\time 4/4
 	\clef bass
+	\tag #'Score \grace s8.
 	R1*4
 	\time 6/4
 	\override TupletBracket.bracket-visibility = ##f
