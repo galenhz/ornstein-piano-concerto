@@ -157,6 +157,8 @@ This seems possible, but my experiments aren't working so far.
 m. 155-161: Solo piano is a mess since the staves are not far enough apart to avoid collisions. Needs serious
 attention.
 
+m. 162-168 and 225-231: Piano reduction left hand has a broken beam, not sure why.
+
 m. 162-168: How do I get lilypond to do the "triplet tremolo" thing that the parts and score do? Much more compact
 and easier to read.
 

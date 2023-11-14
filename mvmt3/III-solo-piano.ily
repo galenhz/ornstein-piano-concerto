@@ -938,8 +938,7 @@ solo_lower_III_AV = \relative c,, {
 
 %%% Section AW = mm. 169-175 (Rehearsal 73)
 
-solo_upper_III_AW = \relative c' {
-	\mark #73
+solo_upper_III_AW_BE = \relative c' {
 	<a d g>8[ q <bes ees aes> <a d g> q]
 	<c f bes>[ <bes ees aes> <a d g> q q]
 	q[ q <bes ees aes> <a d g> q]
@@ -948,6 +947,8 @@ solo_upper_III_AW = \relative c' {
 	<bes ees aes>[ q <c f bes> <bes ees aes> <a d g>]
 	<bes ees aes>[ <g c f> q <fis b e> <a d g>]
 }
+
+solo_upper_III_AW = { \mark #73 \solo_upper_III_AW_BE }
 
 solo_dynamics_III_AW = {
 	s1*5/8*7
@@ -1087,7 +1088,7 @@ solo_dynamics_III_BC = {
 	s1*4 s1.
 }
 
-solo_lower_II_BC = \relative c,, {
+solo_lower_III_BC = \relative c,, {
 	\time 4/4
 	\clef bass
 	\tag #'Score \grace s8.
@@ -1102,21 +1103,50 @@ solo_lower_II_BC = \relative c,, {
 	\revert TupletNumber.stencil
 }
 
+%%% Section BD = mm. 225-231 (Rehearsal 80)
+
+solo_upper_III_BD = {
+	\mark #80
+	\tempo "Poco a poco animato"
+	\time 5/8
+	R1*5/8*7
+}
+
+solo_dynamics_III_BD = {
+	s1*5/8*7
+}
+
+solo_lower_III_BD = {
+	\time 5/8
+	R1*5/8*7
+}
+
+%%% Section BE = mm. 232-238 (Rehearsal 81)
+
+solo_upper_III_BE = { \mark #81 \solo_upper_III_AW_BE }
+
+solo_dynamics_III_BE = \solo_dynamics_III_AW
+
+solo_lower_III_BE = \solo_lower_III_AW
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
 		\solo_upper_III_AG \solo_upper_III_AH \solo_upper_III_AI \solo_upper_III_AJ \solo_upper_III_AK \solo_upper_III_AL
 		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ \solo_upper_III_AR
 		\solo_upper_III_AS \solo_upper_III_AT \solo_upper_III_AU \solo_upper_III_AV \solo_upper_III_AW \solo_upper_III_AX
-		\solo_upper_lower_III_AY \solo_upper_III_AZ \solo_upper_III_BA \solo_upper_III_BB \solo_upper_III_BC }
+		\solo_upper_lower_III_AY \solo_upper_III_AZ \solo_upper_III_BA \solo_upper_III_BB \solo_upper_III_BC \solo_upper_III_BD
+		\solo_upper_III_BE }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
 		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
 		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR \solo_dynamics_III_AS \solo_dynamics_III_AT
 		\solo_dynamics_III_AU \solo_dynamics_III_AV \solo_dynamics_III_AW \solo_dynamics_III_AX \solo_dynamics_III_AY
-		\solo_dynamics_III_AZ \solo_dynamics_III_BA \solo_dynamics_III_BB \solo_dynamics_III_BC }
+		\solo_dynamics_III_AZ \solo_dynamics_III_BA \solo_dynamics_III_BB \solo_dynamics_III_BC \solo_dynamics_III_BD
+		\solo_dynamics_III_BE }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
 		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ \solo_lower_III_AR
 		\solo_lower_III_AS \solo_lower_III_AT \solo_lower_III_AU \solo_lower_III_AV \solo_lower_III_AW \solo_lower_III_AX
-		\solo_upper_lower_III_AY \solo_lower_III_AZ \solo_lower_III_BA \solo_lower_III_BB \solo_lower_II_BC }
+		\solo_upper_lower_III_AY \solo_lower_III_AZ \solo_lower_III_BA \solo_lower_III_BB \solo_lower_III_BC \solo_lower_III_BD
+		\solo_lower_III_BE }
