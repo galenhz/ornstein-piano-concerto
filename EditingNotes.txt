@@ -1183,3 +1183,8 @@ and the strings also have the > accents on the closing figure that aren't in the
 For now, copying the parts complete with inconsistencies. The recording definitely has those closing eighth note accents,
 so for a start should probably copy those into the string parts. #UNDECIDED
 (III-orch-*)
+
+mm. 225-231: Tympani II part has gained accents which match the clarinet parts, which weren't in the previous round
+of this material (mm. 162-168). It should really be both or neither. Right now, neither. Note that the score has no
+accents at all for either, in both places.
+(III-orch-08-tympani)

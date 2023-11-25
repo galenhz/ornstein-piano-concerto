@@ -663,30 +663,36 @@ Oboe_all_mvmt_III_BB = \relative c'' {
 %%% Section BC = mm. 220-224 (Rehearsal 79)
 %%% Tacet
 
+%%% Section BD = mm. 225-231 (Rehearsal 80)
+%%% Tacet
+
+%%% Section BE = mm. 232-238 (Rehearsal 81)
+%%% Tacet
+
 %%% Final assembly
 
 Oboe_I_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_I_mvmt_III_AL
 		\Oboes_all_mvmt_III_AM \NULL_III_AN \Oboe_I_II_mvmt_III_AO \NULL_III_AP \Oboe_I_mvmt_III_AQ \Oboe_I_mvmt_III_AR \NULL_III_AS
 		\NULL_III_AT \NULL_III_AU \NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_I_II_mvmt_III_AY \NULL_III_AZ
-		\Oboe_all_cues_mvmt_III_BA \Oboe_all_mvmt_III_BB \NULL_III_BC }
+		\Oboe_all_cues_mvmt_III_BA \Oboe_all_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE }
 Oboe_II_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \Oboe_I_II_cues_mvmt_III_AI \Oboe_I_II_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_II_mvmt_III_AL
 		\Oboes_all_mvmt_III_AM \NULL_III_AN \Oboe_I_II_mvmt_III_AO \NULL_III_AP \Oboe_II_mvmt_III_AQ \Oboe_II_mvmt_III_AR \NULL_III_AS
 		\NULL_III_AT \NULL_III_AU \NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_I_II_mvmt_III_AY \NULL_III_AZ
-		\Oboe_all_cues_mvmt_III_BA \Oboe_all_mvmt_III_BB \NULL_III_BC }
+		\Oboe_all_cues_mvmt_III_BA \Oboe_all_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE }
 Oboe_III_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD\NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_III_mvmt_III_AL \Oboes_all_mvmt_III_AM
 		\Oboe_III_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Oboe_III_IV_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_III_mvmt_III_AY \NULL_III_AZ \Oboe_all_cues_mvmt_III_BA
-		\Oboe_all_mvmt_III_BB \NULL_III_BC }
+		\Oboe_all_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE }
 Oboe_IV_mvmt_III = { \NULL_III_AA \Oboe_all_cues_mvmt_III_AB \Oboe_all_mvmt_III_AC \Oboe_all_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\Oboe_all_cues_mvmt_III_AH \NULL_III_AI \Oboe_cues_mvmt_III_AJ \Oboe_cues_mvmt_III_AK \Oboe_IV_mvmt_III_AL \Oboes_all_mvmt_III_AM
 		\Oboe_IV_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Oboe_III_IV_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \Oboe_all_mvmt_III_AX \Oboe_IV_mvmt_III_AY \NULL_III_AZ \Oboe_all_cues_mvmt_III_BA
-		\Oboe_all_mvmt_III_BB \NULL_III_BC }
+		\Oboe_all_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE }
 EnglishHorn_mvmt_III = { \NULL_III_AA \NULL_III_AB \EnglishHorn_cues_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \EnglishHorn_cues_mvmt_III_AG
 		\EnglishHorn_mvmt_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \EnglishHorn_cues_mvmt_III_AL \EnglishHorn_mvmt_III_AM
 		\EnglishHorn_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \EnglishHorn_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \Oboe_all_cues_mvmt_III_AW \EnglishHorn_mvmt_III_AX \EnglishHorn_III_mvmt_III_AY \NULL_III_AZ \NULL_III_BA \NULL_III_BB
-		\NULL_III_BC }
+		\NULL_III_BC \NULL_III_BD \NULL_III_BE }
