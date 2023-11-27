@@ -1129,6 +1129,25 @@ solo_dynamics_III_BE = \solo_dynamics_III_AW
 
 solo_lower_III_BE = \solo_lower_III_AW
 
+%%% Section BF = mm. 239-249 (Rehearsal 82)
+% Copy of AX with added "cresc."
+
+solo_upper_III_BF = {
+	\mark #82
+	\clef bass
+	s1*5/8*8
+	s4 s4.^\markup { \italic "cresc." }
+	s1*5/8
+	\time 3/8
+	f8[ ees d]
+}
+
+solo_dynamics_III_BF = {
+	s1*5/8*10
+}
+
+solo_lower_III_BF = \solo_lower_III_AX
+
 %%% Final assembly
 
 solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \solo_upper_III_AD \solo_upper_III_AE \solo_upper_III_AF
@@ -1136,17 +1155,17 @@ solo_upper_III = { \solo_upper_III_AA \solo_upper_III_AB \solo_upper_III_AC \sol
 		\solo_upper_III_AM \solo_upper_III_AN \solo_upper_III_AO \solo_upper_III_AP \solo_upper_III_AQ \solo_upper_III_AR
 		\solo_upper_III_AS \solo_upper_III_AT \solo_upper_III_AU \solo_upper_III_AV \solo_upper_III_AW \solo_upper_III_AX
 		\solo_upper_lower_III_AY \solo_upper_III_AZ \solo_upper_III_BA \solo_upper_III_BB \solo_upper_III_BC \solo_upper_III_BD
-		\solo_upper_III_BE }
+		\solo_upper_III_BE \solo_upper_III_BF }
 solo_dynamics_III = { \solo_dynamics_III_AA \solo_dynamics_III_AB \solo_dynamics_III_AC \solo_dynamics_III_AD \solo_dynamics_III_AE
 		\solo_dynamics_III_AF \solo_dynamics_III_AG \solo_dynamics_III_AH \solo_dynamics_III_AI \solo_dynamics_III_AJ
 		\solo_dynamics_III_AK \solo_dynamics_III_AL \solo_dynamics_III_AM \solo_dynamics_III_AN \solo_dynamics_III_AO
 		\solo_dynamics_III_AP \solo_dynamics_III_AQ \solo_dynamics_III_AR \solo_dynamics_III_AS \solo_dynamics_III_AT
 		\solo_dynamics_III_AU \solo_dynamics_III_AV \solo_dynamics_III_AW \solo_dynamics_III_AX \solo_dynamics_III_AY
 		\solo_dynamics_III_AZ \solo_dynamics_III_BA \solo_dynamics_III_BB \solo_dynamics_III_BC \solo_dynamics_III_BD
-		\solo_dynamics_III_BE }
+		\solo_dynamics_III_BE \solo_dynamics_III_BF }
 solo_lower_III = { \solo_lower_III_AA \solo_lower_III_AB \solo_lower_III_AC \solo_lower_III_AD \solo_lower_III_AE \solo_lower_III_AF
 		\solo_lower_III_AG \solo_lower_III_AH \solo_lower_III_AI \solo_lower_III_AJ \solo_lower_III_AK \solo_lower_III_AL
 		\solo_lower_III_AM \solo_lower_III_AN \solo_lower_III_AO \solo_lower_III_AP \solo_lower_III_AQ \solo_lower_III_AR
 		\solo_lower_III_AS \solo_lower_III_AT \solo_lower_III_AU \solo_lower_III_AV \solo_lower_III_AW \solo_lower_III_AX
 		\solo_upper_lower_III_AY \solo_lower_III_AZ \solo_lower_III_BA \solo_lower_III_BB \solo_lower_III_BC \solo_lower_III_BD
-		\solo_lower_III_BE }
+		\solo_lower_III_BE \solo_lower_III_BF }

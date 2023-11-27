@@ -76,3 +76,7 @@ NULL_III_BB = { \mark #78 \tempo "Meno" \time 6/4 \tag #'Score \grace s8. R1.*5 
 NULL_III_BC = { \mark #79 \time 4/4 \tag #'Score \grace s8. R1*4 \time 6/4 R1. }
 NULL_III_BD = { \mark #80 \tempo "Poco a poco animato" \time 5/8 R1*5/8*7 }
 NULL_III_BE = { \mark #81 R1*5/8*7 }
+NULL_III_BF = { \mark #82 R1*5/8*10 \time 3/8 R4. }
+NULL_III_BG = { \mark #83 \time 5/8 \tag #'Score \grace s8. R1*5/8*15 }
+NULL_III_BH = { \mark #84 \time 9/8 R1*9/8 \time 5/8 R1*5/8 \time 9/8 R1*9/8 \time 5/8 R1*5/8 \time 6/8 R2. \time 5/8 R1*5/8 \time 6/8 R2. \time 5/8 R1*5/8*2 }
+NULL_III_BI = { \time 3/4 R2.*2 \bar "|." }
