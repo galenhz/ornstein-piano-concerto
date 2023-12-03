@@ -1159,6 +1159,9 @@ not others, and missing from the score. For now I am largely using the individua
 but at some point decisions must be made. #DYNAMICS #UNDECIDED
 (III-orch-*)
 
+m. 202: The 8va in the upper piano reduction goes away in this measure. Based on the orchestra, it should really continue.
+(III-piano-reduction)
+
 mm. 203-210: This is mostly a copy of mm. 2-9. The opening solo piano chord is two octaves higher, and the first
 bass pattern in the PR is missing a clustered f in beat 2. Score confirms the latter seems to be a copyist error;
 changing it back to match m. 2.

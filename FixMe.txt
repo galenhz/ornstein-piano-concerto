@@ -166,3 +166,5 @@ m. 187-202: Should change the short names of the Piccolo and flute III/IV lines 
 we have a second piccolo and no Flute IV.
 
 m. 220-224: In the PR lift the tuplet brackets a bit to get them over the sharps.
+
+m. 274: The clef changes are being overwritten in the solo piano.
