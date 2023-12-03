@@ -1114,7 +1114,7 @@ neither the score or any other parts have that. Keeping the one on 3 and adding 
 
 m. 131: Some parts and score show a diminuendo on the last beat of this bar. This probably should go in, but haven't done
 so yet. #DYNAMICS #UNDECIDED
-(III-orch-)
+(III-orch-*)
 
 m. 132: Upper cello/viola quintuplet is written a bit differently than it was transcribed in the PR. PR line uses des instead of cis.
 It might make sense to adjust the cello line accordingly, maybe. Also, the Viola divisi in the part uses c-sharp throughout, and based
@@ -1188,3 +1188,8 @@ mm. 225-231: Tympani II part has gained accents which match the clarinet parts, 
 of this material (mm. 162-168). It should really be both or neither. Right now, neither. Note that the score has no
 accents at all for either, in both places.
 (III-orch-08-tympani)
+
+mm. 239-249: The bass divisi is the same split as the previous version of this passage, but the lines are inverted here.
+Honestly, this layout makes more sense than the one in mm. 176-186. I should probably change that one to look like the part
+here. For now just leaving it as a copy of 176-186. #UNDECIDED
+(III-orch-10-cello-bass)
