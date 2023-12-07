@@ -1174,6 +1174,7 @@ solo_upper_III_BI = \relative c''' {
 	\time 3/4
 	s4 \clef treble s2
 	r8 \ottava #1 <fis cis' fis>8 \ottava #0 \acciaccatura { <fis,,, fis'>8 } q4 r4
+	\bar "|."
 }
 
 solo_dynamics_III_BI = {
@@ -1187,6 +1188,7 @@ solo_lower_III_BI = \relative c, {
 		\change Staff = "solo_lower" \clef treble
 		\repeat unfold 4 { \change Staff = "solo_lower" <cis cis'>32 \change Staff = "solo_upper" <d' cis' d> }
 	\change Staff = "solo_lower" r8 <cis fis bes c> \clef bass <fis,,,, fis'>4 r4
+	\bar "|."
 }
 
 %%% Final assembly
