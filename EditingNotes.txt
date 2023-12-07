@@ -1196,3 +1196,7 @@ mm. 239-249: The bass divisi is the same split as the previous version of this p
 Honestly, this layout makes more sense than the one in mm. 176-186. I should probably change that one to look like the part
 here. For now just leaving it as a copy of 176-186. #UNDECIDED
 (III-orch-10-cello-bass)
+
+mm. 239-249: The dynamics here are different in the score compared to the previous version, ff as opposed to f. Reflected
+in some parts but not all. Need to decide how to handle. #DYNAMICS #UNDECIDED
+(III-orch-*)
