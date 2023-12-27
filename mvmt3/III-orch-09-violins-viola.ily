@@ -1606,6 +1606,153 @@ Viola_divisi_II_mvmt_III_BG = \relative c' {
 	\repeat unfold 15 { r8 <bes fis'>[ q-^ r q] }
 }
 
+%%% Section BH = mm. 265-273 (Rehearsal 84)
+
+Violin_I_mvmt_III_BH = \relative c'''' {
+	\mark #84
+	\override Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. a8:32->\fff[ a8:32-> gis8:32-> a8:32-> gis8:32-> f8:32-> e8:32-> cis8:32-> ees8:32->
+	\time 5/8
+	c8:32-> fis8:32-> a,8:32-> gis'8:32-> bes8:32->]
+	\time 9/8
+	\tag #'Score \grace s8 a8:32->[ a8:32-> gis8:32-> a8:32-> gis8:32-> f8:32-> e8:32-> cis8:32-> ees8:32->
+	\time 5/8
+	c8:32-> fis8:32-> a,8:32-> gis'8:32-> bes8:32->]
+	\revert Beam.breakable
+	\time 6/8
+	\tag #'Score \grace s8. a,8:32->[ a8:32-> gis8:32-> gis8:32-> f8:32-> bes8:32->]
+	\time 5/8
+	\tag #'Score \grace s8 a8:32->[ gis8:32-> f8:32-> b8:32-> bes8:32->]
+	\time 6/8
+	a,8:32->[ a8:32-> gis8:32-> gis8:32-> f8:32-> bes8:32->]
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	a8:32->[_\startTextSpan gis8:32-> f8:32-> b8:32-> bes8:32->]_\stopTextSpan
+	a8:32->[ gis8:32-> f8:32-> b8:32-> bes8:32->]
+}
+
+Violin_I_divisi_II_mvmt_III_BH = \relative c'''' {
+	\override Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. a8->\fff[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
+	\time 5/8
+	c-> fis-> a,-> gis'-> bes->]
+	\time 9/8
+	\tag #'Score \grace s8 a8->[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
+	\time 5/8
+	c-> fis-> a,-> gis'-> bes->]
+	\revert Beam.breakable
+	\time 6/8
+	\tag #'Score \grace s8. a,8->[ a-> gis-> gis-> f-> bes->]
+	\time 5/8
+	\tag #'Score \grace s8 a->[ gis-> f-> b-> bes->]
+	\time 6/8
+	a,->[ a-> gis-> gis-> f-> bes->]
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	a->[_\startTextSpan gis-> f-> b-> bes->]_\stopTextSpan
+	a->[ gis-> f-> b-> bes->]
+}
+
+% Almost the same as Violin I except for octave jump down in m. 267 (and lack of same in m.271)
+
+Violin_II_mvmt_III_BH = \relative c'''' {
+	\mark #84
+	\override Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. a8:32->\fff[ a8:32-> gis8:32-> a8:32-> gis8:32-> f8:32-> e8:32-> cis8:32-> ees8:32->
+	\time 5/8
+	c8:32-> fis8:32-> a,8:32-> gis'8:32-> bes8:32->]
+	\time 9/8
+	\tag #'Score \grace s8 a,8:32->[ a8:32-> gis8:32-> a8:32-> gis8:32-> f8:32-> e8:32-> cis8:32-> ees8:32->
+	\time 5/8
+	c8:32-> fis8:32-> a,8:32-> gis'8:32-> bes8:32->]
+	\revert Beam.breakable
+	\time 6/8
+	\tag #'Score \grace s8. a,8:32->[ a8:32-> gis8:32-> gis8:32-> f8:32-> bes8:32->]
+	\time 5/8
+	\tag #'Score \grace s8 a8:32->[ gis8:32-> f8:32-> b8:32-> bes8:32->]
+	\time 6/8
+	a8:32->[ a8:32-> gis8:32-> gis8:32-> f8:32-> bes8:32->]
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	a8:32->[_\startTextSpan gis8:32-> f8:32-> b8:32-> bes8:32->]_\stopTextSpan
+	a8:32->[ gis8:32-> f8:32-> b8:32-> bes8:32->]
+}
+
+Violin_II_divisi_II_mvmt_III_BH = \relative c'''' {
+	\override Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. a8->\fff[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
+	\time 5/8
+	c-> fis-> a,-> gis'-> bes->]
+	\time 9/8
+	\tag #'Score \grace s8 a,8->[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
+	\time 5/8
+	c-> fis-> a,-> gis'-> bes->]
+	\revert Beam.breakable
+	\time 6/8
+	\tag #'Score \grace s8. a,8->[ a-> gis-> gis-> f-> bes->]
+	\time 5/8
+	\tag #'Score \grace s8 a->[ gis-> f-> b-> bes->]
+	\time 6/8
+	a->[ a-> gis-> gis-> f-> bes->]
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	a->[_\startTextSpan gis-> f-> b-> bes->]_\stopTextSpan
+	a->[ gis-> f-> b-> bes->]
+}
+
+Viola_mvmt_III_BH = \relative c''' {
+	\mark #84
+	\override Beam.breakable = ##t
+	\time 9/8
+	\clef treble
+	\tag #'Score \grace s16 \appoggiatura { aes8 } e->[ e-> f-> e-> e-> fis-> f-> f-> e->
+	\time 5/8
+	gis-> g-> g-> fis-> f->]
+	\time 9/8
+	\grace s8 e->[ e-> f-> e-> e-> fis-> f-> f-> e->
+	\time 5/8
+	gis-> g-> g-> fis-> f->]
+	\revert Beam.breakable
+	\time 6/8
+	\tag #'Score \grace s8. \tag #'Part \grace s8 gis->[ f-> f-> e-> e-> cis->]
+	\time 5/8
+	\grace s8 f->[ e-> e-> cis-> f->]
+	\time 6/8
+	gis->[ f-> f-> e-> e-> cis->]
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	f->[_\startTextSpan e-> e-> cis-> f->]_\stopTextSpan
+	f->[ e-> e-> cis-> f->]
+	\revert Beam.breakable
+}
+
+Viola_divisi_II_mvmt_III_BH = \relative c'' {
+	\mark #84
+	\override Beam.breakable = ##t
+	\time 9/8
+	\clef treble
+	\tag #'Score \grace s16
+	\repeat unfold 2 { \appoggiatura { bes8 } a16[ a a8
+		\repeat unfold 5 { \appoggiatura { bes8 } a16 a a8 }
+		\appoggiatura { bes8 } a16 a a8] }
+	\revert Beam.breakable
+	\time 6/8
+	\tag #'Score \grace s16 \appoggiatura { bes8 } a16[ a a8 \appoggiatura { bes8 } a16 a a8 \appoggiatura { bes8 } a16 a a8]
+	\time 5/8
+	\appoggiatura { bes8 } a16[ a a8 \appoggiatura { bes8 } a16 a a8 \appoggiatura { bes8 } a16 a]
+	\time 6/8
+	a8[ \appoggiatura { bes8 } a16 a a8 \appoggiatura { bes8 } a16 a a8 \appoggiatura { bes8 } a16 a]
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	a8[_\startTextSpan \appoggiatura { bes8 } a16 a a8 \appoggiatura { bes8 } a16 a a8]_\stopTextSpan
+	\appoggiatura { bes8 } a16[ a a8 \appoggiatura { bes8 } a16 a a8 \appoggiatura { bes8 } a16 a]
+	\revert Beam.breakable
+}
+
 %%% Final assembly
 
 Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB \Violin_I_mvmt_III_AC \Violin_I_mvmt_III_AD \Violin_I_mvmt_III_AE
@@ -1613,35 +1760,37 @@ Violin_I_mvmt_III = { \Violin_I_mvmt_III_AA \Violin_I_mvmt_III_AB \Violin_I_mvmt
 		\Violin_I_mvmt_III_AM \Violin_I_mvmt_III_AN \Violin_I_mvmt_III_AO \Violin_I_mvmt_III_AP \Violin_I_mvmt_III_AQ
 		\Violin_I_mvmt_III_AR \NULL_III_AS \NULL_III_AT \Violin_I_cues_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Violin_I_mvmt_III_AX
 		\Violin_I_mvmt_III_AY \Violin_I_mvmt_III_AZ \Violin_I_mvmt_III_BA \Violin_I_mvmt_III_BB \Violin_I_mvmt_III_BC \NULL_III_BD
-		\NULL_III_BE \Violin_I_mvmt_III_BF \Violin_I_mvmt_III_BG }
+		\NULL_III_BE \Violin_I_mvmt_III_BF \Violin_I_mvmt_III_BG \Violin_I_mvmt_III_BH }
 Violin_I_divisi_II_mvmt_III = { \Violin_I_divisi_II_mvmt_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_divisi_II_mvmt_III_AD
 		\Violin_I_divisi_II_mvmt_III_AE \NULL_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK
 		\NULL_III_AL \NULL_III_AM \NULL_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT
 		\NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX \Violin_I_divisi_II_mvmt_III_AY \Violin_I_divisi_II_mvmt_III_AZ
 		\NULL_III_BA \NULL_divisi_II_mvmt_III_BB \Violin_I_divisi_II_mvmt_III_BC \NULL_III_BD \NULL_III_BE \NULL_III_BF
-		\Violin_I_divisi_II_mvmt_III_BG }
+		\Violin_I_divisi_II_mvmt_III_BG \Violin_I_divisi_II_mvmt_III_BH }
 
 Violin_II_mvmt_III = { \Violin_II_mvmt_III_AA \Violin_II_mvmt_III_AB \Violin_II_mvmt_III_AC \Violin_II_mvmt_III_AD \Violin_II_mvmt_III_AE
 		\Violin_II_mvmt_III_AF \NULL_III_AG \Violin_II_mvmt_III_AH \Violin_II_cues_mvmt_III_AI \Violin_II_mvmt_III_AJ \NULL_III_AK
 		\NULL_III_AL \Violin_II_mvmt_III_AM \Violin_II_mvmt_III_AN \Violin_II_mvmt_III_AO \NULL_III_AP \Violin_II_mvmt_III_AQ
 		\Violin_II_mvmt_III_AR \NULL_III_AS \NULL_III_AT \Violin_II_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Violin_II_mvmt_III_AX
 		\Violin_II_mvmt_III_AY \Violin_II_mvmt_III_AZ \Violin_II_mvmt_III_BA \Violin_II_mvmt_III_BB \Violin_II_mvmt_III_BC \NULL_III_BD
-		\NULL_III_BE \Violin_II_mvmt_III_BF \Violin_II_mvmt_III_BG }
+		\NULL_III_BE \Violin_II_mvmt_III_BF \Violin_II_mvmt_III_BG \Violin_II_mvmt_III_BH }
 Violin_II_divisi_II_mvmt_III = { \Violin_II_divisi_II_mvmt_III_AA \Violin_II_divisi_II_mvmt_III_AB \Violin_II_divisi_II_mvmt_III_AC
 		\Violin_II_divisi_II_mvmt_III_AD \Violin_II_divisi_II_mvmt_III_AE \Violin_II_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH
 		\NULL_III_AI \Violin_II_divisi_II_mvmt_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \Violin_II_divisi_II_mvmt_III_AO
 		\NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX
 		\Violin_II_divisi_II_mvmt_III_AY \Violin_II_divisi_II_mvmt_III_AZ \Violin_II_divisi_II_mvmt_III_BA \Violin_II_divisi_II_mvmt_III_BB
-		\Violin_II_divisi_II_mvmt_III_BC \NULL_III_BD \NULL_III_BE \NULL_III_BF \Violin_II_divisi_II_mvmt_III_BG }
+		\Violin_II_divisi_II_mvmt_III_BC \NULL_III_BD \NULL_III_BE \NULL_III_BF \Violin_II_divisi_II_mvmt_III_BG
+		\Violin_II_divisi_II_mvmt_III_BH }
 
 Viola_mvmt_III = { \clef alto \NULL_III_AA \Viola_cues_mvmt_III_AB \Viola_mvmt_III_AC \Viola_mvmt_III_AD \Viola_mvmt_III_AE
 		\Viola_mvmt_III_AF \Viola_mvmt_III_AG \Viola_mvmt_III_AH \Viola_mvmt_III_AI \Viola_mvmt_III_AJ \NULL_III_AK \NULL_III_AL
 		\Viola_mvmt_III_AM \Viola_mvmt_III_AN \Viola_mvmt_III_AO \Viola_mvmt_III_AP \Viola_mvmt_III_AQ \Viola_mvmt_III_AR
 		\NULL_III_AS \Viola_mvmt_III_AT \Viola_mvmt_III_AU \NULL_III_AV \NULL_III_AW \Viola_mvmt_III_AX \Viola_mvmt_III_AY \NULL_III_AZ
-		\Viola_cues_mvmt_III_BA \Viola_mvmt_III_BB \Viola_mvmt_III_BC \NULL_III_BD \NULL_III_BE \Viola_mvmt_III_BF \Viola_mvmt_III_BG }
+		\Viola_cues_mvmt_III_BA \Viola_mvmt_III_BB \Viola_mvmt_III_BC \NULL_III_BD \NULL_III_BE \Viola_mvmt_III_BF \Viola_mvmt_III_BG
+		\Viola_mvmt_III_BH }
 Viola_divisi_II_mvmt_III = { \clef alto \NULL_III_AA \NULL_III_AB \NULL_divisi_II_mvmt_III_AC \NULL_III_AD
 		\Viola_divisi_II_mvmt_III_AE \Viola_divisi_II_mvmt_III_AF \NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK
 		\NULL_III_AL \Viola_divisi_II_mvmt_III_AM \Viola_divisi_II_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ
 		\Viola_divisi_II_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \NULL_III_AX
 		\Viola_divisi_II_mvmt_III_AY \NULL_III_AZ \NULL_III_BA \NULL_divisi_II_mvmt_III_BB \Viola_divisi_II_mvmt_III_BC \NULL_III_BD
-		\NULL_III_BE \NULL_III_BF \Viola_divisi_II_mvmt_III_BG }
+		\NULL_III_BE \NULL_III_BF \Viola_divisi_II_mvmt_III_BG \Viola_divisi_II_mvmt_III_BH }

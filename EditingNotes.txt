@@ -1197,6 +1197,31 @@ Honestly, this layout makes more sense than the one in mm. 176-186. I should pro
 here. For now just leaving it as a copy of 176-186. #UNDECIDED
 (III-orch-10-cello-bass)
 
-mm. 239-249: The dynamics here are different in the score compared to the previous version, ff as opposed to f. Reflected
+mm. 250-264: The dynamics here are different in the score compared to the previous version, ff as opposed to f. Reflected
 in some parts but not all. Need to decide how to handle. #DYNAMICS #UNDECIDED
 (III-orch-*)
+
+mm. 250-264: Upper strings don't have accents written in the score and many other parts. Adding.
+(III-orch-09-violins-viola)
+
+mm. 265-268: Upper strings extend beams across the bar in the score, but it wasn't copied this way in the parts. Following
+score. They also don't have accents that are in the score and other parts. Adding them.
+(III-orch-09-violins-viola)
+
+mm. 265: Cello part has incorrect e natural in divisi II; score matches everything else. Going with score.
+(III-orch-10-cello-bass)
+
+mm. 265-266: English horn part lacks accents; they're in the score. Added.
+(III-orch-02-oboes)
+
+mm. 265-273: Clarinet IV is silent in this section in the part. The score loosk like it has a "3." at m. 265 but
+on the next page, part way through m. 267, it's clearly marked "a2", just like I and II. There seems to be a smudged
+"a2" at the start of m. 266 as well. The last 4 notes of m. 265 look like they have down stems. Taking this together,
+it looks like the "correct" way makes IV look exactly like III, except missing the first two notes of m. 265. I find
+this hard to believe. I'm leaving it like the parts for now, but the correct move might just to have IV double III.
+#UNDECIDED
+(III-orch-03-clarinets)
+
+mm. 269-275: Trombone I/II parts don't have the cross-measure barring that, for examples the horns do. In the score
+they're written like the horns, so writing them like the horns.
+(III-orch-07-trombones-tuba)

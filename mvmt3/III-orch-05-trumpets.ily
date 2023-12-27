@@ -627,25 +627,81 @@ Trumpet_IV_mvmt_III_BG = \relative c'' {
 	}
 }
 
+%%% Section BH = mm. 265-273 (Rehearsal 84)
+
+Trumpet_I_mvmt_III_BH = \relative c''' {
+	\mark #84
+	\time 9/8
+	\partCombineApart
+	\tag #'Score \grace s8. a8->\mf r8 r8 r4. r4.
+	\time 5/8
+	a8->[ a-> a-> a-> a->]
+	\time 9/8
+	\tag #'Score \grace s8 a8-> r8 r8 r4. r4.
+	\time 5/8
+	a8->[ a-> a-> a-> a->]
+	\time 6/8
+	\tag #'Score \grace s8. a8-> r8 r8 r4.
+	\time 5/8
+	\tag #'Score \grace s8 a8->[ a-> a-> a-> a->]
+	\time 6/8
+	a8-> r8 r8 r4.
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	a8->[_\startTextSpan a-> a-> a-> a->]_\stopTextSpan
+	a8-> r8 r r4
+	\partCombineAutomatic
+}
+
+Trumpet_II_mvmt_III_BH = \relative c''' {
+	\mark #84
+	\time 9/8
+	\tag #'Score \grace s8. a8->\mf \repeat unfold 8 { a-> }
+	\time 5/8
+	a-> r8 r8 r4
+	\time 9/8
+	\tag #'Score \grace s8 a8-> \repeat unfold 8 { a-> }
+	\time 5/8
+	a-> r8 r8 r4
+	\time 6/8
+	\tag #'Score \grace s8. \repeat unfold 6 { a8-> }
+	\time 5/8
+	\tag #'Score \grace s8 a-> r8 r8 r4
+	\time 6/8
+	\repeat unfold 6 { a8-> }
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	a->_\startTextSpan r8 r8 \after 8 _\stopTextSpan r4
+	a8->[ a-> a-> a-> a->]
+}
+
+Trumpet_III_mvmt_III_BH = \transpose c c, \Trumpet_I_mvmt_III_BH
+
+Trumpet_IV_mvmt_III_BH = \transpose c c, \Trumpet_II_mvmt_III_BH
+
 %%% Final assembly
 
 Trumpet_I_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_I_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_I_mvmt_III_AJ \Trumpet_I_mvmt_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_I_mvmt_III_AM
 		\Trumpet_I_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_I_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \NULL_III_AW \Trumpet_all_cues_mvmt_III_AX \Trumpet_I_mvmt_III_AY \NULL_III_AZ \Trumpet_all_cues_mvmt_III_BA
-		\Trumpet_I_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_I_mvmt_III_BG }
+		\Trumpet_I_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_I_mvmt_III_BG
+		\Trumpet_I_mvmt_III_BH }
 Trumpet_II_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_II_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_II_mvmt_III_AM
 		\Trumpet_II_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_II_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \NULL_III_AW \Trumpet_all_cues_mvmt_III_AX \Trumpet_II_mvmt_III_AY \NULL_III_AZ \Trumpet_all_cues_mvmt_III_BA
-		\Trumpet_II_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_II_mvmt_III_BG }
+		\Trumpet_II_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_II_mvmt_III_BG
+		\Trumpet_II_mvmt_III_BH }
 Trumpet_III_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_III_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_III_mvmt_III_AM
 		\Trumpet_III_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_III_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \NULL_III_AW \Trumpet_all_cues_mvmt_III_AX \Trumpet_III_mvmt_III_AY \NULL_III_AZ \Trumpet_all_cues_mvmt_III_BA
-		\Trumpet_III_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_III_mvmt_III_BG }
+		\Trumpet_III_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_III_mvmt_III_BG
+		\Trumpet_III_mvmt_III_BH }
 Trumpet_IV_mvmt_III = { \NULL_III_AA \Trumpet_all_cues_mvmt_III_AB \Trumpet_IV_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
 		\NULL_III_AH \Trumpet_cues_mvmt_III_AI \Trumpet_IV_mvmt_III_AJ \NULL_III_AK \Trumpet_cues_mvmt_III_AL \Trumpet_IV_mvmt_III_AM
 		\Trumpet_IV_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trumpet_IV_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \NULL_III_AW \Trumpet_all_cues_mvmt_III_AX \Trumpet_IV_mvmt_III_AY \NULL_III_AZ \Trumpet_all_cues_mvmt_III_BA
-		\Trumpet_IV_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_IV_mvmt_III_BG }
+		\Trumpet_IV_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Trumpet_all_cues_mvmt_III_BF \Trumpet_IV_mvmt_III_BG
+		\Trumpet_IV_mvmt_III_BH }

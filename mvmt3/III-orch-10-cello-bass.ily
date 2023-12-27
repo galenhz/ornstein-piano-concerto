@@ -956,24 +956,97 @@ Bass_mvmt_III_BG = \relative c, {
 	\repeat unfold 14 { c,4 r8 bes' r }
 }
 
+%%% Section BH = mm. 265-273 (Rehearsal 84)
+
+Cello_mvmt_III_BH = \relative c, {
+	\mark #84
+	\time 9/8
+	\override Beam.breakable = ##t
+	\tag #'Score \grace s8. fis8->[ r a->] r fis8->[ r a->] r fis8->[
+	\time 5/8
+	r a->] r fis8->[ r
+	\time 9/8
+	\tag #'Score \grace s8 a->] r fis8->[ r a->] r fis8->[ r a->]
+	\time 5/8
+	r fis8->[ r a->] r
+	\time 6/8
+	\tag #'Score \grace s8. fis8->[ r a->] r fis8->[ r
+	\time 5/8
+	\tag #'Score \grace s8 a->] r fis8->[ r a->]
+	\time 6/8
+	r fis8->[ r a->] r fis8->[
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	r_\startTextSpan a->] r fis8->[ r_\stopTextSpan
+	a->] r fis8->[ r a->]
+	\revert Beam.breakable
+}
+
+Cello_divisi_II_mvmt_III_BH = \relative c, {
+	\time 9/8
+	\override Beam.breakable = ##t
+	\tag #'Score \grace s8. c8->[ c'-> ees,-> ees'->] c,8->[ c'-> ees,-> ees'->] c,8->[
+	\time 5/8
+	c'-> ees,-> ees'->] c,8->[ c'->
+	\time 9/8
+	\tag #'Score \grace s8 ees,-> ees'->] c,8->[ c'-> ees,-> ees'->] c,8->[ c'-> ees,->
+	\time 5/8
+	ees'->] c,8->[ c'-> ees,-> ees'->]
+	\time 6/8
+	\tag #'Score \grace s8. c,8->[ c'-> ees,-> ees'->] c,8->[ c'->
+	\time 5/8
+	\tag #'Score \grace s8 ees,-> ees'->] c,8->[ c'-> ees,->
+	\time 6/8
+	ees'->] c,8->[ c'-> ees,-> ees'->] c,8->[
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	c'->_\startTextSpan ees,-> ees'->] c,8->[ c'->_\stopTextSpan
+	ees,-> ees'->] c,8->[ c'-> ees,->]
+	\revert Beam.breakable
+}
+
+Bass_mvmt_III_BH = \relative c {
+	\mark #84
+	\override Beam.breakable = ##t
+	\time 9/8
+	\appoggiatura { a16 aes g } fis8->[ r a->] r \appoggiatura { a16 aes g } fis8->[ r a->] r \appoggiatura { a16 aes g } fis8->[
+	\time 5/8
+	r a->] r \appoggiatura { a16 aes g } fis8->[ r
+	\time 9/8
+	\tag #'Score \grace s8 a->] r \appoggiatura { a16 aes g } fis8->[ r a->] r \appoggiatura { a16 aes g } fis8->[ r a->]
+	\time 5/8
+	r \appoggiatura { a16 aes g } fis8->[ r a->] r
+	\time 6/8
+	\appoggiatura { a16 aes g } fis8->[ r a->] r \appoggiatura { a16 aes g } fis8->[ r
+	\time 5/8
+	\tag #'Score \grace s8 a->] r \appoggiatura { a16 aes g } fis8->[ r a->]
+	\time 6/8
+	r \appoggiatura { a16 aes g } fis8->[ r a->] r \appoggiatura { a16 aes g } fis8->[
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	r_\startTextSpan a->] r \appoggiatura { a16 aes g } fis8->[ r_\stopTextSpan
+	a->] r \appoggiatura { a16 aes g } fis8->[ r a->]
+	\revert Beam.breakable
+}
+
 %%% Final assembly
 
 Cello_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Cello_mvmt_III_AC \Cello_mvmt_III_AD \Cello_mvmt_III_AE \Cello_mvmt_III_AF
 		\Cello_mvmt_III_AG \Cello_mvmt_III_AH \Cello_mvmt_III_AI \Cello_mvmt_III_AJ \Cello_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Cello_mvmt_III_AM
 		\Cello_mvmt_III_AN \Cello_mvmt_III_AO \Cello_mvmt_III_AP \Cello_mvmt_III_AQ \Cello_mvmt_III_AR \Cello_mvmt_III_AS \Cello_mvmt_III_AT
 		\Cello_mvmt_III_AU \Cello_mvmt_III_AV \NULL_III_AW \Cello_mvmt_III_AX \Cello_mvmt_III_AY \NULL_III_AZ \Cello_Bass_cues_mvmt_III_BA
-		\Cello_mvmt_III_BB \Cello_mvmt_III_BC \Cello_mvmt_III_BD \NULL_III_BE \Cello_mvmt_III_BF \Cello_mvmt_III_BG }
+		\Cello_mvmt_III_BB \Cello_mvmt_III_BC \Cello_mvmt_III_BD \NULL_III_BE \Cello_mvmt_III_BF \Cello_mvmt_III_BG \Cello_mvmt_III_BH }
 Cello_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \Cello_divisi_II_mvmt_III_AF
 		\NULL_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \Cello_divisi_II_mvmt_III_AO
 		\NULL_III_AP \NULL_III_AQ \NULL_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Cello_divisi_II_mvmt_III_AX
 		\Cello_divisi_II_NULL_mvmt_III_AY \NULL_III_AZ \NULL_III_BA \NULL_III_BB \Cello_divisi_II_mvmt_III_BC \NULL_III_BD \NULL_III_BE
-		\Cello_divisi_II_mvmt_III_BF \Cello_divisi_II_NULL_mvmt_III_BG }
+		\Cello_divisi_II_mvmt_III_BF \Cello_divisi_II_NULL_mvmt_III_BG \Cello_divisi_II_mvmt_III_BH }
 
 Bass_mvmt_III = { \clef bass \NULL_III_AA \Cello_Bass_cues_mvmt_III_AB \Bass_mvmt_III_AC \Bass_mvmt_III_AD \Bass_mvmt_III_AE \Bass_mvmt_III_AF
 		\Bass_mvmt_III_AG \Bass_mvmt_III_AH \Bass_mvmt_III_AI \Bass_mvmt_III_AJ \Bass_mvmt_III_AK \Cello_Bass_mvmt_III_AL \Bass_mvmt_III_AM
 		\Bass_mvmt_III_AN \Bass_mvmt_III_AO \Bass_mvmt_III_AP \Bass_mvmt_III_AQ \Bass_mvmt_III_AR \Bass_mvmt_III_AS \Bass_mvmt_III_AT
 		\Bass_mvmt_III_AU \Bass_mvmt_III_AV \NULL_III_AW \Bass_mvmt_III_AX \Bass_mvmt_III_AY \NULL_III_AZ \Cello_Bass_cues_mvmt_III_BA
-		\Bass_mvmt_III_BB \Bass_mvmt_III_BC \Bass_mvmt_III_BD \NULL_III_BE \Bass_mvmt_III_BF \Bass_mvmt_III_BG }
+		\Bass_mvmt_III_BB \Bass_mvmt_III_BC \Bass_mvmt_III_BD \NULL_III_BE \Bass_mvmt_III_BF \Bass_mvmt_III_BG \Bass_mvmt_III_BH }
 Bass_divisi_II_mvmt_III = { \clef bass \NULL_III_AA \NULL_III_AB \NULL_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG \NULL_III_AH
 		\NULL_III_AI \NULL_III_AJ \NULL_III_AK \NULL_III_AL \NULL_III_AM \NULL_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \NULL_III_AR
 		\NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Bass_divisi_II_mvmt_III_AX \NULL_III_AY \NULL_III_AZ \NULL_III_BA

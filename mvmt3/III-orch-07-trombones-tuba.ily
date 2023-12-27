@@ -704,6 +704,104 @@ Tuba_mvmt_III_BG = \relative c, {
 	\partCombineAutomatic
 }
 
+%% Section BH = mm. 265-273 (Rehearsal 84)
+
+Trombone_I_mvmt_III_BH = \relative c {
+	\mark #84
+	\override Staff.Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. R1*9/8
+	\time 5/8
+	e8->[\fff e-> a-> e-> a->
+	\time 9/8
+	\tag #'Score \grace s8 e->] r r r4. r4.
+	\time 5/8
+	e8->[ e-> a-> e-> a->
+	\time 6/8
+	\tag #'Score \grace s8. e8->] r r r4.
+	\time 5/8
+	\tag #'Score \grace s8 e8->[ e-> a-> e-> a->
+	\time 6/8
+	e->] r r r4.
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	e8->[_\startTextSpan e-> a-> e-> a->_\stopTextSpan
+	e->] r r r4
+	\revert Staff.Beam.breakable
+}
+
+Trombone_II_mvmt_III_BH = \relative c {
+	\mark #84
+	\override Staff.Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. e8->[\fff e-> a-> e-> e-> a-> e-> a-> e->
+	\time 5/8
+	e->] r r r4
+	\time 9/8
+	\tag #'Score \grace s8 e8->[ e-> a-> e-> e-> a-> e-> a-> e->
+	\time 5/8
+	e->] r r r4
+	\time 6/8
+	\tag #'Score \grace s8. e8->[ e-> a-> e-> e-> a->
+	\time 5/8
+	\tag #'Score \grace s8 e->] r r r4
+	\time 6/8
+	e8->[ e-> a-> e-> e-> a->
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	e->]_\startTextSpan r r \after 8 _\stopTextSpan r4
+	e8->[ e-> a-> e-> a->]
+	\revert Staff.Beam.breakable
+}
+
+Trombone_III_mvmt_III_BH = \relative c {
+	\mark #84
+	\override Staff.Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. r8\fff c->[ a-> ees'->] r c->[ a-> ees'->] r
+	\time 5/8
+	c->[ a-> ees'->] r c->[
+	\time 9/8
+	\tag #'Score \grace s8 a-> ees'->] r c->[ a-> ees'->] r c->[ a->
+	\time 5/8
+	ees'->] r c->[ a-> ees'->]
+	\time 6/8
+	\tag #'Score \grace s8. r8 c->[ a-> ees'->] r c->[
+	\time 5/8
+	\tag #'Score \grace s8 a-> ees'->] r c->[ a->
+	\time 6/8
+	ees'->] r c->[ a-> ees'->] r
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	c->[_\startTextSpan a-> ees'->] r c->[_\stopTextSpan
+	a-> ees'->]r c->[ a->]
+	\revert Staff.Beam.breakable
+}
+
+Tuba_mvmt_III_BH = \relative c,, {
+	\mark #84
+	\override Staff.Beam.breakable = ##t
+	\time 9/8
+	\tag #'Score \grace s8. fis8->[ r a->] r fis->[ r a->] r fis->[
+	\time 5/8
+	r a->] r fis->[ r
+	\time 9/8
+	\tag #'Score \grace s8 a->] r fis->[ r a->] r fis->[ r a->]
+	\time 5/8
+	r fis->[ r a->] r
+	\time 6/8
+	\tag #'Score \grace s8. fis8->[ r a->] r fis->[ r
+	\time 5/8
+	\tag #'Score \grace s8 a->] r fis->[ r a->]
+	\time 6/8
+	r fis->[ r a->] r fis->[
+	\time 5/8
+	\once \override TextSpanner.bound-details.left.text = "rit."
+	r a->] r fis->[ r
+	a->] r fis->[ r a->]
+	\revert Staff.Beam.breakable
+}
+
 %%% Final assembly
 
 Trombone_I_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
@@ -711,21 +809,21 @@ Trombone_I_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB
 		\Trombone_I_mvmt_III_AM \Trombone_I_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trombone_I_mvmt_III_AR
 		\Trombone_I_mvmt_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Trombones_all_cues_mvmt_III_AX
 		\Trombone_I_mvmt_III_AY \NULL_III_AZ \Trombone_Tuba_cues_mvmt_III_BA \Trombone_I_II_mvmt_III_BB \Trombone_I_mvmt_III_BC
-		\NULL_III_BD \NULL_III_BE \Trombones_all_cues_mvmt_III_BF \Trombone_I_mvmt_III_BG }
+		\NULL_III_BD \NULL_III_BE \Trombones_all_cues_mvmt_III_BF \Trombone_I_mvmt_III_BG \Trombone_I_mvmt_III_BH }
 Trombone_II_mvmt_III = { \clef tenor \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_I_II_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \Trombone_II_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_II_mvmt_III_AK \Trombone_II_mvmt_III_AL
 		\Trombone_II_mvmt_III_AM \Trombone_II_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trombone_II_mvmt_III_AR
 		\Trombone_II_clef_mvmt_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Trombones_all_cues_mvmt_III_AX
 		\Trombone_II_mvmt_III_AY \NULL_III_AZ \Trombone_Tuba_cues_mvmt_III_BA \Trombone_I_II_mvmt_III_BB \Trombone_II_mvmt_III_BC
-		\NULL_III_BD \NULL_III_BE \Trombones_all_cues_mvmt_III_BF \Trombone_II_mvmt_III_BG }
+		\NULL_III_BD \NULL_III_BE \Trombones_all_cues_mvmt_III_BF \Trombone_II_mvmt_III_BG \Trombone_II_mvmt_III_BH }
 Trombone_III_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Trombone_III_mvmt_III_AC \NULL_III_AD \NULL_III_AE
 		\NULL_III_AF \Trombone_III_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Trombone_III_mvmt_III_AK \Trombone_III_mvmt_III_AL
 		\Trombone_III_mvmt_III_AM \Trombone_III_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Trombone_III_mvmt_III_AR
 		\NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \NULL_III_AW \Trombones_all_cues_mvmt_III_AX \Trombone_III_mvmt_III_AY
 		\NULL_III_AZ \Trombone_Tuba_cues_mvmt_III_BA \Trombone_III_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE
-		\Trombones_all_cues_mvmt_III_BF \Trombone_III_mvmt_III_BG }
+		\Trombones_all_cues_mvmt_III_BF \Trombone_III_mvmt_III_BG \Trombone_III_mvmt_III_BH }
 Tuba_mvmt_III = { \clef bass \NULL_III_AA \Trombone_Tuba_cues_mvmt_III_AB \Tuba_mvmt_III_AC \NULL_III_AD \NULL_III_AE \NULL_III_AF
 		\Tuba_cues_mvmt_III_AG \NULL_III_AH \NULL_III_AI \NULL_III_AJ \Tuba_cues_mvmt_III_AK \Tuba_mvmt_III_AL \Tuba_mvmt_III_AM
 		\Tuba_mvmt_III_AN \NULL_III_AO \NULL_III_AP \NULL_III_AQ \Tuba_mvmt_III_AR \Tuba_mvmt_III_AS \NULL_III_AT \NULL_III_AU
 		\NULL_III_AV \NULL_III_AW \Tuba_mvmt_III_AX \Tuba_mvmt_III_AY \NULL_III_AZ \Trombone_Tuba_cues_mvmt_III_BA \Tuba_mvmt_III_BB
-		\NULL_III_BC \NULL_III_BD \NULL_III_BE \Trombones_all_cues_mvmt_III_BF \Tuba_mvmt_III_BG }
+		\NULL_III_BC \NULL_III_BD \NULL_III_BE \Trombones_all_cues_mvmt_III_BF \Tuba_mvmt_III_BG \Tuba_mvmt_III_BH }
