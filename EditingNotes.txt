@@ -1222,6 +1222,26 @@ this hard to believe. I'm leaving it like the parts for now, but the correct mov
 #UNDECIDED
 (III-orch-03-clarinets)
 
-mm. 269-275: Trombone I/II parts don't have the cross-measure barring that, for examples the horns do. In the score
+mm. 265-273: Trombone I/II parts don't have the cross-measure barring that, for examples the horns do. In the score
 they're written like the horns, so writing them like the horns.
 (III-orch-07-trombones-tuba)
+
+mm. 275-276: Leaving out most of the dynamics beyond the crescendo in 275. It's just not consistent between parts and
+score, and the recording has a last bar crescendo which I think is in a few of the parts but not the score. Need to
+come to some sort of idea what to put here. #DYNAMICS #UNDECIDED
+(III-orch-*)
+
+m. 275: The parts have Piccolo I playing a and I/II/III playing e, with IV (Picc II) silent. The score shows something
+different: I/II playing a, III playing e, and both Piccolo silent. Following score.
+(III-orch-01-flutes)
+
+m. 275: Clarinet IV is silent in this bar in the part, but the score has a double stem which seems to indicate it should
+double III. Following the score.
+(III-orch-03-clarinets)
+
+m. 275: Trumpet parts only have I and III playing: score has double stems like Clarinets. I/II part at least seems to have
+a double stem added as a correction. Following score.
+(III-orch-05-trumpets)
+
+m. 275: Horn VII and VIII score has a clef change, parts do not. Putting clef change in both for now.
+(III-orch-06-horns)

@@ -1130,6 +1130,22 @@ Flute_I_II_III_mvmt_III_BH = \relative c'''' {
 	a->[ gis-> f-> b-> bes->]
 }
 
+%%% Section BI = mm. 274-275
+
+Flute_I_II_mvmt_III_BI = \relative c'' {
+	\time 3/4
+	R2.
+	a2.
+	\bar "|."
+}
+
+Flute_III_mvmt_III_BI = \relative c' {
+	\time 3/4
+	R2.
+	e2.
+	\bar "|."
+}
+
 %%% Final construction
 
 Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_III_AC \Picc_mvmt_III_AD \NULL_III_AE \NULL_III_AF \NULL_III_AG
@@ -1138,29 +1154,29 @@ Picc_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Picc_mvmt_III_AB \Picc_mvmt_II
 		\NULL_III_AV \NULL_III_AW \Picc_cues_mvmt_III_AX \tag #'Score \partCombine \Picc_I_mvmt_III_AY \Picc_II_score_mvmt_III_AY
 		\tag #'Part \Picc_I_mvmt_III_AY \NULL_III_AZ \Picc_mvmt_III_BA \Picc_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE
 		\Picc_cues_mvmt_III_BF \tag #'Score \partCombine \Picc_I_mvmt_III_BG \Picc_II_score_mvmt_III_BG \tag #'Part \Picc_I_mvmt_III_BG
-		\Picc_I_II_mvmt_III_BH }
+		\Picc_I_II_mvmt_III_BH \NULL_III_BI }
 Flute_I_mvmt_III = { \Flute_I_Picc_cues_mvmt_III_AA \Flute_I_mvmt_III_AB \Flute_I_mvmt_III_AC \Flute_I_mvmt_III_AD \Flute_I_mvmt_III_AE
 		\Flute_I_mvmt_III_AF \NULL_III_AG \Flute_I_mvmt_III_AH \Flute_I_mvmt_III_AI \Flute_I_II_mvmt_III_AJ \Flute_I_II_mvmt_III_AK
 		\Flute_I_III_mvmt_III_AL \NULL_III_AM \Flute_I_mvmt_III_AN \Flute_I_II_mvmt_III_AO \NULL_III_AP \Flute_I_mvmt_III_AQ
 		\Picc_Flute_I_II_mvmt_III_AR \Flute_I_II_mvmt_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \Flute_all_cues_mvmt_III_AW
 		\Flute_I_mvmt_III_AX \Flute_I_II_mvmt_III_AY \NULL_III_AZ \Flute_I_mvmt_III_BA \Flute_I_mvmt_III_BB \NULL_III_BC \NULL_III_BD
-		\NULL_III_BE \Flute_I_mvmt_III_BF \Flute_I_II_mvmt_III_BG \Flute_I_II_III_mvmt_III_BH }
+		\NULL_III_BE \Flute_I_mvmt_III_BF \Flute_I_II_mvmt_III_BG \Flute_I_II_III_mvmt_III_BH \Flute_I_II_mvmt_III_BI }
 Flute_II_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_II_mvmt_III_AE
 		\Flute_II_mvmt_III_AF \NULL_III_AG \Flute_II_cues_mvmt_III_AH \Flute_II_mvmt_III_AI \Flute_I_II_mvmt_III_AJ \Flute_I_II_mvmt_III_AK
 		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_II_mvmt_III_AN \Flute_I_II_mvmt_III_AO \NULL_III_AP \Flute_II_mvmt_III_AQ
 		\Picc_Flute_I_II_mvmt_III_AR \Flute_I_II_mvmt_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \Flute_all_cues_mvmt_III_AW
 		\Flute_II_mvmt_III_AX \Flute_I_II_mvmt_III_AY \NULL_III_AZ \Flute_II_IV_cues_mvmt_III_BA \Flute_II_III_IV_mvmt_III_BB \NULL_III_BC
-		\NULL_III_BD \NULL_III_BE \Flute_II_mvmt_III_BF \Flute_I_II_mvmt_III_BG \Flute_I_II_III_mvmt_III_BH }
+		\NULL_III_BD \NULL_III_BE \Flute_II_mvmt_III_BF \Flute_I_II_mvmt_III_BG \Flute_I_II_III_mvmt_III_BH \Flute_I_II_mvmt_III_BI }
 Flute_III_mvmt_III = { \NULL_III_AA \Flute_III_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_III_mvmt_III_AD \NULL_III_AE \NULL_III_AF
 		\NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK \Flute_I_III_mvmt_III_AL
 		\NULL_III_AM \Flute_III_mvmt_III_AN \Flute_III_mvmt_III_AO \NULL_III_AP \Flute_III_mvmt_III_AQ \Flute_III_IV_mvmt_III_AR
 		\NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \Flute_all_cues_mvmt_III_AW \Flute_III_mvmt_III_AX \Flute_III_mvmt_III_AY
 		\NULL_III_AZ \Flute_III_mvmt_III_BA \Flute_II_III_IV_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Flute_III_mvmt_III_BF
-		\Flute_III_mvmt_III_BG \Flute_I_II_III_mvmt_III_BH }
+		\Flute_III_mvmt_III_BG \Flute_I_II_III_mvmt_III_BH \Flute_III_mvmt_III_BI }
 Flute_IV_mvmt_III = { \NULL_III_AA \Flute_II_IV_cues_mvmt_III_AB \Flute_II_III_IV_mvmt_III_AC \Flute_II_IV_mvmt_III_AD \Flute_IV_mvmt_III_AE
 		\Flute_IV_mvmt_III_AF \NULL_III_AG \NULL_III_AH \Flute_Picc_cues_mvmt_III_AI \NULL_III_AJ \Flute_Picc_cues_mvmt_III_AK
 		\Flute_II_IV_mvmt_III_AL \NULL_III_AM \Flute_IV_cues_mvmt_III_AN \Flute_IV_mvmt_III_AO \NULL_III_AP \Flute_IV_mvmt_III_AQ
 		\Flute_III_IV_mvmt_III_AR \NULL_III_AS \NULL_III_AT \NULL_III_AU \NULL_III_AV \Flute_all_cues_mvmt_III_AW \Flute_IV_mvmt_III_AX
 		\tag #'Score \NULL_III_AY \tag #'Part \Picc_II_part_mvmt_III_AY \Flute_IV_mvmt_III_AZ \Flute_II_IV_cues_mvmt_III_BA
 		\Flute_II_III_IV_mvmt_III_BB \NULL_III_BC \NULL_III_BD \NULL_III_BE \Flute_IV_mvmt_III_BF \tag #'Score \NULL_III_BG
-		\tag #'Part \Picc_II_part_mvmt_III_BG \tag #'Score \NULL_III_BH \tag #'Part \Picc_I_II_mvmt_III_BH }
+		\tag #'Part \Picc_II_part_mvmt_III_BG \tag #'Score \NULL_III_BH \tag #'Part \Picc_I_II_mvmt_III_BH \NULL_III_BI }
