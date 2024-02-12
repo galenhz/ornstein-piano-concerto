@@ -1082,13 +1082,17 @@ Picc_II_part_mvmt_III_BG = { \mark #83 \Picc_II_part_mvmt_III_AY_BG }
 
 %%% Section BH = mm. 265-273 (Rehearsal 84)
 
+% FIXME: These stack up painfully in the score. Adding ottava to score. Perhaps parts as well?
+
 Picc_I_II_mvmt_III_BH = \relative c'''' {
 	\mark #84
 	\override Beam.breakable = ##t
+	\tag #'Score \ottava #1
 	\time 9/8
 	\tag #'Score \grace s8. a8->\fff[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
 	\time 5/8
 	c-> fis-> a,-> gis'-> bes->]
+	\tag #'Score \ottava #0
 	\time 9/8
 	\tag #'Score \grace s8 a,8->[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
 	\time 5/8
@@ -1109,6 +1113,7 @@ Picc_I_II_mvmt_III_BH = \relative c'''' {
 Flute_I_II_III_mvmt_III_BH = \relative c'''' {
 	\mark #84
 	\override Beam.breakable = ##t
+	\tag #'Score \ottava #1
 	\time 9/8
 	\tag #'Score \grace s8. a8->\fff[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
 	\time 5/8
@@ -1118,6 +1123,7 @@ Flute_I_II_III_mvmt_III_BH = \relative c'''' {
 	\time 5/8
 	c-> fis-> a,-> gis'-> bes->]
 	\revert Beam.breakable
+	\tag #'Score \ottava #0
 	\time 6/8
 	\tag #'Score \grace s8. a,8->[ a-> gis-> gis-> f-> bes->]
 	\time 5/8

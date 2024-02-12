@@ -1608,11 +1608,12 @@ Viola_divisi_II_mvmt_III_BG = \relative c' {
 
 %%% Section BH = mm. 265-273 (Rehearsal 84)
 
-% FIXME: These stack up painfully in the score. Should add ottava at least to score, if not parts.
+% FIXME: These stack up painfully in the score. Adding ottava to score. Perhaps parts as well?
 
 Violin_I_mvmt_III_BH = \relative c'''' {
 	\mark #84
 	\override Beam.breakable = ##t
+	\tag #'Score \ottava #1
 	\time 9/8
 	\tag #'Score \grace s8. a8:32->\fff[ a8:32-> gis8:32-> a8:32-> gis8:32-> f8:32-> e8:32-> cis8:32-> ees8:32->
 	\time 5/8
@@ -1622,6 +1623,7 @@ Violin_I_mvmt_III_BH = \relative c'''' {
 	\time 5/8
 	c8:32-> fis8:32-> a,8:32-> gis'8:32-> bes8:32->]
 	\revert Beam.breakable
+	\tag #'Score \ottava #0
 	\time 6/8
 	\tag #'Score \grace s8. a,8:32->[ a8:32-> gis8:32-> gis8:32-> f8:32-> bes8:32->]
 	\time 5/8
@@ -1636,6 +1638,7 @@ Violin_I_mvmt_III_BH = \relative c'''' {
 
 Violin_I_divisi_II_mvmt_III_BH = \relative c'''' {
 	\override Beam.breakable = ##t
+	\tag #'Score \ottava #1
 	\time 9/8
 	\tag #'Score \grace s8. a8->\fff[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
 	\time 5/8
@@ -1645,6 +1648,7 @@ Violin_I_divisi_II_mvmt_III_BH = \relative c'''' {
 	\time 5/8
 	c-> fis-> a,-> gis'-> bes->]
 	\revert Beam.breakable
+	\tag #'Score \ottava #0
 	\time 6/8
 	\tag #'Score \grace s8. a,8->[ a-> gis-> gis-> f-> bes->]
 	\time 5/8
@@ -1662,10 +1666,12 @@ Violin_I_divisi_II_mvmt_III_BH = \relative c'''' {
 Violin_II_mvmt_III_BH = \relative c'''' {
 	\mark #84
 	\override Beam.breakable = ##t
+	\tag #'Score \ottava #1
 	\time 9/8
 	\tag #'Score \grace s8. a8:32->\fff[ a8:32-> gis8:32-> a8:32-> gis8:32-> f8:32-> e8:32-> cis8:32-> ees8:32->
 	\time 5/8
 	c8:32-> fis8:32-> a,8:32-> gis'8:32-> bes8:32->]
+	\tag #'Score \ottava #0
 	\time 9/8
 	\tag #'Score \grace s8 a,8:32->[ a8:32-> gis8:32-> a8:32-> gis8:32-> f8:32-> e8:32-> cis8:32-> ees8:32->
 	\time 5/8
@@ -1685,10 +1691,12 @@ Violin_II_mvmt_III_BH = \relative c'''' {
 
 Violin_II_divisi_II_mvmt_III_BH = \relative c'''' {
 	\override Beam.breakable = ##t
+	\tag #'Score \ottava #1
 	\time 9/8
 	\tag #'Score \grace s8. a8->\fff[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
 	\time 5/8
 	c-> fis-> a,-> gis'-> bes->]
+	\tag #'Score \ottava #0
 	\time 9/8
 	\tag #'Score \grace s8 a,8->[ a-> gis-> a-> gis-> f-> e-> cis-> ees->
 	\time 5/8

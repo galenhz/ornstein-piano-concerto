@@ -1204,6 +1204,10 @@ in some parts but not all. Need to decide how to handle. #DYNAMICS #UNDECIDED
 mm. 250-264: Upper strings don't have accents written in the score and many other parts. Adding.
 (III-orch-09-violins-viola)
 
+mm. 265-268: Flutes and Violins need ottava marks to make the score fit the page. Only in the score for now.
+Perhaps I should add them to the parts as well?
+(III-orch-01-flutes, III-orch-09-violins-viola)
+
 mm. 265-268: Upper strings extend beams across the bar in the score, but it wasn't copied this way in the parts. Following
 score. They also don't have accents that are in the score and other parts. Adding them.
 (III-orch-09-violins-viola)

@@ -167,6 +167,9 @@ we have a second piccolo and no Flute IV.
 
 m. 220-224: In the PR lift the tuplet brackets a bit to get them over the sharps.
 
+mm. 265-268: Score badly compressed. Have partially fixed by adding ottavas to the score, but need to do more.
+Trumpets in particular could use some attention.
+
 mm. 265-273: Tuba part handles the cross-measure bars badly, trying to duck themn under the time signatures instead of
 over.
 
